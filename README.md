@@ -1,1 +1,1 @@
-# Blog source file
+# Blog
