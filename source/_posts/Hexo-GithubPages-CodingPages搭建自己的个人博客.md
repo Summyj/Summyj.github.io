@@ -10,12 +10,11 @@ top: 5
 
 搭建博客的正确姿势。
 
+
+
 <!-- more -->
 
-<center>
-	<img src="https://i.loli.net/2019/02/22/5c6f9cac6082d.jpeg" width = "550" height = "250" alt="题图">
-</center>
-
+<img width="600" height="200" src="https://i.loli.net/2019/02/22/5c6f9cac6082d.jpeg" alt="题图">
 
 # 前言 #
 
