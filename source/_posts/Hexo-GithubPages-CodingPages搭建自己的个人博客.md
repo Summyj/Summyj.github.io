@@ -14,7 +14,6 @@ top: 5
 
 <!-- more -->
 
-<img width="600" height="200" src="https://i.loli.net/2019/02/22/5c6f9cac6082d.jpeg" alt="题图">
 
 # 前言 #
 
