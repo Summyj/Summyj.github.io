@@ -5,7 +5,7 @@ update: 2017-08-06 22:27:56
 tags: [Hexo,GithubPages,CodingPages]
 categories: 学习小记
 copyright: true
-top: 5
+top:
 ---
 
 搭建博客的正确姿势。
