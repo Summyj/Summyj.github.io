@@ -35,6 +35,8 @@ top:
 一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。
 **[刘翠花]**：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了
 
+----------
+
 ## 版本二 ##
 
 新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。
@@ -59,11 +61,12 @@ top:
 2天后。。。
 **[王铁锤]**：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。
 20分钟后。。。
-**[王铁锤]**：大家有什么问题吗，我有没有漏掉什么问题？
+**[王铁锤]**：大家有什么问题吗，我有没有漏掉什么点？
 **[众组员]**：没问题了:ok_hand:。
 **[王铁锤]**：好，看来都清楚了，散会～
 一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。
 
+----------
 
 # 啥是BDD #
 
@@ -95,6 +98,8 @@ BDD行为驱动开发(Behaviour-Driven Development)
 ## 有了BDD以后(版本二) ##
 
 项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。
+
+----------
 
 # 怎么做BDD #
 
@@ -141,6 +146,8 @@ BDD行为驱动开发(Behaviour-Driven Development)
 
 好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。
 
+----------
+
 # 对BDD的常见误解 #
 
 ## 不需要做Discovery Workshops ##
@@ -157,9 +164,9 @@ BDD行为驱动开发(Behaviour-Driven Development)
 
 # 参考文章 #
 
-- [Myths about BDD](https://cucumber.io/docs/bdd/myths/)
-- [BDD Tutorial](https://cucumber.io/docs/guides/bdd-tutorial/)
-- [Behaviour-Driven Development](https://cucumber.io/docs/bdd/)
+- [Myths about BDD](https://cucumber.io/docs/bdd/myths/ "Myths about BDD")
+- [BDD Tutorial](https://cucumber.io/docs/guides/bdd-tutorial/ "BDD Tutorial")
+- [Behaviour-Driven Development](https://cucumber.io/docs/bdd/ "Behaviour-Driven Development")
 
 
 
