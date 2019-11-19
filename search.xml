@@ -3,7 +3,11 @@
   <entry>
     <title>博客升级过程全记录</title>
     <url>/Blog-Update-Note/</url>
-    <content><![CDATA[<script>
+    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/MXr1ZWlmq4wph5K.png" width="550" alt="update">
+记录升级过程，便于以后参考。
+<a id="more"></a>
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
