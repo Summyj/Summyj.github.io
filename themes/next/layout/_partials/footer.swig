@@ -42,6 +42,7 @@
   {%- endif %}
 </div>
 
+<div class= "powered by">
 {%- if theme.footer.powered.enable %}
   <div class="powered-by">
     {{- __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}
@@ -63,11 +64,9 @@
     {%- if theme.footer.theme.version %} v{{ next_version }}{%- endif %}
   </div>
 {%- endif %}
+</div>
 
-{%- if theme.footer.powered.enable and theme.footer.theme.enable %}
-  <span class="post-meta-divider">|</span>
-{%- endif %}
-
+<div class="Hostedby">
 {%- if theme.footer.powered.enable %}
   <div class="powered-by">
 Hosted by <a href="https://coding.net/pages">CodingPages</a> 
@@ -79,5 +78,6 @@ Hosted by <a href="https://coding.net/pages">CodingPages</a>
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ theme.add_this_id }}" async="async"></script>
   </div>
 {%- endif %}
+</div>
 
 {{- next_inject('footer') }}

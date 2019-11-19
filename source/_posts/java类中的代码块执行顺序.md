@@ -8,6 +8,7 @@ copyright: true
 top:
 ---
 
+<img src="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png" width = "600" height = "400" alt="future">
 
 代码实例分析java类中的代码块执行顺序.
 

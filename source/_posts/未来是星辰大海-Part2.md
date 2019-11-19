@@ -8,6 +8,7 @@ copyright:
 top:
 ---
 
+<img src="https://i.loli.net/2019/11/19/VcvrM5ysLo8qFOW.jpg" width = "600" height = "400" alt="future">
 
 记录一下博主小半年的心路历程。
 
