@@ -3,7 +3,8 @@
   <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
-    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/MV7eslbTRgPNin2.png" width="600" height="400" alt="future"></p>
+<p>首先，听我讲一个关于王铁锤的故事。</p>
 <a id="more"></a>
 <h1 id="一个故事"><a href="#一个故事" class="headerlink" title="一个故事"></a>一个故事</h1><h2 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h2><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
 <p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
@@ -103,7 +104,7 @@
   <entry>
     <title>十一旅行中的小插曲</title>
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
-    <content><![CDATA[<p>我人生的这一部分，叫做冒傻气。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/BawpMWysKN91UmE.jpg" width="600" height="400" alt="Travel"><br>我人生中的这一部分，叫做冒傻气。</p>
 <a id="more"></a>
 <h1 id="动卧-bullettrain-side"><a href="#动卧-bullettrain-side" class="headerlink" title="动卧 :bullettrain_side:"></a>动卧 <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h1><p>按计划1号早上出发去苏州，高铁票。</p>
 <p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
@@ -179,7 +180,8 @@
   <entry>
     <title>Java判断素数</title>
     <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/CKchVGT6y51XvMU.png" width="600" height="400" alt="future"></p>
+<p>嗯，就是来秀插件的。</p>
 <a id="more"></a>
 <iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'></iframe><script>
         document.querySelectorAll('.github-emoji')
@@ -210,7 +212,8 @@
   <entry>
     <title>未来是星辰大海_Part2</title>
     <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
-    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/VcvrM5ysLo8qFOW.jpg" width="600" height="400" alt="future"></p>
+<p>记录一下博主小半年的心路历程。</p>
 <a id="more"></a>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=475207921&auto=1&height=66"></iframe>
 
@@ -276,7 +279,8 @@
   <entry>
     <title>20岁光阴不再来</title>
     <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/suhw93AC5TJUt1b.png" width="600" height="400" alt="future"></p>
+<p>时间啊，你慢点走。</p>
 <a id="more"></a>
 <p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
 <object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object>
@@ -324,7 +328,8 @@
   <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" width="600" height="400" alt="future"></p>
+<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
 <a id="more"></a>
 <p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
 <h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
@@ -410,7 +415,8 @@
   <entry>
     <title>敏捷开发与测试</title>
     <url>/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/MWYT6XepvZJOnNL.png" width="600" height="400" alt="future"></p>
+<p>啥是敏捷，敏捷是啥？</p>
 <a id="more"></a>
 <p>先来首Music:</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=400581295&auto=1&height=66"></iframe>
@@ -557,7 +563,8 @@
   <entry>
     <title>Java类中的代码块执行顺序</title>
     <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png" width="600" height="400" alt="future"></p>
+<p>代码实例分析java类中的代码块执行顺序.</p>
 <a id="more"></a>
 <h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -617,7 +624,8 @@
   <entry>
     <title>未来是星辰大海</title>
     <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/VcvrM5ysLo8qFOW.jpg" width="600" height="400" alt="future"></p>
+<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
 <a id="more"></a>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28366791&auto=1&height=66"></iframe>
 
@@ -687,7 +695,8 @@
   <entry>
     <title>Git学习笔记</title>
     <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/xZQJsPC8KRF6MdB.png" width="600" height="400" alt="future"></p>
+<p>对近几天的Git学习做一个小结。</p>
 <a id="more"></a>
 <p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
 <hr>
@@ -801,7 +810,8 @@
   <entry>
     <title>递归求解1到100求和</title>
     <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
-    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/cgeOtwUma62qbkW.png" width="600" height="400" alt="future"></p>
+<p>递归求解1到100的和是一个常见面试题。</p>
 <a id="more"></a>
 <p><strong>思想：</strong></p>
 <p>思考一下，从1加到100可以分解成：</p>
@@ -845,7 +855,8 @@
   <entry>
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/AKvH2mOS7C6Wics.png" width="600" height="400" alt="future"></p>
+<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
 <a id="more"></a>
 <p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
 <ul>
@@ -908,7 +919,8 @@
   <entry>
     <title>爱你就像爱生命</title>
     <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/lYxN9tPzcGqs4R1.png" width="600" height="400" alt="future"></p>
+<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
 <a id="more"></a>
 <p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
 <p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
@@ -955,7 +967,7 @@
   <entry>
     <title>博客搭建折腾记</title>
     <url>/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>搭建博客的正确姿势。</p>
+    <content><![CDATA[<p><img src="https://i.loli.net/2019/11/19/hBKE9PXWfvjuCp5.jpg" width="600" height="400" alt="future"><br>搭建博客的正确姿势。</p>
 <a id="more"></a>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="博客初识"><a href="#博客初识" class="headerlink" title="博客初识"></a>博客初识</h2><p>开始写博客只是用CSDN发布，本来开开心心。</p>
 <p>然而有一天，我的一篇博客被系统直接删掉了，原因是含有敏感词汇。联系了管理员之后才恢复<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span>。</p>
@@ -1143,9 +1155,8 @@
   <entry>
     <title>FirstBlog</title>
     <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<a id="more"></a>
-<p><img src="http://i.imgur.com/sU2JZ8Z.jpg" alt="future"></p>
+    <content><![CDATA[<p><img src="http://i.imgur.com/sU2JZ8Z.jpg" width="600" height="400" alt="future"></p>
+<p>FistPage in my blog.<br><a id="more"></a></p>
 <p>the future is whitin reach.</p>
 <script>
         document.querySelectorAll('.github-emoji')

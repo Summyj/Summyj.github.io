@@ -56,14 +56,15 @@
 <meta property="og:site_name" content="谁把钱丢了">
 <meta property="og:description" content="代码实例分析java类中的代码块执行顺序.">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png">
 <meta property="og:image" content="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG">
 <meta property="og:image" content="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG">
 <meta property="og:image" content="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG">
-<meta property="og:updated_time" content="2019-10-17T08:42:52.449Z">
+<meta property="og:updated_time" content="2019-11-19T04:43:17.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java类中的代码块执行顺序">
 <meta name="twitter:description" content="代码实例分析java类中的代码块执行顺序.">
-<meta name="twitter:image" content="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png">
 
 <link rel="canonical" href="http://jmyblog.top/java类中的代码块执行顺序/">
 
@@ -248,7 +249,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-17 16:42:52" itemprop="dateModified" datetime="2019-10-17T16:42:52+08:00">2019-10-17</time>
+                <time title="修改时间：2019-11-19 12:43:17" itemprop="dateModified" datetime="2019-11-19T12:43:17+08:00">2019-11-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -282,7 +283,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -294,7 +295,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>代码实例分析java类中的代码块执行顺序.</p>
+        <p><img src="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png" width="600" height="400" alt="future"></p>
+<p>代码实例分析java类中的代码块执行顺序.</p>
 <a id="more"></a>
 <h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
 <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
@@ -574,20 +576,25 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">1:29</span>
 </div>
+
+<div class="powered by">
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
   </div>
-  <span class="post-meta-divider">|</span>
+</div>
+
+<div class="Hostedby">
   <div class="powered-by">
 Hosted by <a href="https://coding.net/pages">CodingPages</a> 
   </div>
   <div class="addthis_inline_share_toolbox">
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd256a93fb420e6" async="async"></script>
   </div>
+</div>
 
         
 
