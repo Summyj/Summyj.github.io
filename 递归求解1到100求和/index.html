@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.8.0">
+<meta name="generator" content="Hexo 4.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -62,18 +62,16 @@
 <meta name="keywords" content="递归">
 <meta property="og:type" content="article">
 <meta property="og:title" content="递归求解1到100求和">
-<meta property="og:url" content="http://jmyblog.top/递归求解1到100求和/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C&#x2F;index.html">
 <meta property="og:site_name" content="谁把钱丢了">
 <meta property="og:description" content="递归求解1到100的和是一个常见面试题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/11/19/cgeOtwUma62qbkW.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;19&#x2F;cgeOtwUma62qbkW.png">
 <meta property="og:updated_time" content="2019-11-19T07:26:47.259Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="递归求解1到100求和">
-<meta name="twitter:description" content="递归求解1到100的和是一个常见面试题。">
-<meta name="twitter:image" content="https://i.loli.net/2019/11/19/cgeOtwUma62qbkW.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;19&#x2F;cgeOtwUma62qbkW.png">
 
-<link rel="canonical" href="http://jmyblog.top/递归求解1到100求和/">
+<link rel="canonical" href="http://jmyblog.top/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/">
 
 
 <script id="page-configurations">
@@ -191,7 +189,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="搜索..." spellcheck="false" type="text" id="search-input">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
@@ -226,7 +226,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://jmyblog.top/递归求解1到100求和/">
+    <link itemprop="mainEntityOfPage" href="http://jmyblog.top/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -264,14 +264,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习小记/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/" itemprop="url" rel="index">
                     <span itemprop="name">学习小记</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/递归求解1到100求和/" class="post-meta-item leancloud_visitors" data-flag-title="递归求解1到100求和" title="阅读次数">
+            <span id="/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/" class="post-meta-item leancloud_visitors" data-flag-title="递归求解1到100求和" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -283,7 +283,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>283</span>
+              <span>258</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -302,9 +302,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://i.loli.net/2019/11/19/cgeOtwUma62qbkW.png" width="550" alt="future"></p>
+        <img src="https://i.loli.net/2019/11/19/cgeOtwUma62qbkW.png" width="550" alt="future">
+
 <p>递归求解1到100的和是一个常见面试题。</p>
 <a id="more"></a>
+
 <p><strong>思想：</strong></p>
 <p>思考一下，从1加到100可以分解成：</p>
 <ul>
@@ -317,6 +319,9 @@
 <p>所以，可以编写如下代码：</p>
 <p><strong>代码：</strong></p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">if</span> (n > <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> n + count(n - <span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
 <p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -371,7 +376,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://jmyblog.top/递归求解1到100求和/" title="递归求解1到100求和">http://jmyblog.top/递归求解1到100求和/</a>
+    <a href="http://jmyblog.top/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/" title="递归求解1到100求和">http://jmyblog.top/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -383,14 +388,14 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/递归/" rel="tag"><i class="fa fa-tag"></i> 递归</a>
+              <a href="/tags/%E9%80%92%E5%BD%92/" rel="tag"><i class="fa fa-tag"></i> 递归</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/关于闰年，你不知道的那些事/" rel="next" title="关于闰年，你不知道的那些事">
+                <a href="/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" rel="next" title="关于闰年，你不知道的那些事">
                   <i class="fa fa-chevron-left"></i> 关于闰年，你不知道的那些事
                 </a>
             </div>
@@ -398,7 +403,7 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/Git学习笔记/" rel="prev" title="Git学习笔记">
+                <a href="/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="Git学习笔记">
                   Git学习笔记 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -449,7 +454,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="谁把钱丢了" src="/images/avatar.jpg">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">谁把钱丢了</p>
   <div class="site-description" itemprop="description">I'm a slow walker, but I never backwards.</div>
 </div>
@@ -458,20 +464,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -483,10 +489,10 @@
   </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="http://blog.csdn.net/summy_j" title="CSDN → http://blog.csdn.net/summy_j" rel="noopener" target="_blank"><i class="fa fa-fw fa-pencil-square-o"></i>CSDN</a>
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fa fa-fw fa-pencil-square-o"></i>CSDN</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/shui-ba-qian-diu-le" title="知乎 → https://www.zhihu.com/people/shui-ba-qian-diu-le" rel="noopener" target="_blank"><i class="fa fa-fw fa-key"></i>知乎</a>
+        <a href="https://www.zhihu.com/people/shui-ba-qian-diu-le" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;shui-ba-qian-diu-le" rel="noopener" target="_blank"><i class="fa fa-fw fa-key"></i>知乎</a>
       </span>
   </div>
 
@@ -498,37 +504,37 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://iamwr.com/" title="http://iamwr.com/" rel="noopener" target="_blank">iamwr</a>
+          <a href="http://iamwr.com/" title="http:&#x2F;&#x2F;iamwr.com&#x2F;" rel="noopener" target="_blank">iamwr</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://blog.jimmylv.info/" title="https://blog.jimmylv.info/" rel="noopener" target="_blank">jimmylv</a>
+          <a href="https://blog.jimmylv.info/" title="https:&#x2F;&#x2F;blog.jimmylv.info&#x2F;" rel="noopener" target="_blank">jimmylv</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://www.youmeek.com/" title="http://www.youmeek.com/" rel="noopener" target="_blank">youmeek</a>
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">youmeek</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://blog.dandyweng.com/" title="https://blog.dandyweng.com/" rel="noopener" target="_blank">Dandy's blog</a>
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://zh.lucida.me/" title="http://zh.lucida.me/" rel="noopener" target="_blank">lucida</a>
+          <a href="http://zh.lucida.me/" title="http:&#x2F;&#x2F;zh.lucida.me&#x2F;" rel="noopener" target="_blank">lucida</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://yfzhou.coding.me/" title="https://yfzhou.coding.me/" rel="noopener" target="_blank">Felix</a>
+          <a href="https://yfzhou.coding.me/" title="https:&#x2F;&#x2F;yfzhou.coding.me&#x2F;" rel="noopener" target="_blank">Felix</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://huilei.github.io/" title="https://huilei.github.io/" rel="noopener" target="_blank">Leihui</a>
+          <a href="https://huilei.github.io/" title="https:&#x2F;&#x2F;huilei.github.io&#x2F;" rel="noopener" target="_blank">Leihui</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://mmmmmm.me/" title="https://mmmmmm.me/" rel="noopener" target="_blank">leesin</a>
+          <a href="https://mmmmmm.me/" title="https:&#x2F;&#x2F;mmmmmm.me&#x2F;" rel="noopener" target="_blank">leesin</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://www.liaoxuefeng.com/" title="https://www.liaoxuefeng.com/" rel="noopener" target="_blank">廖雪峰</a>
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://www.ruanyifeng.com/" title="http://www.ruanyifeng.com/" rel="noopener" target="_blank">阮一峰</a>
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://coolshell.cn/" title="https://coolshell.cn/" rel="noopener" target="_blank">酷壳</a>
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
         </li>
     </ul>
   </div>
@@ -560,26 +566,26 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:29</span>
+    <span title="站点阅读时长">1:26</span>
 </div>
 
-<div class="powered by">
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0
+<div class= "powered by">
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
   </div>
 </div>
 
 <div class="Hostedby">
   <div class="powered-by">
-Hosted by <a href="https://coding.net/pages">CodingPages</a> 
+Hosted by <a href="https://coding.net/pages" target="_blank" rel="noopener">CodingPages</a> 
   </div>
   <div class="addthis_inline_share_toolbox">
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd256a93fb420e6" async="async"></script>
