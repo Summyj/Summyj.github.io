@@ -7,7 +7,7 @@ categories: 学习小记
 copyright: true
 top:
 ---
-<img src="https://i.loli.net/2019/11/19/CKchVGT6y51XvMU.png" width = "600" height = "400" alt="future">
+<img src="https://i.loli.net/2019/11/19/CKchVGT6y51XvMU.png" width = "600" alt="future">
 
 嗯，就是来秀插件的。
 
