@@ -7,7 +7,7 @@ categories: 项目实践
 copyright: true
 top:  
 ---
-<img src="https://i.loli.net/2019/11/19/iwpAQg9oDR4KFUk.png" height="450" alt="future">
+<img src="https://i.loli.net/2019/11/19/iwpAQg9oDR4KFUk.png" width = "550" alt="future">
 
 首先，听我讲一个关于王铁锤的故事。
 

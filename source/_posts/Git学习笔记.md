@@ -8,7 +8,7 @@ copyright: true
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/xZQJsPC8KRF6MdB.png" height="450" alt="future">
+<img src="https://i.loli.net/2019/11/19/xZQJsPC8KRF6MdB.png" width="550" alt="future">
 
 对近几天的Git学习做一个小结。
 

@@ -6,7 +6,7 @@ categories: 生活随想
 comments: false
 ---
 
-<img src="http://i.imgur.com/sU2JZ8Z.jpg" height="450" alt="future">
+<img src="http://i.imgur.com/sU2JZ8Z.jpg" width="550" alt="future">
 
 FistPage in my blog.
 <!-- more -->

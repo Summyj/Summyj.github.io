@@ -8,7 +8,7 @@ copyright: true
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/hBKE9PXWfvjuCp5.jpg" height="450" alt="future">
+<img src="https://i.loli.net/2019/11/19/hBKE9PXWfvjuCp5.jpg" width="550" alt="future">
 搭建博客的正确姿势。
 
 <!-- more -->
