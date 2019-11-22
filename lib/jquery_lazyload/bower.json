@@ -1,4 +1,4 @@
-{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
+<tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><a id="more"></a>{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }

@@ -1262,19 +1262,19 @@
     <url>/about/index.html</url>
     <content><![CDATA[<center>
     <img src="https://i.loli.net/2019/05/16/5cdccb2b72aa099014.jpg" width="250" height="250" alt="avatar">
-</center>
-
-
-
-<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center">
+</center><h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center">
 - ThoughtWorks.QA
 - 音乐 - 健身 - 美食 - 追剧
 - 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
-</blockquote>
+</blockquote><hr><h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p><a id="more"></a>
 
 
-<hr>
-<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
+
+
+
+
+
+
 <p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
 <h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks#"></a>Join ThoughtWorks#</h1><blockquote>
 <p>以下链接为社招专用，校招可关注#ThoughtWorks校园招聘#公众号获取信息，也可给博主留言内推哟～</p>
@@ -1349,13 +1349,13 @@
   <entry>
     <title></title>
     <url>/lib/jquery_lazyload/README.html</url>
-    <content><![CDATA[<h1 align="center"><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="noopener">jquery-lazyload</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
+    <content><![CDATA[<h1 align="center"><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="noopener">jquery-lazyload</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1><h1 align="center">Installation</h1><h2 align="center">Step 1 → Go to NexT dir</h2><p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p><a id="more"></a>
 
-<h1 align="center">Installation</h1>
 
-<h2 align="center">Step 1 → Go to NexT dir</h2>
 
-<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
+
+
+
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span>  <span class="built_in">test</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 align="center">Step 2 → Get module</h2>
@@ -1393,8 +1393,8 @@
   </entry>
   <entry>
     <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
+    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1416,79 +1416,8 @@
   </entry>
   <entry>
     <title></title>
-    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
-    <content><![CDATA[/* http://james.padolsey.com/javascript/special-scroll-events-for-jquery/ */
-
-(function(){
-    
-    var special = jQuery.event.special,
-        uid1 = "D" + (+new Date()),
-        uid2 = "D" + (+new Date() + 1);
-        
-    special.scrollstart = {
-        setup: function() {
-            
-            var timer,
-                handler =  function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    } else {
-                        evt.type = "scrollstart";
-                        jQuery.event.dispatch.apply(_self, _args);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        timer = null;
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid1, handler);
-            
-        },
-        teardown: function(){
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid1) );
-        }
-    };
-    
-    special.scrollstop = {
-        latency: 300,
-        setup: function() {
-            
-            var timer,
-                    handler = function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        
-                        timer = null;
-                        evt.type = "scrollstop";
-                        jQuery.event.dispatch.apply(_self, _args);
-                        
-                        
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid2, handler);
-            
-        },
-        teardown: function() {
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid2) );
-        }
-    };
-    
-})();<script>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[<tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><a id="more"></a>{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1511,212 +1440,7 @@
   <entry>
     <title></title>
     <url>/lib/jquery_lazyload/jquery.lazyload.js</url>
-    <content><![CDATA[/*!
- * Lazy Load - jQuery plugin for lazy loading images
- *
- * Copyright (c) 2007-2015 Mika Tuupola
- *
- * Licensed under the MIT license:
- *   http://www.opensource.org/licenses/mit-license.php
- *
- * Project home:
- *   http://www.appelsiini.net/projects/lazyload
- *
- * Version:  1.9.7
- *
- */
-
-(function($, window, document, undefined) {
-    var $window = $(window);
-
-    $.fn.lazyload = function(options) {
-        var elements = this;
-        var $container;
-        var settings = {
-            threshold       : 0,
-            failure_limit   : 0,
-            event           : "scroll",
-            effect          : "show",
-            container       : window,
-            data_attribute  : "original",
-            skip_invisible  : false,
-            appear          : null,
-            load            : null,
-            placeholder     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-        };
-
-        function update() {
-            var counter = 0;
-
-            elements.each(function() {
-                var $this = $(this);
-                if (settings.skip_invisible && !$this.is(":visible")) {
-                    return;
-                }
-                if ($.abovethetop(this, settings) ||
-                    $.leftofbegin(this, settings)) {
-                        /* Nothing. */
-                } else if (!$.belowthefold(this, settings) &&
-                    !$.rightoffold(this, settings)) {
-                        $this.trigger("appear");
-                        /* if we found an image we'll load, reset the counter */
-                        counter = 0;
-                } else {
-                    if (++counter > settings.failure_limit) {
-                        return false;
-                    }
-                }
-            });
-
-        }
-
-        if(options) {
-            /* Maintain BC for a couple of versions. */
-            if (undefined !== options.failurelimit) {
-                options.failure_limit = options.failurelimit;
-                delete options.failurelimit;
-            }
-            if (undefined !== options.effectspeed) {
-                options.effect_speed = options.effectspeed;
-                delete options.effectspeed;
-            }
-
-            $.extend(settings, options);
-        }
-
-        /* Cache container as jQuery as object. */
-        $container = (settings.container === undefined ||
-                      settings.container === window) ? $window : $(settings.container);
-
-        /* Fire one scroll event per scroll. Not one scroll event per image. */
-        if (0 === settings.event.indexOf("scroll")) {
-            $container.bind(settings.event, function() {
-                return update();
-            });
-        }
-
-        this.each(function() {
-            var self = this;
-            var $self = $(self);
-
-            self.loaded = false;
-
-            /* If no src attribute given use data:uri. */
-            if ($self.attr("src") === undefined || $self.attr("src") === false) {
-                if ($self.is("img")) {
-                    $self.attr("src", settings.placeholder);
-                }
-            }
-
-            /* When appear is triggered load original image. */
-            $self.one("appear", function() {
-                if (!this.loaded) {
-                    if (settings.appear) {
-                        var elements_left = elements.length;
-                        settings.appear.call(self, elements_left, settings);
-                    }
-                    $("<img>")
-                        .bind("load", function() {
-
-                            var original = $self.attr("data-" + settings.data_attribute);
-                            $self.hide();
-                            if ($self.is("img")) {
-                                $self.attr("src", original);
-                            } else {
-                                $self.css("background-image", "url('" + original + "')");
-                            }
-                            $self[settings.effect](settings.effect_speed);
-
-                            self.loaded = true;
-
-                            /* Remove image from array so it is not looped next time. */
-                            var temp = $.grep(elements, function(element) {
-                                return !element.loaded;
-                            });
-                            elements = $(temp);
-
-                            if (settings.load) {
-                                var elements_left = elements.length;
-                                settings.load.call(self, elements_left, settings);
-                            }
-                        })
-                        .attr("src", $self.attr("data-" + settings.data_attribute));
-                }
-            });
-
-            /* When wanted event is triggered load original image */
-            /* by triggering appear.                              */
-            if (0 !== settings.event.indexOf("scroll")) {
-                $self.bind(settings.event, function() {
-                    if (!self.loaded) {
-                        $self.trigger("appear");
-                    }
-                });
-            }
-        });
-
-        /* Check if something appears when window is resized. */
-        $window.bind("resize", function() {
-            update();
-        });
-
-        /* With IOS5 force loading images when navigating with back button. */
-        /* Non optimal workaround. */
-        if ((/(?:iphone|ipod|ipad).*os 5/gi).test(navigator.appVersion)) {
-            $window.bind("pageshow", function(event) {
-                if (event.originalEvent && event.originalEvent.persisted) {
-                    elements.each(function() {
-                        $(this).trigger("appear");
-                    });
-                }
-            });
-        }
-
-        /* Force initial check if images should appear. */
-        $(document).ready(function() {
-            update();
-        });
-
-        return this;
-    };
-
-    /* Convenience methods in jQuery namespace.           */
-    /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
-
-    $.belowthefold = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
-        } else {
-            fold = $(settings.container).offset().top + $(settings.container).height();
-        }
-
-        return fold <= $(element).offset().top - settings.threshold;
-    };
-
-    $.rightoffold = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = $window.width() + $window.scrollLeft();
-        } else {
-            fold = $(settings.container).offset().left + $(settings.container).width();
-        }
-
-        return fold <= $(element).offset().left - settings.threshold;
-    };
-
-    $.abovethetop = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = $window.scrollTop();
-        } else {
-            fold = $(settings.container).offset().top;
-        }
-
-        return fold >= $(element).offset().top + settings.threshold  + $(element).height();
+    <content><![CDATA[<img><= $(element).offset().top - settings.threshold; }; $.rightoffold="function(element," settings) { var fold; if (settings.container="==" undefined || settings.container="==" window) fold="$window.width()" + $window.scrollleft(); } else $(settings.container).width(); return <="$(element).offset().left" $.abovethetop="function(element,">= $(element).offset().top + settings.threshold  + $(element).height();
     };
 
     $.leftofbegin = function(element, settings) {
@@ -1771,6 +1495,6 @@
             });
             document.body.appendChild(img);
           });
-      </script>]]></content>
+      </script></=>]]></content>
   </entry>
 </search>
