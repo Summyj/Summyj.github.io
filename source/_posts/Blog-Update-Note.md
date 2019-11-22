@@ -7,3 +7,7 @@ categories: 工具使用
 copyright: true
 top:
 ---
+<img src="https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png" width="550" alt="update">
+记录升级过程，便于以后参考。
+<!-- more -->
+
