@@ -58,16 +58,17 @@
   };
 </script>
 
-  <meta name="description" content="I&amp;apos;m a slow walker, but I never backwards.">
+  <meta name="description" content="jquery-lazyload for NexTInstallationStep 1 → Go to NexT dirChange dir to NexT directory. There must be layout, source, languages and other directories:">
 <meta property="og:type" content="website">
 <meta property="og:title" content="谁把钱丢了">
-<meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;archives&#x2F;2018&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;lib&#x2F;jquery_lazyload&#x2F;README.html">
 <meta property="og:site_name" content="谁把钱丢了">
-<meta property="og:description" content="I&amp;apos;m a slow walker, but I never backwards.">
+<meta property="og:description" content="jquery-lazyload for NexTInstallationStep 1 → Go to NexT dirChange dir to NexT directory. There must be layout, source, languages and other directories:">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-22T06:46:43.637Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://jmyblog.top/archives/2018/">
+<link rel="canonical" href="http://jmyblog.top/lib/jquery_lazyload/README">
 
 
 <script id="page-configurations">
@@ -76,12 +77,13 @@
     sidebar: "",
     isHome: false,
     isPost: false,
-    isPage: false,
-    isArchive: true
+    isPage: true,
+    isArchive: false
   };
 </script>
 
-  <title>归档 | 谁把钱丢了</title>
+  <title> | 谁把钱丢了
+  </title>
   
 
 
@@ -213,137 +215,108 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
           <div class="content">
             
 
+  <div class="posts-expand">
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline">
+</h2>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 16 篇日志。 继续努力。</span>
-      </div>
+  <ul class="breadcrumb">
+          
+            <li><a href="/lib/">LIB</a></li>
+            <li><a href="/lib/jquery_lazyload/">JQUERY_LAZYLOAD</a></li>
+            <li>README</li>
+          
+  </ul>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <h2 class="collection-header">2018</h2>
+      
+      
+      <div class="post-body">
+          <h1 align="center"><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="noopener">jquery-lazyload</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1><h1 align="center">Installation</h1><h2 align="center">Step 1 → Go to NexT dir</h2><p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p><a id="more"></a>
+
+
+
+
+
+
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span>  <span class="built_in">test</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 align="center">Step 2 → Get module</h2>
+
+<p>Install module to <code>source/lib</code> directory:</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-jquery-lazyload <span class="built_in">source</span>/lib/jquery_lazyload</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 align="center">Step 3 → Set it up</h2>
+
+<p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
+<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">lazyload:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h1 align="center">Update</h1>
+
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      </div>
+      
+      
+      
     </div>
+    
+  <ul class="breadcrumb">
+          
+            <li><a href="/lib/">LIB</a></li>
+            <li><a href="/lib/jquery_lazyload/">JQUERY_LAZYLOAD</a></li>
+            <li>README</li>
+          
+  </ul>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-04-23T14:21:42+08:00"
-              content="2018-04-23">
-          04-23
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/" itemprop="url">
-            <span itemprop="name">Java判断素数</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-04-09T13:22:15+08:00"
-              content="2018-04-09">
-          04-09
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/" itemprop="url">
-            <span itemprop="name">未来是星辰大海_Part2</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-03-30T21:10:24+08:00"
-              content="2018-03-30">
-          03-30
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/" itemprop="url">
-            <span itemprop="name">20岁光阴不再来</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-03-12T17:05:11+08:00"
-              content="2018-03-12">
-          03-12
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/" itemprop="url">
-            <span itemprop="name">测试矩阵</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-03-12T16:14:48+08:00"
-              content="2018-03-12">
-          03-12
-        </time>
-      </div>
-
-      <h3 class="post-title">
-          <a class="post-title-link" href="/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/" itemprop="url">
-            <span itemprop="name">敏捷开发与测试</span>
-          </a>
-      </h3>
-
-    </header>
-  </article>
-
-
-    </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+  </div>
+  
 
         </div>
           
@@ -368,6 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">jquery-lazyload for NexT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">Step 1 → Go to NexT dir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">Step 2 → Get module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">Step 3 → Set it up</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">Update</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -571,6 +545,19 @@ Hosted by <a href="https://coding.net/pages" target="_blank" rel="noopener">Codi
 
   
 
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 
   <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
