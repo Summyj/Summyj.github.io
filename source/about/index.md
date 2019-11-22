@@ -12,7 +12,6 @@ comments: true
 # About Me #
 
 <blockquote class="blockquote-center">
-- 97年小姐姐
 - ThoughtWorks.QA
 - 音乐 - 健身 - 美食 - 追剧
 - 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
