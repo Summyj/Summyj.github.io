@@ -3,7 +3,7 @@
   <entry>
     <title>博客升级过程全记录</title>
     <url>/Blog-Update-Note/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/MXr1ZWlmq4wph5K.png" width="550" alt="update">
+    <content><![CDATA[<img src="https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png" width="550" alt="update">
 记录升级过程，便于以后参考。
 <a id="more"></a>
 
@@ -1258,6 +1258,50 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<center>
+    <img src="https://i.loli.net/2019/05/16/5cdccb2b72aa099014.jpg" width="250" height="250" alt="avatar">
+</center><h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center">
+- 97年小姐姐
+- ThoughtWorks.QA
+- 音乐 - 健身 - 美食 - 追剧
+- 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
+</blockquote><hr><h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p><a id="more"></a>
+
+
+
+
+
+
+
+
+<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks#"></a>Join ThoughtWorks#</h1><blockquote>
+<p>以下链接为社招专用，校招可关注#ThoughtWorks校园招聘#公众号获取信息，也可给博主留言内推哟～</p>
+</blockquote>
+<p><a href="https://grnh.se/c7524ec61" target="_blank" rel="noopener">软件测试–QA</a><br><a href="https://grnh.se/eeb019851" target="_blank" rel="noopener">前端开发–FED</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
     <title>categories</title>
     <url>/categories/index.html</url>
     <content><![CDATA[<script>
@@ -1284,50 +1328,6 @@
     <title>tags</title>
     <url>/tags/index.html</url>
     <content><![CDATA[<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<center>
-    <img src="https://i.loli.net/2019/05/16/5cdccb2b72aa099014.jpg" width="250" height="250" alt="avatar">
-</center><h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center">
-- 97年小姐姐
-- ThoughtWorks.QA
-- 音乐 - 健身 - 美食 - 追剧
-- 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
-</blockquote><hr><h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p><a id="more"></a>
-
-
-
-
-
-
-
-
-<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks#"></a>Join ThoughtWorks#</h1><blockquote>
-<p>以下链接为社招专用，校招可关注#ThoughtWorks校园招聘#公众号获取信息，也可给博主留言内推哟～</p>
-</blockquote>
-<p><a href="https://grnh.se/c7524ec61" target="_blank" rel="noopener">软件测试–QA</a><br><a href="https://grnh.se/eeb019851" target="_blank" rel="noopener">前端开发–FED</a></p>
-<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }

@@ -842,11 +842,9 @@ Hosted by <a href="https://coding.net/pages" target="_blank" rel="noopener">Codi
         .then(({ results }) => {
           if (results.length > 0) {
             var counter = results[0];
+              leancloudSelector(url).innerText = counter.time + 1;
             Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
               .then(response => response.json())
-              .then(() => {
-                leancloudSelector(url).innerText = counter.time + 1;
-              })
               .catch(error => {
                 console.log('Failed to save visitor count', error);
               })
@@ -932,8 +930,8 @@ Hosted by <a href="https://coding.net/pages" target="_blank" rel="noopener">Codi
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
 <script src="/js/schemes/muse.js"></script>
 <script src="/js/next-boot.js"></script>
