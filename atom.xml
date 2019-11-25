@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jmyblog.top/"/>
-  <updated>2019-11-25T09:26:54.472Z</updated>
+  <updated>2019-11-25T09:33:50.723Z</updated>
   <id>http://jmyblog.top/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://jmyblog.top/Blog-Update-Note/"/>
     <id>http://jmyblog.top/Blog-Update-Note/</id>
     <published>2019-11-19T08:49:53.000Z</published>
-    <updated>2019-11-25T09:26:54.472Z</updated>
+    <updated>2019-11-25T09:33:50.723Z</updated>
     
-    <content type="html"><![CDATA[<img src="https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png" width="550" alt="update">记录博客升级过程，便于以后参考。<a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<img src="https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png" width="550" alt="update">记录博客更新过程，便于以后参考。<a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
       &lt;img src=&quot;https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png&quot; width=&quot;550&quot; alt=&quot;update&quot;&gt;
-记录博客升级过程，便于以后参考。
+记录博客更新过程，便于以后参考。
     
     </summary>
     
