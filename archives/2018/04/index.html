@@ -11,6 +11,8 @@
   <link rel="mask-icon" href="/images/favicon.ico" color="#222">
   <link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
 
+
+
 <link rel="stylesheet" href="/css/main.css">
 
 
@@ -20,7 +22,6 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('http://jmyblog.top').hostname,
     root: '/',
     scheme: 'Mist',
     version: '7.5.0',
@@ -335,13 +336,7 @@
           <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://zh.lucida.me/" title="http:&#x2F;&#x2F;zh.lucida.me&#x2F;" rel="noopener" target="_blank">lucida</a>
-        </li>
-        <li class="links-of-blogroll-item">
           <a href="https://yfzhou.coding.me/" title="https:&#x2F;&#x2F;yfzhou.coding.me&#x2F;" rel="noopener" target="_blank">Felix</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://huilei.github.io/" title="https:&#x2F;&#x2F;huilei.github.io&#x2F;" rel="noopener" target="_blank">Leihui</a>
         </li>
         <li class="links-of-blogroll-item">
           <a href="https://mmmmmm.me/" title="https:&#x2F;&#x2F;mmmmmm.me&#x2F;" rel="noopener" target="_blank">leesin</a>
@@ -389,13 +384,36 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23 分钟</span>
+    <span title="站点阅读时长">1:26</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
   </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd256a93fb420e6" async="async"></script>
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "[谁把钱丢了]已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
 
         
 
@@ -428,6 +446,18 @@
 
 
 
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = '';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
 
 
 
@@ -443,5 +473,8 @@
   
 
 
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+  
 </body>
 </html>
