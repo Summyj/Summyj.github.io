@@ -1,5 +1,5 @@
 ---
-title: 博客升级过程全记录
+title: 更新博客，我太难了
 date: 2019-11-19 16:49:53
 update: 2019-11-19 16:49:53
 tags: [Hexo,Next]
@@ -8,6 +8,6 @@ copyright: true
 top:
 ---
 <img src="https://i.loli.net/2019/11/22/XxQwVjgfFoRbHTN.png" width="550" alt="update">
-记录升级过程，便于以后参考。
+记录博客更新过程，便于以后参考。
 <!-- more -->
 

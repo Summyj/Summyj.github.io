@@ -3,19 +3,13 @@ date: 2017-08-03 21:35:26
 comments: true
 ---
 
-<center>
-	<img src="https://i.loli.net/2019/05/16/5cdccb2b72aa099014.jpg" width = "250" height = "250" alt="avatar">
-</center>
-
-
-
 # About Me #
 
-<blockquote class="blockquote-center">
-- ThoughtWorks.QA
-- 音乐 - 健身 - 美食 - 追剧
-- 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
-</blockquote>
+{% cq %}
+ThoughtWorks.QA
+音乐 - 健身 - 美食 - 追剧
+巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
+{% endcq %}
 
 
 ----------
@@ -29,7 +23,7 @@ comments: true
 
 博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟:laughing:
 
-# Join ThoughtWorks#
+# Join ThoughtWorks #
 
 >以下链接为社招专用，校招可关注#ThoughtWorks校园招聘#公众号获取信息，也可给博主留言内推哟～
 
