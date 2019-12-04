@@ -51,7 +51,7 @@
   <meta name="description" content="记录博客升级过程，方便以后参考。 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。">
 <meta name="keywords" content="Hexo,Next,升级博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="升级博客，我太南了">
+<meta property="og:title" content="升级博客，我太难了">
 <meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;BlogUpdateNote&#x2F;index.html">
 <meta property="og:site_name" content="谁把钱丢了">
 <meta property="og:description" content="记录博客升级过程，方便以后参考。 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。">
@@ -59,7 +59,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;prXyGdDzATYfIe5.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;Hzag9KbwrZxIoRv.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;McVxzk9ivZfWGyX.png">
-<meta property="og:updated_time" content="2019-12-04T07:14:20.333Z">
+<meta property="og:updated_time" content="2019-12-04T10:01:27.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;prXyGdDzATYfIe5.png">
 
@@ -77,7 +77,7 @@
   };
 </script>
 
-  <title>升级博客，我太南了 | 谁把钱丢了</title>
+  <title>升级博客，我太难了 | 谁把钱丢了</title>
   
 
 
@@ -230,7 +230,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          升级博客，我太南了
+          升级博客，我太难了
         </h1>
 
         <div class="post-meta">
@@ -247,7 +247,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-04 15:14:20" itemprop="dateModified" datetime="2019-12-04T15:14:20+08:00">2019-12-04</time>
+                <time title="修改时间：2019-12-04 18:01:27" itemprop="dateModified" datetime="2019-12-04T18:01:27+08:00">2019-12-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,14 +267,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.4k</span>
+              <span>3.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>11 分钟</span>
+              <span>12 分钟</span>
             </span>
 
         </div>
@@ -325,6 +325,13 @@
 <h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body {</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; //固定图片位置</span><br><span class="line">  opacity: 0.9; //透明度设置</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
+<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
+            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
+          </div>
+
+<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
@@ -384,7 +391,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://jmyblog.top/BlogUpdateNote/" title="升级博客，我太南了">http://jmyblog.top/BlogUpdateNote/</a>
+    <a href="http://jmyblog.top/BlogUpdateNote/" title="升级博客，我太难了">http://jmyblog.top/BlogUpdateNote/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -453,7 +460,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#咋升级"><span class="nav-number">1.</span> <span class="nav-text">咋升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">升级Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级Next"><span class="nav-number">1.3.</span> <span class="nav-text">升级Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#官方文档"><span class="nav-number">1.3.1.</span> <span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改配置文件完成基础设置"><span class="nav-number">1.3.2.</span> <span class="nav-text">更改配置文件完成基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个性化设置"><span class="nav-number">1.3.3.</span> <span class="nav-text">个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#评论系统"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章浏览次数"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">文章浏览次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Daovoice在线联系"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">Daovoice在线联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客宠物"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">博客宠物</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章分享"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">文章分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站底部运行时间"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">网站底部运行时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#酷炫标签云"><span class="nav-number">1.3.3.7.</span> <span class="nav-text">酷炫标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景图片"><span class="nav-number">1.3.3.8.</span> <span class="nav-text">背景图片</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后续的更新"><span class="nav-number">2.</span> <span class="nav-text">后续的更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#咋升级"><span class="nav-number">1.</span> <span class="nav-text">咋升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">升级Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#升级Next"><span class="nav-number">1.3.</span> <span class="nav-text">升级Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#官方文档"><span class="nav-number">1.3.1.</span> <span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改配置文件完成基础设置"><span class="nav-number">1.3.2.</span> <span class="nav-text">更改配置文件完成基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个性化设置"><span class="nav-number">1.3.3.</span> <span class="nav-text">个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#评论系统"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章浏览次数"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">文章浏览次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Daovoice在线联系"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">Daovoice在线联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客宠物"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">博客宠物</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章分享"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">文章分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站底部运行时间"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">网站底部运行时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#酷炫标签云"><span class="nav-number">1.3.3.7.</span> <span class="nav-text">酷炫标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景图片"><span class="nav-number">1.3.3.8.</span> <span class="nav-text">背景图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#侧边栏和首页文章圆角显示"><span class="nav-number">1.3.3.9.</span> <span class="nav-text">侧边栏和首页文章圆角显示</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后续的更新"><span class="nav-number">2.</span> <span class="nav-text">后续的更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -546,7 +553,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:37</span>
+    <span title="站点阅读时长">1:38</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>

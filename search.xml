@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>升级博客，我太南了</title>
+    <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<p>记录博客升级过程，方便以后参考。</p>
 <p>用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。</p>
@@ -42,6 +42,13 @@
 <h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
 <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">body {</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; //固定图片位置</span><br><span class="line">  opacity: 0.9; //透明度设置</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
+<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
+            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
+          </div>
+
+<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
@@ -182,9 +189,8 @@
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
     <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
 <h2 id="动卧-bullettrain-side"><a href="#动卧-bullettrain-side" class="headerlink" title="动卧 :bullettrain_side:"></a>动卧 <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
-<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
 <a id="more"></a>
-
+<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
 <p>于是国庆第一天，在高铁站看《闯关东》度过<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>。<br><img src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width="250" height="300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
 <p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width="250" height="300" alt="动卧"></p>
 <p>刚开始只有我一个人，本来都快睡着了。后来上来了一对去南京的中年夫妇，然后。。。我就再也睡不着了。</p>
