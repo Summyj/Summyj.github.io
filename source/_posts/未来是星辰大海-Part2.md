@@ -8,19 +8,13 @@ copyright:
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/VcvrM5ysLo8qFOW.jpg" width="550" alt="future">
-
 记录一下博主小半年的心路历程。
-
-<!-- more -->
-
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=475207921&auto=1&height=66"></iframe>
 
 ## Part1 尘埃落定(2017.10-2017.11) ##
 
 自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。
 
+<!-- more -->
 两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。
 
 

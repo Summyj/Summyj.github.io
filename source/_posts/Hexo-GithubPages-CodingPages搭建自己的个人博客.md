@@ -8,18 +8,13 @@ copyright: true
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/hBKE9PXWfvjuCp5.jpg" width="550" alt="future">
 搭建博客的正确姿势。
-
-<!-- more -->
-
-
-# 前言 #
-
 
 ## 博客初识 ##
 
 开始写博客只是用CSDN发布，本来开开心心。
+
+<!-- more -->
 
 然而有一天，我的一篇博客被系统直接删掉了，原因是含有敏感词汇。联系了管理员之后才恢复:neutral_face:。
 

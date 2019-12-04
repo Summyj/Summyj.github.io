@@ -2,7 +2,6 @@
 date: 2017-08-03 21:35:26
 comments: true
 ---
-{% img [full-image] https://i.loli.net/2019/11/27/ga8O9dPfuR7rJZ5.png "'心中要有光'" %}
 
 {% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm 关于幽闭型小说 %}
 人生惟一的不幸就是自己的无能。

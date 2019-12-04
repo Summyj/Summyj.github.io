@@ -8,15 +8,14 @@ categories: 项目实践
 copyright: true
 top:  
 ---
-<img src="https://i.loli.net/2019/11/19/iwpAQg9oDR4KFUk.png" width = "550" alt="future">
 
 首先，听我讲一个关于王铁锤的故事。
 
-<!-- more -->
-# 一个故事 #
 ## 版本一 ##
 
 新的Sprint开始了，产品经理/BA 王铁锤召集全组开会:speech_balloon:。
+
+<!-- more -->
 
 **[王铁锤]**：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看[敏捷术语](http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2))
 20分钟后。。。 

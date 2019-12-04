@@ -8,15 +8,13 @@ copyright: true
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/IPBzxrFJGbCkDso.png" width="550" alt="future">
-
 代码实例分析java类中的代码块执行顺序.
-
-<!-- more -->
 
 # 一道笔试题 #
 
 下面是一道阿里的java校招笔试题：
+
+<!-- more -->
 
 ```java
     class HelloA

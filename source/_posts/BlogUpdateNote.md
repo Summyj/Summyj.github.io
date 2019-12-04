@@ -7,14 +7,12 @@ categories: 工具使用
 copyright: true
 top:
 ---
-<img src="https://i.loli.net/2019/12/02/3MKIpLnyodzGqJe.png" width = "550" alt="note">
 
 记录博客升级过程，方便以后参考。
-<!-- more -->
-
-# 为啥要升级 #
 
 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
+
+<!-- more -->
 
 # 咋升级 #
 
@@ -93,26 +91,28 @@ hexo --version
 
 但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了:sob: 可问题是我完全不记得自己都做了啥，万一改坏了怎么办:scream:于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。
 
-### 手动改  ###
+### 更改配置文件完成基础设置  ###
 
-{% label primary@更改主题配置文件 %}
-
-新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。主要更新了菜单栏/标签/图标/头像/社交链接/打赏等等配置。
+新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。
+对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。
 这样改完之后，博客基本上与之前一致了。
 
-{% label primary@插件和第三方依赖 %}
+### 个性化设置 ###
 
-- 评论系统
+#### 评论系统 ####
 之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。
-- 文章浏览次数
+
+#### 文章浏览次数
 这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：
 <img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error">
 不知道怎么解决，准备在github提issue，所以先弃用了。
-- Daovoice在线联系
+
+#### Daovoice在线联系 ####
 有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：
 <img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error">
 开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。
-- 博客宠物
+
+#### 博客宠物
 就是右下角萌萌的小黑啦。
 之前也已经下载 "hexo-helper-live2d" 和 "live2d-widget-model-hijiki"这两个依赖，在图中路径加上标记：
 <img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config">
@@ -137,12 +137,32 @@ live2d:
     show: true
 {% endcodeblock %}
 之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。
-- 文章分享
-新加入了分享文章的插件AddThis, 挺好用的。按照[这里的说明](https://www.addthis.com)配置就好了。然后把id加在配置文件里。
-- 网站底部运行时间
-个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。
-参考[这边文章](https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/)完成的。
 
+#### 文章分享
+新加入了分享文章的插件AddThis, 挺好用的。按照[这里的说明](https://www.addthis.com)配置就好了。然后把id加在配置文件里。
+
+#### 网站底部运行时间
+个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。
+参考[这篇文章](https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/)完成的。
+
+#### 酷炫标签云
+根据插件[github说明](https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md)配置就好了。
+下载：
+{% codeblock lang:command %}
+npm install hexo-tag-cloud
+{% endcodeblock %}
+#### 背景图片
+给博客加上一个背景图片。
+网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了[更新说明](https://github.com/theme-next/hexo-theme-next/issues/1217)，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。
+先在博客根目录下的Source文件夹里新建{% label info@_data %}文件夹，然后再创建{% label info@styles.styl %}文件，添加内容：
+{% codeblock lang:command %}
+body {
+  background:url(你想加的背景图片url);
+  background-attachment: fixed; //固定图片位置
+  opacity: 0.9; //透明度设置
+}
+{% endcodeblock %}
+之后在博客配置文件搜索关键字{% label info@custom_file_path %}去掉 style 的注释就好啦。
 # 后续的更新 #
 
 以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。
@@ -150,3 +170,4 @@ live2d:
 # 参考文章 #
 - [将 Hexo 升级到 v3.5.0](https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/)
 - [Hexo NexT 6升级笔记](https://www.jianshu.com/p/e211e9119522)
+- [Hexo博客建立标签云及效果展示](https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/)

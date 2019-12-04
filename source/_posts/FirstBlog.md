@@ -6,10 +6,7 @@ categories: 生活随想
 comments: false
 ---
 
-<img src="http://i.imgur.com/sU2JZ8Z.jpg" width="550" alt="future">
-
 FistPage in my blog.
-<!-- more -->
 
 the future is whitin reach.
 
