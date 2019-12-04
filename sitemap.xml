@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jmyblog.top/links/index.html</loc>
+    
+    <lastmod>2019-12-04T09:03:17.981Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jmyblog.top/BlogUpdateNote/</loc>
     
     <lastmod>2019-12-04T07:14:20.333Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://jmyblog.top/BDD-Introduce/</loc>
     
     <lastmod>2019-12-04T06:37:44.266Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jmyblog.top/links/index.html</loc>
-    
-    <lastmod>2019-12-04T03:26:40.814Z</lastmod>
     
   </url>
   
