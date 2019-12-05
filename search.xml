@@ -4,9 +4,9 @@
     <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<p>记录博客升级过程，方便以后参考。</p>
-<p>用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。</p>
 <a id="more"></a>
 
+<p>用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。</p>
 <h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
 <div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
 
@@ -47,13 +47,13 @@
           </div>
 
 <p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br></pre></td></tr></tbody></table></figure>
-
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br><span class="line"></span><br><span class="line">// 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           = 16px</span><br><span class="line">$btn-default-bg               = white</span><br><span class="line">$btn-default-color            = $text-color</span><br><span class="line">$btn-default-border-color     = $text-color</span><br><span class="line">$btn-default-hover-color      = white</span><br><span class="line">$btn-default-hover-bg         = $black-deep</span><br></pre></td></tr></tbody></table></figure>
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
 <li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
 <li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
+<li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -87,12 +87,12 @@
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
-<h2 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h2><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
 <a id="more"></a>
 
+<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
 <p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
 <hr>
-<h2 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h2><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
+<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
 <p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
 <ul>
 <li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
@@ -188,8 +188,9 @@
     <title>十一旅行中的小插曲</title>
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
     <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
-<h2 id="动卧-bullettrain-side"><a href="#动卧-bullettrain-side" class="headerlink" title="动卧 :bullettrain_side:"></a>动卧 <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
 <a id="more"></a>
+
+<h2 id="动卧-bullettrain-side"><a href="#动卧-bullettrain-side" class="headerlink" title="动卧 :bullettrain_side:"></a>动卧 <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
 <p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
 <p>于是国庆第一天，在高铁站看《闯关东》度过<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>。<br><img src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width="250" height="300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
 <p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width="250" height="300" alt="动卧"></p>
@@ -296,8 +297,9 @@
     <title>未来是星辰大海_Part2</title>
     <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
     <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
-<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
 <a id="more"></a>
+
+<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
 <p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
 <h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
 <p>但是时间长了，问题就开始出现了。</p>
@@ -360,9 +362,9 @@
     <title>20岁光阴不再来</title>
     <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
     <content><![CDATA[<p>时间啊，你慢点走。</p>
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
 <a id="more"></a>
 
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
 <p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
 <h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
 <p><strong>忠告</strong></p>
@@ -408,8 +410,9 @@
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
-<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
 <a id="more"></a>
+
+<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
 <h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
 <p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
 <h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
@@ -492,8 +495,9 @@
     <title>敏捷开发与测试</title>
     <url>/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
-<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
 <a id="more"></a>
+
+<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
 <hr>
 <blockquote>
 <p>接下来我将从3个方面：What?（什么是敏捷开发）&Why（为什么要实行敏捷开发）&How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
@@ -634,9 +638,9 @@
     <title>Java类中的代码块执行顺序</title>
     <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
-<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
 <a id="more"></a>
 
+<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>请写出上述代码的输出，看完本文你就会有答案。</p>
 <h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
@@ -697,9 +701,8 @@
     <title>未来是星辰大海</title>
     <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
     <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
 <a id="more"></a>
-
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
 <h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
 <ul>
 <li>大佬：一个offer接一个offer，择优录取</li>
@@ -766,9 +769,9 @@
     <title>Git学习笔记</title>
     <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
-<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
 <a id="more"></a>
 
+<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
 <hr>
 <h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
 <ul>
@@ -881,6 +884,8 @@
     <title>递归求解1到100求和</title>
     <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
     <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+<a id="more"></a>
+
 <p><strong>思想：</strong></p>
 <p>思考一下，从1加到100可以分解成：</p>
 <ul>
@@ -889,8 +894,6 @@
 <li>1+2+3+（4加到100的和）</li>
 <li>……</li>
 </ul>
-<a id="more"></a>
-
 <p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
 <p>所以，可以编写如下代码：</p>
 <p><strong>代码：</strong></p>
@@ -929,9 +932,9 @@
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
 <a id="more"></a>
 
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
 <ul>
 <li>整除但4不能整除100</li>
 <li>整除100又能整除400</li>
@@ -993,10 +996,10 @@
     <title>爱你就像爱生命</title>
     <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
     <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
 <a id="more"></a>
 
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
 <hr>
 <p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
 <p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
@@ -1041,9 +1044,8 @@
     <title>博客搭建折腾记</title>
     <url>/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>搭建博客的正确姿势。</p>
-<h2 id="博客初识"><a href="#博客初识" class="headerlink" title="博客初识"></a>博客初识</h2><p>开始写博客只是用CSDN发布，本来开开心心。</p>
 <a id="more"></a>
-
+<h2 id="博客初识"><a href="#博客初识" class="headerlink" title="博客初识"></a>博客初识</h2><p>开始写博客只是用CSDN发布，本来开开心心。</p>
 <p>然而有一天，我的一篇博客被系统直接删掉了，原因是含有敏感词汇。联系了管理员之后才恢复<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span>。</p>
 <p>又想起之前一天发了好几篇，被系统禁发了。 有点小生气，发个博客也这么麻烦。索性就自己搭一个好了，然后就开始了折腾之旅。</p>
 <p>或许你不相信，但我确实见过有许多非互联网行业的人也搭建了自己的博客。所以在搭建博客这件事上，确实没有专业之分。</p>
@@ -1258,21 +1260,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
-
-<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
-</blockquote>
-
-<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
-<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
-            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
-          </div>
-
-<script>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1363,9 +1353,21 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<script>
+    <title></title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
+
+<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
+</blockquote>
+
+<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
+<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
+            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
+          </div>
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1434,29 +1436,6 @@
 
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
 <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1551,6 +1530,29 @@
     };
     
 })();<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
