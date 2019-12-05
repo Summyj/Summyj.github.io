@@ -9,12 +9,12 @@ top:
 ---
 
 代码实例分析java类中的代码块执行顺序.
+<!-- more -->
 
 # 一道笔试题 #
 
 下面是一道阿里的java校招笔试题：
 
-<!-- more -->
 
 ```java
     class HelloA

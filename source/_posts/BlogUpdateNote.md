@@ -1,5 +1,5 @@
 ---
-title: 升级博客，我太南了
+title: 升级博客，我太难了
 date: 2019-12-02 13:52:15
 update: 2019-12-02 13:52:15
 tags: [Hexo, Next, 升级博客]
@@ -10,9 +10,10 @@ top:
 
 记录博客升级过程，方便以后参考。
 
+<!-- more -->
+
 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
 
-<!-- more -->
 
 # 咋升级 #
 
@@ -163,6 +164,26 @@ body {
 }
 {% endcodeblock %}
 之后在博客配置文件搜索关键字{% label info@custom_file_path %}去掉 style 的注释就好啦。
+
+#### 侧边栏和首页文章圆角显示
+{% note info %} 
+“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”
+{% endnote %}
+
+打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：
+{% codeblock lang:command %}
+// 修改主题页面布局为圆角
+$border-radius-inner            = 15px 15px 15px 15px;
+$border-radius                  = 15px;
+
+// 阅读全文按钮为圆角
+$btn-default-radius           = 16px
+$btn-default-bg               = white
+$btn-default-color            = $text-color
+$btn-default-border-color     = $text-color
+$btn-default-hover-color      = white
+$btn-default-hover-bg         = $black-deep
+{% endcodeblock %}
 # 后续的更新 #
 
 以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。
@@ -171,3 +192,4 @@ body {
 - [将 Hexo 升级到 v3.5.0](https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/)
 - [Hexo NexT 6升级笔记](https://www.jianshu.com/p/e211e9119522)
 - [Hexo博客建立标签云及效果展示](https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/)
+- [hexo next主题优化，打造个人精致网站](http://eternalzttz.com/hexo-next.html)
