@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jmyblog.top/How-to-Write/</loc>
+    <loc>http://jmyblog.top/BDD-Introduce/</loc>
     
-    <lastmod>2019-12-06T02:41:27.551Z</lastmod>
+    <lastmod>2019-12-11T08:31:52.047Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jmyblog.top/BlogUpdateNote/</loc>
     
-    <lastmod>2019-12-06T02:40:37.219Z</lastmod>
+    <lastmod>2019-12-11T02:59:41.445Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jmyblog.top/How-to-Write/</loc>
+    
+    <lastmod>2019-12-06T02:41:27.551Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>http://jmyblog.top/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2019-12-05T07:15:41.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jmyblog.top/BDD-Introduce/</loc>
-    
-    <lastmod>2019-12-05T07:15:19.669Z</lastmod>
     
   </url>
   

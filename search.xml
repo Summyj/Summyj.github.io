@@ -81,6 +81,7 @@
 <li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
 <li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
 <li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
+<li><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -166,7 +167,7 @@
 <blockquote>
 <p>帮助团队跟踪功能完成度</p>
 </blockquote>
-<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。这里的自动化测试则从业务抽象层面发现缺陷，再次体现了TDD一定是BDD的基础。</p>
+<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
 <blockquote>
 <p>减少测试工作量</p>
 </blockquote>
@@ -1345,29 +1346,6 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/links/index.html</url>
     <content><![CDATA[<blockquote class="blockquote-center"><p>下面是一些我心水的博客链接<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span> 排名不分先后，都是优秀的大佬<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span></p>
@@ -1418,6 +1396,29 @@
 </tr>
 </tbody></table>
 <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
