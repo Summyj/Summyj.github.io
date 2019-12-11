@@ -190,3 +190,4 @@ $btn-default-hover-bg         = $black-deep
 - [Hexo NexT 6升级笔记](https://www.jianshu.com/p/e211e9119522)
 - [Hexo博客建立标签云及效果展示](https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/)
 - [hexo next主题优化，打造个人精致网站](http://eternalzttz.com/hexo-next.html)
+- [Hexo-NexT 主题个性优化](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/)
