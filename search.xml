@@ -3,7 +3,53 @@
   <entry>
     <title>Hexo的一些写作标签</title>
     <url>/How-to-Write/</url>
-    <content><![CDATA[<script>
+    <content><![CDATA[<h3 id="代码标签"><a href="#代码标签" class="headerlink" title="代码标签"></a>代码标签</h3><p>代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% codeblock lang:command %}</span><br><span class="line">这是一行代码</span><br><span class="line">{% endcodeblock %}</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="文本居中标签"><a href="#文本居中标签" class="headerlink" title="文本居中标签"></a>文本居中标签</h3><p>代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。原来自那时起，一切便都是错的。</span><br><span class="line">{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。原来自那时起，一切便都是错的。</p>
+</blockquote>
+
+<h3 id="note标签"><a href="#note标签" class="headerlink" title="note标签"></a>note标签</h3><p>_config 文件配置关键字：note, 我的配置如下：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></tbody></table></figure>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% note <span class="keyword">default</span> %}</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">{% endnote %}</span><br><span class="line">{% note primary %}</span><br><span class="line">primary</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note success %}</span><br><span class="line">success</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note info %}</span><br><span class="line">info</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note warning %}</span><br><span class="line">warning</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note danger %}</span><br><span class="line">danger</span><br><span class="line">{% endnote %}</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<div class="note default">
+            <p>default</p>
+          </div>
+<div class="note primary">
+            <p>primary</p>
+          </div>
+<div class="note success">
+            <p>success</p>
+          </div>
+<div class="note info">
+            <p>info</p>
+          </div>
+<div class="note warning">
+            <p>warning</p>
+          </div>
+<div class="note danger">
+            <p>danger</p>
+          </div>
+
+<h3 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% label <span class="keyword">default</span>@默认 %}</span><br><span class="line">{% label primary@主要 %}</span><br><span class="line">{% label success@成功 %}</span><br><span class="line">{% label info@信息 %}</span><br><span class="line">{% label warning@警告 %}</span><br><span class="line">{% label danger@危险 %}</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<span class="label default">默认</span>
+<span class="label primary">主要</span>
+<span class="label success">成功</span>
+<span class="label info">信息</span>
+<span class="label warning">警告</span>
+<span class="label danger">危险</span>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1290,9 +1336,21 @@
       </tags>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<script>
+    <title></title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
+
+<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
+</blockquote>
+
+<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
+<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
+            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
+          </div>
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1313,8 +1371,8 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1359,21 +1417,9 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
-
-<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
-</blockquote>
-
-<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
-<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
-            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
-          </div>
-
-<script>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
