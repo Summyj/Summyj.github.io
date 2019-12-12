@@ -181,6 +181,12 @@ $btn-default-border-color     = $text-color
 $btn-default-hover-color      = white
 $btn-default-hover-bg         = $black-deep
 {% endcodeblock %}
+
+#### 友情链接页面
+
+参照 [这篇文章](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2)设置的。
+
+
 # 后续的更新 #
 
 以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。
