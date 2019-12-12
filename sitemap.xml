@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jmyblog.top/BDD-Introduce/</loc>
+    <loc>http://jmyblog.top/links/index.html</loc>
     
-    <lastmod>2019-12-11T08:31:52.047Z</lastmod>
+    <lastmod>2019-12-12T07:32:06.204Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jmyblog.top/BlogUpdateNote/</loc>
     
-    <lastmod>2019-12-11T02:59:41.445Z</lastmod>
+    <lastmod>2019-12-12T06:55:56.702Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jmyblog.top/BDD-Introduce/</loc>
+    
+    <lastmod>2019-12-11T08:31:52.047Z</lastmod>
     
   </url>
   
@@ -103,13 +110,6 @@
     <loc>http://jmyblog.top/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</loc>
     
     <lastmod>2019-12-05T07:15:00.980Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jmyblog.top/links/index.html</loc>
-    
-    <lastmod>2019-12-05T05:56:23.469Z</lastmod>
     
   </url>
   

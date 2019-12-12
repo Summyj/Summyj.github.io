@@ -75,6 +75,8 @@
 
 <p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
 <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br><span class="line"></span><br><span class="line">// 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           = 16px</span><br><span class="line">$btn-default-bg               = white</span><br><span class="line">$btn-default-color            = $text-color</span><br><span class="line">$btn-default-border-color     = $text-color</span><br><span class="line">$btn-default-hover-color      = white</span><br><span class="line">$btn-default-hover-bg         = $black-deep</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
@@ -1288,6 +1290,29 @@
       </tags>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -1323,79 +1348,9 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/links/index.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center"><p>下面是一些我心水的博客链接<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span> 排名不分先后，都是优秀的大佬<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span></p>
-</blockquote>
-
-<table>
-<thead>
-<tr>
-<th align="left">Site</th>
-<th align="left">Info</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a href="http://iamwr.com/" target="_blank" rel="noopener">iamwr</a></td>
-<td align="left">在知乎讨生活的程序猿一枚，搭建博客时参考了他的文章</td>
-</tr>
-<tr>
-<td align="left"><a href="http://www.youmeek.com/" target="_blank" rel="noopener">youmeek</a></td>
-<td align="left">不知名的开发大佬，最喜欢他<a href="http://www.youmeek.com/my-learning-way/" target="_blank" rel="noopener">这篇文章</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://blog.dandyweng.com/" target="_blank" rel="noopener">Dandy’s blog</a></td>
-<td align="left">homeschooler/自由职业者/开发大佬/摄影师 每年都会对自己网站改版</td>
-</tr>
-<tr>
-<td align="left"><a href="https://yfzhou.coding.me/" target="_blank" rel="noopener">Felix</a></td>
-<td align="left">同用next主题的大佬，博客页面超酷</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">廖雪峰</a></td>
-<td align="left">这个不用说了，全国人民都知道</td>
-</tr>
-<tr>
-<td align="left"><a href="http://www.ruanyifeng.com/" target="_blank" rel="noopener">阮一峰</a></td>
-<td align="left">知名大佬，每周都会更新一篇文章分享科技内容，坚持的品质让人敬畏</td>
-</tr>
-<tr>
-<td align="left"><a href="https://coolshell.cn/" target="_blank" rel="noopener">酷壳</a></td>
-<td align="left">被同事安利的开发大佬，最喜欢他<a href="https://coolshell.cn/articles/19464.html" target="_blank" rel="noopener">这篇文章</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://huilei.github.io/" target="_blank" rel="noopener">leihui</a></td>
-<td align="left">同事，目前在美帝长期LTA</td>
-</tr>
-<tr>
-<td align="left"><a href="https://huangxuan.me/" target="_blank" rel="noopener">Hux</a></td>
-<td align="left">搜索主题时发现的宝藏博客，自己个人开发的主题比 Next 的 Star 数更多</td>
-</tr>
-</tbody></table>
-<script>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
