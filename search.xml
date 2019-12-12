@@ -1313,21 +1313,9 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
-
-<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
-</blockquote>
-
-<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
-<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
-            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
-          </div>
-
-<script>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1371,9 +1359,21 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[<script>
+    <title></title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm" target="_blank" rel="noopener">关于幽闭型小说</a></cite></footer></blockquote>
+
+<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><blockquote class="blockquote-center"><p>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延</p>
+</blockquote>
+
+<h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考<a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>。</p>
+<p>博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<h1 id="Join-ThoughtWorks"><a href="#Join-ThoughtWorks" class="headerlink" title="Join ThoughtWorks"></a>Join ThoughtWorks</h1><div class="note info">
+            <p>想加入TW嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>, 无论校招社招，需要内推的童鞋请移步<a href="https://www.nowcoder.com/discuss/225857" target="_blank" rel="noopener">牛客网内推贴</a>私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 </p>
+          </div>
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
