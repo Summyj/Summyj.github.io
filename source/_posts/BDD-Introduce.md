@@ -167,6 +167,7 @@ BDD行为驱动开发(Behaviour-Driven Development)
 - [Myths about BDD](https://cucumber.io/docs/bdd/myths/ "Myths about BDD")
 - [BDD Tutorial](https://cucumber.io/docs/guides/bdd-tutorial/ "BDD Tutorial")
 - [Behaviour-Driven Development](https://cucumber.io/docs/bdd/ "Behaviour-Driven Development")
+- [说起BDD，你会想到什么？](https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/)
 
 
 
