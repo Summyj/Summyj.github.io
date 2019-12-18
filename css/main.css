@@ -1230,7 +1230,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0be071;
+  background: #207a13;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2817,4 +2817,13 @@ body {
   background: url("https://i.loli.net/2019/12/04/WZahGfxR6lONtP5.jpg");
   background-attachment: fixed;
   opacity: 0.9;
+}
+span#inline-toc {
+  display: inline-block;
+  border-radius: 80% 100% 90% 20%;
+  background-color: #e3f2fd;
+  color: #555;
+  padding: 0.05em 0.4em;
+  margin: 2px 5px 2px 0px;
+  line-height: 1.5;
 }
