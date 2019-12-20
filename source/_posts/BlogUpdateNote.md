@@ -186,6 +186,10 @@ $btn-default-hover-bg         = $black-deep
 
 参照 [这篇文章](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2)设置的。
 
+#### 改了下button的样式
+
+<img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
+<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
 
 # 后续的更新 #
 
