@@ -10,11 +10,11 @@
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% codeblock lang:command %}</span><br><span class="line">这是一行代码</span><br><span class="line">{% endcodeblock %}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
-<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。原来自那时起，一切便都是错的。</p>
+<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。原来从那时起，一切便都是错的。</p>
 </blockquote>
 
 <p>代码：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。原来自那时起，一切便都是错的。</span><br><span class="line">{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。原来从那时起，一切便都是错的。</span><br><span class="line">{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
 <div class="note default">
