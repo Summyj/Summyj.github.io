@@ -140,6 +140,9 @@
 <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br><span class="line"></span><br><span class="line">// 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           = 16px</span><br><span class="line">$btn-default-bg               = white</span><br><span class="line">$btn-default-color            = $text-color</span><br><span class="line">$btn-default-border-color     = $text-color</span><br><span class="line">$btn-default-hover-color      = white</span><br><span class="line">$btn-default-hover-bg         = $black-deep</span><br></pre></td></tr></tbody></table></figure>
 
 <h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
+<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
+<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
+
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
@@ -1412,8 +1415,8 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1435,8 +1438,8 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title></title>
+    <url>/links/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

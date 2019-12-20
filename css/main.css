@@ -296,23 +296,16 @@ td {
 }
 .btn {
   background: #fff;
-  border: 2px solid #555;
-  border-radius: 16px;
   color: #555;
   display: inline-block;
   font-size: 0.875em;
   line-height: 2;
-  padding: 0 20px;
   text-decoration: none;
   transition-property: background-color;
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-}
-.btn:hover {
-  background: #222;
-  border-color: #222;
-  color: #fff;
+  text-align: left;
 }
 .btn + .btn {
   margin: 0 0 8px 8px;
@@ -1230,7 +1223,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #207a13;
+  background: #3d2bff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1480,9 +1473,10 @@ pre .javascript .function {
   }
 }
 .with-love {
-  color: #808080;
+  color: #E74C3C;
   display: inline-block;
   margin: 0 5px;
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .powered-by,
 .theme-info {
@@ -2711,6 +2705,9 @@ ul.breadcrumb li + li:last-child {
 }
 .posts-expand {
   padding-top: initial;
+}
+.post-button {
+  text-align: left;
 }
 .post-eof {
   display: none;
