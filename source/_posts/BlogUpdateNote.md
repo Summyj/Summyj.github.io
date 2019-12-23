@@ -9,8 +9,8 @@ description: 记录博客升级过程，方便以后参考。
 top:
 ---
 
+<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
-
 
 # 咋升级 #
 

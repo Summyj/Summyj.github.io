@@ -9,7 +9,7 @@ description: 整理一下Hexo和Next主题的写作标签，省的写的时候�
 top:
 ---
 
-<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="button css">
+<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
 
 ## Hexo/Next 标签
 
