@@ -298,7 +298,7 @@ td {
   background: #fff;
   color: #555;
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 16px;
   line-height: 2;
   text-decoration: none;
   transition-property: background-color;
@@ -1223,7 +1223,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3d2bff;
+  background: #abff83;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2731,6 +2731,11 @@ ul.breadcrumb li + li:last-child {
 }
 .footer {
   bottom: auto;
+  color: #e7e0e0;
+}
+.footer a,
+.footer span.exturl {
+  color: #21bdc0;
 }
 .sub-menu {
   border-bottom: initial;
@@ -2811,9 +2816,10 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://i.loli.net/2019/12/04/WZahGfxR6lONtP5.jpg");
+  background: url("https://i.loli.net/2019/12/20/XBfqokC4Zuptcb7.png");
   background-attachment: fixed;
-  opacity: 0.9;
+  background-size: cover;
+  opacity: 1;
 }
 span#inline-toc {
   display: inline-block;
