@@ -147,7 +147,7 @@
 <h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
 <img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
 
-<h3 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h3><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
+<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
