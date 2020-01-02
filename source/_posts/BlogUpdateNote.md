@@ -196,6 +196,16 @@ $btn-default-hover-bg         = $black-deep
 
 Path: {% label info@themes/next/layout/_partials/sidebar/site-overview.swig %}
 
+#### 右上角站点背景改颜色
+
+Path: {% label info@themes/next/source/css/_schemes/Pisces/_header.styl %}
+颜色可以自己改
+{% codeblock lang:command %}
+.site-meta {
+  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);
+}
+{% endcodeblock %}
+
 # 后续的更新 #
 
 以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。
