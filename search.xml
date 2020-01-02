@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>谜一样的测试金字塔</title>
+    <url>/Test-Pyramid/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
+
+<blockquote>
+<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></p>
+</blockquote>
+<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试实现effort小，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>包括集成测试/组件测试/接口测试/契约测试。相对单元测试粒度较粗，所以将它放在第三层。<br>大佬说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI测试"><a href="#UI测试" class="headerlink" title="UI测试"></a>UI测试</h3><p>也叫端到端测试，由于实现和维护成本较高，所以在第二层。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第一层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>：</p>
+<div class="note info">
+            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
+          </div>
+<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
+<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
+<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
+
+<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
+<ul>
+<li>按照测试粒度分层</li>
+<li>层次越高，你写的测试应该越少</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>测试金字塔</tag>
+        <tag>敏捷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的一些写作标签</title>
     <url>/How-to-Write/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
@@ -148,6 +202,9 @@
 <img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
 
 <h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
+<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">.site-meta {</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
@@ -282,8 +339,8 @@
         <category>项目实践</category>
       </categories>
       <tags>
-        <tag>BDD</tag>
         <tag>敏捷</tag>
+        <tag>BDD</tag>
       </tags>
   </entry>
   <entry>
@@ -1420,8 +1477,8 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title></title>
+    <url>/links/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1443,8 +1500,8 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
