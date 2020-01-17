@@ -50,17 +50,17 @@
   };
 </script>
 
-  <meta name="description" content="对测试金字塔的一些总结和思考.">
+  <meta name="description" content="对测试金字塔的一些总结和思考。">
 <meta name="keywords" content="测试金字塔,敏捷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谜一样的测试金字塔">
 <meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;Test-Pyramid&#x2F;index.html">
 <meta property="og:site_name" content="谁把钱丢了">
-<meta property="og:description" content="对测试金字塔的一些总结和思考.">
+<meta property="og:description" content="对测试金字塔的一些总结和思考。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;30&#x2F;wVkCrdpXnTN5Pg9.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;01&#x2F;02&#x2F;tsJBZ4Cv6gKRGFo.png">
-<meta property="og:updated_time" content="2020-01-02T07:56:31.416Z">
+<meta property="og:updated_time" content="2020-01-06T09:02:11.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;30&#x2F;wVkCrdpXnTN5Pg9.png">
 
@@ -249,7 +249,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-02 15:56:31" itemprop="dateModified" datetime="2020-01-02T15:56:31+08:00">2020-01-02</time>
+                <time title="修改时间：2020-01-06 17:02:11" itemprop="dateModified" datetime="2020-01-06T17:02:11+08:00">2020-01-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,16 +269,16 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>5 分钟</span>
             </span>
-            <div class="post-description">对测试金字塔的一些总结和思考.</div>
+            <div class="post-description">对测试金字塔的一些总结和思考。</div>
 
         </div>
       </header>
@@ -295,10 +295,21 @@
 <p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></p>
 </blockquote>
 <h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
-<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试实现effort小，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
-<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>包括集成测试/组件测试/接口测试/契约测试。相对单元测试粒度较粗，所以将它放在第三层。<br>大佬说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
-<h3 id="UI测试"><a href="#UI测试" class="headerlink" title="UI测试"></a>UI测试</h3><p>也叫端到端测试，由于实现和维护成本较高，所以在第二层。</p>
-<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第一层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
+<blockquote>
+<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
+</blockquote>
+<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&端到端测试"></a>UI&端到端测试</h3><ul>
+<li>UI测试</li>
+</ul>
+<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
+<ul>
+<li>端到端测试</li>
+</ul>
+<p>包括针对API和用户界面的端到端测试。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
 <h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>：</p>
 <div class="note info">
             <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
@@ -391,7 +402,10 @@
     <a href="/How-to-Write/" rel="prev" title="Hexo的一些写作标签">
       <i class="fa fa-chevron-left"></i> Hexo的一些写作标签
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/MyBooks/" rel="next" title="我的书架">
+      我的书架 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -434,7 +448,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#啥是测试金字塔"><span class="nav-number">1.</span> <span class="nav-text">啥是测试金字塔</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务测试"><span class="nav-number">1.2.</span> <span class="nav-text">服务测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI测试"><span class="nav-number">1.3.</span> <span class="nav-text">UI测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手工测试"><span class="nav-number">1.4.</span> <span class="nav-text">手工测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些需要注意的点"><span class="nav-number">2.</span> <span class="nav-text">一些需要注意的点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不要纠结各种测试术语"><span class="nav-number">2.1.</span> <span class="nav-text">不要纠结各种测试术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时刻维护金字塔形状，避免测试重复"><span class="nav-number">2.2.</span> <span class="nav-text">时刻维护金字塔形状，避免测试重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整理测试代码"><span class="nav-number">2.3.</span> <span class="nav-text">整理测试代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试金字塔是一成不变的吗"><span class="nav-number">3.</span> <span class="nav-text">测试金字塔是一成不变的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#啥是测试金字塔"><span class="nav-number">1.</span> <span class="nav-text">啥是测试金字塔</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务测试"><span class="nav-number">1.2.</span> <span class="nav-text">服务测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI-amp-端到端测试"><span class="nav-number">1.3.</span> <span class="nav-text">UI&amp;端到端测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手工测试"><span class="nav-number">1.4.</span> <span class="nav-text">手工测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些需要注意的点"><span class="nav-number">2.</span> <span class="nav-text">一些需要注意的点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不要纠结各种测试术语"><span class="nav-number">2.1.</span> <span class="nav-text">不要纠结各种测试术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时刻维护金字塔形状，避免测试重复"><span class="nav-number">2.2.</span> <span class="nav-text">时刻维护金字塔形状，避免测试重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整理测试代码"><span class="nav-number">2.3.</span> <span class="nav-text">整理测试代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试金字塔是一成不变的吗"><span class="nav-number">3.</span> <span class="nav-text">测试金字塔是一成不变的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -450,7 +464,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -462,7 +476,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -493,7 +507,7 @@
     <h3 class="widget-title">Tag Cloud</h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BDD/" rel="tag">BDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodingPages/" rel="tag">CodingPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GithubPages/" rel="tag">GithubPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/" rel="tag">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TED/" rel="tag">TED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaEE/" rel="tag">javaEE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F/" rel="tag">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/" rel="tag">人生规划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/" rel="tag">判断素数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2/" rel="tag">升级博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%8A%E5%88%AB%E6%8B%96%E5%BB%B6/" rel="tag">告别拖延</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95/" rel="tag">敏捷测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AA%E6%9D%A5/" rel="tag">未来</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B/" rel="tag">极限编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E9%87%91%E5%AD%97%E5%A1%94/" rel="tag">测试金字塔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/" rel="tag">王小波</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%8F%E5%B7%9E/" rel="tag">苏州</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B0%E5%B9%B4/" rel="tag">闰年</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BDD/" rel="tag">BDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodingPages/" rel="tag">CodingPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GithubPages/" rel="tag">GithubPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/" rel="tag">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TED/" rel="tag">TED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaEE/" rel="tag">javaEE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E5%8D%95/" rel="tag">书单</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F/" rel="tag">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/" rel="tag">人生规划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/" rel="tag">判断素数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2/" rel="tag">升级博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%8A%E5%88%AB%E6%8B%96%E5%BB%B6/" rel="tag">告别拖延</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95/" rel="tag">敏捷测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AA%E6%9D%A5/" rel="tag">未来</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B/" rel="tag">极限编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E9%87%91%E5%AD%97%E5%A1%94/" rel="tag">测试金字塔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/" rel="tag">王小波</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%8F%E5%B7%9E/" rel="tag">苏州</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B0%E5%B9%B4/" rel="tag">闰年</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -523,12 +537,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:48</span>
+    <span title="站点阅读时长">1:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
