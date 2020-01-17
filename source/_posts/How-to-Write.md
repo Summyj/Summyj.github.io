@@ -140,6 +140,11 @@ _config 文件配置关键字：Label , 需要用的话把值设为true即可。
 那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
 {% endblockquote %}
 
+### 其他标签
+
+在 [Hexo标签](https://hexo.io/docs/tag-plugins.html) 和 [Next内置标签](https://theme-next.iissnan.com/tag-plugins.html) 可以找到。
+
+
 ## 自定义标签
 ### 数字块
 参考 [这个](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97) 设置。
