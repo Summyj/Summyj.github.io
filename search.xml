@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
+
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<span class="label success">绿色</span>是我目前在做的，<span class="label warning">黄色</span>是在实践但没有深入了解的，<span class="label danger">红色</span>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <span class="label success">测试金字塔</span>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><span class="label success">冒烟测试</span>：check主要功能</li>
+<li><span class="label success">功能测试</span>：自动化case覆盖功能</li>
+<li><span class="label danger">验收测试</span>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><span class="label danger">性能测试</span>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过
+
+</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
+<p><span id="inline-toc">1.</span> <span class="label success">UI和业务流程变更导致自动化测试代码不可用</span></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <span class="label danger">UI自动化测试只能模拟人工</span></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default">
+            <ul><li><span class="label success">传统自动化测试</span>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li><li><span class="label danger">自动探索测试</span>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li><li><span class="label danger">codeless方向及智能生成测试用例方向</span>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li></ul>
+          </div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <span class="label success">核心用例自动化覆盖</span><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <span class="label success">基础回归自动化覆盖</span><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <span class="label success">新功能手工测试</span><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <span class="label warning">了解待测产品和平台</span><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <span class="label warning">精通好的测试框架</span><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <span class="label warning">掌握一些自动化测试代码编写技巧和关键点</span><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><span class="label warning">Web应用自动化</span>：Selenium</li>
+<li><span class="label danger">App手机应用自动化</span>：Appium</li>
+<li><span class="label danger">PC端的应用的GUI自动化</span>：Unkown</li>
+<li><span class="label danger">微信小程序自动化</span>：App+Web测试技术的外延形态</li>
+<li><span class="label danger">智能设备自动化</span>：Unknown
+
+</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><span class="label danger">Android原生Monkey</span></li>
+<li><span class="label danger">百度 SmartMonkey</span></li>
+<li><span class="label danger">腾讯 NewMonkey</span></li>
+<li><span class="label danger">阿里 Macaca 的 NoSmoke</span></li>
+<li><span class="label danger">Google出品的 AppCrawler</span>
+
+</li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info">
+            <p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
+          </div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的书架</title>
     <url>/MyBooks/</url>
     <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center"><p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
@@ -10,7 +88,10 @@
 <img src="https://i.loli.net/2020/01/06/yEHpwJZg2PmqaAO.jpg" alt="书架一角">
 
 
-<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。<br>看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">😃</span></p>
+<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。</p>
+<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" alt="书架一角" width="200" height="200">
+看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">😃</span>
+
 <h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p><span id="inline-toc">1.</span> <strong>测试架构师修炼之道</strong>/刘琛梅/机械工业出版社</p>
 <p>这个世界上有两种QA:</p>
 <ul>
@@ -151,8 +232,8 @@
         <category>项目实践</category>
       </categories>
       <tags>
-        <tag>测试金字塔</tag>
         <tag>敏捷</tag>
+        <tag>测试金字塔</tag>
       </tags>
   </entry>
   <entry>
@@ -441,8 +522,8 @@
         <category>项目实践</category>
       </categories>
       <tags>
-        <tag>敏捷</tag>
         <tag>BDD</tag>
+        <tag>敏捷</tag>
       </tags>
   </entry>
   <entry>
@@ -1556,29 +1637,6 @@
       </script>]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/links/index.html</url>
     <content><![CDATA[<script>
@@ -1625,6 +1683,29 @@
       </script>]]></content>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/lib/jquery_lazyload/README.html</url>
     <content><![CDATA[<h1 align="center"><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="noopener">jquery-lazyload</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
@@ -1650,6 +1731,29 @@
 
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
 <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1744,29 +1848,6 @@
     };
     
 })();<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}</tuupola@appelsiini.net><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
