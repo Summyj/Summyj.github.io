@@ -68,19 +68,6 @@
       </tags>
   </entry>
   <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git学习笔记</title>
     <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
@@ -178,6 +165,19 @@
       </tags>
   </entry>
   <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的一些写作标签</title>
     <url>/How-to-Write/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
@@ -256,6 +256,53 @@
       </tags>
   </entry>
   <entry>
+    <title>谜一样的测试金字塔</title>
+    <url>/Test-Pyramid/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
+
+<blockquote>
+<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+</blockquote>
+<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
+<blockquote>
+<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
+</blockquote>
+<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
+<li>UI测试</li>
+</ul>
+<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
+<ul>
+<li>端到端测试</li>
+</ul>
+<p>包括针对API和用户界面的端到端测试。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
+<div class="note info">
+            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
+          </div>
+<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
+<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
+<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
+
+<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
+<ul>
+<li>按照测试粒度分层</li>
+<li>层次越高，你写的测试应该越少</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>测试金字塔</tag>
+        <tag>敏捷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试课程学习笔记第一弹：自动化测试理论</title>
     <url>/auto-test-learning/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
@@ -313,53 +360,6 @@
       <tags>
         <tag>学习笔记</tag>
         <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谜一样的测试金字塔</title>
-    <url>/Test-Pyramid/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
-
-<blockquote>
-<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-</blockquote>
-<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
-<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
-<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
-<blockquote>
-<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
-</blockquote>
-<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
-<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
-<li>UI测试</li>
-</ul>
-<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
-<ul>
-<li>端到端测试</li>
-</ul>
-<p>包括针对API和用户界面的端到端测试。</p>
-<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
-<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
-<div class="note info">
-            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
-          </div>
-<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
-<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
-<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
-
-<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
-<ul>
-<li>按照测试粒度分层</li>
-<li>层次越高，你写的测试应该越少</li>
-</ul>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>测试金字塔</tag>
-        <tag>敏捷</tag>
       </tags>
   </entry>
   <entry>
@@ -465,6 +465,53 @@
       </categories>
       <tags>
         <tag>闰年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>未来是星辰大海_Part2</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
+    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
+<a id="more"></a>
+
+<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
+<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
+<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
+<p>但是时间长了，问题就开始出现了。</p>
+<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
+<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
+<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
+<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
+<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
+<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
+<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
+<ul>
+<li>笔试</li>
+</ul>
+<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
+<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
+<ul>
+<li>面试</li>
+</ul>
+<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
+<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
+<ul>
+<li>offer</li>
+</ul>
+<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
+<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
+<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
+<ul>
+<li>做毕设</li>
+<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
+<li>拿到驾照</li>
+</ul>
+<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>人生规划</tag>
       </tags>
   </entry>
   <entry>
@@ -590,53 +637,6 @@
       <tags>
         <tag>敏捷测试</tag>
         <tag>极限编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海_Part2</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
-    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
-<a id="more"></a>
-
-<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
-<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
-<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
-<p>但是时间长了，问题就开始出现了。</p>
-<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
-<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
-<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
-<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
-<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
-<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
-<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
-<ul>
-<li>笔试</li>
-</ul>
-<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
-<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
-<ul>
-<li>面试</li>
-</ul>
-<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
-<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
-<ul>
-<li>offer</li>
-</ul>
-<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
-<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
-<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
-<ul>
-<li>做毕设</li>
-<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
-<li>拿到驾照</li>
-</ul>
-<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>人生规划</tag>
       </tags>
   </entry>
   <entry>
