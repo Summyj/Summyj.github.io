@@ -31,43 +31,6 @@
       </tags>
   </entry>
   <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FirstBlog</title>
     <url>/FirstBlog/</url>
     <content><![CDATA[<p>FistPage in my blog.</p>
@@ -178,6 +141,90 @@
       </tags>
   </entry>
   <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谜一样的测试金字塔</title>
+    <url>/Test-Pyramid/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
+
+<blockquote>
+<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+</blockquote>
+<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
+<blockquote>
+<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
+</blockquote>
+<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
+<li>UI测试</li>
+</ul>
+<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
+<ul>
+<li>端到端测试</li>
+</ul>
+<p>包括针对API和用户界面的端到端测试。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
+<div class="note info">
+            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
+          </div>
+<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
+<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
+<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
+
+<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
+<ul>
+<li>按照测试粒度分层</li>
+<li>层次越高，你写的测试应该越少</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>测试金字塔</tag>
+        <tag>敏捷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的一些写作标签</title>
     <url>/How-to-Write/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
@@ -256,53 +303,6 @@
       </tags>
   </entry>
   <entry>
-    <title>谜一样的测试金字塔</title>
-    <url>/Test-Pyramid/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
-
-<blockquote>
-<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-</blockquote>
-<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
-<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
-<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
-<blockquote>
-<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
-</blockquote>
-<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
-<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
-<li>UI测试</li>
-</ul>
-<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
-<ul>
-<li>端到端测试</li>
-</ul>
-<p>包括针对API和用户界面的端到端测试。</p>
-<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
-<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
-<div class="note info">
-            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
-          </div>
-<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
-<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
-<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
-
-<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
-<ul>
-<li>按照测试粒度分层</li>
-<li>层次越高，你写的测试应该越少</li>
-</ul>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>测试金字塔</tag>
-        <tag>敏捷</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试课程学习笔记第一弹：自动化测试理论</title>
     <url>/auto-test-learning/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
@@ -374,97 +374,6 @@
       </categories>
       <tags>
         <tag>判断素数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java类中的代码块执行顺序</title>
-    <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
-<a id="more"></a>
-
-<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>请写出上述代码的输出，看完本文你就会有答案。</p>
-<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
-<ul>
-<li>普通代码块：定义在类的方法中的代码块。</li>
-<li>构造块：定义在类中的代码块（无修饰符）。</li>
-<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
-<li>同步代码块（与多线程有关，本文不涉及）</li>
-</ul>
-<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>执行结果：</strong></p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
-<p><strong>结论：</strong></p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
-<p><strong>其中：</strong></p>
-<ul>
-<li>主类静态块优于主方法执行。</li>
-<li>无论生成多少类对象，静态块只执行一次。</li>
-<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
-</ul>
-<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
-<blockquote>
-<p>为了方便观察，对代码改动如下：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>答案在这里：</p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>javaEE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于闰年，你不知道的那些事</title>
-    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
-<a id="more"></a>
-
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
-<ul>
-<li>整除但4不能整除100</li>
-<li>整除100又能整除400</li>
-</ul>
-<blockquote>
-<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
-</blockquote>
-<hr>
-<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
-<p>那么具体是怎么弥补的呢？</p>
-<blockquote>
-<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
-</blockquote>
-<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
-<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
-<blockquote>
-<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
-</blockquote>
-<p>那这3个闰年怎么少呢？</p>
-<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
-<ul>
-<li>2000/400=5</li>
-<li>2100/400=5.25</li>
-<li>2200/400=5.5</li>
-<li>2300/400=5.75</li>
-<li>2400/400=6</li>
-</ul>
-<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
-<p>你明白了吗？</p>
-<hr>
-<p>当然，根据规则，我们就可以编写代码判断了：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>闰年</tag>
       </tags>
   </entry>
   <entry>
@@ -590,6 +499,52 @@
       <tags>
         <tag>敏捷测试</tag>
         <tag>极限编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于闰年，你不知道的那些事</title>
+    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+<a id="more"></a>
+
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<ul>
+<li>整除但4不能整除100</li>
+<li>整除100又能整除400</li>
+</ul>
+<blockquote>
+<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
+</blockquote>
+<hr>
+<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
+<p>那么具体是怎么弥补的呢？</p>
+<blockquote>
+<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
+</blockquote>
+<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
+<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
+<blockquote>
+<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
+</blockquote>
+<p>那这3个闰年怎么少呢？</p>
+<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<ul>
+<li>2000/400=5</li>
+<li>2100/400=5.25</li>
+<li>2200/400=5.5</li>
+<li>2300/400=5.75</li>
+<li>2400/400=6</li>
+</ul>
+<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
+<p>你明白了吗？</p>
+<hr>
+<p>当然，根据规则，我们就可以编写代码判断了：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>闰年</tag>
       </tags>
   </entry>
   <entry>
@@ -757,6 +712,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Java类中的代码块执行顺序</title>
+    <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
+    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
+<a id="more"></a>
+
+<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请写出上述代码的输出，看完本文你就会有答案。</p>
+<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
+<ul>
+<li>普通代码块：定义在类的方法中的代码块。</li>
+<li>构造块：定义在类中的代码块（无修饰符）。</li>
+<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
+<li>同步代码块（与多线程有关，本文不涉及）</li>
+</ul>
+<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>执行结果：</strong></p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
+<p><strong>结论：</strong></p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
+<p><strong>其中：</strong></p>
+<ul>
+<li>主类静态块优于主方法执行。</li>
+<li>无论生成多少类对象，静态块只执行一次。</li>
+<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
+</ul>
+<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
+<blockquote>
+<p>为了方便观察，对代码改动如下：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>答案在这里：</p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>javaEE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爱你就像爱生命</title>
     <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
     <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
@@ -871,6 +871,80 @@
       </tags>
   </entry>
   <entry>
+    <title>升级博客，我太难了</title>
+    <url>/BlogUpdateNote/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
+用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
+
+<h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
+<div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
+
+<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><p>博客根目录的package.json文件里，列出了hexo和一些依赖的版本(这是我已经升级过的)：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"4.0.0"</span> ##当前Hexo版本</span><br><span class="line">  &#125;,</span><br><span class="line">  "dependencies": &#123; ##各种插件版本</span><br><span class="line">    "hexo": "^4.0.0",</span><br><span class="line">    "hexo-algolia": "^1.3.1",</span><br><span class="line">    "hexo-deployer-git": "^2.1.0",</span><br><span class="line">    "hexo-filter-emoji": "^2.0.2",</span><br><span class="line">    "hexo-generator-archive": "^1.0.0",</span><br><span class="line">    "hexo-generator-baidu-sitemap": "^0.1.6",</span><br><span class="line">    "hexo-generator-category": "^1.0.0",</span><br><span class="line">    "hexo-generator-feed": "^2.1.1",</span><br><span class="line">    "hexo-generator-index": "^1.0.0",</span><br><span class="line">    "hexo-generator-searchdb": "^1.2.0",</span><br><span class="line">    "hexo-generator-sitemap": "^2.0.0",</span><br><span class="line">    "hexo-generator-tag": "^1.0.0",</span><br><span class="line">    "hexo-helper-live2d": "^3.1.1",</span><br><span class="line">    "hexo-leancloud-counter-security": "^1.4.1",</span><br><span class="line">    "hexo-next-share": "github:theme-next/hexo-next-share",</span><br><span class="line">    "hexo-renderer-ejs": "^1.0.0",</span><br><span class="line">    "hexo-renderer-marked": "^2.0.0",</span><br><span class="line">    "hexo-renderer-stylus": "^1.1.0",</span><br><span class="line">    "hexo-server": "^1.0.0",</span><br><span class="line">    "hexo-symbols-count-time": "^0.7.0",</span><br><span class="line">    "hexo-wordcount": "^6.0.1",</span><br><span class="line">    "live2d-widget-model-hijiki": "^1.0.5"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>打开博客根目录，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></table></figure>
+<p>就会看到有哪些依赖和插件需要更新：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Package              Current  Wanted  Latest  Location</span><br><span class="line">hexo-filter-emoji      2.0.2   2.1.0   2.1.0  hexo-site</span><br><span class="line">hexo-generator-feed    2.1.1   2.2.0   2.2.0  hexo-site</span><br><span class="line">hexo-next-share        1.0.0     git     git  hexo-site</span><br></pre></td></tr></table></figure>
+<p>修改package.json中对应条目的版本到最新版，比如将   “hexo-filter-emoji”: “^2.0.2” 改成：   “hexo-filter-emoji”: “^2.1.0”<br>然后保存修改，再输入命令保存更新并下载：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
+<p>之后运行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></table></figure>
+<p>就可以看到当前hexo的版本已经到最新啦<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">&#x270c;</span></p>
+<h2 id="升级Next"><a href="#升级Next" class="headerlink" title="升级Next"></a>升级Next</h2><p>之前Next的版本是<strong>v5.x</strong>, 而搜了下最新版已经到<strong>v7.x</strong>了。。。不过不慌，还是慢慢来<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
+<p>为了避免踩坑，先看<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">官方文档</a>肯定是个明智的选择。</p>
+</blockquote>
+<p>跟随大佬的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md" target="_blank" rel="noopener">指示</a>，Next主题v5.x之后更换了代码库。之前是原作者 iissnan’s 的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">个人仓库</a>，由于Next比较火，后来就成立了一个专门维护它的<a href="https://github.com/theme-next" target="_blank" rel="noopener">组织</a>。是一个很大的进步了，大佬们真棒。</p>
+<p>代码库换了，那就不能用Git常规操作pull代码了。文档里给的建议是先不改动原有主题文件夹，将主题最新版本代码作为 <span class="label info">next-reloaded</span> 单独克隆到themes/下边。在博客配置文件中，把主题设置为<span class="label info">next-reloaded</span> 。然后就可以随时切换两个版本。</p>
+<p>但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 可问题是我完全不记得自己都做了啥，万一改坏了怎么办<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span>于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。</p>
+<h3 id="更改配置文件完成基础设置"><a href="#更改配置文件完成基础设置" class="headerlink" title="更改配置文件完成基础设置"></a>更改配置文件完成基础设置</h3><p>新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。<br>对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。<br>这样改完之后，博客基本上与之前一致了。</p>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><p>之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。</p>
+<h4 id="文章浏览次数"><a href="#文章浏览次数" class="headerlink" title="文章浏览次数"></a>文章浏览次数</h4><p>这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：<br><img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error"><br>不知道怎么解决，准备在github提issue，所以先弃用了。</p>
+<h4 id="Daovoice在线联系"><a href="#Daovoice在线联系" class="headerlink" title="Daovoice在线联系"></a>Daovoice在线联系</h4><p>有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：<br><img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error"><br>开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。</p>
+<h4 id="博客宠物"><a href="#博客宠物" class="headerlink" title="博客宠物"></a>博客宠物</h4><p>就是右下角萌萌的小黑啦。<br>之前也已经下载 “hexo-helper-live2d” 和 “live2d-widget-model-hijiki”这两个依赖，在图中路径加上标记：<br><img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config"><br>然后在博客(非主题)配置文件加上下面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#pet</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: true</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki ## 宠物依赖包的名字</span><br><span class="line">  display:</span><br><span class="line">    position: right ## 出现位置</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+<p>之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。</p>
+<h4 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h4><p>新加入了分享文章的插件AddThis, 挺好用的。按照<a href="https://www.addthis.com" target="_blank" rel="noopener">这里的说明</a>配置就好了。然后把id加在配置文件里。</p>
+<h4 id="网站底部运行时间"><a href="#网站底部运行时间" class="headerlink" title="网站底部运行时间"></a>网站底部运行时间</h4><p>个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。<br>参考<a href="https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/" target="_blank" rel="noopener">这篇文章</a>完成的。</p>
+<h4 id="酷炫标签云"><a href="#酷炫标签云" class="headerlink" title="酷炫标签云"></a>酷炫标签云</h4><p>根据插件<a href="https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md" target="_blank" rel="noopener">github说明</a>配置就好了。<br>下载：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud</span><br></pre></td></tr></table></figure>
+<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; &#x2F;&#x2F;固定图片位置</span><br><span class="line">  opacity: 0.9; &#x2F;&#x2F;透明度设置</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
+<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
+            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
+          </div>
+
+<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            &#x3D; 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  &#x3D; 15px;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           &#x3D; 16px</span><br><span class="line">$btn-default-bg               &#x3D; white</span><br><span class="line">$btn-default-color            &#x3D; $text-color</span><br><span class="line">$btn-default-border-color     &#x3D; $text-color</span><br><span class="line">$btn-default-hover-color      &#x3D; white</span><br><span class="line">$btn-default-hover-bg         &#x3D; $black-deep</span><br></pre></td></tr></table></figure>
+
+<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
+<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
+<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
+
+<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
+<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
+<li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
+<li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
+<li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
+<li><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+        <tag>升级博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
@@ -953,80 +1027,6 @@
         <tag>敏捷</tag>
         <tag>BDD</tag>
         <tag>王铁锤</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>升级博客，我太难了</title>
-    <url>/BlogUpdateNote/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
-用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
-
-<h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
-<div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
-
-<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><p>博客根目录的package.json文件里，列出了hexo和一些依赖的版本(这是我已经升级过的)：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"4.0.0"</span> ##当前Hexo版本</span><br><span class="line">  &#125;,</span><br><span class="line">  "dependencies": &#123; ##各种插件版本</span><br><span class="line">    "hexo": "^4.0.0",</span><br><span class="line">    "hexo-algolia": "^1.3.1",</span><br><span class="line">    "hexo-deployer-git": "^2.1.0",</span><br><span class="line">    "hexo-filter-emoji": "^2.0.2",</span><br><span class="line">    "hexo-generator-archive": "^1.0.0",</span><br><span class="line">    "hexo-generator-baidu-sitemap": "^0.1.6",</span><br><span class="line">    "hexo-generator-category": "^1.0.0",</span><br><span class="line">    "hexo-generator-feed": "^2.1.1",</span><br><span class="line">    "hexo-generator-index": "^1.0.0",</span><br><span class="line">    "hexo-generator-searchdb": "^1.2.0",</span><br><span class="line">    "hexo-generator-sitemap": "^2.0.0",</span><br><span class="line">    "hexo-generator-tag": "^1.0.0",</span><br><span class="line">    "hexo-helper-live2d": "^3.1.1",</span><br><span class="line">    "hexo-leancloud-counter-security": "^1.4.1",</span><br><span class="line">    "hexo-next-share": "github:theme-next/hexo-next-share",</span><br><span class="line">    "hexo-renderer-ejs": "^1.0.0",</span><br><span class="line">    "hexo-renderer-marked": "^2.0.0",</span><br><span class="line">    "hexo-renderer-stylus": "^1.1.0",</span><br><span class="line">    "hexo-server": "^1.0.0",</span><br><span class="line">    "hexo-symbols-count-time": "^0.7.0",</span><br><span class="line">    "hexo-wordcount": "^6.0.1",</span><br><span class="line">    "live2d-widget-model-hijiki": "^1.0.5"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>打开博客根目录，输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></table></figure>
-<p>就会看到有哪些依赖和插件需要更新：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Package              Current  Wanted  Latest  Location</span><br><span class="line">hexo-filter-emoji      2.0.2   2.1.0   2.1.0  hexo-site</span><br><span class="line">hexo-generator-feed    2.1.1   2.2.0   2.2.0  hexo-site</span><br><span class="line">hexo-next-share        1.0.0     git     git  hexo-site</span><br></pre></td></tr></table></figure>
-<p>修改package.json中对应条目的版本到最新版，比如将   “hexo-filter-emoji”: “^2.0.2” 改成：   “hexo-filter-emoji”: “^2.1.0”<br>然后保存修改，再输入命令保存更新并下载：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
-<p>之后运行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></table></figure>
-<p>就可以看到当前hexo的版本已经到最新啦<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">&#x270c;</span></p>
-<h2 id="升级Next"><a href="#升级Next" class="headerlink" title="升级Next"></a>升级Next</h2><p>之前Next的版本是<strong>v5.x</strong>, 而搜了下最新版已经到<strong>v7.x</strong>了。。。不过不慌，还是慢慢来<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
-<p>为了避免踩坑，先看<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">官方文档</a>肯定是个明智的选择。</p>
-</blockquote>
-<p>跟随大佬的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md" target="_blank" rel="noopener">指示</a>，Next主题v5.x之后更换了代码库。之前是原作者 iissnan’s 的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">个人仓库</a>，由于Next比较火，后来就成立了一个专门维护它的<a href="https://github.com/theme-next" target="_blank" rel="noopener">组织</a>。是一个很大的进步了，大佬们真棒。</p>
-<p>代码库换了，那就不能用Git常规操作pull代码了。文档里给的建议是先不改动原有主题文件夹，将主题最新版本代码作为 <span class="label info">next-reloaded</span> 单独克隆到themes/下边。在博客配置文件中，把主题设置为<span class="label info">next-reloaded</span> 。然后就可以随时切换两个版本。</p>
-<p>但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 可问题是我完全不记得自己都做了啥，万一改坏了怎么办<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span>于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。</p>
-<h3 id="更改配置文件完成基础设置"><a href="#更改配置文件完成基础设置" class="headerlink" title="更改配置文件完成基础设置"></a>更改配置文件完成基础设置</h3><p>新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。<br>对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。<br>这样改完之后，博客基本上与之前一致了。</p>
-<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><p>之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。</p>
-<h4 id="文章浏览次数"><a href="#文章浏览次数" class="headerlink" title="文章浏览次数"></a>文章浏览次数</h4><p>这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：<br><img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error"><br>不知道怎么解决，准备在github提issue，所以先弃用了。</p>
-<h4 id="Daovoice在线联系"><a href="#Daovoice在线联系" class="headerlink" title="Daovoice在线联系"></a>Daovoice在线联系</h4><p>有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：<br><img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error"><br>开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。</p>
-<h4 id="博客宠物"><a href="#博客宠物" class="headerlink" title="博客宠物"></a>博客宠物</h4><p>就是右下角萌萌的小黑啦。<br>之前也已经下载 “hexo-helper-live2d” 和 “live2d-widget-model-hijiki”这两个依赖，在图中路径加上标记：<br><img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config"><br>然后在博客(非主题)配置文件加上下面的配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#pet</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: true</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki ## 宠物依赖包的名字</span><br><span class="line">  display:</span><br><span class="line">    position: right ## 出现位置</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
-<p>之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。</p>
-<h4 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h4><p>新加入了分享文章的插件AddThis, 挺好用的。按照<a href="https://www.addthis.com" target="_blank" rel="noopener">这里的说明</a>配置就好了。然后把id加在配置文件里。</p>
-<h4 id="网站底部运行时间"><a href="#网站底部运行时间" class="headerlink" title="网站底部运行时间"></a>网站底部运行时间</h4><p>个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。<br>参考<a href="https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/" target="_blank" rel="noopener">这篇文章</a>完成的。</p>
-<h4 id="酷炫标签云"><a href="#酷炫标签云" class="headerlink" title="酷炫标签云"></a>酷炫标签云</h4><p>根据插件<a href="https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md" target="_blank" rel="noopener">github说明</a>配置就好了。<br>下载：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud</span><br></pre></td></tr></table></figure>
-<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; &#x2F;&#x2F;固定图片位置</span><br><span class="line">  opacity: 0.9; &#x2F;&#x2F;透明度设置</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
-<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
-            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
-          </div>
-
-<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            &#x3D; 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  &#x3D; 15px;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           &#x3D; 16px</span><br><span class="line">$btn-default-bg               &#x3D; white</span><br><span class="line">$btn-default-color            &#x3D; $text-color</span><br><span class="line">$btn-default-border-color     &#x3D; $text-color</span><br><span class="line">$btn-default-hover-color      &#x3D; white</span><br><span class="line">$btn-default-hover-bg         &#x3D; $black-deep</span><br></pre></td></tr></table></figure>
-
-<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
-<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
-<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
-
-<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
-<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
-<li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
-<li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
-<li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
-<li><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-        <tag>升级博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1351,19 +1351,24 @@
 ]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title></title>
+    <url>/links/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>tags</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1391,11 +1396,6 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
