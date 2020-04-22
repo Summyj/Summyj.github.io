@@ -70,7 +70,7 @@ WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工�
 
 <span id="inline-toc">1.</span>[浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane)
 
-<a href="https://sm.ms/image/fSNGUDpKB5WgI3l" target="_blank"><img src="https://i.loli.net/2020/04/22/fSNGUDpKB5WgI3l.jpg" alt="lighthouse.jpg" width="300" height="400"></a>
+<a href="https://sm.ms/image/FLf2MhVHe4lBR7S" target="_blank"><img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400"></a>
 
 <span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加[浏览器插件](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)，也可以下载[安装包](https://www.deque.com/axe/)。相比较Audits检测报告更详细。
 
