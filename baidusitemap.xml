@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jmyblog.top/BugBash/</loc>
+    <lastmod>2020-04-22</lastmod>
+  </url>  <url>
+    <loc>http://jmyblog.top/Accessibility-test/</loc>
+    <lastmod>2020-04-22</lastmod>
+  </url>  <url>
+    <loc>http://jmyblog.top/BDD-Introduce/</loc>
+    <lastmod>2020-01-20</lastmod>
+  </url>  <url>
     <loc>http://jmyblog.top/auto-test-learning/</loc>
     <lastmod>2020-01-19</lastmod>
   </url>  <url>
@@ -18,9 +27,6 @@
   </url>  <url>
     <loc>http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-12-26</lastmod>
-  </url>  <url>
-    <loc>http://jmyblog.top/BDD-Introduce/</loc>
-    <lastmod>2019-12-17</lastmod>
   </url>  <url>
     <loc>http://jmyblog.top/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</loc>
     <lastmod>2019-12-05</lastmod>

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jmyblog.top/BugBash/</loc>
+    
+    <lastmod>2020-04-22T05:58:27.971Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jmyblog.top/Accessibility-test/</loc>
+    
+    <lastmod>2020-04-22T04:58:50.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jmyblog.top/BDD-Introduce/</loc>
+    
+    <lastmod>2020-01-20T09:12:52.390Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jmyblog.top/about/index.html</loc>
+    
+    <lastmod>2020-01-19T09:13:37.862Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jmyblog.top/auto-test-learning/</loc>
     
     <lastmod>2020-01-19T07:54:11.139Z</lastmod>
@@ -40,13 +68,6 @@
     <loc>http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2019-12-26T06:26:02.569Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jmyblog.top/BDD-Introduce/</loc>
-    
-    <lastmod>2019-12-17T09:51:26.906Z</lastmod>
     
   </url>
   
@@ -145,13 +166,6 @@
     <loc>http://jmyblog.top/FirstBlog/</loc>
     
     <lastmod>2019-12-04T06:42:32.209Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jmyblog.top/about/index.html</loc>
-    
-    <lastmod>2019-12-04T06:38:45.396Z</lastmod>
     
   </url>
   
