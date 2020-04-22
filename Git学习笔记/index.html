@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 4.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -51,14 +51,17 @@
 </script>
 
   <meta name="description" content="对近几天的Git学习做一个小结。">
-<meta name="keywords" content="git,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习笔记">
-<meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
+<meta property="og:url" content="http://jmyblog.top/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="谁把钱丢了">
 <meta property="og:description" content="对近几天的Git学习做一个小结。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-05T07:15:41.122Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-09-11T10:05:07.000Z">
+<meta property="article:modified_time" content="2019-12-05T07:15:41.122Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://jmyblog.top/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -317,17 +320,17 @@
 <p>git reset –hard commmitid：在没有关闭上次回退时的命令窗口时，可以取消回退。commitid没必要写全，git可以自己去找</p>
 <p>git reflog:可以显示每一次commit和回退的id号，如果命令窗口关闭，可以用此命令先找到commitid，然后用上个命令取消回退</p>
 <p>git checkout – file：撤销在工作区对file做的修改，包括撤销对file文件的删除</p>
-<p>git reset HEAD file & git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
+<p>git reset HEAD file &amp; git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
 <p>git reset –hard HEAD^ :已经将想撤销的修改添加到了版本库，但还未提交到远程库。用版本回退撤销修改</p>
-<p>git rm file&git commit -m “delete file”：删除已添加到版本库的文件</p>
+<p>git rm file&amp;git commit -m “delete file”：删除已添加到版本库的文件</p>
 <p>git checkout:用版本库里的文件版本替换工作区的文件版本（一键还原）</p>
 <h2 id="远程库连接"><a href="#远程库连接" class="headerlink" title="远程库连接"></a>远程库连接</h2><blockquote>
 <p>连接远程库，进一步实现团队协作。</p>
 </blockquote>
 <p>git remote:查看远程库信息，详细信息加上-v选项</p>
-<p>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
+<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
 <p>git push -u origin xxx:把本地仓库指定分支·内容推送到远程，下次推送可以不用-u参数<br>因为第一次推送master分支时如果加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，所以在以后的推送或者拉取时就可以简化命令。</p>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
+<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
 <p>git remotr rm origin:删除本地库关联的origin远程库</p>
 <h2 id="分支创建管理"><a href="#分支创建管理" class="headerlink" title="分支创建管理"></a>分支创建管理</h2><blockquote>
 <p>实现更安全便捷的版本控制。</p>
@@ -369,26 +372,8 @@
 <p>git tag -d xxx:删除指定标签（因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。）</p>
 <p>git push origin tagname:推送标签到远程</p>
 <p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
-<p>git tag -d tagname & git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
+
     </div>
 
     
@@ -590,7 +575,7 @@
     </span>
     <span title="站点阅读时长">2:16</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
@@ -637,9 +622,17 @@ setInterval("createtime()",250);
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -648,7 +641,9 @@ setInterval("createtime()",250);
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

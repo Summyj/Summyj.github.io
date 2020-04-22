@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 4.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -51,14 +51,18 @@
 </script>
 
   <meta name="description" content="首先，听我讲一个关于王铁锤的故事。">
-<meta name="keywords" content="敏捷,BDD,王铁锤">
 <meta property="og:type" content="article">
 <meta property="og:title" content="请收下这波 BDD 安利">
-<meta property="og:url" content="http:&#x2F;&#x2F;jmyblog.top&#x2F;BDD-Introduce&#x2F;index.html">
+<meta property="og:url" content="http://jmyblog.top/BDD-Introduce/index.html">
 <meta property="og:site_name" content="谁把钱丢了">
 <meta property="og:description" content="首先，听我讲一个关于王铁锤的故事。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-20T09:12:52.390Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-10-17T07:19:24.000Z">
+<meta property="article:modified_time" content="2020-01-20T09:12:52.390Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="敏捷">
+<meta property="article:tag" content="BDD">
+<meta property="article:tag" content="王铁锤">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://jmyblog.top/BDD-Introduce/">
@@ -288,18 +292,18 @@
         <p>首先，听我讲一个关于王铁锤的故事。</p>
 <a id="more"></a>
 
-<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
-<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
+<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">&#x1f4ac;</span>。</p>
+<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">&#x1f613;</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">&#x1f615;</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
 <hr>
 <h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
-<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
+<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">&#x1f60f;</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
 <ul>
 <li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
 <li>Step2: 点击注册按钮进去注册页面。</li>
 <li>Step3: 填写所有字段并点击注册。</li>
 <li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
 </ul>
-<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
+<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
 <hr>
 <h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
 <p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
@@ -357,25 +361,7 @@
 <li><a href="https://cucumber.io/docs/bdd/" target="_blank" rel="noopener" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
 <li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/" target="_blank" rel="noopener">说起BDD，你会想到什么？</a></li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
     </div>
 
     
@@ -578,7 +564,7 @@
     </span>
     <span title="站点阅读时长">2:16</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
@@ -625,9 +611,17 @@ setInterval("createtime()",250);
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -636,7 +630,9 @@ setInterval("createtime()",250);
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
