@@ -31,19 +31,6 @@
       </tags>
   </entry>
   <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BugBash知多少</title>
     <url>/BugBash/</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
@@ -78,6 +65,19 @@
       </categories>
       <tags>
         <tag>BugBash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -363,6 +363,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<a id="more"></a>
+
+<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>判断素数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java类中的代码块执行顺序</title>
     <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
@@ -408,114 +422,49 @@
       </tags>
   </entry>
   <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+    <title>关于闰年，你不知道的那些事</title>
+    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
 <a id="more"></a>
 
-<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<ul>
+<li>整除但4不能整除100</li>
+<li>整除100又能整除400</li>
+</ul>
+<blockquote>
+<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
+</blockquote>
+<hr>
+<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
+<p>那么具体是怎么弥补的呢？</p>
+<blockquote>
+<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
+</blockquote>
+<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
+<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
+<blockquote>
+<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
+</blockquote>
+<p>那这3个闰年怎么少呢？</p>
+<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<ul>
+<li>2000/400=5</li>
+<li>2100/400=5.25</li>
+<li>2200/400=5.5</li>
+<li>2300/400=5.75</li>
+<li>2400/400=6</li>
+</ul>
+<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
+<p>你明白了吗？</p>
+<hr>
+<p>当然，根据规则，我们就可以编写代码判断了：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>学习小记</category>
       </categories>
       <tags>
-        <tag>判断素数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海_Part2</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
-    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
-<a id="more"></a>
-
-<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
-<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
-<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
-<p>但是时间长了，问题就开始出现了。</p>
-<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
-<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
-<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
-<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
-<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
-<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
-<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
-<ul>
-<li>笔试</li>
-</ul>
-<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
-<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
-<ul>
-<li>面试</li>
-</ul>
-<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
-<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
-<ul>
-<li>offer</li>
-</ul>
-<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
-<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
-<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
-<ul>
-<li>做毕设</li>
-<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
-<li>拿到驾照</li>
-</ul>
-<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>人生规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<a id="more"></a>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>未来</tag>
-        <tag>人生</tag>
+        <tag>闰年</tag>
       </tags>
   </entry>
   <entry>
@@ -644,79 +593,100 @@
       </tags>
   </entry>
   <entry>
-    <title>关于闰年，你不知道的那些事</title>
-    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+    <title>未来是星辰大海_Part2</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
+    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
 <a id="more"></a>
 
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
+<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
+<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
+<p>但是时间长了，问题就开始出现了。</p>
+<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
+<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
+<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
+<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
+<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
+<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
+<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
 <ul>
-<li>整除但4不能整除100</li>
-<li>整除100又能整除400</li>
+<li>笔试</li>
 </ul>
-<blockquote>
-<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
-</blockquote>
-<hr>
-<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
-<p>那么具体是怎么弥补的呢？</p>
-<blockquote>
-<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
-</blockquote>
-<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
-<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
-<blockquote>
-<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
-</blockquote>
-<p>那这3个闰年怎么少呢？</p>
-<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
+<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
 <ul>
-<li>2000/400=5</li>
-<li>2100/400=5.25</li>
-<li>2200/400=5.5</li>
-<li>2300/400=5.75</li>
-<li>2400/400=6</li>
+<li>面试</li>
 </ul>
-<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
-<p>你明白了吗？</p>
-<hr>
-<p>当然，根据规则，我们就可以编写代码判断了：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
+<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
+<ul>
+<li>offer</li>
+</ul>
+<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
+<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
+<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
+<ul>
+<li>做毕设</li>
+<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
+<li>拿到驾照</li>
+</ul>
+<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
+]]></content>
       <categories>
-        <category>学习小记</category>
+        <category>生活随想</category>
       </categories>
       <tags>
-        <tag>闰年</tag>
+        <tag>人生规划</tag>
       </tags>
   </entry>
   <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+    <title>未来是星辰大海</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
 <a id="more"></a>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>好看的书</category>
+        <category>生活随想</category>
       </categories>
       <tags>
-        <tag>王小波</tag>
+        <tag>未来</tag>
+        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
@@ -784,6 +754,36 @@
       </categories>
       <tags>
         <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<a id="more"></a>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
       </tags>
   </entry>
   <entry>
@@ -1334,11 +1334,6 @@
       </tags>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -1356,13 +1351,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/links/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
