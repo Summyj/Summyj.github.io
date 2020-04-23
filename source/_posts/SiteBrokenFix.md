@@ -99,3 +99,9 @@ connection.
 而且现在的证书：
 <a href="https://sm.ms/image/O51DPZxStkeszNv" target="_blank"><img src="https://i.loli.net/2020/04/23/O51DPZxStkeszNv.png" width="450" height="350"></a>
 嗯，还是看不懂，不过问题解决了就行。
+用百度站点工具再做一次Https认证，验证成功：
+<a href="https://sm.ms/image/8ucHwDNBkGzvEXZ" target="_blank"><img src="https://i.loli.net/2020/04/23/8ucHwDNBkGzvEXZ.png" ></a>
+嗯，这下Https是真的了。
+本站点最终的域名解析列表：
+<a href="https://sm.ms/image/RPNsrEyMSUV9uD1" target="_blank"><img src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png" ></a>
+
