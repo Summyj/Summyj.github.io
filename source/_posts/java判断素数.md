@@ -2,7 +2,7 @@
 title: Java判断素数
 date: 2018-04-23 14:21:42
 update: 2018-04-23 14:21:42
-tags: 判断素数
+tags: Java
 categories: 学习小记
 copyright: true
 top:

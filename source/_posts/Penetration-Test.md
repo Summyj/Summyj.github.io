@@ -111,6 +111,11 @@ SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......
 
 登录Jim之后我们就看他的购物车请求是{% label primary@rest/basket/2 %}， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为{% label primary@rest/basket/1 %}，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。
 
+{% note warning %}
+需要注意的是，在用charles监听本地的时候，需要将本地 http://localhost:3000 改为 http://localhost.charlesproxy.com:3000
+这里是[charles官网](https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/)的说明。
+{% endnote %}
+
 <iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgxMzE0NA==' frameborder=0 'allowfullscreen'></iframe>
 
 ## 参考资料
