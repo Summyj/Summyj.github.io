@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jmyblog.top/"/>
-  <updated>2020-05-09T09:50:22.241Z</updated>
+  <updated>2020-05-15T01:37:42.043Z</updated>
   <id>https://jmyblog.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈自动化测试框架</title>
+    <link href="https://jmyblog.top/AutoTest-FrameWork/"/>
+    <id>https://jmyblog.top/AutoTest-FrameWork/</id>
+    <published>2020-05-13T08:08:42.000Z</published>
+    <updated>2020-05-15T01:37:42.043Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://sm.ms/image/s71SuLRThEMdlHA" target="_blank"><imgsrc="https://i.loli.net/2020/05/14/s71SuLRThEMdlHA.png" ></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>去年公司有资深测试同事分享了如何搭建一个好的自动化测试框架Session，听了以后特别受启发。<br>入职以来一直都是用着项目上现成的框架使用，平时也只是写写测试代码，搬搬砖。虽然也有想过深入了解一下，但因为拖(lan)延(ai)症一直没实践<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span><br>恰好最近QA小姐姐们组织了一个搭建自动化测试框架的workshop，自己走了一下流程，感触更深了，所以想结合去年的Session内容总结一下，这样以后也可以参考。</p><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>写过自动化测试的小伙伴们一定接触过诸如Selenium/Appium/..的自动化测试工具，这类UI测试工具提供了定位、操控页面元素的功能，从而实现UI自动化。<br>这些工具也内嵌了失败重试、智能等待机制，所以它们也叫做<span class="label default">"自动化测试框架"</span>，但一个完善的自动化测试框架，仅仅做到这些是远远不够的，所以它们也叫做<strong>自动化测试框架的MVP版本</strong>。</p><h3 id="自动化测试框架的MVP版本"><a href="#自动化测试框架的MVP版本" class="headerlink" title="自动化测试框架的MVP版本"></a>自动化测试框架的MVP版本</h3><p>怎么理解自动化测试框架的MVP版本呢？</p><p>试想要生产一辆交通工具，从造轮子开始到成品需要下边几个过程，这样才能成功：</p><p><a href="https://sm.ms/image/sVS2y3nXflDgowB" target="_blank"><imgsrc="https://i.loli.net/2020/05/14/sVS2y3nXflDgowB.png" ></a></p><p>如果把搭建自动化框架类比成生产交通工具的过程，那上述的Selenium/Appium/..等<span class="label default">"自动化测试框架"</span>相当于只是一辆自行车，离我们想要的大货车(完善的自动化测试框架)差距还比较大：</p><p><a href="https://sm.ms/image/jCBKgVplGJZkM1n" target="_blank"><imgsrc="https://i.loli.net/2020/05/14/jCBKgVplGJZkM1n.png" ></a></p><p>以Web UI自动化为例，一般来说，MVP版本的自动化测试框架结构如下：</p><img src="https://i.loli.net/2020/05/14/3iMYrD2jC8R7O5U.png" alt="题图" height="370" width="400"><div class="note info">            <p>基本做法是：写好一条test case, 里面定位了页面元素，定义元素行为。最后利用WebDriver 实现测试目标。</p>          </div>比如下面利用Selenium在百度搜索selenium字符串的代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public void searchSelenium() &#123; </span><br><span class="line">       System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line"></span><br><span class="line">       WebDriver driver &#x3D; new FirefoxDriver();</span><br><span class="line"></span><br><span class="line">       driver.manage().window().maximize();</span><br><span class="line">       driver.get(&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;);</span><br><span class="line">       driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">       driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;selenium&quot;);</span><br><span class="line">       driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">       driver.quit();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><br>### 自动化测试框架的完善版本<br><br>还是以Web UI自动化为例，一般来说，相对完善的自动化测试框架结构如下：<img src="https://i.loli.net/2020/05/14/tTnUyI9VsHY4N1q.png">可以看到，跟MVP版本相比，相对完善的自动化测试框架结构还多了Test Suite/Middle layer等元素，下面我们来说一下这些元素指的是什么。<br><br><span id="inline-toc">1.</span> Test Suite<br>允许将测试代码中公用的数据比如浏览器，测试url等等提出来放在单独的文件中，便于进行测试环境转换、DDT(DataDriven Testing)、KDT(Keyword Driven Testing)等Goodpractice，TestNG等工具就可以实现这一点，还可以利用Page Object实现结构化目录。<br><br><span id="inline-toc">2.</span> TestCase&MiddleLayer<br>好的框架也需要支持易用的Assertion、Error handling、Preposition &Postposition机制。还应该实现BDD(Business/Behavior DrivenDevelopment)，写出更语义化的测试代码，Cucumber就是一个支持BDD的测试工具。<br><br><span id="inline-toc">3.</span> Element Object/Locator definition<br>测试框架应该支持多种定位页面元素的方法，比如根据元素属性(Id, CSS,xPath…)定位，也有支持图像识别/像素识别来定位元素的工具，比如网易就有开发一些此类型的工具，常用于游戏测试。<br><br><span id="inline-toc">4.</span> Operation Driver<br>UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测试框架应该提供稳定的操作WebDriver的方法，还需要兼容不同的浏览器和操作系统。并能提供开放接口，允许用户添加自定义的WebDriver操作方法。<br><br><span id="inline-toc">5.</span> Utilities<br>需要提供一些实用的机制和工具，比如提供日志、智能等待机制，还有对文件/数据库/网络/OS的操作，此外，还要支持模拟器和截图功能。<br><br><span id="inline-toc">6.</span> Assistance<br>自动化框架还需要有更多辅助功能，比如CI/CD的集成、并行机制、失败重试机制，以及输出漂亮的测试报告。<br><br><div class="note primary">            <p>总的来说，一个完善的自动化测试框架应该是灵活的、稳定的，而且是容易维护的。全面考虑上边这6个元素会帮助我们达到这个目的，这样我们就能生产出拉风的大货车啦：</p>          </div><p><a href="https://sm.ms/image/8xZPSG624mRkAaL" target="_blank"><imgsrc="https://i.loli.net/2020/05/14/8xZPSG624mRkAaL.png" ></a></p><h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><p>设计搭建自动化测试框架是<span class="label warning">测试架构师</span>或者<span class="label warning">高级测试工程师</span>们重点关注的内容，这当然不是一件容易的事。 <div class="note primary">            <p>首先需要收集项目自身的编程语言、平台、系统架构、预算等相关信息，然后拿着这些信息再综合考虑上边列出的6大要素进行技术选型，这需要测试架构设计者在每个要素中，都至少熟悉1-2种测试工具，有的方面还需要熟悉2-3种，然而这并非一日之功，尽管有的功能涵盖了多个要素。<br>而搭建过程中用到的构建部署工具，比如Maven/Gradle/…，也是测试架构设计者需要熟悉的。<br>所以一个测试工程师，需要在多方面有所涉猎，且熟悉多种测试工具，才可以根据项目情况设计出最适合的自动化测试框架。</p></p>          </div> <p>同时，不同的测试方式，也需要有不同的自动化测试框架。上边我们只以WebUI自动化为例，提到了常用的Selenium/Appium。那对于别的测试方式，比如性能测试而言，也有它自己的自动化测试工具。所以，学海无涯呀，我们只能苦作舟了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span></p><p>虽然要”苦作舟”，但我们也不用太慌，正如编程语言都是共通的一样，同一领域的测试工具也都是共通的，所以只有在我们学习新领域的工具时才会”苦作舟”，熟悉了一个工具之后，再去看相似的工具，就会轻松很多，也会很容易的对比多个工具的优劣了<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>同事去年讲Session的PPT…</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      什么是自动化测试框架，一个好的自动化测试框架通常需要什么元素。
+    
+    </summary>
+    
+    
+      <category term="学习小记" scheme="https://jmyblog.top/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="自动化测试" scheme="https://jmyblog.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Java基础小练习</title>
@@ -175,9 +198,9 @@
       <category term="学习小记" scheme="https://jmyblog.top/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/"/>
     
     
-      <category term="学习笔记" scheme="https://jmyblog.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="自动化测试" scheme="https://jmyblog.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="学习笔记" scheme="https://jmyblog.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -472,31 +495,6 @@
     
     
       <category term="Java" scheme="https://jmyblog.top/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>未来是星辰大海</title>
-    <link href="https://jmyblog.top/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/"/>
-    <id>https://jmyblog.top/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</id>
-    <published>2017-10-13T12:01:46.000Z</published>
-    <updated>2019-12-05T07:16:24.052Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p><a id="more"></a><h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p><h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p><ul><li>大佬：一个offer接一个offer，择优录取</li><li>我：找了一个offer，得，还不错，签了吧</li></ul><p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p><p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p><p>唉，本来想深沉一下，咋越写越欢脱。。。</p><p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p><p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p><p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p><h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p><p>嗯，我想了一想，说的还真对。</p><h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote><p>说实话，还真没啥。</p></blockquote><p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p><p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p><p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p><p>其实吧，哪有那么多后悔的事情。</p><p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p><p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p><h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p><h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul><li>健身（身体最重要）</li><li>读书（腹有诗书气自华（老脸一红））</li><li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li><li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li></ul><p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p><h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p><h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p><blockquote><p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天去签了三方，所以，我的大学生活也许真的要结束了。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活随想" scheme="https://jmyblog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/"/>
-    
-    
-      <category term="未来" scheme="https://jmyblog.top/tags/%E6%9C%AA%E6%9D%A5/"/>
-    
-      <category term="人生" scheme="https://jmyblog.top/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
