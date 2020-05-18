@@ -9,8 +9,7 @@ description: 什么是自动化测试框架，一个好的自动化测试框架�
 top:
 ---
 
-<a href="https://sm.ms/image/s71SuLRThEMdlHA" target="_blank"><img
-src="https://i.loli.net/2020/05/14/s71SuLRThEMdlHA.png" ></a>
+<a href="https://sm.ms/image/yHdcTpMbsvJB2zh" target="_blank"><img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" ></a>
 
 
 ## 前言
@@ -24,7 +23,7 @@ src="https://i.loli.net/2020/05/14/s71SuLRThEMdlHA.png" ></a>
 写过自动化测试的小伙伴们一定接触过诸如Selenium/Appium/..的自动化测试工具，这类UI测试工具提供了定位、操控页面元素的功能，从而实现UI自动化。
 这些工具也内嵌了失败重试、智能等待机制，所以它们也叫做{% label
 default@"自动化测试框架"
-%}，但一个完善的自动化测试框架，仅仅做到这些是远远不够的，所以它们也叫做**自动化测试框架的MVP版本**。
+%}，但一个完善的自动化测试框架，仅仅做到这些是远远不够的，所以它们只是**自动化测试框架的MVP版本**。
 
 ### 自动化测试框架的MVP版本
 
