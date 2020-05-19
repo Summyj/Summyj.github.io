@@ -9,7 +9,7 @@ description: 利用Jenkins和Github实现Demo Project的CI集成。
 top:
 ---
 
-<a href="https://sm.ms/image/Nmv3zSFWsTljeZn" target="_blank"><img src="https://i.loli.net/2020/05/15/Nmv3zSFWsTljeZn.png" ></a>
+<a href="https://sm.ms/image/dKSi3gZFTJchr6P" target="_blank"><img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" ></a>
 
 ## Jenkins介绍
 
