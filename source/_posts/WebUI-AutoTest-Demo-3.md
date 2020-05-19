@@ -13,7 +13,7 @@ top:
 
 ## Jenkins介绍
 
-GoCD
+补充中。。。。
 
 ## Demo project 集成
 首先把本地的DemoProject推送到Github，然后请直接按照参考资料的Jenkins部分设置，已经写的很详细了，主要包括：

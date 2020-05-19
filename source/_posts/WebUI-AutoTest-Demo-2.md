@@ -17,8 +17,7 @@ top:
 
 ## TestNG介绍
 
-Testng注解是啥 : 为什么要用，怎么用，和junit注解的区别
-testng.xml文件内容，格式。
+补充中。。。
 
 ## 代码改造
 ### BeforeTest/AfterTest
