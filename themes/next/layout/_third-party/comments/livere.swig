@@ -1,7 +1,7 @@
 {%- if page.comments %}
 <script>
   window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+    refer: 'jmyblog.top' + location.pathname
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
