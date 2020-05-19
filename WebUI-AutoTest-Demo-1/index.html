@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+  <link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=ZCOOL KuaiLe:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","width":300,"display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: 'ANYJFITQMX',
+      apiKey: 'dde9ce045a99b0ce11ccaf83e87f1822',
+      indexName: 'jmyblog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Maven介绍，Demo Project Set Up.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebUI自动化测试框架Demo(上)">
+<meta property="og:url" content="https://jmyblog.top/WebUI-AutoTest-Demo-1/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="Maven介绍，Demo Project Set Up.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/Fh1dMGlPyOWAKmI.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/cw7APYDp8R4sQjI.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/KHwzZ3a56eRVlqd.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/l43SBNcpdWHikYm.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/M6RpZLaYodNTiBO.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/fk5CHuj3VSzcxsK.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/JzQ2vPyFL1tm7iA.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/nuy6grKl4vSMkEd.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/hBRzedQJP3CK4yT.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/UhTxj6nr7pcNe9V.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/ejac3QP5tVzq6Ls.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/hPUczfRM4royl7T.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/18/2TgN4ZG5tfnlV1v.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/IisXJT1xD4q2yCG.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/15/iDmgZtcjeTzqfEL.png">
+<meta property="article:published_time" content="2020-05-15T01:45:12.000Z">
+<meta property="article:modified_time" content="2020-05-19T01:56:00.565Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="自动化测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/15/Fh1dMGlPyOWAKmI.png">
+
+<link rel="canonical" href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>WebUI自动化测试框架Demo(上) | 谁把钱丢了</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">谁把钱丢了</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links" rel="section"><i class="fa fa-fw fa-link"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="I'm a slow walker, but I never backwards.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WebUI自动化测试框架Demo(上)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-15 09:45:12" itemprop="dateCreated datePublished" datetime="2020-05-15T09:45:12+08:00">2020-05-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-19 09:56:00" itemprop="dateModified" datetime="2020-05-19T09:56:00+08:00">2020-05-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习小记</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>17 分钟</span>
+            </span>
+            <div class="post-description">Maven介绍，Demo Project Set Up.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a href="https://sm.ms/image/Fh1dMGlPyOWAKmI" target="_blank"><img src="https://i.loli.net/2020/05/15/Fh1dMGlPyOWAKmI.png" ></a></p>
+<div class="note info">
+            <p>在前几篇博客中，博主分析了一个好的自动化测试框架应有的6大要素，也学习了Java的基础语法，这些都是为了准备Web UI 自动化测试框架Demo Project workshop产出的内容。<br>现在这个workshop已经结束了，所以想给大家分享一下全过程，概念加实操分为上中下三部分详细介绍。</p>
+          </div>
+
+<h2 id="Maven-介绍"><a href="#Maven-介绍" class="headerlink" title="Maven 介绍"></a>Maven 介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><blockquote>
+<p><a href="http://maven.apache.org/" target="_blank" rel="noopener">Maven</a>是一个使用项目对象模型（POM）和一组插件来构建项目的项目管理工具。一旦熟悉了一个Maven项目，便知道所有Maven项目是如何构建的。这样可以节省浏览多个项目时的时间。<br>刚开始入门的时候，主要用到Maven的功能有：项目构建，管理，jar包下载。</p>
+</blockquote>
+<p><strong>POM(Project object model)</strong>:项目对象模型，可以通过一小段描述信息来管理项目的构建，报告和文档。<br>Maven属于java生态圈，为Java 技术开发项目提供服务。所以Maven的学习前提是要有 Java 基础相关。</p>
+<h3 id="为什么会出现"><a href="#为什么会出现" class="headerlink" title="为什么会出现"></a>为什么会出现</h3><blockquote>
+<p>我们想要一种标准的方式来构建项目，清晰地定义项目的组成，发布项目信息的简便方法，以及在多个项目之间共享JAR的方法。</p>
+</blockquote>
+<div class="note primary">
+            <p>清晰地定义项目的组成，发布项目信息: Maven用配置文件的方式对项目的描述、名称、版本号、项目依赖等等信息进行描述。使之项目描述结构清晰，任何人接手的成本比较低。</p><p>在多个项目之间共享JAR: 一个项目可能依赖于其他的项目和第三方的组件才能顺利完成，Maven提供了仓库的概念，让这些依赖项放进仓库中，项目想要从仓库中去取，其他项目组需要也从仓库中去取，不必每个人去开源项目的站点去苦苦搜寻了。</p>
+          </div>
+
+<h3 id="同类常见技术"><a href="#同类常见技术" class="headerlink" title="同类常见技术"></a>同类常见技术</h3><ul>
+<li>Ant</li>
+<li>Gradle<br>同类技术比较请看：<a href="http://blog.csdn.net/napolunyishi/article/details/39345995" target="_blank" rel="noopener">http://blog.csdn.net/napolunyishi/article/details/39345995</a></li>
+</ul>
+<h3 id="哪些人不喜欢Maven"><a href="#哪些人不喜欢Maven" class="headerlink" title="哪些人不喜欢Maven"></a>哪些人不喜欢Maven</h3><p>有人喜欢Maven，当然也有人不喜欢，外国朋友居多。主要有这么几种原因：</p>
+<ul>
+<li>叛逆心理：不需要用Maven的时候还要被强迫使用</li>
+</ul>
+<p><a href="https://sm.ms/image/cw7APYDp8R4sQjI" target="_blank"><img src="https://i.loli.net/2020/05/18/cw7APYDp8R4sQjI.png" ></a></p>
+<ul>
+<li><p>IDE对Maven的支持不可靠，不知道现在有没有好点<br><a href="https://sm.ms/image/KHwzZ3a56eRVlqd" target="_blank"><img src="https://i.loli.net/2020/05/18/KHwzZ3a56eRVlqd.png" ></a></p>
+</li>
+<li><p>逆反心理：Maven管的太宽</p>
+</li>
+</ul>
+<p><a href="https://sm.ms/image/l43SBNcpdWHikYm" target="_blank"><img src="https://i.loli.net/2020/05/18/l43SBNcpdWHikYm.png" ></a></p>
+<ul>
+<li>Maven阻碍创新<br><a href="https://sm.ms/image/M6RpZLaYodNTiBO" target="_blank"><img src="https://i.loli.net/2020/05/18/M6RpZLaYodNTiBO.png" ></a></li>
+</ul>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><blockquote>
+<p>下面我们使用maven来创建一个简单的java工程深入理解它的作用，体验一下Maven高度自动化构建项目的过程并熟悉一下常用的Maven命令：<br>mvn clean：表示运行清理操作（会默认把target文件夹中的数据清理）。，<br>mvn compile：将代码编译到target文件夹中。<br>mvn test：运行测试。<br>mvn package：运行打包。<br>mvn install：此命令会运行上述4个命令，因此将项目进行清理，编译，测试，打包。然后将打好的包安装到本地仓库中，以便其他的项目可以调用。</p>
+</blockquote>
+<p><span id="inline-toc">1.</span> 下载并解压maven</p>
+<ul>
+<li>官网下载：<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a></li>
+<li>百度网盘下载：<a href="http://pan.baidu.com/s/1hry0DJe" target="_blank" rel="noopener">http://pan.baidu.com/s/1hry0DJe</a></li>
+</ul>
+<p><span id="inline-toc">2.</span> 设置环境变量<br>Mac用户直接看这篇：<a href="https://www.jianshu.com/p/191685a33786" target="_blank" rel="noopener">https://www.jianshu.com/p/191685a33786</a><br>其他用户请自行百度。。。</p>
+<p><span id="inline-toc">3.</span> Maven项目构建过程练习</p>
+<p>请按照下边的博客进行练习，人家已经写的很清楚了：<br><a href="https://www.cnblogs.com/xdp-gacl/p/4051690.html" target="_blank" rel="noopener">https://www.cnblogs.com/xdp-gacl/p/4051690.html</a><br>不过，这里有个坑：</p>
+<ul>
+<li>COMPILATION ERROR<br>Maven编译器是Maven系统内部的一个插件。在编译生命周期阶段，maven将采用pom中maven编译器插件中配置的Java版本去编译java代码。当我们未在pom中指定编译器插件时，它将采用maven版本随附的默认编译器插件。而默认编译器插件配置的Java版本有时可能太低不支持编译。所以我们应该在pom中指定一个较高的maven编译器插件版本：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">  &lt;project.build.sourceEncoding&gt;UTF-8&lt;&#x2F;project.build.sourceEncoding&gt;</span><br><span class="line">  &lt;maven.compiler.source&gt;1.7&lt;&#x2F;maven.compiler.source&gt;</span><br><span class="line">  &lt;maven.compiler.target&gt;1.7&lt;&#x2F;maven.compiler.target&gt;</span><br><span class="line">&lt;&#x2F;properties&gt;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="Demo-Project-Set-Up"><a href="#Demo-Project-Set-Up" class="headerlink" title="Demo Project Set Up"></a>Demo Project Set Up</h2><h3 id="创建Maven-Project"><a href="#创建Maven-Project" class="headerlink" title="创建Maven Project"></a>创建Maven Project</h3><p><span id="inline-toc">1.</span> 装好JDK之后，打开IDEA，点击<span class="label info">File->New->Project->Maven</span>，勾选“Create from archetype”，然后选择quick start：<br><a href="https://sm.ms/image/fk5CHuj3VSzcxsK" target="_blank"><img src="https://i.loli.net/2020/05/15/fk5CHuj3VSzcxsK.jpg" ></a>archetype是原型的意思，这一步是为了创建以maven-archetype-quickstart为原型的Maven项目。</p>
+<p><span id="inline-toc">2.</span> 点击Next，命名项目，所有项目均可以自定义：<br><a href="https://sm.ms/image/JzQ2vPyFL1tm7iA" target="_blank"><img src="https://i.loli.net/2020/05/15/JzQ2vPyFL1tm7iA.jpg" ></a>图中Artifact coordinates是工件坐标的意思，包括：</p>
+<ul>
+<li>GroupId：工件组名/资源包名</li>
+<li>ArtifactId：工件名，通常为项目名</li>
+<li>Version：项目版本号</li>
+</ul>
+<p><span id="inline-toc">3.</span> 命名为Automation，点击Next：<br><a href="https://sm.ms/image/nuy6grKl4vSMkEd" target="_blank"><img src="https://i.loli.net/2020/05/15/nuy6grKl4vSMkEd.png" ></a>Properties里列出了项目的Artifact coordinates，还有项目原型maven-archetype-quickstart的Artifact coordinates。</p>
+<p><strong>maven的.m2文件夹</strong></p>
+<p>在上图中，我们可以看到User settings file和Local repository都定义在一个.m2文件夹中:<br><a href="https://sm.ms/image/hBRzedQJP3CK4yT" target="_blank"><img src="https://i.loli.net/2020/05/18/hBRzedQJP3CK4yT.png" ></a></p>
+<ul>
+<li><span class="label info">.m2文件夹</span>：当使用maven命令的时候，maven才会创建.m2文件夹，里面存储maven的配置和构件。所以如果我们只是在电脑上下载安装了maven，你会发现在用户目录下不存在.m2文件夹，因为并没有让maven执行真正的任务。</li>
+<li><span class="label info">.m2/settings.xml</span>: maven配置文件。默认情况下.m2文件夹是没有setting.xml的，所以我们可以看到上图中的.m2文件夹并没有setting.xml。我们一般把Maven全局设置文件%MAVEN_HOME%/conf/settings.xml拷贝到这个文件夹下，修改成我们想要的用户设置：
+<a href="https://sm.ms/image/UhTxj6nr7pcNe9V" target="_blank"><img src="https://i.loli.net/2020/05/18/UhTxj6nr7pcNe9V.png" ></a></li>
+<li><span class="label info">.m2/repository</span>: 所有的maven构件，都存储在repository中。比如maven项目所有的jar包，下载后都会存放在此处。
+
+
+
+</li>
+</ul>
+<p><span id="inline-toc">4.</span>点击Finish后, Maven就开始引入默认插件和包，执行mvn archetype-quickstart:generate命令，下载maven-archetype-quickstart.jar文件的最新RELEASE版本并创建项目。这就是控制台输出的内容：<br><a href="https://sm.ms/image/ejac3QP5tVzq6Ls" target="_blank"><img src="https://i.loli.net/2020/05/15/ejac3QP5tVzq6Ls.png" ></a></p>
+<p><strong>POM文件结构</strong></p>
+<p><a href="https://sm.ms/image/hPUczfRM4royl7T" target="_blank"><img src="https://i.loli.net/2020/05/18/hPUczfRM4royl7T.png" ></a></p>
+<ul>
+<li><span class="label info">Artifact coordinates</span>：工件坐标，创建项目时指定的。</li>
+<li><span class="label info">项目信息</span>：名称和url</li>
+<li><span class="label info">项目属性</span>：编码/编译规则</li>
+<li><span class="label info">依赖</span>：每个依赖的Artifact coordinates</li>
+<li><span class="label info">插件</span>：包括Maven项目默认的插件，比如用于在本地Repository中安装jar的maven-install-plugin，用于编译代码/发布项目的maven-compiler-plugin/maven-deploy-plugin
+
+</li>
+</ul>
+<p><strong>Maven生命周期</strong></p>
+<p>Maven的生命周期是为了对所有的构建过程进行抽象，便于统一。就是什么时候干什么事，主要体现在Maven项目的所有插件逻辑，都是在Maven生命周期阶段中运行的：<br><a href="https://sm.ms/image/2TgN4ZG5tfnlV1v" target="_blank"><img src="https://i.loli.net/2020/05/18/2TgN4ZG5tfnlV1v.png" ></a>一共有三个生命周期阶段：</p>
+<ul>
+<li><span class="label info">clean lifecycle</span>
+此生命周期是在给工程做清理工作，它主要包含以下阶段：pre-clean(执行项目清理前所需要的工作), clean(清理上一次build项目生成的文件), post-clean(执行完成项目清理所需的工作)</li>
+<li><span class="label info">default lifecycle</span>
+此生命周期是在编译部署工程，它主要包括initialize(初始化构建)，compile(编译)，deploy(部署)，process-sources(源代码处理)等阶段。</li>
+<li><span class="label info">site lifecycle</span>
+此生命周期是在生成项目站点，它主要包含pre-site(执行一些生成项目站点前的准备工作), site(生成项目站点的文档), post-site(执行需完成站点生成的工作，如站点部署的准备工作), site-deploy(向制定的web服务器部署站点生成文件)</li>
+</ul>
+<p>至此，Maven项目就创建完成了。</p>
+<h3 id="添加Selenium依赖"><a href="#添加Selenium依赖" class="headerlink" title="添加Selenium依赖"></a>添加Selenium依赖</h3><p>在IDEA点击<span class="label info">code->generate->dependency</span>(或者在pom.xml文件里Ctrl+N-&gt;Dependency)，打开Maven Artifact Search窗口，这里可以搜索并添加依赖，搜索selenium, 因为我们是用java写代码，所以要加入selenium.java依赖包，选择任一版本：<br><a href="https://sm.ms/image/N9yA8i1kGMqOJ6I" target="_blank"><img src="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png" ></a><br>之后在pom.xml文件里就可以看到Selenium依赖已经添加了。显示红色因为还没有下载，所以我们要点击页面右上角的Maven小图标下载依赖包:<br><a href="https://sm.ms/image/aYy6lZ4ML1UNdRS" target="_blank"><img src="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png" ></a><br>下载完成后就可以看到相应依赖已经添加到项目的Extenral Libraries中了：<br><a href="https://sm.ms/image/BAs3H5etboJ7Lxh" target="_blank"><img src="https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png" ></a><br>下载的依赖文件也可以在创建项目时设置的<strong>Local repository</strong>路径里找到，默认是在<span class="label info">.m2/repository/</span>路径下。</p>
+<h3 id="下载WebDriver"><a href="#下载WebDriver" class="headerlink" title="下载WebDriver"></a>下载WebDriver</h3><p>有了Selenium依赖，我们还需要下载WebDirver，因为我们是用WebDriver开启浏览器测试。这里我们下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">Firefox</a>和<a href="https://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">Chrome</a>的WebDriver，下载完成后在项目新建drivers文件夹放置，便于管理：<br><a href="https://sm.ms/image/IisXJT1xD4q2yCG" target="_blank"><img src="https://i.loli.net/2020/05/15/IisXJT1xD4q2yCG.png" ></a></p>
+<div class="note warning">
+            <p>注意，下载WebDriver之前，需要确保电脑上已经下载了对应的浏览器，否则是不能使用的。</p>
+          </div>
+
+<h3 id="编写并运行测试Case"><a href="#编写并运行测试Case" class="headerlink" title="编写并运行测试Case"></a>编写并运行测试Case</h3><p>到这里，我们所有的准备工作都做好了，在org.example包下新建<span class="label info">SeleniumTest.java</span>文件，首先编写一个简单的测试case：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;百度搜索Selenium</span><br><span class="line">package org.example;</span><br><span class="line"></span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.openqa.selenium.By;</span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line">import org.openqa.selenium.firefox.FirefoxDriver;</span><br><span class="line"></span><br><span class="line">public class SeleniumTest &#123;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void searchSelenium()</span><br><span class="line">    &#123;</span><br><span class="line">        System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">        &#x2F;&#x2F;指定要调用的WebDriver,也可以用Chrome</span><br><span class="line">        &#x2F;&#x2F;语法相应变为：System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;drivers&#x2F;chromedriver&quot;)</span><br><span class="line"></span><br><span class="line">        WebDriver driver &#x3D; new FirefoxDriver();</span><br><span class="line"></span><br><span class="line">        driver.manage().window().maximize();</span><br><span class="line">        driver.get(&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;);</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;selenium&quot;);</span><br><span class="line">        driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">        driver.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行成功之后，我们的Demo Project Set Up就结束了:<br><a href="https://sm.ms/image/iDmgZtcjeTzqfEL" target="_blank"><img src="https://i.loli.net/2020/05/15/iDmgZtcjeTzqfEL.png" ></a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">组织workshop同事的博客</a></li>
+<li><a href="https://baike.baidu.com/item/Maven" target="_blank" rel="noopener">Maven百度百科</a></li>
+<li><a href="https://blog.csdn.net/napolunyishi/article/details/39345995" target="_blank" rel="noopener">Java构建工具：Ant vs Maven vs Gradle</a></li>
+<li><a href="http://www.codingwhy.com/view/718.html" target="_blank" rel="noopener">maven .m2文件夹在哪？</a></li>
+<li><a href="https://www.cnblogs.com/easonjim/p/6827058.html" target="_blank" rel="noopener">.m2\setting.xml文件</a></li>
+<li><a href="https://www.zhihu.com/question/20104186" target="_blank" rel="noopener">maven是干嘛的？</a></li>
+<li><a href="http://dustin.sallings.org/2010/04/01/why-not-maven.html" target="_blank" rel="noopener">Why I don’t Use Maven for my Java Projects</a></li>
+<li><a href="https://johlrogge.wordpress.com/2010/12/14/why-i-dont-like-maven/" target="_blank" rel="noopener">Why I don’t like Maven</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>打个赏嘛小主～</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/" title="WebUI自动化测试框架Demo(上)">https://jmyblog.top/WebUI-AutoTest-Demo-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 自动化测试</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/AutoTest-FrameWork/" rel="prev" title="浅谈自动化测试框架">
+      <i class="fa fa-chevron-left"></i> 浅谈自动化测试框架
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/WebUI-AutoTest-Demo-2/" rel="next" title="WebUI自动化测试框架Demo(中)">
+      WebUI自动化测试框架Demo(中) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+  </div>
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven-介绍"><span class="nav-number">1.</span> <span class="nav-text">Maven 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#是什么"><span class="nav-number">1.1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么会出现"><span class="nav-number">1.2.</span> <span class="nav-text">为什么会出现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同类常见技术"><span class="nav-number">1.3.</span> <span class="nav-text">同类常见技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪些人不喜欢Maven"><span class="nav-number">1.4.</span> <span class="nav-text">哪些人不喜欢Maven</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么做"><span class="nav-number">1.5.</span> <span class="nav-text">怎么做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo-Project-Set-Up"><span class="nav-number">2.</span> <span class="nav-text">Demo Project Set Up</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建Maven-Project"><span class="nav-number">2.1.</span> <span class="nav-text">创建Maven Project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加Selenium依赖"><span class="nav-number">2.2.</span> <span class="nav-text">添加Selenium依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载WebDriver"><span class="nav-number">2.3.</span> <span class="nav-text">下载WebDriver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写并运行测试Case"><span class="nav-number">2.4.</span> <span class="nav-text">编写并运行测试Case</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">I'm a slow walker, but I never backwards.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=574919767&auto=0&height=66"></iframe>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fa fa-fw fa-pencil-square-o"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/shui-ba-qian-diu-le" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;shui-ba-qian-diu-le" rel="noopener" target="_blank"><i class="fa fa-fw fa-key"></i>知乎</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+      
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BDD/" rel="tag">BDD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BugBash/" rel="tag">BugBash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodingPages/" rel="tag">CodingPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GithubPages/" rel="tag">GithubPages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/" rel="tag">Next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OWASP/" rel="tag">OWASP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SEO/" rel="tag">SEO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TED/" rel="tag">TED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E5%8D%95/" rel="tag">书单</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F/" rel="tag">人生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/" rel="tag">人生规划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2/" rel="tag">升级博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%8A%E5%88%AB%E6%8B%96%E5%BB%B6/" rel="tag">告别拖延</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95/" rel="tag">敏捷测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AA%E6%9D%A5/" rel="tag">未来</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B/" rel="tag">极限编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E9%87%91%E5%AD%97%E5%A1%94/" rel="tag">测试金字塔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" rel="tag">渗透测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/" rel="tag">王小波</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%93%81%E9%94%A4/" rel="tag">王铁锤</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E6%97%A0%E9%9A%9C%E7%A2%8D/" rel="tag">网络无障碍</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag">自动化测试</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%8F%E5%B7%9E/" rel="tag">苏州</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B0%E5%B9%B4/" rel="tag">闰年</a><span class="tag-list-count">1</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">64k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:34</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dd256a93fb420e6" async="async"></script>
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = '';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  window.livereOptions = {
+    refer: 'jmyblog.top' + location.pathname
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+  
+</body>
+</html>
