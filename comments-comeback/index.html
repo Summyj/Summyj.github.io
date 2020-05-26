@@ -50,12 +50,12 @@
   };
 </script>
 
-  <meta name="description" content="时隔3年，博客消失的评论终于找回来了。">
+  <meta name="description" content="博客消失的评论终于找回来了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网站评论回家了">
 <meta property="og:url" content="https://jmyblog.top/comments-comeback/index.html">
 <meta property="og:site_name" content="谁把钱丢了">
-<meta property="og:description" content="时隔3年，博客消失的评论终于找回来了。">
+<meta property="og:description" content="博客消失的评论终于找回来了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png">
 <meta property="og:image" content="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png">
@@ -63,7 +63,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png">
 <meta property="og:image" content="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png">
 <meta property="article:published_time" content="2020-05-19T08:05:43.000Z">
-<meta property="article:modified_time" content="2020-05-19T09:04:39.256Z">
+<meta property="article:modified_time" content="2020-05-20T09:28:16.228Z">
 <meta property="article:author" content="谁把钱丢了">
 <meta property="article:tag" content="评论系统">
 <meta name="twitter:card" content="summary">
@@ -246,10 +246,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-19 16:05:43 / 修改时间：17:04:39" itemprop="dateCreated datePublished" datetime="2020-05-19T16:05:43+08:00">2020-05-19</time>
+              <time title="创建时间：2020-05-19 16:05:43" itemprop="dateCreated datePublished" datetime="2020-05-19T16:05:43+08:00">2020-05-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-20 17:28:16" itemprop="dateModified" datetime="2020-05-20T17:28:16+08:00">2020-05-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -277,7 +283,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>2 分钟</span>
             </span>
-            <div class="post-description">时隔3年，博客消失的评论终于找回来了。</div>
+            <div class="post-description">博客消失的评论终于找回来了。</div>
 
         </div>
       </header>
@@ -288,22 +294,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://sm.ms/image/5qCbYiSNDszno3y" target="_blank"><img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" ></a></p>
+        <img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
+
 <p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
 <h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info">
             <p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
           </div>
 
-<p><a href="https://sm.ms/image/FO4KepHxIStEDLn" target="_blank"><img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" ></a></p>
+<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
+
 <p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more" target="_blank" rel="noopener">这篇博客</a>给出的解决办法：</p>
 <div class="note primary">
             <p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
           </div>
 
-<p><a href="https://sm.ms/image/sdVryhuHgqZnl15" target="_blank"><img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" ></a></p>
-<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><a href="https://sm.ms/image/SrmgpshDyx3n7UV" target="_blank"><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></a></p>
-<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><a href="https://sm.ms/image/KCegVLdTGMYb7pO" target="_blank"><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></a></p>
+<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
+
+<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
+<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
 <p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
 
     </div>
@@ -496,12 +505,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">65k</span>
+    <span title="站点总字数">71k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:36</span>
+    <span title="站点阅读时长">3:58</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
