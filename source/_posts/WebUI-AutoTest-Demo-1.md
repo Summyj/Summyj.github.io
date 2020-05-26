@@ -143,11 +143,11 @@ Maven工作时，会在当前目录中查找pom.xml并读取内容，获取所�
 
 <!-- 项目信息：坐标、版本、名称、url等等 -->
 
-  <groupId>org.me.example</groupId>
-  <artifactId>Example</artifactId>
+  <groupId>org.me.hello</groupId>
+  <artifactId>Hello</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Example</name>
+  <name>Hello</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -279,13 +279,13 @@ public class AppTest
 {% endcodeblock %}
 
 
-进入Example项目根目录执行 **mvn compile** 命令编译项目的java类:
+进入Hello项目根目录执行 **mvn compile** 命令编译项目的java类:
 <img src="https://i.loli.net/2020/05/26/qdcOrMWeVPR1Z3G.png" >
 观察终端输出结果，可以看到：
 - maven运行了default lifecycle的 resources&compile 两个生命周期阶段。因为在我们的pom文件中resources阶段是在compile之前的，所以compile阶段运行的时候，在它之前的resources阶段也会被运行。
 - 我们在pom文件里添加了junit的依赖，如果本地仓库中没有相关的jar包，终端输出结果会包含去远程仓库下载的信息。由于我本地已经有了相关的jar包，所以这里终端输出结果中并没有下载相关依赖的内容。
 
-这就是使用Maven自动编译项目的过程，可以看到Example项目的根目录下多了一个 **target** 文件夹，这个文件夹就是编译成功之后Maven帮我们生成的目标文件夹，在target/classes路径下可以看到编译好的.class文件：
+这就是使用Maven自动编译项目的过程，可以看到Hello项目的根目录下多了一个 **target** 文件夹，这个文件夹就是编译成功之后Maven帮我们生成的目标文件夹，在target/classes路径下可以看到编译好的.class文件：
 <img src="https://i.loli.net/2020/05/26/EXtn39ymWNbzh7V.png" >
 
 #### 使用Maven清理项目
@@ -310,7 +310,7 @@ public class AppTest
 
 执行 **mvn install** 命令安装项目包到本地仓库，这样项目包可以用作其他本地项目的依赖。依次执行在它之前的生命周期阶段，然后执行install生命周期阶段：
 <img src="https://i.loli.net/2020/05/26/uZDcXbNQ68KBe4C.png" >
-在本地仓库就可以看到Example项目的jar包了，路径就是它的包名：
+在本地仓库就可以看到Hello项目的jar包了，路径就是它的包名：
 <img src="https://i.loli.net/2020/05/26/5DRTF9OtZMoxXJ3.png" >
 
 #### 使用Maven部署项目
@@ -461,7 +461,7 @@ public class SeleniumTest {
 <img src="https://i.loli.net/2020/05/15/iDmgZtcjeTzqfEL.png" >
 
 ## 参考资料
-- [组织workshop同事的博客](https://www.jianshu.com/p/28b7ae892ed1)
+- [Maven + TestNG + Jenkins搭建自动化测试框架](https://www.jianshu.com/p/28b7ae892ed1)
 - [Maven百度百科](https://baike.baidu.com/item/Maven)
 - [Java构建工具：Ant vs Maven vs Gradle](https://blog.csdn.net/napolunyishi/article/details/39345995)
 - [maven .m2文件夹在哪？](http://www.codingwhy.com/view/718.html)

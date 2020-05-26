@@ -16,8 +16,80 @@ top:
 {% endnote %}
 
 ## TestNG介绍
+### 是什么
 
-补充中。。。
+    TestNG是一个开源的自动化测试框架， NG表示Next Generation。 
+TestNG的灵感来源于Junit和Nunit,但其功能优于前面两个框架，例如TestNG支持依赖测试，测试分组等功能，并且它旨在涵盖所有类别的测试：单元测试，功能测试，端到端测试，集成测试等等。
+
+### 同类技术对比
+
+上篇博客中我们使用了Junit的注解@Test来识别测试代码，所以我们来看看TestNG和Junit的对比：
+<img src="https://i.loli.net/2020/05/26/GD37i9WBUE52v8d.png" >可以看到TestNG比Junit支持的功能更多，比如分组测试，参数化测试等等。
+
+### TestNG注解
+
+TestNG注解可以标记测试方法，设置测试方法运行顺序，将测试分组，还能向方法体传参。
+
+<span id="inline-toc">1.</span> 常见的TestNG注解
+
+- @Test：最基本的注解，用来把方法标记为测试的一部分
+- @BeforeTest：在所有测试之前运行
+- @AfterTest：在所有测试执行之后运行
+- @BeforeClass：在调用当前类之前运行
+- @AfterClass：在调用当前类之后运行
+- @BeforeMethod：在每个测试方法执行之前都会运行
+- @AfterMethod：在每个测试方法执行之后都会运行
+- @BeforeGroups：在调用属于该组的第一个测试方法之前运行
+- @AfterGroups：在调用属于该组的最后一个测试方法执行之后运行 
+
+<span id="inline-toc">2.</span> 注解运行顺序
+
+TestNG运行时，顺序是这样的：
+
+@BeforeSuite->@BeforeTest->@BeforeClass->{@BeforeMethod->@Test->@AfterMethod->@AfterClass->@AfterTest->@AfterSuite
+
+其中{}内的有多少个@Test，就循环执行多少次。
+
+<span id="inline-toc">3.</span> 传参注解
+
+有时我们想要把测试数据当作参数传入测试方法，然后在别的地方定义参数对应的测试数据，这时就要用到TestNG的传参注解。
+
+- @Parameters：描述如何将参数传递给@Test方法，下文中会用到。
+- @DataProvider：当参数类型较为复杂时，@Parameters无法满足需要，此时可以利用@DataProvider传参标记一种方法来提供测试数据。该方法会返回一个Object二维数组或一个Iterator<Object[]>来提供复杂的参数对象。
+
+### TestNG的xml文件
+
+>testng.xml是TestNG的配置文件，以xml格式记录测试文件。xml文件里的tags可以帮助理解测试代码的结构，设置参数数据，还可以和注解配合使用决定测试代码的运行规则，包括测试方法的执行顺序，测试方法个数和分组等等。每一个tag都有自己的参数设置。
+
+一个简单的testng.xml结构如下：
+<img src="https://i.loli.net/2020/05/26/Xb75whadgGBYJ1x.png" >
+
+    <suite></suite>
+
+suite是testng.xml文档中最上层的元素，一个xml文件只能有一个suite，它是一个xml文件的根级。
+suite tag的paraller和thread-count参数共同控制多线程运行，实现并发测试。paraller参数指定并发的级别，比如tests/classes/methods级别。thread-count参数指定线程个数。
+
+    <test></test>
+
+一个suite tag下可以有多个test tag，它是一个测试单元。
+
+    <classes></classes>
+
+方法选择器，要执行的方法写在这里。classes tag下必须包含执行的class，否则不会执行任何内容。
+
+    <parameter></parameter>
+
+提供测试数据，和@Parameters注解配合使用。
+parameter tag可以声明在suite/tests/classes级别，在内层的parameter tag声明的变量会覆盖在外层声明的同名变量。
+
+### 怎么做
+
+TestNG的一般使用步骤是：
+- 编写测试业务逻辑代码并添加TestNG的注解
+- 在TestNG的xml文件配置测试信息(如果有需要的话)
+- 运行TestNG的xml文件
+
+下文的代码改造会详细介绍怎么做。
 
 ## 代码改造
 ### BeforeTest/AfterTest
@@ -182,15 +254,66 @@ public class SeleniumTest {
 {% endcodeblock %}
 接着运行testng.xml，可以看到不同test在不同的线程运行，同一test的测试在一个线程运行：
 <img src="https://i.loli.net/2020/05/17/VlObW86dHQ2Y7ry.png" >
+
 ### Element Object
 {% note info %}
-在实际工作中编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，不把测试数据暴露在外边，这样就能更关注于测试代码的设计了。
+在实际工作中，编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，不把测试数据暴露在外边，这样就能更关注于测试代码的设计了。
 {% endnote %}
 
 根据上边的思想，我们将代码结构改动如下：
+<img src="https://i.loli.net/2020/05/26/98npgJdoQbmlvTM.png" >
+新建了两个class文件，SetUp和Functions。
+SetUp.class用于存放beforeTest方法，然后在测试代码中调用：
+{% codeblock lang:command %}
+package org.example;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
+public class SetUp {
 
+    WebDriver driver;
+
+    public WebDriver beofreTest(String browser, String url)
+    {
+        switch (browser){
+            case "chrome":
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
+                driver = new FirefoxDriver();
+                break;
+            default:
+                System.out.println("can't supply such browser.");
+        }
+        driver.manage().window().maximize();
+        driver.get(url);
+        return driver;
+    }
+}
+{% endcodeblock %}
+Functions.class里是一些页面元素和操作这些元素的公共方法，也可以在测试代码里直接调用：
+{% codeblock lang:command %}
+package org.example;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Functions {
+
+    public By _searchBox = By.id("kw");
+    public By _searchButton = By.id("su");
+
+    public void searchText(WebDriver driver, String text)
+    {
+        driver.findElement(_searchBox).clear();
+        driver.findElement(_searchBox).sendKeys(text);
+        driver.findElement(_searchButton).click();
+    }
+}
+{% endcodeblock %}
 
 ### TestNG Report
 漂亮的测试报告是自动化测试中不可缺少的元素，TestNG也支持生成测试报告，在页面右上角找到Edit Configurations:
@@ -201,4 +324,4 @@ public class SeleniumTest {
 <img src="https://i.loli.net/2020/05/17/BrM578TpDidxc13.png" >
 
 ## 参考资料
-- [组织workshop同事的博客](https://www.jianshu.com/p/28b7ae892ed1)
+- [Maven + TestNG + Jenkins搭建自动化测试框架](https://www.jianshu.com/p/28b7ae892ed1)

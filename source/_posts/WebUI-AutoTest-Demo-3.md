@@ -5,7 +5,7 @@ update: 2020-05-15 15:05:47
 tags: [自动化测试]
 categories: [学习小记]
 copyright: true
-description: 利用Jenkins和Github实现Demo Project的CI集成。
+description: 利用Jenkins/GoCD和Github实现Demo Project的CI集成。
 top:
 ---
 
@@ -32,4 +32,4 @@ top:
 
 
 ## 参考资料
-- [组织workshop同事的博客](https://www.jianshu.com/p/28b7ae892ed1)
+- [Maven + TestNG + Jenkins搭建自动化测试框架](https://www.jianshu.com/p/28b7ae892ed1)
