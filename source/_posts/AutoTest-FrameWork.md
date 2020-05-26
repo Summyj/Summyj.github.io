@@ -9,7 +9,7 @@ description: 什么是自动化测试框架，一个好的自动化测试框架�
 top:
 ---
 
-<a href="https://sm.ms/image/yHdcTpMbsvJB2zh" target="_blank"><img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" ></a>
+<img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" >
 
 
 ## 前言
@@ -31,15 +31,13 @@ default@"自动化测试框架"
 
 试想要生产一辆交通工具，从造轮子开始到成品需要下边几个过程，这样才能成功：
 
-<a href="https://sm.ms/image/sVS2y3nXflDgowB" target="_blank"><img
-src="https://i.loli.net/2020/05/14/sVS2y3nXflDgowB.png" ></a>
+<im src="https://i.loli.net/2020/05/14/sVS2y3nXflDgowB.png" >
 
 如果把搭建自动化框架类比成生产交通工具的过程，那上述的Selenium/Appium/..等{%
 label default@"自动化测试框架"
 %}相当于只是一辆自行车，离我们想要的大货车(完善的自动化测试框架)差距还比较大：
 
-<a href="https://sm.ms/image/jCBKgVplGJZkM1n" target="_blank"><img
-src="https://i.loli.net/2020/05/14/jCBKgVplGJZkM1n.png" ></a>
+<img src="https://i.loli.net/2020/05/14/jCBKgVplGJZkM1n.png" >
 
 以Web UI自动化为例，一般来说，MVP版本的自动化测试框架结构如下：
 
@@ -145,8 +143,7 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 总的来说，一个完善的自动化测试框架应该是灵活的、稳定的，而且是容易维护的。全面考虑上边这6个元素会帮助我们达到这个目的，这样我们就能生产出拉风的大货车啦：
 {% endnote %}
 
-<a href="https://sm.ms/image/8xZPSG624mRkAaL" target="_blank"><img
-src="https://i.loli.net/2020/05/14/8xZPSG624mRkAaL.png" ></a>
+<img src="https://i.loli.net/2020/05/14/8xZPSG624mRkAaL.png" >
 
 
 ## 怎么做

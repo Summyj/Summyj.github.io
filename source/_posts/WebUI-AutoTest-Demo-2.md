@@ -9,7 +9,7 @@ description: Demo Project代码优化，TestNG介绍，TestNG注解基本使用�
 top:
 ---
 
-<a href="https://sm.ms/image/hVCWgPazcRirtLj" target="_blank"><img src="https://i.loli.net/2020/05/15/hVCWgPazcRirtLj.jpg" ></a>
+<img src="https://i.loli.net/2020/05/15/hVCWgPazcRirtLj.jpg" >
 
 {% note info %}
 上篇博客我们已经完成了Demo Project的Set Up, 这篇文章就来简单用TestNG的注解和testng.xml文件，使代码结构更清晰，并实现element object的good practice.
@@ -23,7 +23,7 @@ top:
 ### BeforeTest/AfterTest
 
 要使用TestNG的注解，我们必须添加TestNG依赖，步骤和之前添加Selenium依赖相同：
-<a href="https://sm.ms/image/19UmfH3uSvCMDLn" target="_blank"><img src="https://i.loli.net/2020/05/15/19UmfH3uSvCMDLn.png" ></a>
+<img src="https://i.loli.net/2020/05/15/19UmfH3uSvCMDLn.png" >
 接下来就可以使用TestNG的BeforeTest和AfterTest这两个注解了，我们可以把之前代码中在测试开始之前执行的操作，比如设置WebDriver、打开测试url都放在BeforeTest中，把测试执行结束后退出Driver的操作放在AfterTest中，这样改造之后的代码如下：
 {% codeblock lang:command %}
 public class SeleniumTest {
@@ -80,15 +80,13 @@ public class SeleniumTest {
     }
 {% endcodeblock %}
 此时运行测试，因为我们没有在系统默认的testng.xml文件{% label info@temp-testng-customsuite.xml %}里定义browser和url这两个参数，所以不难猜到运行失败：
-<a href="https://sm.ms/image/ogdLlYPhr54WEck" target="_blank"><img src="https://i.loli.net/2020/05/15/ogdLlYPhr54WEck.png" ></a>
-<a href="https://sm.ms/image/8W1a7Y6JSvNrT9Q" target="_blank"><img src="https://i.loli.net/2020/05/15/8W1a7Y6JSvNrT9Q.png" ></a>
+<img src="https://i.loli.net/2020/05/15/ogdLlYPhr54WEck.png" >
+<img src="https://i.loli.net/2020/05/15/8W1a7Y6JSvNrT9Q.png" >
 所以，有两种解决办法：
 - 直接改动默认的testng.xml文件
 - 新建自定义testng.xml文件，然后在pom.xml中指定此文件为默认的testng.xml
 为了方便以后改动，我们采用第二种办法，新建testng.xml，使用{% label info@parameter %} tag定义browser和url参数：
-<a href="https://sm.ms/image/vMOhB3FHkNRTnJK" target="_blank"><img src="https://i.loli.net/2020/05/17/vMOhB3FHkNRTnJK.png" ></a>
->parameter tag的使用规则：
-Tag name: parameter Description : Parameters can be defined at the <suite> or at the <test> level. Parameters defined at the <test> level override parameters of the same name in <suite> Parameters are used to link Java method parameters to their actual value, defined here
+<img src="https://i.loli.net/2020/05/17/vMOhB3FHkNRTnJK.png" >
 
 此时我们可以在新建的testng.xml文件右键点击运行，就可以运行成功啦。
 然后在pom.xml文件的maven-surefire-plugin里指定我们要引用的testng.xml，之后使用jenkins部署运行时就不会报错了：
@@ -135,18 +133,18 @@ Tag name: parameter Description : Parameters can be defined at the <suite> or at
 
 为了看到默认的执行顺序，我们先把methods list注释掉，再运行testng.xml。
 可以看到依然是searchJava先执行，searchSelenium后执行。没错，默认的执行顺序是**将方法名按照字符串排序的方式执行**的：
-<a href="https://sm.ms/image/tOuk64Mg3GCdB51" target="_blank"><img src="https://i.loli.net/2020/05/17/tOuk64Mg3GCdB51.png" ></a>
+<img src="https://i.loli.net/2020/05/17/tOuk64Mg3GCdB51.png" >
 
 <span id="inline-toc">3.</span> 给testng注解加上priority顺序
 
 其实，我们还可以通过**给方法的@Test直接后边加上priority参数**，数字小的先执行，达到设置执行顺序的目的。为了看到效果，我们将执行顺序设为和默认顺序相反：
-<a href="https://sm.ms/image/Z6kA2HVbhOeJPUq" target="_blank"><img src="https://i.loli.net/2020/05/17/Z6kA2HVbhOeJPUq.png" ></a>
+<img src="https://i.loli.net/2020/05/17/Z6kA2HVbhOeJPUq.png" >
 运行testng.xml之后，可以发现searchSelenium先执行，searchJava后执行。
 {% note info %}
 既然priority参数和上边的methods list都能设置执行顺序，那这两种方式谁的优先级更高呢？
 {% endnote %}
 为了解答这个问题，我们去掉testng.xml的注释，运行testng.xml观察效果：
-<a href="https://sm.ms/image/geaxQjf2I4JXdqO" target="_blank"><img src="https://i.loli.net/2020/05/17/geaxQjf2I4JXdqO.png" ></a>
+<img src="https://i.loli.net/2020/05/17/geaxQjf2I4JXdqO.png" >
 可以发现仍然是searchSelenium先执行，searchJava后执行。
 >所以，priority参数方式要比methods list方式优先级高。
 
@@ -183,20 +181,24 @@ Tag name: parameter Description : Parameters can be defined at the <suite> or at
         //打印出方法所在线程id
 {% endcodeblock %}
 接着运行testng.xml，可以看到不同test在不同的线程运行，同一test的测试在一个线程运行：
-<a href="https://sm.ms/image/VlObW86dHQ2Y7ry" target="_blank"><img src="https://i.loli.net/2020/05/17/VlObW86dHQ2Y7ry.png" ></a>
-
+<img src="https://i.loli.net/2020/05/17/VlObW86dHQ2Y7ry.png" >
 ### Element Object
 {% note info %}
-在实际工作中编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，这样就能更关注于测试代码的设计了。
+在实际工作中编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，不把测试数据暴露在外边，这样就能更关注于测试代码的设计了。
 {% endnote %}
+
+根据上边的思想，我们将代码结构改动如下：
+
+
+
 
 ### TestNG Report
 漂亮的测试报告是自动化测试中不可缺少的元素，TestNG也支持生成测试报告，在页面右上角找到Edit Configurations:
-<a href="https://sm.ms/image/J4EibfRV2wcI9Du" target="_blank"><img src="https://i.loli.net/2020/05/17/J4EibfRV2wcI9Du.png" ></a>
+<img src="https://i.loli.net/2020/05/17/J4EibfRV2wcI9Du.png" >
 在当前页面找到Listeners然后勾选"Use default reporters"选项，确认：
-<a href="https://sm.ms/image/1iVejFuwCdcf7YB" target="_blank"><img src="https://i.loli.net/2020/05/17/1iVejFuwCdcf7YB.png" ></a>
+<img src="https://i.loli.net/2020/05/17/1iVejFuwCdcf7YB.png" >
 再次右键运行testng.xml之后，可以看到项目目录自动生成的"test-output"文件夹，点击test-output文件夹下的index.html文件，在浏览器打开，就可以看到TestNG的测试报告了：
-<a href="https://sm.ms/image/BrM578TpDidxc13" target="_blank"><img src="https://i.loli.net/2020/05/17/BrM578TpDidxc13.png" ></a>
+<img src="https://i.loli.net/2020/05/17/BrM578TpDidxc13.png" >
 
 ## 参考资料
 - [组织workshop同事的博客](https://www.jianshu.com/p/28b7ae892ed1)

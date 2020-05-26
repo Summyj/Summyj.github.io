@@ -6,11 +6,11 @@ update: 2020-05-19 16:05:43
 tags: [评论系统]
 categories: 工具使用
 copyright: true
-description: 时隔3年，博客消失的评论终于找回来了。
+description: 博客消失的评论终于找回来了。
 top:
 ---
 
-<a href="https://sm.ms/image/5qCbYiSNDszno3y" target="_blank"><img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" ></a>
+<img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
 
 这张题图很能表示我现在激动的心情:laughing:
 
@@ -22,7 +22,7 @@ top:
 第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：
 {% endnote %}
 
-<a href="https://sm.ms/image/FO4KepHxIStEDLn" target="_blank"><img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" ></a>
+<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
 
 开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清:pensive:。
 然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。
@@ -36,12 +36,12 @@ refer是个参数，评论的添加与获取都是会带上这个参数的。而
 所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：
 {% endnote %}
 
-<a href="https://sm.ms/image/sdVryhuHgqZnl15" target="_blank"><img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" ></a>
+<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
 
 我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：
-<a href="https://sm.ms/image/SrmgpshDyx3n7UV" target="_blank"><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></a>
+<img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" >
 
 但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：
-<a href="https://sm.ms/image/KCegVLdTGMYb7pO" target="_blank"><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></a>
+<img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" >
 
 所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉

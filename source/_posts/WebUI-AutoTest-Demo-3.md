@@ -9,7 +9,7 @@ description: 利用Jenkins和Github实现Demo Project的CI集成。
 top:
 ---
 
-<a href="https://sm.ms/image/dKSi3gZFTJchr6P" target="_blank"><img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" ></a>
+<img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
 
 ## Jenkins介绍
 
@@ -28,7 +28,7 @@ top:
 <span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject
 <span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果
 这里是我的Jenkins，已经有小太阳啦：
-<a href="https://sm.ms/image/Q5FMxDSWvgNUoXB" target="_blank"><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ></a>
+<img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" >
 
 
 ## 参考资料
