@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
+<meta name="generator" content="Hexo 4.2.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -59,8 +59,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
 <meta property="og:image" content="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png">
 <meta property="article:published_time" content="2020-05-17T07:05:47.000Z">
-<meta property="article:modified_time" content="2020-05-26T07:47:16.040Z">
+<meta property="article:modified_time" content="2020-05-26T08:18:57.302Z">
 <meta property="article:author" content="谁把钱丢了">
 <meta property="article:tag" content="自动化测试">
 <meta name="twitter:card" content="summary">
@@ -251,7 +252,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-26 15:47:16" itemprop="dateModified" datetime="2020-05-26T15:47:16+08:00">2020-05-26</time>
+                <time title="修改时间：2020-05-26 16:18:57" itemprop="dateModified" datetime="2020-05-26T16:18:57+08:00">2020-05-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -271,7 +272,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>497</span>
+              <span>740</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -293,8 +294,17 @@
       
         <img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
 
-<h2 id="Jenkins介绍"><a href="#Jenkins介绍" class="headerlink" title="Jenkins介绍"></a>Jenkins介绍</h2><p>补充中。。。。</p>
-<h2 id="Demo-project-集成"><a href="#Demo-project-集成" class="headerlink" title="Demo project 集成"></a>Demo project 集成</h2><p>首先把本地的DemoProject推送到Github，然后请直接按照参考资料的Jenkins部分设置，已经写的很详细了，主要包括：<br><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<div class="note info">
+            <p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现代码的CI&amp;CD集成。</p>
+          </div>
+
+<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><h3 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h3><h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><h4 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h4><h4 id="GoCD"><a href="#GoCD" class="headerlink" title="GoCD"></a>GoCD</h4><hr>
+<div class="note warning">
+            <p>接下来就要开始项目集成的配置了，这里我用的是之前做workshop时创建的AutoTest项目，不是前两篇文章给大家举例的Automation项目，因为之前已经配置完了，再来一遍比较麻烦。但没有关系，我们不会对代码做改动，流程都是一样的。</p>
+          </div>
+
+<h2 id="集成Demo-project到Jenkins"><a href="#集成Demo-project到Jenkins" class="headerlink" title="集成Demo project到Jenkins"></a>集成Demo project到Jenkins</h2><p>完成后的效果，小太阳标志：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
 <blockquote>
 <p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
 </blockquote>
@@ -302,7 +312,8 @@
 <div class="note info">
             <p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
           </div>
-<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果<br>这里是我的Jenkins，已经有小太阳啦：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ></p>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="集成Demo-project到GoCD"><a href="#集成Demo-project到GoCD" class="headerlink" title="集成Demo project到GoCD"></a>集成Demo project到GoCD</h2><p>完成后的效果，绿色的pipeline：<br><img src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png" ></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
 </ul>
@@ -411,7 +422,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins介绍"><span class="nav-number">1.</span> <span class="nav-text">Jenkins介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo-project-集成"><span class="nav-number">2.</span> <span class="nav-text">Demo project 集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CI-amp-CD介绍"><span class="nav-number">1.</span> <span class="nav-text">CI&amp;CD介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#是什么"><span class="nav-number">1.1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么"><span class="nav-number">1.2.</span> <span class="nav-text">为什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么做"><span class="nav-number">1.3.</span> <span class="nav-text">怎么做</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Jenkins"><span class="nav-number">1.3.1.</span> <span class="nav-text">Jenkins</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GoCD"><span class="nav-number">1.3.2.</span> <span class="nav-text">GoCD</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成Demo-project到Jenkins"><span class="nav-number">2.</span> <span class="nav-text">集成Demo project到Jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成Demo-project到GoCD"><span class="nav-number">3.</span> <span class="nav-text">集成Demo project到GoCD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -505,9 +516,9 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:09</span>
+    <span title="站点阅读时长">4:10</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0

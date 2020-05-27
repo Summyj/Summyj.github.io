@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-1/</loc>
+    <loc>https://jmyblog.top/comments-comeback/</loc>
     <lastmod>2020-05-26</lastmod>
   </url>  <url>
     <loc>https://jmyblog.top/WebUI-AutoTest-Demo-3/</loc>
+    <lastmod>2020-05-26</lastmod>
+  </url>  <url>
+    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-1/</loc>
     <lastmod>2020-05-26</lastmod>
   </url>  <url>
     <loc>https://jmyblog.top/WebUI-AutoTest-Demo-2/</loc>
@@ -12,9 +15,6 @@
   </url>  <url>
     <loc>https://jmyblog.top/AutoTest-FrameWork/</loc>
     <lastmod>2020-05-26</lastmod>
-  </url>  <url>
-    <loc>https://jmyblog.top/comments-comeback/</loc>
-    <lastmod>2020-05-20</lastmod>
   </url>  <url>
     <loc>https://jmyblog.top/Java-basic/</loc>
     <lastmod>2020-05-09</lastmod>
