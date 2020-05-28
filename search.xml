@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<a id="more"></a>
-
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
-<ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
-</ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-        <tag>告别拖延</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈自动化测试框架</title>
     <url>/AutoTest-FrameWork/</url>
     <content><![CDATA[<img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" >
@@ -159,6 +129,49 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>20岁光阴不再来</title>
+    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<a id="more"></a>
+
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
+<ul>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+</ul>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+        <tag>告别拖延</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>站点的SEO优化</title>
     <url>/BlogSEO/</url>
     <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
@@ -238,6 +251,219 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>BugBash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>请收下这波 BDD 安利</title>
+    <url>/BDD-Introduce/</url>
+    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
+<a id="more"></a>
+
+<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">&#x1f4ac;</span>。</p>
+<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">&#x1f613;</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">&#x1f615;</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
+<hr>
+<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
+<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">&#x1f60f;</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
+<ul>
+<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
+<li>Step2: 点击注册按钮进去注册页面。</li>
+<li>Step3: 填写所有字段并点击注册。</li>
+<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
+</ul>
+<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
+<hr>
+<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
+<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
+<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
+<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
+<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
+<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
+<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
+</ul>
+<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
+<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
+<hr>
+<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
+<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
+<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
+<ul>
+<li>把团队不同角色对功能的理解误差暴露出来</li>
+<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
+<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
+<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
+</ul>
+<p>要做好这个Workshops，有几点很重要：</p>
+<ol>
+<li>在功能开发前的一两个Sprint进行。</li>
+<li>从用户角度出发，关注具体、真实的业务场景。</li>
+<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
+</ol>
+<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
+<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
+<ul>
+<li>提供一种快速的方法，再次确认大家的理解一致。</li>
+<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
+</ul>
+<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
+<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
+<blockquote>
+<p>帮助团队跟踪功能完成度</p>
+</blockquote>
+<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
+<blockquote>
+<p>减少测试工作量</p>
+</blockquote>
+<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
+<blockquote>
+<p>系统功能维护和查询</p>
+</blockquote>
+<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
+<hr>
+<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
+<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
+<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://cucumber.io/docs/bdd/myths/" target="_blank" rel="noopener" title="Myths about BDD">Myths about BDD</a></li>
+<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" target="_blank" rel="noopener" title="BDD Tutorial">BDD Tutorial</a></li>
+<li><a href="https://cucumber.io/docs/bdd/" target="_blank" rel="noopener" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
+<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/" target="_blank" rel="noopener">说起BDD，你会想到什么？</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BDD</tag>
+        <tag>敏捷</tag>
+        <tag>王铁锤</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络无障碍</title>
+    <url>/Accessibility-test/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class=emoji alias=blush style= fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8>&#x1f60a;</span></span></p>
+<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">&#x1f447;</span></p>
+<blockquote>
+<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+</blockquote>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
+<div class="note info">
+            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
+          </div>
+
+<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
+<ul>
+<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
+<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
+</ul>
+<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
+<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
+            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
+          </div>
+<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y" target="_blank" rel="noopener">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe" target="_blank" rel="noopener">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
+<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
+<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
+<p><a href="https://sm.ms/image/FLf2MhVHe4lBR7S" target="_blank"><img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400"></a></p>
+<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="noopener">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/" target="_blank" rel="noopener">安装包</a>。相比较Audits检测报告更详细。</p>
+<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank" rel="noopener">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
+<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/" target="_blank" rel="noopener">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
+<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
+<div class="note info">
+            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
+          </div>
+<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
+<div class="note primary">
+            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
+          </div>
+<p><a href="https://sm.ms/image/dEF7fwu1TxXbtWg" target="_blank"><img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg" ></a><br>不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/" target="_blank" rel="noopener">将Pa11y集成到pipeline</a></p>
+<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review" target="_blank" rel="noopener">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/" target="_blank" rel="noopener">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/" target="_blank" rel="noopener">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>网络无障碍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>升级博客，我太难了</title>
+    <url>/BlogUpdateNote/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
+用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
+
+<h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
+<div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
+
+<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><p>博客根目录的package.json文件里，列出了hexo和一些依赖的版本(这是我已经升级过的)：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"4.0.0"</span> ##当前Hexo版本</span><br><span class="line">  &#125;,</span><br><span class="line">  "dependencies": &#123; ##各种插件版本</span><br><span class="line">    "hexo": "^4.0.0",</span><br><span class="line">    "hexo-algolia": "^1.3.1",</span><br><span class="line">    "hexo-deployer-git": "^2.1.0",</span><br><span class="line">    "hexo-filter-emoji": "^2.0.2",</span><br><span class="line">    "hexo-generator-archive": "^1.0.0",</span><br><span class="line">    "hexo-generator-baidu-sitemap": "^0.1.6",</span><br><span class="line">    "hexo-generator-category": "^1.0.0",</span><br><span class="line">    "hexo-generator-feed": "^2.1.1",</span><br><span class="line">    "hexo-generator-index": "^1.0.0",</span><br><span class="line">    "hexo-generator-searchdb": "^1.2.0",</span><br><span class="line">    "hexo-generator-sitemap": "^2.0.0",</span><br><span class="line">    "hexo-generator-tag": "^1.0.0",</span><br><span class="line">    "hexo-helper-live2d": "^3.1.1",</span><br><span class="line">    "hexo-leancloud-counter-security": "^1.4.1",</span><br><span class="line">    "hexo-next-share": "github:theme-next/hexo-next-share",</span><br><span class="line">    "hexo-renderer-ejs": "^1.0.0",</span><br><span class="line">    "hexo-renderer-marked": "^2.0.0",</span><br><span class="line">    "hexo-renderer-stylus": "^1.1.0",</span><br><span class="line">    "hexo-server": "^1.0.0",</span><br><span class="line">    "hexo-symbols-count-time": "^0.7.0",</span><br><span class="line">    "hexo-wordcount": "^6.0.1",</span><br><span class="line">    "live2d-widget-model-hijiki": "^1.0.5"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>打开博客根目录，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></table></figure>
+<p>就会看到有哪些依赖和插件需要更新：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Package              Current  Wanted  Latest  Location</span><br><span class="line">hexo-filter-emoji      2.0.2   2.1.0   2.1.0  hexo-site</span><br><span class="line">hexo-generator-feed    2.1.1   2.2.0   2.2.0  hexo-site</span><br><span class="line">hexo-next-share        1.0.0     git     git  hexo-site</span><br></pre></td></tr></table></figure>
+<p>修改package.json中对应条目的版本到最新版，比如将   “hexo-filter-emoji”: “^2.0.2” 改成：   “hexo-filter-emoji”: “^2.1.0”<br>然后保存修改，再输入命令保存更新并下载：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
+<p>之后运行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></table></figure>
+<p>就可以看到当前hexo的版本已经到最新啦<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">&#x270c;</span></p>
+<h2 id="升级Next"><a href="#升级Next" class="headerlink" title="升级Next"></a>升级Next</h2><p>之前Next的版本是<strong>v5.x</strong>, 而搜了下最新版已经到<strong>v7.x</strong>了。。。不过不慌，还是慢慢来<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
+<p>为了避免踩坑，先看<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">官方文档</a>肯定是个明智的选择。</p>
+</blockquote>
+<p>跟随大佬的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md" target="_blank" rel="noopener">指示</a>，Next主题v5.x之后更换了代码库。之前是原作者 iissnan’s 的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">个人仓库</a>，由于Next比较火，后来就成立了一个专门维护它的<a href="https://github.com/theme-next" target="_blank" rel="noopener">组织</a>。是一个很大的进步了，大佬们真棒。</p>
+<p>代码库换了，那就不能用Git常规操作pull代码了。文档里给的建议是先不改动原有主题文件夹，将主题最新版本代码作为 <span class="label info">next-reloaded</span> 单独克隆到themes/下边。在博客配置文件中，把主题设置为<span class="label info">next-reloaded</span> 。然后就可以随时切换两个版本。</p>
+<p>但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 可问题是我完全不记得自己都做了啥，万一改坏了怎么办<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span>于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。</p>
+<h3 id="更改配置文件完成基础设置"><a href="#更改配置文件完成基础设置" class="headerlink" title="更改配置文件完成基础设置"></a>更改配置文件完成基础设置</h3><p>新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。<br>对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。<br>这样改完之后，博客基本上与之前一致了。</p>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><p>之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。</p>
+<h4 id="文章浏览次数"><a href="#文章浏览次数" class="headerlink" title="文章浏览次数"></a>文章浏览次数</h4><p>这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：<br><img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error"><br>不知道怎么解决，准备在github提issue，所以先弃用了。</p>
+<h4 id="Daovoice在线联系"><a href="#Daovoice在线联系" class="headerlink" title="Daovoice在线联系"></a>Daovoice在线联系</h4><p>有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：<br><img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error"><br>开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。</p>
+<h4 id="博客宠物"><a href="#博客宠物" class="headerlink" title="博客宠物"></a>博客宠物</h4><p>就是右下角萌萌的小黑啦。<br>之前也已经下载 “hexo-helper-live2d” 和 “live2d-widget-model-hijiki”这两个依赖，在图中路径加上标记：<br><img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config"><br>然后在博客(非主题)配置文件加上下面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#pet</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: true</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki ## 宠物依赖包的名字</span><br><span class="line">  display:</span><br><span class="line">    position: right ## 出现位置</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
+<p>之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。</p>
+<h4 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h4><p>新加入了分享文章的插件AddThis, 挺好用的。按照<a href="https://www.addthis.com" target="_blank" rel="noopener">这里的说明</a>配置就好了。然后把id加在配置文件里。</p>
+<h4 id="网站底部运行时间"><a href="#网站底部运行时间" class="headerlink" title="网站底部运行时间"></a>网站底部运行时间</h4><p>个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。<br>参考<a href="https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/" target="_blank" rel="noopener">这篇文章</a>完成的。</p>
+<h4 id="酷炫标签云"><a href="#酷炫标签云" class="headerlink" title="酷炫标签云"></a>酷炫标签云</h4><p>根据插件<a href="https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md" target="_blank" rel="noopener">github说明</a>配置就好了。<br>下载：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud</span><br></pre></td></tr></table></figure>
+<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; &#x2F;&#x2F;固定图片位置</span><br><span class="line">  opacity: 0.9; &#x2F;&#x2F;透明度设置</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
+<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
+            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
+          </div>
+
+<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            &#x3D; 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  &#x3D; 15px;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           &#x3D; 16px</span><br><span class="line">$btn-default-bg               &#x3D; white</span><br><span class="line">$btn-default-color            &#x3D; $text-color</span><br><span class="line">$btn-default-border-color     &#x3D; $text-color</span><br><span class="line">$btn-default-hover-color      &#x3D; white</span><br><span class="line">$btn-default-hover-bg         &#x3D; $black-deep</span><br></pre></td></tr></table></figure>
+
+<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
+<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
+<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
+
+<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
+<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
+<li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
+<li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
+<li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
+<li><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+        <tag>升级博客</tag>
       </tags>
   </entry>
   <entry>
@@ -338,16 +564,37 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
+    <title>Java基础小练习</title>
+    <url>/Java-basic/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
+<ul>
+<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
+<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
+<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
+</ul>
+<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
+<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
+<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
+<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
+<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
+<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
 ]]></content>
       <categories>
-        <category>生活随想</category>
+        <category>学习小记</category>
       </categories>
       <tags>
-        <tag>life</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -429,37 +676,58 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>Java基础小练习</title>
-    <url>/Java-basic/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
+    <title>WebUI自动化测试框架Demo(下)</title>
+    <url>/WebUI-AutoTest-Demo-3/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
+
+<div class="note info">
+            <p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。<br>在下面的配置过程中，我用了之前做workshop时创建的AutoTest项目做例子，不是前两篇文章给大家举例的Automation项目，因为之前已经配置完了，再来一遍比较麻烦。但没有关系，我们不会对代码做改动，流程都是一样的。</p>
+          </div>
+
+<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)</code></pre><p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
 <ul>
-<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
-<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
-<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
+<li>提交代码</li>
+<li>执行第一轮测试(单元/集成测试)</li>
+<li>代码合到master</li>
 </ul>
-<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
-<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
-<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
-<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
-<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
-<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
+<pre><code>持续交付(Continuous Delivery)</code></pre><p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
+<ul>
+<li>代码集成完成</li>
+<li>构建项目，将源码转换为可以运行的实际代码</li>
+<li>执行第二轮测试(端到端/手工测试)</li>
+</ul>
+<pre><code>持续部署(Continuous Deployment)</code></pre><p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
+<ul>
+<li>持续交付流程完成</li>
+<li>利用工具自动部署到生产环境</li>
+</ul>
+<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
+<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
+<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+</blockquote>
+<p>完成后的效果，小太阳标志：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<blockquote>
+<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
+</blockquote>
+<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
+<blockquote>
+<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
+</blockquote>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。</code></pre><p>完成后的效果，绿色的pipeline：<br><img src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png" ></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+<li><a href="https://devops.phodal.com/home" target="_blank" rel="noopener">DevOps 元素周期表</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html" target="_blank" rel="noopener">阮一峰：CI&amp;CD是什么</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>学习小记</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -505,8 +773,8 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
         <category>项目实践</category>
       </categories>
       <tags>
-        <tag>测试金字塔</tag>
         <tag>敏捷</tag>
+        <tag>测试金字塔</tag>
       </tags>
   </entry>
   <entry>
@@ -532,7 +800,7 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 <p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
 <p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
 <p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
 ]]></content>
       <categories>
         <category>工具使用</category>
@@ -598,42 +866,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebUI自动化测试框架Demo(下)</title>
-    <url>/WebUI-AutoTest-Demo-3/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
-
-<div class="note info">
-            <p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现代码的CI&amp;CD集成。</p>
-          </div>
-
-<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><h3 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h3><h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><h4 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h4><h4 id="GoCD"><a href="#GoCD" class="headerlink" title="GoCD"></a>GoCD</h4><hr>
-<div class="note warning">
-            <p>接下来就要开始项目集成的配置了，这里我用的是之前做workshop时创建的AutoTest项目，不是前两篇文章给大家举例的Automation项目，因为之前已经配置完了，再来一遍比较麻烦。但没有关系，我们不会对代码做改动，流程都是一样的。</p>
-          </div>
-
-<h2 id="集成Demo-project到Jenkins"><a href="#集成Demo-project到Jenkins" class="headerlink" title="集成Demo project到Jenkins"></a>集成Demo project到Jenkins</h2><p>完成后的效果，小太阳标志：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
-<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
-<blockquote>
-<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
-</blockquote>
-<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
-<div class="note info">
-            <p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
-          </div>
-<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
-<h2 id="集成Demo-project到GoCD"><a href="#集成Demo-project到GoCD" class="headerlink" title="集成Demo project到GoCD"></a>集成Demo project到GoCD</h2><p>完成后的效果，绿色的pipeline：<br><img src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png" ></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -965,36 +1197,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<a id="more"></a>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>好看的书</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -1062,6 +1264,36 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<a id="more"></a>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>递归求解1到100求和</title>
     <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
     <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
@@ -1089,219 +1321,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>递归</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>请收下这波 BDD 安利</title>
-    <url>/BDD-Introduce/</url>
-    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
-<a id="more"></a>
-
-<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">&#x1f4ac;</span>。</p>
-<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2" target="_blank" rel="noopener">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">&#x1f613;</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">&#x1f615;</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
-<hr>
-<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
-<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">&#x1f60f;</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
-<ul>
-<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
-<li>Step2: 点击注册按钮进去注册页面。</li>
-<li>Step3: 填写所有字段并点击注册。</li>
-<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
-</ul>
-<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">&#x1f44c;</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
-<hr>
-<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
-<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
-<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
-<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
-<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
-<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
-<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
-</ul>
-<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
-<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
-<hr>
-<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
-<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
-<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
-<ul>
-<li>把团队不同角色对功能的理解误差暴露出来</li>
-<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
-<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
-<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
-</ul>
-<p>要做好这个Workshops，有几点很重要：</p>
-<ol>
-<li>在功能开发前的一两个Sprint进行。</li>
-<li>从用户角度出发，关注具体、真实的业务场景。</li>
-<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
-</ol>
-<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
-<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
-<ul>
-<li>提供一种快速的方法，再次确认大家的理解一致。</li>
-<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
-</ul>
-<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
-<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
-<blockquote>
-<p>帮助团队跟踪功能完成度</p>
-</blockquote>
-<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
-<blockquote>
-<p>减少测试工作量</p>
-</blockquote>
-<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
-<blockquote>
-<p>系统功能维护和查询</p>
-</blockquote>
-<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
-<hr>
-<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
-<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
-<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="https://cucumber.io/docs/bdd/myths/" target="_blank" rel="noopener" title="Myths about BDD">Myths about BDD</a></li>
-<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" target="_blank" rel="noopener" title="BDD Tutorial">BDD Tutorial</a></li>
-<li><a href="https://cucumber.io/docs/bdd/" target="_blank" rel="noopener" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
-<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/" target="_blank" rel="noopener">说起BDD，你会想到什么？</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>敏捷</tag>
-        <tag>BDD</tag>
-        <tag>王铁锤</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络无障碍</title>
-    <url>/Accessibility-test/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class=emoji alias=blush style= fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8>&#x1f60a;</span></span></p>
-<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">&#x1f447;</span></p>
-<blockquote>
-<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
-</blockquote>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
-<div class="note info">
-            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
-          </div>
-
-<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
-<ul>
-<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
-<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
-</ul>
-<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
-<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
-
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
-            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
-          </div>
-<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y" target="_blank" rel="noopener">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe" target="_blank" rel="noopener">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
-<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
-<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
-<p><a href="https://sm.ms/image/FLf2MhVHe4lBR7S" target="_blank"><img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400"></a></p>
-<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="noopener">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/" target="_blank" rel="noopener">安装包</a>。相比较Audits检测报告更详细。</p>
-<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank" rel="noopener">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
-<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/" target="_blank" rel="noopener">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
-<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
-<div class="note info">
-            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
-          </div>
-<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
-<div class="note primary">
-            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
-          </div>
-<p><a href="https://sm.ms/image/dEF7fwu1TxXbtWg" target="_blank"><img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg" ></a><br>不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/" target="_blank" rel="noopener">将Pa11y集成到pipeline</a></p>
-<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review" target="_blank" rel="noopener">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/" target="_blank" rel="noopener">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/" target="_blank" rel="noopener">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>网络无障碍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>升级博客，我太难了</title>
-    <url>/BlogUpdateNote/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
-用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
-
-<h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
-<div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
-
-<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><p>博客根目录的package.json文件里，列出了hexo和一些依赖的版本(这是我已经升级过的)：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"4.0.0"</span> ##当前Hexo版本</span><br><span class="line">  &#125;,</span><br><span class="line">  "dependencies": &#123; ##各种插件版本</span><br><span class="line">    "hexo": "^4.0.0",</span><br><span class="line">    "hexo-algolia": "^1.3.1",</span><br><span class="line">    "hexo-deployer-git": "^2.1.0",</span><br><span class="line">    "hexo-filter-emoji": "^2.0.2",</span><br><span class="line">    "hexo-generator-archive": "^1.0.0",</span><br><span class="line">    "hexo-generator-baidu-sitemap": "^0.1.6",</span><br><span class="line">    "hexo-generator-category": "^1.0.0",</span><br><span class="line">    "hexo-generator-feed": "^2.1.1",</span><br><span class="line">    "hexo-generator-index": "^1.0.0",</span><br><span class="line">    "hexo-generator-searchdb": "^1.2.0",</span><br><span class="line">    "hexo-generator-sitemap": "^2.0.0",</span><br><span class="line">    "hexo-generator-tag": "^1.0.0",</span><br><span class="line">    "hexo-helper-live2d": "^3.1.1",</span><br><span class="line">    "hexo-leancloud-counter-security": "^1.4.1",</span><br><span class="line">    "hexo-next-share": "github:theme-next/hexo-next-share",</span><br><span class="line">    "hexo-renderer-ejs": "^1.0.0",</span><br><span class="line">    "hexo-renderer-marked": "^2.0.0",</span><br><span class="line">    "hexo-renderer-stylus": "^1.1.0",</span><br><span class="line">    "hexo-server": "^1.0.0",</span><br><span class="line">    "hexo-symbols-count-time": "^0.7.0",</span><br><span class="line">    "hexo-wordcount": "^6.0.1",</span><br><span class="line">    "live2d-widget-model-hijiki": "^1.0.5"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>打开博客根目录，输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></table></figure>
-<p>就会看到有哪些依赖和插件需要更新：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Package              Current  Wanted  Latest  Location</span><br><span class="line">hexo-filter-emoji      2.0.2   2.1.0   2.1.0  hexo-site</span><br><span class="line">hexo-generator-feed    2.1.1   2.2.0   2.2.0  hexo-site</span><br><span class="line">hexo-next-share        1.0.0     git     git  hexo-site</span><br></pre></td></tr></table></figure>
-<p>修改package.json中对应条目的版本到最新版，比如将   “hexo-filter-emoji”: “^2.0.2” 改成：   “hexo-filter-emoji”: “^2.1.0”<br>然后保存修改，再输入命令保存更新并下载：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
-<p>之后运行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></table></figure>
-<p>就可以看到当前hexo的版本已经到最新啦<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">&#x270c;</span></p>
-<h2 id="升级Next"><a href="#升级Next" class="headerlink" title="升级Next"></a>升级Next</h2><p>之前Next的版本是<strong>v5.x</strong>, 而搜了下最新版已经到<strong>v7.x</strong>了。。。不过不慌，还是慢慢来<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
-<p>为了避免踩坑，先看<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">官方文档</a>肯定是个明智的选择。</p>
-</blockquote>
-<p>跟随大佬的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md" target="_blank" rel="noopener">指示</a>，Next主题v5.x之后更换了代码库。之前是原作者 iissnan’s 的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">个人仓库</a>，由于Next比较火，后来就成立了一个专门维护它的<a href="https://github.com/theme-next" target="_blank" rel="noopener">组织</a>。是一个很大的进步了，大佬们真棒。</p>
-<p>代码库换了，那就不能用Git常规操作pull代码了。文档里给的建议是先不改动原有主题文件夹，将主题最新版本代码作为 <span class="label info">next-reloaded</span> 单独克隆到themes/下边。在博客配置文件中，把主题设置为<span class="label info">next-reloaded</span> 。然后就可以随时切换两个版本。</p>
-<p>但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 可问题是我完全不记得自己都做了啥，万一改坏了怎么办<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span>于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。</p>
-<h3 id="更改配置文件完成基础设置"><a href="#更改配置文件完成基础设置" class="headerlink" title="更改配置文件完成基础设置"></a>更改配置文件完成基础设置</h3><p>新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。<br>对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。<br>这样改完之后，博客基本上与之前一致了。</p>
-<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><p>之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。</p>
-<h4 id="文章浏览次数"><a href="#文章浏览次数" class="headerlink" title="文章浏览次数"></a>文章浏览次数</h4><p>这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：<br><img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error"><br>不知道怎么解决，准备在github提issue，所以先弃用了。</p>
-<h4 id="Daovoice在线联系"><a href="#Daovoice在线联系" class="headerlink" title="Daovoice在线联系"></a>Daovoice在线联系</h4><p>有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：<br><img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error"><br>开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。</p>
-<h4 id="博客宠物"><a href="#博客宠物" class="headerlink" title="博客宠物"></a>博客宠物</h4><p>就是右下角萌萌的小黑啦。<br>之前也已经下载 “hexo-helper-live2d” 和 “live2d-widget-model-hijiki”这两个依赖，在图中路径加上标记：<br><img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config"><br>然后在博客(非主题)配置文件加上下面的配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#pet</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: true</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki ## 宠物依赖包的名字</span><br><span class="line">  display:</span><br><span class="line">    position: right ## 出现位置</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure>
-<p>之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。</p>
-<h4 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h4><p>新加入了分享文章的插件AddThis, 挺好用的。按照<a href="https://www.addthis.com" target="_blank" rel="noopener">这里的说明</a>配置就好了。然后把id加在配置文件里。</p>
-<h4 id="网站底部运行时间"><a href="#网站底部运行时间" class="headerlink" title="网站底部运行时间"></a>网站底部运行时间</h4><p>个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。<br>参考<a href="https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/" target="_blank" rel="noopener">这篇文章</a>完成的。</p>
-<h4 id="酷炫标签云"><a href="#酷炫标签云" class="headerlink" title="酷炫标签云"></a>酷炫标签云</h4><p>根据插件<a href="https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md" target="_blank" rel="noopener">github说明</a>配置就好了。<br>下载：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud</span><br></pre></td></tr></table></figure>
-<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a href="https://github.com/theme-next/hexo-theme-next/issues/1217" target="_blank" rel="noopener">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<span class="label info">_data</span>文件夹，然后再创建<span class="label info">styles.styl</span>文件，添加内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; &#x2F;&#x2F;固定图片位置</span><br><span class="line">  opacity: 0.9; &#x2F;&#x2F;透明度设置</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>之后在博客配置文件搜索关键字<span class="label info">custom_file_path</span>去掉 style 的注释就好啦。</p>
-<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info">
-            <p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
-          </div>
-
-<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            &#x3D; 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  &#x3D; 15px;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           &#x3D; 16px</span><br><span class="line">$btn-default-bg               &#x3D; white</span><br><span class="line">$btn-default-color            &#x3D; $text-color</span><br><span class="line">$btn-default-border-color     &#x3D; $text-color</span><br><span class="line">$btn-default-hover-color      &#x3D; white</span><br><span class="line">$btn-default-hover-bg         &#x3D; $black-deep</span><br></pre></td></tr></table></figure>
-
-<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">这篇文章</a>设置的。</p>
-<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
-<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
-
-<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <span class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</span></p>
-<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/" target="_blank" rel="noopener">将 Hexo 升级到 v3.5.0</a></li>
-<li><a href="https://www.jianshu.com/p/e211e9119522" target="_blank" rel="noopener">Hexo NexT 6升级笔记</a></li>
-<li><a href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" target="_blank" rel="noopener">Hexo博客建立标签云及效果展示</a></li>
-<li><a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></li>
-<li><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-        <tag>升级博客</tag>
       </tags>
   </entry>
   <entry>
@@ -2024,6 +2043,11 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
   </entry>
   <entry>
     <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/lib/jquery_lazyload/README.html</url>
     <content><![CDATA[<h1 align="center"><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="noopener">jquery-lazyload</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
 
@@ -2048,11 +2072,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
