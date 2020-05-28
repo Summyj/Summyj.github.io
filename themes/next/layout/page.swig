@@ -9,7 +9,9 @@
     {%- elif page.type === 'tags' and not page.title %}
       {{- __('title.tag') + page_title_suffix }}
     {%- elif page.type === 'links' and not page.title %}
-        {{- __('links') + page_title_suffix }}
+      {{- __('links') + page_title_suffix }}
+    {%- elif page.type === 'about' and not page.title %}
+      {{- __('about') + page_title_suffix }}
     {%- elif page.type === 'schedule' and not page.title %}
       {{- __('title.schedule') + page_title_suffix }}
     {%- else %}

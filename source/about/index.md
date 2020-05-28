@@ -1,6 +1,7 @@
 ---
 date: 2017-08-03 21:35:26
 comments: true
+type: "about"
 ---
 
 {% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm 关于幽闭型小说 %}
