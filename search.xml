@@ -129,131 +129,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<a id="more"></a>
-
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
-<ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
-</ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-        <tag>告别拖延</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点的SEO优化</title>
-    <url>/BlogSEO/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
-<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
-<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index" target="_blank" rel="noopener">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><a href="https://sm.ms/image/CPt9byQOAZ8fDBV" target="_blank"><img src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png" ></a>验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/krGdctXzCf7hjxM" target="_blank"><img src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png" ></a></p>
-<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning">
-            <p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
-          </div>
-<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
-<blockquote>
-<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-</blockquote>
-<p>安装百度站点地图生成插件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><a href="https://sm.ms/image/DwL9Xf8JmRWVoF6" target="_blank"><img src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png" ></a>显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
-<p>安装结束后在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
-<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，就可以实现每次部署自动推送文章啦：<br><a href="https://sm.ms/image/Z2LcdRlzXjutg4h" target="_blank"><img src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></a></p>
-<div class="note info">
-            <p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
-          </div>
-
-<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><a href="https://sm.ms/image/kpSBwdDFtXmcbNJ" target="_blank"><img src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png" ></a></p>
-<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps" target="_blank" rel="noopener">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><a href="https://sm.ms/image/lVcSnUo2JhNYXgI" target="_blank"><img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="400" height="500"></a><br>然后执行然后执行<span class="label info">hexo g -d</span>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/bOoYU7w5SvIzZj9" target="_blank"><img src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png" ></a></p>
-<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><a href="https://sm.ms/image/W4Ud5el38Y7pXt2" target="_blank"><img src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png" ></a>显示Success之后，Sitemap推送方式就安排上了.</p>
-<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><a href="https://sm.ms/image/4GxXKmyO1bAc7PN" target="_blank"><img src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png" ></a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/" target="_blank" rel="noopener">Hexo提交百度和Google收录站点</a></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>SEO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
@@ -390,6 +265,86 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>网络无障碍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>20岁光阴不再来</title>
+    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<a id="more"></a>
+
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
+<ul>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+</ul>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+        <tag>告别拖延</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
       </tags>
   </entry>
   <entry>
@@ -564,763 +519,48 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>Java基础小练习</title>
-    <url>/Java-basic/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
-<ul>
-<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
-<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
-<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
-</ul>
-<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
-<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
-<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
-<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
-<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
-<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的一些写作标签</title>
-    <url>/How-to-Write/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
-
-<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
-<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
+    <title>站点的SEO优化</title>
+    <url>/BlogSEO/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
+<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
+<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index" target="_blank" rel="noopener">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><a href="https://sm.ms/image/CPt9byQOAZ8fDBV" target="_blank"><img src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png" ></a>验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/krGdctXzCf7hjxM" target="_blank"><img src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png" ></a></p>
+<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning">
+            <p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
+          </div>
+<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
+<blockquote>
+<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
 </blockquote>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
-<div class="note default">
-            <p>default</p>
-          </div>
-<div class="note primary">
-            <p>primary</p>
-          </div>
-<div class="note success">
-            <p>success</p>
-          </div>
+<p>安装百度站点地图生成插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><a href="https://sm.ms/image/DwL9Xf8JmRWVoF6" target="_blank"><img src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png" ></a>显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<p>安装结束后在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
+<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，就可以实现每次部署自动推送文章啦：<br><a href="https://sm.ms/image/Z2LcdRlzXjutg4h" target="_blank"><img src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></a></p>
 <div class="note info">
-            <p>info</p>
-          </div>
-<div class="note warning">
-            <p>warning</p>
-          </div>
-<div class="note danger">
-            <p>danger</p>
+            <p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
           </div>
 
-<p>_config 文件配置关键字：note, 我的配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
-<span class="label default">默认</span>
-<span class="label primary">主要</span>
-<span class="label success">成功</span>
-<span class="label info">信息</span>
-<span class="label warning">警告</span>
-<span class="label danger">危险</span>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
-<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
-
-
-<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
-
-<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
-<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
-<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
+<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><a href="https://sm.ms/image/kpSBwdDFtXmcbNJ" target="_blank"><img src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png" ></a></p>
+<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps" target="_blank" rel="noopener">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><a href="https://sm.ms/image/lVcSnUo2JhNYXgI" target="_blank"><img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="400" height="500"></a><br>然后执行然后执行<span class="label info">hexo g -d</span>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/bOoYU7w5SvIzZj9" target="_blank"><img src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png" ></a></p>
+<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><a href="https://sm.ms/image/W4Ud5el38Y7pXt2" target="_blank"><img src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png" ></a>显示Success之后，Sitemap推送方式就安排上了.</p>
+<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><a href="https://sm.ms/image/4GxXKmyO1bAc7PN" target="_blank"><img src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png" ></a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/" target="_blank" rel="noopener">Hexo提交百度和Google收录站点</a></p>
 ]]></content>
       <categories>
         <category>工具使用</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebUI自动化测试框架Demo(下)</title>
-    <url>/WebUI-AutoTest-Demo-3/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
-
-<div class="note info">
-            <p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。<br>在下面的配置过程中，我用了之前做workshop时创建的AutoTest项目做例子，不是前两篇文章给大家举例的Automation项目，因为之前已经配置完了，再来一遍比较麻烦。但没有关系，我们不会对代码做改动，流程都是一样的。</p>
-          </div>
-
-<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)</code></pre><p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
-<ul>
-<li>提交代码</li>
-<li>执行第一轮测试(单元/集成测试)</li>
-<li>代码合到master</li>
-</ul>
-<pre><code>持续交付(Continuous Delivery)</code></pre><p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
-<ul>
-<li>代码集成完成</li>
-<li>构建项目，将源码转换为可以运行的实际代码</li>
-<li>执行第二轮测试(端到端/手工测试)</li>
-</ul>
-<pre><code>持续部署(Continuous Deployment)</code></pre><p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
-<ul>
-<li>持续交付流程完成</li>
-<li>利用工具自动部署到生产环境</li>
-</ul>
-<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
-<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
-<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
-<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
-</blockquote>
-<p>完成后的效果，小太阳标志：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
-<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
-<blockquote>
-<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
-</blockquote>
-<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
-<blockquote>
-<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
-</blockquote>
-<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
-<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。</code></pre><p>完成后的效果，绿色的pipeline：<br><img src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png" ></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
-<li><a href="https://devops.phodal.com/home" target="_blank" rel="noopener">DevOps 元素周期表</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html" target="_blank" rel="noopener">阮一峰：CI&amp;CD是什么</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谜一样的测试金字塔</title>
-    <url>/Test-Pyramid/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
-
-<blockquote>
-<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-</blockquote>
-<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
-<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
-<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
-<blockquote>
-<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
-</blockquote>
-<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
-<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
-<li>UI测试</li>
-</ul>
-<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
-<ul>
-<li>端到端测试</li>
-</ul>
-<p>包括针对API和用户界面的端到端测试。</p>
-<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
-<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
-<div class="note info">
-            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
-          </div>
-<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
-<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
-<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
-
-<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
-<ul>
-<li>按照测试粒度分层</li>
-<li>层次越高，你写的测试应该越少</li>
-</ul>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>敏捷</tag>
-        <tag>测试金字塔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站评论回家了</title>
-    <url>/comments-comeback/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
-
-<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info">
-            <p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
-          </div>
-
-<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
-
-<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more" target="_blank" rel="noopener">这篇博客</a>给出的解决办法：</p>
-<div class="note primary">
-            <p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
-          </div>
-
-<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
-
-<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
-<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
-<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>评论系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<a id="more"></a>
-
-<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java类中的代码块执行顺序</title>
-    <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
-<a id="more"></a>
-
-<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>请写出上述代码的输出，看完本文你就会有答案。</p>
-<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
-<ul>
-<li>普通代码块：定义在类的方法中的代码块。</li>
-<li>构造块：定义在类中的代码块（无修饰符）。</li>
-<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
-<li>同步代码块（与多线程有关，本文不涉及）</li>
-</ul>
-<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>执行结果：</strong></p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
-<p><strong>结论：</strong></p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
-<p><strong>其中：</strong></p>
-<ul>
-<li>主类静态块优于主方法执行。</li>
-<li>无论生成多少类对象，静态块只执行一次。</li>
-<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
-</ul>
-<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
-<blockquote>
-<p>为了方便观察，对代码改动如下：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>答案在这里：</p>
-<p><img src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试课程学习笔记第一弹：自动化测试理论</title>
-    <url>/auto-test-learning/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
-
-<blockquote>
-<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
-</blockquote>
-<span class="label success">绿色</span>是我目前在做的，<span class="label warning">黄色</span>是在实践但没有深入了解的，<span class="label danger">红色</span>是我没有了解或者没有实践的。
-
-<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <span class="label success">测试金字塔</span>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
-<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
-<li><span class="label success">冒烟测试</span>：check主要功能</li>
-<li><span class="label success">功能测试</span>：自动化case覆盖功能</li>
-<li><span class="label danger">验收测试</span>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
-<li><span class="label danger">性能测试</span>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过
-
-</li>
-</ul>
-<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">&#x1f609;</span></p>
-<p><span id="inline-toc">1.</span> <span class="label success">UI和业务流程变更导致自动化测试代码不可用</span></p>
-<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
-<p><span id="inline-toc">2.</span> <span class="label danger">UI自动化测试只能模拟人工</span></p>
-<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
-<div class="note default">
-            <ul><li><span class="label success">传统自动化测试</span>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li><li><span class="label danger">自动探索测试</span>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li><li><span class="label danger">codeless方向及智能生成测试用例方向</span>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li></ul>
-          </div>
-
-<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <span class="label success">核心用例自动化覆盖</span><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <span class="label success">基础回归自动化覆盖</span><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <span class="label success">新功能手工测试</span><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
-<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <span class="label warning">了解待测产品和平台</span><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <span class="label warning">精通好的测试框架</span><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <span class="label warning">掌握一些自动化测试代码编写技巧和关键点</span><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
-<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
-<li><span class="label warning">Web应用自动化</span>：Selenium</li>
-<li><span class="label danger">App手机应用自动化</span>：Appium</li>
-<li><span class="label danger">PC端的应用的GUI自动化</span>：Unkown</li>
-<li><span class="label danger">微信小程序自动化</span>：App+Web测试技术的外延形态</li>
-<li><span class="label danger">智能设备自动化</span>：Unknown
-
-</li>
-</ul>
-<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
-<ul>
-<li><span class="label danger">Android原生Monkey</span></li>
-<li><span class="label danger">百度 SmartMonkey</span></li>
-<li><span class="label danger">腾讯 NewMonkey</span></li>
-<li><span class="label danger">阿里 Macaca 的 NoSmoke</span></li>
-<li><span class="label danger">Google出品的 AppCrawler</span>
-
-</li>
-</ul>
-<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info">
-            <p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span></p>
-          </div>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于闰年，你不知道的那些事</title>
-    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
-<a id="more"></a>
-
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
-<ul>
-<li>整除但4不能整除100</li>
-<li>整除100又能整除400</li>
-</ul>
-<blockquote>
-<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
-</blockquote>
-<hr>
-<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
-<p>那么具体是怎么弥补的呢？</p>
-<blockquote>
-<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
-</blockquote>
-<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
-<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
-<blockquote>
-<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
-</blockquote>
-<p>那这3个闰年怎么少呢？</p>
-<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
-<ul>
-<li>2000/400=5</li>
-<li>2100/400=5.25</li>
-<li>2200/400=5.5</li>
-<li>2300/400=5.75</li>
-<li>2400/400=6</li>
-</ul>
-<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
-<p>你明白了吗？</p>
-<hr>
-<p>当然，根据规则，我们就可以编写代码判断了：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>闰年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敏捷开发与测试</title>
-    <url>/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
-<a id="more"></a>
-
-<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
-<hr>
-<blockquote>
-<p>接下来我将从3个方面：What?（什么是敏捷开发）&amp;Why（为什么要实行敏捷开发）&amp;How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
-</blockquote>
-<h1 id="What"><a href="#What" class="headerlink" title="What?"></a>What?</h1><h2 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h2><p>简单来说，敏捷开发是一个<strong>以用户为中心、客户需求为导向</strong>的开发过程。强调客户合作、响应需求变化。是一种<strong>迭代式、增量式</strong>的开发模式。主要有以下特点：</p>
-<ul>
-<li>依赖客户参与</li>
-<li>测试驱动开发（TDD）</li>
-<li>开发周期短</li>
-</ul>
-<h2 id="敏捷测试"><a href="#敏捷测试" class="headerlink" title="敏捷测试"></a>敏捷测试</h2><p>对应敏捷开发模式，敏捷测试要求每个人都参与到测试过程中，所以需要团队人员之间进行大量的沟通与协作。</p>
-<ul>
-<li>客户：定义用例和程序属性参与验收测试</li>
-<li>开发和测试：共同打造可以进行功能自动化的测试配件</li>
-</ul>
-<p>与传统测试过程相比，敏捷测试主要有以下特征：</p>
-<ul>
-<li>测试并不是一个独立的阶段，而是和开发过程紧密联系并<strong>驱动开发</strong>（TDD）。</li>
-<li>开发者先创建<strong>单元测试</strong>用例（失败验证测试），然后实现软件单元代码。</li>
-<li>敏捷测试依赖于<strong>自动化测试</strong>。</li>
-<li>测试者要通过持续的测试反馈推动项目前行，并<strong>帮助开发者修复bug</strong>。</li>
-</ul>
-<hr>
-<h1 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h1><blockquote>
-<p>与传统软件开发模式相比，敏捷开发把客户的参与作为关键环节。这样引入了灵活性，提高客户满意度。</p>
-</blockquote>
-<p>如今的客户总是需要能立即发布的高质量应用产品，使得传统开发模式不能适应这种激烈的市场竞争环境。所以大多数企业更青睐像敏捷开发一般，轻量化、快速的开发方法。</p>
-<hr>
-<h1 id="How"><a href="#How" class="headerlink" title="How?"></a>How?</h1><p>事实上，敏捷开发方法有很多种，比如：功能驱动开发（FDD）、开放统一过程等等。但最流行的是<strong>极限编程（XP）</strong>开发方法和<strong>Scrum（进度跟踪）</strong>项目管理方法。</p>
-<blockquote>
-<p><strong>XP</strong>是一种迭代式、增量式的开发模式，非常强调单元测试和验收测试，是现在最著名的敏捷方法。<br><strong>Scrum</strong>是一种迭代式、增量式的项目管理方法，适用于所有的敏捷方法，用来度量开发速度和进度。两者相辅相成，形成了现今最流行的敏捷开发模式。</p>
-</blockquote>
-<h2 id="XP编程"><a href="#XP编程" class="headerlink" title="XP编程"></a>XP编程</h2><p>面向对象的编程语言如Java/C#，都含有全功能的API，所以可以利用其迅速实现大型复杂应用。但正因如此，应用程序的质量经常得不到保证。</p>
-<blockquote>
-<p>XP编程的目的就是<strong>短时间</strong>开发<strong>高质量</strong>的应用程序。所以，XP方法将主要精力集中在测试上，在产品设计阶段之后，必须首先生成单元测试用例，然后才编写代码通过测试。</p>
-</blockquote>
-<p>XP开发模型用12个核心实践来驱动该过程：</p>
-<ul>
-<li>NO.1：需求分析（开发、客户、产品均参与）</li>
-<li>NO.2：小规模、递增发布（增加实在/可增值的新功能，频繁发布新版本）</li>
-<li>NO.3：系统隐喻（编程小组确认开发规则）</li>
-<li>NO.4：简要设计（实现简要设计，通过单元测试，不需重复设计，只要不停实现）</li>
-<li>NO.5：连续测试（编写模块之前先生成单元测试用例，模块在通过单元测试后才算完成，程序在通过所有单元测试和验收测试后才算结束）</li>
-<li>NO.6：重构（清理调整代码库，任何重构之后需重新进行所有单元测试）</li>
-<li>NO.7：结对编程（两位程序员在同一台机器协同开发代码库，便于对代码实时检查，提高缺陷发生纠正率）</li>
-<li>NO.8：代码的集体所有权（所有代码归全体程序员所有，不存在某一个程序员只开发某一个代码库）</li>
-<li>NO.9：持续集成（变更后的代码在通过单元测试之后将其集成到代码库中）</li>
-<li>NO.10：每周工作40小时（不允许加班，如果每周都全力工作了40个小时，就不需要加班，在版本发布的前一周例外）</li>
-<li>NO.11：客户在现场（编程小组可以随时与客户沟通）</li>
-<li>NO.12：按标准编码（所有的代码需要满足编程小组设计的系统隐喻）</li>
-</ul>
-<h2 id="XP测试"><a href="#XP测试" class="headerlink" title="XP测试"></a>XP测试</h2><blockquote>
-<p>为满足XP方法的流程和思想，XP测试强调连续测试。主要由两种类型的测试组成：<strong>单元测试</strong>和<strong>验收测试</strong>。</p>
-</blockquote>
-<h3 id="XP单元测试"><a href="#XP单元测试" class="headerlink" title="XP单元测试"></a>XP单元测试</h3><p>单元测试是XP测试采用的主要测试方法，具有两条规则：</p>
-<p>1.所有的代码模块在编码开始前必须设计好单元测试用例（最主要的优点在于可以更好理解程序需求，排除混淆）</p>
-<p>2.产品发布之前所有的代码模块必须通过单元测试</p>
-<p>为了迎合项目进度，单元测试通常要用自动化测试套件来减轻单元测试负担，测试套件可以生成测试报告并对程序中出现的缺陷进行分类，帮助修复bug。</p>
-<h3 id="XP验收测试"><a href="#XP验收测试" class="headerlink" title="XP验收测试"></a>XP验收测试</h3><blockquote>
-<p>验收测试是判断应用程序是否满足功能性和易用性及其他需求，在设计阶段，开发人员和客户设计验收测试，由客户执行。</p>
-</blockquote>
-<p>验收测试需注意以下几点：</p>
-<ul>
-<li>同单元测试一样，验收测试也可是自动化的。测试内容为计算/数据等，可用自动化测试；当测试内容为界面布局和颜色等，测试应该是非自动化的。</li>
-<li>与单元测试相同，验收测试过程中发现多个bug时，应对其进行优先级排序，每次bug修正后都要重新执行验收测试。所以验收测试也算是一种回归测试。</li>
-</ul>
-<h2 id="一个完整XP项目的运作流程"><a href="#一个完整XP项目的运作流程" class="headerlink" title="一个完整XP项目的运作流程"></a>一个完整XP项目的运作流程</h2><p>下表给出了一个完整XP项目应进行的流程：</p>
-<table>
-<thead>
-<tr>
-<th>步骤</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Step1</td>
-<td>程序员与客户进行产品需求分析会议，决定产品使用场景</td>
-</tr>
-<tr>
-<td>Step2</td>
-<td>编程小组进行内部会议，将需求分解为独立的任务，并估计每个任务所需要的时间（StoryPoint）</td>
-</tr>
-<tr>
-<td>Step3</td>
-<td>程序员向客户提交任务清单，并要求客户对任务清单进行优先级排序</td>
-</tr>
-<tr>
-<td>Step4</td>
-<td>编程小组根据程序员具备的能力，将任务分配给对应结对程序员</td>
-</tr>
-<tr>
-<td>Step5</td>
-<td>每对程序员按照程序需求和规格说明，编写相应任务的单元测试用例</td>
-</tr>
-<tr>
-<td>Step6</td>
-<td>每对程序员编写完成通过其单元测试用例的任务代码，期间不断对代码进行修改和重测，并对代码库进行整合和集成</td>
-</tr>
-<tr>
-<td>Step7</td>
-<td>编程小组发布应用程序的一个预览版本，由客户进行验收测试，并通过修改缺陷不断进行回归测试</td>
-</tr>
-<tr>
-<td>Step8</td>
-<td>程序员在验收测试成功的基础上发布产品版本</td>
-</tr>
-</tbody></table>
-<p>其他工作：程序员根据最新经验更新对客户需求的时间估计方式。</p>
-<h2 id="敏捷开发学习网站"><a href="#敏捷开发学习网站" class="headerlink" title="敏捷开发学习网站"></a>敏捷开发学习网站</h2><p><a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1" target="_blank" rel="noopener">Scrum中文网</a><br><a href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf#zoom=100" target="_blank" rel="noopener">Scrum指南</a></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>敏捷测试</tag>
-        <tag>极限编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海_Part2</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
-    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
-<a id="more"></a>
-
-<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
-<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
-<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
-<p>但是时间长了，问题就开始出现了。</p>
-<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
-<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
-<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
-<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
-<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
-<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
-<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
-<ul>
-<li>笔试</li>
-</ul>
-<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
-<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
-<ul>
-<li>面试</li>
-</ul>
-<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
-<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
-<ul>
-<li>offer</li>
-</ul>
-<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
-<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
-<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
-<ul>
-<li>做毕设</li>
-<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
-<li>拿到驾照</li>
-</ul>
-<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>人生规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<a id="more"></a>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>未来</tag>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试矩阵</title>
-    <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
-<a id="more"></a>
-
-<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
-<h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
-<p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
-<h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
-<p>既然有这么多的测试方法，在实际的测试工作中，我们到底怎么测试呢。像上边说的，测试种类如此繁多，难于理解，所以在测试时也难以沟通。</p>
-</blockquote>
-<p>其实，我们可以从两个维度来理解这些测试方法，并将其应用到实际工作中。</p>
-<p>其中，第一个维度就是测试实现的层次和粒度，说白了就是测哪。是方法，类，还是API？是应用、系统、还是整个平台？</p>
-<p>而我们常说的性能测试，功能测试，安全测试等等，都可以归为第二个维度，即测试的目标，也就是测什么，咋测。</p>
-<p>这两个维度结合起来就形成了下边的测试矩阵：</p>
-<table>
-<thead>
-<tr>
-<th align="left">测哪\咋测</th>
-<th align="left">功能测试</th>
-<th align="left">集成测试</th>
-<th align="left">性能测试</th>
-<th align="left">安全测试</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">端到端</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">API</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">类</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">方法</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-</tbody></table>
-<p>有了这样的认识，以后进行测试工作时工作起来就方便多了。我们可以进行“方法级别的功能测试”、“API级别的性能测试”等等。这样，使测试内容变得更加清晰。</p>
-<blockquote>
-<p>事实上，，而常常忽略了第二个维度，即咋测。所以，根据测试矩阵进行测试，可以避免这种问题。在实际测试工作中，大多数情况下都进行的是功能测试</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<a id="more"></a>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>好看的书</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>递归求解1到100求和</title>
-    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
-    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
-<a id="more"></a>
-
-<p><strong>思想：</strong></p>
-<p>思考一下，从1加到100可以分解成：</p>
-<ul>
-<li>1+（2加到100的和）</li>
-<li>1+2+（3加到100的和）</li>
-<li>1+2+3+（4加到100的和）</li>
-<li>……</li>
-</ul>
-<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
-<p>所以，可以编写如下代码：</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> n + count(n - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>递归</tag>
+        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -1494,35 +734,115 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>博客被停止访问之后</title>
-    <url>/SiteBrokenFix/</url>
-    <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span></p>
-<p><a href="https://sm.ms/image/K4e1OfUkGpTt6BF" target="_blank"><img src="https://i.loli.net/2020/04/23/K4e1OfUkGpTt6BF.jpg" width="500" height="200"></a></p>
-<h2 id="找原因"><a href="#找原因" class="headerlink" title="找原因"></a>找原因</h2><p>这次的错误和之前遇到的都不一样，一脸懵逼的我第一时间只能找Google和度娘问问，看有没有同病相怜的人和有可能的解决办法。然鹅，毛都没有，结果全是不相关的内容：<br><a href="https://sm.ms/image/lDyCkEzNxnZXL4g" target="_blank"><img src="https://i.loli.net/2020/04/23/lDyCkEzNxnZXL4g.png" width="600" height="500"></a></p>
-<p>虽然毫无头绪，但也只能尝试自己解决了，还是那句话，<span class="label info">遇到问题的时候，首先怀疑自己</span>。于是我就开始了自我怀疑之路：</p>
-<h3 id="revert代码"><a href="#revert代码" class="headerlink" title="revert代码"></a>revert代码</h3><p>因为不知道网站是什么时候被停止访问的，而且更新之前我并没有看站点的情况，所以也许在更新之前它是好的，所以我revert了代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
-<p>但结果还是一样<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span></p>
-<h3 id="更新Hexo"><a href="#更新Hexo" class="headerlink" title="更新Hexo"></a>更新Hexo</h3><p>既然不是代码的问题，而且它报的是网络安全性问题，所以决定从这个角度出发找原因，首先想到更新Hexo，说不定有相关安全漏洞修复，所以我更新了相关的package:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
-<p>推送更新之后结果依旧不变<span class="emoji" alias="cry" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">&#x1f622;</span></p>
-<h3 id="解决github发现的依赖稳定性问题"><a href="#解决github发现的依赖稳定性问题" class="headerlink" title="解决github发现的依赖稳定性问题"></a>解决github发现的依赖稳定性问题</h3><p>注意到推送远程仓库后，github有提示一些依赖包需要更新，旧的可能有安全威胁，所以按照github的建议更新了依赖包：<br><a href="https://sm.ms/image/ltorJI7sbPufejX" target="_blank"><img src="https://i.loli.net/2020/04/23/ltorJI7sbPufejX.png" ></a>嗯，问题依然没有解决<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span></p>
-<h3 id="百度网站检测"><a href="#百度网站检测" class="headerlink" title="百度网站检测"></a>百度网站检测</h3><p>继续细品报错<span class="label danger">由于存在网路安全性问题，该站点已停止访问</span>，虽然我坚信自己是个遵纪守法的好公民，没有在博客上发布什么黄赌毒信息，不过还是在百度站点管理平台检测了一下，期待能报个啥错，给我更多的信息：<br><a href="https://sm.ms/image/21VDnev6QHLpJIy" target="_blank"><img src="https://i.loli.net/2020/04/23/21VDnev6QHLpJIy.png" width="500" height="500"></a>然而结果出乎意料的优秀，也没有检测出啥恶意内容。hummm，度娘为我正身了<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<h3 id="清理浏览器缓存"><a href="#清理浏览器缓存" class="headerlink" title="清理浏览器缓存"></a>清理浏览器缓存</h3><p>上边这么多尝试，都没有解决问题，我突然想到一个平时工作中经常用到的操作：<span class="label default">清缓存</span>，然后我终于看不到报错信息了，出现了一个相对熟悉的页面，而且有更多信息：<br><a href="https://sm.ms/image/v9PIwB1WMfQNymh" target="_blank"><img src="https://i.loli.net/2020/04/23/v9PIwB1WMfQNymh.png" width="550" height="500"></a>值得注意的是这段话：</p>
-<blockquote>
-<p>This server could not prove that it is jmyblog.top; its security certificate is from<br>coding.me. This may be caused by a misconfiguration or an attacker intercepting your<br>connection.</p>
+    <title>Hexo的一些写作标签</title>
+    <url>/How-to-Write/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
+
+<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
+<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
 </blockquote>
-<p>3个关键字：<strong>安全证书</strong> <strong>配置错误</strong> <strong>外部攻击</strong><br>于是我看了下现在的证书：<br><a href="https://sm.ms/image/kliwBJ8GtSrb1eR" target="_blank"><img src="https://i.loli.net/2020/04/23/kliwBJ8GtSrb1eR.png" width="450" height="400"></a><br>虽然我很想假装自己能看懂，但我真的看不懂。外部攻击就更是一头雾水了，稍微有点了解的是<strong>配置错误</strong>这个关键字，而且提到了coding.me。这个我是知道的，因为博客是同时部署在github和coding上的。所以我决定去探索下。</p>
-<h3 id="探索Coding和Github"><a href="#探索Coding和Github" class="headerlink" title="探索Coding和Github"></a>探索Coding和Github</h3><p>进入coding之后，我发现它的登录页面和代码远程库的url有变化，所以在本地改了推送的远程仓库。再推送一遍没报错，但网站依然无法访问。<br>然后我看了Coding的代码库静态网站配置，发现了一个奇怪的网站访问地址：<br><a href="https://sm.ms/image/MOt6ZUfaEBDjvLW" target="_blank"><img src="https://i.loli.net/2020/04/23/MOt6ZUfaEBDjvLW.png" ></a><br>然后尝试打开：<br><a href="https://sm.ms/image/vZX9Ow1RbpmFWBo" target="_blank"><img src="https://i.loli.net/2020/04/23/vZX9Ow1RbpmFWBo.png" ></a><br>简直是喜大普奔<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">&#x1f603;</span>，是可以访问的。这下心里的石头落下了一点，最起码有一个在线访问的url了。然而我记得之前coding静态网站的url和github一样，都是代码库的名字，当时域名解析的时候设置的记录值也是这个，但现在变了，解析当然就不生效了，所以要改域名解析设置。<br>但还是先看看github pages可不可以访问，因为之前配置了custom domain，而现在这个域名是不可访问的：<br><a href="https://sm.ms/image/FKD4f13LOMao9Wk" target="_blank"><img src="https://i.loli.net/2020/04/23/FKD4f13LOMao9Wk.png" ></a><br>所以去掉custom domain，网站内容部署到github pages本来的url：<br><a href="https://sm.ms/image/KcJ4ilrSbXLqYsy" target="_blank"><img src="https://i.loli.net/2020/04/23/KcJ4ilrSbXLqYsy.png" ></a><br>然后再看看部署log，也没问题：<br><a href="https://sm.ms/image/Ualby2E5DmYZxKX" target="_blank"><img src="https://i.loli.net/2020/04/23/Ualby2E5DmYZxKX.png" ></a><br>也是可以访问的:<br><a href="https://sm.ms/image/C1UnyFq5ftrZeGb" target="_blank"><img src="https://i.loli.net/2020/04/23/C1UnyFq5ftrZeGb.png" ></a><br>好了，既然现在有两个线上的url都可以访问网站，那么就可以去改域名解析设置了，让这两个url都可以指向jmyblog.top这个域名，理论上问题应该就解决了。</p>
-<h2 id="成功解决"><a href="#成功解决" class="headerlink" title="成功解决"></a>成功解决</h2><h3 id="域名绑定coding"><a href="#域名绑定coding" class="headerlink" title="域名绑定coding"></a>域名绑定coding</h3><p><a href="https://sm.ms/image/Skv28M5PJiC1Fwo" target="_blank"><img src="https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png" ></a></p>
-<p>首先按照上图中coding静态网站中自定义域名的设置要求，添加下面的CNAME记录，并把之前记录值为coding.me的解析删掉：<br><a href="https://sm.ms/image/KWhtRFA6QPTm4SM" target="_blank"><img src="https://i.loli.net/2020/04/23/KWhtRFA6QPTm4SM.png" ></a><br>然后输入绑定域名的时候，要求再添加一条TXT记录(这个忘记截提示信息的图了)，其中主机记录和记录值都是在提示信息给出的：<br><a href="https://sm.ms/image/iz1IX9s2cxyLm8D" target="_blank"><img src="https://i.loli.net/2020/04/23/iz1IX9s2cxyLm8D.png" ></a><br>并且成功在coding开启了自定义域名的强制Https访问，一开始SSL证书申请失败，后来按照网上的解决方案去域名解析把GitHub解析暂停就申请成功了。<br>有了上面这两条解析，jmyblog.top已经可以访问了，但是只绑定了coding静态网站，我们还需要绑定github静态网站，实现双部署。</p>
-<h3 id="域名绑定github"><a href="#域名绑定github" class="headerlink" title="域名绑定github"></a>域名绑定github</h3><p>和最开始搭建网站的步骤一样，添加一条记录值为github.io的CNAME记录就好：<br><a href="https://sm.ms/image/ZpEigb5wcH1CNFQ" target="_blank"><img src="https://i.loli.net/2020/04/23/ZpEigb5wcH1CNFQ.png" ></a><br>然后去github pages设置中，加上custom domain，并开启强制Https访问：<br><a href="https://sm.ms/image/3IaVCNKXE7WlP49" target="_blank"><img src="https://i.loli.net/2020/04/23/3IaVCNKXE7WlP49.png" ></a><br>至此，coding pages和github pages都指向jmyblog.top这个域名了，而且都开启了强制Https，现在jmyblog.top已经可以用https访问了，也算是因祸得福<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br><a href="https://sm.ms/image/9kO3dHV2iwbnRhe" target="_blank"><img src="https://i.loli.net/2020/04/23/9kO3dHV2iwbnRhe.png" ></a><br>而且现在的证书：<br><a href="https://sm.ms/image/O51DPZxStkeszNv" target="_blank"><img src="https://i.loli.net/2020/04/23/O51DPZxStkeszNv.png" width="450" height="350"></a><br>嗯，还是看不懂，不过问题解决了就行。<br>用百度站点工具再做一次Https认证，验证成功：<br><a href="https://sm.ms/image/8ucHwDNBkGzvEXZ" target="_blank"><img src="https://i.loli.net/2020/04/23/8ucHwDNBkGzvEXZ.png" ></a><br>嗯，这下Https是真的了。<br>本站点最终的域名解析列表：<br><a href="https://sm.ms/image/RPNsrEyMSUV9uD1" target="_blank"><img src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png" ></a></p>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
+<div class="note default">
+            <p>default</p>
+          </div>
+<div class="note primary">
+            <p>primary</p>
+          </div>
+<div class="note success">
+            <p>success</p>
+          </div>
+<div class="note info">
+            <p>info</p>
+          </div>
+<div class="note warning">
+            <p>warning</p>
+          </div>
+<div class="note danger">
+            <p>danger</p>
+          </div>
+
+<p>_config 文件配置关键字：note, 我的配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
+<span class="label default">默认</span>
+<span class="label primary">主要</span>
+<span class="label success">成功</span>
+<span class="label info">信息</span>
+<span class="label warning">警告</span>
+<span class="label danger">危险</span>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
+<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
+
+
+<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
+
+<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
+<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
+<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
 ]]></content>
       <categories>
         <category>工具使用</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础小练习</title>
+    <url>/Java-basic/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
+<ul>
+<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
+<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
+<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
+</ul>
+<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
+<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
+<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
+<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
+<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
+<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1598,6 +918,38 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客被停止访问之后</title>
+    <url>/SiteBrokenFix/</url>
+    <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span></p>
+<p><a href="https://sm.ms/image/K4e1OfUkGpTt6BF" target="_blank"><img src="https://i.loli.net/2020/04/23/K4e1OfUkGpTt6BF.jpg" width="500" height="200"></a></p>
+<h2 id="找原因"><a href="#找原因" class="headerlink" title="找原因"></a>找原因</h2><p>这次的错误和之前遇到的都不一样，一脸懵逼的我第一时间只能找Google和度娘问问，看有没有同病相怜的人和有可能的解决办法。然鹅，毛都没有，结果全是不相关的内容：<br><a href="https://sm.ms/image/lDyCkEzNxnZXL4g" target="_blank"><img src="https://i.loli.net/2020/04/23/lDyCkEzNxnZXL4g.png" width="600" height="500"></a></p>
+<p>虽然毫无头绪，但也只能尝试自己解决了，还是那句话，<span class="label info">遇到问题的时候，首先怀疑自己</span>。于是我就开始了自我怀疑之路：</p>
+<h3 id="revert代码"><a href="#revert代码" class="headerlink" title="revert代码"></a>revert代码</h3><p>因为不知道网站是什么时候被停止访问的，而且更新之前我并没有看站点的情况，所以也许在更新之前它是好的，所以我revert了代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<p>但结果还是一样<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span></p>
+<h3 id="更新Hexo"><a href="#更新Hexo" class="headerlink" title="更新Hexo"></a>更新Hexo</h3><p>既然不是代码的问题，而且它报的是网络安全性问题，所以决定从这个角度出发找原因，首先想到更新Hexo，说不定有相关安全漏洞修复，所以我更新了相关的package:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm outdated</span><br><span class="line">npm install --save</span><br></pre></td></tr></table></figure>
+<p>推送更新之后结果依旧不变<span class="emoji" alias="cry" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">&#x1f622;</span></p>
+<h3 id="解决github发现的依赖稳定性问题"><a href="#解决github发现的依赖稳定性问题" class="headerlink" title="解决github发现的依赖稳定性问题"></a>解决github发现的依赖稳定性问题</h3><p>注意到推送远程仓库后，github有提示一些依赖包需要更新，旧的可能有安全威胁，所以按照github的建议更新了依赖包：<br><a href="https://sm.ms/image/ltorJI7sbPufejX" target="_blank"><img src="https://i.loli.net/2020/04/23/ltorJI7sbPufejX.png" ></a>嗯，问题依然没有解决<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span></p>
+<h3 id="百度网站检测"><a href="#百度网站检测" class="headerlink" title="百度网站检测"></a>百度网站检测</h3><p>继续细品报错<span class="label danger">由于存在网路安全性问题，该站点已停止访问</span>，虽然我坚信自己是个遵纪守法的好公民，没有在博客上发布什么黄赌毒信息，不过还是在百度站点管理平台检测了一下，期待能报个啥错，给我更多的信息：<br><a href="https://sm.ms/image/21VDnev6QHLpJIy" target="_blank"><img src="https://i.loli.net/2020/04/23/21VDnev6QHLpJIy.png" width="500" height="500"></a>然而结果出乎意料的优秀，也没有检测出啥恶意内容。hummm，度娘为我正身了<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<h3 id="清理浏览器缓存"><a href="#清理浏览器缓存" class="headerlink" title="清理浏览器缓存"></a>清理浏览器缓存</h3><p>上边这么多尝试，都没有解决问题，我突然想到一个平时工作中经常用到的操作：<span class="label default">清缓存</span>，然后我终于看不到报错信息了，出现了一个相对熟悉的页面，而且有更多信息：<br><a href="https://sm.ms/image/v9PIwB1WMfQNymh" target="_blank"><img src="https://i.loli.net/2020/04/23/v9PIwB1WMfQNymh.png" width="550" height="500"></a>值得注意的是这段话：</p>
+<blockquote>
+<p>This server could not prove that it is jmyblog.top; its security certificate is from<br>coding.me. This may be caused by a misconfiguration or an attacker intercepting your<br>connection.</p>
+</blockquote>
+<p>3个关键字：<strong>安全证书</strong> <strong>配置错误</strong> <strong>外部攻击</strong><br>于是我看了下现在的证书：<br><a href="https://sm.ms/image/kliwBJ8GtSrb1eR" target="_blank"><img src="https://i.loli.net/2020/04/23/kliwBJ8GtSrb1eR.png" width="450" height="400"></a><br>虽然我很想假装自己能看懂，但我真的看不懂。外部攻击就更是一头雾水了，稍微有点了解的是<strong>配置错误</strong>这个关键字，而且提到了coding.me。这个我是知道的，因为博客是同时部署在github和coding上的。所以我决定去探索下。</p>
+<h3 id="探索Coding和Github"><a href="#探索Coding和Github" class="headerlink" title="探索Coding和Github"></a>探索Coding和Github</h3><p>进入coding之后，我发现它的登录页面和代码远程库的url有变化，所以在本地改了推送的远程仓库。再推送一遍没报错，但网站依然无法访问。<br>然后我看了Coding的代码库静态网站配置，发现了一个奇怪的网站访问地址：<br><a href="https://sm.ms/image/MOt6ZUfaEBDjvLW" target="_blank"><img src="https://i.loli.net/2020/04/23/MOt6ZUfaEBDjvLW.png" ></a><br>然后尝试打开：<br><a href="https://sm.ms/image/vZX9Ow1RbpmFWBo" target="_blank"><img src="https://i.loli.net/2020/04/23/vZX9Ow1RbpmFWBo.png" ></a><br>简直是喜大普奔<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">&#x1f603;</span>，是可以访问的。这下心里的石头落下了一点，最起码有一个在线访问的url了。然而我记得之前coding静态网站的url和github一样，都是代码库的名字，当时域名解析的时候设置的记录值也是这个，但现在变了，解析当然就不生效了，所以要改域名解析设置。<br>但还是先看看github pages可不可以访问，因为之前配置了custom domain，而现在这个域名是不可访问的：<br><a href="https://sm.ms/image/FKD4f13LOMao9Wk" target="_blank"><img src="https://i.loli.net/2020/04/23/FKD4f13LOMao9Wk.png" ></a><br>所以去掉custom domain，网站内容部署到github pages本来的url：<br><a href="https://sm.ms/image/KcJ4ilrSbXLqYsy" target="_blank"><img src="https://i.loli.net/2020/04/23/KcJ4ilrSbXLqYsy.png" ></a><br>然后再看看部署log，也没问题：<br><a href="https://sm.ms/image/Ualby2E5DmYZxKX" target="_blank"><img src="https://i.loli.net/2020/04/23/Ualby2E5DmYZxKX.png" ></a><br>也是可以访问的:<br><a href="https://sm.ms/image/C1UnyFq5ftrZeGb" target="_blank"><img src="https://i.loli.net/2020/04/23/C1UnyFq5ftrZeGb.png" ></a><br>好了，既然现在有两个线上的url都可以访问网站，那么就可以去改域名解析设置了，让这两个url都可以指向jmyblog.top这个域名，理论上问题应该就解决了。</p>
+<h2 id="成功解决"><a href="#成功解决" class="headerlink" title="成功解决"></a>成功解决</h2><h3 id="域名绑定coding"><a href="#域名绑定coding" class="headerlink" title="域名绑定coding"></a>域名绑定coding</h3><p><a href="https://sm.ms/image/Skv28M5PJiC1Fwo" target="_blank"><img src="https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png" ></a></p>
+<p>首先按照上图中coding静态网站中自定义域名的设置要求，添加下面的CNAME记录，并把之前记录值为coding.me的解析删掉：<br><a href="https://sm.ms/image/KWhtRFA6QPTm4SM" target="_blank"><img src="https://i.loli.net/2020/04/23/KWhtRFA6QPTm4SM.png" ></a><br>然后输入绑定域名的时候，要求再添加一条TXT记录(这个忘记截提示信息的图了)，其中主机记录和记录值都是在提示信息给出的：<br><a href="https://sm.ms/image/iz1IX9s2cxyLm8D" target="_blank"><img src="https://i.loli.net/2020/04/23/iz1IX9s2cxyLm8D.png" ></a><br>并且成功在coding开启了自定义域名的强制Https访问，一开始SSL证书申请失败，后来按照网上的解决方案去域名解析把GitHub解析暂停就申请成功了。<br>有了上面这两条解析，jmyblog.top已经可以访问了，但是只绑定了coding静态网站，我们还需要绑定github静态网站，实现双部署。</p>
+<h3 id="域名绑定github"><a href="#域名绑定github" class="headerlink" title="域名绑定github"></a>域名绑定github</h3><p>和最开始搭建网站的步骤一样，添加一条记录值为github.io的CNAME记录就好：<br><a href="https://sm.ms/image/ZpEigb5wcH1CNFQ" target="_blank"><img src="https://i.loli.net/2020/04/23/ZpEigb5wcH1CNFQ.png" ></a><br>然后去github pages设置中，加上custom domain，并开启强制Https访问：<br><a href="https://sm.ms/image/3IaVCNKXE7WlP49" target="_blank"><img src="https://i.loli.net/2020/04/23/3IaVCNKXE7WlP49.png" ></a><br>至此，coding pages和github pages都指向jmyblog.top这个域名了，而且都开启了强制Https，现在jmyblog.top已经可以用https访问了，也算是因祸得福<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br><a href="https://sm.ms/image/9kO3dHV2iwbnRhe" target="_blank"><img src="https://i.loli.net/2020/04/23/9kO3dHV2iwbnRhe.png" ></a><br>而且现在的证书：<br><a href="https://sm.ms/image/O51DPZxStkeszNv" target="_blank"><img src="https://i.loli.net/2020/04/23/O51DPZxStkeszNv.png" width="450" height="350"></a><br>嗯，还是看不懂，不过问题解决了就行。<br>用百度站点工具再做一次Https认证，验证成功：<br><a href="https://sm.ms/image/8ucHwDNBkGzvEXZ" target="_blank"><img src="https://i.loli.net/2020/04/23/8ucHwDNBkGzvEXZ.png" ></a><br>嗯，这下Https是真的了。<br>本站点最终的域名解析列表：<br><a href="https://sm.ms/image/RPNsrEyMSUV9uD1" target="_blank"><img src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png" ></a></p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1680,6 +1032,176 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       <tags>
         <tag>渗透测试</tag>
         <tag>OWASP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebUI自动化测试框架Demo(下)</title>
+    <url>/WebUI-AutoTest-Demo-3/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png" >
+
+<div class="note info">
+            <p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
+          </div>
+
+<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)</code></pre><p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
+<ul>
+<li>提交代码</li>
+<li>执行第一轮测试(单元/集成测试)</li>
+<li>代码合到master</li>
+</ul>
+<pre><code>持续交付(Continuous Delivery)</code></pre><p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
+<ul>
+<li>代码集成完成</li>
+<li>构建项目，将源码转换为可以运行的实际代码</li>
+<li>执行第二轮测试(端到端/手工测试)</li>
+</ul>
+<pre><code>持续部署(Continuous Deployment)</code></pre><p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
+<ul>
+<li>持续交付流程完成</li>
+<li>利用工具自动部署到生产环境</li>
+</ul>
+<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
+<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
+<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+</blockquote>
+<p>完成后的效果，小太阳标志：<br><img src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png" ><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<blockquote>
+<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
+</blockquote>
+<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
+<blockquote>
+<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
+</blockquote>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。</code></pre><p>完成后的效果，绿色的pipeline：<br><img src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png" ></p>
+<h3 id="下载GoCD-Server-amp-Agent"><a href="#下载GoCD-Server-amp-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary">
+            <p>Server和Agent</p><p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p><p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
+          </div>
+
+<p>打开GoCD官网 <a href="https://www.gocd.org/download/#osx" target="_blank" rel="noopener">下载页面</a>, 根据系统下载：<br><img src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png" ><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png" ><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png" ></p>
+<h3 id="启动Server-amp-Agent"><a href="#启动Server-amp-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;bin&#x2F;go-server console</span><br></pre></td></tr></table></figure>
+<p>启动GoCD Server:<br><img src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png" ><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a href="https://localhost:8154" target="_blank" rel="noopener">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png" ><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;bin&#x2F;go-agent console</span><br></pre></td></tr></table></figure>
+<p>启动GoCD Agent:<br><img src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png" ></p>
+<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
+<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：</code></pre><img src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png" >
+首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
+<img src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png" >
+
+
+<pre><code>Material</code></pre><p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
+<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png" ><br>输入Stage名字，这里我设为Test：<br><img src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png" ></p>
+<pre><code>Stage</code></pre><p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
+<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png" ></p>
+<pre><code>Job</code></pre><p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
+<pre><code>Task</code></pre><p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
+<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png" ><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png" ><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380" ><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png" ><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430" ><br>到这里，Pipeline就已经创建好了。</p>
+<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
+<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png" ><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png" ><br>观察console log我们可以理解pipeline的运行流程：</p>
+<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png" ><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png" ><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png" ><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png" ><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png" ><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png" ></p>
+<pre><code>Artifact</code></pre><p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><a href="https://sm.ms/image/mv1zS4twIC7d6G8" target="_blank"><img src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png" ></a><br>运行结束之后，在页面上也可以看到它：<br><img src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png" ></p>
+<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
+<blockquote>
+<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
+</blockquote>
+<p>回到首页，点击Auto的设置按钮：<br><img src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png" ><br><img src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png" ><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png" ><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
+<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png" ></p>
+<p>保存，然后再次运行Pipeline:<br><img src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png" ></p>
+<p>在Artifacts Tab可以看到testoutput文件夹：<br><img src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png" ><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png" ></p>
+<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png" ><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png" ><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png" ></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+<li><a href="https://devops.phodal.com/home" target="_blank" rel="noopener">DevOps 元素周期表</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html" target="_blank" rel="noopener">阮一峰：CI&amp;CD是什么</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谜一样的测试金字塔</title>
+    <url>/Test-Pyramid/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
+
+<blockquote>
+<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+</blockquote>
+<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
+<blockquote>
+<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
+</blockquote>
+<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
+<li>UI测试</li>
+</ul>
+<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
+<ul>
+<li>端到端测试</li>
+</ul>
+<p>包括针对API和用户界面的端到端测试。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
+<div class="note info">
+            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
+          </div>
+<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
+<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
+<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
+
+<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
+<ul>
+<li>按照测试粒度分层</li>
+<li>层次越高，你写的测试应该越少</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>敏捷</tag>
+        <tag>测试金字塔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站评论回家了</title>
+    <url>/comments-comeback/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
+
+<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info">
+            <p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
+          </div>
+
+<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
+
+<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more" target="_blank" rel="noopener">这篇博客</a>给出的解决办法：</p>
+<div class="note primary">
+            <p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
+          </div>
+
+<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
+
+<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
+<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
+<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>评论系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1795,62 +1317,63 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>十一旅行中的小插曲</title>
-    <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
-    <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
-<a id="more"></a>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
 
-<h2 id="动卧-x1f684"><a href="#动卧-x1f684" class="headerlink" title="动卧 &#x1f684;"></a>动卧 <span class="emoji" alias="bullettrain_side" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">&#x1f684;</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
-<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
-<p>于是国庆第一天，在高铁站看《闯关东》度过<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>。<br><img src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width = "250" height = "300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
-<p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width = "250" height = "300" alt="动卧"></p>
-<p>刚开始只有我一个人，本来都快睡着了。后来上来了一对去南京的中年夫妇，然后。。。我就再也睡不着了。</p>
-<p>记得是大妈先开始的，打呼声虽然有些大，但还能勉强眯会眼。睡在大妈上铺的大叔表示不服，亲自示范给我们啥叫震耳欲聋，振聋发聩<span class="emoji" alias="hear_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8">&#x1f649;</span> 大妈不打呼了，因为她也被吵醒了，整个房间瞬间变成了大叔的主场。。。</p>
-<p>睡在我上铺的兄弟也睡不着了，穿上外套出去了，我知道，他一定是想去静静。也或许他是想出去问问，能不能把之前另一个女生跟他交换的铺位换回来<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<p>我觉得自己有义务提醒大叔控制下自己，于是起身敲大叔的床板，没醒。求救的眼神投向大妈，大妈顿时会意也起身，敲床板。大叔醒了。但显然大叔还没有完全清醒，嘟囔了两句家乡话。两人交谈了几句，大叔转身又睡了。</p>
-<p>声音虽然小了下来，但我知道，这只是暴风雨前的宁静。睡在我上铺的兄弟回来了，不知他是否意识到房间里的声音小了很多<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span>。</p>
-<p>果然，不一会，打鼾声又开始了。不幸的是，我没有赶在这之前睡着。</p>
-<p>南京站到了，大叔大妈终于下车了。但这时离苏州也只有不到一小时的车程，看来睡觉是不可能了。天将降大任于斯人也，必将苦其心志。苦就苦吧<span class="emoji" alias="confounded" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f616.png?v8">&#x1f616;</span>。</p>
-<p>5点20分，苏州到了，我也下车了。</p>
-<h2 id="看电影-x1f3a5"><a href="#看电影-x1f3a5" class="headerlink" title="看电影 &#x1f3a5;"></a>看电影 <span class="emoji" alias="movie_camera" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png?v8">&#x1f3a5;</span></h2><p>既然是国庆，那咱也该应个景。其他电影不说，《我和我的祖国》得看吧，电影虽说得两个多小时，但也安排上了。<br>然后，我眼睛就瞎了<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span> </p>
-<p>最不忍直视的是’白昼流星’这一篇，接宇航员和老大爷死的这两幕，简直尬到了极点。还我的陈飞宇小哥哥!!!<br><img src="https://i.loli.net/2019/10/14/KmAZaWJP5qYk19z.jpg" width="250" height="300" alt="白昼流星">(有多尬大家参考<a href="https://www.zhihu.com/question/348312976/answer/843634337" target="_blank" rel="noopener">这篇回答</a>)</p>
-<p>只能说电影想把剧情和祖国重大事件联系起来的初衷是好的，但联系不上，也不能强制联系啊。。。<br>槽点最少的一篇，当属’回归’篇了。朱一龙简直太帅了吧///<br><img src="https://i.loli.net/2019/10/14/5gD27LwOvRiGcl6.jpg" width="400" height="300" alt="回归"></p>
-<p>至于《中国机长》，据说戴着<a href="https://www.zhihu.com/question/346282105/answer/841583568" target="_blank" rel="noopener">3D眼镜可以看出4D效果</a>，也是槽点满满啊。所以说假期电影，不能盲目从众，爱护眼睛，从我做起。</p>
-<h2 id="拙政园-x1f33f"><a href="#拙政园-x1f33f" class="headerlink" title="拙政园 &#x1f33f;"></a>拙政园 <span class="emoji" alias="herb" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8">&#x1f33f;</span></h2><p>到了苏州，拙政园是必定要去的，原计划到苏州的第二天去，但我低估了国庆节的客流量，只能预定第三天的票了。</p>
-<p>于是，第三天早上十点半，和家人一起兴致勃勃的到了拙政园景区，还没到门口，我们就傻眼了。这哪是看景，这分明是看人嘛 <span class="emoji" alias="weary" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f629.png?v8">&#x1f629;</span> 门口早就拍好了二百米的长队。但我有点疑惑，因为拙政园的门票，在网上是按入园时间段订票的，我预订了10点半到11点半的票。这才刚刚10点半，没道理有这么多人。跟保安小哥沟通后，我们得到了答案。</p>
-<p>原来，网上所谓的‘入园时间’不过是个摆设。按照常理，如果预定的是9点半到10点半的入园票，那么10点半以后才来，票应该是作废的。然而并不是，只要预订了今天的票，今天内任何时间段都可以入园，大家都想早点去，在里面多呆点时间，当然会有这么多人了。我心里有点气愤，质问保安小哥那为什么要按时间段预定票？小哥只说他们只负责维持秩序，订票规则他也不清楚<span class="emoji" alias="flushed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f633.png?v8">&#x1f633;</span></p>
-<p>尽管心里好气，但已经到了，总不能又折回去，所以只好从队伍的最后边开始排队。后面有人打电话投诉，火气很大。嗯，我很佛系了<span class="emoji" alias="expressionless" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f611.png?v8">&#x1f611;</span></p>
-<p>排队这件事，精髓不在于排在你前边的人变少，而在于排在你后边的人越来越多，这样心里就会有一种莫名的满足感。半小时后，终于排到了最前面，下一波就可以进去了。后面一个插队进来的北京大叔，说山东人素质不好，还插队，只能在心里默默鄙视一下，五十步笑百步，彼此彼此罢了。</p>
-<p>终于入园了，然而此刻我已经完全没了游玩的心情，只想走马观花看一遍林子，然后就离开。然而现实连这个机会都不肯给我。入园之后，我才明白‘看人’这个词的含义。尽管园子已经足够大，但游玩的的人更多，进去之后完全没有下脚的地方。整个园林像极了一座围城，里面的人想出去，外边的人想进来。过了一会，竟然下起雨来，找了个满是人的亭子避了会雨，想着这么大的林子，古时候住在里面的人该多有钱。</p>
-<p>转悠了一会，想去看看园林博物馆，于是跟着路标出去，越走越觉得不对劲。转悠出去才发现再也进不去了，博物馆呢？！完全没看着，我们就这样被忽悠出去了<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span> 这时候，天又下起了大雨，没有伞的我们就像一群逃兵一样，匆忙打了车逃离了这个[围城]，围城外，旅游大巴还在源源不断的向城里开去。</p>
-<p>放一张[走马观花]的时候，拍的一张园林照。听解说员介绍(偷听别人的解说员说)，右侧的亭子是按照[神龙见首不见尾]的意境设计的：<center><img src="https://i.loli.net/2019/10/14/Wyamv3ucXGQ5ITA.jpg" width="550" height="400" alt="园林" ></center></p>
-<h2 id="商务座-x1f4ba"><a href="#商务座-x1f4ba" class="headerlink" title="商务座 &#x1f4ba;"></a>商务座 <span class="emoji" alias="seat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ba.png?v8">&#x1f4ba;</span></h2><p>由于第一天折腾改签的时候，手滑把回程的高铁票给退了(我真是个天才<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span>)。所以只能订从上海回去的机票，从苏州去上海，还要买高铁票。</p>
-<p>开始是没有订商务座的，买的二等座。反正也就坐20多分钟，不讲究。但为啥后来又成了商务座呢？</p>
-<p>没错，我又没赶上高铁<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">&#x1f494;</span> hummm, 或许苏州这个地方跟我的体质相冲。</p>
-<p>事情是这样的，吸取了第一天的教训，这次时间很充裕。买了[苏州北站]去[上海虹桥]的高铁，但我却在苏州站取了票，进站的时候刷不进去了，问了旁边的服务人员，她瞟了我一眼，翻着白眼，视线看着前方说[这里是苏州火车站，高铁站是苏州北站]。我才明白搞错了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span>。。。来不及细细品味她鄙夷的表情。我又转地铁去北站，但时间已经来不及了。到了苏州北站，检了票进去(过期的票)。万幸一个半小时后，又有一趟高铁，但只有商务座了。没有任何迟疑买了票。本来想体验下商务接待区，但服务人员已经下班了，所以又坐在高铁站看《闯关东》。。。</p>
-<p>嗯，我也觉得我当时可能智商不在线。</p>
-<p>第一次坐商务座，服务很到位。送了瓶水，还送了盒月饼。座位也是电动调节的，很宽敞，没有拍照<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></p>
-<h2 id="找酒店-x1f3e8"><a href="#找酒店-x1f3e8" class="headerlink" title="找酒店 &#x1f3e8;"></a>找酒店 <span class="emoji" alias="hotel" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e8.png?v8">&#x1f3e8;</span></h2><p>历经万难出了高铁站，因为早在机场旁边预订了汉庭，所以叫了辆滴滴开过去(3公里30块你敢信？）。本来以为今日份的suffer已经结束了，万万没想到老天爷又给我安排了一劫<span class="emoji" alias="worried" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8">&#x1f61f;</span></p>
-<p>下车后，拿着行李箱，有点懵。因为四周并没有汉庭的牌子，往后边走了一会。发现了一家汉庭，心想肯定就是这家了，拉着行李箱我就过去了。到了前台，出示预订信息，接待的小姐姐对我说，我预订的不是这家，是另一家。我有点方<span class="emoji" alias="no_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f636.png?v8">&#x1f636;</span>，这不是百度地图导航的吗？但还是拖着行李箱走了。</p>
-<p>打了预订酒店电话，我描述了一下自己的位置，接电话的小哥说让我看见桥，往前走。5分钟后，果然又看见了一家汉庭。</p>
-<p>进去之后，人还蛮多的，等了好久。到了柜台，我又出示了预订信息，前台小姐姐对我说，我预订的依然不是这家，是另一家。我真的快哭了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span>。再次打电话过去，小哥也对我有点无语。叹了口气，说我走了相反的方向，让我顺着立交桥往下走，桥下就是。</p>
-<p>挂了电话，我又拉着行李箱往回走。大晚上的，四下无人，强悍如我也不禁心里发虚。一边拿着手机假装打电话一边往桥下走。在桥下又看到了一家汉庭。进店之后，刚才打电话的小哥好像也认出了我，说没错，就是这家店。我终于找到了酒店<span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span></p>
-<p>Checkin之后让小哥看下班车预订信息，之前已经预定好了最早的一班，想再次确认。小哥一脸狐疑的看着我，估计心里在想，像我这样脑子断线的人，应该不会想到要提前预订班车吧。当我指着预定表里说，[这行就是我]，小哥才相信。</p>
-<p>后来我就明白了，不到1千米的距离，有三家汉庭。然后百度地图给我定位到了酒店停车场，就走错了。也是自己一时着急没看清楚。</p>
-<h2 id="坐班车-x1f68c"><a href="#坐班车-x1f68c" class="headerlink" title="坐班车 &#x1f68c;"></a>坐班车 <span class="emoji" alias="bus" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f68c.png?v8">&#x1f68c;</span></h2><p>晚上睡了5个小时，然后就起来了，没误班车我也觉着是个奇迹<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>，估计是智商归位了吧。</p>
-<p>在前台等了几分钟，车就来了。找了个比较舒服的坐，等着出发。然后，又一出小闹剧开始了。</p>
-<p>在车上坐了会儿我就觉着不对，因为人有点多。按理说大家都是预订的，应该人数刚好才对。很显然，有些人没有预订也上车了。开始大家相安无事，没有拆穿。几分钟后，师傅上车了，发现人数不对，就说[没有预订的人下车坐下一班吧，这样超载的话车也开不了]。话毕，车内没人说话，也没人动作。气氛变得有些微妙。</p>
-<p>僵持了几分钟，还是没人下车。但车上的人坐不住了，前边有个小哥说自己七点的航班，再不走就来不及了，希望大家互相理解，自觉下车。嗯，很合情合理。然而话毕，依旧没人动作。我也纳闷究竟什么人，脸皮能这么厚。环顾车内，发现一对中年夫妇，脸上表情不太自然。</p>
-<p>车上发牢骚的人越来越多。有说自己赶不上航班的，有说为什么不能自觉下车的，好像每个人都有预订一样，互相指责，千姿百态。我心里也有点着急。师傅说[实在不行就拿预定表对信息，但这样被揪出来，大家面子上也不好看。]，然而还是没人下车。没办法，大家说那就拿表对吧。</p>
-<p>师傅拿表过来了，那对中年夫妇终于坐不住了，嘴里辩驳了几句，下了车。随后，又有一些人下了车。大家都用鄙夷的眼神看着那些下车的人，好像这样能把他们看穿。车开了，透过车窗，我看到刚刚下车的那对夫妇就好像什么也没发生一样，有说有笑<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span></p>
-<h2 id="结语-x1f33b"><a href="#结语-x1f33b" class="headerlink" title="结语 &#x1f33b;"></a>结语 <span class="emoji" alias="sunflower" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33b.png?v8">&#x1f33b;</span></h2><p>每个人在旅行的过程中，都会有或好或坏的经历。重要的是保持积极向上的心态，乐观看待一切Love&amp;Peace <span class="emoji" alias="heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png?v8">&#x2764;</span></p>
-<center><img src="https://i.loli.net/2019/10/15/c8bBHQYPEr6ZThd.jpg" width="300" height="300" alt="Love&Peace"></center>]]></content>
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<span class="label success">绿色</span>是我目前在做的，<span class="label warning">黄色</span>是在实践但没有深入了解的，<span class="label danger">红色</span>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <span class="label success">测试金字塔</span>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><span class="label success">冒烟测试</span>：check主要功能</li>
+<li><span class="label success">功能测试</span>：自动化case覆盖功能</li>
+<li><span class="label danger">验收测试</span>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><span class="label danger">性能测试</span>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过
+
+</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">&#x1f609;</span></p>
+<p><span id="inline-toc">1.</span> <span class="label success">UI和业务流程变更导致自动化测试代码不可用</span></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <span class="label danger">UI自动化测试只能模拟人工</span></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default">
+            <ul><li><span class="label success">传统自动化测试</span>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li><li><span class="label danger">自动探索测试</span>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li><li><span class="label danger">codeless方向及智能生成测试用例方向</span>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li></ul>
+          </div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <span class="label success">核心用例自动化覆盖</span><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <span class="label success">基础回归自动化覆盖</span><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <span class="label success">新功能手工测试</span><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <span class="label warning">了解待测产品和平台</span><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <span class="label warning">精通好的测试框架</span><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <span class="label warning">掌握一些自动化测试代码编写技巧和关键点</span><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><span class="label warning">Web应用自动化</span>：Selenium</li>
+<li><span class="label danger">App手机应用自动化</span>：Appium</li>
+<li><span class="label danger">PC端的应用的GUI自动化</span>：Unkown</li>
+<li><span class="label danger">微信小程序自动化</span>：App+Web测试技术的外延形态</li>
+<li><span class="label danger">智能设备自动化</span>：Unknown
+
+</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><span class="label danger">Android原生Monkey</span></li>
+<li><span class="label danger">百度 SmartMonkey</span></li>
+<li><span class="label danger">腾讯 NewMonkey</span></li>
+<li><span class="label danger">阿里 Macaca 的 NoSmoke</span></li>
+<li><span class="label danger">Google出品的 AppCrawler</span>
+
+</li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info">
+            <p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span></p>
+          </div>]]></content>
       <categories>
-        <category>旅行游记</category>
+        <category>学习小记</category>
       </categories>
       <tags>
-        <tag>苏州</tag>
-        <tag>旅行</tag>
+        <tag>自动化测试</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2010,6 +1533,519 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>关于闰年，你不知道的那些事</title>
+    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+<a id="more"></a>
+
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<ul>
+<li>整除但4不能整除100</li>
+<li>整除100又能整除400</li>
+</ul>
+<blockquote>
+<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
+</blockquote>
+<hr>
+<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
+<p>那么具体是怎么弥补的呢？</p>
+<blockquote>
+<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
+</blockquote>
+<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
+<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
+<blockquote>
+<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
+</blockquote>
+<p>那这3个闰年怎么少呢？</p>
+<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<ul>
+<li>2000/400=5</li>
+<li>2100/400=5.25</li>
+<li>2200/400=5.5</li>
+<li>2300/400=5.75</li>
+<li>2400/400=6</li>
+</ul>
+<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
+<p>你明白了吗？</p>
+<hr>
+<p>当然，根据规则，我们就可以编写代码判断了：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>闰年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java类中的代码块执行顺序</title>
+    <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
+    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
+<a id="more"></a>
+
+<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请写出上述代码的输出，看完本文你就会有答案。</p>
+<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
+<ul>
+<li>普通代码块：定义在类的方法中的代码块。</li>
+<li>构造块：定义在类中的代码块（无修饰符）。</li>
+<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
+<li>同步代码块（与多线程有关，本文不涉及）</li>
+</ul>
+<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>执行结果：</strong></p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
+<p><strong>结论：</strong></p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
+<p><strong>其中：</strong></p>
+<ul>
+<li>主类静态块优于主方法执行。</li>
+<li>无论生成多少类对象，静态块只执行一次。</li>
+<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
+</ul>
+<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
+<blockquote>
+<p>为了方便观察，对代码改动如下：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>答案在这里：</p>
+<p><img src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敏捷开发与测试</title>
+    <url>/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
+<a id="more"></a>
+
+<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
+<hr>
+<blockquote>
+<p>接下来我将从3个方面：What?（什么是敏捷开发）&amp;Why（为什么要实行敏捷开发）&amp;How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
+</blockquote>
+<h1 id="What"><a href="#What" class="headerlink" title="What?"></a>What?</h1><h2 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h2><p>简单来说，敏捷开发是一个<strong>以用户为中心、客户需求为导向</strong>的开发过程。强调客户合作、响应需求变化。是一种<strong>迭代式、增量式</strong>的开发模式。主要有以下特点：</p>
+<ul>
+<li>依赖客户参与</li>
+<li>测试驱动开发（TDD）</li>
+<li>开发周期短</li>
+</ul>
+<h2 id="敏捷测试"><a href="#敏捷测试" class="headerlink" title="敏捷测试"></a>敏捷测试</h2><p>对应敏捷开发模式，敏捷测试要求每个人都参与到测试过程中，所以需要团队人员之间进行大量的沟通与协作。</p>
+<ul>
+<li>客户：定义用例和程序属性参与验收测试</li>
+<li>开发和测试：共同打造可以进行功能自动化的测试配件</li>
+</ul>
+<p>与传统测试过程相比，敏捷测试主要有以下特征：</p>
+<ul>
+<li>测试并不是一个独立的阶段，而是和开发过程紧密联系并<strong>驱动开发</strong>（TDD）。</li>
+<li>开发者先创建<strong>单元测试</strong>用例（失败验证测试），然后实现软件单元代码。</li>
+<li>敏捷测试依赖于<strong>自动化测试</strong>。</li>
+<li>测试者要通过持续的测试反馈推动项目前行，并<strong>帮助开发者修复bug</strong>。</li>
+</ul>
+<hr>
+<h1 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h1><blockquote>
+<p>与传统软件开发模式相比，敏捷开发把客户的参与作为关键环节。这样引入了灵活性，提高客户满意度。</p>
+</blockquote>
+<p>如今的客户总是需要能立即发布的高质量应用产品，使得传统开发模式不能适应这种激烈的市场竞争环境。所以大多数企业更青睐像敏捷开发一般，轻量化、快速的开发方法。</p>
+<hr>
+<h1 id="How"><a href="#How" class="headerlink" title="How?"></a>How?</h1><p>事实上，敏捷开发方法有很多种，比如：功能驱动开发（FDD）、开放统一过程等等。但最流行的是<strong>极限编程（XP）</strong>开发方法和<strong>Scrum（进度跟踪）</strong>项目管理方法。</p>
+<blockquote>
+<p><strong>XP</strong>是一种迭代式、增量式的开发模式，非常强调单元测试和验收测试，是现在最著名的敏捷方法。<br><strong>Scrum</strong>是一种迭代式、增量式的项目管理方法，适用于所有的敏捷方法，用来度量开发速度和进度。两者相辅相成，形成了现今最流行的敏捷开发模式。</p>
+</blockquote>
+<h2 id="XP编程"><a href="#XP编程" class="headerlink" title="XP编程"></a>XP编程</h2><p>面向对象的编程语言如Java/C#，都含有全功能的API，所以可以利用其迅速实现大型复杂应用。但正因如此，应用程序的质量经常得不到保证。</p>
+<blockquote>
+<p>XP编程的目的就是<strong>短时间</strong>开发<strong>高质量</strong>的应用程序。所以，XP方法将主要精力集中在测试上，在产品设计阶段之后，必须首先生成单元测试用例，然后才编写代码通过测试。</p>
+</blockquote>
+<p>XP开发模型用12个核心实践来驱动该过程：</p>
+<ul>
+<li>NO.1：需求分析（开发、客户、产品均参与）</li>
+<li>NO.2：小规模、递增发布（增加实在/可增值的新功能，频繁发布新版本）</li>
+<li>NO.3：系统隐喻（编程小组确认开发规则）</li>
+<li>NO.4：简要设计（实现简要设计，通过单元测试，不需重复设计，只要不停实现）</li>
+<li>NO.5：连续测试（编写模块之前先生成单元测试用例，模块在通过单元测试后才算完成，程序在通过所有单元测试和验收测试后才算结束）</li>
+<li>NO.6：重构（清理调整代码库，任何重构之后需重新进行所有单元测试）</li>
+<li>NO.7：结对编程（两位程序员在同一台机器协同开发代码库，便于对代码实时检查，提高缺陷发生纠正率）</li>
+<li>NO.8：代码的集体所有权（所有代码归全体程序员所有，不存在某一个程序员只开发某一个代码库）</li>
+<li>NO.9：持续集成（变更后的代码在通过单元测试之后将其集成到代码库中）</li>
+<li>NO.10：每周工作40小时（不允许加班，如果每周都全力工作了40个小时，就不需要加班，在版本发布的前一周例外）</li>
+<li>NO.11：客户在现场（编程小组可以随时与客户沟通）</li>
+<li>NO.12：按标准编码（所有的代码需要满足编程小组设计的系统隐喻）</li>
+</ul>
+<h2 id="XP测试"><a href="#XP测试" class="headerlink" title="XP测试"></a>XP测试</h2><blockquote>
+<p>为满足XP方法的流程和思想，XP测试强调连续测试。主要由两种类型的测试组成：<strong>单元测试</strong>和<strong>验收测试</strong>。</p>
+</blockquote>
+<h3 id="XP单元测试"><a href="#XP单元测试" class="headerlink" title="XP单元测试"></a>XP单元测试</h3><p>单元测试是XP测试采用的主要测试方法，具有两条规则：</p>
+<p>1.所有的代码模块在编码开始前必须设计好单元测试用例（最主要的优点在于可以更好理解程序需求，排除混淆）</p>
+<p>2.产品发布之前所有的代码模块必须通过单元测试</p>
+<p>为了迎合项目进度，单元测试通常要用自动化测试套件来减轻单元测试负担，测试套件可以生成测试报告并对程序中出现的缺陷进行分类，帮助修复bug。</p>
+<h3 id="XP验收测试"><a href="#XP验收测试" class="headerlink" title="XP验收测试"></a>XP验收测试</h3><blockquote>
+<p>验收测试是判断应用程序是否满足功能性和易用性及其他需求，在设计阶段，开发人员和客户设计验收测试，由客户执行。</p>
+</blockquote>
+<p>验收测试需注意以下几点：</p>
+<ul>
+<li>同单元测试一样，验收测试也可是自动化的。测试内容为计算/数据等，可用自动化测试；当测试内容为界面布局和颜色等，测试应该是非自动化的。</li>
+<li>与单元测试相同，验收测试过程中发现多个bug时，应对其进行优先级排序，每次bug修正后都要重新执行验收测试。所以验收测试也算是一种回归测试。</li>
+</ul>
+<h2 id="一个完整XP项目的运作流程"><a href="#一个完整XP项目的运作流程" class="headerlink" title="一个完整XP项目的运作流程"></a>一个完整XP项目的运作流程</h2><p>下表给出了一个完整XP项目应进行的流程：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Step1</td>
+<td>程序员与客户进行产品需求分析会议，决定产品使用场景</td>
+</tr>
+<tr>
+<td>Step2</td>
+<td>编程小组进行内部会议，将需求分解为独立的任务，并估计每个任务所需要的时间（StoryPoint）</td>
+</tr>
+<tr>
+<td>Step3</td>
+<td>程序员向客户提交任务清单，并要求客户对任务清单进行优先级排序</td>
+</tr>
+<tr>
+<td>Step4</td>
+<td>编程小组根据程序员具备的能力，将任务分配给对应结对程序员</td>
+</tr>
+<tr>
+<td>Step5</td>
+<td>每对程序员按照程序需求和规格说明，编写相应任务的单元测试用例</td>
+</tr>
+<tr>
+<td>Step6</td>
+<td>每对程序员编写完成通过其单元测试用例的任务代码，期间不断对代码进行修改和重测，并对代码库进行整合和集成</td>
+</tr>
+<tr>
+<td>Step7</td>
+<td>编程小组发布应用程序的一个预览版本，由客户进行验收测试，并通过修改缺陷不断进行回归测试</td>
+</tr>
+<tr>
+<td>Step8</td>
+<td>程序员在验收测试成功的基础上发布产品版本</td>
+</tr>
+</tbody></table>
+<p>其他工作：程序员根据最新经验更新对客户需求的时间估计方式。</p>
+<h2 id="敏捷开发学习网站"><a href="#敏捷开发学习网站" class="headerlink" title="敏捷开发学习网站"></a>敏捷开发学习网站</h2><p><a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1" target="_blank" rel="noopener">Scrum中文网</a><br><a href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf#zoom=100" target="_blank" rel="noopener">Scrum指南</a></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>敏捷测试</tag>
+        <tag>极限编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<a id="more"></a>
+
+<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>未来是星辰大海</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
+<a id="more"></a>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>未来</tag>
+        <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>未来是星辰大海_Part2</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
+    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
+<a id="more"></a>
+
+<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
+<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
+<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
+<p>但是时间长了，问题就开始出现了。</p>
+<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
+<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
+<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
+<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
+<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
+<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
+<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
+<ul>
+<li>笔试</li>
+</ul>
+<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
+<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
+<ul>
+<li>面试</li>
+</ul>
+<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
+<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
+<ul>
+<li>offer</li>
+</ul>
+<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
+<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
+<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
+<ul>
+<li>做毕设</li>
+<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
+<li>拿到驾照</li>
+</ul>
+<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>人生规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试矩阵</title>
+    <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
+<a id="more"></a>
+
+<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
+<h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
+<p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
+<h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
+<p>既然有这么多的测试方法，在实际的测试工作中，我们到底怎么测试呢。像上边说的，测试种类如此繁多，难于理解，所以在测试时也难以沟通。</p>
+</blockquote>
+<p>其实，我们可以从两个维度来理解这些测试方法，并将其应用到实际工作中。</p>
+<p>其中，第一个维度就是测试实现的层次和粒度，说白了就是测哪。是方法，类，还是API？是应用、系统、还是整个平台？</p>
+<p>而我们常说的性能测试，功能测试，安全测试等等，都可以归为第二个维度，即测试的目标，也就是测什么，咋测。</p>
+<p>这两个维度结合起来就形成了下边的测试矩阵：</p>
+<table>
+<thead>
+<tr>
+<th align="left">测哪\咋测</th>
+<th align="left">功能测试</th>
+<th align="left">集成测试</th>
+<th align="left">性能测试</th>
+<th align="left">安全测试</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">端到端</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">API</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">类</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">方法</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+</tbody></table>
+<p>有了这样的认识，以后进行测试工作时工作起来就方便多了。我们可以进行“方法级别的功能测试”、“API级别的性能测试”等等。这样，使测试内容变得更加清晰。</p>
+<blockquote>
+<p>事实上，，而常常忽略了第二个维度，即咋测。所以，根据测试矩阵进行测试，可以避免这种问题。在实际测试工作中，大多数情况下都进行的是功能测试</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>递归求解1到100求和</title>
+    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
+    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+<a id="more"></a>
+
+<p><strong>思想：</strong></p>
+<p>思考一下，从1加到100可以分解成：</p>
+<ul>
+<li>1+（2加到100的和）</li>
+<li>1+2+（3加到100的和）</li>
+<li>1+2+3+（4加到100的和）</li>
+<li>……</li>
+</ul>
+<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
+<p>所以，可以编写如下代码：</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> n + count(n - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<a id="more"></a>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十一旅行中的小插曲</title>
+    <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
+    <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
+<a id="more"></a>
+
+<h2 id="动卧-x1f684"><a href="#动卧-x1f684" class="headerlink" title="动卧 &#x1f684;"></a>动卧 <span class="emoji" alias="bullettrain_side" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">&#x1f684;</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
+<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
+<p>于是国庆第一天，在高铁站看《闯关东》度过<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>。<br><img src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width = "250" height = "300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
+<p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width = "250" height = "300" alt="动卧"></p>
+<p>刚开始只有我一个人，本来都快睡着了。后来上来了一对去南京的中年夫妇，然后。。。我就再也睡不着了。</p>
+<p>记得是大妈先开始的，打呼声虽然有些大，但还能勉强眯会眼。睡在大妈上铺的大叔表示不服，亲自示范给我们啥叫震耳欲聋，振聋发聩<span class="emoji" alias="hear_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8">&#x1f649;</span> 大妈不打呼了，因为她也被吵醒了，整个房间瞬间变成了大叔的主场。。。</p>
+<p>睡在我上铺的兄弟也睡不着了，穿上外套出去了，我知道，他一定是想去静静。也或许他是想出去问问，能不能把之前另一个女生跟他交换的铺位换回来<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<p>我觉得自己有义务提醒大叔控制下自己，于是起身敲大叔的床板，没醒。求救的眼神投向大妈，大妈顿时会意也起身，敲床板。大叔醒了。但显然大叔还没有完全清醒，嘟囔了两句家乡话。两人交谈了几句，大叔转身又睡了。</p>
+<p>声音虽然小了下来，但我知道，这只是暴风雨前的宁静。睡在我上铺的兄弟回来了，不知他是否意识到房间里的声音小了很多<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span>。</p>
+<p>果然，不一会，打鼾声又开始了。不幸的是，我没有赶在这之前睡着。</p>
+<p>南京站到了，大叔大妈终于下车了。但这时离苏州也只有不到一小时的车程，看来睡觉是不可能了。天将降大任于斯人也，必将苦其心志。苦就苦吧<span class="emoji" alias="confounded" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f616.png?v8">&#x1f616;</span>。</p>
+<p>5点20分，苏州到了，我也下车了。</p>
+<h2 id="看电影-x1f3a5"><a href="#看电影-x1f3a5" class="headerlink" title="看电影 &#x1f3a5;"></a>看电影 <span class="emoji" alias="movie_camera" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png?v8">&#x1f3a5;</span></h2><p>既然是国庆，那咱也该应个景。其他电影不说，《我和我的祖国》得看吧，电影虽说得两个多小时，但也安排上了。<br>然后，我眼睛就瞎了<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span> </p>
+<p>最不忍直视的是’白昼流星’这一篇，接宇航员和老大爷死的这两幕，简直尬到了极点。还我的陈飞宇小哥哥!!!<br><img src="https://i.loli.net/2019/10/14/KmAZaWJP5qYk19z.jpg" width="250" height="300" alt="白昼流星">(有多尬大家参考<a href="https://www.zhihu.com/question/348312976/answer/843634337" target="_blank" rel="noopener">这篇回答</a>)</p>
+<p>只能说电影想把剧情和祖国重大事件联系起来的初衷是好的，但联系不上，也不能强制联系啊。。。<br>槽点最少的一篇，当属’回归’篇了。朱一龙简直太帅了吧///<br><img src="https://i.loli.net/2019/10/14/5gD27LwOvRiGcl6.jpg" width="400" height="300" alt="回归"></p>
+<p>至于《中国机长》，据说戴着<a href="https://www.zhihu.com/question/346282105/answer/841583568" target="_blank" rel="noopener">3D眼镜可以看出4D效果</a>，也是槽点满满啊。所以说假期电影，不能盲目从众，爱护眼睛，从我做起。</p>
+<h2 id="拙政园-x1f33f"><a href="#拙政园-x1f33f" class="headerlink" title="拙政园 &#x1f33f;"></a>拙政园 <span class="emoji" alias="herb" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8">&#x1f33f;</span></h2><p>到了苏州，拙政园是必定要去的，原计划到苏州的第二天去，但我低估了国庆节的客流量，只能预定第三天的票了。</p>
+<p>于是，第三天早上十点半，和家人一起兴致勃勃的到了拙政园景区，还没到门口，我们就傻眼了。这哪是看景，这分明是看人嘛 <span class="emoji" alias="weary" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f629.png?v8">&#x1f629;</span> 门口早就拍好了二百米的长队。但我有点疑惑，因为拙政园的门票，在网上是按入园时间段订票的，我预订了10点半到11点半的票。这才刚刚10点半，没道理有这么多人。跟保安小哥沟通后，我们得到了答案。</p>
+<p>原来，网上所谓的‘入园时间’不过是个摆设。按照常理，如果预定的是9点半到10点半的入园票，那么10点半以后才来，票应该是作废的。然而并不是，只要预订了今天的票，今天内任何时间段都可以入园，大家都想早点去，在里面多呆点时间，当然会有这么多人了。我心里有点气愤，质问保安小哥那为什么要按时间段预定票？小哥只说他们只负责维持秩序，订票规则他也不清楚<span class="emoji" alias="flushed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f633.png?v8">&#x1f633;</span></p>
+<p>尽管心里好气，但已经到了，总不能又折回去，所以只好从队伍的最后边开始排队。后面有人打电话投诉，火气很大。嗯，我很佛系了<span class="emoji" alias="expressionless" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f611.png?v8">&#x1f611;</span></p>
+<p>排队这件事，精髓不在于排在你前边的人变少，而在于排在你后边的人越来越多，这样心里就会有一种莫名的满足感。半小时后，终于排到了最前面，下一波就可以进去了。后面一个插队进来的北京大叔，说山东人素质不好，还插队，只能在心里默默鄙视一下，五十步笑百步，彼此彼此罢了。</p>
+<p>终于入园了，然而此刻我已经完全没了游玩的心情，只想走马观花看一遍林子，然后就离开。然而现实连这个机会都不肯给我。入园之后，我才明白‘看人’这个词的含义。尽管园子已经足够大，但游玩的的人更多，进去之后完全没有下脚的地方。整个园林像极了一座围城，里面的人想出去，外边的人想进来。过了一会，竟然下起雨来，找了个满是人的亭子避了会雨，想着这么大的林子，古时候住在里面的人该多有钱。</p>
+<p>转悠了一会，想去看看园林博物馆，于是跟着路标出去，越走越觉得不对劲。转悠出去才发现再也进不去了，博物馆呢？！完全没看着，我们就这样被忽悠出去了<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span> 这时候，天又下起了大雨，没有伞的我们就像一群逃兵一样，匆忙打了车逃离了这个[围城]，围城外，旅游大巴还在源源不断的向城里开去。</p>
+<p>放一张[走马观花]的时候，拍的一张园林照。听解说员介绍(偷听别人的解说员说)，右侧的亭子是按照[神龙见首不见尾]的意境设计的：<center><img src="https://i.loli.net/2019/10/14/Wyamv3ucXGQ5ITA.jpg" width="550" height="400" alt="园林" ></center></p>
+<h2 id="商务座-x1f4ba"><a href="#商务座-x1f4ba" class="headerlink" title="商务座 &#x1f4ba;"></a>商务座 <span class="emoji" alias="seat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ba.png?v8">&#x1f4ba;</span></h2><p>由于第一天折腾改签的时候，手滑把回程的高铁票给退了(我真是个天才<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span>)。所以只能订从上海回去的机票，从苏州去上海，还要买高铁票。</p>
+<p>开始是没有订商务座的，买的二等座。反正也就坐20多分钟，不讲究。但为啥后来又成了商务座呢？</p>
+<p>没错，我又没赶上高铁<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">&#x1f494;</span> hummm, 或许苏州这个地方跟我的体质相冲。</p>
+<p>事情是这样的，吸取了第一天的教训，这次时间很充裕。买了[苏州北站]去[上海虹桥]的高铁，但我却在苏州站取了票，进站的时候刷不进去了，问了旁边的服务人员，她瞟了我一眼，翻着白眼，视线看着前方说[这里是苏州火车站，高铁站是苏州北站]。我才明白搞错了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span>。。。来不及细细品味她鄙夷的表情。我又转地铁去北站，但时间已经来不及了。到了苏州北站，检了票进去(过期的票)。万幸一个半小时后，又有一趟高铁，但只有商务座了。没有任何迟疑买了票。本来想体验下商务接待区，但服务人员已经下班了，所以又坐在高铁站看《闯关东》。。。</p>
+<p>嗯，我也觉得我当时可能智商不在线。</p>
+<p>第一次坐商务座，服务很到位。送了瓶水，还送了盒月饼。座位也是电动调节的，很宽敞，没有拍照<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></p>
+<h2 id="找酒店-x1f3e8"><a href="#找酒店-x1f3e8" class="headerlink" title="找酒店 &#x1f3e8;"></a>找酒店 <span class="emoji" alias="hotel" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e8.png?v8">&#x1f3e8;</span></h2><p>历经万难出了高铁站，因为早在机场旁边预订了汉庭，所以叫了辆滴滴开过去(3公里30块你敢信？）。本来以为今日份的suffer已经结束了，万万没想到老天爷又给我安排了一劫<span class="emoji" alias="worried" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8">&#x1f61f;</span></p>
+<p>下车后，拿着行李箱，有点懵。因为四周并没有汉庭的牌子，往后边走了一会。发现了一家汉庭，心想肯定就是这家了，拉着行李箱我就过去了。到了前台，出示预订信息，接待的小姐姐对我说，我预订的不是这家，是另一家。我有点方<span class="emoji" alias="no_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f636.png?v8">&#x1f636;</span>，这不是百度地图导航的吗？但还是拖着行李箱走了。</p>
+<p>打了预订酒店电话，我描述了一下自己的位置，接电话的小哥说让我看见桥，往前走。5分钟后，果然又看见了一家汉庭。</p>
+<p>进去之后，人还蛮多的，等了好久。到了柜台，我又出示了预订信息，前台小姐姐对我说，我预订的依然不是这家，是另一家。我真的快哭了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">&#x1f62d;</span>。再次打电话过去，小哥也对我有点无语。叹了口气，说我走了相反的方向，让我顺着立交桥往下走，桥下就是。</p>
+<p>挂了电话，我又拉着行李箱往回走。大晚上的，四下无人，强悍如我也不禁心里发虚。一边拿着手机假装打电话一边往桥下走。在桥下又看到了一家汉庭。进店之后，刚才打电话的小哥好像也认出了我，说没错，就是这家店。我终于找到了酒店<span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span></p>
+<p>Checkin之后让小哥看下班车预订信息，之前已经预定好了最早的一班，想再次确认。小哥一脸狐疑的看着我，估计心里在想，像我这样脑子断线的人，应该不会想到要提前预订班车吧。当我指着预定表里说，[这行就是我]，小哥才相信。</p>
+<p>后来我就明白了，不到1千米的距离，有三家汉庭。然后百度地图给我定位到了酒店停车场，就走错了。也是自己一时着急没看清楚。</p>
+<h2 id="坐班车-x1f68c"><a href="#坐班车-x1f68c" class="headerlink" title="坐班车 &#x1f68c;"></a>坐班车 <span class="emoji" alias="bus" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f68c.png?v8">&#x1f68c;</span></h2><p>晚上睡了5个小时，然后就起来了，没误班车我也觉着是个奇迹<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>，估计是智商归位了吧。</p>
+<p>在前台等了几分钟，车就来了。找了个比较舒服的坐，等着出发。然后，又一出小闹剧开始了。</p>
+<p>在车上坐了会儿我就觉着不对，因为人有点多。按理说大家都是预订的，应该人数刚好才对。很显然，有些人没有预订也上车了。开始大家相安无事，没有拆穿。几分钟后，师傅上车了，发现人数不对，就说[没有预订的人下车坐下一班吧，这样超载的话车也开不了]。话毕，车内没人说话，也没人动作。气氛变得有些微妙。</p>
+<p>僵持了几分钟，还是没人下车。但车上的人坐不住了，前边有个小哥说自己七点的航班，再不走就来不及了，希望大家互相理解，自觉下车。嗯，很合情合理。然而话毕，依旧没人动作。我也纳闷究竟什么人，脸皮能这么厚。环顾车内，发现一对中年夫妇，脸上表情不太自然。</p>
+<p>车上发牢骚的人越来越多。有说自己赶不上航班的，有说为什么不能自觉下车的，好像每个人都有预订一样，互相指责，千姿百态。我心里也有点着急。师傅说[实在不行就拿预定表对信息，但这样被揪出来，大家面子上也不好看。]，然而还是没人下车。没办法，大家说那就拿表对吧。</p>
+<p>师傅拿表过来了，那对中年夫妇终于坐不住了，嘴里辩驳了几句，下了车。随后，又有一些人下了车。大家都用鄙夷的眼神看着那些下车的人，好像这样能把他们看穿。车开了，透过车窗，我看到刚刚下车的那对夫妇就好像什么也没发生一样，有说有笑<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">&#x1f610;</span></p>
+<h2 id="结语-x1f33b"><a href="#结语-x1f33b" class="headerlink" title="结语 &#x1f33b;"></a>结语 <span class="emoji" alias="sunflower" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33b.png?v8">&#x1f33b;</span></h2><p>每个人在旅行的过程中，都会有或好或坏的经历。重要的是保持积极向上的心态，乐观看待一切Love&amp;Peace <span class="emoji" alias="heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png?v8">&#x2764;</span></p>
+<center><img src="https://i.loli.net/2019/10/15/c8bBHQYPEr6ZThd.jpg" width="300" height="300" alt="Love&Peace"></center>]]></content>
+      <categories>
+        <category>旅行游记</category>
+      </categories>
+      <tags>
+        <tag>苏州</tag>
+        <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -2072,82 +2108,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
-    <content><![CDATA[/* http://james.padolsey.com/javascript/special-scroll-events-for-jquery/ */
-
-(function(){
-    
-    var special = jQuery.event.special,
-        uid1 = "D" + (+new Date()),
-        uid2 = "D" + (+new Date() + 1);
-        
-    special.scrollstart = {
-        setup: function() {
-            
-            var timer,
-                handler =  function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    } else {
-                        evt.type = "scrollstart";
-                        jQuery.event.dispatch.apply(_self, _args);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        timer = null;
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid1, handler);
-            
-        },
-        teardown: function(){
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid1) );
-        }
-    };
-    
-    special.scrollstop = {
-        latency: 300,
-        setup: function() {
-            
-            var timer,
-                    handler = function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        
-                        timer = null;
-                        evt.type = "scrollstop";
-                        jQuery.event.dispatch.apply(_self, _args);
-                        
-                        
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid2, handler);
-            
-        },
-        teardown: function() {
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid2) );
-        }
-    };
-    
-})();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2395,5 +2355,81 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 })(jQuery, window, document);
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
+    <content><![CDATA[/* http://james.padolsey.com/javascript/special-scroll-events-for-jquery/ */
+
+(function(){
+    
+    var special = jQuery.event.special,
+        uid1 = "D" + (+new Date()),
+        uid2 = "D" + (+new Date() + 1);
+        
+    special.scrollstart = {
+        setup: function() {
+            
+            var timer,
+                handler =  function(evt) {
+                    
+                    var _self = this,
+                        _args = arguments;
+                    
+                    if (timer) {
+                        clearTimeout(timer);
+                    } else {
+                        evt.type = "scrollstart";
+                        jQuery.event.dispatch.apply(_self, _args);
+                    }
+                    
+                    timer = setTimeout( function(){
+                        timer = null;
+                    }, special.scrollstop.latency);
+                    
+                };
+            
+            jQuery(this).bind("scroll", handler).data(uid1, handler);
+            
+        },
+        teardown: function(){
+            jQuery(this).unbind( "scroll", jQuery(this).data(uid1) );
+        }
+    };
+    
+    special.scrollstop = {
+        latency: 300,
+        setup: function() {
+            
+            var timer,
+                    handler = function(evt) {
+                    
+                    var _self = this,
+                        _args = arguments;
+                    
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+                    
+                    timer = setTimeout( function(){
+                        
+                        timer = null;
+                        evt.type = "scrollstop";
+                        jQuery.event.dispatch.apply(_self, _args);
+                        
+                        
+                    }, special.scrollstop.latency);
+                    
+                };
+            
+            jQuery(this).bind("scroll", handler).data(uid2, handler);
+            
+        },
+        teardown: function() {
+            jQuery(this).unbind( "scroll", jQuery(this).data(uid2) );
+        }
+    };
+    
+})();]]></content>
   </entry>
 </search>
