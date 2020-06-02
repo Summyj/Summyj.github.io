@@ -224,7 +224,7 @@ Destination就是Server存放测试报告的路径，这里是相对路径。我
 运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：
 <img src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png" >
 
-在Artifacts Tab可以看到testoutput文件夹：
+在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：
 <img src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500">
 图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：
 <img src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png" >
