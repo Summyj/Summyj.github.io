@@ -11,6 +11,7 @@ type: "about"
 # About Me #
 
 {% cq %}
+97年老阿姨:girl:
 ThoughtWorks.QA
 音乐 - 健身 - 美食 - 追剧
 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
@@ -24,5 +25,8 @@ ThoughtWorks.QA
 
 # Join ThoughtWorks #
 
-{% note info %} 想加入TW嘛:wink:, 无论校招社招，需要内推的童鞋请移步 [牛客网内推贴](https://www.nowcoder.com/discuss/225857) 私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟 {% endnote %}
+{% note info %} 
+想加入TW嘛:wink:, 无论校招社招，需要内推的童鞋请移步 [牛客网内推贴](https://www.nowcoder.com/discuss/225857) 私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟。
+博客DaoVoice修复中，所以暂时不能在线联系，牛客网回复频率较慢。
+{% endnote %}
 
