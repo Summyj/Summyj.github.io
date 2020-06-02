@@ -412,6 +412,12 @@ public class AppFriendTest {
 
 在IDEA点击{% label info@code->generate->dependency %}(或者在pom.xml文件里Ctrl+N->Dependency)，打开Maven Artifact Search窗口，这里可以搜索并添加依赖，搜索selenium, 因为我们是用java写代码，所以要加入selenium.java依赖包，选择任一版本：
 <img src="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png" >
+
+>如果怎么都打不开Maven Artifact Search窗口，还可以打开maven [中央仓库](https://mvnrepository.com/) 的网站，首页搜索selenium，选择selenium.java依赖包版本，然后将依赖包代码粘贴到pom文件中：
+<img src="https://i.loli.net/2020/06/02/2pWOkP4cG7TqfKA.png" >
+<img src="https://i.loli.net/2020/06/02/CawP49RQxu3gUhL.png" >
+
+
 之后在pom.xml文件里就可以看到Selenium依赖已经添加了。显示红色因为还没有下载，所以我们要点击页面右上角的Maven小图标下载依赖包:
 <img src="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png" >
 下载完成后就可以看到相应依赖已经添加到项目的Extenral Libraries中了：
