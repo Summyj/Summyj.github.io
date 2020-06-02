@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<a id="more"></a>
-
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
-<ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
-</ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-        <tag>告别拖延</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈自动化测试框架</title>
     <url>/AutoTest-FrameWork/</url>
     <content><![CDATA[<img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" >
@@ -298,6 +268,49 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>20岁光阴不再来</title>
+    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<a id="more"></a>
+
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"></param><param name="allowScriptAccess" value="always"></param><param name="wmode" value="transparent"></param><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowFullScreen="true" wmode="transparent" allowScriptAccess="always"></embed></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
+<ul>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+</ul>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+        <tag>告别拖延</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>站点的SEO优化</title>
     <url>/BlogSEO/</url>
     <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
@@ -417,134 +430,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的一些写作标签</title>
-    <url>/How-to-Write/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
-
-<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
-<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
-</blockquote>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
-<div class="note default">
-            <p>default</p>
-          </div>
-<div class="note primary">
-            <p>primary</p>
-          </div>
-<div class="note success">
-            <p>success</p>
-          </div>
-<div class="note info">
-            <p>info</p>
-          </div>
-<div class="note warning">
-            <p>warning</p>
-          </div>
-<div class="note danger">
-            <p>danger</p>
-          </div>
-
-<p>_config 文件配置关键字：note, 我的配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
-<span class="label default">默认</span>
-<span class="label primary">主要</span>
-<span class="label success">成功</span>
-<span class="label info">信息</span>
-<span class="label warning">警告</span>
-<span class="label danger">危险</span>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
-<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
-
-
-<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
-
-<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
-<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
-<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git学习笔记</title>
     <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
@@ -639,6 +524,43 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       <tags>
         <tag>git</tag>
         <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
       </tags>
   </entry>
   <entry>
@@ -846,6 +768,128 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>我的书架</title>
+    <url>/MyBooks/</url>
+    <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center"><p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
+</blockquote>
+
+<p>书架一角(高效能的书脊因为砸核桃所以有点歪了)：</p>
+<img src="https://i.loli.net/2020/01/06/yEHpwJZg2PmqaAO.jpg" alt="书架一角">
+
+
+<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。</p>
+<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" alt="书架一角" width=200 height=200>
+看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">&#x1f603;</span>
+
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p><span id="inline-toc">1.</span> <strong>测试架构师修炼之道</strong>/刘琛梅/机械工业出版社</p>
+<p>这个世界上有两种QA:</p>
+<ul>
+<li><span class="label success">技术型</span>: 代码能力强，对新技术有狂热追求。未来发展方向一般是测试开发/测试架构师/DevOPs，甚至是全栈工程师。</li>
+<li><span class="label success">业务型</span>: 业务能力强，对业务了如指掌。未来发展方向一般是业务分析师/项目管理师，逐步走管理路线。
+
+</li>
+</ul>
+<p>但这只是侧重点，一个合格的QA是需要两者都基本掌握的。<br>曾经我以为自己是第一种，最近发现智商不允许，毕竟也只工作了不到一年半的时间，所以还在探索自己的方向，都先试试看。<br>这本书就告诉我们怎么从一个普通的QA发展成技术型QA。</p>
+<p><span id="inline-toc">2.</span> <strong>软技能：代码之外的生存指南</strong>/John Z. Sonmez/人民邮电出版社</p>
+<p>大学时候看过的一本书，当时看了三分之一左右，其余的草草翻了下目录简介。<br>书名中虽有 ‘代码’ 两字，其实内容跟代码一点关系也没有。<br>作者从建立个人影响力，职业规划，健康生活等方面给广大程序员们提供了宝贵的建议。<br>总之，很值得一看<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+<p><span id="inline-toc">3.</span> <strong>区块链：领导干部读本</strong>/任仲文/人民日报出版社<br><span id="inline-toc">4.</span> <strong>全程软件测试(第3版)</strong>/人民邮电出版社<br><span id="inline-toc">5.</span> <strong>深度学习</strong>/人民邮件出版社<br><span id="inline-toc">6.</span> <strong>深入敏捷测试—整个敏捷团队的学习之旅</strong>清华大学出版社<br><span id="inline-toc">7.</span> <strong>敏捷软件测试—测试人员与敏捷团队的实践指南</strong>/清华大学出版社</p>
+<p>大学时期看过的一本敏捷测试相关，里面有介绍一些敏捷测试理论如：测试四象限，测试金字塔等等，还有自动化测试，很长姿势的一本书。</p>
+<p><span id="inline-toc">8.</span> <strong>深度工作——如何有效使用每一点脑力</strong>/卡尔.纽波特/江西人民出版社<br><span id="inline-toc">9.</span> <strong>高效能人士的七个习惯</strong>/史蒂芬.科维/中国青年出版社</p>
+<p>这本是大四实习公司发的奖品，前段时间才看完。<br>作者说的对，他就是把一些大家知道但不加重视的生活原则整理成书，比如要事第一，积极主动等等，道理其实咱都明白。<br>还是推荐看，偶尔拿出来看看反思一下自己的生活也是极好的。<br>书里有一些道理我很赞同：</p>
+<div class="note primary">
+            <p>所有的事情，都分为四种：</p><ol><li>重要且紧急：比如上班搬砖，住院开刀</li><li>重要但不紧急： 比如健身，做职业规划</li><li>不重要但紧急：比如开会，接电话</li><li>不重要且不紧急：比如玩手机，刷某音</li></ol>
+          </div>
+<p>我们往往会忽略2， 但经常沉迷于4<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span></p>
+<p><span id="inline-toc">10.</span> <strong>有效管理敏捷团队——快速成为优秀的ScrumMaster</strong>/清华大学出版社<br><span id="inline-toc">11.</span> <strong>转行——发现一个未知的自己</strong>/埃米尼亚.伊瓦拉/机械工业出版社</p>
+<h3 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h3><p><span id="inline-toc">1.</span> <strong>沟通的艺术(看入人里/看出人外)</strong>/北京联合出版公司<br><span id="inline-toc">2.</span> <strong>社会心理学(第11版)</strong>/戴维.迈尔斯/人民邮件出版社<br><span id="inline-toc">3.</span> <strong>思考，快与慢</strong>/丹尼尔.卡尼曼<br><span id="inline-toc">4.</span> <strong>一个人住第5年</strong>/高木直子/北京联合出版公司</p>
+<p>这本书有意思，带着笑看完了。从名字就很吸引我，因为我也是一个人住。<br>作者用漫画的形式诉说自己一个人的生活，有时觉得自由，有时觉得孤独，有时会半夜起来改变家具的位置，是我本人了，真实到让我觉得作者是不是在我家安装了监视器。<br>如果你也一个人住，可以看看。</p>
+<p><span id="inline-toc">5.</span> <strong>墨菲定律</strong>/秋泉<br><span id="inline-toc">6.</span> <strong>局外人</strong>/加缪/江苏凤凰文艺出版社</p>
+<h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p><span id="inline-toc">1.</span> <strong>经济学的思维方式</strong>/保罗·海恩 (Paul Heyne)/机械工业出版社<br><span id="inline-toc">2.</span> <strong>小狗钱钱(两册)</strong>/博多.舍费尔/四川少年儿童出版社</p>
+<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p><span id="inline-toc">1.</span> <strong>中国通史</strong>/吕思勉/陕西师范大学出版社</p>
+<p>快看完了，作者是民国生人，而且做过历史教授，文字不是太白话，看起来有些障碍。好在我比较喜欢啃文言文，这种调调还可以接受，不过睡前看可能会有些催眠。所以还好(我可是高考语文考过130的人<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span>)。<br>书中对史实刻画很生动，提出所谓历史，其实都是文化史，因为文化不同，所以产生政治史。所以书分两篇，上篇政治史，下篇讲文化史。<br>上篇还分析了各个朝代更替衰落的原因，并描述了朝代更迭过程中人民的思想变化，如何从“治天下不如安天下”到“安天下不如与天下安”，和儒家&amp;理学思想对政治的影响，引人深思。<br>作者说：<span class="label info">我们所知道的中国史，相当于一个人活到一百岁，但却只有他最近几个月的记忆，是很少的。</span></p>
+<p><span id="inline-toc">2.</span> <strong>全球通史—从史前史到21世纪(上下两册第7版)</strong>/斯塔夫里阿诺斯/北京大学出版社<br><span id="inline-toc">3.</span> <strong>万历十五年</strong>/黄仁宇/三联书店</p>
+<h3 id="文学"><a href="#文学" class="headerlink" title="文学"></a>文学</h3><p><span id="inline-toc">1.</span> <strong>诗经《风雅颂》合集</strong>/三秦出版社</p>
+<blockquote class="blockquote-center"><p>关关雎鸠，在河之洲。窈窕淑女，君子好逑</p>
+</blockquote>
+<p>上学的时候了那么多诗经里的诗词，也算是看过了吧。不过还想看看里面其它的诗词，品鉴的同时也可避免以后因为误解词句的意思而贻笑大方。<br>还是推荐这版，印刷很用心，看起来很舒适。</p>
+<p><span id="inline-toc">2.</span> <strong>花间集</strong>/赵崇祚/三秦出版社</p>
+<blockquote class="blockquote-center"><p>小山重叠金明灭，鬓云欲度香腮雪。懒起画娥眉，弄妆梳洗迟。照花前后镜，花面交相映。新帖绣罗襦，双双金鹧鸪。</p>
+</blockquote>
+<p>这是电视剧《甄嬛转》里眉庄香消玉殒时的背景音乐，是姚贝娜唱的。当时便觉得很美，后来知道是温庭筠写的。由温庭筠又知道了“花间派”，而后就买了这本。<br>也算是本工具书，这版是彩印，还有一些古代花鸟画和风景图，边赏词边品画，也很舒适。</p>
+<p><span id="inline-toc">3.</span> <strong>纳兰词</strong>/纳兰性德</p>
+<blockquote class="blockquote-center"><p>人生若只如初见，何事秋风悲画扇？等闲变却故人心，却道故人心易变。</p>
+</blockquote>
+<p>纳兰性德其人，才华横溢，出身高贵确不贪恋荣华，潇洒恣意，在妻子去世八年后也随之而去，而立之年就英年早逝。</p>
+<p><span id="inline-toc">4.</span> <strong>爱你就像爱生命</strong>/王小波/译林出版社</p>
+<p>看完了，这不是一封情书，而是一本情书。<br>“你好哇，李银河”是每封情书的开场白，直白又热烈。<br>单身的人还是不要看了(所以我为什么要看<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>)</p>
+<p><span id="inline-toc">5.</span> <strong>古文观止(上下两册)</strong>/吴楚材/浙江教育出版社<br><span id="inline-toc">6.</span> <strong>呐喊</strong>/鲁迅<br><span id="inline-toc">7.</span> <strong>沉默的大多数</strong>/王小波</p>
+<p>大学的时候就看完了，是王小波最著名的杂文。王小波生活在新中国刚成立后最动荡的时期，文革，大跃进，上山下乡都赶上了，所以在杂文里也有很多他的经历。这本杂文合集文字幽默大胆，主要写他对当时中国社会/经济/文化现状的讽刺。</p>
+<p><span id="inline-toc">8.</span> <strong>围城</strong>/钱钟书</p>
+<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">&#x1f494;</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，各种出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
+<p><span id="inline-toc">9.</span> <strong>人间词话</strong>/王国维/中华书局</p>
+<h3 id="社科"><a href="#社科" class="headerlink" title="社科"></a>社科</h3><p><span id="inline-toc">1.</span> <strong>中国地理地图集</strong>/中国地图出版社</p>
+<p>还没看完，其实这是本工具书，因为我一向地理不好。<br>以前是分不清南北，这个毛病在我第一次找房子以为朝东结果朝北后才治好的，但有时也会失灵。<br>现在是随便说某省份和城市，反应不来是南方还是北方，经常被朋友嘲笑，所以还是买本地理书吧。<br>是挺厚的一本书，全彩印，里面详细列着我国各地的地貌，湖泊，气候，风俗等等，还有超简版中国式。称得上一本概括版的百科全书了，图文并茂，看起来也不腻。</p>
+<p><span id="inline-toc">2.</span> <strong>像人类学家一样思考</strong>/约翰.奥莫亨德罗/北京大学出版社</p>
+<h3 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h3><p><span id="inline-toc">1.</span> <strong>救护车到来前，你能做什么？</strong>/贾大成<br><span id="inline-toc">2.</span> <strong>中国居民膳食指南2016</strong>/中国营养学会/人民卫生出版社<br><span id="inline-toc">3.</span> <strong>知己</strong>/徐文兵/海南出版社<br><span id="inline-toc">4.</span> <strong>女人的身体,女人的智慧(新版)</strong>/克里斯蒂安.诺斯鲁普/上海科学普及出版社</p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><blockquote>
+<p>我的买书渠道：因为心理学&amp;理财&amp;工作相关的书都是可以报销的，所以都是在京东自营买的新书，二手书在‘多抓鱼’买。<br>最近发现一个 <a href="http://www.bwsk.com/" target="_blank" rel="noopener">线上网站</a> 看书很方便。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谜一样的测试金字塔</title>
+    <url>/Test-Pyramid/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
+
+<blockquote>
+<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
+</blockquote>
+<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
+<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
+<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
+<blockquote>
+<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
+</blockquote>
+<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
+<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
+<li>UI测试</li>
+</ul>
+<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
+<ul>
+<li>端到端测试</li>
+</ul>
+<p>包括针对API和用户界面的端到端测试。</p>
+<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
+<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
+<div class="note info">
+            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
+          </div>
+<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
+<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
+<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
+
+<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
+<ul>
+<li>按照测试粒度分层</li>
+<li>层次越高，你写的测试应该越少</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>敏捷</tag>
+        <tag>测试金字塔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>渗透测试初识</title>
     <url>/Penetration-Test/</url>
     <content><![CDATA[<p><a href="https://sm.ms/image/e9Yd8ylbkxcJhOE" target="_blank"><img src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg" ></a></p>
@@ -928,128 +972,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>谜一样的测试金字塔</title>
-    <url>/Test-Pyramid/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/30/wVkCrdpXnTN5Pg9.png" alt="题图">
-
-<blockquote>
-<p>作为一个优秀的QA(老脸一红)，最近突然对各种测试相关概念产生了兴趣。比如<strong>BDD</strong>，<strong>测试金字塔</strong>等等。<br>其实这些大佬们提出的概念自然是极好的，但我们知道了这些概念，却无法将它应用到实际工作中，或者应用错了，岂不是辜负了大佬们的分享？对自身也无益。<br>因此，对这些概念我们不仅要知其然，更要知其所以然。不要让这些好理论变成假大空的纸上模型，那今天就来分析一下<span class="label success">“测试金字塔”</span>理论和实际应用<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-</blockquote>
-<h2 id="啥是测试金字塔"><a href="#啥是测试金字塔" class="headerlink" title="啥是测试金字塔"></a>啥是测试金字塔</h2><p>测试金字塔是按照分层测试的理论，将各种测试方法和测试对象分层，用来解决敏捷开发中测什么和怎么测的问题。一般划分为四层：<br><img src="https://i.loli.net/2020/01/02/tsJBZ4Cv6gKRGFo.png" alt="测试金字塔"></p>
-<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><p>根据单元测试测试范围窄，运行速度快，维护方便的特点，把它放在测试金字塔的最底层，所以它的数量和覆盖率也应当是所有测试中最多的。</p>
-<h3 id="服务测试"><a href="#服务测试" class="headerlink" title="服务测试"></a>服务测试</h3><p>第二层，包括集成测试/组件测试/接口测试/契约测试。</p>
-<blockquote>
-<p>大佬说：所有常见的应用都会和一些外部环境做集成（数据库，文件系统，向其他应用发起网络请求）。为了使测试有更好的隔离、运行更快，我们通常不会在编写单元测试时涉及这些外部依赖。不过，这些交互始终是存在的，它们也需要被测试覆盖到。这正是集成测试的用处所在。它们测试的是应用与所有外部依赖的集成。</p>
-</blockquote>
-<p>大佬还说：<span class="label info">服务测试是一个难以掌握的术语，所以很多开发人员完全忽略了这一层。在单页应用框架（如 react，angular，ember.js 等）的时代，UI 测试显然不必位于金字塔的最高层，因为完全可以用这些框架对 UI 进行单元测试。</span></p>
-<h3 id="UI-amp-端到端测试"><a href="#UI-amp-端到端测试" class="headerlink" title="UI&amp;端到端测试"></a>UI&amp;端到端测试</h3><ul>
-<li>UI测试</li>
-</ul>
-<p>就是用户界面测试，有时也可以用某些框架提供的组件来写单元测试代替UI测试，所以UI测试并不等于端到端测试。但主流的UI测试还是用Selenium或者Appium等工具自动化完成的。</p>
-<ul>
-<li>端到端测试</li>
-</ul>
-<p>包括针对API和用户界面的端到端测试。</p>
-<h3 id="手工测试"><a href="#手工测试" class="headerlink" title="手工测试"></a>手工测试</h3><p>第四层，包括必要的手工测试，探索测试和验收测试。有时候，一些功能无法用自动化进行测试，比如页面的美观性可用性等，只能手工测试。而且尽管有单元测试和自动化测试在前，但依然无法保证覆盖所有边缘情况。此时，一些探索测试是非常有必要的。</p>
-<h2 id="一些需要注意的点"><a href="#一些需要注意的点" class="headerlink" title="一些需要注意的点"></a>一些需要注意的点</h2><h3 id="不要纠结各种测试术语"><a href="#不要纠结各种测试术语" class="headerlink" title="不要纠结各种测试术语"></a>不要纠结各种测试术语</h3><p>比如有些人说集成测试就是API测试，UI测试就是端到端测试，有人却说这些概念都是不同的。有人喜欢把集成测试叫组件测试等等。这就会导致同一个东西有很多的名字。容易陷入“你说的黑是什么黑，他说的白是什么白”这种无意义的牛角尖中。这个时候，大佬说的话，就很好<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">&#x1f44f;</span>：</p>
-<div class="note info">
-            <p>各种测试术语并无绝对的对与错。软件开发社区至今也没法给出关于测试术语的明确定义。<br>术语含义本身有模糊性，不必孜孜不倦于其中。你认为的集成测试，可能和其他公司的人的认知也不同，这也没问题。<br>找到适合你和你团队的术语，这就足够了。</p>
-          </div>
-<h3 id="时刻维护金字塔形状，避免测试重复"><a href="#时刻维护金字塔形状，避免测试重复" class="headerlink" title="时刻维护金字塔形状，避免测试重复"></a>时刻维护金字塔形状，避免测试重复</h3><p>首先要避免在金字塔不同层级进行重复测试，因为浪费时间、浪费金钱<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span><br>在高层次测试发现的问题，想办法写低层测试去覆盖它，尽可能把测试往金字塔下层迁移，维护金字塔形状。</p>
-<h3 id="整理测试代码"><a href="#整理测试代码" class="headerlink" title="整理测试代码"></a>整理测试代码</h3><p>重构是个好概念，希望你也知道<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span>。<br>测试代码加tag, 根据功能分支分类。<br>运用Given,When,Then口诀写测试，一些BDD的测试工具就很好用，比如 <a href="https://cucumber.io/" target="_blank" rel="noopener">Cucumber</a>。</p>
-<h2 id="测试金字塔是一成不变的吗"><a href="#测试金字塔是一成不变的吗" class="headerlink" title="测试金字塔是一成不变的吗"></a>测试金字塔是一成不变的吗</h2><span class="label primary">答案是否定的。</span>
-
-<p>在实际项目中，上面的三层金字塔模型也许过于简单和概括化了。但它却足够简洁，上述三种测试方法也确实是目前最主流的。所以，可以根据实际情况建立自己的金字塔模型，比如可以再细分几层，把里面的测试方法改成别的等等。但一定要遵守这两条法则：</p>
-<ul>
-<li>按照测试粒度分层</li>
-<li>层次越高，你写的测试应该越少</li>
-</ul>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://insights.thoughtworks.cn/practical-test-pyramid/" target="_blank" rel="noopener">ThoughtWorks洞见-测试金字塔实战</a></p>
-]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>敏捷</tag>
-        <tag>测试金字塔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的书架</title>
-    <url>/MyBooks/</url>
-    <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center"><p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
-</blockquote>
-
-<p>书架一角(高效能的书脊因为砸核桃所以有点歪了)：</p>
-<img src="https://i.loli.net/2020/01/06/yEHpwJZg2PmqaAO.jpg" alt="书架一角">
-
-
-<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。</p>
-<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" alt="书架一角" width=200 height=200>
-看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">&#x1f603;</span>
-
-<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p><span id="inline-toc">1.</span> <strong>测试架构师修炼之道</strong>/刘琛梅/机械工业出版社</p>
-<p>这个世界上有两种QA:</p>
-<ul>
-<li><span class="label success">技术型</span>: 代码能力强，对新技术有狂热追求。未来发展方向一般是测试开发/测试架构师/DevOPs，甚至是全栈工程师。</li>
-<li><span class="label success">业务型</span>: 业务能力强，对业务了如指掌。未来发展方向一般是业务分析师/项目管理师，逐步走管理路线。
-
-</li>
-</ul>
-<p>但这只是侧重点，一个合格的QA是需要两者都基本掌握的。<br>曾经我以为自己是第一种，最近发现智商不允许，毕竟也只工作了不到一年半的时间，所以还在探索自己的方向，都先试试看。<br>这本书就告诉我们怎么从一个普通的QA发展成技术型QA。</p>
-<p><span id="inline-toc">2.</span> <strong>软技能：代码之外的生存指南</strong>/John Z. Sonmez/人民邮电出版社</p>
-<p>大学时候看过的一本书，当时看了三分之一左右，其余的草草翻了下目录简介。<br>书名中虽有 ‘代码’ 两字，其实内容跟代码一点关系也没有。<br>作者从建立个人影响力，职业规划，健康生活等方面给广大程序员们提供了宝贵的建议。<br>总之，很值得一看<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span></p>
-<p><span id="inline-toc">3.</span> <strong>区块链：领导干部读本</strong>/任仲文/人民日报出版社<br><span id="inline-toc">4.</span> <strong>全程软件测试(第3版)</strong>/人民邮电出版社<br><span id="inline-toc">5.</span> <strong>深度学习</strong>/人民邮件出版社<br><span id="inline-toc">6.</span> <strong>深入敏捷测试—整个敏捷团队的学习之旅</strong>清华大学出版社<br><span id="inline-toc">7.</span> <strong>敏捷软件测试—测试人员与敏捷团队的实践指南</strong>/清华大学出版社</p>
-<p>大学时期看过的一本敏捷测试相关，里面有介绍一些敏捷测试理论如：测试四象限，测试金字塔等等，还有自动化测试，很长姿势的一本书。</p>
-<p><span id="inline-toc">8.</span> <strong>深度工作——如何有效使用每一点脑力</strong>/卡尔.纽波特/江西人民出版社<br><span id="inline-toc">9.</span> <strong>高效能人士的七个习惯</strong>/史蒂芬.科维/中国青年出版社</p>
-<p>这本是大四实习公司发的奖品，前段时间才看完。<br>作者说的对，他就是把一些大家知道但不加重视的生活原则整理成书，比如要事第一，积极主动等等，道理其实咱都明白。<br>还是推荐看，偶尔拿出来看看反思一下自己的生活也是极好的。<br>书里有一些道理我很赞同：</p>
-<div class="note primary">
-            <p>所有的事情，都分为四种：</p><ol><li>重要且紧急：比如上班搬砖，住院开刀</li><li>重要但不紧急： 比如健身，做职业规划</li><li>不重要但紧急：比如开会，接电话</li><li>不重要且不紧急：比如玩手机，刷某音</li></ol>
-          </div>
-<p>我们往往会忽略2， 但经常沉迷于4<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span></p>
-<p><span id="inline-toc">10.</span> <strong>有效管理敏捷团队——快速成为优秀的ScrumMaster</strong>/清华大学出版社<br><span id="inline-toc">11.</span> <strong>转行——发现一个未知的自己</strong>/埃米尼亚.伊瓦拉/机械工业出版社</p>
-<h3 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h3><p><span id="inline-toc">1.</span> <strong>沟通的艺术(看入人里/看出人外)</strong>/北京联合出版公司<br><span id="inline-toc">2.</span> <strong>社会心理学(第11版)</strong>/戴维.迈尔斯/人民邮件出版社<br><span id="inline-toc">3.</span> <strong>思考，快与慢</strong>/丹尼尔.卡尼曼<br><span id="inline-toc">4.</span> <strong>一个人住第5年</strong>/高木直子/北京联合出版公司</p>
-<p>这本书有意思，带着笑看完了。从名字就很吸引我，因为我也是一个人住。<br>作者用漫画的形式诉说自己一个人的生活，有时觉得自由，有时觉得孤独，有时会半夜起来改变家具的位置，是我本人了，真实到让我觉得作者是不是在我家安装了监视器。<br>如果你也一个人住，可以看看。</p>
-<p><span id="inline-toc">5.</span> <strong>墨菲定律</strong>/秋泉<br><span id="inline-toc">6.</span> <strong>局外人</strong>/加缪/江苏凤凰文艺出版社</p>
-<h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p><span id="inline-toc">1.</span> <strong>经济学的思维方式</strong>/保罗·海恩 (Paul Heyne)/机械工业出版社<br><span id="inline-toc">2.</span> <strong>小狗钱钱(两册)</strong>/博多.舍费尔/四川少年儿童出版社</p>
-<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p><span id="inline-toc">1.</span> <strong>中国通史</strong>/吕思勉/陕西师范大学出版社</p>
-<p>快看完了，作者是民国生人，而且做过历史教授，文字不是太白话，看起来有些障碍。好在我比较喜欢啃文言文，这种调调还可以接受，不过睡前看可能会有些催眠。所以还好(我可是高考语文考过130的人<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1f60e;</span>)。<br>书中对史实刻画很生动，提出所谓历史，其实都是文化史，因为文化不同，所以产生政治史。所以书分两篇，上篇政治史，下篇讲文化史。<br>上篇还分析了各个朝代更替衰落的原因，并描述了朝代更迭过程中人民的思想变化，如何从“治天下不如安天下”到“安天下不如与天下安”，和儒家&amp;理学思想对政治的影响，引人深思。<br>作者说：<span class="label info">我们所知道的中国史，相当于一个人活到一百岁，但却只有他最近几个月的记忆，是很少的。</span></p>
-<p><span id="inline-toc">2.</span> <strong>全球通史—从史前史到21世纪(上下两册第7版)</strong>/斯塔夫里阿诺斯/北京大学出版社<br><span id="inline-toc">3.</span> <strong>万历十五年</strong>/黄仁宇/三联书店</p>
-<h3 id="文学"><a href="#文学" class="headerlink" title="文学"></a>文学</h3><p><span id="inline-toc">1.</span> <strong>诗经《风雅颂》合集</strong>/三秦出版社</p>
-<blockquote class="blockquote-center"><p>关关雎鸠，在河之洲。窈窕淑女，君子好逑</p>
-</blockquote>
-<p>上学的时候了那么多诗经里的诗词，也算是看过了吧。不过还想看看里面其它的诗词，品鉴的同时也可避免以后因为误解词句的意思而贻笑大方。<br>还是推荐这版，印刷很用心，看起来很舒适。</p>
-<p><span id="inline-toc">2.</span> <strong>花间集</strong>/赵崇祚/三秦出版社</p>
-<blockquote class="blockquote-center"><p>小山重叠金明灭，鬓云欲度香腮雪。懒起画娥眉，弄妆梳洗迟。照花前后镜，花面交相映。新帖绣罗襦，双双金鹧鸪。</p>
-</blockquote>
-<p>这是电视剧《甄嬛转》里眉庄香消玉殒时的背景音乐，是姚贝娜唱的。当时便觉得很美，后来知道是温庭筠写的。由温庭筠又知道了“花间派”，而后就买了这本。<br>也算是本工具书，这版是彩印，还有一些古代花鸟画和风景图，边赏词边品画，也很舒适。</p>
-<p><span id="inline-toc">3.</span> <strong>纳兰词</strong>/纳兰性德</p>
-<blockquote class="blockquote-center"><p>人生若只如初见，何事秋风悲画扇？等闲变却故人心，却道故人心易变。</p>
-</blockquote>
-<p>纳兰性德其人，才华横溢，出身高贵确不贪恋荣华，潇洒恣意，在妻子去世八年后也随之而去，而立之年就英年早逝。</p>
-<p><span id="inline-toc">4.</span> <strong>爱你就像爱生命</strong>/王小波/译林出版社</p>
-<p>看完了，这不是一封情书，而是一本情书。<br>“你好哇，李银河”是每封情书的开场白，直白又热烈。<br>单身的人还是不要看了(所以我为什么要看<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>)</p>
-<p><span id="inline-toc">5.</span> <strong>古文观止(上下两册)</strong>/吴楚材/浙江教育出版社<br><span id="inline-toc">6.</span> <strong>呐喊</strong>/鲁迅<br><span id="inline-toc">7.</span> <strong>沉默的大多数</strong>/王小波</p>
-<p>大学的时候就看完了，是王小波最著名的杂文。王小波生活在新中国刚成立后最动荡的时期，文革，大跃进，上山下乡都赶上了，所以在杂文里也有很多他的经历。这本杂文合集文字幽默大胆，主要写他对当时中国社会/经济/文化现状的讽刺。</p>
-<p><span id="inline-toc">8.</span> <strong>围城</strong>/钱钟书</p>
-<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">&#x1f494;</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，各种出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
-<p><span id="inline-toc">9.</span> <strong>人间词话</strong>/王国维/中华书局</p>
-<h3 id="社科"><a href="#社科" class="headerlink" title="社科"></a>社科</h3><p><span id="inline-toc">1.</span> <strong>中国地理地图集</strong>/中国地图出版社</p>
-<p>还没看完，其实这是本工具书，因为我一向地理不好。<br>以前是分不清南北，这个毛病在我第一次找房子以为朝东结果朝北后才治好的，但有时也会失灵。<br>现在是随便说某省份和城市，反应不来是南方还是北方，经常被朋友嘲笑，所以还是买本地理书吧。<br>是挺厚的一本书，全彩印，里面详细列着我国各地的地貌，湖泊，气候，风俗等等，还有超简版中国式。称得上一本概括版的百科全书了，图文并茂，看起来也不腻。</p>
-<p><span id="inline-toc">2.</span> <strong>像人类学家一样思考</strong>/约翰.奥莫亨德罗/北京大学出版社</p>
-<h3 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h3><p><span id="inline-toc">1.</span> <strong>救护车到来前，你能做什么？</strong>/贾大成<br><span id="inline-toc">2.</span> <strong>中国居民膳食指南2016</strong>/中国营养学会/人民卫生出版社<br><span id="inline-toc">3.</span> <strong>知己</strong>/徐文兵/海南出版社<br><span id="inline-toc">4.</span> <strong>女人的身体,女人的智慧(新版)</strong>/克里斯蒂安.诺斯鲁普/上海科学普及出版社</p>
-<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><blockquote>
-<p>我的买书渠道：因为心理学&amp;理财&amp;工作相关的书都是可以报销的，所以都是在京东自营买的新书，二手书在‘多抓鱼’买。<br>最近发现一个 <a href="http://www.bwsk.com/" target="_blank" rel="noopener">线上网站</a> 看书很方便。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>好看的书</category>
-      </categories>
-      <tags>
-        <tag>书单</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客被停止访问之后</title>
     <url>/SiteBrokenFix/</url>
     <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span></p>
@@ -1082,115 +1004,81 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>WebUI自动化测试框架Demo(中)</title>
-    <url>/WebUI-AutoTest-Demo-2/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/05/15/hVCWgPazcRirtLj.jpg" >
+    <title>Hexo的一些写作标签</title>
+    <url>/How-to-Write/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
 
-<div class="note info">
-            <p>上篇博客我们已经完成了Demo Project的Set Up, 这篇文章就来简单用TestNG的注解和testng.xml文件，使代码结构更清晰，并实现element object的good practice.</p>
-          </div>
+<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
 
-<h2 id="TestNG介绍"><a href="#TestNG介绍" class="headerlink" title="TestNG介绍"></a>TestNG介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>TestNG是一个开源的自动化测试框架， NG表示Next Generation。 </code></pre><p>TestNG的灵感来源于Junit和Nunit,但其功能优于前面两个框架，例如TestNG支持依赖测试，测试分组等功能，并且它旨在涵盖所有类别的测试：单元测试，功能测试，端到端测试，集成测试等等。</p>
-<h3 id="同类技术对比"><a href="#同类技术对比" class="headerlink" title="同类技术对比"></a>同类技术对比</h3><p>上篇博客中我们使用了Junit的注解@Test来识别测试代码，所以我们来看看TestNG和Junit的对比：<br><img src="https://i.loli.net/2020/05/26/GD37i9WBUE52v8d.png" >可以看到TestNG比Junit支持的功能更多，比如分组测试，参数化测试等等。</p>
-<h3 id="TestNG注解"><a href="#TestNG注解" class="headerlink" title="TestNG注解"></a>TestNG注解</h3><p>TestNG注解可以标记测试方法，设置测试方法运行顺序，将测试分组，还能向方法体传参。</p>
-<p><span id="inline-toc">1.</span> 常见的TestNG注解</p>
-<ul>
-<li>@Test：最基本的注解，用来把方法标记为测试的一部分</li>
-<li>@BeforeTest：在所有测试之前运行</li>
-<li>@AfterTest：在所有测试执行之后运行</li>
-<li>@BeforeClass：在调用当前类之前运行</li>
-<li>@AfterClass：在调用当前类之后运行</li>
-<li>@BeforeMethod：在每个测试方法执行之前都会运行</li>
-<li>@AfterMethod：在每个测试方法执行之后都会运行</li>
-<li>@BeforeGroups：在调用属于该组的第一个测试方法之前运行</li>
-<li>@AfterGroups：在调用属于该组的最后一个测试方法执行之后运行 </li>
-</ul>
-<p><span id="inline-toc">2.</span> 注解运行顺序</p>
-<p>TestNG运行时，顺序是这样的：</p>
-<p>@BeforeSuite-&gt;@BeforeTest-&gt;@BeforeClass-&gt;{@BeforeMethod-&gt;@Test-&gt;@AfterMethod-&gt;@AfterClass-&gt;@AfterTest-&gt;@AfterSuite</p>
-<p>其中{}内的有多少个@Test，就循环执行多少次。</p>
-<p><span id="inline-toc">3.</span> 传参注解</p>
-<p>有时我们想要把测试数据当作参数传入测试方法，然后在别的地方定义参数对应的测试数据，这时就要用到TestNG的传参注解。</p>
-<ul>
-<li>@Parameters：描述如何将参数传递给@Test方法，下文中会用到。</li>
-<li>@DataProvider：当参数类型较为复杂时，@Parameters无法满足需要，此时可以利用@DataProvider传参标记一种方法来提供测试数据。该方法会返回一个Object二维数组或一个Iterator&lt;Object[]&gt;来提供复杂的参数对象。</li>
-</ul>
-<h3 id="TestNG的xml文件"><a href="#TestNG的xml文件" class="headerlink" title="TestNG的xml文件"></a>TestNG的xml文件</h3><blockquote>
-<p>testng.xml是TestNG的配置文件，以xml格式记录测试文件。xml文件里的tags可以帮助理解测试代码的结构，设置参数数据，还可以和注解配合使用决定测试代码的运行规则，包括测试方法的执行顺序，测试方法个数和分组等等。每一个tag都有自己的参数设置。</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
+<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
 </blockquote>
-<p>一个简单的testng.xml结构如下：<br><img src="https://i.loli.net/2020/05/26/Xb75whadgGBYJ1x.png" ></p>
-<pre><code>&lt;suite&gt;&lt;/suite&gt;</code></pre><p>suite是testng.xml文档中最上层的元素，一个xml文件只能有一个suite，它是一个xml文件的根级。<br>suite tag的paraller和thread-count参数共同控制多线程运行，实现并发测试。paraller参数指定并发的级别，比如tests/classes/methods级别。thread-count参数指定线程个数。</p>
-<pre><code>&lt;test&gt;&lt;/test&gt;</code></pre><p>一个suite tag下可以有多个test tag，它是一个测试单元。</p>
-<pre><code>&lt;classes&gt;&lt;/classes&gt;</code></pre><p>方法选择器，要执行的方法写在这里。classes tag下必须包含执行的class，否则不会执行任何内容。</p>
-<pre><code>&lt;parameter&gt;&lt;/parameter&gt;</code></pre><p>提供测试数据，和@Parameters注解配合使用。<br>parameter tag可以声明在suite/tests/classes级别，在内层的parameter tag声明的变量会覆盖在外层声明的同名变量。</p>
-<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>TestNG的一般使用步骤是：</p>
-<ul>
-<li>编写测试业务逻辑代码并添加TestNG的注解</li>
-<li>在TestNG的xml文件配置测试信息(如果有需要的话)</li>
-<li>运行TestNG的xml文件</li>
-</ul>
-<p>下文的代码改造会详细介绍怎么做。</p>
-<h2 id="代码改造"><a href="#代码改造" class="headerlink" title="代码改造"></a>代码改造</h2><h3 id="BeforeTest-AfterTest"><a href="#BeforeTest-AfterTest" class="headerlink" title="BeforeTest/AfterTest"></a>BeforeTest/AfterTest</h3><p>要使用TestNG的注解，我们必须添加TestNG依赖，步骤和之前添加Selenium依赖相同：<br><img src="https://i.loli.net/2020/05/15/19UmfH3uSvCMDLn.png" ><br>接下来就可以使用TestNG的BeforeTest和AfterTest这两个注解了，我们可以把之前代码中在测试开始之前执行的操作，比如设置WebDriver、打开测试url都放在BeforeTest中，把测试执行结束后退出Driver的操作放在AfterTest中，这样改造之后的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class SeleniumTest &#123;</span><br><span class="line">    WebDriver driver;</span><br><span class="line"></span><br><span class="line">    @BeforeTest</span><br><span class="line">    public void beforeTest()</span><br><span class="line">    &#123;</span><br><span class="line">        System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">        driver &#x3D; new FirefoxDriver();</span><br><span class="line">        driver.manage().window().maximize();</span><br><span class="line">        driver.get(&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void searchSelenium()</span><br><span class="line">    &#123;</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;selenium&quot;);</span><br><span class="line">        driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @AfterTest</span><br><span class="line">    public void afterTest()</span><br><span class="line">    &#123;</span><br><span class="line">        driver.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="添加自定义testng-xml"><a href="#添加自定义testng-xml" class="headerlink" title="添加自定义testng.xml"></a>添加自定义testng.xml</h3><p>在BeforeTest中，我们手动设置了测试浏览器和url，但标准的做法是将这种设置提出来变成参数传入，而具体的数据可以放在一个单独的文件中。testng.xml文件可以帮助我们实现这点。<br>首先，我们使用TestNG的Parameters注解，将browser和url这两个数据作为参数传入beforeTest做处理，这样改造后的beforeTest方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Parameters(&#123;&quot;browser&quot;, &quot;url&quot;&#125;)</span><br><span class="line">@BeforeTest</span><br><span class="line">public void beofreTest(String browser, String url)</span><br><span class="line">&#123;</span><br><span class="line">    switch (browser)&#123;</span><br><span class="line">        case &quot;chrome&quot;:</span><br><span class="line">            System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;drivers&#x2F;chromedriver&quot;);</span><br><span class="line">            driver &#x3D; new ChromeDriver();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;firefox&quot;:</span><br><span class="line">            System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">            driver &#x3D; new FirefoxDriver();</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            System.out.println(&quot;can&#39;t supply such browser.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    driver.manage().window().maximize();</span><br><span class="line">    driver.get(url);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>此时运行测试，因为我们没有在系统默认的testng.xml文件<span class="label info">temp-testng-customsuite.xml</span>里定义browser和url这两个参数，所以不难猜到运行失败：<br><img src="https://i.loli.net/2020/05/15/ogdLlYPhr54WEck.png" ><br><img src="https://i.loli.net/2020/05/15/8W1a7Y6JSvNrT9Q.png" ><br>所以，有两种解决办法：</p>
-<ul>
-<li>直接改动默认的testng.xml文件</li>
-<li>新建自定义testng.xml文件，然后在pom.xml中指定此文件为默认的testng.xml<br>为了方便以后改动，我们采用第二种办法，新建testng.xml，使用<span class="label info">parameter</span> tag定义browser和url参数：<img src="https://i.loli.net/2020/05/17/vMOhB3FHkNRTnJK.png" >
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<p>此时我们可以在新建的testng.xml文件右键点击运行，就可以运行成功啦。<br>然后在pom.xml文件的maven-surefire-plugin里指定我们要引用的testng.xml，之后使用jenkins部署运行时就不会报错了：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;plugin&gt;</span><br><span class="line">  &lt;artifactId&gt;maven-surefire-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;2.22.1&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;configuration&gt;</span><br><span class="line">    &lt;suiteXmlFiles&gt;</span><br><span class="line">      &lt;!--可以添加多个xml文件--&gt;</span><br><span class="line">      &lt;file&gt;testng.xml&lt;&#x2F;file&gt;</span><br><span class="line">    &lt;&#x2F;suiteXmlFiles&gt;</span><br><span class="line">  &lt;&#x2F;configuration&gt;</span><br><span class="line">&lt;&#x2F;plugin&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置多个Test执行顺序"><a href="#设置多个Test执行顺序" class="headerlink" title="设置多个Test执行顺序"></a>设置多个Test执行顺序</h3><p>我们现在只有1个searchSelenium()的TestCase，如果有多个Test，它们的运行顺序会是怎样的呢？<br>为了找到答案，我们添加一个searchJava()的TestCase:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void searchJava()</span><br><span class="line">&#123;</span><br><span class="line">    driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">    driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;java&quot;);</span><br><span class="line">    driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><span id="inline-toc">1.</span> 在testng.xml中指定执行顺序</p>
-<p>首先再回到我们自定义的testng.xml文件，可以发现有一个<methods> tag, 其中包含了所有要执行的test列表，我们把searchJava()也加进去：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;methods&gt;</span><br><span class="line">    &lt;include name&#x3D;&quot;searchSelenium&quot;&#x2F;&gt;</span><br><span class="line">    &lt;include name&#x3D;&quot;searchJava&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;methods&gt;</span><br></pre></td></tr></table></figure>
-<p>运行testng.xml可以发现searchSelenium先执行，searchJava后执行。<br>那么把这两个方法在methods list里的顺序交换呢？<br>没错，又变成searchJava先执行，searchSelenium后执行了，所以我们可以通过<strong>设置方法在methods list的顺序，达到指定方法执行顺序的目的。</strong></p>
-<p><span id="inline-toc">2.</span> 默认执行顺序</p>
-<p>为了看到默认的执行顺序，我们先把methods list注释掉，再运行testng.xml。<br>可以看到依然是searchJava先执行，searchSelenium后执行。没错，默认的执行顺序是<strong>将方法名按照字符串排序的方式执行</strong>的：<br><img src="https://i.loli.net/2020/05/17/tOuk64Mg3GCdB51.png" ></p>
-<p><span id="inline-toc">3.</span> 给testng注解加上priority顺序</p>
-<p>其实，我们还可以通过<strong>给方法的@Test直接后边加上priority参数</strong>，数字小的先执行，达到设置执行顺序的目的。为了看到效果，我们将执行顺序设为和默认顺序相反：<br><img src="https://i.loli.net/2020/05/17/Z6kA2HVbhOeJPUq.png" ><br>运行testng.xml之后，可以发现searchSelenium先执行，searchJava后执行。</p>
+<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
+<div class="note default">
+            <p>default</p>
+          </div>
+<div class="note primary">
+            <p>primary</p>
+          </div>
+<div class="note success">
+            <p>success</p>
+          </div>
 <div class="note info">
-            <p>既然priority参数和上边的methods list都能设置执行顺序，那这两种方式谁的优先级更高呢？</p>
+            <p>info</p>
           </div>
-<p>为了解答这个问题，我们去掉testng.xml的注释，运行testng.xml观察效果：<br><img src="https://i.loli.net/2020/05/17/geaxQjf2I4JXdqO.png" ><br>可以发现仍然是searchSelenium先执行，searchJava后执行。</p>
-<blockquote>
-<p>所以，priority参数方式要比methods list方式优先级高。</p>
-</blockquote>
-<h3 id="testng-xml的多线程设置"><a href="#testng-xml的多线程设置" class="headerlink" title="testng.xml的多线程设置"></a>testng.xml的多线程设置</h3><p>多线程运行测试代码，可以减少运行时间，提高测试效率。实际应用中要按照设备/服务器属性进行设置。<br>我们可以通过在testng.xml添加<strong>parallel</strong>和<strong>thread-count</strong>参数达到多线程运行测试的目的：<br>其中：</p>
-<ul>
-<li>paralle: 表示线程级别</li>
-<li>thread-count: 线程个数<br>这里我们按照tests级别，将testng.xml改造如下：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE suite SYSTEM &quot;http:&#x2F;&#x2F;testng.org&#x2F;testng-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;suite name&#x3D;&quot;Default Suite&quot; parallel&#x3D;&quot;tests&quot; thread-count&#x3D;&quot;2&quot;&gt;</span><br><span class="line">    &lt;parameter name&#x3D;&quot;url&quot; value&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">    &lt;test name&#x3D;&quot;Automation1&quot;&gt;</span><br><span class="line">        &lt;classes&gt;</span><br><span class="line">            &lt;class name&#x3D;&quot;org.example.SeleniumTest&quot;&gt;&lt;&#x2F;class&gt;</span><br><span class="line">            &lt;parameter name&#x3D;&quot;browser&quot; value&#x3D;&quot;chrome&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">        &lt;&#x2F;classes&gt;</span><br><span class="line">    &lt;&#x2F;test&gt;</span><br><span class="line">    &lt;test name&#x3D;&quot;Automation2&quot;&gt;</span><br><span class="line">        &lt;classes&gt;</span><br><span class="line">            &lt;class name&#x3D;&quot;org.example.SeleniumTest&quot;&gt;&lt;&#x2F;class&gt;</span><br><span class="line">            &lt;parameter name&#x3D;&quot;browser&quot; value&#x3D;&quot;firefox&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">        &lt;&#x2F;classes&gt;</span><br><span class="line">    &lt;&#x2F;test&gt;</span><br><span class="line">&lt;&#x2F;suite&gt;</span><br></pre></td></tr></table></figure>
-为了让效果更明显，在每个@Test方法里加上：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;Thread id is &quot; + Thread.currentThread().getId());</span><br><span class="line">&#x2F;&#x2F;打印出方法所在线程id</span><br></pre></td></tr></table></figure>
-接着运行testng.xml，可以看到不同test在不同的线程运行，同一test的测试在一个线程运行：<img src="https://i.loli.net/2020/05/17/VlObW86dHQ2Y7ry.png" >
-
-</li>
-</ul>
-<h3 id="Element-Object"><a href="#Element-Object" class="headerlink" title="Element Object"></a>Element Object</h3><div class="note info">
-            <p>在实际工作中，编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，不把测试数据暴露在外边，这样就能更关注于测试代码的设计了。</p>
+<div class="note warning">
+            <p>warning</p>
+          </div>
+<div class="note danger">
+            <p>danger</p>
           </div>
 
-<p>根据上边的思想，我们将代码结构改动如下：<br><img src="https://i.loli.net/2020/05/26/98npgJdoQbmlvTM.png" ><br>新建了两个class文件，SetUp和Functions。<br>SetUp.class用于存放beforeTest方法，然后在测试代码中调用：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package org.example;</span><br><span class="line"></span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line">import org.openqa.selenium.chrome.ChromeDriver;</span><br><span class="line">import org.openqa.selenium.firefox.FirefoxDriver;</span><br><span class="line"></span><br><span class="line">public class SetUp &#123;</span><br><span class="line"></span><br><span class="line">    WebDriver driver;</span><br><span class="line"></span><br><span class="line">    public WebDriver beofreTest(String browser, String url)</span><br><span class="line">    &#123;</span><br><span class="line">        switch (browser)&#123;</span><br><span class="line">            case &quot;chrome&quot;:</span><br><span class="line">                System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;drivers&#x2F;chromedriver&quot;);</span><br><span class="line">                driver &#x3D; new ChromeDriver();</span><br><span class="line">                break;</span><br><span class="line">            case &quot;firefox&quot;:</span><br><span class="line">                System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">                driver &#x3D; new FirefoxDriver();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                System.out.println(&quot;can&#39;t supply such browser.&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        driver.manage().window().maximize();</span><br><span class="line">        driver.get(url);</span><br><span class="line">        return driver;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Functions.class里是一些页面元素和操作这些元素的公共方法，也可以在测试代码里直接调用：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package org.example;</span><br><span class="line">import org.openqa.selenium.By;</span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line"></span><br><span class="line">public class Functions &#123;</span><br><span class="line"></span><br><span class="line">    public By _searchBox &#x3D; By.id(&quot;kw&quot;);</span><br><span class="line">    public By _searchButton &#x3D; By.id(&quot;su&quot;);</span><br><span class="line"></span><br><span class="line">    public void searchText(WebDriver driver, String text)</span><br><span class="line">    &#123;</span><br><span class="line">        driver.findElement(_searchBox).clear();</span><br><span class="line">        driver.findElement(_searchBox).sendKeys(text);</span><br><span class="line">        driver.findElement(_searchButton).click();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>_config 文件配置关键字：note, 我的配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
 
-<h3 id="TestNG-Report"><a href="#TestNG-Report" class="headerlink" title="TestNG Report"></a>TestNG Report</h3><p>漂亮的测试报告是自动化测试中不可缺少的元素，TestNG也支持生成测试报告，在页面右上角找到Edit Configurations:<br><img src="https://i.loli.net/2020/05/17/J4EibfRV2wcI9Du.png" ><br>在当前页面找到Listeners然后勾选”Use default reporters”选项，确认：<br><img src="https://i.loli.net/2020/05/17/1iVejFuwCdcf7YB.png" ><br>再次右键运行testng.xml之后，可以看到项目目录自动生成的”test-output”文件夹，点击test-output文件夹下的index.html文件，在浏览器打开，就可以看到TestNG的测试报告了：<br><img src="https://i.loli.net/2020/05/17/BrM578TpDidxc13.png" ></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
-</ul>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
+<span class="label default">默认</span>
+<span class="label primary">主要</span>
+<span class="label success">成功</span>
+<span class="label info">信息</span>
+<span class="label warning">警告</span>
+<span class="label danger">危险</span>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
+<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
+
+
+<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
+
+<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
+<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
+<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
 ]]></content>
       <categories>
-        <category>学习小记</category>
+        <category>工具使用</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
+        <tag>Hexo</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1350,63 +1238,115 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>测试课程学习笔记第一弹：自动化测试理论</title>
-    <url>/auto-test-learning/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
+    <title>WebUI自动化测试框架Demo(中)</title>
+    <url>/WebUI-AutoTest-Demo-2/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/05/15/hVCWgPazcRirtLj.jpg" >
 
-<blockquote>
-<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
-</blockquote>
-<span class="label success">绿色</span>是我目前在做的，<span class="label warning">黄色</span>是在实践但没有深入了解的，<span class="label danger">红色</span>是我没有了解或者没有实践的。
-
-<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <span class="label success">测试金字塔</span>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
-<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
-<li><span class="label success">冒烟测试</span>：check主要功能</li>
-<li><span class="label success">功能测试</span>：自动化case覆盖功能</li>
-<li><span class="label danger">验收测试</span>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
-<li><span class="label danger">性能测试</span>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过
-
-</li>
-</ul>
-<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">&#x1f609;</span></p>
-<p><span id="inline-toc">1.</span> <span class="label success">UI和业务流程变更导致自动化测试代码不可用</span></p>
-<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
-<p><span id="inline-toc">2.</span> <span class="label danger">UI自动化测试只能模拟人工</span></p>
-<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
-<div class="note default">
-            <ul><li><span class="label success">传统自动化测试</span>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li><li><span class="label danger">自动探索测试</span>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li><li><span class="label danger">codeless方向及智能生成测试用例方向</span>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li></ul>
+<div class="note info">
+            <p>上篇博客我们已经完成了Demo Project的Set Up, 这篇文章就来简单用TestNG的注解和testng.xml文件，使代码结构更清晰，并实现element object的good practice.</p>
           </div>
 
-<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <span class="label success">核心用例自动化覆盖</span><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <span class="label success">基础回归自动化覆盖</span><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <span class="label success">新功能手工测试</span><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
-<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <span class="label warning">了解待测产品和平台</span><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <span class="label warning">精通好的测试框架</span><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <span class="label warning">掌握一些自动化测试代码编写技巧和关键点</span><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
-<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
-<li><span class="label warning">Web应用自动化</span>：Selenium</li>
-<li><span class="label danger">App手机应用自动化</span>：Appium</li>
-<li><span class="label danger">PC端的应用的GUI自动化</span>：Unkown</li>
-<li><span class="label danger">微信小程序自动化</span>：App+Web测试技术的外延形态</li>
-<li><span class="label danger">智能设备自动化</span>：Unknown
-
-</li>
-</ul>
-<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<h2 id="TestNG介绍"><a href="#TestNG介绍" class="headerlink" title="TestNG介绍"></a>TestNG介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>TestNG是一个开源的自动化测试框架， NG表示Next Generation。 </code></pre><p>TestNG的灵感来源于Junit和Nunit,但其功能优于前面两个框架，例如TestNG支持依赖测试，测试分组等功能，并且它旨在涵盖所有类别的测试：单元测试，功能测试，端到端测试，集成测试等等。</p>
+<h3 id="同类技术对比"><a href="#同类技术对比" class="headerlink" title="同类技术对比"></a>同类技术对比</h3><p>上篇博客中我们使用了Junit的注解@Test来识别测试代码，所以我们来看看TestNG和Junit的对比：<br><img src="https://i.loli.net/2020/05/26/GD37i9WBUE52v8d.png" >可以看到TestNG比Junit支持的功能更多，比如分组测试，参数化测试等等。</p>
+<h3 id="TestNG注解"><a href="#TestNG注解" class="headerlink" title="TestNG注解"></a>TestNG注解</h3><p>TestNG注解可以标记测试方法，设置测试方法运行顺序，将测试分组，还能向方法体传参。</p>
+<p><span id="inline-toc">1.</span> 常见的TestNG注解</p>
 <ul>
-<li><span class="label danger">Android原生Monkey</span></li>
-<li><span class="label danger">百度 SmartMonkey</span></li>
-<li><span class="label danger">腾讯 NewMonkey</span></li>
-<li><span class="label danger">阿里 Macaca 的 NoSmoke</span></li>
-<li><span class="label danger">Google出品的 AppCrawler</span>
+<li>@Test：最基本的注解，用来把方法标记为测试的一部分</li>
+<li>@BeforeTest：在所有测试之前运行</li>
+<li>@AfterTest：在所有测试执行之后运行</li>
+<li>@BeforeClass：在调用当前类之前运行</li>
+<li>@AfterClass：在调用当前类之后运行</li>
+<li>@BeforeMethod：在每个测试方法执行之前都会运行</li>
+<li>@AfterMethod：在每个测试方法执行之后都会运行</li>
+<li>@BeforeGroups：在调用属于该组的第一个测试方法之前运行</li>
+<li>@AfterGroups：在调用属于该组的最后一个测试方法执行之后运行 </li>
+</ul>
+<p><span id="inline-toc">2.</span> 注解运行顺序</p>
+<p>TestNG运行时，顺序是这样的：</p>
+<p>@BeforeSuite-&gt;@BeforeTest-&gt;@BeforeClass-&gt;{@BeforeMethod-&gt;@Test-&gt;@AfterMethod-&gt;@AfterClass-&gt;@AfterTest-&gt;@AfterSuite</p>
+<p>其中{}内的有多少个@Test，就循环执行多少次。</p>
+<p><span id="inline-toc">3.</span> 传参注解</p>
+<p>有时我们想要把测试数据当作参数传入测试方法，然后在别的地方定义参数对应的测试数据，这时就要用到TestNG的传参注解。</p>
+<ul>
+<li>@Parameters：描述如何将参数传递给@Test方法，下文中会用到。</li>
+<li>@DataProvider：当参数类型较为复杂时，@Parameters无法满足需要，此时可以利用@DataProvider传参标记一种方法来提供测试数据。该方法会返回一个Object二维数组或一个Iterator&lt;Object[]&gt;来提供复杂的参数对象。</li>
+</ul>
+<h3 id="TestNG的xml文件"><a href="#TestNG的xml文件" class="headerlink" title="TestNG的xml文件"></a>TestNG的xml文件</h3><blockquote>
+<p>testng.xml是TestNG的配置文件，以xml格式记录测试文件。xml文件里的tags可以帮助理解测试代码的结构，设置参数数据，还可以和注解配合使用决定测试代码的运行规则，包括测试方法的执行顺序，测试方法个数和分组等等。每一个tag都有自己的参数设置。</p>
+</blockquote>
+<p>一个简单的testng.xml结构如下：<br><img src="https://i.loli.net/2020/05/26/Xb75whadgGBYJ1x.png" ></p>
+<pre><code>&lt;suite&gt;&lt;/suite&gt;</code></pre><p>suite是testng.xml文档中最上层的元素，一个xml文件只能有一个suite，它是一个xml文件的根级。<br>suite tag的paraller和thread-count参数共同控制多线程运行，实现并发测试。paraller参数指定并发的级别，比如tests/classes/methods级别。thread-count参数指定线程个数。</p>
+<pre><code>&lt;test&gt;&lt;/test&gt;</code></pre><p>一个suite tag下可以有多个test tag，它是一个测试单元。</p>
+<pre><code>&lt;classes&gt;&lt;/classes&gt;</code></pre><p>方法选择器，要执行的方法写在这里。classes tag下必须包含执行的class，否则不会执行任何内容。</p>
+<pre><code>&lt;parameter&gt;&lt;/parameter&gt;</code></pre><p>提供测试数据，和@Parameters注解配合使用。<br>parameter tag可以声明在suite/tests/classes级别，在内层的parameter tag声明的变量会覆盖在外层声明的同名变量。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>TestNG的一般使用步骤是：</p>
+<ul>
+<li>编写测试业务逻辑代码并添加TestNG的注解</li>
+<li>在TestNG的xml文件配置测试信息(如果有需要的话)</li>
+<li>运行TestNG的xml文件</li>
+</ul>
+<p>下文的代码改造会详细介绍怎么做。</p>
+<h2 id="代码改造"><a href="#代码改造" class="headerlink" title="代码改造"></a>代码改造</h2><h3 id="BeforeTest-AfterTest"><a href="#BeforeTest-AfterTest" class="headerlink" title="BeforeTest/AfterTest"></a>BeforeTest/AfterTest</h3><p>要使用TestNG的注解，我们必须添加TestNG依赖，步骤和之前添加Selenium依赖相同：<br><img src="https://i.loli.net/2020/05/15/19UmfH3uSvCMDLn.png" ><br>接下来就可以使用TestNG的BeforeTest和AfterTest这两个注解了，我们可以把之前代码中在测试开始之前执行的操作，比如设置WebDriver、打开测试url都放在BeforeTest中，把测试执行结束后退出Driver的操作放在AfterTest中，这样改造之后的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class SeleniumTest &#123;</span><br><span class="line">    WebDriver driver;</span><br><span class="line"></span><br><span class="line">    @BeforeTest</span><br><span class="line">    public void beforeTest()</span><br><span class="line">    &#123;</span><br><span class="line">        System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">        driver &#x3D; new FirefoxDriver();</span><br><span class="line">        driver.manage().window().maximize();</span><br><span class="line">        driver.get(&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void searchSelenium()</span><br><span class="line">    &#123;</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">        driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;selenium&quot;);</span><br><span class="line">        driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @AfterTest</span><br><span class="line">    public void afterTest()</span><br><span class="line">    &#123;</span><br><span class="line">        driver.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加自定义testng-xml"><a href="#添加自定义testng-xml" class="headerlink" title="添加自定义testng.xml"></a>添加自定义testng.xml</h3><p>在BeforeTest中，我们手动设置了测试浏览器和url，但标准的做法是将这种设置提出来变成参数传入，而具体的数据可以放在一个单独的文件中。testng.xml文件可以帮助我们实现这点。<br>首先，我们使用TestNG的Parameters注解，将browser和url这两个数据作为参数传入beforeTest做处理，这样改造后的beforeTest方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Parameters(&#123;&quot;browser&quot;, &quot;url&quot;&#125;)</span><br><span class="line">@BeforeTest</span><br><span class="line">public void beofreTest(String browser, String url)</span><br><span class="line">&#123;</span><br><span class="line">    switch (browser)&#123;</span><br><span class="line">        case &quot;chrome&quot;:</span><br><span class="line">            System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;drivers&#x2F;chromedriver&quot;);</span><br><span class="line">            driver &#x3D; new ChromeDriver();</span><br><span class="line">            break;</span><br><span class="line">        case &quot;firefox&quot;:</span><br><span class="line">            System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">            driver &#x3D; new FirefoxDriver();</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            System.out.println(&quot;can&#39;t supply such browser.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    driver.manage().window().maximize();</span><br><span class="line">    driver.get(url);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时运行测试，因为我们没有在系统默认的testng.xml文件<span class="label info">temp-testng-customsuite.xml</span>里定义browser和url这两个参数，所以不难猜到运行失败：<br><img src="https://i.loli.net/2020/05/15/ogdLlYPhr54WEck.png" ><br><img src="https://i.loli.net/2020/05/15/8W1a7Y6JSvNrT9Q.png" ><br>所以，有两种解决办法：</p>
+<ul>
+<li>直接改动默认的testng.xml文件</li>
+<li>新建自定义testng.xml文件，然后在pom.xml中指定此文件为默认的testng.xml<br>为了方便以后改动，我们采用第二种办法，新建testng.xml，使用<span class="label info">parameter</span> tag定义browser和url参数：<img src="https://i.loli.net/2020/05/17/vMOhB3FHkNRTnJK.png" >
 
 </li>
 </ul>
-<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info">
-            <p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span></p>
-          </div>]]></content>
+<p>此时我们可以在新建的testng.xml文件右键点击运行，就可以运行成功啦。<br>然后在pom.xml文件的maven-surefire-plugin里指定我们要引用的testng.xml，之后使用jenkins部署运行时就不会报错了：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;plugin&gt;</span><br><span class="line">  &lt;artifactId&gt;maven-surefire-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;2.22.1&lt;&#x2F;version&gt;</span><br><span class="line">  &lt;configuration&gt;</span><br><span class="line">    &lt;suiteXmlFiles&gt;</span><br><span class="line">      &lt;!--可以添加多个xml文件--&gt;</span><br><span class="line">      &lt;file&gt;testng.xml&lt;&#x2F;file&gt;</span><br><span class="line">    &lt;&#x2F;suiteXmlFiles&gt;</span><br><span class="line">  &lt;&#x2F;configuration&gt;</span><br><span class="line">&lt;&#x2F;plugin&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置多个Test执行顺序"><a href="#设置多个Test执行顺序" class="headerlink" title="设置多个Test执行顺序"></a>设置多个Test执行顺序</h3><p>我们现在只有1个searchSelenium()的TestCase，如果有多个Test，它们的运行顺序会是怎样的呢？<br>为了找到答案，我们添加一个searchJava()的TestCase:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void searchJava()</span><br><span class="line">&#123;</span><br><span class="line">    driver.findElement(By.id(&quot;kw&quot;)).clear();</span><br><span class="line">    driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;java&quot;);</span><br><span class="line">    driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-toc">1.</span> 在testng.xml中指定执行顺序</p>
+<p>首先再回到我们自定义的testng.xml文件，可以发现有一个<methods> tag, 其中包含了所有要执行的test列表，我们把searchJava()也加进去：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;methods&gt;</span><br><span class="line">    &lt;include name&#x3D;&quot;searchSelenium&quot;&#x2F;&gt;</span><br><span class="line">    &lt;include name&#x3D;&quot;searchJava&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;methods&gt;</span><br></pre></td></tr></table></figure>
+<p>运行testng.xml可以发现searchSelenium先执行，searchJava后执行。<br>那么把这两个方法在methods list里的顺序交换呢？<br>没错，又变成searchJava先执行，searchSelenium后执行了，所以我们可以通过<strong>设置方法在methods list的顺序，达到指定方法执行顺序的目的。</strong></p>
+<p><span id="inline-toc">2.</span> 默认执行顺序</p>
+<p>为了看到默认的执行顺序，我们先把methods list注释掉，再运行testng.xml。<br>可以看到依然是searchJava先执行，searchSelenium后执行。没错，默认的执行顺序是<strong>将方法名按照字符串排序的方式执行</strong>的：<br><img src="https://i.loli.net/2020/05/17/tOuk64Mg3GCdB51.png" ></p>
+<p><span id="inline-toc">3.</span> 给testng注解加上priority顺序</p>
+<p>其实，我们还可以通过<strong>给方法的@Test直接后边加上priority参数</strong>，数字小的先执行，达到设置执行顺序的目的。为了看到效果，我们将执行顺序设为和默认顺序相反：<br><img src="https://i.loli.net/2020/05/17/Z6kA2HVbhOeJPUq.png" ><br>运行testng.xml之后，可以发现searchSelenium先执行，searchJava后执行。</p>
+<div class="note info">
+            <p>既然priority参数和上边的methods list都能设置执行顺序，那这两种方式谁的优先级更高呢？</p>
+          </div>
+<p>为了解答这个问题，我们去掉testng.xml的注释，运行testng.xml观察效果：<br><img src="https://i.loli.net/2020/05/17/geaxQjf2I4JXdqO.png" ><br>可以发现仍然是searchSelenium先执行，searchJava后执行。</p>
+<blockquote>
+<p>所以，priority参数方式要比methods list方式优先级高。</p>
+</blockquote>
+<h3 id="testng-xml的多线程设置"><a href="#testng-xml的多线程设置" class="headerlink" title="testng.xml的多线程设置"></a>testng.xml的多线程设置</h3><p>多线程运行测试代码，可以减少运行时间，提高测试效率。实际应用中要按照设备/服务器属性进行设置。<br>我们可以通过在testng.xml添加<strong>parallel</strong>和<strong>thread-count</strong>参数达到多线程运行测试的目的：<br>其中：</p>
+<ul>
+<li>paralle: 表示线程级别</li>
+<li>thread-count: 线程个数<br>这里我们按照tests级别，将testng.xml改造如下：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE suite SYSTEM &quot;http:&#x2F;&#x2F;testng.org&#x2F;testng-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;suite name&#x3D;&quot;Default Suite&quot; parallel&#x3D;&quot;tests&quot; thread-count&#x3D;&quot;2&quot;&gt;</span><br><span class="line">    &lt;parameter name&#x3D;&quot;url&quot; value&#x3D;&quot;https:&#x2F;&#x2F;www.baidu.com&#x2F;&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">    &lt;test name&#x3D;&quot;Automation1&quot;&gt;</span><br><span class="line">        &lt;classes&gt;</span><br><span class="line">            &lt;class name&#x3D;&quot;org.example.SeleniumTest&quot;&gt;&lt;&#x2F;class&gt;</span><br><span class="line">            &lt;parameter name&#x3D;&quot;browser&quot; value&#x3D;&quot;chrome&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">        &lt;&#x2F;classes&gt;</span><br><span class="line">    &lt;&#x2F;test&gt;</span><br><span class="line">    &lt;test name&#x3D;&quot;Automation2&quot;&gt;</span><br><span class="line">        &lt;classes&gt;</span><br><span class="line">            &lt;class name&#x3D;&quot;org.example.SeleniumTest&quot;&gt;&lt;&#x2F;class&gt;</span><br><span class="line">            &lt;parameter name&#x3D;&quot;browser&quot; value&#x3D;&quot;firefox&quot;&gt;&lt;&#x2F;parameter&gt;</span><br><span class="line">        &lt;&#x2F;classes&gt;</span><br><span class="line">    &lt;&#x2F;test&gt;</span><br><span class="line">&lt;&#x2F;suite&gt;</span><br></pre></td></tr></table></figure>
+为了让效果更明显，在每个@Test方法里加上：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;Thread id is &quot; + Thread.currentThread().getId());</span><br><span class="line">&#x2F;&#x2F;打印出方法所在线程id</span><br></pre></td></tr></table></figure>
+接着运行testng.xml，可以看到不同test在不同的线程运行，同一test的测试在一个线程运行：<img src="https://i.loli.net/2020/05/17/VlObW86dHQ2Y7ry.png" >
+
+</li>
+</ul>
+<h3 id="Element-Object"><a href="#Element-Object" class="headerlink" title="Element Object"></a>Element Object</h3><div class="note info">
+            <p>在实际工作中，编写测试代码的时候，以beforeTest()和searchSelenium()方法为例，我们可以把beforeTest()/afterTest()这种公共方法提出来放在单独的文件中，searchSelenium()方法里的常用/公有元素也提出来放在单独的文件中，公共方法也可以提出来，以实现Element/Page Object，不把测试数据暴露在外边，这样就能更关注于测试代码的设计了。</p>
+          </div>
+
+<p>根据上边的思想，我们将代码结构改动如下：<br><img src="https://i.loli.net/2020/05/26/98npgJdoQbmlvTM.png" ><br>新建了两个class文件，SetUp和Functions。<br>SetUp.class用于存放beforeTest方法，然后在测试代码中调用：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package org.example;</span><br><span class="line"></span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line">import org.openqa.selenium.chrome.ChromeDriver;</span><br><span class="line">import org.openqa.selenium.firefox.FirefoxDriver;</span><br><span class="line"></span><br><span class="line">public class SetUp &#123;</span><br><span class="line"></span><br><span class="line">    WebDriver driver;</span><br><span class="line"></span><br><span class="line">    public WebDriver beofreTest(String browser, String url)</span><br><span class="line">    &#123;</span><br><span class="line">        switch (browser)&#123;</span><br><span class="line">            case &quot;chrome&quot;:</span><br><span class="line">                System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;drivers&#x2F;chromedriver&quot;);</span><br><span class="line">                driver &#x3D; new ChromeDriver();</span><br><span class="line">                break;</span><br><span class="line">            case &quot;firefox&quot;:</span><br><span class="line">                System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;drivers&#x2F;geckodriver&quot;);</span><br><span class="line">                driver &#x3D; new FirefoxDriver();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                System.out.println(&quot;can&#39;t supply such browser.&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        driver.manage().window().maximize();</span><br><span class="line">        driver.get(url);</span><br><span class="line">        return driver;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Functions.class里是一些页面元素和操作这些元素的公共方法，也可以在测试代码里直接调用：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package org.example;</span><br><span class="line">import org.openqa.selenium.By;</span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line"></span><br><span class="line">public class Functions &#123;</span><br><span class="line"></span><br><span class="line">    public By _searchBox &#x3D; By.id(&quot;kw&quot;);</span><br><span class="line">    public By _searchButton &#x3D; By.id(&quot;su&quot;);</span><br><span class="line"></span><br><span class="line">    public void searchText(WebDriver driver, String text)</span><br><span class="line">    &#123;</span><br><span class="line">        driver.findElement(_searchBox).clear();</span><br><span class="line">        driver.findElement(_searchBox).sendKeys(text);</span><br><span class="line">        driver.findElement(_searchButton).click();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TestNG-Report"><a href="#TestNG-Report" class="headerlink" title="TestNG Report"></a>TestNG Report</h3><p>漂亮的测试报告是自动化测试中不可缺少的元素，TestNG也支持生成测试报告，在页面右上角找到Edit Configurations:<br><img src="https://i.loli.net/2020/05/17/J4EibfRV2wcI9Du.png" ><br>在当前页面找到Listeners然后勾选”Use default reporters”选项，确认：<br><img src="https://i.loli.net/2020/05/17/1iVejFuwCdcf7YB.png" ><br>再次右键运行testng.xml之后，可以看到项目目录自动生成的”test-output”文件夹，点击test-output文件夹下的index.html文件，在浏览器打开，就可以看到TestNG的测试报告了：<br><img src="https://i.loli.net/2020/05/17/BrM578TpDidxc13.png" ></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+</ul>
+]]></content>
       <categories>
         <category>学习小记</category>
       </categories>
       <tags>
         <tag>自动化测试</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1485,7 +1425,7 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 <p>回到首页，点击Auto的设置按钮：<br><img src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png" ><br><img src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png" ><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png" ><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
 <p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png" ></p>
 <p>保存，然后再次运行Pipeline:<br><img src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png" ></p>
-<p>在Artifacts Tab可以看到testoutput文件夹：<br><img src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png" ><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png" ></p>
+<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png" ><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png" ></p>
 <h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png" ><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png" ><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png" ></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://www.jianshu.com/p/28b7ae892ed1" target="_blank" rel="noopener">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
@@ -1498,6 +1438,66 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
+
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<span class="label success">绿色</span>是我目前在做的，<span class="label warning">黄色</span>是在实践但没有深入了解的，<span class="label danger">红色</span>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <span class="label success">测试金字塔</span>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><span class="label success">冒烟测试</span>：check主要功能</li>
+<li><span class="label success">功能测试</span>：自动化case覆盖功能</li>
+<li><span class="label danger">验收测试</span>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><span class="label danger">性能测试</span>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过
+
+</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">&#x1f609;</span></p>
+<p><span id="inline-toc">1.</span> <span class="label success">UI和业务流程变更导致自动化测试代码不可用</span></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <span class="label danger">UI自动化测试只能模拟人工</span></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default">
+            <ul><li><span class="label success">传统自动化测试</span>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li><li><span class="label danger">自动探索测试</span>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li><li><span class="label danger">codeless方向及智能生成测试用例方向</span>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li></ul>
+          </div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <span class="label success">核心用例自动化覆盖</span><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <span class="label success">基础回归自动化覆盖</span><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <span class="label success">新功能手工测试</span><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <span class="label warning">了解待测产品和平台</span><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <span class="label warning">精通好的测试框架</span><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <span class="label warning">掌握一些自动化测试代码编写技巧和关键点</span><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><span class="label warning">Web应用自动化</span>：Selenium</li>
+<li><span class="label danger">App手机应用自动化</span>：Appium</li>
+<li><span class="label danger">PC端的应用的GUI自动化</span>：Unkown</li>
+<li><span class="label danger">微信小程序自动化</span>：App+Web测试技术的外延形态</li>
+<li><span class="label danger">智能设备自动化</span>：Unknown
+
+</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><span class="label danger">Android原生Monkey</span></li>
+<li><span class="label danger">百度 SmartMonkey</span></li>
+<li><span class="label danger">腾讯 NewMonkey</span></li>
+<li><span class="label danger">阿里 Macaca 的 NoSmoke</span></li>
+<li><span class="label danger">Google出品的 AppCrawler</span>
+
+</li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info">
+            <p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">&#x1f60c;</span></p>
+          </div>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1575,6 +1575,66 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<a id="more"></a>
+
+<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于闰年，你不知道的那些事</title>
+    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+<a id="more"></a>
+
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<ul>
+<li>整除但4不能整除100</li>
+<li>整除100又能整除400</li>
+</ul>
+<blockquote>
+<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
+</blockquote>
+<hr>
+<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
+<p>那么具体是怎么弥补的呢？</p>
+<blockquote>
+<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
+</blockquote>
+<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
+<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
+<blockquote>
+<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
+</blockquote>
+<p>那这3个闰年怎么少呢？</p>
+<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<ul>
+<li>2000/400=5</li>
+<li>2100/400=5.25</li>
+<li>2200/400=5.5</li>
+<li>2300/400=5.75</li>
+<li>2400/400=6</li>
+</ul>
+<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
+<p>你明白了吗？</p>
+<hr>
+<p>当然，根据规则，我们就可以编写代码判断了：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>闰年</tag>
       </tags>
   </entry>
   <entry>
@@ -1703,66 +1763,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<a id="more"></a>
-
-<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于闰年，你不知道的那些事</title>
-    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
-<a id="more"></a>
-
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
-<ul>
-<li>整除但4不能整除100</li>
-<li>整除100又能整除400</li>
-</ul>
-<blockquote>
-<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
-</blockquote>
-<hr>
-<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
-<p>那么具体是怎么弥补的呢？</p>
-<blockquote>
-<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
-</blockquote>
-<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
-<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
-<blockquote>
-<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
-</blockquote>
-<p>那这3个闰年怎么少呢？</p>
-<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
-<ul>
-<li>2000/400=5</li>
-<li>2100/400=5.25</li>
-<li>2200/400=5.5</li>
-<li>2300/400=5.75</li>
-<li>2400/400=6</li>
-</ul>
-<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
-<p>你明白了吗？</p>
-<hr>
-<p>当然，根据规则，我们就可以编写代码判断了：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>闰年</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>未来是星辰大海_Part2</title>
     <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
     <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
@@ -1860,36 +1860,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<a id="more"></a>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>好看的书</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -1957,33 +1927,33 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>递归求解1到100求和</title>
-    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
-    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
 <a id="more"></a>
 
-<p><strong>思想：</strong></p>
-<p>思考一下，从1加到100可以分解成：</p>
-<ul>
-<li>1+（2加到100的和）</li>
-<li>1+2+（3加到100的和）</li>
-<li>1+2+3+（4加到100的和）</li>
-<li>……</li>
-</ul>
-<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
-<p>所以，可以编写如下代码：</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> n + count(n - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
 ]]></content>
       <categories>
-        <category>学习小记</category>
+        <category>好看的书</category>
       </categories>
       <tags>
-        <tag>递归</tag>
+        <tag>王小波</tag>
       </tags>
   </entry>
   <entry>
@@ -2046,6 +2016,36 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>递归求解1到100求和</title>
+    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
+    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+<a id="more"></a>
+
+<p><strong>思想：</strong></p>
+<p>思考一下，从1加到100可以分解成：</p>
+<ul>
+<li>1+（2加到100的和）</li>
+<li>1+2+（3加到100的和）</li>
+<li>1+2+3+（4加到100的和）</li>
+<li>……</li>
+</ul>
+<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
+<p>所以，可以编写如下代码：</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> n + count(n - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -2063,11 +2063,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>categories</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
@@ -2076,6 +2071,16 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
     <title>tags</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/links/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2103,87 +2108,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
-    <content><![CDATA[/* http://james.padolsey.com/javascript/special-scroll-events-for-jquery/ */
-
-(function(){
-    
-    var special = jQuery.event.special,
-        uid1 = "D" + (+new Date()),
-        uid2 = "D" + (+new Date() + 1);
-        
-    special.scrollstart = {
-        setup: function() {
-            
-            var timer,
-                handler =  function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    } else {
-                        evt.type = "scrollstart";
-                        jQuery.event.dispatch.apply(_self, _args);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        timer = null;
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid1, handler);
-            
-        },
-        teardown: function(){
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid1) );
-        }
-    };
-    
-    special.scrollstop = {
-        latency: 300,
-        setup: function() {
-            
-            var timer,
-                    handler = function(evt) {
-                    
-                    var _self = this,
-                        _args = arguments;
-                    
-                    if (timer) {
-                        clearTimeout(timer);
-                    }
-                    
-                    timer = setTimeout( function(){
-                        
-                        timer = null;
-                        evt.type = "scrollstop";
-                        jQuery.event.dispatch.apply(_self, _args);
-                        
-                        
-                    }, special.scrollstop.latency);
-                    
-                };
-            
-            jQuery(this).bind("scroll", handler).data(uid2, handler);
-            
-        },
-        teardown: function() {
-            jQuery(this).unbind( "scroll", jQuery(this).data(uid2) );
-        }
-    };
-    
-})();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2431,5 +2355,81 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 })(jQuery, window, document);
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/jquery.scrollstop.js</url>
+    <content><![CDATA[/* http://james.padolsey.com/javascript/special-scroll-events-for-jquery/ */
+
+(function(){
+    
+    var special = jQuery.event.special,
+        uid1 = "D" + (+new Date()),
+        uid2 = "D" + (+new Date() + 1);
+        
+    special.scrollstart = {
+        setup: function() {
+            
+            var timer,
+                handler =  function(evt) {
+                    
+                    var _self = this,
+                        _args = arguments;
+                    
+                    if (timer) {
+                        clearTimeout(timer);
+                    } else {
+                        evt.type = "scrollstart";
+                        jQuery.event.dispatch.apply(_self, _args);
+                    }
+                    
+                    timer = setTimeout( function(){
+                        timer = null;
+                    }, special.scrollstop.latency);
+                    
+                };
+            
+            jQuery(this).bind("scroll", handler).data(uid1, handler);
+            
+        },
+        teardown: function(){
+            jQuery(this).unbind( "scroll", jQuery(this).data(uid1) );
+        }
+    };
+    
+    special.scrollstop = {
+        latency: 300,
+        setup: function() {
+            
+            var timer,
+                    handler = function(evt) {
+                    
+                    var _self = this,
+                        _args = arguments;
+                    
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+                    
+                    timer = setTimeout( function(){
+                        
+                        timer = null;
+                        evt.type = "scrollstop";
+                        jQuery.event.dispatch.apply(_self, _args);
+                        
+                        
+                    }, special.scrollstop.latency);
+                    
+                };
+            
+            jQuery(this).bind("scroll", handler).data(uid2, handler);
+            
+        },
+        teardown: function() {
+            jQuery(this).unbind( "scroll", jQuery(this).data(uid2) );
+        }
+    };
+    
+})();]]></content>
   </entry>
 </search>
