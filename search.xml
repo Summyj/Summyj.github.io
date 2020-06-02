@@ -129,60 +129,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>网络无障碍</title>
-    <url>/Accessibility-test/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class=emoji alias=blush style= fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8>&#x1f60a;</span></span></p>
-<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">&#x1f447;</span></p>
-<blockquote>
-<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
-</blockquote>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
-<div class="note info">
-            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
-          </div>
-
-<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
-<ul>
-<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
-<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
-</ul>
-<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
-<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
-
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
-            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
-          </div>
-<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y" target="_blank" rel="noopener">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe" target="_blank" rel="noopener">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
-<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
-<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
-<p><a href="https://sm.ms/image/FLf2MhVHe4lBR7S" target="_blank"><img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400"></a></p>
-<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="noopener">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/" target="_blank" rel="noopener">安装包</a>。相比较Audits检测报告更详细。</p>
-<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank" rel="noopener">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
-<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/" target="_blank" rel="noopener">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
-<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
-<div class="note info">
-            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
-          </div>
-<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
-<div class="note primary">
-            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
-          </div>
-<p><a href="https://sm.ms/image/dEF7fwu1TxXbtWg" target="_blank"><img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg" ></a><br>不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/" target="_blank" rel="noopener">将Pa11y集成到pipeline</a></p>
-<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review" target="_blank" rel="noopener">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/" target="_blank" rel="noopener">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/" target="_blank" rel="noopener">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>网络无障碍</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
@@ -268,6 +214,60 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>网络无障碍</title>
+    <url>/Accessibility-test/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class=emoji alias=blush style= fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8>&#x1f60a;</span></span></p>
+<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">&#x1f447;</span></p>
+<blockquote>
+<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">&#x1f602;</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+</blockquote>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
+<div class="note info">
+            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
+          </div>
+
+<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
+<ul>
+<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
+<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
+</ul>
+<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
+<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
+            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
+          </div>
+<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y" target="_blank" rel="noopener">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe" target="_blank" rel="noopener">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
+<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
+<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
+<p><a href="https://sm.ms/image/FLf2MhVHe4lBR7S" target="_blank"><img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400"></a></p>
+<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="noopener">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/" target="_blank" rel="noopener">安装包</a>。相比较Audits检测报告更详细。</p>
+<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_blank" rel="noopener">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
+<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/" target="_blank" rel="noopener">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
+<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
+<div class="note info">
+            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
+          </div>
+<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
+<div class="note primary">
+            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
+          </div>
+<p><a href="https://sm.ms/image/dEF7fwu1TxXbtWg" target="_blank"><img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg" ></a><br>不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/" target="_blank" rel="noopener">将Pa11y集成到pipeline</a></p>
+<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/" target="_blank" rel="noopener">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html" target="_blank" rel="noopener">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane" target="_blank" rel="noopener">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review" target="_blank" rel="noopener">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/" target="_blank" rel="noopener">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/" target="_blank" rel="noopener">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>网络无障碍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>20岁光阴不再来</title>
     <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
     <content><![CDATA[<p>时间啊，你慢点走。</p>
@@ -295,64 +295,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       <tags>
         <tag>TED</tag>
         <tag>告别拖延</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点的SEO优化</title>
-    <url>/BlogSEO/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
-<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
-<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index" target="_blank" rel="noopener">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><a href="https://sm.ms/image/CPt9byQOAZ8fDBV" target="_blank"><img src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png" ></a>验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/krGdctXzCf7hjxM" target="_blank"><img src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png" ></a></p>
-<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning">
-            <p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
-          </div>
-<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
-<blockquote>
-<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-</blockquote>
-<p>安装百度站点地图生成插件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><a href="https://sm.ms/image/DwL9Xf8JmRWVoF6" target="_blank"><img src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png" ></a>显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
-<p>安装结束后在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
-<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，就可以实现每次部署自动推送文章啦：<br><a href="https://sm.ms/image/Z2LcdRlzXjutg4h" target="_blank"><img src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></a></p>
-<div class="note info">
-            <p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
-          </div>
-
-<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><a href="https://sm.ms/image/kpSBwdDFtXmcbNJ" target="_blank"><img src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png" ></a></p>
-<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps" target="_blank" rel="noopener">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><a href="https://sm.ms/image/lVcSnUo2JhNYXgI" target="_blank"><img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="400" height="500"></a><br>然后执行然后执行<span class="label info">hexo g -d</span>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/bOoYU7w5SvIzZj9" target="_blank"><img src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png" ></a></p>
-<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
-<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><a href="https://sm.ms/image/W4Ud5el38Y7pXt2" target="_blank"><img src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png" ></a>显示Success之后，Sitemap推送方式就安排上了.</p>
-<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><a href="https://sm.ms/image/4GxXKmyO1bAc7PN" target="_blank"><img src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png" ></a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/" target="_blank" rel="noopener">Hexo提交百度和Google收录站点</a></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -427,6 +369,64 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>升级博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点的SEO优化</title>
+    <url>/BlogSEO/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/MgrbW6S4h9tI1yf" target="_blank"><img src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400"></a></p>
+<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
+<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index" target="_blank" rel="noopener">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><a href="https://sm.ms/image/CPt9byQOAZ8fDBV" target="_blank"><img src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png" ></a>验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/krGdctXzCf7hjxM" target="_blank"><img src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png" ></a></p>
+<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning">
+            <p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
+          </div>
+<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
+<blockquote>
+<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
+</blockquote>
+<p>安装百度站点地图生成插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><a href="https://sm.ms/image/DwL9Xf8JmRWVoF6" target="_blank"><img src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png" ></a>显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<p>安装结束后在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
+<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，就可以实现每次部署自动推送文章啦：<br><a href="https://sm.ms/image/Z2LcdRlzXjutg4h" target="_blank"><img src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></a></p>
+<div class="note info">
+            <p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
+          </div>
+
+<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><a href="https://sm.ms/image/kpSBwdDFtXmcbNJ" target="_blank"><img src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png" ></a></p>
+<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps" target="_blank" rel="noopener">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><a href="https://sm.ms/image/lVcSnUo2JhNYXgI" target="_blank"><img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="400" height="500"></a><br>然后执行然后执行<span class="label info">hexo g -d</span>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><a href="https://sm.ms/image/bOoYU7w5SvIzZj9" target="_blank"><img src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png" ></a></p>
+<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>然后执行<span class="label info">hexo g -d</span>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><a href="https://sm.ms/image/W4Ud5el38Y7pXt2" target="_blank"><img src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png" ></a>显示Success之后，Sitemap推送方式就安排上了.</p>
+<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<span class="label success">site: 域名</span>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><a href="https://sm.ms/image/4GxXKmyO1bAc7PN" target="_blank"><img src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png" ></a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/" target="_blank" rel="noopener">Hexo提交百度和Google收录站点</a></p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -527,6 +527,40 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>Java基础小练习</title>
+    <url>/Java-basic/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
+<ul>
+<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
+<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
+<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
+</ul>
+<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
+<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
+<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
+<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
+<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
+<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BugBash知多少</title>
     <url>/BugBash/</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
@@ -564,37 +598,81 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>Java基础小练习</title>
-    <url>/Java-basic/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/hznIgy4mZYQ7Rwc" target="_blank"><img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" ></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
-<ul>
-<li><a href="https://www.imooc.com/learn/85" target="_blank" rel="noopener">Java1</a>: 数组/循环/运算符/方法</li>
-<li><a href="https://www.imooc.com/learn/124" target="_blank" rel="noopener">Java2</a>: 类/封装/继承/多态</li>
-<li><a href="https://www.imooc.com/learn/110" target="_blank" rel="noopener">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">&#x1f648;</span></li>
-</ul>
-<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
-<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books &#x3D; &#123;&quot;中国通史&quot;, &quot;围城&quot;, &quot;沉默的大多数&quot;, &quot;古文观止&quot;, &quot;局外人&quot;&#125;;</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!(input&#x3D;&#x3D;1 || input&#x3D;&#x3D;2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书序号：&quot;);</span><br><span class="line">        int index &#x3D; sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try&#123;</span><br><span class="line">            String name &#x3D; books[index];</span><br><span class="line">        &#125;</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;该序号不存在～&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;找到了！图书为：&quot; + books[index]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入图书名称：&quot;);</span><br><span class="line">        String name &#x3D; sc.next();</span><br><span class="line">        boolean flag &#x3D; false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) &#123;</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            &#123;</span><br><span class="line">                flag &#x3D; true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println(&quot;该图书存在～&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;该图书不存在～&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arg &#x3D;&#x3D; 1)</span><br><span class="line">        &#123;</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            SearchWithName();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(&quot;请输： 1 -- 按照序号查找， 2 -- 按照书名查找&quot;);</span><br><span class="line">            Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">            try&#123;</span><br><span class="line">                int input &#x3D; sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;请输入数字哦～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;非法操作序号～&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+    <title>Hexo的一些写作标签</title>
+    <url>/How-to-Write/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
 
-<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   &#123;</span><br><span class="line">       if(file.contains(&quot;.&quot;) &amp;&amp; file.indexOf(&quot;.&quot;)!&#x3D;0 &amp;&amp; file.endsWith(&quot;.java&quot;))</span><br><span class="line">           System.out.println(&quot;文件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;文件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   &#123;</span><br><span class="line">       if(email.indexOf(&quot;@&quot;) &lt; email.indexOf(&quot;.&quot;) &amp;&amp; !email.endsWith(&quot;.&quot;))</span><br><span class="line">           System.out.println(&quot;邮件名正确&quot;);</span><br><span class="line">       else</span><br><span class="line">           System.out.println(&quot;邮件名无效&quot;);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">       HelloWorld hello &#x3D; new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入文件名：&quot;);</span><br><span class="line">       Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">       String file &#x3D; sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println(&quot;输入邮件名：&quot;);</span><br><span class="line">       Scanner sc1 &#x3D; new Scanner(System.in);</span><br><span class="line">       String email &#x3D; sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
 
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vehicle veh1 &#x3D; new Vehicle();</span><br></pre></td></tr></table></figure>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html" target="_blank" rel="noopener">这篇文章</a>让我明白了上边的代码发生了什么。</p>
-<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        StringBuilder s1 &#x3D; new StringBuilder(&quot;123&quot;);</span><br><span class="line">        String s2 &#x3D; s1.toString();</span><br><span class="line">        String s3 &#x3D; s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); &#x2F;&#x2F;false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和&#x3D;&#x3D;作用相同</span><br><span class="line">        System.out.println(s1&#x3D;&#x3D;s2); &#x2F;&#x2F;编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用&#x3D;&#x3D;比较</span><br><span class="line">        System.out.println(s2.equals(s3)); &#x2F;&#x2F; true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 &#x3D;&#x3D; s3); &#x2F;&#x2F;false, &#x3D;&#x3D;比较的是两个引用的地址</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
+<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
+</blockquote>
 
-<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
-<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320" target="_blank" rel="noopener">这篇文章</a>写得很明白。</p>
-<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285" target="_blank" rel="noopener">关于Map的Key和Value能不能为空</a></p>
-<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">&#x1f4aa;</span></p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
+<div class="note default">
+            <p>default</p>
+          </div>
+<div class="note primary">
+            <p>primary</p>
+          </div>
+<div class="note success">
+            <p>success</p>
+          </div>
+<div class="note info">
+            <p>info</p>
+          </div>
+<div class="note warning">
+            <p>warning</p>
+          </div>
+<div class="note danger">
+            <p>danger</p>
+          </div>
+
+<p>_config 文件配置关键字：note, 我的配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
+<span class="label default">默认</span>
+<span class="label primary">主要</span>
+<span class="label success">成功</span>
+<span class="label info">信息</span>
+<span class="label warning">警告</span>
+<span class="label danger">危险</span>
+
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
+<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
+
+
+<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
+
+<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
+<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
+<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
 ]]></content>
       <categories>
-        <category>学习小记</category>
+        <category>工具使用</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>Hexo</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -768,6 +846,88 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>渗透测试初识</title>
+    <url>/Penetration-Test/</url>
+    <content><![CDATA[<p><a href="https://sm.ms/image/e9Yd8ylbkxcJhOE" target="_blank"><img src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg" ></a></p>
+<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md" target="_blank" rel="noopener">怎么学习新东西</a> 书写。</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><span class="label info">百科定义：</span> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
+<p><enter></enter></p>
+<span class="label info">通俗定义：</span> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
+
+
+<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><span class="label primary">解决啥问题</span>
+<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
+<span class="label primary">没有它之前怎么做</span>
+<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
+<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
+<ul>
+<li>测试方法(黑盒/白盒/灰盒)</li>
+<li>目标(服务器/数据库/Web网站…)</li>
+<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
+</ul>
+<p><span id="inline-toc">2.</span> 测试过程</p>
+<span class="label success">信息收集</span>
+
+<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
+<span class="label success">技术测试</span>
+
+<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
+<span class="label success">人员测试</span>
+
+<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
+<p><span id="inline-toc">3.</span> 测试之后</p>
+<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
+<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032" target="_blank" rel="noopener">这里</a> 有一个渗透测试免费入门视频教程.</p>
+<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----" target="_blank" rel="noopener">juice shop</a>:<br><a href="https://sm.ms/image/qzf5HgmRUFyc6Kj" target="_blank"><img src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png" ></a><br>它是由权威组织 <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/" target="_blank" rel="noopener">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
+<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
+<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<span class="label primary">disable=true</span> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MTQyNjQxMg==' frameborder=0 'allowfullscreen'></iframe>
+
+
+<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
+<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgwODAwOA==' frameborder=0 'allowfullscreen'></iframe>
+
+
+<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
+<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT * FROM Users WHERE email&#x3D; &#39;xxx&#39; AND password &#x3D; &#39;xxx&#39; ......</span><br></pre></td></tr></table></figure>
+<p>由此我们可以根据这个信息，构造万能密码 <span class="label primary">' or 1--</span>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjkxNzA4NA==' frameborder=0 'allowfullscreen'></iframe>
+
+
+<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
+<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<span class="label primary">main.js</span>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <span class="label primary">administration</span> ，回车之后进入管理员页面，并解决挑战。</p>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgxNzQ4MA==' frameborder=0 'allowfullscreen'></iframe>
+
+<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
+<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <span class="label primary">rest/basket/1</span>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <span class="label primary">email' and 1--</span> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
+<div class="note info">
+            <p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
+          </div>
+
+<p>登录Jim之后我们就看他的购物车请求是<span class="label primary">rest/basket/2</span>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<span class="label primary">rest/basket/1</span>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
+<div class="note warning">
+            <p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000" target="_blank" rel="noopener">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/" target="_blank" rel="noopener">charles官网</a>的说明。</p>
+          </div>
+
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgxMzE0NA==' frameborder=0 'allowfullscreen'></iframe>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/24a39068dbf9" target="_blank" rel="noopener">结合OWASP Top 10 初识安全测试</a></li>
+<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage" target="_blank" rel="noopener">OWASP Juice Shop 实战报告与解析</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>渗透测试</tag>
+        <tag>OWASP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的书架</title>
     <url>/MyBooks/</url>
     <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center"><p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
@@ -890,88 +1050,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>渗透测试初识</title>
-    <url>/Penetration-Test/</url>
-    <content><![CDATA[<p><a href="https://sm.ms/image/e9Yd8ylbkxcJhOE" target="_blank"><img src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg" ></a></p>
-<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md" target="_blank" rel="noopener">怎么学习新东西</a> 书写。</p>
-<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><span class="label info">百科定义：</span> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
-<p><enter></enter></p>
-<span class="label info">通俗定义：</span> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
-
-
-<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><span class="label primary">解决啥问题</span>
-<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
-<span class="label primary">没有它之前怎么做</span>
-<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
-<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
-<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
-<ul>
-<li>测试方法(黑盒/白盒/灰盒)</li>
-<li>目标(服务器/数据库/Web网站…)</li>
-<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
-</ul>
-<p><span id="inline-toc">2.</span> 测试过程</p>
-<span class="label success">信息收集</span>
-
-<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
-<span class="label success">技术测试</span>
-
-<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
-<span class="label success">人员测试</span>
-
-<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
-<p><span id="inline-toc">3.</span> 测试之后</p>
-<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
-<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032" target="_blank" rel="noopener">这里</a> 有一个渗透测试免费入门视频教程.</p>
-<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----" target="_blank" rel="noopener">juice shop</a>:<br><a href="https://sm.ms/image/qzf5HgmRUFyc6Kj" target="_blank"><img src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png" ></a><br>它是由权威组织 <a href="https://owasp.org/" target="_blank" rel="noopener">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/" target="_blank" rel="noopener">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
-<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
-<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<span class="label primary">disable=true</span> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MTQyNjQxMg==' frameborder=0 'allowfullscreen'></iframe>
-
-
-<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
-<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgwODAwOA==' frameborder=0 'allowfullscreen'></iframe>
-
-
-<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
-<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT * FROM Users WHERE email&#x3D; &#39;xxx&#39; AND password &#x3D; &#39;xxx&#39; ......</span><br></pre></td></tr></table></figure>
-<p>由此我们可以根据这个信息，构造万能密码 <span class="label primary">' or 1--</span>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjkxNzA4NA==' frameborder=0 'allowfullscreen'></iframe>
-
-
-<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
-<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<span class="label primary">main.js</span>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <span class="label primary">administration</span> ，回车之后进入管理员页面，并解决挑战。</p>
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgxNzQ4MA==' frameborder=0 'allowfullscreen'></iframe>
-
-<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
-<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <span class="label primary">rest/basket/1</span>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <span class="label primary">email' and 1--</span> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
-<div class="note info">
-            <p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
-          </div>
-
-<p>登录Jim之后我们就看他的购物车请求是<span class="label primary">rest/basket/2</span>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<span class="label primary">rest/basket/1</span>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
-<div class="note warning">
-            <p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000" target="_blank" rel="noopener">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/" target="_blank" rel="noopener">charles官网</a>的说明。</p>
-          </div>
-
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDY2MjgxMzE0NA==' frameborder=0 'allowfullscreen'></iframe>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/24a39068dbf9" target="_blank" rel="noopener">结合OWASP Top 10 初识安全测试</a></li>
-<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage" target="_blank" rel="noopener">OWASP Juice Shop 实战报告与解析</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>渗透测试</tag>
-        <tag>OWASP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客被停止访问之后</title>
     <url>/SiteBrokenFix/</url>
     <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">&#x1f631;</span></p>
@@ -1001,84 +1079,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的一些写作标签</title>
-    <url>/How-to-Write/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
-
-<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
-<blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
-</blockquote>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
-<div class="note default">
-            <p>default</p>
-          </div>
-<div class="note primary">
-            <p>primary</p>
-          </div>
-<div class="note success">
-            <p>success</p>
-          </div>
-<div class="note info">
-            <p>info</p>
-          </div>
-<div class="note warning">
-            <p>warning</p>
-          </div>
-<div class="note danger">
-            <p>danger</p>
-          </div>
-
-<p>_config 文件配置关键字：note, 我的配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
-<span class="label default">默认</span>
-<span class="label primary">主要</span>
-<span class="label success">成功</span>
-<span class="label info">信息</span>
-<span class="label warning">警告</span>
-<span class="label danger">危险</span>
-
-<p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
-<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
-
-
-<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果：</p>
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
-
-<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
-<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
-<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1209,7 +1209,11 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 <p><span id="inline-toc">2.</span> 点击Next，命名项目：<br><img src="https://i.loli.net/2020/05/15/JzQ2vPyFL1tm7iA.jpg" ></p>
 <p><span id="inline-toc">3.</span> 命名为Automation，点击Next：<br><img src="https://i.loli.net/2020/05/15/nuy6grKl4vSMkEd.png" ></p>
 <p><span id="inline-toc">4.</span>点击Finish后, 项目就创建好了，控制台输出的内容和我们上文中用命令创建的时候终端输出内容是一样的：<br><img src="https://i.loli.net/2020/05/15/ejac3QP5tVzq6Ls.png" ></p>
-<h3 id="添加Selenium依赖"><a href="#添加Selenium依赖" class="headerlink" title="添加Selenium依赖"></a>添加Selenium依赖</h3><p>在IDEA点击<span class="label info">code->generate->dependency</span>(或者在pom.xml文件里Ctrl+N-&gt;Dependency)，打开Maven Artifact Search窗口，这里可以搜索并添加依赖，搜索selenium, 因为我们是用java写代码，所以要加入selenium.java依赖包，选择任一版本：<br><img src="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png" ><br>之后在pom.xml文件里就可以看到Selenium依赖已经添加了。显示红色因为还没有下载，所以我们要点击页面右上角的Maven小图标下载依赖包:<br><img src="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png" ><br>下载完成后就可以看到相应依赖已经添加到项目的Extenral Libraries中了：<br><img src="https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png" ><br>下载的依赖文件也可以在创建项目时设置的<strong>Local repository</strong>路径里找到，默认是在<span class="label info">.m2/repository/</span>路径下。</p>
+<h3 id="添加Selenium依赖"><a href="#添加Selenium依赖" class="headerlink" title="添加Selenium依赖"></a>添加Selenium依赖</h3><p>在IDEA点击<span class="label info">code->generate->dependency</span>(或者在pom.xml文件里Ctrl+N-&gt;Dependency)，打开Maven Artifact Search窗口，这里可以搜索并添加依赖，搜索selenium, 因为我们是用java写代码，所以要加入selenium.java依赖包，选择任一版本：<br><img src="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png" ></p>
+<blockquote>
+<p>如果怎么都打不开Maven Artifact Search窗口，还可以打开maven <a href="https://mvnrepository.com/" target="_blank" rel="noopener">中央仓库</a> 的网站，首页搜索selenium，选择selenium.java依赖包版本，然后将依赖包代码粘贴到pom文件中：<br><img src="https://i.loli.net/2020/06/02/2pWOkP4cG7TqfKA.png" ><br><img src="https://i.loli.net/2020/06/02/CawP49RQxu3gUhL.png" ></p>
+</blockquote>
+<p>之后在pom.xml文件里就可以看到Selenium依赖已经添加了。显示红色因为还没有下载，所以我们要点击页面右上角的Maven小图标下载依赖包:<br><img src="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png" ><br>下载完成后就可以看到相应依赖已经添加到项目的Extenral Libraries中了：<br><img src="https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png" ><br>下载的依赖文件也可以在创建项目时设置的<strong>Local repository</strong>路径里找到，默认是在<span class="label info">.m2/repository/</span>路径下。</p>
 <h3 id="下载WebDriver"><a href="#下载WebDriver" class="headerlink" title="下载WebDriver"></a>下载WebDriver</h3><p>有了Selenium依赖，我们还需要下载WebDirver，因为我们是用WebDriver开启浏览器测试。这里我们下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">Firefox</a>和<a href="https://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">Chrome</a>的WebDriver，下载完成后在项目新建drivers文件夹放置，便于管理：<br><img src="https://i.loli.net/2020/05/15/IisXJT1xD4q2yCG.png" ></p>
 <div class="note warning">
             <p>注意，下载WebDriver之前，需要确保电脑上已经下载了对应的浏览器，否则是不能使用的。</p>
@@ -1347,6 +1351,38 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站评论回家了</title>
+    <url>/comments-comeback/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
+
+<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info">
+            <p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
+          </div>
+
+<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
+
+<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more" target="_blank" rel="noopener">这篇博客</a>给出的解决办法：</p>
+<div class="note primary">
+            <p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
+          </div>
+
+<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
+
+<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
+<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
+<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>评论系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1501,38 +1537,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>网站评论回家了</title>
-    <url>/comments-comeback/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png" >
-
-<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p>
-<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info">
-            <p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
-          </div>
-
-<img src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png" >
-
-<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">&#x1f614;</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more" target="_blank" rel="noopener">这篇博客</a>给出的解决办法：</p>
-<div class="note primary">
-            <p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
-          </div>
-
-<img src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png" >
-
-<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png" ></p>
-<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png" ></p>
-<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>评论系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java类中的代码块执行顺序</title>
     <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
@@ -1570,20 +1574,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 <p>答案在这里：</p>
 <p><img src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
 ]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<a id="more"></a>
-
-<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
       <categories>
         <category>学习小记</category>
       </categories>
@@ -1635,6 +1625,20 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </categories>
       <tags>
         <tag>闰年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<a id="more"></a>
+
+<iframe height=498 width=666 src='http://player.youku.com/embed/XMzU1ODc3NDU2NA==' frameborder=0 'allowfullscreen'></iframe>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1810,56 +1814,6 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<a id="more"></a>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>未来</tag>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -1927,33 +1881,53 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+    <title>未来是星辰大海</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
 <a id="more"></a>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>好看的书</category>
+        <category>生活随想</category>
       </categories>
       <tags>
-        <tag>王小波</tag>
+        <tag>未来</tag>
+        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
@@ -2016,6 +1990,36 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<a id="more"></a>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>递归求解1到100求和</title>
     <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
     <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
@@ -2046,6 +2050,16 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
       </tags>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/links/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -2063,24 +2077,9 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 ]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>tags</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/links/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/jquery_lazyload/bower.json</url>
-    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
@@ -2108,6 +2107,11 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/jquery_lazyload</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lib/jquery_lazyload/bower.json</url>
+    <content><![CDATA[{"name":"jquery_lazyload","version":"1.9.4","homepage":"http://www.appelsiini.net/projects/lazyload","authors":["Mika Tuupola <tuupola@appelsiini.net>"],"description":"jQuery plugin for lazy loading images","main":["jquery.lazyload.js","jquery.scrollstop.js"],"license":"MIT","ignore":["**/.*","**/*.min.js","**/*.html","**/*.textile","Gruntfile.js","lazyload.jquery.json","package.json","node_modules","bower_components","test","img"]}]]></content>
   </entry>
   <entry>
     <title></title>
