@@ -10,6 +10,7 @@ type: "about"
 
 # About Me #
 
+<img src="https://i.loli.net/2020/08/01/2WpFPRzbawuXsmM.png" width="200" height="200">
 {% cq %}
 97年老阿姨:girl:
 ThoughtWorks.QA
@@ -19,14 +20,6 @@ ThoughtWorks.QA
 
 # About this site #
 
-本博客基于**Hexo**博客框架搭建，并部署在**GithubPages**和**CodingPages**上。如果你也想搭建，可以参考 [我写的文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more)
-
-博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟:laughing:
-
-# Join ThoughtWorks #
-
-{% note info %} 
-想加入TW嘛:wink:, 无论校招社招，需要内推的童鞋请移步 [牛客网内推贴](https://www.nowcoder.com/discuss/225857) 私聊博主，获得内推链接和招聘信息哦, 也可在下方评论区留言哟。
-博客DaoVoice修复中，所以暂时不能在线联系，牛客网回复频率较慢。
+{% note info %}
+本博客基于**Hexo**博客框架搭建，并部署在**GithubPages**和**CodingPages**上。如果你也想搭建，可以参考 [我写的文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more)，博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟:laughing:
 {% endnote %}
-

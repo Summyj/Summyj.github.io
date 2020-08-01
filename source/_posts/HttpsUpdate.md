@@ -9,6 +9,7 @@ description: 道路千万条，安全第一条。
 top:
 ---
 
+<img src="https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png" >
 
 ## 事情是这样的
 
