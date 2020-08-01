@@ -31,7 +31,7 @@ top:
 
 <img src="https://i.loli.net/2020/07/30/aLlXtRmycKpk2Ji.png" >
 
-我得意的笑😊
+我得意的笑 :grin:
 
 ## 知其所以然
 
