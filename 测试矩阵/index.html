@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -290,7 +290,7 @@
         <p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
 <a id="more"></a>
 
-<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/" target="_blank" rel="noopener">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
+<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a target="_blank" rel="noopener" href="http://insights.thoughtworks.cn/test-matrix/">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
 <h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
 <p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
 <h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
@@ -343,7 +343,25 @@
 <blockquote>
 <p>事实上，，而常常忽略了第二个维度，即咋测。所以，根据测试矩阵进行测试，可以避免这种问题。在实际测试工作中，大多数情况下都进行的是功能测试</p>
 </blockquote>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -448,7 +466,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你晕了没"><span class="nav-number">1.</span> <span class="nav-text">你晕了没</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试矩阵"><span class="nav-number">2.</span> <span class="nav-text">测试矩阵</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%A0%E6%99%95%E4%BA%86%E6%B2%A1"><span class="nav-number">1.</span> <span class="nav-text">你晕了没</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5"><span class="nav-number">2.</span> <span class="nav-text">测试矩阵</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -537,14 +555,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">82k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:29</span>
+    <span title="站点阅读时长">4:32</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.0.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0

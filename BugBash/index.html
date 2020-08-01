@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -297,7 +297,7 @@
       
         <p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
 <h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></tbody></table></figure>
 
 <p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
 <h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
@@ -321,7 +321,25 @@
 <h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
 <h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
 <h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -426,7 +444,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#啥是BugBash"><span class="nav-number">1.</span> <span class="nav-text">啥是BugBash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何做好一次BugBash"><span class="nav-number">2.</span> <span class="nav-text">如何做好一次BugBash</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在BugBash之前"><span class="nav-number">2.1.</span> <span class="nav-text">在BugBash之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在BugBash会议中"><span class="nav-number">2.2.</span> <span class="nav-text">在BugBash会议中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在BugBash之后"><span class="nav-number">2.3.</span> <span class="nav-text">在BugBash之后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的BugBash模版"><span class="nav-number">3.</span> <span class="nav-text">我的BugBash模版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本信息"><span class="nav-number">3.1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#被测功能简单介绍"><span class="nav-number">3.2.</span> <span class="nav-text">被测功能简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要测试场景及其checkpoints"><span class="nav-number">3.3.</span> <span class="nav-text">主要测试场景及其checkpoints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试数据"><span class="nav-number">3.4.</span> <span class="nav-text">测试数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试任务分配"><span class="nav-number">3.5.</span> <span class="nav-text">测试任务分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果讨论"><span class="nav-number">3.6.</span> <span class="nav-text">结果讨论</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%A5%E6%98%AFBugBash"><span class="nav-number">1.</span> <span class="nav-text">啥是BugBash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E6%AC%A1BugBash"><span class="nav-number">2.</span> <span class="nav-text">如何做好一次BugBash</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8BugBash%E4%B9%8B%E5%89%8D"><span class="nav-number">2.1.</span> <span class="nav-text">在BugBash之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8BugBash%E4%BC%9A%E8%AE%AE%E4%B8%AD"><span class="nav-number">2.2.</span> <span class="nav-text">在BugBash会议中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8BugBash%E4%B9%8B%E5%90%8E"><span class="nav-number">2.3.</span> <span class="nav-text">在BugBash之后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84BugBash%E6%A8%A1%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">我的BugBash模版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">3.1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A2%AB%E6%B5%8B%E5%8A%9F%E8%83%BD%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.2.</span> <span class="nav-text">被测功能简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%B5%8B%E8%AF%95%E5%9C%BA%E6%99%AF%E5%8F%8A%E5%85%B6checkpoints"><span class="nav-number">3.3.</span> <span class="nav-text">主要测试场景及其checkpoints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="nav-number">3.4.</span> <span class="nav-text">测试数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D"><span class="nav-number">3.5.</span> <span class="nav-text">测试任务分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E8%AE%A8%E8%AE%BA"><span class="nav-number">3.6.</span> <span class="nav-text">结果讨论</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -515,14 +533,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">82k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:29</span>
+    <span title="站点阅读时长">4:32</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.0.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0

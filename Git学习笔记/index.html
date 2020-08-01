@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -269,7 +269,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
         <p>对近几天的Git学习做一个小结。</p>
 <a id="more"></a>
 
-<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
+<p>学完了<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
 <hr>
 <h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
 <ul>
@@ -373,7 +373,25 @@
 <p>git push origin tagname:推送标签到远程</p>
 <p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
 <p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -479,7 +497,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#几点感受"><span class="nav-number">1.</span> <span class="nav-text">几点感受</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#干货"><span class="nav-number">2.</span> <span class="nav-text">干货</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git本地管理"><span class="nav-number">2.1.</span> <span class="nav-text">git本地管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程库连接"><span class="nav-number">2.3.</span> <span class="nav-text">远程库连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支创建管理"><span class="nav-number">2.4.</span> <span class="nav-text">分支创建管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作现场存储"><span class="nav-number">2.5.</span> <span class="nav-text">工作现场存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多人协作"><span class="nav-number">2.6.</span> <span class="nav-text">多人协作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">2.7.</span> <span class="nav-text">标签管理</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%A0%E7%82%B9%E6%84%9F%E5%8F%97"><span class="nav-number">1.</span> <span class="nav-text">几点感受</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B2%E8%B4%A7"><span class="nav-number">2.</span> <span class="nav-text">干货</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">git本地管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.3.</span> <span class="nav-text">远程库连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA%E7%AE%A1%E7%90%86"><span class="nav-number">2.4.</span> <span class="nav-text">分支创建管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA%E5%AD%98%E5%82%A8"><span class="nav-number">2.5.</span> <span class="nav-text">工作现场存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="nav-number">2.6.</span> <span class="nav-text">多人协作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86"><span class="nav-number">2.7.</span> <span class="nav-text">标签管理</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -568,14 +586,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">82k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:29</span>
+    <span title="站点阅读时长">4:32</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.0.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0

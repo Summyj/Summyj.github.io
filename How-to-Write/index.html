@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
@@ -294,17 +294,17 @@
         <img src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图">
 
 <h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一行代码</span><br></pre></td></tr></tbody></table></figure>
 
 <p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:command %&#125;</span><br><span class="line">这是一行代码</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% codeblock lang:command %}</span><br><span class="line">这是一行代码</span><br><span class="line">{% endcodeblock %}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
 <blockquote class="blockquote-center"><p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
 </blockquote>
 
 <p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% cq %}</span><br><span class="line">四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</span><br><span class="line">{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
 <div class="note default">
@@ -327,10 +327,10 @@
           </div>
 
 <p>_config 文件配置关键字：note, 我的配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">style: flat</span><br><span class="line">icons: true</span><br><span class="line">border_radius: 3</span><br></pre></td></tr></tbody></table></figure>
 
 <p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">{% note <span class="keyword">default</span> %}</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">{% endnote %}</span><br><span class="line">{% note primary %}</span><br><span class="line">primary</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note success %}</span><br><span class="line">success</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note info %}</span><br><span class="line">info</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note warning %}</span><br><span class="line">warning</span><br><span class="line">{% endnote %}</span><br><span class="line">{% note danger %}</span><br><span class="line">danger</span><br><span class="line">{% endnote %}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
 <span class="label default">默认</span>
@@ -341,23 +341,41 @@
 <span class="label danger">危险</span>
 
 <p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125;</span><br><span class="line">&#123;% label primary@主要 %&#125;</span><br><span class="line">&#123;% label success@成功 %&#125;</span><br><span class="line">&#123;% label info@信息 %&#125;</span><br><span class="line">&#123;% label warning@警告 %&#125;</span><br><span class="line">&#123;% label danger@危险 %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">{% label <span class="keyword">default</span>@默认 %}</span><br><span class="line">{% label primary@主要 %}</span><br><span class="line">{% label success@成功 %}</span><br><span class="line">{% label info@信息 %}</span><br><span class="line">{% label warning@警告 %}</span><br><span class="line">{% label danger@危险 %}</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
-<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">&#x1f606;</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">&#x263a;</span></p></div></div></div>
+<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">☺</span></p></div></div></div>
 
 
 <h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %&#125;</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% blockquote 王小波 http:<span class="comment">//www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}</span></span><br><span class="line">那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</span><br><span class="line">{% endblockquote %}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>效果：</p>
 <blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html" target="_blank" rel="noopener">黄金时代</a></cite></footer></blockquote>
+<footer><strong>王小波</strong><cite><a target="_blank" rel="noopener" href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
 
-<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="noopener">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">Next内置标签</a> 可以找到。</p>
-<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97" target="_blank" rel="noopener">这个</a> 设置。</p>
+<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a target="_blank" rel="noopener" href="https://hexo.io/docs/tag-plugins.html">Hexo标签</a> 和 <a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/tag-plugins.html">Next内置标签</a> 可以找到。</p>
+<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a target="_blank" rel="noopener" href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97">这个</a> 设置。</p>
 <p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization" target="_blank" rel="noopener">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/" target="_blank" rel="noopener">Hexo-Next搭建个人博客（主题优化）</a></p>
-
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a target="_blank" rel="noopener" href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a target="_blank" rel="noopener" href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/">Hexo-Next搭建个人博客（主题优化）</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -463,7 +481,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Next-标签"><span class="nav-number">1.</span> <span class="nav-text">Hexo&#x2F;Next 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">1.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本居中"><span class="nav-number">1.2.</span> <span class="nav-text">文本居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#note"><span class="nav-number">1.3.</span> <span class="nav-text">note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label"><span class="nav-number">1.4.</span> <span class="nav-text">label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tabs"><span class="nav-number">1.5.</span> <span class="nav-text">Tabs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用句子"><span class="nav-number">1.6.</span> <span class="nav-text">引用句子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他标签"><span class="nav-number">1.7.</span> <span class="nav-text">其他标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义标签"><span class="nav-number">2.</span> <span class="nav-text">自定义标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字块"><span class="nav-number">2.1.</span> <span class="nav-text">数字块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Next-%E6%A0%87%E7%AD%BE"><span class="nav-number">1.</span> <span class="nav-text">Hexo&#x2F;Next 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%B1%85%E4%B8%AD"><span class="nav-number">1.2.</span> <span class="nav-text">文本居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#note"><span class="nav-number">1.3.</span> <span class="nav-text">note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label"><span class="nav-number">1.4.</span> <span class="nav-text">label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tabs"><span class="nav-number">1.5.</span> <span class="nav-text">Tabs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%8F%A5%E5%AD%90"><span class="nav-number">1.6.</span> <span class="nav-text">引用句子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE"><span class="nav-number">1.7.</span> <span class="nav-text">其他标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE"><span class="nav-number">2.</span> <span class="nav-text">自定义标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%9D%97"><span class="nav-number">2.1.</span> <span class="nav-text">数字块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -552,14 +570,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">82k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:29</span>
+    <span title="站点阅读时长">4:32</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.0.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
