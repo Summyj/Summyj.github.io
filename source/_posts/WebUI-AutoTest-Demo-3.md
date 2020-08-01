@@ -195,7 +195,7 @@ Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到�
 
 Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 **artifact** 文件夹下。
 比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：
-<a href="https://sm.ms/image/mv1zS4twIC7d6G8" target="_blank"><img src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png" ></a>
+<img src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png" >
 运行结束之后，在页面上也可以看到它：
 <img src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png" >
 
