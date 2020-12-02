@@ -49,6 +49,81 @@
       </tags>
   </entry>
   <entry>
+    <title>网络无障碍</title>
+    <url>/Accessibility-test/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></span></p>
+<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
+<blockquote>
+<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+</blockquote>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
+<div class="note info">
+            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
+          </div>
+
+<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
+<ul>
+<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
+<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
+</ul>
+<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
+<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
+            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
+          </div>
+<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
+<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
+<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
+<img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
+
+<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
+<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
+<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
+<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
+<div class="note info">
+            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
+          </div>
+<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
+<div class="note primary">
+            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
+          </div>
+<img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
+不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
+
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
+<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>网络无障碍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浅谈自动化测试框架</title>
     <url>/AutoTest-FrameWork/</url>
     <content><![CDATA[<img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg">
@@ -169,81 +244,6 @@
       </categories>
       <tags>
         <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络无障碍</title>
-    <url>/Accessibility-test/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<span class="label info">网络无障碍测试</span>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<span class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></span></p>
-<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
-<blockquote>
-<p>网络无障碍辅助功能（Accessibility，也被称为 <span class="label danger">a11y</span>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
-</blockquote>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
-<div class="note info">
-            <p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
-          </div>
-
-<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
-<ul>
-<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
-<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
-</ul>
-<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<span class="label info">前端童鞋</span>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
-<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
-
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning">
-            <p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
-          </div>
-<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
-<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
-<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
-<img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
-
-<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
-<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
-<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
-<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
-<div class="note info">
-            <p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
-          </div>
-<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
-<div class="note primary">
-            <p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
-          </div>
-<img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
-不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
-
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
-<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>网络无障碍</tag>
       </tags>
   </entry>
   <entry>
@@ -414,61 +414,6 @@
       </tags>
   </entry>
   <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></tbody></table></figure>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>项目实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
@@ -558,6 +503,61 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>升级博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">时间：产品上线前一两周，测试结束之后。</span><br><span class="line">地点：最好找个会议室，线上也行</span><br><span class="line">人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员</span><br><span class="line">事件：大家一起找bug</span><br></pre></td></tr></tbody></table></figure>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<span class="label default">TO DO</span>/<span class="label warning">IN PROGRESS</span>/<span class="label success">DONE</span>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
       </tags>
   </entry>
   <entry>
@@ -1293,6 +1293,42 @@
       </tags>
   </entry>
   <entry>
+    <title>沉默的抗争</title>
+    <url>/Silent-protest/</url>
+    <content><![CDATA[<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<hr>
+<div class="note default">
+            <p>王铁锤，一个在沉默中「爆发」的人。</p><p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p><p>但后来项目的走向，打破了他的期望。</p><p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p><p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p><p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p><p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p><p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p><p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p><p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p><p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p><p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
+          </div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>生活感悟</category>
+      </categories>
+      <tags>
+        <tag>王铁锤</tag>
+        <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客被停止访问之后</title>
     <url>/SiteBrokenFix/</url>
     <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">😱</span></p>
@@ -1887,6 +1923,201 @@
       </tags>
   </entry>
   <entry>
+    <title>测试策略浅谈</title>
+    <url>/testStrategy/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png">
+
+<div class="note info">
+            <p>前段时间，有同事分享了一些测试策略设计的内容，讲的很不错。并且自己也是最近才开始接触一些新的项目，之前都是中途加入项目工作，没有全面思考过测试策略的东西，所以感触比较深。于是记了点笔记和自己的心得，这样后续再加入一些新项目，也不会手足无措了。</p>
+          </div>
+
+<h2 id="Foreword：前言"><a href="#Foreword：前言" class="headerlink" title="Foreword：前言"></a>Foreword：前言</h2><p>每一个测试小朋友进入到全新的项目时，肯定有很多<span class="label info">问号</span>，比如：</p>
+<ul>
+<li>这是一个什么样的项目？</li>
+<li>是一个旧项目的改造还是一个全新的项目？</li>
+<li>是某个产品的一部分，还是独立的一个产品？如果是一部分，是上游，还是下游，还是中间？</li>
+<li>这个项目的用户群体是什么样？用户群体的数量？</li>
+<li>这个项目的周期是多久？多久发一次版，每个版本分为几个阶段？</li>
+<li>这个项目要做哪些方面的测试？</li>
+<li>这个项目有几个QA？<br>…</li>
+</ul>
+<p>其实，这些问题都是包含在测试策略中的。</p>
+<h2 id="What？测试策略是什么"><a href="#What？测试策略是什么" class="headerlink" title="What？测试策略是什么"></a>What？测试策略是什么</h2><blockquote>
+<p><strong>测试策略</strong>一般是针对一个整体产品或者版本，制定出的包含质量保证策略、测试范围、测试方法、测试计划管理、测试分层、测试重点和难点、测试执行过程管理、环境策略、Showcase管理、风险识别等方面的<strong>设计文档</strong>。</p>
+</blockquote>
+<p>好的测试策略可以提升团队的质量水平和QA团队的工作效率，在敏捷软件开发生命周期的每一个阶段都能发挥作用。</p>
+<h2 id="When？什么时候设计测试策略"><a href="#When？什么时候设计测试策略" class="headerlink" title="When？什么时候设计测试策略"></a>When？什么时候设计测试策略</h2><div class="note primary">
+            <p>测试策略的设计，一般在需求分析(Inception)阶段开始，与技术设计并行，并且在需求分析阶段不断补充和完善。需要在测试阶段开始之前闭环。</p>
+          </div>
+
+<h2 id="Who？谁应该参与测试策略设计"><a href="#Who？谁应该参与测试策略设计" class="headerlink" title="Who？谁应该参与测试策略设计"></a>Who？谁应该参与测试策略设计</h2><pre><code>测试策略是由项目的QA团队输出，团队成员参与评审的。</code></pre>
+<p>由于敏捷开发是一种重实践，轻文档的开发模式。所以个人认为不必写出多么详尽的文档，重要的是考虑全面，列出关键点，和团队成员一起讨论，达成共识，且在后续的开发测试过程中注意与测试策略保持一致。</p>
+<h2 id="How？如何设计测试策略"><a href="#How？如何设计测试策略" class="headerlink" title="How？如何设计测试策略"></a>How？如何设计测试策略</h2><p>上文提到了测试策略是由许多方面的集合，接下来就分别聊聊它们。</p>
+<h3 id="敏捷团队的质量保证策略"><a href="#敏捷团队的质量保证策略" class="headerlink" title="敏捷团队的质量保证策略"></a>敏捷团队的质量保证策略</h3><p>首先就是敏捷团队的质量保证策略，其实这就是许多非QA角色眼中的<strong>狭义测试策略</strong>，展示了敏捷开发中每个阶段团队如何协作来保证产品质量。个人认为这个是最基本的质量保证标准，每个敏捷团队都应该做好。</p>
+<img src="https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png">
+
+<p><span id="inline-toc">1.</span> <strong>故事分析</strong><br>BA与客户沟通清楚需求后，编写故事卡，并和QA结对写AC，或者写完AC找QA review.<br><span id="inline-toc">2.</span> <strong>故事启动</strong><br>BA组织团队成员一起讨论开发内容，澄清需求。<br><span id="inline-toc">3.</span> <strong>故事开发</strong><br>Dev同学按照需求写代码，确保单元测试的覆盖率满足要求。QA同学编写测试用例和自动化测试。<br><span id="inline-toc">4.</span> <strong>故事验收</strong><br>团队成员一起在正确的环境进行deskCheck，确保代码通过AC，满足基本需求。并再次检查单元测试的覆盖率是否满足要求。<br><span id="inline-toc">5.</span> <strong>故事测试</strong><br>QA同学进行测试，将发现的问题与BA、开发沟通并修复，直到产品行为满足需求。<br><span id="inline-toc">6.</span> <strong>故事演示</strong><br>所有故事卡测试通过后，团队组织showcase邀请客户一起查看产品功能，并对showcase中客户提出的优化建议进行记录，确定优先级后放入相应迭代开发范围。如果离上线还有一段时间，也可以组织团队成员进行BugBash，最好邀请客户，提前识别更多问题。<br><span id="inline-toc">7.</span> <strong>故事上线</strong><br>当所有Bug和优先级高的优化问题都已解决后，用户故事就可以上线了。上线后，对应用户故事的生命周期就已经终结。线上发现的问题在确定优先级后，建立新的用户故事，放入对应迭代开发范围。</p>
+<div class="note default">
+            <p>上线之后，团队应该回顾分析上个迭代的开发测试情况，可以一起查看迭代的<strong>Sprint report</strong>和<strong>Bug report</strong>。</p>
+          </div>
+
+<pre><code>Sprint report</code></pre>
+<p>Sprint report是敏捷开发管理工具Jira的一个功能，如下图，纵轴是迭代内所有故事卡的点数，横轴是迭代时间。两周一个迭代，体现了迭代内随时间推移故事卡开发的情况：</p>
+<img src="https://i.loli.net/2020/12/01/vEqDKlLMYz6fA3X.png">
+
+<p>灰色线条是在迭代开始后，默认生成的一条该迭代的理想开发速率线，灰色地带是周末，所以没有变化(这也可以看出敏捷开发是不提倡加班的<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)。红色是迭代开发的真实情况，健康的敏捷开发，<strong>红线的趋势应该是和灰线基本一致的</strong>。<br>上图就是因为两周内并不能完成迭代任务，所以又延迟了两周，此时就应该分析为什么会导致这种情况，是对需求理解不够，点数估计少了呢，还是别的原因，从而避免以后再发生同样的情况。<br>这里我再贴几张迭代的Sprint report，都是我之前经历过的真实敏捷迭代(所以我都经历了什么<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>抱走心酸的自己<span class="emoji" alias="persevere" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f623.png?v8">😣</span>)，大家可以自己尝试分析，导致下边几种情况的可能原因：<br><img src="https://i.loli.net/2020/12/01/tueAgQEZ9byo4la.png"><br><img src="https://i.loli.net/2020/12/01/xSCBPQ9MJzLVTHb.png"><br>其实之前也有两条线一致的时候，但那已经是很久之前了。。。。</p>
+<pre><code>Bug report</code></pre>
+<p>Bug report是对迭代内发现问题的总结，由QA同学产出，如何做好Bug report可以参考<a href="https://mp.weixin.qq.com/s/OVqTsk6OJ_xi5Q4iWtKkUg">ThoughtWorks洞见-Bug Report该怎么做?</a></p>
+<h3 id="测试范围和重难点分析"><a href="#测试范围和重难点分析" class="headerlink" title="测试范围和重难点分析"></a>测试范围和重难点分析</h3><blockquote>
+<p><strong>测试范围</strong>的确定需要分析软件周期各个阶段的需求目标，了解客户期望和产品的用户群体，主要包括以下几个方面：</p>
+</blockquote>
+<pre><code>功能</code></pre>
+<ul>
+<li>业务功能</li>
+<li>API功能</li>
+<li>数据一致性</li>
+<li>…</li>
+</ul>
+<pre><code>性能</code></pre>
+<ul>
+<li>接口性能</li>
+<li>单接口并发和非并发访问性能，混合场景并发访问性能</li>
+<li>页面性能</li>
+<li>常用操作页面响应时间，非常用操作页面响应时间</li>
+<li>…</li>
+</ul>
+<pre><code>安全</code></pre>
+<ul>
+<li>API访问权限</li>
+<li>数据访问权限</li>
+<li>数据传输安全</li>
+<li>数据存储安全</li>
+<li>异常信息展示安全</li>
+<li>日志信息安全</li>
+<li>…</li>
+</ul>
+<pre><code>易用性</code></pre>
+<ul>
+<li>页面展示的引导性</li>
+<li>操作的便捷性</li>
+<li>返回信息的易理解性</li>
+<li>…</li>
+</ul>
+<pre><code>兼容性</code></pre>
+<ul>
+<li>操作系统兼容</li>
+<li>数据库兼容</li>
+<li>浏览器兼容</li>
+<li>应用软件兼容</li>
+<li>…</li>
+</ul>
+<pre><code>可维护性</code></pre>
+<ul>
+<li>软件的安装和升级是否可以很容易的完成</li>
+<li>核心操作是否都有日志记录</li>
+<li>…</li>
+</ul>
+<pre><code>可靠性</code></pre>
+<ul>
+<li>接口加锁和释放</li>
+<li>接口失败重试</li>
+<li>服务重启后数据恢复</li>
+<li>大数据处理能力</li>
+<li>页面重复操作禁止</li>
+<li>…</li>
+</ul>
+<pre><code>稳定性</code></pre>
+<ul>
+<li>长时间访问系统，系统在响应时间，资源使用方面的情况</li>
+<li>…</li>
+</ul>
+<p><strong>以上这些方面，确定之后要求BA在写卡以及QA测卡时都要注意覆盖到。</strong></p>
+<blockquote>
+<p><strong>测试重难点</strong>确定后，需要多增加对应模块的回归测试，开发也应该增加单元测试的覆盖率。</p>
+</blockquote>
+<pre><code>测试重点</code></pre>
+<ul>
+<li>需求的核心功能</li>
+<li>经常变化的部分</li>
+<li>与其他系统相互影响的部分</li>
+</ul>
+<pre><code>测试难点</code></pre>
+<ul>
+<li>相对不够独立的部分</li>
+<li>处理过程较复杂的部分</li>
+</ul>
+<h3 id="测试方法与分层"><a href="#测试方法与分层" class="headerlink" title="测试方法与分层"></a>测试方法与分层</h3><div class="note info">
+            <p>明确测试范围，时间和人力之后，还应该根据需求的变化来确定<strong>测试方法</strong>，决定是否需要自动化测试。然后再按照 <a href="https://jmyblog.top/Test-Pyramid/">测试金字塔原理</a> 决定每种测试方法的比重。</p>
+          </div>
+
+<h3 id="测试计划管理"><a href="#测试计划管理" class="headerlink" title="测试计划管理"></a>测试计划管理</h3><blockquote>
+<p>测试计划管理是指按照团队的上线计划，确定具体的测试时间，包括迭代内测试、集成测试、回归测试、验收测试。</p>
+</blockquote>
+<h3 id="测试执行过程管理"><a href="#测试执行过程管理" class="headerlink" title="测试执行过程管理"></a>测试执行过程管理</h3><p>主要包括：</p>
+<ul>
+<li>测试计划制定和管理：按照测试计划安排的时间执行测试，避免延期</li>
+<li>测试用例编写和管理：自动化用例编写以及自动化代码重构</li>
+<li>测试过程记录和管理：我的做法是在每张卡里记录自己的测试环境，场景以及是否通过，疑问等等</li>
+<li>测试结果管理：发现的缺陷管理，比如新建缺陷卡，Bug report等</li>
+</ul>
+<h3 id="环境策略"><a href="#环境策略" class="headerlink" title="环境策略"></a>环境策略</h3><blockquote>
+<p>稳定的环境是高效开发和测试的先决条件，个人人为在开发之前就应该配置好环境以及流水线等基础设施，主要用到的环境有：</p>
+</blockquote>
+<ul>
+<li>DEV环境：Dev自测和联调使用，deskCheck环境</li>
+<li>QA环境：QA日常测试使用</li>
+<li>UAT环境：用户验收测试</li>
+<li>其他环境：按照项目情况准备安全环境、性能测试环境等等</li>
+</ul>
+<h3 id="风险识别与解决"><a href="#风险识别与解决" class="headerlink" title="风险识别与解决"></a>风险识别与解决</h3><blockquote>
+<p>主要是识别敏捷开发流程中的质量风险。</p>
+</blockquote>
+<img src="https://i.loli.net/2020/12/01/rjD83zVIi9e4wHq.png">
+
+<p><span id="inline-toc">1.</span> <strong>需求阶段</strong></p>
+<p>R: 需求频繁变更，对产品的需求理解不准确有偏差。<br>S: 多和用户沟通，争取更充分的研发时间和测试时间，或者把提出的功能放到下一个版本中实现。提供验收环境给客户，需要的话也可以提供测试环境给客户，这样客户可以随时看到产品进展。</p>
+<p><span id="inline-toc">2.</span> <strong>开发阶段</strong></p>
+<p>R: 代码质量达不到相应要求，bug多，模块开发没有统一设计。<br>S: 提升单元测试覆盖率，进行code diff，与TL讨论更多提升代码质量的方式，确定好标准。</p>
+<p><span id="inline-toc">3.</span> <strong>测试阶段</strong></p>
+<p>R: 测试经验不足，用例设计不到位，对业务不熟悉、不了解用户如何操作该产品；测试时间短，测试环境与生产环境的不一致，不稳定。<br>S: 找BA或开发review测试用例，与开发一起pair单元测试场景；找熟悉产品的人员进行业务培训，增加人力，尽可能模拟用户使用的环境，在测试的时候尽量和用户沟通要到用户真实的数据进行测试。</p>
+<p><span id="inline-toc">4.</span> <strong>上线阶段</strong></p>
+<p>R: 上线环境准备不充足，与其他服务或系统有上线依赖。<br>S: 提前准备上线脚本、上线配置文档，上线前测试；提前识别上线依赖。</p>
+<h3 id="Showcase管理"><a href="#Showcase管理" class="headerlink" title="Showcase管理"></a>Showcase管理</h3><blockquote>
+<p>与客户、团队成员确定多久进行一次showcase，Showcase以什么样的方式进行。确定好每次showcase的owner，推荐的做法是轮流主持。</p>
+</blockquote>
+<h3 id="BugBash管理"><a href="#BugBash管理" class="headerlink" title="BugBash管理"></a>BugBash管理</h3><p>参考 <a href="https://jmyblog.top/BugBash/">BugBash知多少</a> 和 <a href="https://mp.weixin.qq.com/s/S5cOjQkyvpFxpfew_exZrA">如何成功的组织Bug bash</a>。</p>
+<h3 id="遗留问题记录"><a href="#遗留问题记录" class="headerlink" title="遗留问题记录"></a>遗留问题记录</h3><blockquote>
+<p>记录测试策略中还需要明确和后续更新的部分。</p>
+</blockquote>
+<h2 id="The-End：写在最后"><a href="#The-End：写在最后" class="headerlink" title="The End：写在最后"></a>The End：写在最后</h2><p>以上就是测试策略应该包含的内容，果然像海一样宽广<span class="emoji" alias="dizzy_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f635.png?v8">😵</span>，不过在敏捷开发中，产品的质量是渗透到每一个开发阶段的，所有团队成员都应该为质量负责，愿每一个QA都能开心的工(ban)作(zhuan)。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>敏捷</tag>
+        <tag>测试策略</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
@@ -2222,8 +2453,8 @@
         <category>生活随想</category>
       </categories>
       <tags>
-        <tag>未来</tag>
         <tag>人生</tag>
+        <tag>未来</tag>
       </tags>
   </entry>
   <entry>
@@ -2673,35 +2904,12 @@
 <footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm">关于幽闭型小说</a></cite></footer></blockquote>
 
 <h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><img src="https://i.loli.net/2020/08/01/2WpFPRzbawuXsmM.png" width="200" height="200">
-<blockquote class="blockquote-center"><p>97年老阿姨<span class="emoji" alias="girl" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f467.png?v8">👧</span><br>ThoughtWorks.QA<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 &amp; 天生宅 &amp; 懒癌晚期 &amp; 重度拖延</p>
+<blockquote class="blockquote-center"><p>97年生人 <span class="emoji" alias="girl" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f467.png?v8">👧</span><br>一个不想努力的老阿姨<br>音乐 - 健身 - 美食 - 追剧<br>巨蟹座 &amp; 天生宅 &amp; 懒癌晚期 &amp; 重度拖延</p>
 </blockquote>
 
 <h1 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h1><div class="note info">
-            <p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考 <a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>，博客主要更新一些技术文章，一些旅行游记，还有一些闲言碎语和生活感悟<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+            <p>本博客基于<strong>Hexo</strong>博客框架搭建，并部署在<strong>GithubPages</strong>和<strong>CodingPages</strong>上。如果你也想搭建，可以参考 <a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">我写的文章</a>，博客主要更新一些学习笔记，一些工(ban)作(zhuan)总结，还有一些闲言碎语和生活感悟<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
           </div><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -2724,6 +2932,29 @@
   <entry>
     <title>tags</title>
     <url>/tags/index.html</url>
+    <content><![CDATA[<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
