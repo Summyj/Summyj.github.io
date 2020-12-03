@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jmyblog.top/myCookingWay/</loc>
+    <lastmod>2020-12-03</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/Silent-protest/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-03</lastmod>
   </url>
   <url>
     <loc>https://jmyblog.top/testStrategy/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-03</lastmod>
   </url>
   <url>
     <loc>https://jmyblog.top/WebUI-AutoTest-Demo-3/</loc>
