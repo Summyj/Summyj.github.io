@@ -10,7 +10,7 @@
 
       {%- set display_toc = page.toc.enable and display_toc %}
       {%- if display_toc %}
-        {%- set toc = toc(page.content, { "class": "nav", list_number: page.toc.number, max_depth: page.toc.max_depth }) %}
+        {%- set toc = toc(page.content, { class: "nav", list_number: page.toc.number, max_depth: page.toc.max_depth }) %}
         {%- set display_toc = toc.length > 1 and display_toc %}
       {%- endif %}
 
@@ -45,17 +45,17 @@
       {%- endif %}
 
       {% if site.tags.length > 1 %}
-<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-<div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div id="myCanvasContainer" class="widget tagcloud">
-        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+        <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcloud.js') }}"></script>
+        <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcanvas.js') }}"></script>
+        <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+            <canvas width="250" height="250" id="resCanvas" style="width:100%">
             {{ list_tags() }}
-        </canvas>
-    </div>
-</div>
-{% endif %}
+            </canvas>
+          </div>
+        </div>
+      {% endif %}
 
     </div>
   </aside>

@@ -1,8 +1,8 @@
 <div align="right">
   Язык:
-  <a title="Английский" href="../../README.md">:us:</a>
-  <a title="Китайский" href="../zh-CN/README.md">:cn:</a>
-  :ru:
+  <a title="Английский" href="../../README.md">🇺🇸</a>
+  <a title="Китайский" href="../zh-CN/README.md">🇨🇳</a>
+  🇷🇺
 </div>
 
 # <div align="center"><a title="Репозиторий сайта NexT" href="https://github.com/theme-next/theme-next.org"><img align="center" width="56" height="56" src="https://raw.githubusercontent.com/theme-next/hexo-theme-next/master/source/images/logo.svg?sanitize=true"></a> e x T</div>
@@ -11,9 +11,9 @@
   «NexT» — элегантная высококачественная тема под <a href="https://hexo.io">Hexo</a>. Сделана с нуля, с любовью.
 <br>
 <br>
-  <a href="https://github.com/theme-next/hexo-theme-next/releases"><img src="https://img.shields.io/github/package-json/v/theme-next/hexo-theme-next?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/hexo-theme-next"><img src="https://img.shields.io/github/package-json/v/theme-next/hexo-theme-next?style=flat-square"></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square"></a>
-  <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=3.5.0-blue?style=flat-square&logo=hexo"></a>
+  <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo"></a>
   <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20AGPL-orange?style=flat-square&logo=gnu"></a>
 <br>
   <a href="https://bestpractices.coreinfrastructure.org/projects/2625"><img src="https://img.shields.io/cii/level/2625?style=flat-square" title="Инициатива базовой инфраструктуры: передовой опыт"></a>
@@ -27,7 +27,7 @@
 ## Демо
 
 <p align="center">
-  :heart_decoration: <a href="https://muse.theme-next.org">Muse</a> | :six_pointed_star: <a href="https://mist.theme-next.org">Mist</a> | :pisces: <a href="https://pisces.theme-next.org">Pisces</a> | :gemini: <a href="https://theme-next.org">Gemini</a>
+  💟 <a href="https://muse.theme-next.org">Muse</a> | 🔯 <a href="https://mist.theme-next.org">Mist</a> | ♓️ <a href="https://pisces.theme-next.org">Pisces</a> | ♊️ <a href="https://theme-next.org">Gemini</a>
 <br>
 <br>
   Больше примеров «NexT» <a href="https://github.com/theme-next/awesome-next#live-preview">здесь</a>.
@@ -53,14 +53,14 @@ $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```yml
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: false
+pjax: true
 ```
 
 Затем включаем параметр `pjax` и переходим по ссылке «Dependencies» с дальнейшеми инструкциями по установке этого модуля.
 
 ## Обновление
 
-Можно обновить до последней мастер-ветки следующей командой:
+NexT выпускает новые версии каждый месяц. Можно обновить до последней мастер-ветки следующей командой:
 
 ```sh
 $ cd themes/next
@@ -74,10 +74,9 @@ $ git pull
 
 ## Обратная связь
 
-* Подписаться на новости через [канал Telegram'а][t-news-url].
+* Посетите [Awesome NexT][awesome-next-url] список.
 * Вступить в наши [Telegram][t-chat-url] / [Gitter][gitter-url] / [Riot][riot-url] чаты.
 * [Добавить или улучшить перевод][i18n-url] за несколько секунд.
-* Посетите [Awesome NexT][awesome-next-url] список.
 * Сообщить об ошибке в разделе [GitHub Issues][issues-bug-url].
 * Запросить новую возможность на [GitHub][issues-feat-url].
 * Голосовать за [популярные запросы возможностей][feat-req-vote-url].

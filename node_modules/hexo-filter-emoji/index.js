@@ -6,7 +6,7 @@ const _ = require('lodash');
 const path = require('path');
 const fs = require('fs');
 
-var options = Object.assign({
+const options = Object.assign({
   enable   : true,
   className: 'emoji',
 }, hexo.config.emoji);
@@ -82,7 +82,7 @@ function renderEmoji(emojis, name) {
 
   if (emojis[name].codepoints && emojis[name].codepoints.length > 1) {
     // 对于多个 codepoint 组成的 emoji 添加连接符或修饰符
-    var firstCode = emojis[name].codepoints[0];
+    const firstCode = emojis[name].codepoints[0];
     if ((firstCode >= '0030' && firstCode <= '0039') || ['002a', '0023'].includes(firstCode)) {
       // 数字或符号（#，*）
       codepoints = emojis[name].codepoints.map(c => `&#x${c};`).join('&#xfe0f;');

@@ -1,5 +1,9 @@
 .site-brand-container {
-  position: relative;
+  background: $black-deep;
+
+  +tablet-mobile() {
+    box-shadow: 0 0 16px rgba(0, 0, 0, .5);
+  }
 }
 
 .site-meta {
@@ -13,16 +17,10 @@
 }
 
 .brand {
-  background: none;
   padding: 0;
-
-  &:hover {
-    color: white;
-  }
 }
 
 .site-subtitle {
-  font-weight: initial;
   margin: 10px 10px 0;
 }
 

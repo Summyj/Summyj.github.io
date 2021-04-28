@@ -1,13 +1,14 @@
 .btn {
-  background: $btn-default-bg;
-  color: $btn-default-color;
+  background: var(--btn-default-bg);
+  color: var(--btn-default-color);
   display: inline-block;
-  font-size: 16px;
+  font-size: $font-size-small;
   line-height: 2;
   text-decoration: none;
   transition-property: background-color;
   the-transition();
   text-align: left;
+  
 
   + .btn {
     margin: 0 0 8px 8px;

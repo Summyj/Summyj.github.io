@@ -142,6 +142,7 @@ live2d:
 #### 网站底部运行时间
 个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。
 参考[这篇文章](https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/)完成的。
+<img src="https://i.loli.net/2021/04/28/rjxPnYqmUCkwAv7.png" >
 
 #### 酷炫标签云
 根据插件[github说明](https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md)配置就好了。
@@ -149,6 +150,26 @@ live2d:
 {% codeblock lang:command %}
 npm install hexo-tag-cloud
 {% endcodeblock %}
+
+之后操作：
+
+<img src="https://i.loli.net/2021/04/28/ZJfLhzbVkKuMnqa.png" >
+
+ ```js
+{% if site.tags.length > 1 %}
+<script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcloud.js') }}"></script>
+<script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcanvas.js') }}"></script>
+<div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width:100%">
+            {{ list_tags() }}
+        </canvas>
+    </div>
+</div>
+{% endif %}
+ ```
+
 #### 背景图片
 给博客加上一个背景图片。
 网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了[更新说明](https://github.com/theme-next/hexo-theme-next/issues/1217)，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。
@@ -186,6 +207,10 @@ $btn-default-hover-bg         = $black-deep
 
 参照 [这篇文章](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2)设置的。
 
+在 /themes/next/layout/ 目录下新建一个 links.swig 文件，内容和之前一样。
+<img src="https://i.loli.net/2021/04/28/a2fDPAzZm7tFpes.png" >
+<img src="https://i.loli.net/2021/04/28/HolOS3LvVzQ19ca.png" >
+
 #### 改了下button的样式
 
 <img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
@@ -205,6 +230,13 @@ Path: {% label info@themes/next/source/css/_schemes/Pisces/_header.styl %}
   background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);
 }
 {% endcodeblock %}
+
+还需要改一下样式：
+<img src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png" >
+
+#### 网站底部颜色修改
+<img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png" >
+<img src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png" >
 
 # 后续的更新 #
 

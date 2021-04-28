@@ -20,7 +20,7 @@ pre, code {
 
 code {
   background: $code-background;
-  border-radius: $code-border-radius;
+  border-radius: 3px;
   color: $code-foreground;
   padding: 2px 4px;
   word-wrap();
@@ -36,7 +36,7 @@ code {
   pre {
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
   }
 
   table {
@@ -45,31 +45,22 @@ code {
     width: auto;
   }
 
-  tr {
-    &:first-child pre {
-      padding-top: 10px;
-    }
-    &:last-child pre {
-      padding-bottom: 10px;
-    }
-  }
-
   td {
     border: 0;
     padding: 0;
   }
 
   figcaption {
-    background: $code-background;
+    background: $highlight-gutter.bg-color;
     color: $highlight-foreground;
+    display: flex;
     font-size: $table-font-size;
+    justify-content: space-between;
     line-height: 1.2;
     padding: .5em;
-    clearfix();
 
     a {
       color: $highlight-foreground;
-      float: right;
 
       &:hover {
         border-bottom-color: $highlight-foreground;
@@ -77,13 +68,16 @@ code {
     }
   }
 
-  .gutter pre {
-    background: $highlight-gutter.bg-color;
-    color: $highlight-gutter.color;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: right;
+  .gutter {
     disable-user-select();
+
+    pre {
+      background: $highlight-gutter.bg-color;
+      color: $highlight-gutter.color;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: right;
+    }
   }
 
   .code pre {
