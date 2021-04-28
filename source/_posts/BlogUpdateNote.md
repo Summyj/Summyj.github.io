@@ -231,8 +231,13 @@ Path: {% label info@themes/next/source/css/_schemes/Pisces/_header.styl %}
 }
 {% endcodeblock %}
 
-还需要改一下样式：
+还需要改一下padding值：
 <img src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png" >
+
+手机端样式优化：
+<img src="https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png" >
+<img src="https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png" >
+<img src="https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png" >
 
 #### 网站底部颜色修改
 <img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png" >
