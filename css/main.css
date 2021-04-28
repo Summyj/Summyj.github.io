@@ -1074,6 +1074,16 @@ pre .javascript .function {
   background: var(--text-color);
   border-radius: 1px;
 }
+@media (max-width: 991px) {
+  .site-nav-toggle {
+    background: #db7093;
+  }
+}
+@media (max-width: 991px) {
+  .site-nav-right {
+    background: #4169e1;
+  }
+}
 .site-nav {
   display: block;
 }
@@ -1221,7 +1231,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8230dd;
+  background: #3d855d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2429,11 +2439,10 @@ ul.breadcrumb li + li:last-child {
   background-image: linear-gradient(to right, #db7093, #20b2aa, #4169e1);
   color: #fff;
   padding: 20px 0;
-}
-@media (max-width: 991px) {
-  .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+/*  +tablet-mobile() {
+    box-shadow: 0 0 16px rgba(0, 0, 0, .5);
   }
+  */
 }
 .brand {
   padding: 0;

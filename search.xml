@@ -386,7 +386,8 @@
 <h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <span class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</span><br>颜色可以自己改</p>
 <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">.site-meta {</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>还需要改一下样式：<br><img src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png"></p>
+<p>还需要改一下padding值：<br><img src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png"></p>
+<p>手机端样式优化：<br><img src="https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png"><br><img src="https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png"><br><img src="https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png"></p>
 <h4 id="网站底部颜色修改"><a href="#网站底部颜色修改" class="headerlink" title="网站底部颜色修改"></a>网站底部颜色修改</h4><img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png">
 <img src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png">
 
@@ -2414,13 +2415,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title></title>
+    <url>/links/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
