@@ -1,17 +1,19 @@
 ---
 name: 简体中文
 title:
+  about: 关于
+  links: 大佬
+  categorie: 分类
   archive: 归档
-  category: 分类
   tag: 标签
   schedule: 日程表
 menu:
   home: 首页
-  links: 大佬
-  archives: 归档
-  categories: 分类
-  tags: 标签
   about: 关于
+  links: 大佬
+  categories: 分类
+  archives: 归档
+  tags: 标签
   search: 搜索
   schedule: 日程表
   sitemap: 站点地图
