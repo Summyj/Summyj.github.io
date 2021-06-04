@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jmyblog.top/BlogSEO/</loc>
+    <lastmod>2021-06-03</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/AppUI-AutoTest-3/</loc>
     <lastmod>2021-05-26</lastmod>
   </url>
@@ -54,10 +58,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/Java-basic/</loc>
-    <lastmod>2020-08-01</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/BlogSEO/</loc>
     <lastmod>2020-08-01</lastmod>
   </url>
   <url>
