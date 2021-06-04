@@ -58,6 +58,7 @@ baidu_url_submit:
 {% codeblock lang:command %}
 -  type: baidu_url_submitter	
 {% endcodeblock %}
+![image.png](https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png)
 然后执行{% label info@hexo g -d %}，就可以实现每次部署自动推送文章啦：
 <img src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200">
 {% note info %}
@@ -74,7 +75,7 @@ baidu_url_submit:
 ### 站点管理平台
 和百度一样，谷歌也有 [站点管理平台](https://search.google.com/search-console/sitemaps) (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。
 站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：
-<img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="400" height="500">
+<img src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500">
 然后执行然后执行{% label info@hexo g -d %}将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：
 <img src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png" >
 
