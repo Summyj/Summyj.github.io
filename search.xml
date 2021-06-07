@@ -88,88 +88,146 @@
       </tags>
   </entry>
   <entry>
-    <title>请收下这波 BDD 安利</title>
-    <url>/BDD-Introduce/</url>
-    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
-<span id="more"></span>
+    <title>AppUI自动化测试第二弹</title>
+    <url>/AppUI-AutoTest-1/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png" alt="image.png"></p>
+<p>上篇博客我们创建好了测试项目，本篇博客就带大家编写测试代码，然后利用模拟器运行。</p>
+<h2 id="Appium-Desktop"><a href="#Appium-Desktop" class="headerlink" title="Appium Desktop"></a>Appium Desktop</h2><p>熟悉了测试项目的结构后，我们就可以按照相同的代码格式编写自己的测试代码啦。<br>首先我们想一想，UI测试的第一步是什么呢？当然是定位元素。<br>对于Web应用，我们可以直接使用浏览器的开发者工具inspector定位页面元素：<br><img src="https://i.loli.net/2021/05/20/LWRPKYaSbQji4yH.png" alt="image.png"><br>然而我们的测试对象是App，怎么定位App里的元素呢？答案是利用Appium和模拟器。<br>打开我们下载的Appium desktop应用：<br><img src="https://i.loli.net/2021/05/20/Xb2R1rJf3PNDEkV.png" width="350" height="300"><br>选择 Start Server, Appium Server就运行起来啦:<br><img src="https://i.loli.net/2021/05/20/r27GjW6cAdwHtSK.png" alt="image.png"><br>鼠标hover到右上角的🔍图标，出现tip提示 <strong>Start Inspector Session</strong>，很明显这就是我们用来定位App元素的工具啦，点击之后出现下图窗口：<br><img src="https://i.loli.net/2021/05/20/t3b2iRPjNBOpW8x.png" alt="image.png"><br>这里我们只关注当前的Tab窗口，其它部分不做介绍。在这个窗口中，我们可以通过设置 <strong>Desired Capabilities</strong> 来启动一个iOS/Android模拟器，Desired Capabilities是一系列模拟器配置项的集合，分为iOS和Android两个平台，有很多配置项，有两个平台公共的也有各平台单独的配置，完整的配置项列表在这里：<a href="http://appium.io/docs/en/writing-running-appium/caps/index.html#appium-desired-capabilities">Appium Desired Capabilities</a>。</p>
+<p>下边我们使用5个公共的Desired Capabilities配置项分别启动iOS和Android的模拟器：platformName、platformVersion、deviceName、automationName、app，他们分别代表操作系统名称、操作系统版本、设备名称、自动化引擎名称、app路径，想更多的了解这五个配置项可以看上边的配置项列表。</p>
+<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><h3 id="启动iOS-Simulator"><a href="#启动iOS-Simulator" class="headerlink" title="启动iOS Simulator"></a>启动iOS Simulator</h3><p>首先执行 <strong>xcrun instruments -s</strong> 命令来查看Xcode提供给我们所有的iOS模拟器种类，包括设备名称和操作系统版本等等：</p>
+<p><img src="https://i.loli.net/2021/05/20/eJZMpn3ayOgB78i.png" alt="image.png"></p>
+<p>然后选择一个模拟设备，按照json格式新增一个Desired Capabilities，这里我们以iPhone 11为例，粘贴下边的Desired Capabilities到Appium Start Inspector窗口，然后点击Save As按钮保存这个配置，这里我把它保存为iOS：<br><img src="https://i.loli.net/2021/05/20/VdDgGbmSFpCOUea.png" alt="image.png"></p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "iOS",</span><br><span class="line">  "platformVersion": "14.0",</span><br><span class="line">  "deviceName": "iPhone 11",</span><br><span class="line">  "automationName": "XCUITest",</span><br><span class="line">  "app": ""</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
-<p>**[王铁锤]**：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2">敏捷术语</a>)<br>20分钟后。。。<br>**[王铁锤]**：大家有什么问题吗？<br>**[众组员]**：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br>**[王铁锤]**：好，散会。<br>2天后。。。<br>**[测试刘翠花]**：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br>**[程序员李狗蛋]**：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br>**[程序员赵二毛]**：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br>**[刘翠花]**：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br>**[王铁锤]**：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br>**[王铁锤]**：怎么样，这个功能做好了吗？客户那边等着呢<br>**[众组员]**：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br>**[王铁锤]**：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br>**[刘翠花]**：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
-<hr>
-<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
-<p>**[王铁锤]**：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br>**[王铁锤]**：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br>**[李狗蛋]**：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br>**[王铁锤]**：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br>**[王铁锤]**：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
+<p>然后它就可以在 Saved Capability Sets 窗口里看到啦，以后可以单独对它做修改。<br>然而我们还缺少一个app字段，它是我们测试app的绝对路径，WebdriverIO给初学者提供了iOS和Android两个平台的 <a href="https://github.com/webdriverio/native-demo-app/releases">demo app</a>，它们具有现代App的代码结构，非常适合用来做App测试：<br><img src="https://i.loli.net/2021/05/20/Ayx3YSEpuZlFc8a.png" alt="image.png"><br>下载完成后，把.apk文件和解压后的.app文件都放入项目的app文件夹中，之后修改Desired Capabilities里的app路径为绝对路径，然后保存：<br><img src="https://i.loli.net/2021/05/20/wJlyN5mUjLFdXeM.png" alt="image.png"><br>点击Start Session后，稍等片刻，就能看到模拟器启动并出现元素定位窗口，测试app已被打开：<br><img src="https://i.loli.net/2021/05/20/kTL578EawBCpRno.png" alt="image.png"><br>元素定位窗口由两部分组成，左侧为App视图，右侧为代码和元素视图，在左侧视图中点击App元素，对应的元素信息就会出现在右侧视图，比较常用的是Xpath，但也可以用id/class来定位元素：<br><img src="https://i.loli.net/2021/05/20/cDygiatb1qG3EX2.png" alt="image.png"><br>元素定位窗口的App视图只能展示一个页面，不能通过点击直接切换App页面。要做到这一点，我们只能先切换模拟器页面，之后点击元素定位窗口上方的刷新图标，新的页面视图才会出现：<br><img src="https://i.loli.net/2021/05/20/ihJ7OZzbE2rFXYV.png" alt="image.png"></p>
+<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位iOS平台的App元素了，然后我们来编写测试代码，这里我们来编写最简单的两个Case，登录和注册。</p>
+<div class="note info">
+            <p>首先是登录，要实现登录操作，我们首先要切换到上边的登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要切换到上边的登录页面，然后切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
+          </div>
+
+<p>回到VSCode，登录页面已被定义，且已有示例的selector写法，通过定位元素，我们可以按照示例定义页面元素的selector，再新增方法对元素进行操作，最后在e2e.js中调用页面方法完成测试。</p>
+<p><img src="https://i.loli.net/2021/05/20/MLUTP2BbmGR76Op.png" alt="image.png"></p>
+<p>大家可以按照这个思路自己编写测试代码，这里我就不贴代码了，不过可以访问 <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将内容copy到对应文件夹(results文件夹只用copy result.txt)，其中ios.conf.js就是我们上边设置的Desired Capabilities，要在编辑器里运行代码我们必须得加上它，将其修改成你本地的配置即可，这里我有两个app路径，其中一个(没注释的)与后边集成CI步骤有关，可以先注释掉：<br><img src="https://i.loli.net/2021/05/26/SrQML96uvleWqBX.png" alt="image.png"></p>
+<p>最后运行 <strong>npm run test:ios</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，运行视频：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3OTk3Ng==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<p>测试报告是利用junit做的，可以在 wdio.conf.js 文件里查看：<br><img src="https://i.loli.net/2021/05/26/nhUuXidOpwWzZ9G.png" alt="image.png"></p>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="启动Android-Emulator"><a href="#启动Android-Emulator" class="headerlink" title="启动Android Emulator"></a>启动Android Emulator</h3><p>打开我们下载的Android Studio，进入编辑页面，点击右上角AVD Manager图标打开模拟器窗口：<br><img src="https://i.loli.net/2021/05/20/wiFyJgqWZXbDAmG.png" alt="image.png"><br>这里会列出所有可以使用的安卓模拟器，初次打开时，可能没有Virtual Device，可以通过“Create Virtual Device”来创建一个，创建时下载OS版本需要一些时间哦，如果有默认的Virtual Device就不用下载了。然后启动你的安卓模拟器：</p>
+<p><img src="https://i.loli.net/2021/05/24/n1865FmjlbKyupU.png" alt="image.png"></p>
+<p>安卓模拟器右侧是一些菜单项，包括开关机、音量、旋转等等，以及一些高级设置，可以访问 <a href="https://developer.android.com/studio/run/emulator">在Android模拟器上运行应用</a> 了解更多。</p>
+<p>接着和iOS一样，在Appium desktop里新增Virtual Device对应的Desired Capabilities，然后Save as保存它，下边是我保存的配置，需要修改成和你的模拟器一致：</p>
+<p><img src="https://i.loli.net/2021/05/24/TM3skJ47iDX8l9b.png" alt="image.png"></p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "Android",</span><br><span class="line">  "platformVersion": "10.0",</span><br><span class="line">  "deviceName": "Pixel_3_XL_API_29",</span><br><span class="line">  "automationName": "UiAutomator2",</span><br><span class="line">  "app": "你的安卓app绝对路径，应该在app文件夹里"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>保持你的安卓模拟器启动状态，然后Start Session，就会看到和刚才iOS一样的元素定位窗口，测试app已在模拟器中打开：</p>
+<p><img src="https://i.loli.net/2021/05/24/MoekacB4D9TAtsu.png" alt="image.png"></p>
+<p>事实上，你可以同时打开iOS和Android的模拟器和元素定位窗口，一起定位iOS和Android的元素：</p>
+<p><img src="https://i.loli.net/2021/05/24/R6yJCZVgfUNwQB5.png" alt="image.png"></p>
+<h3 id="编写代码-1"><a href="#编写代码-1" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位Android平台的App元素了，同样可以按照之前的思路自己编写登录注册的测试代码，事实上只需要修改上边iOS的Selector为Android格式即可。<br>也可以访问 <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将android.conf.js内容修改成你本地的配置即可，这里我有两个app路径和两个deviceName，多出的两个(没注释的)同样与后边集成CI步骤有关，可以先注释掉：<br><img src="https://i.loli.net/2021/05/26/dvgs5SKQrHXEkUh.png" alt="image.png"></p>
+<p>最后运行 <strong>npm run test:android</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，也要确保安卓模拟器为启动状态，运行视频：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3NzE4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><p>上面我们使用模拟器和两个demo app，利用Appium inspector完成了登录注册功能的自动化测试。当然，只懂得这些是远远不够的，首先我们知道，当代App有几种类型：<strong>Native app</strong>、<strong>Web app</strong>以及<strong>Hybrid app</strong>，这三者的区别是什么、如何测试显然是一个重要的课题，网上已经有许多文章讲述它们的区别，比如 <a href="https://www.jianshu.com/p/a40fefcadc94">这篇文章</a> ，所以我就不再赘述了。</p>
+<p>而除了login页面，demo app也提供了其它不同类型的页面，比如WebView、Swipe等生活中常见的页面类型。同样，针对于此demo app，WebDriverIO提供了 <a href="https://github.com/webdriverio/appium-boilerplate">示例代码库</a>，也包括iOS和Android两个平台，里面有包含以下类型的测试示例代码：</p>
 <ul>
-<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
-<li>Step2: 点击注册按钮进去注册页面。</li>
-<li>Step3: 填写所有字段并点击注册。</li>
-<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
+<li>测试native app</li>
+<li>测试webview</li>
+<li>在手机端利用Safari/Chrome执行浏览器测试</li>
+<li>利用Sauce Labs Service、BrowserStack两个云服务平台提供的真机/模拟器执行测试</li>
 </ul>
-<p>**[赵二毛]**：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br>**[刘翠花]**：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br>**[李狗蛋]**：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]<strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如</strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br>**[王铁锤]**：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br>**[王铁锤]**：大家有什么问题吗，我有没有漏掉什么点？<br>**[众组员]**：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br>**[王铁锤]**：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
-<hr>
-<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
-<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
-<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
-<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
-<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
-<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
-<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
-</ul>
-<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
-<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
-<hr>
-<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
-<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
-<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
-<ul>
-<li>把团队不同角色对功能的理解误差暴露出来</li>
-<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
-<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
-<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
-</ul>
-<p>要做好这个Workshops，有几点很重要：</p>
-<ol>
-<li>在功能开发前的一两个Sprint进行。</li>
-<li>从用户角度出发，关注具体、真实的业务场景。</li>
-<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
-</ol>
-<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
-<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
-<ul>
-<li>提供一种快速的方法，再次确认大家的理解一致。</li>
-<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
-</ul>
-<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
-<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
-<blockquote>
-<p>帮助团队跟踪功能完成度</p>
-</blockquote>
-<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
-<blockquote>
-<p>减少测试工作量</p>
-</blockquote>
-<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
-<blockquote>
-<p>系统功能维护和查询</p>
-</blockquote>
-<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
-<hr>
-<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
-<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
-<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="https://cucumber.io/docs/bdd/myths/" title="Myths about BDD">Myths about BDD</a></li>
-<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" title="BDD Tutorial">BDD Tutorial</a></li>
-<li><a href="https://cucumber.io/docs/bdd/" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
-<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/">说起BDD，你会想到什么？</a></li>
-</ul>
+<p>每一种测试类型都有对应的config文件，但此代码库用的不是mocha框架，而是jasmine框架。而且虽然它测试了两个平台，但由于只是selector不同，所以通过配置不用重复定义页面，一个页面可以被两个平台调用，感兴趣的同学可以深入学习。</p>
+<p>完成后别忘了把代码推送到Github哦，方便进行下一步的CI集成。</p>
 ]]></content>
       <categories>
-        <category>项目实践</category>
+        <category>学习小记</category>
       </categories>
       <tags>
-        <tag>BDD</tag>
-        <tag>敏捷</tag>
-        <tag>王铁锤</tag>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第三弹-iOS篇</title>
+    <url>/AppUI-AutoTest-2/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"></p>
+<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
+<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
+<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
+<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"></p>
+<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><br>编辑以下设置，然后点击confirm后继续：<br><img src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
+<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
+<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"></p>
+<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"></p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"></p>
+<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"></p>
+<ul>
+<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"></li>
+<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"></li>
+</ul>
+<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"></p>
+<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><br>运行后查看：<br><img src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>成功：<br><img src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><br>失败：<br><img src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第三弹-Android篇</title>
+    <url>/AppUI-AutoTest-3/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
+<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
+<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
+<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
+<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
+<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
+<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
+<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第一弹</title>
+    <url>/AppUI-AutoTest/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
+
+<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行 <span class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</span> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">brew tap AdoptOpenJDK/openjdk</span><br><span class="line">brew cask install adoptopenjdk11</span><br></pre></td></tr></tbody></table></figure>
+<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)</span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk</span><br><span class="line">export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)</span><br><span class="line">export AAPT_HOME</span><br><span class="line">export PATH=$PATH:$AAPT_HOME</span><br></pre></td></tr></tbody></table></figure>
+<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"></p>
+<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个</span><br><span class="line">npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
+<p><img src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"></p>
+<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
+<div class="note info">
+            <p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
+          </div>
+
+<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
+<img src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
       </tags>
   </entry>
   <entry>
@@ -275,6 +333,91 @@
       </categories>
       <tags>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>请收下这波 BDD 安利</title>
+    <url>/BDD-Introduce/</url>
+    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
+<span id="more"></span>
+
+<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
+<p>**[王铁锤]**：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2">敏捷术语</a>)<br>20分钟后。。。<br>**[王铁锤]**：大家有什么问题吗？<br>**[众组员]**：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br>**[王铁锤]**：好，散会。<br>2天后。。。<br>**[测试刘翠花]**：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br>**[程序员李狗蛋]**：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br>**[程序员赵二毛]**：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br>**[刘翠花]**：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br>**[王铁锤]**：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br>**[王铁锤]**：怎么样，这个功能做好了吗？客户那边等着呢<br>**[众组员]**：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br>**[王铁锤]**：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br>**[刘翠花]**：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
+<hr>
+<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
+<p>**[王铁锤]**：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br>**[王铁锤]**：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br>**[李狗蛋]**：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br>**[王铁锤]**：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br>**[王铁锤]**：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
+<ul>
+<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
+<li>Step2: 点击注册按钮进去注册页面。</li>
+<li>Step3: 填写所有字段并点击注册。</li>
+<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
+</ul>
+<p>**[赵二毛]**：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br>**[刘翠花]**：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br>**[李狗蛋]**：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]<strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如</strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br>**[王铁锤]**：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br>**[王铁锤]**：大家有什么问题吗，我有没有漏掉什么点？<br>**[众组员]**：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br>**[王铁锤]**：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
+<hr>
+<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
+<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
+<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
+<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
+<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
+<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
+<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
+</ul>
+<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
+<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
+<hr>
+<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
+<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
+<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
+<ul>
+<li>把团队不同角色对功能的理解误差暴露出来</li>
+<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
+<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
+<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
+</ul>
+<p>要做好这个Workshops，有几点很重要：</p>
+<ol>
+<li>在功能开发前的一两个Sprint进行。</li>
+<li>从用户角度出发，关注具体、真实的业务场景。</li>
+<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
+</ol>
+<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
+<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
+<ul>
+<li>提供一种快速的方法，再次确认大家的理解一致。</li>
+<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
+</ul>
+<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
+<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
+<blockquote>
+<p>帮助团队跟踪功能完成度</p>
+</blockquote>
+<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
+<blockquote>
+<p>减少测试工作量</p>
+</blockquote>
+<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
+<blockquote>
+<p>系统功能维护和查询</p>
+</blockquote>
+<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
+<hr>
+<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
+<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
+<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://cucumber.io/docs/bdd/myths/" title="Myths about BDD">Myths about BDD</a></li>
+<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" title="BDD Tutorial">BDD Tutorial</a></li>
+<li><a href="https://cucumber.io/docs/bdd/" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
+<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/">说起BDD，你会想到什么？</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>项目实践</category>
+      </categories>
+      <tags>
+        <tag>BDD</tag>
+        <tag>敏捷</tag>
+        <tag>王铁锤</tag>
       </tags>
   </entry>
   <entry>
@@ -1529,6 +1672,39 @@
       </tags>
   </entry>
   <entry>
+    <title>我的前1/3 of 2021</title>
+    <url>/my-1-3-part-of-2021/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
+
+<h2 id="被「内卷」了吗？"><a href="#被「内卷」了吗？" class="headerlink" title="被「内卷」了吗？"></a>被「内卷」了吗？</h2><p>2021年开始之前，我还没从王铁锤的suffer中走出来。</p>
+<p>等到半年之后我再思考王铁锤经历的一切，好像是跟今年的流行词「内卷」有点关系。通过拜读一篇关于<a href="https://mp.weixin.qq.com/s/5RrEOppRanZHfKzfqRs25w">内卷是什么</a>的文章，其中有几点定义和王铁锤经历的一些事情仿佛可以对得上号，包括但不限于：</p>
+<ol>
+<li>将简单问题复杂化：各种评审会议和报告，实际上意义并不大，只是为了按部就班的走所谓的「程序」</li>
+<li>与预期目标严重偏离：过分追求bug数量的趋势图，却从不考虑预防bug的产生</li>
+<li>内部竞争：加班时间的battle，很多时候明明无事可干，比如环境挂了之类只能干等，却还是得等到9点甚至10点然后并没有任何产出</li>
+<li>被动应付工作：在上线时间本就紧张的情况下，还要强行搞一些并不能发现问题的非功能测试，比如在测试环境做性能测试，一切只是为了走流程</li>
+</ol>
+<p>所以王铁锤其实是「被内卷」吗？我也不太确定，只是觉得王铁锤不属于这种环境，所以他只能退出。</p>
+<p>关于内卷，我还在深圳航空上看到一篇飞机读物，航空公司不怎么样，但那篇文章还不错；下飞机后又在网上搜了一下电子版，分享给大家：<a href="https://mp.weixin.qq.com/s/RtRkisO9p6xgJD3zcGU6kA">不内卷的38岁北京程序员</a>。<br>文章的主人公实现了我理想中的「不内卷」生活，我也想搬一辈子砖；但人家能做到不内卷也是有前提的，他08年之前在北京买了房，外企工作，还丁克，我想在当前的中国社会这三个条件少了一个，都不能做到不内卷吧，所以普通人要做到不被内卷，难度还是相当高的。</p>
+<h2 id="在家办公"><a href="#在家办公" class="headerlink" title="在家办公"></a>在家办公</h2><p>王铁锤事件之后，是11月底。</p>
+<p>先是开始了两周没有项目的生活，算是缓了缓心情，也在复盘和思考，学了一些零散的知识。后来作为非正式成员加入了一个公司内部项目做了半个月，没有无意义的加班，项目安排也比较合理，只是再也没有归属感了。一个月的时间里，每天想离职想到睡不着，还会怀疑自己是不是不适合做这个行业，又想转行，但综合考虑各种因素后，还是决定苟且，终究没有付诸行动。</p>
+<p>时间到了12月底，我又作为非正式成员加入了新项目，与之前不同，这个项目是做自己的产品，一个线上画图的工具。依然没有无意义的加班，项目安排有时不太合理但还可以接受，但还是没有归属感。项目的成员大多都异地，比较分散(比如在我的城市只有我一个成员)，所以基本上都在家办公。</p>
+<p>于是我开始了在家办公的生活，时间是1月初到4月中旬，大概4个半月的时间。</p>
+<p>对我而言，在家办公的这段时间是挺开心的。因为在家，不用通勤，也不用早起。有时我甚至一上午都可以躺在床上办公，然后中午起床做饭，就可以吃一天。而且可以自由安排时间，在不影响别人和项目进度的情况下，有时我会把输出时间挪到晚上，白天只参加一些必要的会议。甚至会边看电视边上班，早上起床打开投影仪播放自己喜欢的电视剧，然后躺在沙发上敲电脑，一躺就是一天。有时晚上虽然也会加点班，但是因为真的有事干才加，而且因为在家，也感觉不那么抵触了。</p>
+<p>虽然是远程办公，但项目里的同事都很不错，每天工作也充满了欢声笑语，感觉很温暖，大家对我的评价也都是积极的。就这样，王铁锤事件带来的阴霾也渐渐散去了，由此带来的工作倦怠感也没了，甚至有点想去公司上班，见见之前熟悉的同事。</p>
+<p>最后安利一下我们的线上画图工具：<a href="https://beeart.hello-bees.com/introduce">BeeArt</a> (谁用谁知道，一般人我不告诉他～)</p>
+<h2 id="新项目旧生活"><a href="#新项目旧生活" class="headerlink" title="新项目旧生活"></a>新项目旧生活</h2><p>4月中旬我交接了工作，在两周的准备后，作为正式成员在5月初又加入了新项目。</p>
+<p>虽然是新项目，但之前经历过类似的项目，而且待了很久，无论是节奏还是工作方式都大同小异。总之就是熟悉的配方，熟悉的味道，所以过的是旧生活，但学到了很多。我的散装英语又派上了用场，之前的归属感回来了一点，但并不多，也许我再也不会有从前的「归属感」了，只是平淡的打工人，搬砖挣钱而已，并不会有太多的情怀。</p>
+<h2 id="2021剩下的1-3"><a href="#2021剩下的1-3" class="headerlink" title="2021剩下的1/3"></a>2021剩下的1/3</h2><p>2021是我的本命年，虽然已经过去了1/3，不过也是开心的1/3，人生已经如此的艰难，还是开心最重要。<br>剩下的2/3，大概会继续平淡的过着我的旧生活，然后学点工作上的新技能。未来也许并不能实现搬一辈子砖的愿望，但搬砖的每一天都要开心，活在当下。</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>活着</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的厨艺进阶之路</title>
     <url>/myCookingWay/</url>
     <content><![CDATA[<img src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
@@ -2392,182 +2568,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我的前1/3 of 2021</title>
-    <url>/my-1-3-part-of-2021/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
-
-<h2 id="被「内卷」了吗？"><a href="#被「内卷」了吗？" class="headerlink" title="被「内卷」了吗？"></a>被「内卷」了吗？</h2><p>2021年开始之前，我还没从王铁锤的suffer中走出来。</p>
-<p>等到半年之后我再思考王铁锤经历的一切，好像是跟今年的流行词「内卷」有点关系。通过拜读一篇关于<a href="https://mp.weixin.qq.com/s/5RrEOppRanZHfKzfqRs25w">内卷是什么</a>的文章，其中有几点定义和王铁锤经历的一些事情仿佛可以对得上号，包括但不限于：</p>
-<ol>
-<li>将简单问题复杂化：各种评审会议和报告，实际上意义并不大，只是为了按部就班的走所谓的「程序」</li>
-<li>与预期目标严重偏离：过分追求bug数量的趋势图，却从不考虑预防bug的产生</li>
-<li>内部竞争：加班时间的battle，很多时候明明无事可干，比如环境挂了之类只能干等，却还是得等到9点甚至10点然后并没有任何产出</li>
-<li>被动应付工作：在上线时间本就紧张的情况下，还要强行搞一些并不能发现问题的非功能测试，比如在测试环境做性能测试，一切只是为了走流程</li>
-</ol>
-<p>所以王铁锤其实是「被内卷」吗？我也不太确定，只是觉得王铁锤不属于这种环境，所以他只能退出。</p>
-<p>关于内卷，我还在深圳航空上看到一篇飞机读物，航空公司不怎么样，但那篇文章还不错；下飞机后又在网上搜了一下电子版，分享给大家：<a href="https://mp.weixin.qq.com/s/RtRkisO9p6xgJD3zcGU6kA">不内卷的38岁北京程序员</a>。<br>文章的主人公实现了我理想中的「不内卷」生活，我也想搬一辈子砖；但人家能做到不内卷也是有前提的，他08年之前在北京买了房，外企工作，还丁克，我想在当前的中国社会这三个条件少了一个，都不能做到不内卷吧，所以普通人要做到不被内卷，难度还是相当高的。</p>
-<h2 id="在家办公"><a href="#在家办公" class="headerlink" title="在家办公"></a>在家办公</h2><p>王铁锤事件之后，是11月底。</p>
-<p>先是开始了两周没有项目的生活，算是缓了缓心情，也在复盘和思考，学了一些零散的知识。后来作为非正式成员加入了一个公司内部项目做了半个月，没有无意义的加班，项目安排也比较合理，只是再也没有归属感了。一个月的时间里，每天想离职想到睡不着，还会怀疑自己是不是不适合做这个行业，又想转行，但综合考虑各种因素后，还是决定苟且，终究没有付诸行动。</p>
-<p>时间到了12月底，我又作为非正式成员加入了新项目，与之前不同，这个项目是做自己的产品，一个线上画图的工具。依然没有无意义的加班，项目安排有时不太合理但还可以接受，但还是没有归属感。项目的成员大多都异地，比较分散(比如在我的城市只有我一个成员)，所以基本上都在家办公。</p>
-<p>于是我开始了在家办公的生活，时间是1月初到4月中旬，大概4个半月的时间。</p>
-<p>对我而言，在家办公的这段时间是挺开心的。因为在家，不用通勤，也不用早起。有时我甚至一上午都可以躺在床上办公，然后中午起床做饭，就可以吃一天。而且可以自由安排时间，在不影响别人和项目进度的情况下，有时我会把输出时间挪到晚上，白天只参加一些必要的会议。甚至会边看电视边上班，早上起床打开投影仪播放自己喜欢的电视剧，然后躺在沙发上敲电脑，一躺就是一天。有时晚上虽然也会加点班，但是因为真的有事干才加，而且因为在家，也感觉不那么抵触了。</p>
-<p>虽然是远程办公，但项目里的同事都很不错，每天工作也充满了欢声笑语，感觉很温暖，大家对我的评价也都是积极的。就这样，王铁锤事件带来的阴霾也渐渐散去了，由此带来的工作倦怠感也没了，甚至有点想去公司上班，见见之前熟悉的同事。</p>
-<p>最后安利一下我们的线上画图工具：<a href="https://beeart.hello-bees.com/introduce">BeeArt</a> (谁用谁知道，一般人我不告诉他～)</p>
-<h2 id="新项目旧生活"><a href="#新项目旧生活" class="headerlink" title="新项目旧生活"></a>新项目旧生活</h2><p>4月中旬我交接了工作，在两周的准备后，作为正式成员在5月初又加入了新项目。</p>
-<p>虽然是新项目，但之前经历过类似的项目，而且待了很久，无论是节奏还是工作方式都大同小异。总之就是熟悉的配方，熟悉的味道，所以过的是旧生活，但学到了很多。我的散装英语又派上了用场，之前的归属感回来了一点，但并不多，也许我再也不会有从前的「归属感」了，只是平淡的打工人，搬砖挣钱而已，并不会有太多的情怀。</p>
-<h2 id="2021剩下的1-3"><a href="#2021剩下的1-3" class="headerlink" title="2021剩下的1/3"></a>2021剩下的1/3</h2><p>2021是我的本命年，虽然已经过去了1/3，不过也是开心的1/3，人生已经如此的艰难，还是开心最重要。<br>剩下的2/3，大概会继续平淡的过着我的旧生活，然后学点工作上的新技能。未来也许并不能实现搬一辈子砖的愿望，但搬砖的每一天都要开心，活在当下。</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>活着</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第一弹</title>
-    <url>/AppUI-AutoTest/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
-
-<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行 <span class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</span> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">brew tap AdoptOpenJDK/openjdk</span><br><span class="line">brew cask install adoptopenjdk11</span><br></pre></td></tr></tbody></table></figure>
-<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)</span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk</span><br><span class="line">export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)</span><br><span class="line">export AAPT_HOME</span><br><span class="line">export PATH=$PATH:$AAPT_HOME</span><br></pre></td></tr></tbody></table></figure>
-<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"></p>
-<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个</span><br><span class="line">npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
-<p><img src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"></p>
-<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
-<div class="note info">
-            <p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
-          </div>
-
-<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
-<img src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第二弹</title>
-    <url>/AppUI-AutoTest-1/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png" alt="image.png"></p>
-<p>上篇博客我们创建好了测试项目，本篇博客就带大家编写测试代码，然后利用模拟器运行。</p>
-<h2 id="Appium-Desktop"><a href="#Appium-Desktop" class="headerlink" title="Appium Desktop"></a>Appium Desktop</h2><p>熟悉了测试项目的结构后，我们就可以按照相同的代码格式编写自己的测试代码啦。<br>首先我们想一想，UI测试的第一步是什么呢？当然是定位元素。<br>对于Web应用，我们可以直接使用浏览器的开发者工具inspector定位页面元素：<br><img src="https://i.loli.net/2021/05/20/LWRPKYaSbQji4yH.png" alt="image.png"><br>然而我们的测试对象是App，怎么定位App里的元素呢？答案是利用Appium和模拟器。<br>打开我们下载的Appium desktop应用：<br><img src="https://i.loli.net/2021/05/20/Xb2R1rJf3PNDEkV.png" width="350" height="300"><br>选择 Start Server, Appium Server就运行起来啦:<br><img src="https://i.loli.net/2021/05/20/r27GjW6cAdwHtSK.png" alt="image.png"><br>鼠标hover到右上角的🔍图标，出现tip提示 <strong>Start Inspector Session</strong>，很明显这就是我们用来定位App元素的工具啦，点击之后出现下图窗口：<br><img src="https://i.loli.net/2021/05/20/t3b2iRPjNBOpW8x.png" alt="image.png"><br>这里我们只关注当前的Tab窗口，其它部分不做介绍。在这个窗口中，我们可以通过设置 <strong>Desired Capabilities</strong> 来启动一个iOS/Android模拟器，Desired Capabilities是一系列模拟器配置项的集合，分为iOS和Android两个平台，有很多配置项，有两个平台公共的也有各平台单独的配置，完整的配置项列表在这里：<a href="http://appium.io/docs/en/writing-running-appium/caps/index.html#appium-desired-capabilities">Appium Desired Capabilities</a>。</p>
-<p>下边我们使用5个公共的Desired Capabilities配置项分别启动iOS和Android的模拟器：platformName、platformVersion、deviceName、automationName、app，他们分别代表操作系统名称、操作系统版本、设备名称、自动化引擎名称、app路径，想更多的了解这五个配置项可以看上边的配置项列表。</p>
-<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><h3 id="启动iOS-Simulator"><a href="#启动iOS-Simulator" class="headerlink" title="启动iOS Simulator"></a>启动iOS Simulator</h3><p>首先执行 <strong>xcrun instruments -s</strong> 命令来查看Xcode提供给我们所有的iOS模拟器种类，包括设备名称和操作系统版本等等：</p>
-<p><img src="https://i.loli.net/2021/05/20/eJZMpn3ayOgB78i.png" alt="image.png"></p>
-<p>然后选择一个模拟设备，按照json格式新增一个Desired Capabilities，这里我们以iPhone 11为例，粘贴下边的Desired Capabilities到Appium Start Inspector窗口，然后点击Save As按钮保存这个配置，这里我把它保存为iOS：<br><img src="https://i.loli.net/2021/05/20/VdDgGbmSFpCOUea.png" alt="image.png"></p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "iOS",</span><br><span class="line">  "platformVersion": "14.0",</span><br><span class="line">  "deviceName": "iPhone 11",</span><br><span class="line">  "automationName": "XCUITest",</span><br><span class="line">  "app": ""</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后它就可以在 Saved Capability Sets 窗口里看到啦，以后可以单独对它做修改。<br>然而我们还缺少一个app字段，它是我们测试app的绝对路径，WebdriverIO给初学者提供了iOS和Android两个平台的 <a href="https://github.com/webdriverio/native-demo-app/releases">demo app</a>，它们具有现代App的代码结构，非常适合用来做App测试：<br><img src="https://i.loli.net/2021/05/20/Ayx3YSEpuZlFc8a.png" alt="image.png"><br>下载完成后，把.apk文件和解压后的.app文件都放入项目的app文件夹中，之后修改Desired Capabilities里的app路径为绝对路径，然后保存：<br><img src="https://i.loli.net/2021/05/20/wJlyN5mUjLFdXeM.png" alt="image.png"><br>点击Start Session后，稍等片刻，就能看到模拟器启动并出现元素定位窗口，测试app已被打开：<br><img src="https://i.loli.net/2021/05/20/kTL578EawBCpRno.png" alt="image.png"><br>元素定位窗口由两部分组成，左侧为App视图，右侧为代码和元素视图，在左侧视图中点击App元素，对应的元素信息就会出现在右侧视图，比较常用的是Xpath，但也可以用id/class来定位元素：<br><img src="https://i.loli.net/2021/05/20/cDygiatb1qG3EX2.png" alt="image.png"><br>元素定位窗口的App视图只能展示一个页面，不能通过点击直接切换App页面。要做到这一点，我们只能先切换模拟器页面，之后点击元素定位窗口上方的刷新图标，新的页面视图才会出现：<br><img src="https://i.loli.net/2021/05/20/ihJ7OZzbE2rFXYV.png" alt="image.png"></p>
-<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位iOS平台的App元素了，然后我们来编写测试代码，这里我们来编写最简单的两个Case，登录和注册。</p>
-<div class="note info">
-            <p>首先是登录，要实现登录操作，我们首先要切换到上边的登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要切换到上边的登录页面，然后切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
-          </div>
-
-<p>回到VSCode，登录页面已被定义，且已有示例的selector写法，通过定位元素，我们可以按照示例定义页面元素的selector，再新增方法对元素进行操作，最后在e2e.js中调用页面方法完成测试。</p>
-<p><img src="https://i.loli.net/2021/05/20/MLUTP2BbmGR76Op.png" alt="image.png"></p>
-<p>大家可以按照这个思路自己编写测试代码，这里我就不贴代码了，不过可以访问 <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将内容copy到对应文件夹(results文件夹只用copy result.txt)，其中ios.conf.js就是我们上边设置的Desired Capabilities，要在编辑器里运行代码我们必须得加上它，将其修改成你本地的配置即可，这里我有两个app路径，其中一个(没注释的)与后边集成CI步骤有关，可以先注释掉：<br><img src="https://i.loli.net/2021/05/26/SrQML96uvleWqBX.png" alt="image.png"></p>
-<p>最后运行 <strong>npm run test:ios</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，运行视频：</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3OTk3Ng==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<p>测试报告是利用junit做的，可以在 wdio.conf.js 文件里查看：<br><img src="https://i.loli.net/2021/05/26/nhUuXidOpwWzZ9G.png" alt="image.png"></p>
-<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="启动Android-Emulator"><a href="#启动Android-Emulator" class="headerlink" title="启动Android Emulator"></a>启动Android Emulator</h3><p>打开我们下载的Android Studio，进入编辑页面，点击右上角AVD Manager图标打开模拟器窗口：<br><img src="https://i.loli.net/2021/05/20/wiFyJgqWZXbDAmG.png" alt="image.png"><br>这里会列出所有可以使用的安卓模拟器，初次打开时，可能没有Virtual Device，可以通过“Create Virtual Device”来创建一个，创建时下载OS版本需要一些时间哦，如果有默认的Virtual Device就不用下载了。然后启动你的安卓模拟器：</p>
-<p><img src="https://i.loli.net/2021/05/24/n1865FmjlbKyupU.png" alt="image.png"></p>
-<p>安卓模拟器右侧是一些菜单项，包括开关机、音量、旋转等等，以及一些高级设置，可以访问 <a href="https://developer.android.com/studio/run/emulator">在Android模拟器上运行应用</a> 了解更多。</p>
-<p>接着和iOS一样，在Appium desktop里新增Virtual Device对应的Desired Capabilities，然后Save as保存它，下边是我保存的配置，需要修改成和你的模拟器一致：</p>
-<p><img src="https://i.loli.net/2021/05/24/TM3skJ47iDX8l9b.png" alt="image.png"></p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "Android",</span><br><span class="line">  "platformVersion": "10.0",</span><br><span class="line">  "deviceName": "Pixel_3_XL_API_29",</span><br><span class="line">  "automationName": "UiAutomator2",</span><br><span class="line">  "app": "你的安卓app绝对路径，应该在app文件夹里"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>保持你的安卓模拟器启动状态，然后Start Session，就会看到和刚才iOS一样的元素定位窗口，测试app已在模拟器中打开：</p>
-<p><img src="https://i.loli.net/2021/05/24/MoekacB4D9TAtsu.png" alt="image.png"></p>
-<p>事实上，你可以同时打开iOS和Android的模拟器和元素定位窗口，一起定位iOS和Android的元素：</p>
-<p><img src="https://i.loli.net/2021/05/24/R6yJCZVgfUNwQB5.png" alt="image.png"></p>
-<h3 id="编写代码-1"><a href="#编写代码-1" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位Android平台的App元素了，同样可以按照之前的思路自己编写登录注册的测试代码，事实上只需要修改上边iOS的Selector为Android格式即可。<br>也可以访问 <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将android.conf.js内容修改成你本地的配置即可，这里我有两个app路径和两个deviceName，多出的两个(没注释的)同样与后边集成CI步骤有关，可以先注释掉：<br><img src="https://i.loli.net/2021/05/26/dvgs5SKQrHXEkUh.png" alt="image.png"></p>
-<p>最后运行 <strong>npm run test:android</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，也要确保安卓模拟器为启动状态，运行视频：</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3NzE4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><p>上面我们使用模拟器和两个demo app，利用Appium inspector完成了登录注册功能的自动化测试。当然，只懂得这些是远远不够的，首先我们知道，当代App有几种类型：<strong>Native app</strong>、<strong>Web app</strong>以及<strong>Hybrid app</strong>，这三者的区别是什么、如何测试显然是一个重要的课题，网上已经有许多文章讲述它们的区别，比如 <a href="https://www.jianshu.com/p/a40fefcadc94">这篇文章</a> ，所以我就不再赘述了。</p>
-<p>而除了login页面，demo app也提供了其它不同类型的页面，比如WebView、Swipe等生活中常见的页面类型。同样，针对于此demo app，WebDriverIO提供了 <a href="https://github.com/webdriverio/appium-boilerplate">示例代码库</a>，也包括iOS和Android两个平台，里面有包含以下类型的测试示例代码：</p>
-<ul>
-<li>测试native app</li>
-<li>测试webview</li>
-<li>在手机端利用Safari/Chrome执行浏览器测试</li>
-<li>利用Sauce Labs Service、BrowserStack两个云服务平台提供的真机/模拟器执行测试</li>
-</ul>
-<p>每一种测试类型都有对应的config文件，但此代码库用的不是mocha框架，而是jasmine框架。而且虽然它测试了两个平台，但由于只是selector不同，所以通过配置不用重复定义页面，一个页面可以被两个平台调用，感兴趣的同学可以深入学习。</p>
-<p>完成后别忘了把代码推送到Github哦，方便进行下一步的CI集成。</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第三弹-iOS篇</title>
-    <url>/AppUI-AutoTest-2/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"></p>
-<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
-<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
-<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
-<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"></p>
-<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><br>编辑以下设置，然后点击confirm后继续：<br><img src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
-<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
-<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"></p>
-<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"></p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"></p>
-<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"></p>
-<ul>
-<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"></li>
-<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"></li>
-</ul>
-<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"></p>
-<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><br>运行后查看：<br><img src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>成功：<br><img src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><br>失败：<br><img src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第三弹-Android篇</title>
-    <url>/AppUI-AutoTest-3/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
-<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
-<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
-<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
-<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
-<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
-<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
-<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[<blockquote><p>人生惟一的不幸就是自己的无能。</p>
@@ -2591,13 +2591,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title></title>
+    <url>/links/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/links/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
