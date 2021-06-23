@@ -534,6 +534,10 @@
 <h4 id="网站底部颜色修改"><a href="#网站底部颜色修改" class="headerlink" title="网站底部颜色修改"></a>网站底部颜色修改</h4><img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png">
 <img src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png">
 
+<h4 id="修改主题页面宽度"><a href="#修改主题页面宽度" class="headerlink" title="修改主题页面宽度"></a>修改主题页面宽度</h4><p>路径：next/source/css/_schemes/Gemini/index.styl</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">//page width start</span><br><span class="line">header{ width: 70% !important; }</span><br><span class="line">header.post-header {</span><br><span class="line">  width: auto !important;</span><br><span class="line">}</span><br><span class="line">.container .main-inner { width: 70%; }</span><br><span class="line">.content-wrap { width: calc(100% - 260px); }</span><br><span class="line"></span><br><span class="line">.header {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.container .main-inner {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.content-wrap {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line">//page width end</span><br></pre></td></tr></tbody></table></figure>
+
+
 <h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
 <li><a href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/">将 Hexo 升级到 v3.5.0</a></li>
@@ -550,6 +554,19 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>升级博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -587,19 +604,6 @@
       </categories>
       <tags>
         <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -1197,6 +1201,26 @@
       </tags>
   </entry>
   <entry>
+    <title>沉默的抗争</title>
+    <url>/Silent-protest/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
+
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<hr>
+<div class="note default">
+            <p>王铁锤，一个在沉默中「灭亡」的人。</p><p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p><p>但后来项目的走向，打破了他的期望。</p><p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p><p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p><p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p><p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p><p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p><p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p><p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p><p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p><p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p><p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
+          </div>]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>王铁锤</tag>
+        <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客被停止访问之后</title>
     <url>/SiteBrokenFix/</url>
     <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">😱</span></p>
@@ -1228,26 +1252,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>沉默的抗争</title>
-    <url>/Silent-protest/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
-
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
-
-<hr>
-<div class="note default">
-            <p>王铁锤，一个在沉默中「灭亡」的人。</p><p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p><p>但后来项目的走向，打破了他的期望。</p><p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p><p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p><p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p><p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p><p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p><p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p><p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p><p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p><p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p><p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
-          </div>]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>王铁锤</tag>
-        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
@@ -1672,6 +1676,39 @@
       </tags>
   </entry>
   <entry>
+    <title>我的前1/3 of 2021</title>
+    <url>/my-1-3-part-of-2021/</url>
+    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
+
+<h2 id="被「内卷」了吗？"><a href="#被「内卷」了吗？" class="headerlink" title="被「内卷」了吗？"></a>被「内卷」了吗？</h2><p>2021年开始之前，我还没从王铁锤的suffer中走出来。</p>
+<p>等到半年之后我再思考王铁锤经历的一切，好像是跟今年的流行词「内卷」有点关系。通过拜读一篇关于<a href="https://mp.weixin.qq.com/s/5RrEOppRanZHfKzfqRs25w">内卷是什么</a>的文章，其中有几点定义和王铁锤经历的一些事情仿佛可以对得上号，包括但不限于：</p>
+<ol>
+<li>将简单问题复杂化：各种评审会议和报告，实际上意义并不大，只是为了按部就班的走所谓的「程序」</li>
+<li>与预期目标严重偏离：过分追求bug数量的趋势图，却从不考虑预防bug的产生</li>
+<li>内部竞争：加班时间的battle，很多时候明明无事可干，比如环境挂了之类只能干等，却还是得等到9点甚至10点然后并没有任何产出</li>
+<li>被动应付工作：在上线时间本就紧张的情况下，还要强行搞一些并不能发现问题的非功能测试，比如在测试环境做性能测试，一切只是为了走流程</li>
+</ol>
+<p>所以王铁锤其实是「被内卷」吗？我也不太确定，只是觉得王铁锤不属于这种环境，所以他只能退出。</p>
+<p>关于内卷，我还在深圳航空上看到一篇飞机读物，航空公司不怎么样，但那篇文章还不错；下飞机后又在网上搜了一下电子版，分享给大家：<a href="https://mp.weixin.qq.com/s/RtRkisO9p6xgJD3zcGU6kA">不内卷的38岁北京程序员</a>。<br>文章的主人公实现了我理想中的「不内卷」生活，我也想搬一辈子砖；但人家能做到不内卷也是有前提的，他08年之前在北京买了房，外企工作，还丁克，我想在当前的中国社会这三个条件少了一个，都不能做到不内卷吧，所以普通人要做到不被内卷，难度还是相当高的。</p>
+<h2 id="在家办公"><a href="#在家办公" class="headerlink" title="在家办公"></a>在家办公</h2><p>王铁锤事件之后，是11月底。</p>
+<p>先是开始了两周没有项目的生活，算是缓了缓心情，也在复盘和思考，学了一些零散的知识。后来作为非正式成员加入了一个公司内部项目做了半个月，没有无意义的加班，项目安排也比较合理，只是再也没有归属感了。一个月的时间里，每天想离职想到睡不着，还会怀疑自己是不是不适合做这个行业，又想转行，但综合考虑各种因素后，还是决定苟且，终究没有付诸行动。</p>
+<p>时间到了12月底，我又作为非正式成员加入了新项目，与之前不同，这个项目是做自己的产品，一个线上画图的工具。依然没有无意义的加班，项目安排有时不太合理但还可以接受，但还是没有归属感。项目的成员大多都异地，比较分散(比如在我的城市只有我一个成员)，所以基本上都在家办公。</p>
+<p>于是我开始了在家办公的生活，时间是1月初到4月中旬，大概4个半月的时间。</p>
+<p>对我而言，在家办公的这段时间是挺开心的。因为在家，不用通勤，也不用早起。有时我甚至一上午都可以躺在床上办公，然后中午起床做饭，就可以吃一天。而且可以自由安排时间，在不影响别人和项目进度的情况下，有时我会把输出时间挪到晚上，白天只参加一些必要的会议。甚至会边看电视边上班，早上起床打开投影仪播放自己喜欢的电视剧，然后躺在沙发上敲电脑，一躺就是一天。有时晚上虽然也会加点班，但是因为真的有事干才加，而且因为在家，也感觉不那么抵触了。</p>
+<p>虽然是远程办公，但项目里的同事都很不错，每天工作也充满了欢声笑语，感觉很温暖，大家对我的评价也都是积极的。就这样，王铁锤事件带来的阴霾也渐渐散去了，由此带来的工作倦怠感也没了，甚至有点想去公司上班，见见之前熟悉的同事。</p>
+<p>最后安利一下我们的线上画图工具：<a href="https://beeart.hello-bees.com/introduce">BeeArt</a> (谁用谁知道，一般人我不告诉他～)</p>
+<h2 id="新项目旧生活"><a href="#新项目旧生活" class="headerlink" title="新项目旧生活"></a>新项目旧生活</h2><p>4月中旬我交接了工作，在两周的准备后，作为正式成员在5月初又加入了新项目。</p>
+<p>虽然是新项目，但之前经历过类似的项目，而且待了很久，无论是节奏还是工作方式都大同小异。总之就是熟悉的配方，熟悉的味道，所以过的是旧生活，但学到了很多。我的散装英语又派上了用场，之前的归属感回来了一点，但并不多，也许我再也不会有从前的「归属感」了，只是平淡的打工人，搬砖挣钱而已，并不会有太多的情怀。</p>
+<h2 id="2021剩下的1-3"><a href="#2021剩下的1-3" class="headerlink" title="2021剩下的1/3"></a>2021剩下的1/3</h2><p>2021是我的本命年，虽然已经过去了1/3，不过也是开心的1/3，人生已经如此的艰难，还是开心最重要。<br>剩下的2/3，大概会继续平淡的过着我的旧生活，然后学点工作上的新技能。未来也许并不能实现搬一辈子砖的愿望，但搬砖的每一天都要开心，活在当下。</p>
+]]></content>
+      <categories>
+        <category>生活随想</category>
+      </categories>
+      <tags>
+        <tag>活着</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的厨艺进阶之路</title>
     <url>/myCookingWay/</url>
     <content><![CDATA[<img src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
@@ -1714,39 +1751,6 @@
       </categories>
       <tags>
         <tag>Cook</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的前1/3 of 2021</title>
-    <url>/my-1-3-part-of-2021/</url>
-    <content><![CDATA[<img src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
-
-<h2 id="被「内卷」了吗？"><a href="#被「内卷」了吗？" class="headerlink" title="被「内卷」了吗？"></a>被「内卷」了吗？</h2><p>2021年开始之前，我还没从王铁锤的suffer中走出来。</p>
-<p>等到半年之后我再思考王铁锤经历的一切，好像是跟今年的流行词「内卷」有点关系。通过拜读一篇关于<a href="https://mp.weixin.qq.com/s/5RrEOppRanZHfKzfqRs25w">内卷是什么</a>的文章，其中有几点定义和王铁锤经历的一些事情仿佛可以对得上号，包括但不限于：</p>
-<ol>
-<li>将简单问题复杂化：各种评审会议和报告，实际上意义并不大，只是为了按部就班的走所谓的「程序」</li>
-<li>与预期目标严重偏离：过分追求bug数量的趋势图，却从不考虑预防bug的产生</li>
-<li>内部竞争：加班时间的battle，很多时候明明无事可干，比如环境挂了之类只能干等，却还是得等到9点甚至10点然后并没有任何产出</li>
-<li>被动应付工作：在上线时间本就紧张的情况下，还要强行搞一些并不能发现问题的非功能测试，比如在测试环境做性能测试，一切只是为了走流程</li>
-</ol>
-<p>所以王铁锤其实是「被内卷」吗？我也不太确定，只是觉得王铁锤不属于这种环境，所以他只能退出。</p>
-<p>关于内卷，我还在深圳航空上看到一篇飞机读物，航空公司不怎么样，但那篇文章还不错；下飞机后又在网上搜了一下电子版，分享给大家：<a href="https://mp.weixin.qq.com/s/RtRkisO9p6xgJD3zcGU6kA">不内卷的38岁北京程序员</a>。<br>文章的主人公实现了我理想中的「不内卷」生活，我也想搬一辈子砖；但人家能做到不内卷也是有前提的，他08年之前在北京买了房，外企工作，还丁克，我想在当前的中国社会这三个条件少了一个，都不能做到不内卷吧，所以普通人要做到不被内卷，难度还是相当高的。</p>
-<h2 id="在家办公"><a href="#在家办公" class="headerlink" title="在家办公"></a>在家办公</h2><p>王铁锤事件之后，是11月底。</p>
-<p>先是开始了两周没有项目的生活，算是缓了缓心情，也在复盘和思考，学了一些零散的知识。后来作为非正式成员加入了一个公司内部项目做了半个月，没有无意义的加班，项目安排也比较合理，只是再也没有归属感了。一个月的时间里，每天想离职想到睡不着，还会怀疑自己是不是不适合做这个行业，又想转行，但综合考虑各种因素后，还是决定苟且，终究没有付诸行动。</p>
-<p>时间到了12月底，我又作为非正式成员加入了新项目，与之前不同，这个项目是做自己的产品，一个线上画图的工具。依然没有无意义的加班，项目安排有时不太合理但还可以接受，但还是没有归属感。项目的成员大多都异地，比较分散(比如在我的城市只有我一个成员)，所以基本上都在家办公。</p>
-<p>于是我开始了在家办公的生活，时间是1月初到4月中旬，大概4个半月的时间。</p>
-<p>对我而言，在家办公的这段时间是挺开心的。因为在家，不用通勤，也不用早起。有时我甚至一上午都可以躺在床上办公，然后中午起床做饭，就可以吃一天。而且可以自由安排时间，在不影响别人和项目进度的情况下，有时我会把输出时间挪到晚上，白天只参加一些必要的会议。甚至会边看电视边上班，早上起床打开投影仪播放自己喜欢的电视剧，然后躺在沙发上敲电脑，一躺就是一天。有时晚上虽然也会加点班，但是因为真的有事干才加，而且因为在家，也感觉不那么抵触了。</p>
-<p>虽然是远程办公，但项目里的同事都很不错，每天工作也充满了欢声笑语，感觉很温暖，大家对我的评价也都是积极的。就这样，王铁锤事件带来的阴霾也渐渐散去了，由此带来的工作倦怠感也没了，甚至有点想去公司上班，见见之前熟悉的同事。</p>
-<p>最后安利一下我们的线上画图工具：<a href="https://beeart.hello-bees.com/introduce">BeeArt</a> (谁用谁知道，一般人我不告诉他～)</p>
-<h2 id="新项目旧生活"><a href="#新项目旧生活" class="headerlink" title="新项目旧生活"></a>新项目旧生活</h2><p>4月中旬我交接了工作，在两周的准备后，作为正式成员在5月初又加入了新项目。</p>
-<p>虽然是新项目，但之前经历过类似的项目，而且待了很久，无论是节奏还是工作方式都大同小异。总之就是熟悉的配方，熟悉的味道，所以过的是旧生活，但学到了很多。我的散装英语又派上了用场，之前的归属感回来了一点，但并不多，也许我再也不会有从前的「归属感」了，只是平淡的打工人，搬砖挣钱而已，并不会有太多的情怀。</p>
-<h2 id="2021剩下的1-3"><a href="#2021剩下的1-3" class="headerlink" title="2021剩下的1/3"></a>2021剩下的1/3</h2><p>2021是我的本命年，虽然已经过去了1/3，不过也是开心的1/3，人生已经如此的艰难，还是开心最重要。<br>剩下的2/3，大概会继续平淡的过着我的旧生活，然后学点工作上的新技能。未来也许并不能实现搬一辈子砖的愿望，但搬砖的每一天都要开心，活在当下。</p>
-]]></content>
-      <categories>
-        <category>生活随想</category>
-      </categories>
-      <tags>
-        <tag>活着</tag>
       </tags>
   </entry>
   <entry>
@@ -2225,66 +2229,6 @@
       </tags>
   </entry>
   <entry>
-    <title>递归求解1到100求和</title>
-    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
-    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
-<span id="more"></span>
-
-<p><strong>思想：</strong></p>
-<p>思考一下，从1加到100可以分解成：</p>
-<ul>
-<li>1+（2加到100的和）</li>
-<li>1+2+（3加到100的和）</li>
-<li>1+2+3+（4加到100的和）</li>
-<li>……</li>
-</ul>
-<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
-<p>所以，可以编写如下代码：</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> n + <span class="built_in">count</span>(n - <span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
-]]></content>
-      <categories>
-        <category>学习小记</category>
-      </categories>
-      <tags>
-        <tag>递归</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<span id="more"></span>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>好看的书</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -2352,6 +2296,36 @@
       </tags>
   </entry>
   <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<span id="more"></span>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>好看的书</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十一旅行中的小插曲</title>
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
     <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
@@ -2408,6 +2382,36 @@
       <tags>
         <tag>苏州</tag>
         <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>递归求解1到100求和</title>
+    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
+    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+<span id="more"></span>
+
+<p><strong>思想：</strong></p>
+<p>思考一下，从1加到100可以分解成：</p>
+<ul>
+<li>1+（2加到100的和）</li>
+<li>1+2+（3加到100的和）</li>
+<li>1+2+3+（4加到100的和）</li>
+<li>……</li>
+</ul>
+<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
+<p>所以，可以编写如下代码：</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> n + <span class="built_in">count</span>(n - <span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
+]]></content>
+      <categories>
+        <category>学习小记</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
       </tags>
   </entry>
   <entry>

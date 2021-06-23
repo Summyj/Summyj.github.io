@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jmyblog.top/BlogUpdateNote/</loc>
+    <lastmod>2021-06-23</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/PageServiceUpdate/</loc>
     <lastmod>2021-06-11</lastmod>
   </url>
@@ -34,10 +38,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/myCookingWay/</loc>
-    <lastmod>2021-04-28</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/BlogUpdateNote/</loc>
     <lastmod>2021-04-28</lastmod>
   </url>
   <url>
