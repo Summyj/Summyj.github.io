@@ -243,6 +243,48 @@ Path: {% label info@themes/next/source/css/_schemes/Pisces/_header.styl %}
 <img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png" >
 <img src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png" >
 
+#### 修改主题页面宽度
+
+路径：next/source/css/_schemes/Gemini/index.styl
+{% codeblock lang:command %}
+//page width start
+header{ width: 70% !important; }
+header.post-header {
+  width: auto !important;
+}
+.container .main-inner { width: 70%; }
+.content-wrap { width: calc(100% - 260px); }
+
+.header {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.container .main-inner {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.content-wrap {
+  +tablet() {
+    width: 100% !important;
+  }
+  +mobile() {
+    width: 100% !important;
+  }
+}
+//page width end
+{% endcodeblock %}
+
+
 # 后续的更新 #
 
 以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。

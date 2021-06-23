@@ -26,6 +26,43 @@ $use-seo = hexo-config('seo');
 // ==================================================
 // Desktop layout styles.
 // ==================================================
+
+//page width start
+header{ width: 70% !important; }
+header.post-header {
+  width: auto !important;
+}
+.container .main-inner { width: 70%; }
+.content-wrap { width: calc(100% - 260px); }
+
+.header {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.container .main-inner {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.content-wrap {
+  +tablet() {
+    width: 100% !important;
+  }
+  +mobile() {
+    width: 100% !important;
+  }
+}
+//page width end
+
 // Post blocks.
 .content-wrap {
   background: initial;
