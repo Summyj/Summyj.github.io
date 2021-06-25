@@ -17,26 +17,8 @@
   }
 }
 
-.site-nav-toggle{
-  +tablet-mobile() {
-    background: #db7093;;
-  }
-}
-.site-nav-right {
-  +tablet-mobile() {
-    background: #4169E1;
-  }
-}
-
 .site-nav {
-  display: block;
-
   +mobile() {
-    clear: both;
-    display: none;
-  }
-
-  &.site-nav-on {
-    display: block;
+    site-nav-hide-by-default();
   }
 }

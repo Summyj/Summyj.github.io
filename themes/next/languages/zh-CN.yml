@@ -1,19 +1,16 @@
 ---
 name: 简体中文
 title:
-  about: 关于
-  links: 大佬
-  categorie: 分类
   archive: 归档
+  category: 分类
   tag: 标签
   schedule: 日程表
 menu:
   home: 首页
-  about: 关于
-  links: 大佬
-  categories: 分类
   archives: 归档
+  categories: 分类
   tags: 标签
+  about: 关于
   search: 搜索
   schedule: 日程表
   sitemap: 站点地图
@@ -36,6 +33,8 @@ post:
   copyright:
     author: 本文作者
     link: 本文链接
+    post_author: 原作者
+    post_link: 原文链接
     license_title: 版权声明
     license_content: "本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
 footer:
@@ -54,30 +53,33 @@ counter:
   archive_posts:
     zero: 暂无日志。
     one: 目前共计 1 篇日志。
-    other: "已经有 %d 篇博客啦!"
+    other: "已经完成 %d 篇日志啦，"
 state:
   posts: 日志
   tags: 标签
   categories: 分类
 search:
   placeholder: 搜索...
+  empty: "没有找到任何搜索结果：%s"
+  hits_time: "找到 %s 个搜索结果（用时 %s 毫秒）"
+  hits: "找到 %s 个搜索结果"
 cheers:
-  um: 可还行？
-  ok: 可还行？
-  nice: 可还行？
-  good: 可还行？
-  great: 可还行？
-  excellent: 可还行？
-keep_on: 优秀如我 >.<
+  um: 了不得了不得.
+  ok: 了不得了不得
+  nice: 了不得了不得
+  good: 了不得了不得
+  great: 了不得了不得
+  excellent: 了不得了不得
+keep_on: 继续冲鸭～
 symbol:
   comma: "，"
   period: "。"
   colon: "："
 reward:
-  donate: 我很可爱┑(￣Д ￣)┍请给我钱
+  donate: 我很可爱🙈请给我钱
   wechatpay: 某微
   alipay: 某宝
-  paypal: 贝宝
+  paypal: PayPal
   bitcoin: 比特币
 follow_me:
   welcome: 欢迎关注我的其它发布渠道
@@ -85,6 +87,8 @@ accessibility:
   nav_toggle: 切换导航栏
   prev_page: 上一页
   next_page: 下一页
+  back_to_top: 返回顶部
+  select_lang: 选择语言
 symbols_count_time:
   count: 本文字数
   count_total: 站点总字数
