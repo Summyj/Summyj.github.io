@@ -4,7 +4,7 @@ date: 2019-10-17 15:19:24
 update: 2019-10-17 15:19:24
 catalog: true
 tags: [BDD, 敏捷, 王铁锤]
-categories: 项目实践
+categories: 搬砖那些事儿
 copyright: true
 top:  
 ---

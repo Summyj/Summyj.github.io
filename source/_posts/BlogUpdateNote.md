@@ -3,7 +3,7 @@ title: 升级博客，我太难了
 date: 2019-12-02 13:52:15
 update: 2019-12-02 13:52:15
 tags: [Hexo, Next, 升级博客]
-categories: 工具使用
+categories: 维护小破站
 copyright: true
 description: 记录博客升级过程，方便以后参考。
 top:

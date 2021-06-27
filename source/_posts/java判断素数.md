@@ -3,7 +3,7 @@ title: Java判断素数
 date: 2018-04-23 14:21:42
 update: 2018-04-23 14:21:42
 tags: Java
-categories: 学习小记
+categories: 搬砖那些事儿
 copyright: true
 top:
 ---

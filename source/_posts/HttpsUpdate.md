@@ -3,7 +3,7 @@ title: 给博客的Https证书续期
 date: 2020-07-30 21:23:05
 update: 2020-07-30 21:23:05
 tags: [Hexo]
-categories: 工具使用
+categories: 维护小破站
 copyright: true
 description: 道路千万条，安全第一条。
 top:

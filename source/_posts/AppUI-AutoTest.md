@@ -3,7 +3,7 @@ title: AppUI自动化测试第一弹
 date: 2021-05-19 16:46:15
 update: 2021-05-20 17:46:15
 tags: [自动化测试]
-categories: [学习小记]
+categories: [搬砖那些事儿]
 copyright: true
 description: 环境准备以及测试项目的创建。
 top:

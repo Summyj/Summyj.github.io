@@ -3,7 +3,7 @@ title: Java类中的代码块执行顺序
 date: 2017-11-06 21:10:25
 update: 2017-11-06 21:10:25
 tags: Java
-categories: 学习小记
+categories: 搬砖那些事儿
 copyright: true
 top:
 ---

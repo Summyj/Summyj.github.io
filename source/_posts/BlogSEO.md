@@ -3,7 +3,7 @@ title: 站点的SEO优化
 date: 2020-04-23 15:53:13
 update: 2020-04-23 15:53:13
 tags: [SEO]
-categories: [工具使用]
+categories: [维护小破站]
 copyright: true
 description: 博客内容是怎么推送到谷歌和百度搜索引擎的。
 top:

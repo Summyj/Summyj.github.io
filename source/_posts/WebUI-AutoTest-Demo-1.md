@@ -3,7 +3,7 @@ title: WebUI自动化测试框架Demo(上)
 date: 2020-05-15 09:45:12
 update: 2020-05-15 09:45:12
 tags: [自动化测试]
-categories: [学习小记]
+categories: [搬砖那些事儿]
 copyright: true
 description: Maven介绍，Demo Project Set Up.
 top:

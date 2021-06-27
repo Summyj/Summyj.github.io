@@ -3,7 +3,7 @@ title: 谜一样的测试金字塔
 date: 2019-12-30 14:10:25
 update: 2019-12-30 14:10:25
 tags: [测试金字塔, 敏捷]
-categories: 项目实践
+categories: 搬砖那些事儿
 copyright: true
 description: 对测试金字塔的一些总结和思考。
 top:

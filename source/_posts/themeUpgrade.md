@@ -3,7 +3,7 @@ title: 博客Next主题升级
 date: 2021-06-16 10:46:28
 update: 2021-06-24 10:46:28
 tags: [next-theme, theme-next]
-categories: [工具使用]
+categories: [维护小破站]
 copyright: true
 description: 返璞归真式主题升级。
 top:
@@ -114,7 +114,7 @@ refer: 'jmyblog.top' + location.pathname
 
 ## 升级后对比
 
-新版Next主题内置了更多插件，只需要打开开关就能用，确实挺香的。这次升级我也把之前的Next_Gmini卡片式布局，切换到了现在的Next_Mist布局，博客展示更加返璞归真了，对比感觉还是现在的效果比较适合展示博客：
+新版Next主题内置了更多插件，只需要打开开关就能用，确实挺香的。这次升级我也把之前的Next_Gemini卡片式布局，切换到了现在的Next_Mist布局，博客展示更加返璞归真了，对比感觉还是现在的效果比较适合展示博客：
 
 ![之前是有点花里胡哨哈](https://i.loli.net/2021/06/24/ibkeCQwLaV9xsXd.jpg)
 

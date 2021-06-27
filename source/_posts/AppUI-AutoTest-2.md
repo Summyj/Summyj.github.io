@@ -3,7 +3,7 @@ title: AppUI自动化测试第三弹-iOS篇
 date: 2021-05-21 16:46:15
 update: 2021-05-24 15:09:15
 tags: [自动化测试]
-categories: [学习小记]
+categories: [搬砖那些事儿]
 copyright: true
 description: 将代码库部署到Bitrise CI，实现iOS平台的持续集成。
 top:

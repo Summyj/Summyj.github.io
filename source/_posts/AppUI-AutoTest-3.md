@@ -3,7 +3,7 @@ title: AppUI自动化测试第三弹-Android篇
 date: 2021-05-23 18:15:19
 update: 2021-05-24 18:15:19
 tags: [自动化测试]
-categories: [学习小记]
+categories: [搬砖那些事儿]
 copyright: true
 description: 将代码库部署到Bitrise CI，实现Android平台的持续集成。
 top:

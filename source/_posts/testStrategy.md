@@ -3,7 +3,7 @@ title: 测试策略浅谈
 date: 2020-09-01 15:54:38
 update: 2020-11-27 15:54:38
 tags: [测试策略,敏捷]
-categories: 项目实践
+categories: 搬砖那些事儿
 copyright: true
 description: 揭秘敏捷团队的测试策略设计以及QA的工(ban)作(zhuan)日常。
 top:
