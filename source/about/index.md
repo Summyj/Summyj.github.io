@@ -10,6 +10,7 @@ type: "about"
 
 # About Me #
 
+<!-- <img src="https://i.loli.net/2021/07/03/6XYkWHefnZ85hql.jpg" width="200" height="200"> -->
 <img src="https://i.loli.net/2020/08/01/2WpFPRzbawuXsmM.png" width="200" height="200">
 {% cq %}
 97年生人 :girl:

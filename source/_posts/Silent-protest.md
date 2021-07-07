@@ -2,8 +2,8 @@
 title: 沉默的抗争
 date: 2020-11-27 17:37:29
 update: 2020-11-27 17:37:29
-tags: [人生,王铁锤]
-categories: 人生是一场未知的旅行
+tags: 王铁锤
+categories: 搬砖那些事儿
 copyright: true
 description: 沉默呵，沉默呵！不在沉默中爆发，就在沉默中灭亡。
 top:
