@@ -10,20 +10,16 @@ top:
 ---
 
 ## 一些废话
+
 {% cq %} 
 古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。
 {% endcq %}
-
-书架一角(高效能的书脊因为砸核桃所以有点歪了)：
-
-<img src="https://i.loli.net/2020/01/06/yEHpwJZg2PmqaAO.jpg" alt="书架一角">
-
 
 ## 书单
 
 下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。
 
-<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" alt="书架一角" width=200 height=200>
+<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" width=200 height=200>
 看过的/看了一部分的写了简评，以后有看完的再慢慢加:smiley:
 
 ### 工作

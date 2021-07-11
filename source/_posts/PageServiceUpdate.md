@@ -9,7 +9,7 @@ description: 想用自定义域名，可太难了。
 top:
 ---
 
-![coverimg](http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg)
+<img src="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg" >
 
 ## 事情是这样的
 
