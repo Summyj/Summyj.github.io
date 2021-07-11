@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jmyblog.top/ChengduTravel/</loc>
+    <lastmod>2021-07-11</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/Test-Pyramid/</loc>
+    <lastmod>2021-07-09</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/MyBooks/</loc>
+    <lastmod>2021-07-09</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/PageServiceUpdate/</loc>
+    <lastmod>2021-07-08</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/CharlesConnect/</loc>
     <lastmod>2021-07-07</lastmod>
   </url>
@@ -34,10 +50,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/FirstBlog/</loc>
-    <lastmod>2021-06-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/MyBooks/</loc>
     <lastmod>2021-06-27</lastmod>
   </url>
   <url>
@@ -106,10 +118,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/Penetration-Test/</loc>
-    <lastmod>2021-06-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/Test-Pyramid/</loc>
     <lastmod>2021-06-27</lastmod>
   </url>
   <url>
@@ -186,10 +194,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/themeUpgrade/</loc>
-    <lastmod>2021-06-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/PageServiceUpdate/</loc>
     <lastmod>2021-06-27</lastmod>
   </url>
 </urlset> 
