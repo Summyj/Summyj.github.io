@@ -9,7 +9,7 @@ description: 有人入职，有人离职，有人roll off，还有人要写下�
 top:
 ---
 
-<img src="https://i.loli.net/2021/06/27/M1hoGHtva469uDl.png" >
+<img src="https://i.loli.net/2021/07/18/s819qyRpVilb2Am.png" >
 
 - 城市：X市
 - 单位：才华有限公司
