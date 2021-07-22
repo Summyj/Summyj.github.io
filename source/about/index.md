@@ -22,5 +22,7 @@ type: "about"
 # About this site #
 
 {% note info %}
-本博客基于**Hexo**博客框架搭建，并部署在**GithubPages**和**CodingPages**上。如果你也想搭建，可以参考 [我写的文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more)，博客主要更新一些学习笔记，一些工(ban)作(zhuan)总结，还有一些闲言碎语和生活感悟:laughing:
+本博客基于**Hexo**框架搭建，并部署在**GithubPages**和**CodingPages**上。如果你也想搭建，可以参考 [我写的文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more)。
+博客搭建之前的文章都记录在 [CSDN](https://blog.csdn.net/summy_j) 中，都是一些技术博客，但是里面的内容我现在已经看不懂了，因为工作中大多都没有用到:joy:
+这里主要更新一些学习笔记，一些工(ban)作(zhuan)总结，还有一些闲言碎语和生活感悟:laughing:
 {% endnote %}
