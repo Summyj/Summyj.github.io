@@ -114,3 +114,41 @@ top:
 试过不导出测试报告，用adb在CI执行测试，但会报一个互斥锁的错误，感觉在CI上太难连到模拟器了，上边在模拟器安装apk的步骤也很费劲，所以最好不用adb命令吧。
 
 ![adb运行](https://i.loli.net/2021/08/07/MTudktDJ41ZcO6G.png)
+
+## UiAutomator vs Appium
+
+UiAutomator初体验到这里就结束了，因为之前我也写过用Appium进行移动端UI自动化测试的系列文章，所以感受到了很多不同，具体在以下几个方面。
+
+### 上手方面
+
+这是Appium的 [环境准备](https://jmyblog.top/AppUI-AutoTest/#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87) ，这是UiAutomator的 [环境准备](https://jmyblog.top/ui-automator-test/#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87) ，UiAutomator是更快更简洁的，依赖更少；这是Appium创建的 [测试项目](https://jmyblog.top/AppUI-AutoTest/#%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE) ，这是UiAutomator创建的 [测试项目](https://jmyblog.top/ui-automator-test/#%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE) ，还是UiAutomator更快更方便。
+
+这是Appium用来定位元素的 [Appium Desktop](https://jmyblog.top/AppUI-AutoTest-1/#Appium-Desktop) ，这是UiAutomator用来定位元素的 [uiautomatorviewer](https://jmyblog.top/ui-automator-test-2/#%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0) ，还是UiAutomator更方便，不用设置Desired Capabilities，但界面其实没人家好看。
+
+这是利用Appium [写的代码](https://jmyblog.top/AppUI-AutoTest-1/#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81) ，这是用UiAutomator [写的代码](https://jmyblog.top/ui-automator-test-2/#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81) ，这里写的是同样的测试用例，其实是差不多的，只是语言不同而已。不过对于Webview，Appium还需要切换context，UiAutomator则可以直接操作Webview，不用手动切换context，这会大大减少测试运行的时间和出错率。
+
+Appium适用于iOS和Android两个平台，UiAutomator是只针对Android的，其实Appium在Android平台底层用的也是UiAutomator作为自动化引擎，从Desired Capabilities的配置就可以发现：
+
+![android capabilities](https://i.loli.net/2021/08/07/y9QTpiPKDWul81b.png)
+所以UiAutomator相当于是安卓原生的一个自动化测试框架，iOS也有自己原生的UI测试框架XCUITest，它也是Appium在iOS平台底层引用的自动化引擎：
+
+![ios capabilities](https://i.loli.net/2021/08/07/9GQvkLTlxMgU8Zt.png)
+
+### 运行时间
+
+再来看看运行时间，还是贴出两个框架的运行视频，这里写的同样的测试用例，先来看UiAutomator用三种方式运行测试的视频，最长的时间是用gradle运行，大概25秒，最短只需要12秒：
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNTE5MDYyMjk2OA==' frameborder=0 'allowfullscreen'></iframe>
+
+再来看Appium运行视频，是用npm命令跑，大概23秒，看起来和UiAutomator差不多，但更复杂的场景还是UiAutomator更快的。
+
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNTE1ODA3NzE4MA==' frameborder=0 'allowfullscreen'></iframe>
+
+### CI配置
+
+这是Appium的 [CI配置过程](https://jmyblog.top/AppUI-AutoTest-3/#%E6%B7%BB%E5%8A%A0e2e-workflow) ，这是UiAutomator的 [CI配置过程](https://jmyblog.top/ui-automator-test-3/#%E6%B7%BB%E5%8A%A0UiAutomator-workflow) ，看着虽然也差不多，但亲测其实Appium步骤更多，因为要切换Webview，后续还要加一步下载chrome webdriver，而UiAutomator则不用。
+
+### 个人体验
+
+{% note info %}
+两个框架各有优劣，可以根据实际需求选择，我自己体验下来还是Ui Automator更方便一些，不过两个框架我都是初次使用，目前除了webview之外我也没遇到别的复杂场景，或许有的方面Appium会更胜一筹，继续学习吧，碰到之后我也会写博客分享的。
+{% endnote %}
