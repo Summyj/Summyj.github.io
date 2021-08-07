@@ -2,7 +2,7 @@
 title: AppUI自动化测试第二弹
 date: 2021-05-20 16:46:15
 update: 2021-05-21 14:06:15
-tags: [自动化测试]
+tags: [自动化测试, Appium]
 categories: [搬砖那些事儿]
 copyright: true
 description: 利用模拟器和Appium定位App元素，编写测试代码。

@@ -65,17 +65,15 @@ top:
 - 开启chatra chat
 {% endnote %}
 
-#### 高亮功能
+这些配置大部分都只是把 next/_config.yml 文件里的toggle打开，把false改成true而已，非常方便，没什么可讲的，但有两个功能我觉得可以高亮一下。
 
-这些配置大部分都只是把 next/_config.yml 文件里的toggle打开，把false改成true而已，非常方便，没什么可讲的。但有两个功能我觉得可以高亮一下，它们是：
-
-{% label success@图片的fancybox功能 %}
+#### 图片fancybox
 
 开启fancybox只需要在_config.xml里搜索fancybox，然后将false改成true就可以了，简单到不可置信。之后就可以点开博客里的图片，而且还能切换查看上下图、幻灯片播放、查看图片列表，而且还可以看到图片下方的描述，简直了，什么神仙功能，大佬们太棒了❤️：
 
 ![fancybox](https://i.loli.net/2021/06/25/iMc3p7a8WSoGsdQ.png)
 
-{% label success@chatra chat %}
+#### chatra chat
 
 事实上，之前使用的next主题也有这项配置，但一直没深入研究，不过这次使用之后也觉得超级方便！开启chatra chat只需要在_config.xml里搜索Chat Services，之后开启chat button展示，接着去chatra官网注册账号，把id加上就可以了，官网和找id的路径也在文件里注释了：
 
@@ -91,6 +89,13 @@ chatra官网中也可以进行个性化配置，包括默认回复的信息，�
 ![价格信息](https://i.loli.net/2021/06/25/K7Sug1ksNRw8WyM.png)
 
 Chat Services里列出的其它Chat服务tidio和gitter我也试了，但tidio貌似需要科学上网，gitter貌似只能群聊，隐私感体验较差，所以还是选择了chatra。
+chatra可以用邮件的方式提示新消息，但刚开始只能在网页上回复消息，后来发现AppStore也有这个应用，叫**Chatra**，下载后就能及时用手机回复消息了：
+
+![用手机App发送消息](https://i.loli.net/2021/08/07/fNKCAtxyvwecpRF.png)
+手机端交互和网页差不多，但不能同时在线：
+
+![chatra手机端](https://i.loli.net/2021/08/07/fvbPwaZUjMtzOlS.jpg)
+
 
 ### 个性化设置
 
