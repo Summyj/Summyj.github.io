@@ -36,7 +36,7 @@ Charles的基础配置就先这样，下边连接设备的过程中，还需要�
 ![添加成功提示](https://i.loli.net/2021/07/07/L1mPro8s7UZxARI.png)
 打开iOS Simulator，进入{% label primary@Settings - General%}，此时应该有一个 **Profile** 选项显示：
 <img src="https://i.loli.net/2021/07/07/c1x7tjPR8S9EI3Q.png" width = "230" height = "500" alt="CA Profile">
-如果没有的话， 打开Simlator的Safari浏览器，输入 **chls.pro/ssl**，手动下载Charles，之后再去{% label primary@Settings - General%}就可以看到Profile了，里面就是下载的Charles CA:
+如果没有的话， 开启Charles的 {% label primary@Proxy-macOS Proxy%}设置，再打开Simlator的Safari浏览器，输入 **chls.pro/ssl**，手动下载Charles，之后再去{% label primary@Settings - General%}就可以看到Profile了，里面就是下载的Charles CA:
 ![手动下载CharlesCA到iOS Simulator](https://i.loli.net/2021/07/07/9KhcPUoGeL7s3Vu.png)
 
 #### 安装Charles CA
@@ -51,7 +51,7 @@ Charles的基础配置就先这样，下边连接设备的过程中，还需要�
 
 #### 抓取Simulator请求
 
-打开Charles, 然后打开 {% label primary@Proxy-macOS Proxy%}设置，这里还需要设置Charles的SSL Proxy，这样才能抓取到Https的请求，打开{% label primary@Proxy-SSL Proxy Settings%}，添加你想要进行Https抓取的url地址，此后Charles只会抓取此地址的Https请求：
+打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启的，这里还需要设置Charles的SSL Proxy，这样才能抓取到Https的请求，打开{% label primary@Proxy-SSL Proxy Settings%}，添加你想要进行Https抓取的url地址，此后Charles只会抓取此地址的Https请求：
 ![SSL Proxy Settings](https://i.loli.net/2021/07/07/fVdGbDXUhPlejHg.png)
 然后就可以正常抓取Simulator里的Https请求了：
 ![Simulator请求](https://i.loli.net/2021/07/07/7ihUkHImbWsKJfV.png)
