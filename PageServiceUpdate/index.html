@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="想用自定义域名，可太难了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客Pages服务升级">
+<meta property="og:url" content="https://jmyblog.top/PageServiceUpdate/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="想用自定义域名，可太难了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjgogovj624u10stbw02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjzp6g2j61xo1g8n5f02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grazkajnejj61ww15ywjr02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grazp0008pj62l20wuk0u02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grb00pbdghj62e80wkq9s02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyc2uyn8j62g812ijz702.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydne1euj62780kstcx02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyez5zm5j60qw0lhabu02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd41p2dwuj61ac0g840o02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcygr10k3j61bs0mewha02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyh19l0uj613r07y74z02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd4c4r47uj625210cq8e02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyhzt9osj624w0pudm002.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyk7l6l7j61620f2jtx02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcykxfwymj61ag0ic0v902.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyl51q8ej61610j0n0502.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyloweifj61040kuwg902.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcym15hk2j610y0p076f02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcymo4m6lj61620fsdid02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6tw6dw3j60ni0kuwfn02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6ueay7lj62ke0l0n2i02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd741nv9bj60bl0mwwgr02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydajfznj61mk17oqba02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd8vxs7z9j60qs1ac0wv02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vkp1gaj61lu0lg43f02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30evnlej61mc0fqadr02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2tkvgn8j626o0gw78b02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grda1c6edtj61bk0iatcw02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grda3xez8lj61qg0a8jte02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grda6byoyhj61920h8gp102.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/pmkCEzlanyQBiD5.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdae57e55j618s05cgne02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdaihv34jj61a60d041302.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vvzu3nj62am18agvy02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb5pbocfj61a406stap02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb6kmrwgj619q05gjt502.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb79fv7hj619y0as42e02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbb8h8q7j624805kt9v02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbct4avzj62640n042t02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbcyyp7nj624y0me42v02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb7f8we4j61ac0dgad002.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/LeoMy5p6SKGX71O.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30nk1faj60s40ku77202.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3eg62esj61620gkadb02.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/JXKaRVnq3iC7GkQ.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/k4UF5refWqgYNCz.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/8TQYjyKRqkbOnhw.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/ltPUcyOdvebphfB.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2xyjpa7j616409ejtt02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/6N8ZSgoWrUtIQcb.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/n5TdHZtcaL7Azs6.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/6p5iyxc4XZrM9Yo.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2zj0qnrj61qk0s6ae502.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3hl9bjdj626i0wa0zl02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2u22ec8j62l418kqah02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2ugu9a6j62la12ewit02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3012an4j62co0sagq802.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1gre98vekm5j61j20xcjyc02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9o9veadj61n41b411r02.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9omgv7sj61ne0suwjw02.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/06/11/jIZwMAUEbsK4VPa.png">
+<meta property="article:published_time" content="2021-06-08T08:54:05.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.464Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="GithubPages">
+<meta property="article:tag" content="CodingPages">
+<meta property="article:tag" content="腾讯云">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg">
+
+
+<link rel="canonical" href="https://jmyblog.top/PageServiceUpdate/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/PageServiceUpdate/","path":"PageServiceUpdate/","title":"博客Pages服务升级"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>博客Pages服务升级 | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E6%83%85%E6%98%AF%E8%BF%99%E6%A0%B7%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">事情是这样的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CodingPages%E5%8D%87%E7%BA%A7%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">CodingPages升级腾讯云服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E8%85%BE%E8%AE%AF%E4%BA%91%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.1.</span> <span class="nav-text">绑定腾讯云账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A7%E7%89%88%E7%BD%91%E7%AB%99%E5%8D%87%E7%BA%A7"><span class="nav-number">2.2.</span> <span class="nav-text">旧版网站升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%85%BE%E8%AE%AF%E4%BA%91%E8%AF%81%E4%B9%A6"><span class="nav-number">2.3.</span> <span class="nav-text">申请腾讯云证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A2%E7%B4%A2%E8%85%BE%E8%AE%AF%E4%BA%91"><span class="nav-number">2.4.</span> <span class="nav-text">探索腾讯云</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GithubPages%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">3.</span> <span class="nav-text">GithubPages问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6-amp-Google"><span class="nav-number">3.1.</span> <span class="nav-text">百度&amp;Google</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="nav-number">3.2.</span> <span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">3.3.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEapex-domain"><span class="nav-number">3.3.1.</span> <span class="nav-text">配置apex domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEwww-subdomain"><span class="nav-number">3.3.2.</span> <span class="nav-text">配置www subdomain</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E5%95%A5%E8%A6%81%E7%94%A8CodingPages"><span class="nav-number">4.</span> <span class="nav-text">为啥要用CodingPages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CodingPages%E5%9C%A8%E5%93%AA"><span class="nav-number">4.1.</span> <span class="nav-text">CodingPages在哪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CodingPages%E9%83%A8%E7%BD%B2%E8%8A%82%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">CodingPages部署节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%91CDN%E5%8A%A0%E9%80%9F"><span class="nav-number">4.3.</span> <span class="nav-text">腾讯云CDN加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8CodingPages%E7%9A%84%E7%90%86%E7%94%B1"><span class="nav-number">4.4.</span> <span class="nav-text">使用CodingPages的理由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E9%AA%8C%E8%AF%81"><span class="nav-number">5.</span> <span class="nav-text">站点验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95"><span class="nav-number">5.1.</span> <span class="nav-text">百度收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google%E6%94%B6%E5%BD%95"><span class="nav-number">5.2.</span> <span class="nav-text">Google收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6"><span class="nav-number">5.3.</span> <span class="nav-text">访问速度</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/PageServiceUpdate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          博客Pages服务升级
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-08 16:54:05" itemprop="dateCreated datePublished" datetime="2021-06-08T16:54:05+08:00">2021-06-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BB%B4%E6%8A%A4%E5%B0%8F%E7%A0%B4%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">维护小破站</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">想用自定义域名，可太难了。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg">
+
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><p>首先我的博客是同时部署在GithubPages和CodingPages上的，GithubPages提供国外访问，CodingPages加速国内访问。两个服务都加了我的自定义域名 <mark class="label info">jmyblog.top</mark>，且都开启了Https。</p>
+<p>两个服务给我的自定义域名申请的Https证书都是由国外的Let’s Encrypt机构签发，一般这个证书有效期只有三个月。由于我的域名解析设置，在证书快到期时，GithubPages可以帮我自动续申请证书，而CodingPages却不能，这就导致证书到期后在国内不能通过Https的方式访问我的博客，所以每次证书快到期时，我都要登录CodingPages <a href="https://jmyblog.top/HttpsUpdate/">手动续申证书</a>。</p>
+<p>去年的时候，CodingPages服务就一直给我发短信说是升级啥的，但我没有关注，我一直是个破罐子破摔的人，只要它没有停服，博客还能访问就懒的升级。<br>直到有一天我打开博客的时候出现异常，有时是直接访问不了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjgogovj624u10stbw02.jpg" alt="1622540423142.jpg"><br>有时是一些报错，好像是https证书过期之类：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjzp6g2j61xo1g8n5f02.jpg" alt="1622540733603.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazkajnejj61ww15ywjr02.jpg" alt="1622540555676.jpg"><br>所以想先手动更新一波证书，然而登录Coding之后发现并不是证书的问题，而是CodingPage旧版直接停服了，必须更新才行：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazp0008pj62l20wuk0u02.jpg" alt="1622532281585.jpg"><br>于是新的一波折腾又开始了，为了以后温故知新，我把折腾过程全程截图保存了下来，就有了这篇博客。</p>
+<h2 id="CodingPages升级腾讯云服务"><a href="#CodingPages升级腾讯云服务" class="headerlink" title="CodingPages升级腾讯云服务"></a>CodingPages升级腾讯云服务</h2><h3 id="绑定腾讯云账号"><a href="#绑定腾讯云账号" class="headerlink" title="绑定腾讯云账号"></a>绑定腾讯云账号</h3><p>先按照升级提示绑定腾讯云账号，看来腾讯是和Coding有某种关系了(后来搜了下好像是CodingPages被腾讯收购了，以后底层全用腾讯云服务，Coding这边只是一个UI的壳子)，总之不管他们啥关系，先升级再说，账号绑定完成后又开启了新的关卡：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grb00pbdghj62e80wkq9s02.jpg" alt="1622538814928.jpg"><br>然后按照指示一顿操作，终于可以使用新版Coding Pages了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyc2uyn8j62g812ijz702.jpg" alt="1622539615813.jpg"></p>
+<h3 id="旧版网站升级"><a href="#旧版网站升级" class="headerlink" title="旧版网站升级"></a>旧版网站升级</h3><p>由于我是要升级之前的网站，所以进入旧版网站列表，找到之前的静态网站，在右上角看到了「升级至新版」的入口：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydne1euj62780kstcx02.jpg" alt="1622539639577.jpg"><br>于是果断进入，选择相应的网站类型，最开始我选择了自己使用的Hexo，后来部署报错了，是因为我并没有把Hexo的配置文件上传到仓库(因为里面有许多我自己使用的插件私钥和密码，不能上传到public的仓库中)。所以后来又选择了静态网站，才部署成功：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyez5zm5j60qw0lhabu02.jpg" alt="1622539686983.jpg"><br>之后又按照提示，去阿里云更改域名的CNAME设置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd41p2dwuj61ac0g840o02.jpg" alt="1623303229231.jpg"><br>完成设置后(顺便改了下网站名字)，新版的网站就开始部署了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcygr10k3j61bs0mewha02.jpg" alt="1622539996713.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyh19l0uj613r07y74z02.jpg" alt="1622540194028.jpg"><br>部署成功后，看到基本信息，有两个网站地址，一个是我的自定义域名，一个是CodingPages提供的访问域名：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd4c4r47uj625210cq8e02.jpg" alt="1623303831826.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyhzt9osj624w0pudm002.jpg" alt="1622540298235.jpg"></p>
+<h3 id="申请腾讯云证书"><a href="#申请腾讯云证书" class="headerlink" title="申请腾讯云证书"></a>申请腾讯云证书</h3><p>切换到自定义域名页面，发现Https证书还在审核中：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyk7l6l7j61620f2jtx02.jpg" alt="1622541431872.jpg"><br>点击「审核中」，就跳转到了腾讯云页面，新的关卡又增加了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcykxfwymj61ag0ic0v902.jpg" alt="1622541560047.jpg"><br>所以根据提示步骤申请证书，进行域名验证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyl51q8ej61610j0n0502.jpg" alt="1622541615687.jpg"><br>去阿里云添加一条TXT的记录进行验证(证书申请成功后就可以删掉这条验证了)：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyloweifj61040kuwg902.jpg" alt="1622541722382.jpg"><br>验证成功后，到了使用证书这一步，不过我们的证书其实已经签发成功了，并不需要自己手动安装，所以忽略掉后边的步骤：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcym15hk2j610y0p076f02.jpg" alt="1622541808007.jpg"><br>等到第二天再打开Coding页面，发现域名的证书审核已经通过了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcymo4m6lj61620fsdid02.jpg" alt="1622614304295.jpg"><br>之后再访问博客，可以看到证书已经更新了，到期日为明年6/1:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"></p>
+<h3 id="探索腾讯云"><a href="#探索腾讯云" class="headerlink" title="探索腾讯云"></a>探索腾讯云</h3><p>在腾讯云工作台可以看到证书详情，可以看到它同时帮我们开启了www的subdomain访问方式：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6tw6dw3j60ni0kuwfn02.jpg" alt="1623308612737.jpg"><br>也可以进行管理:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6ueay7lj62ke0l0n2i02.jpg" alt="1623308652667.jpg"><br>域名管理：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><br>然而，世上没有免费的午餐，腾讯云的服务是要收费的，就在我刚开通一天后，它就给我发了欠费的信息：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd741nv9bj60bl0mwwgr02.jpg" height="400" width="200"><br>虽然不贵，但比起之前免费的CodingPages服务，还是有些差距。而且这里的证书期限是一年，一年以后又不知道有啥幺蛾子，先这样吧，就这样破罐子破摔的凑合着用，我已经充值了10块钱，看它能花多少。</p>
+<h2 id="GithubPages问题解决"><a href="#GithubPages问题解决" class="headerlink" title="GithubPages问题解决"></a>GithubPages问题解决</h2><p>到这里，CodingPages的升级已经完成了，然而我的博客还部署在了GithubPages，所以要再看看GithubPages的服务是否正常。不看不知道，一看吓一跳，果然有问题 <mark class="label warning">Domain's DNS record could not be retrieved...</mark>：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydajfznj61mk17oqba02.jpg" alt="1622539358158.jpg"><br>说我的DNS配置不对，要加CNAME。但是我有CNAME呀，不知道为啥有这个报错，于是为了解决这个报错，我开始了漫长的旅途。</p>
+<h3 id="百度-amp-Google"><a href="#百度-amp-Google" class="headerlink" title="百度&amp;Google"></a>百度&amp;Google</h3><p>首先，是在百度和谷歌寻找解决方案，找到了几种方案：<br><span id="inline-toc">1.</span> <a target="_blank" rel="noopener" href="https://www.sawlove.com/github-custom-domain-use-https.html">重新绑定域名</a>：是说先把域名remove，然后再重新添加，但是没有解决我的问题。<br><span id="inline-toc">2.</span> 加上www域名前缀：是说在代码库的CNAME文件里给域名加上www前缀，然后在域名解析里也加上www，最后绑定www前缀的域名。但还是没有解决我的问题。<br><span id="inline-toc">3.</span> 让Github自己添加CNAME文件：是说绑定域名后Github会自动在代码库里加上CNAME文件，所以要先把CNAME文件删掉，再重新绑定域名等Github添加文件，然而我照做之后发现Github并没有自动给我添加CNAME文件，所以依然没有解决我的问题。</p>
+<p>总之，折腾了半天，问题还是没有解决，瞧把我给折腾的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd8vxs7z9j60qs1ac0wv02.jpg" height="600" width="350"><br>而且遇到了更多的报错，比如<mark class="label danger">Domain does not resolve to the GitHub Pages server... ：</mark><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vkp1gaj61lu0lg43f02.jpg" alt="1622785367590.jpg"><br>再比如：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30evnlej61mc0fqadr02.jpg" alt="1623129057591.jpg"></p>
+<p>真的累了，甚至想着就用github.io访问好了，GithubPages就不绑定域名了吧：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2tkvgn8j626o0gw78b02.jpg" alt="1622712116380.jpg"></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>想归想，问题还是要解决的。<br>既然网上的办法解决不了，就乖乖去看官方文档吧，于是直接点击报错信息里的learn more，打开官方文档，开始通读全文：<a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a><br>文档里提供了两种自定义域名的绑定配置方法，一种是subdomian，比如 <a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a> 或者 blog.example.com 这样的，显然我不是这种类型；另一种是apex domain，比如example.com这种的，那可不就是我的域名类型嘛，好，找到方向了。</p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="配置apex-domain"><a href="#配置apex-domain" class="headerlink" title="配置apex domain"></a>配置apex domain</h4><p>然后就按照文档里描述的apex domain的配置方法开始操作，直接跳到第五步：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda1c6edtj61bk0iatcw02.jpg" alt="1623315661401.jpg"><br>说让我添加A记录指向GithubPages提供的这些IP地址，好嘛，安排！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda3xez8lj61qg0a8jte02.jpg" alt="1623315810471.jpg"><br>然后又让我用命令验证配置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda6byoyhj61920h8gp102.jpg" alt="1623315955716.jpg"><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/pmkCEzlanyQBiD5.png" alt="image.png"><br>接着让我加CNAME文件到我的代码库里：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdae57e55j618s05cgne02.jpg" alt="1623316383313.jpg"><br>这个本来就有，最后是可选项，开启强制Https，也打开了，但据说要等24小时：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdaihv34jj61a60d041302.jpg" alt="1623316394352.jpg"><br>好，所有的配置都没毛病，可以添加域名了，那你倒是说说，为毛这个错它还在？！！！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vvzu3nj62am18agvy02.jpg" alt="1622786325436.jpg"><br>唉，心态崩了。<br>后来问题解决之后，冷静下来想想，此时报错可能有两个原因，一个是我没等够24小时，等够时间后check again应该就没错了；或者我不开启https应该也不会有错，但我还是想有https的，所以没有采取这种做法。<br>但是，我的关注点在这个报错，为毛我绑定的是没有www的域名，报错里却有www的subdomain?<br>好吧，接着看官方文档。</p>
+<h4 id="配置www-subdomain"><a href="#配置www-subdomain" class="headerlink" title="配置www subdomain"></a>配置www subdomain</h4><p>官方文档上说，如果用的是apex domain，推荐再给它配置www subdomain，好吧，就按你推荐的来：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb5pbocfj61a406stap02.jpg" alt="1623317938517.jpg"><br>上边还说，给apex domain配置www submain的前提是你已经按照上边的方法配置好了apex domain，虽然我的报错还在，但我认为自己还是配置好了apex domain的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb6kmrwgj619q05gjt502.jpg" alt="1623317950652.jpg"><br>所以按它说的接着来，第一步，域名解析里添加一个www的CNAME记录，指向 xxx.github.io：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb79fv7hj619y0as42e02.jpg" alt="1623317969868.jpg"><br>安排：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbb8h8q7j624805kt9v02.jpg" alt="1623318311090.jpg"><br>接着把代码库里的CNAME文件也加上www：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbct4avzj62640n042t02.jpg" alt="1623318380827.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbcyyp7nj624y0me42v02.jpg" alt="1623318402390.jpg"><br>第二步，命令验证配置是否正确：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb7f8we4j61ac0dgad002.jpg" alt="1623317982442.jpg"><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/LeoMy5p6SKGX71O.png" alt="image.png"><br>到这里，配置就已经结束了，激动人心的时候到来了，绑定我的www域名，竟然。。。。。成功了！！！！！小绿勾也打上了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30nk1faj60s40ku77202.jpg" alt="1623130387731.jpg"><br>而且也开启了Https，由于我配置www subdomain是在配置apex domain 24小时之后，此时是已经等够24小时的，所以可以开启Https没有报错。<br>血的教训告诉我们，官方文档是真的有用。所以遇到问题，还是先看看人家让你看的官方文档，然后再搜其他的办法。</p>
+<h2 id="为啥要用CodingPages"><a href="#为啥要用CodingPages" class="headerlink" title="为啥要用CodingPages"></a>为啥要用CodingPages</h2><h3 id="CodingPages在哪"><a href="#CodingPages在哪" class="headerlink" title="CodingPages在哪"></a>CodingPages在哪</h3><p>配置好了GithubPages，目前我的个人域名DNS设置是：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3eg62esj61620gkadb02.jpg" alt="1623301889628.jpg"><br>通过命令再次验证DNS设置：<br><img data-src="https://i.loli.net/2021/06/11/JXKaRVnq3iC7GkQ.png" alt="image.png"><br>有没有发现什么问题？<br>是呀，CodingPages的作用在哪呢？验证到的DNS设置只指向了GithubPages服务，而且无论是访问 <a href="https://jmyblog.top/">https://jmyblog.top</a> 还是 <a target="_blank" rel="noopener" href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ，显示的Https证书都是Let’s Encrypt签发的：<br><img data-src="https://i.loli.net/2021/06/11/k4UF5refWqgYNCz.png" alt="image.png"></p>
+<h3 id="CodingPages部署节点"><a href="#CodingPages部署节点" class="headerlink" title="CodingPages部署节点"></a>CodingPages部署节点</h3><p>然后再次探索CodingPages，发现它部署的节点是香港：<br><img data-src="https://i.loli.net/2021/06/11/8TQYjyKRqkbOnhw.png" alt="image.png"><br>想部署到其他节点还得备案才行：<br><img data-src="https://i.loli.net/2021/06/11/ltPUcyOdvebphfB.png" alt="image.png"><br>于是连接一个香港区域的VPN，然后再通过命令再次验证DNS设置，终于看到了指向CodingPages的信息和腾讯云签发的证书：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2xyjpa7j616409ejtt02.jpg" alt="1623054662478.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"></p>
+<h3 id="腾讯云CDN加速"><a href="#腾讯云CDN加速" class="headerlink" title="腾讯云CDN加速"></a>腾讯云CDN加速</h3><p>登录腾讯云，发现它对站点的加速和服务区域都是境外：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><br>想切换加速区域还是得备案才行，而且还得另付国内加速的费用：<br><img data-src="https://i.loli.net/2021/06/11/6N8ZSgoWrUtIQcb.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/06/11/n5TdHZtcaL7Azs6.png" alt="image.png"></p>
+<p>但是备案太麻烦了，而且就我这个小破站估计也没多少人看，孤芳自赏罢了，也不至于搞这么多服务。所以在已经有了GithubPages之外，我需要CodingPages的理由是什么呢？</p>
+<h3 id="使用CodingPages的理由"><a href="#使用CodingPages的理由" class="headerlink" title="使用CodingPages的理由"></a>使用CodingPages的理由</h3><p>从前用CodingPages是想用它免费的国内加速服务，现在虽然不备案就不能加速了，但仔细想了想，虽然我不想备案，也不想开启高端的CDN加速服务，还是有一些理由让我使用它的：</p>
+<p><span id="inline-toc">1.</span> 博客内容推送到百度，理由如下：</p>
+<p><img data-src="https://i.loli.net/2021/06/11/6p5iyxc4XZrM9Yo.png" alt="image.png"></p>
+<p><span id="inline-toc">2.</span> 一个备胎，为了保险起见，同时使用两个服务还是不错的，虽然它们的功能有一些重复。<br><span id="inline-toc">3.</span> 虽然目前只有国外加速服务，好歹能给国外的朋友提高访问体验啊，而且万一以后又想备案呢，留条后路总没错。<br><span id="inline-toc">4.</span> 虽然用它的理由的确乏善可陈，但是配都配好了，我上边折腾这么久也不能白折腾。</p>
+<h2 id="站点验证"><a href="#站点验证" class="headerlink" title="站点验证"></a>站点验证</h2><p>到这里，博客配置就已经结束了，但还是要通过第三方工具验证博客的可访问性和速度。</p>
+<h3 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h3><p>之前做了百度SEO优化，所以使用百度站长工具验证站点，首先是Https认证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2zj0qnrj61qk0s6ae502.jpg" alt="1623056320673.jpg"><br>没毛病，这Https是真的，再看看URL抓取：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3hl9bjdj626i0wa0zl02.jpg" alt="1623302070854.jpg"><br>也没毛病，看来百度可以收录我网站的URL，访问抓取都可以，放心了。</p>
+<h3 id="Google收录"><a href="#Google收录" class="headerlink" title="Google收录"></a>Google收录</h3><p>也做过Google的SEO优化，所以使用Google站点工具，先连上站点验证所有权：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2u22ec8j62l418kqah02.jpg" alt="1622714334036.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2ugu9a6j62la12ewit02.jpg" alt="1622714361935.jpg"><br>然后再上传一次sitemap，确保Google可以抓取网站的URL:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3012an4j62co0sagq802.jpg" alt="1623122594184.jpg"><br>没毛病，看来也ok:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre98vekm5j61j20xcjyc02.jpg" alt="1623388402076.jpg"></p>
+<h3 id="访问速度"><a href="#访问速度" class="headerlink" title="访问速度"></a>访问速度</h3><p>通过 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/speedtest/">这个网站</a> 可以检测博客的访问速度，在国内测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> ，国际测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> 和 <a target="_blank" rel="noopener" href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ， 结果都还不错：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9o9veadj61n41b411r02.jpg" alt="1623389603223.jpg"><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9omgv7sj61ne0suwjw02.jpg" alt="1623389638753.jpg"><br><img data-src="https://i.loli.net/2021/06/11/jIZwMAUEbsK4VPa.png" alt="image.png"><br>本来只是想记录自己是咋升级，咋解决问题的，结果却写了这么多<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，可能有一些自己的思考吧。先这样凑合着用吧，这样折腾完了，至少以后不用三个月再手动申请证书了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/PageServiceUpdate/" title="博客Pages服务升级">https://jmyblog.top/PageServiceUpdate/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/GithubPages/" rel="tag"><i class="fa fa-tag"></i> GithubPages</a>
+              <a href="/tags/CodingPages/" rel="tag"><i class="fa fa-tag"></i> CodingPages</a>
+              <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="tag"><i class="fa fa-tag"></i> 腾讯云</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/AppUI-AutoTest-3/" rel="prev" title="AppUI自动化测试第三弹-Android篇">
+                  <i class="fa fa-chevron-left"></i> AppUI自动化测试第三弹-Android篇
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/themeUpgrade/" rel="next" title="博客Next主题升级">
+                  博客Next主题升级 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>

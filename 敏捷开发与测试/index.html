@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="啥是敏捷，敏捷是啥？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="敏捷开发与测试">
+<meta property="og:url" content="https://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="啥是敏捷，敏捷是啥？">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-12T08:14:48.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.467Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="敏捷测试">
+<meta property="article:tag" content="极限编程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/","path":"敏捷开发与测试/","title":"敏捷开发与测试"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>敏捷开发与测试 | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8E%E2%80%9C%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E2%80%9D%E7%9A%84%E5%88%9D%E6%AC%A1%E6%8E%A5%E8%A7%A6"><span class="nav-number">1.</span> <span class="nav-text">与“敏捷开发”的初次接触</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What"><span class="nav-number">2.</span> <span class="nav-text">What?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91"><span class="nav-number">2.1.</span> <span class="nav-text">敏捷开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95"><span class="nav-number">2.2.</span> <span class="nav-text">敏捷测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why"><span class="nav-number">3.</span> <span class="nav-text">Why?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How"><span class="nav-number">4.</span> <span class="nav-text">How?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XP%E7%BC%96%E7%A8%8B"><span class="nav-number">4.1.</span> <span class="nav-text">XP编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XP%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.</span> <span class="nav-text">XP测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XP%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.1.</span> <span class="nav-text">XP单元测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XP%E9%AA%8C%E6%94%B6%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.2.</span> <span class="nav-text">XP验收测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4XP%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">4.3.</span> <span class="nav-text">一个完整XP项目的运作流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99"><span class="nav-number">4.4.</span> <span class="nav-text">敏捷开发学习网站</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          敏捷开发与测试
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-03-12 16:14:48" itemprop="dateCreated datePublished" datetime="2018-03-12T16:14:48+08:00">2018-03-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">搬砖那些事儿</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>啥是敏捷，敏捷是啥？</p>
+<span id="more"></span>
+
+<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
+<hr>
+<blockquote>
+<p>接下来我将从3个方面：What?（什么是敏捷开发）&amp;Why（为什么要实行敏捷开发）&amp;How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
+</blockquote>
+<h1 id="What"><a href="#What" class="headerlink" title="What?"></a>What?</h1><h2 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h2><p>简单来说，敏捷开发是一个<strong>以用户为中心、客户需求为导向</strong>的开发过程。强调客户合作、响应需求变化。是一种<strong>迭代式、增量式</strong>的开发模式。主要有以下特点：</p>
+<ul>
+<li>依赖客户参与</li>
+<li>测试驱动开发（TDD）</li>
+<li>开发周期短</li>
+</ul>
+<h2 id="敏捷测试"><a href="#敏捷测试" class="headerlink" title="敏捷测试"></a>敏捷测试</h2><p>对应敏捷开发模式，敏捷测试要求每个人都参与到测试过程中，所以需要团队人员之间进行大量的沟通与协作。</p>
+<ul>
+<li>客户：定义用例和程序属性参与验收测试</li>
+<li>开发和测试：共同打造可以进行功能自动化的测试配件</li>
+</ul>
+<p>与传统测试过程相比，敏捷测试主要有以下特征：</p>
+<ul>
+<li>测试并不是一个独立的阶段，而是和开发过程紧密联系并<strong>驱动开发</strong>（TDD）。</li>
+<li>开发者先创建<strong>单元测试</strong>用例（失败验证测试），然后实现软件单元代码。</li>
+<li>敏捷测试依赖于<strong>自动化测试</strong>。</li>
+<li>测试者要通过持续的测试反馈推动项目前行，并<strong>帮助开发者修复bug</strong>。</li>
+</ul>
+<hr>
+<h1 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h1><blockquote>
+<p>与传统软件开发模式相比，敏捷开发把客户的参与作为关键环节。这样引入了灵活性，提高客户满意度。</p>
+</blockquote>
+<p>如今的客户总是需要能立即发布的高质量应用产品，使得传统开发模式不能适应这种激烈的市场竞争环境。所以大多数企业更青睐像敏捷开发一般，轻量化、快速的开发方法。</p>
+<hr>
+<h1 id="How"><a href="#How" class="headerlink" title="How?"></a>How?</h1><p>事实上，敏捷开发方法有很多种，比如：功能驱动开发（FDD）、开放统一过程等等。但最流行的是<strong>极限编程（XP）</strong>开发方法和<strong>Scrum（进度跟踪）</strong>项目管理方法。</p>
+<blockquote>
+<p><strong>XP</strong>是一种迭代式、增量式的开发模式，非常强调单元测试和验收测试，是现在最著名的敏捷方法。<br><strong>Scrum</strong>是一种迭代式、增量式的项目管理方法，适用于所有的敏捷方法，用来度量开发速度和进度。两者相辅相成，形成了现今最流行的敏捷开发模式。</p>
+</blockquote>
+<h2 id="XP编程"><a href="#XP编程" class="headerlink" title="XP编程"></a>XP编程</h2><p>面向对象的编程语言如Java/C#，都含有全功能的API，所以可以利用其迅速实现大型复杂应用。但正因如此，应用程序的质量经常得不到保证。</p>
+<blockquote>
+<p>XP编程的目的就是<strong>短时间</strong>开发<strong>高质量</strong>的应用程序。所以，XP方法将主要精力集中在测试上，在产品设计阶段之后，必须首先生成单元测试用例，然后才编写代码通过测试。</p>
+</blockquote>
+<p>XP开发模型用12个核心实践来驱动该过程：</p>
+<ul>
+<li>NO.1：需求分析（开发、客户、产品均参与）</li>
+<li>NO.2：小规模、递增发布（增加实在/可增值的新功能，频繁发布新版本）</li>
+<li>NO.3：系统隐喻（编程小组确认开发规则）</li>
+<li>NO.4：简要设计（实现简要设计，通过单元测试，不需重复设计，只要不停实现）</li>
+<li>NO.5：连续测试（编写模块之前先生成单元测试用例，模块在通过单元测试后才算完成，程序在通过所有单元测试和验收测试后才算结束）</li>
+<li>NO.6：重构（清理调整代码库，任何重构之后需重新进行所有单元测试）</li>
+<li>NO.7：结对编程（两位程序员在同一台机器协同开发代码库，便于对代码实时检查，提高缺陷发生纠正率）</li>
+<li>NO.8：代码的集体所有权（所有代码归全体程序员所有，不存在某一个程序员只开发某一个代码库）</li>
+<li>NO.9：持续集成（变更后的代码在通过单元测试之后将其集成到代码库中）</li>
+<li>NO.10：每周工作40小时（不允许加班，如果每周都全力工作了40个小时，就不需要加班，在版本发布的前一周例外）</li>
+<li>NO.11：客户在现场（编程小组可以随时与客户沟通）</li>
+<li>NO.12：按标准编码（所有的代码需要满足编程小组设计的系统隐喻）</li>
+</ul>
+<h2 id="XP测试"><a href="#XP测试" class="headerlink" title="XP测试"></a>XP测试</h2><blockquote>
+<p>为满足XP方法的流程和思想，XP测试强调连续测试。主要由两种类型的测试组成：<strong>单元测试</strong>和<strong>验收测试</strong>。</p>
+</blockquote>
+<h3 id="XP单元测试"><a href="#XP单元测试" class="headerlink" title="XP单元测试"></a>XP单元测试</h3><p>单元测试是XP测试采用的主要测试方法，具有两条规则：</p>
+<p>1.所有的代码模块在编码开始前必须设计好单元测试用例（最主要的优点在于可以更好理解程序需求，排除混淆）</p>
+<p>2.产品发布之前所有的代码模块必须通过单元测试</p>
+<p>为了迎合项目进度，单元测试通常要用自动化测试套件来减轻单元测试负担，测试套件可以生成测试报告并对程序中出现的缺陷进行分类，帮助修复bug。</p>
+<h3 id="XP验收测试"><a href="#XP验收测试" class="headerlink" title="XP验收测试"></a>XP验收测试</h3><blockquote>
+<p>验收测试是判断应用程序是否满足功能性和易用性及其他需求，在设计阶段，开发人员和客户设计验收测试，由客户执行。</p>
+</blockquote>
+<p>验收测试需注意以下几点：</p>
+<ul>
+<li>同单元测试一样，验收测试也可是自动化的。测试内容为计算/数据等，可用自动化测试；当测试内容为界面布局和颜色等，测试应该是非自动化的。</li>
+<li>与单元测试相同，验收测试过程中发现多个bug时，应对其进行优先级排序，每次bug修正后都要重新执行验收测试。所以验收测试也算是一种回归测试。</li>
+</ul>
+<h2 id="一个完整XP项目的运作流程"><a href="#一个完整XP项目的运作流程" class="headerlink" title="一个完整XP项目的运作流程"></a>一个完整XP项目的运作流程</h2><p>下表给出了一个完整XP项目应进行的流程：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Step1</td>
+<td>程序员与客户进行产品需求分析会议，决定产品使用场景</td>
+</tr>
+<tr>
+<td>Step2</td>
+<td>编程小组进行内部会议，将需求分解为独立的任务，并估计每个任务所需要的时间（StoryPoint）</td>
+</tr>
+<tr>
+<td>Step3</td>
+<td>程序员向客户提交任务清单，并要求客户对任务清单进行优先级排序</td>
+</tr>
+<tr>
+<td>Step4</td>
+<td>编程小组根据程序员具备的能力，将任务分配给对应结对程序员</td>
+</tr>
+<tr>
+<td>Step5</td>
+<td>每对程序员按照程序需求和规格说明，编写相应任务的单元测试用例</td>
+</tr>
+<tr>
+<td>Step6</td>
+<td>每对程序员编写完成通过其单元测试用例的任务代码，期间不断对代码进行修改和重测，并对代码库进行整合和集成</td>
+</tr>
+<tr>
+<td>Step7</td>
+<td>编程小组发布应用程序的一个预览版本，由客户进行验收测试，并通过修改缺陷不断进行回归测试</td>
+</tr>
+<tr>
+<td>Step8</td>
+<td>程序员在验收测试成功的基础上发布产品版本</td>
+</tr>
+</tbody></table>
+<p>其他工作：程序员根据最新经验更新对客户需求的时间估计方式。</p>
+<h2 id="敏捷开发学习网站"><a href="#敏捷开发学习网站" class="headerlink" title="敏捷开发学习网站"></a>敏捷开发学习网站</h2><p><a target="_blank" rel="noopener" href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1">Scrum中文网</a><br><a target="_blank" rel="noopener" href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf#zoom=100">Scrum指南</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/" title="敏捷开发与测试">https://jmyblog.top/敏捷开发与测试/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 敏捷测试</a>
+              <a href="/tags/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 极限编程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/" rel="prev" title="Java类中的代码块执行顺序">
+                  <i class="fa fa-chevron-left"></i> Java类中的代码块执行顺序
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/" rel="next" title="测试矩阵">
+                  测试矩阵 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>

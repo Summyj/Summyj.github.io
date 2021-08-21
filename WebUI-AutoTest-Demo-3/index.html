@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="利用Jenkins&#x2F;GoCD和Github实现Demo Project的CI集成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebUI自动化测试框架Demo(下)">
+<meta property="og:url" content="https://jmyblog.top/WebUI-AutoTest-Demo-3/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="利用Jenkins&#x2F;GoCD和Github实现Demo Project的CI集成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png">
+<meta property="article:published_time" content="2020-05-17T07:05:47.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.465Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="自动化测试">
+<meta property="article:tag" content="Jenkins">
+<meta property="article:tag" content="GoCD">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
+
+
+<link rel="canonical" href="https://jmyblog.top/WebUI-AutoTest-Demo-3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/WebUI-AutoTest-Demo-3/","path":"WebUI-AutoTest-Demo-3/","title":"WebUI自动化测试框架Demo(下)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>WebUI自动化测试框架Demo(下) | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CI-amp-CD%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">CI&amp;CD介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A"><span class="nav-number">1.2.</span> <span class="nav-text">怎么做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Jenkins%E9%9B%86%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">使用Jenkins集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8GoCD%E9%9B%86%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">使用GoCD集成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDGoCD-Server-amp-Agent"><span class="nav-number">3.1.</span> <span class="nav-text">下载GoCD Server&amp;Agent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8Server-amp-Agent"><span class="nav-number">3.2.</span> <span class="nav-text">启动Server&amp;Agent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAPipeline"><span class="nav-number">3.3.</span> <span class="nav-text">创建Pipeline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cpipeline"><span class="nav-number">3.4.</span> <span class="nav-text">运行pipeline</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%88%90%E5%8A%9F"><span class="nav-number">3.4.1.</span> <span class="nav-text">运行成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#console-log%E5%92%8C%E6%9C%AC%E5%9C%B0%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%A7%A3%E8%AF%BB"><span class="nav-number">3.4.2.</span> <span class="nav-text">console log和本地目录结构解读</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Custom-Tabs%E5%B1%95%E7%A4%BA%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A"><span class="nav-number">3.5.</span> <span class="nav-text">利用Custom Tabs展示测试报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E7%9A%84pipeline%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.6.</span> <span class="nav-text">其它的pipeline设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/WebUI-AutoTest-Demo-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WebUI自动化测试框架Demo(下)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-17 15:05:47" itemprop="dateCreated datePublished" datetime="2020-05-17T15:05:47+08:00">2020-05-17</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">搬砖那些事儿</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>17 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">利用Jenkins/GoCD和Github实现Demo Project的CI集成。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <img data-src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
+
+<div class="note info"><p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
+</div>
+
+<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)
+</code></pre>
+<p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
+<ul>
+<li>提交代码</li>
+<li>执行第一轮测试(单元/集成测试)</li>
+<li>代码合到master</li>
+</ul>
+<pre><code>持续交付(Continuous Delivery)
+</code></pre>
+<p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
+<ul>
+<li>代码集成完成</li>
+<li>构建项目，将源码转换为可以运行的实际代码</li>
+<li>执行第二轮测试(端到端/手工测试)</li>
+</ul>
+<pre><code>持续部署(Continuous Deployment)
+</code></pre>
+<p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
+<ul>
+<li>持续交付流程完成</li>
+<li>利用工具自动部署到生产环境</li>
+</ul>
+<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
+<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
+<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+</blockquote>
+<p>完成后的效果，小太阳标志：<br><img data-src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png"><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/28b7ae892ed1">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<blockquote>
+<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
+</blockquote>
+<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
+<blockquote>
+<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
+</blockquote>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。
+</code></pre>
+<p>完成后的效果，绿色的pipeline：<br><img data-src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png"></p>
+<h3 id="下载GoCD-Server-amp-Agent"><a href="#下载GoCD-Server-amp-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary"><p>Server和Agent</p>
+<p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p>
+<p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
+</div>
+
+<p>打开GoCD官网 <a target="_blank" rel="noopener" href="https://www.gocd.org/download/#osx">下载页面</a>, 根据系统下载：<br><img data-src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png"><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img data-src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png"><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img data-src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png"></p>
+<h3 id="启动Server-amp-Agent"><a href="#启动Server-amp-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/go-server console</span><br></pre></td></tr></tbody></table></figure>
+<p>启动GoCD Server:<br><img data-src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png"><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a target="_blank" rel="noopener" href="https://localhost:8154/">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img data-src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png"><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/go-agent console</span><br></pre></td></tr></tbody></table></figure>
+<p>启动GoCD Agent:<br><img data-src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png"></p>
+<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
+<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：
+</code></pre>
+<img data-src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
+首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
+<img data-src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
+
+
+<pre><code>Material
+</code></pre>
+<p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
+<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img data-src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png"><br>输入Stage名字，这里我设为Test：<br><img data-src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png"></p>
+<pre><code>Stage
+</code></pre>
+<p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
+<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img data-src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png"></p>
+<pre><code>Job
+</code></pre>
+<p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
+<pre><code>Task
+</code></pre>
+<p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
+<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img data-src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png"><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img data-src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380"><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img data-src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430"><br>到这里，Pipeline就已经创建好了。</p>
+<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img data-src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img data-src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
+<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img data-src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png"><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img data-src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png"><br>观察console log我们可以理解pipeline的运行流程：</p>
+<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img data-src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png"><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png"><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img data-src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png"><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img data-src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png"><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img data-src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png"><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png"></p>
+<pre><code>Artifact
+</code></pre>
+<p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><img data-src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png"><br>运行结束之后，在页面上也可以看到它：<br><img data-src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png"></p>
+<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
+<blockquote>
+<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
+</blockquote>
+<p>回到首页，点击Auto的设置按钮：<br><img data-src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img data-src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png"><br><img data-src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png"><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img data-src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png"><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
+<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img data-src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png"></p>
+<p>保存，然后再次运行Pipeline:<br><img data-src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img data-src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png"></p>
+<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img data-src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img data-src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png"><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img data-src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png"></p>
+<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img data-src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png"><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img data-src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png"><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img data-src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/28b7ae892ed1">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+<li><a target="_blank" rel="noopener" href="https://devops.phodal.com/home">DevOps 元素周期表</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html">阮一峰：CI&amp;CD是什么</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/WebUI-AutoTest-Demo-3/" title="WebUI自动化测试框架Demo(下)">https://jmyblog.top/WebUI-AutoTest-Demo-3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 自动化测试</a>
+              <a href="/tags/Jenkins/" rel="tag"><i class="fa fa-tag"></i> Jenkins</a>
+              <a href="/tags/GoCD/" rel="tag"><i class="fa fa-tag"></i> GoCD</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/WebUI-AutoTest-Demo-2/" rel="prev" title="WebUI自动化测试框架Demo(中)">
+                  <i class="fa fa-chevron-left"></i> WebUI自动化测试框架Demo(中)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/comments-comeback/" rel="next" title="网站评论回家了">
+                  网站评论回家了 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>

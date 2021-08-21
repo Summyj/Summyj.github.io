@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="揭秘敏捷团队的测试策略设计以及QA的工(ban)作(zhuan)日常。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试策略浅谈">
+<meta property="og:url" content="https://jmyblog.top/testStrategy/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="揭秘敏捷团队的测试策略设计以及QA的工(ban)作(zhuan)日常。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/01/vEqDKlLMYz6fA3X.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/01/tueAgQEZ9byo4la.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/01/xSCBPQ9MJzLVTHb.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/01/rjD83zVIi9e4wHq.png">
+<meta property="article:published_time" content="2020-09-01T07:54:38.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.466Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="敏捷">
+<meta property="article:tag" content="测试策略">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png">
+
+
+<link rel="canonical" href="https://jmyblog.top/testStrategy/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/testStrategy/","path":"testStrategy/","title":"测试策略浅谈"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>测试策略浅谈 | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword%EF%BC%9A%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">Foreword：前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What%EF%BC%9F%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">What？测试策略是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#When%EF%BC%9F%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AE%BE%E8%AE%A1%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5"><span class="nav-number">3.</span> <span class="nav-text">When？什么时候设计测试策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Who%EF%BC%9F%E8%B0%81%E5%BA%94%E8%AF%A5%E5%8F%82%E4%B8%8E%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">Who？谁应该参与测试策略设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How"><span class="nav-number">5.</span> <span class="nav-text">How</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E5%9B%A2%E9%98%9F%E7%9A%84%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E7%AD%96%E7%95%A5"><span class="nav-number">5.1.</span> <span class="nav-text">敏捷团队的质量保证策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E8%8C%83%E5%9B%B4%E5%92%8C%E9%87%8D%E9%9A%BE%E7%82%B9%E5%88%86%E6%9E%90"><span class="nav-number">5.2.</span> <span class="nav-text">测试范围和重难点分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95%E4%B8%8E%E5%88%86%E5%B1%82"><span class="nav-number">5.3.</span> <span class="nav-text">测试方法与分层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E7%AE%A1%E7%90%86"><span class="nav-number">5.4.</span> <span class="nav-text">测试计划管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="nav-number">5.5.</span> <span class="nav-text">测试执行过程管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E7%AD%96%E7%95%A5"><span class="nav-number">5.6.</span> <span class="nav-text">环境策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%8E%E9%99%A9%E8%AF%86%E5%88%AB%E4%B8%8E%E8%A7%A3%E5%86%B3"><span class="nav-number">5.7.</span> <span class="nav-text">风险识别与解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Showcase%E7%AE%A1%E7%90%86"><span class="nav-number">5.8.</span> <span class="nav-text">Showcase管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BugBash%E7%AE%A1%E7%90%86"><span class="nav-number">5.9.</span> <span class="nav-text">BugBash管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">5.10.</span> <span class="nav-text">遗留问题记录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-End%EF%BC%9A%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">6.</span> <span class="nav-text">The End：写在最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/testStrategy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          测试策略浅谈
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-01 15:54:38" itemprop="dateCreated datePublished" datetime="2020-09-01T15:54:38+08:00">2020-09-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">搬砖那些事儿</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">揭秘敏捷团队的测试策略设计以及QA的工(ban)作(zhuan)日常。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <img data-src="https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png">
+
+<div class="note info"><p>前段时间，有同事分享了一些测试策略设计的内容，讲的很不错。并且自己也是最近才开始接触一些新的项目，之前都是中途加入项目工作，没有全面思考过测试策略的东西，所以感触比较深。于是记了点笔记和自己的心得，这样后续再加入一些新项目，也不会手足无措了。</p>
+</div>
+
+<h2 id="Foreword：前言"><a href="#Foreword：前言" class="headerlink" title="Foreword：前言"></a>Foreword：前言</h2><p>每一个测试小朋友进入到全新的项目时，肯定有很多<mark class="label info">问号</mark>，比如：</p>
+<ul>
+<li>这是一个什么样的项目？</li>
+<li>是一个旧项目的改造还是一个全新的项目？</li>
+<li>是某个产品的一部分，还是独立的一个产品？如果是一部分，是上游，还是下游，还是中间？</li>
+<li>这个项目的用户群体是什么样？用户群体的数量？</li>
+<li>这个项目的周期是多久？多久发一次版，每个版本分为几个阶段？</li>
+<li>这个项目要做哪些方面的测试？</li>
+<li>这个项目有几个QA？<br>…</li>
+</ul>
+<p>其实，这些问题都是包含在测试策略中的。</p>
+<h2 id="What？测试策略是什么"><a href="#What？测试策略是什么" class="headerlink" title="What？测试策略是什么"></a>What？测试策略是什么</h2><blockquote>
+<p><strong>测试策略</strong>一般是针对一个整体产品或者版本，制定出的包含质量保证策略、测试范围、测试方法、测试计划管理、测试分层、测试重点和难点、测试执行过程管理、环境策略、Showcase管理、风险识别等方面的<strong>设计文档</strong>。</p>
+</blockquote>
+<p>好的测试策略可以提升团队的质量水平和QA团队的工作效率，在敏捷软件开发生命周期的每一个阶段都能发挥作用。</p>
+<h2 id="When？什么时候设计测试策略"><a href="#When？什么时候设计测试策略" class="headerlink" title="When？什么时候设计测试策略"></a>When？什么时候设计测试策略</h2><div class="note primary"><p>测试策略的设计，一般在需求分析(Inception)阶段开始，与技术设计并行，并且在需求分析阶段不断补充和完善。需要在测试阶段开始之前闭环。</p>
+</div>
+
+<h2 id="Who？谁应该参与测试策略设计"><a href="#Who？谁应该参与测试策略设计" class="headerlink" title="Who？谁应该参与测试策略设计"></a>Who？谁应该参与测试策略设计</h2><pre><code>测试策略是由项目的QA团队输出，团队成员参与评审的。
+</code></pre>
+<p>由于敏捷开发是一种重实践，轻文档的开发模式。所以个人认为不必写出多么详尽的文档，重要的是考虑全面，列出关键点，和团队成员一起讨论，达成共识，且在后续的开发测试过程中注意与测试策略保持一致。</p>
+<h2 id="How"><a href="#How" class="headerlink" title="How"></a>How</h2><p>上文提到了测试策略是由许多方面的集合，接下来就分别聊聊它们。</p>
+<h3 id="敏捷团队的质量保证策略"><a href="#敏捷团队的质量保证策略" class="headerlink" title="敏捷团队的质量保证策略"></a>敏捷团队的质量保证策略</h3><p>首先就是敏捷团队的质量保证策略，其实这就是许多非QA角色眼中的<strong>狭义测试策略</strong>，展示了敏捷开发中每个阶段团队如何协作来保证产品质量。个人认为这个是最基本的质量保证标准，每个敏捷团队都应该做好。</p>
+<img data-src="https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png">
+
+<p><span id="inline-toc">1.</span> <strong>故事分析</strong><br>BA与客户沟通清楚需求后，编写故事卡，并和QA结对写AC，或者写完AC找QA review.<br><span id="inline-toc">2.</span> <strong>故事启动</strong><br>BA组织团队成员一起讨论开发内容，澄清需求。<br><span id="inline-toc">3.</span> <strong>故事开发</strong><br>Dev同学按照需求写代码，确保单元测试的覆盖率满足要求。QA同学编写测试用例和自动化测试。<br><span id="inline-toc">4.</span> <strong>故事验收</strong><br>团队成员一起在正确的环境进行deskCheck，确保代码通过AC，满足基本需求。并再次检查单元测试的覆盖率是否满足要求。<br><span id="inline-toc">5.</span> <strong>故事测试</strong><br>QA同学进行测试，将发现的问题与BA、开发沟通并修复，直到产品行为满足需求。<br><span id="inline-toc">6.</span> <strong>故事演示</strong><br>所有故事卡测试通过后，团队组织showcase邀请客户一起查看产品功能，并对showcase中客户提出的优化建议进行记录，确定优先级后放入相应迭代开发范围。如果离上线还有一段时间，也可以组织团队成员进行BugBash，最好邀请客户，提前识别更多问题。<br><span id="inline-toc">7.</span> <strong>故事上线</strong><br>当所有Bug和优先级高的优化问题都已解决后，用户故事就可以上线了。上线后，对应用户故事的生命周期就已经终结。线上发现的问题在确定优先级后，建立新的用户故事，放入对应迭代开发范围。</p>
+<div class="note default"><p>上线之后，团队应该回顾分析上个迭代的开发测试情况，可以一起查看迭代的<strong>Sprint report</strong>和<strong>Bug report</strong>。</p>
+</div>
+
+<pre><code>Sprint report
+</code></pre>
+<p>Sprint report是敏捷开发管理工具Jira的一个功能，如下图，纵轴是迭代内所有故事卡的点数，横轴是迭代时间。两周一个迭代，体现了迭代内随时间推移故事卡开发的情况：</p>
+<img data-src="https://i.loli.net/2020/12/01/vEqDKlLMYz6fA3X.png">
+
+<p>灰色线条是在迭代开始后，默认生成的一条该迭代的理想开发速率线，灰色地带是周末，所以没有变化(这也可以看出敏捷开发是不提倡加班的<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)。红色是迭代开发的真实情况，健康的敏捷开发，<strong>红线的趋势应该是和灰线基本一致的</strong>。<br>上图就是因为两周内并不能完成迭代任务，所以又延迟了两周，此时就应该分析为什么会导致这种情况，是对需求理解不够，点数估计少了呢，还是别的原因，从而避免以后再发生同样的情况。<br>这里我再贴几张迭代的Sprint report，都是我之前经历过的真实敏捷迭代(所以我都经历了什么<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>抱走心酸的自己<span class="emoji" alias="persevere" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f623.png?v8">😣</span>)，大家可以自己尝试分析，导致下边几种情况的可能原因：<br><img data-src="https://i.loli.net/2020/12/01/tueAgQEZ9byo4la.png"><br><img data-src="https://i.loli.net/2020/12/01/xSCBPQ9MJzLVTHb.png"><br>其实之前也有两条线一致的时候，但那已经是很久之前了。。。。</p>
+<pre><code>Bug report
+</code></pre>
+<p>Bug report是对迭代内发现问题的总结，由QA同学产出，如何做好Bug report可以参考<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/OVqTsk6OJ_xi5Q4iWtKkUg">ThoughtWorks洞见-Bug Report该怎么做?</a></p>
+<h3 id="测试范围和重难点分析"><a href="#测试范围和重难点分析" class="headerlink" title="测试范围和重难点分析"></a>测试范围和重难点分析</h3><blockquote>
+<p><strong>测试范围</strong>的确定需要分析软件周期各个阶段的需求目标，了解客户期望和产品的用户群体，主要包括以下几个方面：</p>
+</blockquote>
+<pre><code>功能
+</code></pre>
+<ul>
+<li><p>业务功能</p>
+</li>
+<li><p>API功能</p>
+</li>
+<li><p>数据一致性</p>
+</li>
+<li><p>…</p>
+<p>  性能</p>
+</li>
+<li><p>接口性能</p>
+</li>
+<li><p>单接口并发和非并发访问性能，混合场景并发访问性能</p>
+</li>
+<li><p>页面性能</p>
+</li>
+<li><p>常用操作页面响应时间，非常用操作页面响应时间</p>
+</li>
+<li><p>…</p>
+<p>  安全</p>
+</li>
+<li><p>API访问权限</p>
+</li>
+<li><p>数据访问权限</p>
+</li>
+<li><p>数据传输安全</p>
+</li>
+<li><p>数据存储安全</p>
+</li>
+<li><p>异常信息展示安全</p>
+</li>
+<li><p>日志信息安全</p>
+</li>
+<li><p>…</p>
+<p>  易用性</p>
+</li>
+<li><p>页面展示的引导性</p>
+</li>
+<li><p>操作的便捷性</p>
+</li>
+<li><p>返回信息的易理解性</p>
+</li>
+<li><p>…</p>
+<p>  兼容性</p>
+</li>
+<li><p>操作系统兼容</p>
+</li>
+<li><p>数据库兼容</p>
+</li>
+<li><p>浏览器兼容</p>
+</li>
+<li><p>应用软件兼容</p>
+</li>
+<li><p>…</p>
+<p>  可维护性</p>
+</li>
+<li><p>软件的安装和升级是否可以很容易的完成</p>
+</li>
+<li><p>核心操作是否都有日志记录</p>
+</li>
+<li><p>…</p>
+<p>  可靠性</p>
+</li>
+<li><p>接口加锁和释放</p>
+</li>
+<li><p>接口失败重试</p>
+</li>
+<li><p>服务重启后数据恢复</p>
+</li>
+<li><p>大数据处理能力</p>
+</li>
+<li><p>页面重复操作禁止</p>
+</li>
+<li><p>…</p>
+<p>  稳定性</p>
+</li>
+<li><p>长时间访问系统，系统在响应时间，资源使用方面的情况</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+<p><strong>以上这些方面，确定之后要求BA在写卡以及QA测卡时都要注意覆盖到。</strong></p>
+<blockquote>
+<p><strong>测试重难点</strong>确定后，需要多增加对应模块的回归测试，开发也应该增加单元测试的覆盖率。</p>
+</blockquote>
+<pre><code>测试重点
+</code></pre>
+<ul>
+<li><p>需求的核心功能</p>
+</li>
+<li><p>经常变化的部分</p>
+</li>
+<li><p>与其他系统相互影响的部分</p>
+<p>  测试难点</p>
+</li>
+<li><p>相对不够独立的部分</p>
+</li>
+<li><p>处理过程较复杂的部分</p>
+</li>
+</ul>
+<h3 id="测试方法与分层"><a href="#测试方法与分层" class="headerlink" title="测试方法与分层"></a>测试方法与分层</h3><div class="note info"><p>明确测试范围，时间和人力之后，还应该根据需求的变化来确定<strong>测试方法</strong>，决定是否需要自动化测试。然后再按照 <a href="https://jmyblog.top/Test-Pyramid/">测试金字塔原理</a> 决定每种测试方法的比重。</p>
+</div>
+
+<h3 id="测试计划管理"><a href="#测试计划管理" class="headerlink" title="测试计划管理"></a>测试计划管理</h3><blockquote>
+<p>测试计划管理是指按照团队的上线计划，确定具体的测试时间，包括迭代内测试、集成测试、回归测试、验收测试。</p>
+</blockquote>
+<h3 id="测试执行过程管理"><a href="#测试执行过程管理" class="headerlink" title="测试执行过程管理"></a>测试执行过程管理</h3><p>主要包括：</p>
+<ul>
+<li>测试计划制定和管理：按照测试计划安排的时间执行测试，避免延期</li>
+<li>测试用例编写和管理：自动化用例编写以及自动化代码重构</li>
+<li>测试过程记录和管理：我的做法是在每张卡里记录自己的测试环境，场景以及是否通过，疑问等等</li>
+<li>测试结果管理：发现的缺陷管理，比如新建缺陷卡，Bug report等</li>
+</ul>
+<h3 id="环境策略"><a href="#环境策略" class="headerlink" title="环境策略"></a>环境策略</h3><blockquote>
+<p>稳定的环境是高效开发和测试的先决条件，个人人为在开发之前就应该配置好环境以及流水线等基础设施，主要用到的环境有：</p>
+</blockquote>
+<ul>
+<li>DEV环境：Dev自测和联调使用，deskCheck环境</li>
+<li>QA环境：QA日常测试使用</li>
+<li>UAT环境：用户验收测试</li>
+<li>其他环境：按照项目情况准备安全环境、性能测试环境等等</li>
+</ul>
+<h3 id="风险识别与解决"><a href="#风险识别与解决" class="headerlink" title="风险识别与解决"></a>风险识别与解决</h3><blockquote>
+<p>主要是识别敏捷开发流程中的质量风险。</p>
+</blockquote>
+<img data-src="https://i.loli.net/2020/12/01/rjD83zVIi9e4wHq.png">
+
+<p><span id="inline-toc">1.</span> <strong>需求阶段</strong></p>
+<p>R: 需求频繁变更，对产品的需求理解不准确有偏差。<br>S: 多和用户沟通，争取更充分的研发时间和测试时间，或者把提出的功能放到下一个版本中实现。提供验收环境给客户，需要的话也可以提供测试环境给客户，这样客户可以随时看到产品进展。</p>
+<p><span id="inline-toc">2.</span> <strong>开发阶段</strong></p>
+<p>R: 代码质量达不到相应要求，bug多，模块开发没有统一设计。<br>S: 提升单元测试覆盖率，进行code diff，与TL讨论更多提升代码质量的方式，确定好标准。</p>
+<p><span id="inline-toc">3.</span> <strong>测试阶段</strong></p>
+<p>R: 测试经验不足，用例设计不到位，对业务不熟悉、不了解用户如何操作该产品；测试时间短，测试环境与生产环境的不一致，不稳定。<br>S: 找BA或开发review测试用例，与开发一起pair单元测试场景；找熟悉产品的人员进行业务培训，增加人力，尽可能模拟用户使用的环境，在测试的时候尽量和用户沟通要到用户真实的数据进行测试。</p>
+<p><span id="inline-toc">4.</span> <strong>上线阶段</strong></p>
+<p>R: 上线环境准备不充足，与其他服务或系统有上线依赖。<br>S: 提前准备上线脚本、上线配置文档，上线前测试；提前识别上线依赖。</p>
+<h3 id="Showcase管理"><a href="#Showcase管理" class="headerlink" title="Showcase管理"></a>Showcase管理</h3><blockquote>
+<p>与客户、团队成员确定多久进行一次showcase，Showcase以什么样的方式进行。确定好每次showcase的owner，推荐的做法是轮流主持。</p>
+</blockquote>
+<h3 id="BugBash管理"><a href="#BugBash管理" class="headerlink" title="BugBash管理"></a>BugBash管理</h3><p>参考 <a href="https://jmyblog.top/BugBash/">BugBash知多少</a> 和 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/S5cOjQkyvpFxpfew_exZrA">如何成功的组织Bug bash</a>。</p>
+<h3 id="遗留问题记录"><a href="#遗留问题记录" class="headerlink" title="遗留问题记录"></a>遗留问题记录</h3><blockquote>
+<p>记录测试策略中还需要明确和后续更新的部分。</p>
+</blockquote>
+<h2 id="The-End：写在最后"><a href="#The-End：写在最后" class="headerlink" title="The End：写在最后"></a>The End：写在最后</h2><p>以上就是测试策略应该包含的内容，果然像海一样宽广<span class="emoji" alias="dizzy_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f635.png?v8">😵</span>，不过在敏捷开发中，产品的质量是渗透到每一个开发阶段的，所有团队成员都应该为质量负责，愿每一个QA都能开心的工(ban)作(zhuan)。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/testStrategy/" title="测试策略浅谈">https://jmyblog.top/testStrategy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag"><i class="fa fa-tag"></i> 敏捷</a>
+              <a href="/tags/%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5/" rel="tag"><i class="fa fa-tag"></i> 测试策略</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/HttpsUpdate/" rel="prev" title="给博客的Https证书续期">
+                  <i class="fa fa-chevron-left"></i> 给博客的Https证书续期
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/ChengduTravel/" rel="next" title="国庆成都三日游">
+                  国庆成都三日游 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>

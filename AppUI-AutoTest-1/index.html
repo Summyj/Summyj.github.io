@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="利用模拟器和Appium定位App元素，编写测试代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AppUI自动化测试第二弹">
+<meta property="og:url" content="https://jmyblog.top/AppUI-AutoTest-1/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="利用模拟器和Appium定位App元素，编写测试代码。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/LWRPKYaSbQji4yH.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/Xb2R1rJf3PNDEkV.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/r27GjW6cAdwHtSK.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/t3b2iRPjNBOpW8x.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/eJZMpn3ayOgB78i.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/VdDgGbmSFpCOUea.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/Ayx3YSEpuZlFc8a.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/wJlyN5mUjLFdXeM.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/kTL578EawBCpRno.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/cDygiatb1qG3EX2.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/ihJ7OZzbE2rFXYV.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/MLUTP2BbmGR76Op.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/26/SrQML96uvleWqBX.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/26/nhUuXidOpwWzZ9G.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/wiFyJgqWZXbDAmG.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/24/n1865FmjlbKyupU.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/24/TM3skJ47iDX8l9b.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/24/MoekacB4D9TAtsu.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/24/R6yJCZVgfUNwQB5.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/26/dvgs5SKQrHXEkUh.png">
+<meta property="article:published_time" content="2021-05-20T08:46:15.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.461Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="自动化测试">
+<meta property="article:tag" content="Appium">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png">
+
+
+<link rel="canonical" href="https://jmyblog.top/AppUI-AutoTest-1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/AppUI-AutoTest-1/","path":"AppUI-AutoTest-1/","title":"AppUI自动化测试第二弹"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AppUI自动化测试第二弹 | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium-Desktop"><span class="nav-number">1.</span> <span class="nav-text">Appium Desktop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS"><span class="nav-number">2.</span> <span class="nav-text">iOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8iOS-Simulator"><span class="nav-number">2.1.</span> <span class="nav-text">启动iOS Simulator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="nav-number">2.2.</span> <span class="nav-text">编写代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android"><span class="nav-number">3.</span> <span class="nav-text">Android</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8Android-Emulator"><span class="nav-number">3.1.</span> <span class="nav-text">启动Android Emulator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81-1"><span class="nav-number">3.2.</span> <span class="nav-text">编写代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9"><span class="nav-number">4.</span> <span class="nav-text">更多内容</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/AppUI-AutoTest-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AppUI自动化测试第二弹
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-20 16:46:15" itemprop="dateCreated datePublished" datetime="2021-05-20T16:46:15+08:00">2021-05-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">搬砖那些事儿</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">利用模拟器和Appium定位App元素，编写测试代码。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img data-src="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png" alt="image.png"></p>
+<p>上篇博客我们创建好了测试项目，本篇博客就带大家编写测试代码，然后利用模拟器运行。</p>
+<h2 id="Appium-Desktop"><a href="#Appium-Desktop" class="headerlink" title="Appium Desktop"></a>Appium Desktop</h2><p>熟悉了测试项目的结构后，我们就可以按照相同的代码格式编写自己的测试代码啦。<br>首先我们想一想，UI测试的第一步是什么呢？当然是定位元素。<br>对于Web应用，我们可以直接使用浏览器的开发者工具inspector定位页面元素：<br><img data-src="https://i.loli.net/2021/05/20/LWRPKYaSbQji4yH.png" alt="image.png"><br>然而我们的测试对象是App，怎么定位App里的元素呢？答案是利用Appium和模拟器。<br>打开我们下载的Appium desktop应用：<br><img data-src="https://i.loli.net/2021/05/20/Xb2R1rJf3PNDEkV.png" width="350" height="300"><br>选择 Start Server, Appium Server就运行起来啦:<br><img data-src="https://i.loli.net/2021/05/20/r27GjW6cAdwHtSK.png" alt="image.png"><br>鼠标hover到右上角的🔍图标，出现tip提示 <strong>Start Inspector Session</strong>，很明显这就是我们用来定位App元素的工具啦，点击之后出现下图窗口：<br><img data-src="https://i.loli.net/2021/05/20/t3b2iRPjNBOpW8x.png" alt="image.png"><br>这里我们只关注当前的Tab窗口，其它部分不做介绍。在这个窗口中，我们可以通过设置 <strong>Desired Capabilities</strong> 来启动一个iOS/Android模拟器，Desired Capabilities是一系列模拟器配置项的集合，分为iOS和Android两个平台，有很多配置项，有两个平台公共的也有各平台单独的配置，完整的配置项列表在这里：<a target="_blank" rel="noopener" href="http://appium.io/docs/en/writing-running-appium/caps/index.html#appium-desired-capabilities">Appium Desired Capabilities</a>。</p>
+<p>下边我们使用5个公共的Desired Capabilities配置项分别启动iOS和Android的模拟器：platformName、platformVersion、deviceName、automationName、app，他们分别代表操作系统名称、操作系统版本、设备名称、自动化引擎名称、app路径，想更多的了解这五个配置项可以看上边的配置项列表。</p>
+<h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><h3 id="启动iOS-Simulator"><a href="#启动iOS-Simulator" class="headerlink" title="启动iOS Simulator"></a>启动iOS Simulator</h3><p>首先执行 <strong>xcrun instruments -s</strong> 命令来查看Xcode提供给我们所有的iOS模拟器种类，包括设备名称和操作系统版本等等：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/eJZMpn3ayOgB78i.png" alt="image.png"></p>
+<p>然后选择一个模拟设备，按照json格式新增一个Desired Capabilities，这里我们以iPhone 11为例，粘贴下边的Desired Capabilities到Appium Start Inspector窗口，然后点击Save As按钮保存这个配置，这里我把它保存为iOS：<br><img data-src="https://i.loli.net/2021/05/20/VdDgGbmSFpCOUea.png" alt="image.png"></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "iOS",</span><br><span class="line">  "platformVersion": "14.0",</span><br><span class="line">  "deviceName": "iPhone 11",</span><br><span class="line">  "automationName": "XCUITest",</span><br><span class="line">  "app": ""</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后它就可以在 Saved Capability Sets 窗口里看到啦，以后可以单独对它做修改。<br>然而我们还缺少一个app字段，它是我们测试app的绝对路径，WebdriverIO给初学者提供了iOS和Android两个平台的 <a target="_blank" rel="noopener" href="https://github.com/webdriverio/native-demo-app/releases">demo app</a>，它们具有现代App的代码结构，非常适合用来做App测试：<br><img data-src="https://i.loli.net/2021/05/20/Ayx3YSEpuZlFc8a.png" alt="image.png"><br>下载完成后，把.apk文件和解压后的.app文件都放入项目的app文件夹中，之后修改Desired Capabilities里的app路径为绝对路径，然后保存：<br><img data-src="https://i.loli.net/2021/05/20/wJlyN5mUjLFdXeM.png" alt="image.png"><br>点击Start Session后，稍等片刻，就能看到模拟器启动并出现元素定位窗口，测试app已被打开：<br><img data-src="https://i.loli.net/2021/05/20/kTL578EawBCpRno.png" alt="image.png"><br>元素定位窗口由两部分组成，左侧为App视图，右侧为代码和元素视图，在左侧视图中点击App元素，对应的元素信息就会出现在右侧视图，比较常用的是Xpath，但也可以用id/class来定位元素：<br><img data-src="https://i.loli.net/2021/05/20/cDygiatb1qG3EX2.png" alt="image.png"><br>元素定位窗口的App视图只能展示一个页面，不能通过点击直接切换App页面。要做到这一点，我们只能先切换模拟器页面，之后点击元素定位窗口上方的刷新图标，新的页面视图才会出现：<br><img data-src="https://i.loli.net/2021/05/20/ihJ7OZzbE2rFXYV.png" alt="image.png"></p>
+<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位iOS平台的App元素了，然后我们来编写测试代码，这里我们来编写最简单的两个Case，登录和注册。</p>
+<div class="note info"><p>首先是登录，要实现登录操作，我们首先要切换到上边的登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要切换到上边的登录页面，然后切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
+</div>
+
+<p>回到VSCode，登录页面已被定义，且已有示例的selector写法，通过定位元素，我们可以按照示例定义页面元素的selector，再新增方法对元素进行操作，最后在e2e.js中调用页面方法完成测试。</p>
+<p><img data-src="https://i.loli.net/2021/05/20/MLUTP2BbmGR76Op.png" alt="image.png"></p>
+<p>大家可以按照这个思路自己编写测试代码，这里我就不贴代码了，不过可以访问 <a target="_blank" rel="noopener" href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将内容copy到对应文件夹(results文件夹只用copy result.txt)，其中ios.conf.js就是我们上边设置的Desired Capabilities，要在编辑器里运行代码我们必须得加上它，将其修改成你本地的配置即可，这里我有两个app路径，其中一个(没注释的)与后边集成CI步骤有关，可以先注释掉：<br><img data-src="https://i.loli.net/2021/05/26/SrQML96uvleWqBX.png" alt="image.png"></p>
+<p>最后运行 <strong>npm run test:ios</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，运行视频：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3OTk3Ng==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<p>测试报告是利用junit做的，可以在 wdio.conf.js 文件里查看：<br><img data-src="https://i.loli.net/2021/05/26/nhUuXidOpwWzZ9G.png" alt="image.png"></p>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="启动Android-Emulator"><a href="#启动Android-Emulator" class="headerlink" title="启动Android Emulator"></a>启动Android Emulator</h3><p>打开我们下载的Android Studio，进入编辑页面，点击右上角AVD Manager图标打开模拟器窗口：<br><img data-src="https://i.loli.net/2021/05/20/wiFyJgqWZXbDAmG.png" alt="image.png"><br>这里会列出所有可以使用的安卓模拟器，初次打开时，可能没有Virtual Device，可以通过“Create Virtual Device”来创建一个，创建时下载OS版本需要一些时间哦，如果有默认的Virtual Device就不用下载了。然后启动你的安卓模拟器：</p>
+<p><img data-src="https://i.loli.net/2021/05/24/n1865FmjlbKyupU.png" alt="image.png"></p>
+<p>安卓模拟器右侧是一些菜单项，包括开关机、音量、旋转等等，以及一些高级设置，可以访问 <a target="_blank" rel="noopener" href="https://developer.android.com/studio/run/emulator">在Android模拟器上运行应用</a> 了解更多。</p>
+<p>接着和iOS一样，在Appium desktop里新增Virtual Device对应的Desired Capabilities，然后Save as保存它，下边是我保存的配置，需要修改成和你的模拟器一致：</p>
+<p><img data-src="https://i.loli.net/2021/05/24/TM3skJ47iDX8l9b.png" alt="image.png"></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "platformName": "Android",</span><br><span class="line">  "platformVersion": "10.0",</span><br><span class="line">  "deviceName": "Pixel_3_XL_API_29",</span><br><span class="line">  "automationName": "UiAutomator2",</span><br><span class="line">  "app": "你的安卓app绝对路径，应该在app文件夹里"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>保持你的安卓模拟器启动状态，然后Start Session，就会看到和刚才iOS一样的元素定位窗口，测试app已在模拟器中打开：</p>
+<p><img data-src="https://i.loli.net/2021/05/24/MoekacB4D9TAtsu.png" alt="image.png"></p>
+<p>事实上，你可以同时打开iOS和Android的模拟器和元素定位窗口，一起定位iOS和Android的元素：</p>
+<p><img data-src="https://i.loli.net/2021/05/24/R6yJCZVgfUNwQB5.png" alt="image.png"></p>
+<h3 id="编写代码-1"><a href="#编写代码-1" class="headerlink" title="编写代码"></a>编写代码</h3><p>到这里，我们已经能够定位Android平台的App元素了，同样可以按照之前的思路自己编写登录注册的测试代码，事实上只需要修改上边iOS的Selector为Android格式即可。<br>也可以访问 <a target="_blank" rel="noopener" href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 看到示例代码，将android.conf.js内容修改成你本地的配置即可，这里我有两个app路径和两个deviceName，多出的两个(没注释的)同样与后边集成CI步骤有关，可以先注释掉：<br><img data-src="https://i.loli.net/2021/05/26/dvgs5SKQrHXEkUh.png" alt="image.png"></p>
+<p>最后运行 <strong>npm run test:android</strong>(这是我的自定义命令，可以在package.json文件里看到它的定义) 执行测试，运行前请确保Appium desktop已退出，也要确保安卓模拟器为启动状态，运行视频：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE1ODA3NzE4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="更多内容"><a href="#更多内容" class="headerlink" title="更多内容"></a>更多内容</h2><p>上面我们使用模拟器和两个demo app，利用Appium inspector完成了登录注册功能的自动化测试。当然，只懂得这些是远远不够的，首先我们知道，当代App有几种类型：<strong>Native app</strong>、<strong>Web app</strong>以及<strong>Hybrid app</strong>，这三者的区别是什么、如何测试显然是一个重要的课题，网上已经有许多文章讲述它们的区别，比如 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a40fefcadc94">这篇文章</a> ，所以我就不再赘述了。</p>
+<p>而除了login页面，demo app也提供了其它不同类型的页面，比如WebView、Swipe等生活中常见的页面类型。同样，针对于此demo app，WebDriverIO提供了 <a target="_blank" rel="noopener" href="https://github.com/webdriverio/appium-boilerplate">示例代码库</a>，也包括iOS和Android两个平台，里面有包含以下类型的测试示例代码：</p>
+<ul>
+<li>测试native app</li>
+<li>测试webview</li>
+<li>在手机端利用Safari/Chrome执行浏览器测试</li>
+<li>利用Sauce Labs Service、BrowserStack两个云服务平台提供的真机/模拟器执行测试</li>
+</ul>
+<p>每一种测试类型都有对应的config文件，但此代码库用的不是mocha框架，而是jasmine框架。而且虽然它测试了两个平台，但由于只是selector不同，所以通过配置不用重复定义页面，一个页面可以被两个平台调用，感兴趣的同学可以深入学习。</p>
+<p>完成后别忘了把代码推送到Github哦，方便进行下一步的CI集成。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/AppUI-AutoTest-1/" title="AppUI自动化测试第二弹">https://jmyblog.top/AppUI-AutoTest-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 自动化测试</a>
+              <a href="/tags/Appium/" rel="tag"><i class="fa fa-tag"></i> Appium</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/AppUI-AutoTest/" rel="prev" title="AppUI自动化测试第一弹">
+                  <i class="fa fa-chevron-left"></i> AppUI自动化测试第一弹
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/AppUI-AutoTest-2/" rel="next" title="AppUI自动化测试第三弹-iOS篇">
+                  AppUI自动化测试第三弹-iOS篇 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>

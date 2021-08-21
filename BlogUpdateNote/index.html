@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="记录博客升级过程，方便以后参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="升级博客，我太难了">
+<meta property="og:url" content="https://jmyblog.top/BlogUpdateNote/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="记录博客升级过程，方便以后参考。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/rjxPnYqmUCkwAv7.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/ZJfLhzbVkKuMnqa.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/a2fDPAzZm7tFpes.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/HolOS3LvVzQ19ca.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png">
+<meta property="article:published_time" content="2019-12-02T05:52:15.000Z">
+<meta property="article:modified_time" content="2021-08-21T07:30:31.462Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Next">
+<meta property="article:tag" content="升级博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png">
+
+
+<link rel="canonical" href="https://jmyblog.top/BlogUpdateNote/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/BlogUpdateNote/","path":"BlogUpdateNote/","title":"升级博客，我太难了"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>升级博客，我太难了 | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%92%8B%E5%8D%87%E7%BA%A7"><span class="nav-number">1.</span> <span class="nav-text">咋升级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">升级Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7Next"><span class="nav-number">1.3.</span> <span class="nav-text">升级Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="nav-number">1.3.1.</span> <span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%AE%8C%E6%88%90%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.3.2.</span> <span class="nav-text">更改配置文件完成基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.3.3.</span> <span class="nav-text">个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%B5%8F%E8%A7%88%E6%AC%A1%E6%95%B0"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">文章浏览次数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Daovoice%E5%9C%A8%E7%BA%BF%E8%81%94%E7%B3%BB"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">Daovoice在线联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%AE%A0%E7%89%A9"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">博客宠物</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">文章分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%BA%95%E9%83%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">网站底部运行时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%B7%E7%82%AB%E6%A0%87%E7%AD%BE%E4%BA%91"><span class="nav-number">1.3.3.7.</span> <span class="nav-text">酷炫标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-number">1.3.3.8.</span> <span class="nav-text">背景图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%92%8C%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E5%9C%86%E8%A7%92%E6%98%BE%E7%A4%BA"><span class="nav-number">1.3.3.9.</span> <span class="nav-text">侧边栏和首页文章圆角显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.3.3.10.</span> <span class="nav-text">友情链接页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9%E4%BA%86%E4%B8%8Bbutton%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.3.3.11.</span> <span class="nav-text">改了下button的样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E6%A6%82%E8%A7%88%E5%8A%A0%E4%BA%86%E4%B8%AA%E9%9F%B3%E4%B9%90%E9%93%BE%E6%8E%A5"><span class="nav-number">1.3.3.12.</span> <span class="nav-text">站点概览加了个音乐链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%B3%E4%B8%8A%E8%A7%92%E7%AB%99%E7%82%B9%E8%83%8C%E6%99%AF%E6%94%B9%E9%A2%9C%E8%89%B2"><span class="nav-number">1.3.3.13.</span> <span class="nav-text">右上角站点背景改颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%BA%95%E9%83%A8%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B9"><span class="nav-number">1.3.3.14.</span> <span class="nav-text">网站底部颜色修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E5%AE%BD%E5%BA%A6"><span class="nav-number">1.3.3.15.</span> <span class="nav-text">修改主题页面宽度</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD%E7%9A%84%E6%9B%B4%E6%96%B0"><span class="nav-number">2.</span> <span class="nav-text">后续的更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    来了老弟
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://blog.csdn.net/summy_j" title="CSDN → http:&#x2F;&#x2F;blog.csdn.net&#x2F;summy_j" rel="noopener" target="_blank"><i class="fas fa-pencil-alt fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1399335349&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://wu.run/" title="http:&#x2F;&#x2F;wu.run&#x2F;" rel="noopener" target="_blank">iamwr</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://huangxuan.me/" title="https:&#x2F;&#x2F;huangxuan.me&#x2F;" rel="noopener" target="_blank">Hux</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.guanqr.com/" title="https:&#x2F;&#x2F;blog.guanqr.com&#x2F;" rel="noopener" target="_blank">荷戟独彷徨</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.youmeek.com/" title="http:&#x2F;&#x2F;www.youmeek.com&#x2F;" rel="noopener" target="_blank">YouMeek</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.dandyweng.com/" title="https:&#x2F;&#x2F;blog.dandyweng.com&#x2F;" rel="noopener" target="_blank">Dandy's blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">酷壳</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.liaoxuefeng.com/" title="https:&#x2F;&#x2F;www.liaoxuefeng.com&#x2F;" rel="noopener" target="_blank">廖雪峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;" rel="noopener" target="_blank">阮一峰的官方网站</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bylinzi.com/" title="https:&#x2F;&#x2F;www.bylinzi.com&#x2F;" rel="noopener" target="_blank">林子的空间</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://julysxy.com/" title="http:&#x2F;&#x2F;julysxy.com&#x2F;" rel="noopener" target="_blank">七姑娘</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/BlogUpdateNote/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          升级博客，我太难了
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-02 13:52:15" itemprop="dateCreated datePublished" datetime="2019-12-02T13:52:15+08:00">2019-12-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-21 15:30:31" itemprop="dateModified" datetime="2021-08-21T15:30:31+08:00">2021-08-21</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BB%B4%E6%8A%A4%E5%B0%8F%E7%A0%B4%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">维护小破站</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>21 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">记录博客升级过程，方便以后参考。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <img data-src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
+用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
+
+<h1 id="咋升级"><a href="#咋升级" class="headerlink" title="咋升级"></a>咋升级</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，来想一想都要更新什么。<br>第一个肯定是Hexo了。其次就是主题，我用的是Next。由于之前不仅更改了主题配置，还有一些插件和自定义配置改了源文件。最致命的是我已经忘记在哪改，改了啥了。所以：</p>
+<div class="note warning"><p>升级之前，先把博客备份一下，这样即使更新过程中出了问题，也不用怕。</p></div>
+
+<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><p>博客根目录的package.json文件里，列出了hexo和一些依赖的版本(这是我已经升级过的)：</p>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="attr">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"hexo"</span>: {</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"4.0.0"</span> ##当前Hexo版本</span><br><span class="line">  },</span><br><span class="line">  "dependencies": { ##各种插件版本</span><br><span class="line">    "hexo": "^4.0.0",</span><br><span class="line">    "hexo-algolia": "^1.3.1",</span><br><span class="line">    "hexo-deployer-git": "^2.1.0",</span><br><span class="line">    "hexo-filter-emoji": "^2.0.2",</span><br><span class="line">    "hexo-generator-archive": "^1.0.0",</span><br><span class="line">    "hexo-generator-baidu-sitemap": "^0.1.6",</span><br><span class="line">    "hexo-generator-category": "^1.0.0",</span><br><span class="line">    "hexo-generator-feed": "^2.1.1",</span><br><span class="line">    "hexo-generator-index": "^1.0.0",</span><br><span class="line">    "hexo-generator-searchdb": "^1.2.0",</span><br><span class="line">    "hexo-generator-sitemap": "^2.0.0",</span><br><span class="line">    "hexo-generator-tag": "^1.0.0",</span><br><span class="line">    "hexo-helper-live2d": "^3.1.1",</span><br><span class="line">    "hexo-leancloud-counter-security": "^1.4.1",</span><br><span class="line">    "hexo-next-share": "github:theme-next/hexo-next-share",</span><br><span class="line">    "hexo-renderer-ejs": "^1.0.0",</span><br><span class="line">    "hexo-renderer-marked": "^2.0.0",</span><br><span class="line">    "hexo-renderer-stylus": "^1.1.0",</span><br><span class="line">    "hexo-server": "^1.0.0",</span><br><span class="line">    "hexo-symbols-count-time": "^0.7.0",</span><br><span class="line">    "hexo-wordcount": "^6.0.1",</span><br><span class="line">    "live2d-widget-model-hijiki": "^1.0.5"</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>打开博客根目录，输入命令：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></tbody></table></figure>
+<p>就会看到有哪些依赖和插件需要更新：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Package              Current  Wanted  Latest  Location</span><br><span class="line">hexo-filter-emoji      2.0.2   2.1.0   2.1.0  hexo-site</span><br><span class="line">hexo-generator-feed    2.1.1   2.2.0   2.2.0  hexo-site</span><br><span class="line">hexo-next-share        1.0.0     git     git  hexo-site</span><br></pre></td></tr></tbody></table></figure>
+<p>修改package.json中对应条目的版本到最新版，比如将   “hexo-filter-emoji”: “^2.0.2” 改成：   “hexo-filter-emoji”: “^2.1.0”<br>然后保存修改，再输入命令保存更新并下载：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save</span><br></pre></td></tr></tbody></table></figure>
+<p>之后运行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo --version</span><br></pre></td></tr></tbody></table></figure>
+<p>就可以看到当前hexo的版本已经到最新啦<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">✌</span></p>
+<h2 id="升级Next"><a href="#升级Next" class="headerlink" title="升级Next"></a>升级Next</h2><p>之前Next的版本是<strong>v5.x</strong>, 而搜了下最新版已经到<strong>v7.x</strong>了。。。不过不慌，还是慢慢来<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
+<p>为了避免踩坑，先看<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">官方文档</a>肯定是个明智的选择。</p>
+</blockquote>
+<p>跟随大佬的<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md">指示</a>，Next主题v5.x之后更换了代码库。之前是原作者 iissnan’s 的<a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">个人仓库</a>，由于Next比较火，后来就成立了一个专门维护它的<a target="_blank" rel="noopener" href="https://github.com/theme-next">组织</a>。是一个很大的进步了，大佬们真棒。</p>
+<p>代码库换了，那就不能用Git常规操作pull代码了。文档里给的建议是先不改动原有主题文件夹，将主题最新版本代码作为 <mark class="label info">next-reloaded</mark> 单独克隆到themes/下边。在博客配置文件中，把主题设置为<mark class="label info">next-reloaded</mark> 。然后就可以随时切换两个版本。</p>
+<p>但我不是要切换呀，我是要更新啊，所以说之前所有的配置都得我自己手动去加去改了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 可问题是我完全不记得自己都做了啥，万一改坏了怎么办<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">😱</span>于是Google一下，看看其他小伙伴有什么更好的操作，结果并没有发现更简单的方法，只能手动改了。</p>
+<h3 id="更改配置文件完成基础设置"><a href="#更改配置文件完成基础设置" class="headerlink" title="更改配置文件完成基础设置"></a>更改配置文件完成基础设置</h3><p>新版本的配置文件里，将之前许多格式做了改动，所以要按照新的格式来。<br>对比V5.x版本，新的Next主题将之前许多个性化的设置全都加到了配置文件里，只需打开开关即可，很好用。。<br>这样改完之后，博客基本上与之前一致了。</p>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><p>之前一直用的来必力，加载速度还可以。而且有评论时也会给我发邮件。直接在主题配置文件搜索“# LiveRe comments system”然后加上id就好了。</p>
+<h4 id="文章浏览次数"><a href="#文章浏览次数" class="headerlink" title="文章浏览次数"></a>文章浏览次数</h4><p>这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：<br><img data-src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error"><br>不知道怎么解决，准备在github提issue，所以先弃用了。</p>
+<h4 id="Daovoice在线联系"><a href="#Daovoice在线联系" class="headerlink" title="Daovoice在线联系"></a>Daovoice在线联系</h4><p>有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：<br><img data-src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error"><br>开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。</p>
+<h4 id="博客宠物"><a href="#博客宠物" class="headerlink" title="博客宠物"></a>博客宠物</h4><p>就是右下角萌萌的小黑啦。<br>之前也已经下载 “hexo-helper-live2d” 和 “live2d-widget-model-hijiki”这两个依赖，在图中路径加上标记：<br><img data-src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config"><br>然后在博客(非主题)配置文件加上下面的配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#pet</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: true</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki ## 宠物依赖包的名字</span><br><span class="line">  display:</span><br><span class="line">    position: right ## 出现位置</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></tbody></table></figure>
+<p>之前小黑猫没显示，就是因为没有下载对应的宠物依赖包。所以要仔细看 live2d 的 README 呀。</p>
+<h4 id="文章分享"><a href="#文章分享" class="headerlink" title="文章分享"></a>文章分享</h4><p>新加入了分享文章的插件AddThis, 挺好用的。按照<a target="_blank" rel="noopener" href="https://www.addthis.com/">这里的说明</a>配置就好了。然后把id加在配置文件里。</p>
+<h4 id="网站底部运行时间"><a href="#网站底部运行时间" class="headerlink" title="网站底部运行时间"></a>网站底部运行时间</h4><p>个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。<br>参考<a target="_blank" rel="noopener" href="https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/">这篇文章</a>完成的。<br><img data-src="https://i.loli.net/2021/04/28/rjxPnYqmUCkwAv7.png"></p>
+<h4 id="酷炫标签云"><a href="#酷炫标签云" class="headerlink" title="酷炫标签云"></a>酷炫标签云</h4><p>根据插件<a target="_blank" rel="noopener" href="https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md">github说明</a>配置就好了。<br>下载：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-cloud</span><br></pre></td></tr></tbody></table></figure>
+
+<p>之后操作：</p>
+<img data-src="https://i.loli.net/2021/04/28/ZJfLhzbVkKuMnqa.png">
+
+ <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">{% <span class="keyword">if</span> site.tags.length &gt; <span class="number">1</span> %}</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span> src=<span class="string">"{{ url_for('/js/tagcloud.js') }}"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span> src=<span class="string">"{{ url_for('/js/tagcanvas.js') }}"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"widget-wrap"</span>&gt;</span><br><span class="line">    &lt;h3 <span class="class"><span class="keyword">class</span></span>=<span class="string">"widget-title"</span>&gt;Tag Cloud&lt;/h3&gt;</span><br><span class="line">    &lt;div id=<span class="string">"myCanvasContainer"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"widget tagcloud"</span>&gt;</span><br><span class="line">        &lt;canvas width=<span class="string">"250"</span> height=<span class="string">"250"</span> id=<span class="string">"resCanvas"</span> style=<span class="string">"width:100%"</span>&gt;</span><br><span class="line">            {{ list_tags() }}</span><br><span class="line">        &lt;/canvas&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">{% endif %}</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>给博客加上一个背景图片。<br>网上很多教程都是在_custom.styl文件设置的，但新版本已经没有这个文件了，后来看了<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/issues/1217">更新说明</a>，里面有提到怎么把旧版本的所有自定义设置迁移到新版本，所以跟着人家说的设置就好了。<br>先在博客根目录下的Source文件夹里新建<mark class="label info">_data</mark>文件夹，然后再创建<mark class="label info">styles.styl</mark>文件，添加内容：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body {</span><br><span class="line">  background:url(你想加的背景图片url);</span><br><span class="line">  background-attachment: fixed; //固定图片位置</span><br><span class="line">  opacity: 0.9; //透明度设置</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>之后在博客配置文件搜索关键字<mark class="label info">custom_file_path</mark>去掉 style 的注释就好啦。</p>
+<h4 id="侧边栏和首页文章圆角显示"><a href="#侧边栏和首页文章圆角显示" class="headerlink" title="侧边栏和首页文章圆角显示"></a>侧边栏和首页文章圆角显示</h4><div class="note info"><p>“在大部分人的审美中，有弧度的圆角总是比没弧度的直角好看许多”</p>
+</div>
+
+<p>打开themes/hexo-theme-next/source/css/_variables/对应的scheme.styl文件，作如下修改：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 修改主题页面布局为圆角</span><br><span class="line">$border-radius-inner            = 15px 15px 15px 15px;</span><br><span class="line">$border-radius                  = 15px;</span><br><span class="line"></span><br><span class="line">// 阅读全文按钮为圆角</span><br><span class="line">$btn-default-radius           = 16px</span><br><span class="line">$btn-default-bg               = white</span><br><span class="line">$btn-default-color            = $text-color</span><br><span class="line">$btn-default-border-color     = $text-color</span><br><span class="line">$btn-default-hover-color      = white</span><br><span class="line">$btn-default-hover-bg         = $black-deep</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="友情链接页面"><a href="#友情链接页面" class="headerlink" title="友情链接页面"></a>友情链接页面</h4><p>参照 <a target="_blank" rel="noopener" href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2">这篇文章</a>设置的。</p>
+<p>在 /themes/next/layout/ 目录下新建一个 links.swig 文件，内容和之前一样。<br><img data-src="https://i.loli.net/2021/04/28/a2fDPAzZm7tFpes.png"><br><img data-src="https://i.loli.net/2021/04/28/HolOS3LvVzQ19ca.png"></p>
+<h4 id="改了下button的样式"><a href="#改了下button的样式" class="headerlink" title="改了下button的样式"></a>改了下button的样式</h4><img data-src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
+<img data-src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
+
+<h4 id="站点概览加了个音乐链接"><a href="#站点概览加了个音乐链接" class="headerlink" title="站点概览加了个音乐链接"></a>站点概览加了个音乐链接</h4><p>Path: <mark class="label info">themes/next/layout/_partials/sidebar/site-overview.swig</mark></p>
+<h4 id="右上角站点背景改颜色"><a href="#右上角站点背景改颜色" class="headerlink" title="右上角站点背景改颜色"></a>右上角站点背景改颜色</h4><p>Path: <mark class="label info">themes/next/source/css/_schemes/Pisces/_header.styl</mark><br>颜色可以自己改</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.site-meta {</span><br><span class="line">  background-image: linear-gradient(to right, #db7093, #20B2AA, #4169E1);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>还需要改一下padding值：<br><img data-src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png"></p>
+<p>手机端样式优化：<br><img data-src="https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png"><br><img data-src="https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png"><br><img data-src="https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png"></p>
+<h4 id="网站底部颜色修改"><a href="#网站底部颜色修改" class="headerlink" title="网站底部颜色修改"></a>网站底部颜色修改</h4><img data-src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png">
+<img data-src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png">
+
+<h4 id="修改主题页面宽度"><a href="#修改主题页面宽度" class="headerlink" title="修改主题页面宽度"></a>修改主题页面宽度</h4><p>路径：next/source/css/_schemes/Gemini/index.styl</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//page width start</span><br><span class="line">header{ width: 70% !important; }</span><br><span class="line">header.post-header {</span><br><span class="line">  width: auto !important;</span><br><span class="line">}</span><br><span class="line">.container .main-inner { width: 70%; }</span><br><span class="line">.content-wrap { width: calc(100% - 260px); }</span><br><span class="line"></span><br><span class="line">.header {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.container .main-inner {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: auto !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.content-wrap {</span><br><span class="line">  +tablet() {</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  }</span><br><span class="line">  +mobile() {</span><br><span class="line">    width: 100% !important;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line">//page width end</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h1 id="后续的更新"><a href="#后续的更新" class="headerlink" title="后续的更新"></a>后续的更新</h1><p>以后的更新应该就能用Git进行操作啦，毕竟换库太可怕了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://tommy.net.cn/2018/02/26/upgrade-hexo-to-v3-5-0/">将 Hexo 升级到 v3.5.0</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e211e9119522">Hexo NexT 6升级笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://vic.kim/2019/05/23/Hexo%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91%E5%8F%8A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/">Hexo博客建立标签云及效果展示</a></li>
+<li><a target="_blank" rel="noopener" href="http://eternalzttz.com/hexo-next.html">hexo next主题优化，打造个人精致网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/">Hexo-NexT 主题个性优化</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/BlogUpdateNote/" title="升级博客，我太难了">https://jmyblog.top/BlogUpdateNote/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Next/" rel="tag"><i class="fa fa-tag"></i> Next</a>
+              <a href="/tags/%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="fa fa-tag"></i> 升级博客</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/BDD-Introduce/" rel="prev" title="请收下这波 BDD 安利">
+                  <i class="fa fa-chevron-left"></i> 请收下这波 BDD 安利
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/How-to-Write/" rel="next" title="Hexo的一些写作标签">
+                  Hexo的一些写作标签 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">147k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8:10</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "@谁把钱丢了 已经安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒啦 >.<";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>
