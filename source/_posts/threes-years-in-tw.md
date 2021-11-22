@@ -5,11 +5,11 @@ update: 2021-11-01 17:07:41
 tags: 职业规划
 categories: 搬砖那些事儿
 copyright: false
-description: 一篇干货满满的QA打怪升级指南。
+description: 干货满满的QA打怪升级指南。
 top:
 ---
 
-<img src="https://i.loli.net/2021/11/01/ST13ztMgQIF9sKj.png" >
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/threes-years-in-tw/1.png" >
 
 {% note info %}
 前段时间，博主 [深刻思考](https://jmyblog.top/thoughts-about-qa-role/) 了QA角色，暗叹饭碗不稳之余，也设想了下一步的实践。突然发现之前看过的这篇文章与我的设想不谋而合，所以忍不住转载之，好时时自省。
@@ -24,13 +24,13 @@ top:
 
     “你对AWS证书了解吗？” 我说。
 
-    “不是很了解。” 小A回答。
+    “不是很了解。” 小Y回答。
 
     “建议你先做做功课再做决定哈，了解清楚在考这个证书的过程中你能学到什么？证书有什么作用？
     你为什么在当下选择考它而不是别的？”
     “不过，你为什么忽然想要考AWS证书呢？” 我问道。
 
-    “我看到XX 和XX都在考，所以想一起考。” 小A答。
+    “我看到XX 和XX都在考，所以想一起考。” 小Y答。
 
 小Y是2019年加入公司的毕业生QA，和大多数新人一样好学上进，眼里充满对知识的渴望和对大神的敬仰，但缺乏目标、东奔西撞。这不禁让我想到了自己。
 
