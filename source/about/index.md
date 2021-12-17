@@ -21,4 +21,5 @@ type: "about"
 本博客基于**Hexo**框架搭建，并部署在**GithubPages**和**CodingPages**上。以前写过 [一篇文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more) 来介绍搭建过程，但毕竟时过境迁，如果你也想搭建，可以搜索关键字参考最新的文章。
 博客搭建之前的文章都记录在 [CSDN](https://blog.csdn.net/summy_j) 中，都是一些技术博客，但是里面的内容我现在已经看不懂了，因为工作中大多都没有用到:joy:
 这里主要更新一些学习笔记、工(ban)作(zhuan)总结，还有一些旅行游记和生活感悟:laughing:
+如果你有问题想问博主，或者对博客有一些建议，可以通过在文章下评论，以及博客右下角的聊天弹窗和我联系(都是匿名的:smirk:)；评论方式回复较慢(livere提示功能目前有一些bug:worried:)，所以推荐后者，我会尽量5mins内回复大家(毕竟不能时刻盯着手机🙈)
 {% endnote %}
