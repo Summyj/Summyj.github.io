@@ -32,13 +32,13 @@ top:
 
 系统每天推荐5个男嘉宾，觉得合适可以加好友、关注，或者感觉自己配不上的话还可以推荐他上墙(下文介绍)：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou4.jpg" height=230 width=400 alt="系统推送">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou4.jpg" alt="系统推送">
 
 #### 单身广场
 
 此外还有进入「单身广场」的入口，方便寻找心仪的男嘉宾，是我的吃瓜场地1：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou2.jpg" height=440 width=600 alt="单身广场">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou2.jpg" alt="单身广场">
 
 可以筛选地区和性别，这里我就要吐槽一下，地区选项很少，很多城市都归类在其它里面，看起来很不方便，希望未来可以提供更多的城市筛选。
 
@@ -52,7 +52,7 @@ top:
 
 也可以通过发纸飞机的方式认识男嘉宾，不过这个是匿名的，收到纸飞机的人只能看到大概的信息，如果聊的投缘可以解锁看资料加好友什么的：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou6.jpg" height=400 width=400 alt="纸飞机">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou6.jpg" alt="纸飞机">
 
 有次想加一个小哥哥，但是狗粮(下文介绍)不够了，我想问大家有什么方式可以拿到狗粮，所以发了一个纸飞机，结果发现了新大陆，原来不加好友也能这样聊起来(上图右)。
 
@@ -70,13 +70,13 @@ top:
 
 可以看到好友申请、聊天列表，和一些系统消息，是故事开始的地方，尤其是聊天页面，有已读功能，聊天文本框的place holder也很耐人寻味「主动一点，让故事发生」哈哈哈哈，可谓是用心良苦了：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou10.jpg" height=400 width=400 alt="消息">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou10.jpg" alt="消息">
 
 不过这个文本输入框有一些可以优化的点，它不能换行，而且文本多的时候也不能滑动编辑，就很不好用。
 
 ### 我的
 
-个人信息和系统设置页，能看到最近来访和关注自己的嘉宾，啊，这里叫粉丝，也可以在这设置系统推送男嘉宾的偏好(不用充会员！！！)：
+个人信息和系统设置页，能看到最近来访和关注自己的嘉宾，啊，这里叫粉丝，也可以在匹配设置里指定系统推送男嘉宾的偏好(不用充会员！！！)，还有一个三观问答，男嘉宾申请加好友的时候需要回答问题：
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou9.jpg" height=400 width=200 alt="我的">
 
@@ -86,11 +86,11 @@ top:
 
 这里也可以设置自己的情感状态，非常细节了：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou11.jpg" height=400 width=400 alt="情感状态">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou11.jpg" alt="情感状态">
 
 最后就是个人信息，还是和青藤之恋差不多，需要传照骗，做学历和身份认证，比青藤多了一个工作认证，非常靠谱了；还有个人基本信息(昵称/年龄/星座/身高/职业)，二狗这里不需要展示收入，可能还是想少一些物质吧，很赞！
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou12.jpg" height=400 width=400 alt="个人信息">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou12.jpg" alt="个人信息">
 
 再然后就是一些自我介绍、兴趣爱好、家庭背景之类的描述，以上也都需要系统审核，不过和青藤之恋的打分评价不同，这里是分青铜、白银、黄金三个等级来评价用户信息真实性和完整度，有种打游戏冲关的感觉，所以我很快就到了黄金哈哈哈:joy:
 
@@ -98,12 +98,12 @@ top:
 
 青藤之恋有「青藤币」，二狗平台也有「狗粮」，先从名字上来看就很接地气了，对比不适合穷逼的青藤币，狗粮的获取则非常容易：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou13.jpg" alt="个人信息">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/ergou13.jpg" alt="狗粮">
 
 - 先说获取：首先注册的时候就会送狗粮红包200+，然后之后填个人信息、关注公众号也会送狗粮200+，再加上每日签到，其实就已经够用了。
 - 然后花费：解锁粉丝和访客都只需要20狗粮，解锁匿名动态也只需要10狗粮，加好友是花费狗粮最多的操作(非常感谢加我的男嘉宾了)，但也就100狗粮，所以完全可以满足我找对象和吃瓜的需求。
 
-而且就我发纸飞机调研得到的结果来看，大家都觉得狗粮够用，部分用户还说自己狗粮都用不完。。。
+而且就我发纸飞机调研得到的结果来看，大家都觉得狗粮够用，部分用户还说自己狗粮都用不完。。。，然后我尝试购买狗粮，结果人家直接给我一个弹窗(上图2)提示买不了，太实诚了。
 
 --- 
 
