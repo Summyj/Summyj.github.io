@@ -291,62 +291,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AppUI自动化测试第三弹-Android篇</title>
-    <url>/AppUI-AutoTest-3/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
-<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
-<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
-<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
-<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
-<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
-<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
-<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>Bitrise</tag>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第一弹</title>
-    <url>/AppUI-AutoTest/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
-
-<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行 <mark class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</mark> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">brew tap AdoptOpenJDK/openjdk</span><br><span class="line">brew cask install adoptopenjdk11</span><br></pre></td></tr></tbody></table></figure>
-<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)</span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk</span><br><span class="line">export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)</span><br><span class="line">export AAPT_HOME</span><br><span class="line">export PATH=$PATH:$AAPT_HOME</span><br></pre></td></tr></tbody></table></figure>
-<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"></p>
-<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个</span><br><span class="line">npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
-<p><img data-src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"></p>
-<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img data-src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
-<div class="note info"><p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
-</div>
-
-<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
-<img data-src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>WebdriverIO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈自动化测试框架</title>
     <url>/AutoTest-FrameWork/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg">
@@ -446,6 +390,62 @@
       </categories>
       <tags>
         <tag>自动化测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第三弹-Android篇</title>
+    <url>/AppUI-AutoTest-3/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
+<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
+<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
+<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
+<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
+<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
+<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
+<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>Bitrise</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第一弹</title>
+    <url>/AppUI-AutoTest/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
+
+<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行 <mark class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</mark> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">brew tap AdoptOpenJDK/openjdk</span><br><span class="line">brew cask install adoptopenjdk11</span><br></pre></td></tr></tbody></table></figure>
+<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)</span><br><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk</span><br><span class="line">export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)</span><br><span class="line">export AAPT_HOME</span><br><span class="line">export PATH=$PATH:$AAPT_HOME</span><br></pre></td></tr></tbody></table></figure>
+<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"></p>
+<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个</span><br><span class="line">npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"></p>
+<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img data-src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
+<div class="note info"><p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
+</div>
+
+<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
+<img data-src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>WebdriverIO</tag>
       </tags>
   </entry>
   <entry>
