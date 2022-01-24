@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<span id="more"></span>
-
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
-<ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
-</ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-        <tag>告别拖延</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>五一青海三日游</title>
     <url>/5-1-travel/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -764,103 +734,6 @@
       </categories>
       <tags>
         <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git学习笔记</title>
-    <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
-<span id="more"></span>
-
-<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
-<hr>
-<h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
-<ul>
-<li>成为了Linus Benedict Torvalds的一枚小迷妹（以前也是，现在妥妥的）。</li>
-<li>世上没有后悔药？不存在的，git的版本回退完美的实现了这一点。</li>
-<li>搞清楚了git和github的关系，后者只是拥有一个git远程仓库，可以通过git连接并实现相应操作。</li>
-<li>Git服务器可以轻松搭建，除了github，还有coding/gitee等网站提供git服务。</li>
-<li>工作效率真的提升很快。。。</li>
-</ul>
-<hr>
-<h1 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h1><p>下面对学习中涉及到的git命令做分类总结，都是最常用的。</p>
-<h2 id="git本地管理"><a href="#git本地管理" class="headerlink" title="git本地管理"></a>git本地管理</h2><blockquote>
-<p>git最基本的一些操作</p>
-</blockquote>
-<p>git init：将某目录变成git可以管理的仓库（添加.git目录）</p>
-<p>git commit -m “…”:一次性提交多个文件（add进来的文件）</p>
-<p>git add xxx.md:可以多次添加多个不同文件</p>
-<p>git status:可以时刻掌握仓库当前的状态</p>
-<p>git diff:显示具体修改的内容（与提交进去的文件相比）</p>
-<p>git log：显示从最近到最远的提交日志，加上–pretty=oneline参数可以将每次提交信息压缩成一行,最前边的数字加字母是指每次commit的commit-id,是16进制的表示形式</p>
-<p>.gitignore文件：包括git需要忽略提交的文件名，此文件也需要提交到git</p>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><blockquote>
-<p>世界上是有后悔药的</p>
-</blockquote>
-<p>git reset –hard HEAD^:回退到上个版本（上上个版本HEAD^^,上100个版本是HEAD~100。HEAD是指向当前版本的指针，因此可以通过调整HEAD来在历史版本间穿梭）</p>
-<p>git reset –hard commmitid：在没有关闭上次回退时的命令窗口时，可以取消回退。commitid没必要写全，git可以自己去找</p>
-<p>git reflog:可以显示每一次commit和回退的id号，如果命令窗口关闭，可以用此命令先找到commitid，然后用上个命令取消回退</p>
-<p>git checkout – file：撤销在工作区对file做的修改，包括撤销对file文件的删除</p>
-<p>git reset HEAD file &amp; git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
-<p>git reset –hard HEAD^ :已经将想撤销的修改添加到了版本库，但还未提交到远程库。用版本回退撤销修改</p>
-<p>git rm file&amp;git commit -m “delete file”：删除已添加到版本库的文件</p>
-<p>git checkout:用版本库里的文件版本替换工作区的文件版本（一键还原）</p>
-<h2 id="远程库连接"><a href="#远程库连接" class="headerlink" title="远程库连接"></a>远程库连接</h2><blockquote>
-<p>连接远程库，进一步实现团队协作。</p>
-</blockquote>
-<p>git remote:查看远程库信息，详细信息加上-v选项</p>
-<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
-<p>git push -u origin xxx:把本地仓库指定分支·内容推送到远程，下次推送可以不用-u参数<br>因为第一次推送master分支时如果加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，所以在以后的推送或者拉取时就可以简化命令。</p>
-<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
-<p>git remotr rm origin:删除本地库关联的origin远程库</p>
-<h2 id="分支创建管理"><a href="#分支创建管理" class="headerlink" title="分支创建管理"></a>分支创建管理</h2><blockquote>
-<p>实现更安全便捷的版本控制。</p>
-</blockquote>
-<p>git checkout -b xxx:git check命令加上-b参数表示创建并切换到xxx分支，此命令相当于两条命令：</p>
-<ul>
-<li>git branch xxx</li>
-<li>git checkout xxx</li>
-</ul>
-<p>git branch:查看当前分支（列出所有分支，当前分支前边会标有*号）</p>
-<p>git merge xxx:将指定分支xxx合并到当前分支,首先要切换到当前分支（不一定是master分支）</p>
-<p>git branch -d xxx:删除某分支（合并后再删除）</p>
-<p>git branch -D xxx:强行删除某个没有被合并的分支</p>
-<p>git log –graph –pretty=oneline –abbrev-commit：用分支图展示各分支合并情况（或者直接git log –graph，但这将会显示所有历史合并图）</p>
-<p>git merge –no-ff -m “…” xxx:禁用git合并时默认的fast-forward模式，生成新的commit加入分支信息。-m后的内容就是合并信息</p>
-<h2 id="工作现场存储"><a href="#工作现场存储" class="headerlink" title="工作现场存储"></a>工作现场存储</h2><blockquote>
-<p>版本控制的freestyle.</p>
-</blockquote>
-<p>git stash:将当前工作现场储藏起来，等以后恢复现场后继续工作</p>
-<p>git stash list:查看储藏的工作现场</p>
-<p>git stash apply:回复储藏的工作现场</p>
-<p>git stash apply stash@{x}有多个stash时恢复指定的stash</p>
-<p>git stash drop:恢复现场并删除stash list的内容，如果有多个stash,默认恢复的是最新的stash.</p>
-<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><blockquote>
-<p>小伙伴们的友情</p>
-</blockquote>
-<p>git checkout -b xxx origin/xxx:刚从远程库克隆到本地时只有master分支，用此命令创建和远程分支对应的分支</p>
-<p>git pull:多人协作时，远程分支比本地分支更新导致推送失败，用此命令从远程库抓取该分支最新的提交并和本地分支进行合并，合并有冲突需要手动解决</p>
-<p>git branch –set-upstream xxx origin/xxx:git pull失败时需要创建本地分支和远程分支的关联</p>
-<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><blockquote>
-<p>更方便进行版本控制，与commit id相比更好记。相当于版本库的一个快照。</p>
-</blockquote>
-<p>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针。与HEAD指针相比，后者可以移动，但标签不能移动），所以，创建和删除标签都是瞬间完成的。</p>
-<p>git tag xxx:打标签</p>
-<p>git tag v0.3 646123:将commit id为646123的提交打上v0.3标签。这样可以解决忘记打标签的问题</p>
-<p>git tag:查看所有标签（按字母排序，而并非时间）</p>
-<p>git show tagname:查看标签信息（包括说明文字）</p>
-<p>git tag -a v0.x -m “…” 615465:创建带有说明的标签，用-a指定标签名，-m指定说明文字</p>
-<p>git tag -d xxx:删除指定标签（因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。）</p>
-<p>git push origin tagname:推送标签到远程</p>
-<p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
-<p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2060,65 +1933,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<span id="more"></span>
-
-<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java类中的代码块执行顺序</title>
-    <url>/java%E7%B1%BB%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</url>
-    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
-<span id="more"></span>
-
-<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>请写出上述代码的输出，看完本文你就会有答案。</p>
-<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
-<ul>
-<li>普通代码块：定义在类的方法中的代码块。</li>
-<li>构造块：定义在类中的代码块（无修饰符）。</li>
-<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
-<li>同步代码块（与多线程有关，本文不涉及）</li>
-</ul>
-<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> {</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>执行结果：</strong></p>
-<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
-<p><strong>结论：</strong></p>
-<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
-<p><strong>其中：</strong></p>
-<ul>
-<li>主类静态块优于主方法执行。</li>
-<li>无论生成多少类对象，静态块只执行一次。</li>
-<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
-</ul>
-<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
-<blockquote>
-<p>为了方便观察，对代码改动如下：</p>
-</blockquote>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>答案在这里：</p>
-<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我注册了两个交友小程序(下)</title>
     <url>/looking-for-the-one-er-gou/</url>
     <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg">
@@ -2971,460 +2785,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于闰年，你不知道的那些事</title>
-    <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
-<span id="more"></span>
-
-<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
-<ul>
-<li>整除但4不能整除100</li>
-<li>整除100又能整除400</li>
-</ul>
-<blockquote>
-<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
-</blockquote>
-<hr>
-<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
-<p>那么具体是怎么弥补的呢？</p>
-<blockquote>
-<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
-</blockquote>
-<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
-<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
-<blockquote>
-<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
-</blockquote>
-<p>那这3个闰年怎么少呢？</p>
-<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
-<ul>
-<li>2000/400=5</li>
-<li>2100/400=5.25</li>
-<li>2200/400=5.5</li>
-<li>2300/400=5.75</li>
-<li>2400/400=6</li>
-</ul>
-<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
-<p>你明白了吗？</p>
-<hr>
-<p>当然，根据规则，我们就可以编写代码判断了：</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	cin &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	{</span><br><span class="line">		cout &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">"pause"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>闰年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敏捷开发与测试</title>
-    <url>/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
-<span id="more"></span>
-
-<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
-<hr>
-<blockquote>
-<p>接下来我将从3个方面：What?（什么是敏捷开发）&amp;Why（为什么要实行敏捷开发）&amp;How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
-</blockquote>
-<h1 id="What"><a href="#What" class="headerlink" title="What?"></a>What?</h1><h2 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h2><p>简单来说，敏捷开发是一个<strong>以用户为中心、客户需求为导向</strong>的开发过程。强调客户合作、响应需求变化。是一种<strong>迭代式、增量式</strong>的开发模式。主要有以下特点：</p>
-<ul>
-<li>依赖客户参与</li>
-<li>测试驱动开发（TDD）</li>
-<li>开发周期短</li>
-</ul>
-<h2 id="敏捷测试"><a href="#敏捷测试" class="headerlink" title="敏捷测试"></a>敏捷测试</h2><p>对应敏捷开发模式，敏捷测试要求每个人都参与到测试过程中，所以需要团队人员之间进行大量的沟通与协作。</p>
-<ul>
-<li>客户：定义用例和程序属性参与验收测试</li>
-<li>开发和测试：共同打造可以进行功能自动化的测试配件</li>
-</ul>
-<p>与传统测试过程相比，敏捷测试主要有以下特征：</p>
-<ul>
-<li>测试并不是一个独立的阶段，而是和开发过程紧密联系并<strong>驱动开发</strong>（TDD）。</li>
-<li>开发者先创建<strong>单元测试</strong>用例（失败验证测试），然后实现软件单元代码。</li>
-<li>敏捷测试依赖于<strong>自动化测试</strong>。</li>
-<li>测试者要通过持续的测试反馈推动项目前行，并<strong>帮助开发者修复bug</strong>。</li>
-</ul>
-<hr>
-<h1 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h1><blockquote>
-<p>与传统软件开发模式相比，敏捷开发把客户的参与作为关键环节。这样引入了灵活性，提高客户满意度。</p>
-</blockquote>
-<p>如今的客户总是需要能立即发布的高质量应用产品，使得传统开发模式不能适应这种激烈的市场竞争环境。所以大多数企业更青睐像敏捷开发一般，轻量化、快速的开发方法。</p>
-<hr>
-<h1 id="How"><a href="#How" class="headerlink" title="How?"></a>How?</h1><p>事实上，敏捷开发方法有很多种，比如：功能驱动开发（FDD）、开放统一过程等等。但最流行的是<strong>极限编程（XP）</strong>开发方法和<strong>Scrum（进度跟踪）</strong>项目管理方法。</p>
-<blockquote>
-<p><strong>XP</strong>是一种迭代式、增量式的开发模式，非常强调单元测试和验收测试，是现在最著名的敏捷方法。<br><strong>Scrum</strong>是一种迭代式、增量式的项目管理方法，适用于所有的敏捷方法，用来度量开发速度和进度。两者相辅相成，形成了现今最流行的敏捷开发模式。</p>
-</blockquote>
-<h2 id="XP编程"><a href="#XP编程" class="headerlink" title="XP编程"></a>XP编程</h2><p>面向对象的编程语言如Java/C#，都含有全功能的API，所以可以利用其迅速实现大型复杂应用。但正因如此，应用程序的质量经常得不到保证。</p>
-<blockquote>
-<p>XP编程的目的就是<strong>短时间</strong>开发<strong>高质量</strong>的应用程序。所以，XP方法将主要精力集中在测试上，在产品设计阶段之后，必须首先生成单元测试用例，然后才编写代码通过测试。</p>
-</blockquote>
-<p>XP开发模型用12个核心实践来驱动该过程：</p>
-<ul>
-<li>NO.1：需求分析（开发、客户、产品均参与）</li>
-<li>NO.2：小规模、递增发布（增加实在/可增值的新功能，频繁发布新版本）</li>
-<li>NO.3：系统隐喻（编程小组确认开发规则）</li>
-<li>NO.4：简要设计（实现简要设计，通过单元测试，不需重复设计，只要不停实现）</li>
-<li>NO.5：连续测试（编写模块之前先生成单元测试用例，模块在通过单元测试后才算完成，程序在通过所有单元测试和验收测试后才算结束）</li>
-<li>NO.6：重构（清理调整代码库，任何重构之后需重新进行所有单元测试）</li>
-<li>NO.7：结对编程（两位程序员在同一台机器协同开发代码库，便于对代码实时检查，提高缺陷发生纠正率）</li>
-<li>NO.8：代码的集体所有权（所有代码归全体程序员所有，不存在某一个程序员只开发某一个代码库）</li>
-<li>NO.9：持续集成（变更后的代码在通过单元测试之后将其集成到代码库中）</li>
-<li>NO.10：每周工作40小时（不允许加班，如果每周都全力工作了40个小时，就不需要加班，在版本发布的前一周例外）</li>
-<li>NO.11：客户在现场（编程小组可以随时与客户沟通）</li>
-<li>NO.12：按标准编码（所有的代码需要满足编程小组设计的系统隐喻）</li>
-</ul>
-<h2 id="XP测试"><a href="#XP测试" class="headerlink" title="XP测试"></a>XP测试</h2><blockquote>
-<p>为满足XP方法的流程和思想，XP测试强调连续测试。主要由两种类型的测试组成：<strong>单元测试</strong>和<strong>验收测试</strong>。</p>
-</blockquote>
-<h3 id="XP单元测试"><a href="#XP单元测试" class="headerlink" title="XP单元测试"></a>XP单元测试</h3><p>单元测试是XP测试采用的主要测试方法，具有两条规则：</p>
-<p>1.所有的代码模块在编码开始前必须设计好单元测试用例（最主要的优点在于可以更好理解程序需求，排除混淆）</p>
-<p>2.产品发布之前所有的代码模块必须通过单元测试</p>
-<p>为了迎合项目进度，单元测试通常要用自动化测试套件来减轻单元测试负担，测试套件可以生成测试报告并对程序中出现的缺陷进行分类，帮助修复bug。</p>
-<h3 id="XP验收测试"><a href="#XP验收测试" class="headerlink" title="XP验收测试"></a>XP验收测试</h3><blockquote>
-<p>验收测试是判断应用程序是否满足功能性和易用性及其他需求，在设计阶段，开发人员和客户设计验收测试，由客户执行。</p>
-</blockquote>
-<p>验收测试需注意以下几点：</p>
-<ul>
-<li>同单元测试一样，验收测试也可是自动化的。测试内容为计算/数据等，可用自动化测试；当测试内容为界面布局和颜色等，测试应该是非自动化的。</li>
-<li>与单元测试相同，验收测试过程中发现多个bug时，应对其进行优先级排序，每次bug修正后都要重新执行验收测试。所以验收测试也算是一种回归测试。</li>
-</ul>
-<h2 id="一个完整XP项目的运作流程"><a href="#一个完整XP项目的运作流程" class="headerlink" title="一个完整XP项目的运作流程"></a>一个完整XP项目的运作流程</h2><p>下表给出了一个完整XP项目应进行的流程：</p>
-<table>
-<thead>
-<tr>
-<th>步骤</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Step1</td>
-<td>程序员与客户进行产品需求分析会议，决定产品使用场景</td>
-</tr>
-<tr>
-<td>Step2</td>
-<td>编程小组进行内部会议，将需求分解为独立的任务，并估计每个任务所需要的时间（StoryPoint）</td>
-</tr>
-<tr>
-<td>Step3</td>
-<td>程序员向客户提交任务清单，并要求客户对任务清单进行优先级排序</td>
-</tr>
-<tr>
-<td>Step4</td>
-<td>编程小组根据程序员具备的能力，将任务分配给对应结对程序员</td>
-</tr>
-<tr>
-<td>Step5</td>
-<td>每对程序员按照程序需求和规格说明，编写相应任务的单元测试用例</td>
-</tr>
-<tr>
-<td>Step6</td>
-<td>每对程序员编写完成通过其单元测试用例的任务代码，期间不断对代码进行修改和重测，并对代码库进行整合和集成</td>
-</tr>
-<tr>
-<td>Step7</td>
-<td>编程小组发布应用程序的一个预览版本，由客户进行验收测试，并通过修改缺陷不断进行回归测试</td>
-</tr>
-<tr>
-<td>Step8</td>
-<td>程序员在验收测试成功的基础上发布产品版本</td>
-</tr>
-</tbody></table>
-<p>其他工作：程序员根据最新经验更新对客户需求的时间估计方式。</p>
-<h2 id="敏捷开发学习网站"><a href="#敏捷开发学习网站" class="headerlink" title="敏捷开发学习网站"></a>敏捷开发学习网站</h2><p><a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1">Scrum中文网</a><br><a href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf#zoom=100">Scrum指南</a></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>敏捷测试</tag>
-        <tag>极限编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海_Part2</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/</url>
-    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
-<span id="more"></span>
-
-<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
-<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
-<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
-<p>但是时间长了，问题就开始出现了。</p>
-<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
-<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
-<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
-<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
-<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
-<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
-<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
-<ul>
-<li>笔试</li>
-</ul>
-<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
-<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
-<ul>
-<li>面试</li>
-</ul>
-<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
-<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
-<ul>
-<li>offer</li>
-</ul>
-<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
-<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
-<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
-<ul>
-<li>做毕设</li>
-<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
-<li>拿到驾照</li>
-</ul>
-<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>人生规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<span id="more"></span>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>人生</tag>
-        <tag>未来</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试矩阵</title>
-    <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
-<span id="more"></span>
-
-<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
-<h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
-<p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
-<h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
-<p>既然有这么多的测试方法，在实际的测试工作中，我们到底怎么测试呢。像上边说的，测试种类如此繁多，难于理解，所以在测试时也难以沟通。</p>
-</blockquote>
-<p>其实，我们可以从两个维度来理解这些测试方法，并将其应用到实际工作中。</p>
-<p>其中，第一个维度就是测试实现的层次和粒度，说白了就是测哪。是方法，类，还是API？是应用、系统、还是整个平台？</p>
-<p>而我们常说的性能测试，功能测试，安全测试等等，都可以归为第二个维度，即测试的目标，也就是测什么，咋测。</p>
-<p>这两个维度结合起来就形成了下边的测试矩阵：</p>
-<table>
-<thead>
-<tr>
-<th align="left">测哪\咋测</th>
-<th align="left">功能测试</th>
-<th align="left">集成测试</th>
-<th align="left">性能测试</th>
-<th align="left">安全测试</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">端到端</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">API</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">类</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-<tr>
-<td align="left">方法</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-<td align="left">test</td>
-</tr>
-</tbody></table>
-<p>有了这样的认识，以后进行测试工作时工作起来就方便多了。我们可以进行“方法级别的功能测试”、“API级别的性能测试”等等。这样，使测试内容变得更加清晰。</p>
-<blockquote>
-<p>事实上，，而常常忽略了第二个维度，即咋测。所以，根据测试矩阵进行测试，可以避免这种问题。在实际测试工作中，大多数情况下都进行的是功能测试。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>软件测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<span id="more"></span>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十一旅行中的小插曲</title>
-    <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
-    <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
-<span id="more"></span>
-
-<h2 id="动卧-x1f684"><a href="#动卧-x1f684" class="headerlink" title="动卧 🚄"></a>动卧 <span class="emoji" alias="bullettrain_side" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
-<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
-<p>于是国庆第一天，在高铁站看《闯关东》度过<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>。<br><img data-src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width="250" height="300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
-<p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img data-src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width="250" height="300" alt="动卧"></p>
-<p>刚开始只有我一个人，本来都快睡着了。后来上来了一对去南京的中年夫妇，然后。。。我就再也睡不着了。</p>
-<p>记得是大妈先开始的，打呼声虽然有些大，但还能勉强眯会眼。睡在大妈上铺的大叔表示不服，亲自示范给我们啥叫震耳欲聋，振聋发聩<span class="emoji" alias="hear_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8">🙉</span> 大妈不打呼了，因为她也被吵醒了，整个房间瞬间变成了大叔的主场。。。</p>
-<p>睡在我上铺的兄弟也睡不着了，穿上外套出去了，我知道，他一定是想去静静。也或许他是想出去问问，能不能把之前另一个女生跟他交换的铺位换回来<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<p>我觉得自己有义务提醒大叔控制下自己，于是起身敲大叔的床板，没醒。求救的眼神投向大妈，大妈顿时会意也起身，敲床板。大叔醒了。但显然大叔还没有完全清醒，嘟囔了两句家乡话。两人交谈了几句，大叔转身又睡了。</p>
-<p>声音虽然小了下来，但我知道，这只是暴风雨前的宁静。睡在我上铺的兄弟回来了，不知他是否意识到房间里的声音小了很多<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span>。</p>
-<p>果然，不一会，打鼾声又开始了。不幸的是，我没有赶在这之前睡着。</p>
-<p>南京站到了，大叔大妈终于下车了。但这时离苏州也只有不到一小时的车程，看来睡觉是不可能了。天将降大任于斯人也，必将苦其心志。苦就苦吧<span class="emoji" alias="confounded" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f616.png?v8">😖</span>。</p>
-<p>5点20分，苏州到了，我也下车了。</p>
-<h2 id="看电影-x1f3a5"><a href="#看电影-x1f3a5" class="headerlink" title="看电影 🎥"></a>看电影 <span class="emoji" alias="movie_camera" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png?v8">🎥</span></h2><p>既然是国庆，那咱也该应个景。其他电影不说，《我和我的祖国》得看吧，电影虽说得两个多小时，但也安排上了。<br>然后，我眼睛就瞎了<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span> </p>
-<p>最不忍直视的是’白昼流星’这一篇，接宇航员和老大爷死的这两幕，简直尬到了极点。还我的陈飞宇小哥哥!!!<br><img data-src="https://i.loli.net/2019/10/14/KmAZaWJP5qYk19z.jpg" width="250" height="300" alt="白昼流星">(有多尬大家参考<a href="https://www.zhihu.com/question/348312976/answer/843634337">这篇回答</a>)</p>
-<p>只能说电影想把剧情和祖国重大事件联系起来的初衷是好的，但联系不上，也不能强制联系啊。。。<br>槽点最少的一篇，当属’回归’篇了。朱一龙简直太帅了吧///<br><img data-src="https://i.loli.net/2019/10/14/5gD27LwOvRiGcl6.jpg" width="400" height="300" alt="回归"></p>
-<p>至于《中国机长》，据说戴着<a href="https://www.zhihu.com/question/346282105/answer/841583568">3D眼镜可以看出4D效果</a>，也是槽点满满啊。所以说假期电影，不能盲目从众，爱护眼睛，从我做起。</p>
-<h2 id="拙政园-x1f33f"><a href="#拙政园-x1f33f" class="headerlink" title="拙政园 🌿"></a>拙政园 <span class="emoji" alias="herb" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8">🌿</span></h2><p>到了苏州，拙政园是必定要去的，原计划到苏州的第二天去，但我低估了国庆节的客流量，只能预定第三天的票了。</p>
-<p>于是，第三天早上十点半，和家人一起兴致勃勃的到了拙政园景区，还没到门口，我们就傻眼了。这哪是看景，这分明是看人嘛 <span class="emoji" alias="weary" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f629.png?v8">😩</span> 门口早就拍好了二百米的长队。但我有点疑惑，因为拙政园的门票，在网上是按入园时间段订票的，我预订了10点半到11点半的票。这才刚刚10点半，没道理有这么多人。跟保安小哥沟通后，我们得到了答案。</p>
-<p>原来，网上所谓的‘入园时间’不过是个摆设。按照常理，如果预定的是9点半到10点半的入园票，那么10点半以后才来，票应该是作废的。然而并不是，只要预订了今天的票，今天内任何时间段都可以入园，大家都想早点去，在里面多呆点时间，当然会有这么多人了。我心里有点气愤，质问保安小哥那为什么要按时间段预定票？小哥只说他们只负责维持秩序，订票规则他也不清楚<span class="emoji" alias="flushed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f633.png?v8">😳</span></p>
-<p>尽管心里好气，但已经到了，总不能又折回去，所以只好从队伍的最后边开始排队。后面有人打电话投诉，火气很大。嗯，我很佛系了<span class="emoji" alias="expressionless" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f611.png?v8">😑</span></p>
-<p>排队这件事，精髓不在于排在你前边的人变少，而在于排在你后边的人越来越多，这样心里就会有一种莫名的满足感。半小时后，终于排到了最前面，下一波就可以进去了。后面一个插队进来的北京大叔，说山东人素质不好，还插队，只能在心里默默鄙视一下，五十步笑百步，彼此彼此罢了。</p>
-<p>终于入园了，然而此刻我已经完全没了游玩的心情，只想走马观花看一遍林子，然后就离开。然而现实连这个机会都不肯给我。入园之后，我才明白‘看人’这个词的含义。尽管园子已经足够大，但游玩的的人更多，进去之后完全没有下脚的地方。整个园林像极了一座围城，里面的人想出去，外边的人想进来。过了一会，竟然下起雨来，找了个满是人的亭子避了会雨，想着这么大的林子，古时候住在里面的人该多有钱。</p>
-<p>转悠了一会，想去看看园林博物馆，于是跟着路标出去，越走越觉得不对劲。转悠出去才发现再也进不去了，博物馆呢？！完全没看着，我们就这样被忽悠出去了<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span> 这时候，天又下起了大雨，没有伞的我们就像一群逃兵一样，匆忙打了车逃离了这个[围城]，围城外，旅游大巴还在源源不断的向城里开去。</p>
-<p>放一张[走马观花]的时候，拍的一张园林照。听解说员介绍(偷听别人的解说员说)，右侧的亭子是按照[神龙见首不见尾]的意境设计的：</p><center><img data-src="https://i.loli.net/2019/10/14/Wyamv3ucXGQ5ITA.jpg" width="550" height="400" alt="园林"></center><p></p>
-<h2 id="商务座-x1f4ba"><a href="#商务座-x1f4ba" class="headerlink" title="商务座 💺"></a>商务座 <span class="emoji" alias="seat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ba.png?v8">💺</span></h2><p>由于第一天折腾改签的时候，手滑把回程的高铁票给退了(我真是个天才<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span>)。所以只能订从上海回去的机票，从苏州去上海，还要买高铁票。</p>
-<p>开始是没有订商务座的，买的二等座。反正也就坐20多分钟，不讲究。但为啥后来又成了商务座呢？</p>
-<p>没错，我又没赶上高铁<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span> hummm, 或许苏州这个地方跟我的体质相冲。</p>
-<p>事情是这样的，吸取了第一天的教训，这次时间很充裕。买了[苏州北站]去[上海虹桥]的高铁，但我却在苏州站取了票，进站的时候刷不进去了，问了旁边的服务人员，她瞟了我一眼，翻着白眼，视线看着前方说[这里是苏州火车站，高铁站是苏州北站]。我才明白搞错了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>。。。来不及细细品味她鄙夷的表情。我又转地铁去北站，但时间已经来不及了。到了苏州北站，检了票进去(过期的票)。万幸一个半小时后，又有一趟高铁，但只有商务座了。没有任何迟疑买了票。本来想体验下商务接待区，但服务人员已经下班了，所以又坐在高铁站看《闯关东》。。。</p>
-<p>嗯，我也觉得我当时可能智商不在线。</p>
-<p>第一次坐商务座，服务很到位。送了瓶水，还送了盒月饼。座位也是电动调节的，很宽敞，没有拍照<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span></p>
-<h2 id="找酒店-x1f3e8"><a href="#找酒店-x1f3e8" class="headerlink" title="找酒店 🏨"></a>找酒店 <span class="emoji" alias="hotel" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e8.png?v8">🏨</span></h2><p>历经万难出了高铁站，因为早在机场旁边预订了汉庭，所以叫了辆滴滴开过去(3公里30块你敢信？）。本来以为今日份的suffer已经结束了，万万没想到老天爷又给我安排了一劫<span class="emoji" alias="worried" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8">😟</span></p>
-<p>下车后，拿着行李箱，有点懵。因为四周并没有汉庭的牌子，往后边走了一会。发现了一家汉庭，心想肯定就是这家了，拉着行李箱我就过去了。到了前台，出示预订信息，接待的小姐姐对我说，我预订的不是这家，是另一家。我有点方<span class="emoji" alias="no_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f636.png?v8">😶</span>，这不是百度地图导航的吗？但还是拖着行李箱走了。</p>
-<p>打了预订酒店电话，我描述了一下自己的位置，接电话的小哥说让我看见桥，往前走。5分钟后，果然又看见了一家汉庭。</p>
-<p>进去之后，人还蛮多的，等了好久。到了柜台，我又出示了预订信息，前台小姐姐对我说，我预订的依然不是这家，是另一家。我真的快哭了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>。再次打电话过去，小哥也对我有点无语。叹了口气，说我走了相反的方向，让我顺着立交桥往下走，桥下就是。</p>
-<p>挂了电话，我又拉着行李箱往回走。大晚上的，四下无人，强悍如我也不禁心里发虚。一边拿着手机假装打电话一边往桥下走。在桥下又看到了一家汉庭。进店之后，刚才打电话的小哥好像也认出了我，说没错，就是这家店。我终于找到了酒店<span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
-<p>Checkin之后让小哥看下班车预订信息，之前已经预定好了最早的一班，想再次确认。小哥一脸狐疑的看着我，估计心里在想，像我这样脑子断线的人，应该不会想到要提前预订班车吧。当我指着预定表里说，[这行就是我]，小哥才相信。</p>
-<p>后来我就明白了，不到1千米的距离，有三家汉庭。然后百度地图给我定位到了酒店停车场，就走错了。也是自己一时着急没看清楚。</p>
-<h2 id="坐班车-x1f68c"><a href="#坐班车-x1f68c" class="headerlink" title="坐班车 🚌"></a>坐班车 <span class="emoji" alias="bus" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f68c.png?v8">🚌</span></h2><p>晚上睡了5个小时，然后就起来了，没误班车我也觉着是个奇迹<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，估计是智商归位了吧。</p>
-<p>在前台等了几分钟，车就来了。找了个比较舒服的坐，等着出发。然后，又一出小闹剧开始了。</p>
-<p>在车上坐了会儿我就觉着不对，因为人有点多。按理说大家都是预订的，应该人数刚好才对。很显然，有些人没有预订也上车了。开始大家相安无事，没有拆穿。几分钟后，师傅上车了，发现人数不对，就说[没有预订的人下车坐下一班吧，这样超载的话车也开不了]。话毕，车内没人说话，也没人动作。气氛变得有些微妙。</p>
-<p>僵持了几分钟，还是没人下车。但车上的人坐不住了，前边有个小哥说自己七点的航班，再不走就来不及了，希望大家互相理解，自觉下车。嗯，很合情合理。然而话毕，依旧没人动作。我也纳闷究竟什么人，脸皮能这么厚。环顾车内，发现一对中年夫妇，脸上表情不太自然。</p>
-<p>车上发牢骚的人越来越多。有说自己赶不上航班的，有说为什么不能自觉下车的，好像每个人都有预订一样，互相指责，千姿百态。我心里也有点着急。师傅说[实在不行就拿预定表对信息，但这样被揪出来，大家面子上也不好看。]，然而还是没人下车。没办法，大家说那就拿表对吧。</p>
-<p>师傅拿表过来了，那对中年夫妇终于坐不住了，嘴里辩驳了几句，下了车。随后，又有一些人下了车。大家都用鄙夷的眼神看着那些下车的人，好像这样能把他们看穿。车开了，透过车窗，我看到刚刚下车的那对夫妇就好像什么也没发生一样，有说有笑<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span></p>
-<h2 id="结语-x1f33b"><a href="#结语-x1f33b" class="headerlink" title="结语 🌻"></a>结语 <span class="emoji" alias="sunflower" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33b.png?v8">🌻</span></h2><p>每个人在旅行的过程中，都会有或好或坏的经历。重要的是保持积极向上的心态，乐观看待一切Love&amp;Peace <span class="emoji" alias="heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png?v8">❤</span></p>
-<center><img data-src="https://i.loli.net/2019/10/15/c8bBHQYPEr6ZThd.jpg" width="300" height="300" alt="Love&amp;Peace"></center>]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>旅行</tag>
-        <tag>苏州</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>递归求解1到100求和</title>
-    <url>/%E9%80%92%E5%BD%92%E6%B1%82%E8%A7%A31%E5%88%B0100%E6%B1%82%E5%92%8C/</url>
-    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
-<span id="more"></span>
-
-<p><strong>思想：</strong></p>
-<p>思考一下，从1加到100可以分解成：</p>
-<ul>
-<li>1+（2加到100的和）</li>
-<li>1+2+（3加到100的和）</li>
-<li>1+2+3+（4加到100的和）</li>
-<li>……</li>
-</ul>
-<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
-<p>所以，可以编写如下代码：</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> n + <span class="built_in">count</span>(n - <span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>递归</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>国庆成都三日游</title>
     <url>/ChengduTravel/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -3861,6 +3221,646 @@
       <tags>
         <tag>CodingPages</tag>
         <tag>腾讯云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敏捷开发与测试</title>
+    <url>/agile-development/</url>
+    <content><![CDATA[<p>啥是敏捷，敏捷是啥？</p>
+<span id="more"></span>
+
+<h1 id="与“敏捷开发”的初次接触"><a href="#与“敏捷开发”的初次接触" class="headerlink" title="与“敏捷开发”的初次接触"></a>与“敏捷开发”的初次接触</h1><p>开始接触到“敏捷”这个概念，是在公司实习的时候，因为所在项目组实行的是敏捷开发。后来又读了几本关于敏捷测试的书籍（软件测试的艺术第三版—Chapter9），有了更深入的理解。所以本文主要是博主的实习经历总结和读书笔记。</p>
+<hr>
+<blockquote>
+<p>接下来我将从3个方面：What?（什么是敏捷开发）&amp;Why（为什么要实行敏捷开发）&amp;How（如何实施）来谈谈我对敏捷软件开发模式的理解。</p>
+</blockquote>
+<h1 id="What"><a href="#What" class="headerlink" title="What?"></a>What?</h1><h2 id="敏捷开发"><a href="#敏捷开发" class="headerlink" title="敏捷开发"></a>敏捷开发</h2><p>简单来说，敏捷开发是一个<strong>以用户为中心、客户需求为导向</strong>的开发过程。强调客户合作、响应需求变化。是一种<strong>迭代式、增量式</strong>的开发模式。主要有以下特点：</p>
+<ul>
+<li>依赖客户参与</li>
+<li>测试驱动开发（TDD）</li>
+<li>开发周期短</li>
+</ul>
+<h2 id="敏捷测试"><a href="#敏捷测试" class="headerlink" title="敏捷测试"></a>敏捷测试</h2><p>对应敏捷开发模式，敏捷测试要求每个人都参与到测试过程中，所以需要团队人员之间进行大量的沟通与协作。</p>
+<ul>
+<li>客户：定义用例和程序属性参与验收测试</li>
+<li>开发和测试：共同打造可以进行功能自动化的测试配件</li>
+</ul>
+<p>与传统测试过程相比，敏捷测试主要有以下特征：</p>
+<ul>
+<li>测试并不是一个独立的阶段，而是和开发过程紧密联系并<strong>驱动开发</strong>（TDD）。</li>
+<li>开发者先创建<strong>单元测试</strong>用例（失败验证测试），然后实现软件单元代码。</li>
+<li>敏捷测试依赖于<strong>自动化测试</strong>。</li>
+<li>测试者要通过持续的测试反馈推动项目前行，并<strong>帮助开发者修复bug</strong>。</li>
+</ul>
+<hr>
+<h1 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h1><blockquote>
+<p>与传统软件开发模式相比，敏捷开发把客户的参与作为关键环节。这样引入了灵活性，提高客户满意度。</p>
+</blockquote>
+<p>如今的客户总是需要能立即发布的高质量应用产品，使得传统开发模式不能适应这种激烈的市场竞争环境。所以大多数企业更青睐像敏捷开发一般，轻量化、快速的开发方法。</p>
+<hr>
+<h1 id="How"><a href="#How" class="headerlink" title="How?"></a>How?</h1><p>事实上，敏捷开发方法有很多种，比如：功能驱动开发（FDD）、开放统一过程等等。但最流行的是<strong>极限编程（XP）</strong>开发方法和<strong>Scrum（进度跟踪）</strong>项目管理方法。</p>
+<blockquote>
+<p><strong>XP</strong>是一种迭代式、增量式的开发模式，非常强调单元测试和验收测试，是现在最著名的敏捷方法。<br><strong>Scrum</strong>是一种迭代式、增量式的项目管理方法，适用于所有的敏捷方法，用来度量开发速度和进度。两者相辅相成，形成了现今最流行的敏捷开发模式。</p>
+</blockquote>
+<h2 id="XP编程"><a href="#XP编程" class="headerlink" title="XP编程"></a>XP编程</h2><p>面向对象的编程语言如Java/C#，都含有全功能的API，所以可以利用其迅速实现大型复杂应用。但正因如此，应用程序的质量经常得不到保证。</p>
+<blockquote>
+<p>XP编程的目的就是<strong>短时间</strong>开发<strong>高质量</strong>的应用程序。所以，XP方法将主要精力集中在测试上，在产品设计阶段之后，必须首先生成单元测试用例，然后才编写代码通过测试。</p>
+</blockquote>
+<p>XP开发模型用12个核心实践来驱动该过程：</p>
+<ul>
+<li>NO.1：需求分析（开发、客户、产品均参与）</li>
+<li>NO.2：小规模、递增发布（增加实在/可增值的新功能，频繁发布新版本）</li>
+<li>NO.3：系统隐喻（编程小组确认开发规则）</li>
+<li>NO.4：简要设计（实现简要设计，通过单元测试，不需重复设计，只要不停实现）</li>
+<li>NO.5：连续测试（编写模块之前先生成单元测试用例，模块在通过单元测试后才算完成，程序在通过所有单元测试和验收测试后才算结束）</li>
+<li>NO.6：重构（清理调整代码库，任何重构之后需重新进行所有单元测试）</li>
+<li>NO.7：结对编程（两位程序员在同一台机器协同开发代码库，便于对代码实时检查，提高缺陷发生纠正率）</li>
+<li>NO.8：代码的集体所有权（所有代码归全体程序员所有，不存在某一个程序员只开发某一个代码库）</li>
+<li>NO.9：持续集成（变更后的代码在通过单元测试之后将其集成到代码库中）</li>
+<li>NO.10：每周工作40小时（不允许加班，如果每周都全力工作了40个小时，就不需要加班，在版本发布的前一周例外）</li>
+<li>NO.11：客户在现场（编程小组可以随时与客户沟通）</li>
+<li>NO.12：按标准编码（所有的代码需要满足编程小组设计的系统隐喻）</li>
+</ul>
+<h2 id="XP测试"><a href="#XP测试" class="headerlink" title="XP测试"></a>XP测试</h2><blockquote>
+<p>为满足XP方法的流程和思想，XP测试强调连续测试。主要由两种类型的测试组成：<strong>单元测试</strong>和<strong>验收测试</strong>。</p>
+</blockquote>
+<h3 id="XP单元测试"><a href="#XP单元测试" class="headerlink" title="XP单元测试"></a>XP单元测试</h3><p>单元测试是XP测试采用的主要测试方法，具有两条规则：</p>
+<p>1.所有的代码模块在编码开始前必须设计好单元测试用例（最主要的优点在于可以更好理解程序需求，排除混淆）</p>
+<p>2.产品发布之前所有的代码模块必须通过单元测试</p>
+<p>为了迎合项目进度，单元测试通常要用自动化测试套件来减轻单元测试负担，测试套件可以生成测试报告并对程序中出现的缺陷进行分类，帮助修复bug。</p>
+<h3 id="XP验收测试"><a href="#XP验收测试" class="headerlink" title="XP验收测试"></a>XP验收测试</h3><blockquote>
+<p>验收测试是判断应用程序是否满足功能性和易用性及其他需求，在设计阶段，开发人员和客户设计验收测试，由客户执行。</p>
+</blockquote>
+<p>验收测试需注意以下几点：</p>
+<ul>
+<li>同单元测试一样，验收测试也可是自动化的。测试内容为计算/数据等，可用自动化测试；当测试内容为界面布局和颜色等，测试应该是非自动化的。</li>
+<li>与单元测试相同，验收测试过程中发现多个bug时，应对其进行优先级排序，每次bug修正后都要重新执行验收测试。所以验收测试也算是一种回归测试。</li>
+</ul>
+<h2 id="一个完整XP项目的运作流程"><a href="#一个完整XP项目的运作流程" class="headerlink" title="一个完整XP项目的运作流程"></a>一个完整XP项目的运作流程</h2><p>下表给出了一个完整XP项目应进行的流程：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Step1</td>
+<td>程序员与客户进行产品需求分析会议，决定产品使用场景</td>
+</tr>
+<tr>
+<td>Step2</td>
+<td>编程小组进行内部会议，将需求分解为独立的任务，并估计每个任务所需要的时间（StoryPoint）</td>
+</tr>
+<tr>
+<td>Step3</td>
+<td>程序员向客户提交任务清单，并要求客户对任务清单进行优先级排序</td>
+</tr>
+<tr>
+<td>Step4</td>
+<td>编程小组根据程序员具备的能力，将任务分配给对应结对程序员</td>
+</tr>
+<tr>
+<td>Step5</td>
+<td>每对程序员按照程序需求和规格说明，编写相应任务的单元测试用例</td>
+</tr>
+<tr>
+<td>Step6</td>
+<td>每对程序员编写完成通过其单元测试用例的任务代码，期间不断对代码进行修改和重测，并对代码库进行整合和集成</td>
+</tr>
+<tr>
+<td>Step7</td>
+<td>编程小组发布应用程序的一个预览版本，由客户进行验收测试，并通过修改缺陷不断进行回归测试</td>
+</tr>
+<tr>
+<td>Step8</td>
+<td>程序员在验收测试成功的基础上发布产品版本</td>
+</tr>
+</tbody></table>
+<p>其他工作：程序员根据最新经验更新对客户需求的时间估计方式。</p>
+<h2 id="敏捷开发学习网站"><a href="#敏捷开发学习网站" class="headerlink" title="敏捷开发学习网站"></a>敏捷开发学习网站</h2><p><a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1">Scrum中文网</a><br><a href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf#zoom=100">Scrum指南</a></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>敏捷测试</tag>
+        <tag>极限编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>未来是星辰大海_Part2</title>
+    <url>/future-Part2/</url>
+    <content><![CDATA[<p>记录一下博主小半年的心路历程。</p>
+<span id="more"></span>
+
+<h2 id="Part1-尘埃落定-2017-10-2017-11"><a href="#Part1-尘埃落定-2017-10-2017-11" class="headerlink" title="Part1 尘埃落定(2017.10-2017.11)"></a>Part1 尘埃落定(2017.10-2017.11)</h2><p>自从去年9月份拿到第一个offer后，就直接签了，后来也没有再找过。当时的想法是找到一个还不错的就行，毕竟事少离家近嘛。于是安排好自己毕业前的计划，开始了在宿舍颓废的生活，期间将自己的游戏账号打到了钻石，吃饭靠舍友投喂。。</p>
+<p>两个月后，按照计划，我怀着紧张中带着一丝小激动的心情出发去公司实习。</p>
+<h2 id="Part2-心态有点崩-2017-12-2018-02"><a href="#Part2-心态有点崩-2017-12-2018-02" class="headerlink" title="Part2 心态有点崩(2017.12-2018.02)"></a>Part2 心态有点崩(2017.12-2018.02)</h2><p>emmm…刚开始实习的时候，也没啥感觉。毕竟需要学习的东西有很多，每天下来也能收获不少东西。</p>
+<p>但是时间长了，问题就开始出现了。</p>
+<p>无脑病态的加班、毫无技术难度可言的工作、传话筒一般的工作感受让我觉得有些幻灭。</p>
+<p>其实对于软件测试这个岗位呢，我也知道刚开始一般都是功能（黑盒）测试，比较基础。我也是愿意从基础打起的。但我想学习更多的测试技术，利用一些工具来提高工作效率。这样能提高自己以后的竞争力和学习能力。但这些，在我两个多月的实习工作中，没有感受到。</p>
+<p>此外，繁琐的管理制度和考核流程也在考验我的耐性。这样的工作环境无法达到我“还不错”的标准，如果长期这样下去，我可能连Hello World都不会写了。无脑病态的加班更是占用了我的个人时间，基本上失去了利用空闲时间提升自己的可能性。</p>
+<p>总的来说，这绝对不是我要的生活，我需要重新开始找工作（论早点实习的重要性）。</p>
+<h2 id="Part3-重新开始-2018-03"><a href="#Part3-重新开始-2018-03" class="headerlink" title="Part3 重新开始(2018.03)"></a>Part3 重新开始(2018.03)</h2><p>过年那会，我就开始寻找目标。经过实习之后，我更加明确自己想要什么，完善了自己的简历。所以很快就确定了目标。</p>
+<p>开学之后，我参加了宣讲会。提问环节HR说测试这个岗位在我所在的城市只招5个人。这意味着我要跟好多985/211的学生甚至研究生竞争，作为一个普通一本的本科生，在学历上，我可以说是毫无胜算。</p>
+<p>不过我还是想尽力一试，毕竟这是我还有应届生光环的最后一次找工作机会。而且他们公司的工作理念很吸引我，岗位需求描述也和我很贴合，我确实很想成为他们的一员。</p>
+<ul>
+<li>笔试</li>
+</ul>
+<p>宣讲之后的几天，他们公司提供了线上笔试题（全英文），我有4天时间去完成。处理完学校的杂事（学校真是一个让人又爱又恨的地方），我在图书馆泡了两天做完了笔试题（答案也是全英文），半张纸的题目我写了10张纸的答案。</p>
+<p>之后开始了几天的等待期，等待的过程是煎熬的。就在我怀疑自己要挂了的时候（是不是嫌弃我答案太长了/上传答案的时候我没有改文件名等等猜测），HR给我打了电话，让我去参加面试。感觉整个世界都晴朗了。</p>
+<ul>
+<li>面试</li>
+</ul>
+<p>在经过了精心的打扮（两天没洗头），一路畅通无阻（坐反了公交车到终点站才发现，最后叫了辆滴滴），心情舒畅（电梯里跟他们公司的外国小哥哥用英语尬聊了一分钟）之后，我到达了面试地点。没有我想象中的人山人海，因为那天只面试3个人。</p>
+<p>由于我非常缺乏面试经验（秋招只面试了一家拿到offer就签了，这是人生中第二次面试），所以对我而言面试的过程是漫长的，还是紧张的（两个面试官，一男一女）。坐在大会议室的我有一种任人宰割的感觉。。，在面试官的调节下（面试官很友好的），我渐渐没了紧张的感觉。在后边的面试中，做到了知无不言，言无不尽。还跟面试官聊起了人生和理想。整体感觉挺High的。就这样，原本只给我40分钟的面试时间，愣是聊了一个多小时。最后由于别人要在会议室开会，我们还是结束了面试。</p>
+<ul>
+<li>offer</li>
+</ul>
+<p>在经过1天的等待后，HR给我发了口头offer，之后几天再去公司签了正式offer。</p>
+<p>没错，这家公司就是传说中的TW(ThoughtWorks)。</p>
+<h2 id="Part4-最后的规划-2018-04-2018-06"><a href="#Part4-最后的规划-2018-04-2018-06" class="headerlink" title="Part4 最后的规划(2018.04-2018.06)"></a>Part4 最后的规划(2018.04-2018.06)</h2><p>今天已经4月9号了，离毕业论文答辩还有两个月的时间。这两个月我需要闭关修炼，完成3件大事：</p>
+<ul>
+<li>做毕设</li>
+<li>完成TW毕业生入职前的线上培训学习并完成所有任务卡（所以后边也会发表一些技术相关的学习总结博客）</li>
+<li>拿到驾照</li>
+</ul>
+<p>emmm…有点理想主义，毕竟只有两个月，不过时间是挤出来的嘛，祝我好运。</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>人生规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>未来是星辰大海</title>
+    <url>/future/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
+<span id="more"></span>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>人生</tag>
+        <tag>未来</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git学习笔记</title>
+    <url>/git-learning-note/</url>
+    <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
+<span id="more"></span>
+
+<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
+<hr>
+<h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
+<ul>
+<li>成为了Linus Benedict Torvalds的一枚小迷妹（以前也是，现在妥妥的）。</li>
+<li>世上没有后悔药？不存在的，git的版本回退完美的实现了这一点。</li>
+<li>搞清楚了git和github的关系，后者只是拥有一个git远程仓库，可以通过git连接并实现相应操作。</li>
+<li>Git服务器可以轻松搭建，除了github，还有coding/gitee等网站提供git服务。</li>
+<li>工作效率真的提升很快。。。</li>
+</ul>
+<hr>
+<h1 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h1><p>下面对学习中涉及到的git命令做分类总结，都是最常用的。</p>
+<h2 id="git本地管理"><a href="#git本地管理" class="headerlink" title="git本地管理"></a>git本地管理</h2><blockquote>
+<p>git最基本的一些操作</p>
+</blockquote>
+<p>git init：将某目录变成git可以管理的仓库（添加.git目录）</p>
+<p>git commit -m “…”:一次性提交多个文件（add进来的文件）</p>
+<p>git add xxx.md:可以多次添加多个不同文件</p>
+<p>git status:可以时刻掌握仓库当前的状态</p>
+<p>git diff:显示具体修改的内容（与提交进去的文件相比）</p>
+<p>git log：显示从最近到最远的提交日志，加上–pretty=oneline参数可以将每次提交信息压缩成一行,最前边的数字加字母是指每次commit的commit-id,是16进制的表示形式</p>
+<p>.gitignore文件：包括git需要忽略提交的文件名，此文件也需要提交到git</p>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><blockquote>
+<p>世界上是有后悔药的</p>
+</blockquote>
+<p>git reset –hard HEAD^:回退到上个版本（上上个版本HEAD^^,上100个版本是HEAD~100。HEAD是指向当前版本的指针，因此可以通过调整HEAD来在历史版本间穿梭）</p>
+<p>git reset –hard commmitid：在没有关闭上次回退时的命令窗口时，可以取消回退。commitid没必要写全，git可以自己去找</p>
+<p>git reflog:可以显示每一次commit和回退的id号，如果命令窗口关闭，可以用此命令先找到commitid，然后用上个命令取消回退</p>
+<p>git checkout – file：撤销在工作区对file做的修改，包括撤销对file文件的删除</p>
+<p>git reset HEAD file &amp; git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
+<p>git reset –hard HEAD^ :已经将想撤销的修改添加到了版本库，但还未提交到远程库。用版本回退撤销修改</p>
+<p>git rm file&amp;git commit -m “delete file”：删除已添加到版本库的文件</p>
+<p>git checkout:用版本库里的文件版本替换工作区的文件版本（一键还原）</p>
+<h2 id="远程库连接"><a href="#远程库连接" class="headerlink" title="远程库连接"></a>远程库连接</h2><blockquote>
+<p>连接远程库，进一步实现团队协作。</p>
+</blockquote>
+<p>git remote:查看远程库信息，详细信息加上-v选项</p>
+<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
+<p>git push -u origin xxx:把本地仓库指定分支·内容推送到远程，下次推送可以不用-u参数<br>因为第一次推送master分支时如果加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，所以在以后的推送或者拉取时就可以简化命令。</p>
+<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
+<p>git remotr rm origin:删除本地库关联的origin远程库</p>
+<h2 id="分支创建管理"><a href="#分支创建管理" class="headerlink" title="分支创建管理"></a>分支创建管理</h2><blockquote>
+<p>实现更安全便捷的版本控制。</p>
+</blockquote>
+<p>git checkout -b xxx:git check命令加上-b参数表示创建并切换到xxx分支，此命令相当于两条命令：</p>
+<ul>
+<li>git branch xxx</li>
+<li>git checkout xxx</li>
+</ul>
+<p>git branch:查看当前分支（列出所有分支，当前分支前边会标有*号）</p>
+<p>git merge xxx:将指定分支xxx合并到当前分支,首先要切换到当前分支（不一定是master分支）</p>
+<p>git branch -d xxx:删除某分支（合并后再删除）</p>
+<p>git branch -D xxx:强行删除某个没有被合并的分支</p>
+<p>git log –graph –pretty=oneline –abbrev-commit：用分支图展示各分支合并情况（或者直接git log –graph，但这将会显示所有历史合并图）</p>
+<p>git merge –no-ff -m “…” xxx:禁用git合并时默认的fast-forward模式，生成新的commit加入分支信息。-m后的内容就是合并信息</p>
+<h2 id="工作现场存储"><a href="#工作现场存储" class="headerlink" title="工作现场存储"></a>工作现场存储</h2><blockquote>
+<p>版本控制的freestyle.</p>
+</blockquote>
+<p>git stash:将当前工作现场储藏起来，等以后恢复现场后继续工作</p>
+<p>git stash list:查看储藏的工作现场</p>
+<p>git stash apply:回复储藏的工作现场</p>
+<p>git stash apply stash@{x}有多个stash时恢复指定的stash</p>
+<p>git stash drop:恢复现场并删除stash list的内容，如果有多个stash,默认恢复的是最新的stash.</p>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><blockquote>
+<p>小伙伴们的友情</p>
+</blockquote>
+<p>git checkout -b xxx origin/xxx:刚从远程库克隆到本地时只有master分支，用此命令创建和远程分支对应的分支</p>
+<p>git pull:多人协作时，远程分支比本地分支更新导致推送失败，用此命令从远程库抓取该分支最新的提交并和本地分支进行合并，合并有冲突需要手动解决</p>
+<p>git branch –set-upstream xxx origin/xxx:git pull失败时需要创建本地分支和远程分支的关联</p>
+<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><blockquote>
+<p>更方便进行版本控制，与commit id相比更好记。相当于版本库的一个快照。</p>
+</blockquote>
+<p>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针。与HEAD指针相比，后者可以移动，但标签不能移动），所以，创建和删除标签都是瞬间完成的。</p>
+<p>git tag xxx:打标签</p>
+<p>git tag v0.3 646123:将commit id为646123的提交打上v0.3标签。这样可以解决忘记打标签的问题</p>
+<p>git tag:查看所有标签（按字母排序，而并非时间）</p>
+<p>git show tagname:查看标签信息（包括说明文字）</p>
+<p>git tag -a v0.x -m “…” 615465:创建带有说明的标签，用-a指定标签名，-m指定说明文字</p>
+<p>git tag -d xxx:删除指定标签（因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。）</p>
+<p>git push origin tagname:推送标签到远程</p>
+<p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
+<p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java类中的代码块执行顺序</title>
+    <url>/java2/</url>
+    <content><![CDATA[<p>代码实例分析java类中的代码块执行顺序.</p>
+<span id="more"></span>
+
+<h1 id="一道笔试题"><a href="#一道笔试题" class="headerlink" title="一道笔试题"></a>一道笔试题</h1><p>下面是一道阿里的java校招笔试题：</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloA</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"父类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"父类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloB</span> <span class="keyword">extends</span> <span class="title">HelloA</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HelloB</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//非静态代码块</span></span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"子类非静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//静态代码块</span></span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"子类静态代码块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">		<span class="keyword">new</span> HelloB();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>请写出上述代码的输出，看完本文你就会有答案。</p>
+<h1 id="代码块分类及其执行顺序"><a href="#代码块分类及其执行顺序" class="headerlink" title="代码块分类及其执行顺序"></a>代码块分类及其执行顺序</h1><h2 id="代码块分类"><a href="#代码块分类" class="headerlink" title="代码块分类"></a>代码块分类</h2><p>代码块，就是使用”{}”定义的一段代码，根据代码块定义的位置和关键字，可分为以下四种：</p>
+<ul>
+<li>普通代码块：定义在类的方法中的代码块。</li>
+<li>构造块：定义在类中的代码块（无修饰符）。</li>
+<li>静态代码块：使用static修饰的，在类中定义的代码块。</li>
+<li>同步代码块（与多线程有关，本文不涉及）</li>
+</ul>
+<h2 id="执行顺序（无继承）"><a href="#执行顺序（无继承）" class="headerlink" title="执行顺序（无继承）"></a>执行顺序（无继承）</h2><p>看代码：</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"非主类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"非主类构造块,优于构造方法执行"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> {</span><br><span class="line">		System.out.println(<span class="string">"非主类静态块，优于构造块执行，无论产生多少实例化对象，只执行一次。"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"主类构造方法"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Person();</span><br><span class="line">		<span class="keyword">new</span> Hello();</span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	{</span><br><span class="line">		System.out.println(<span class="string">"主类构造块"</span>);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>{</span><br><span class="line">		System.out.println(<span class="string">"主类静态块，优于主方法执行"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>执行结果：</strong></p>
+<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG" alt="66"></p>
+<p><strong>结论：</strong></p>
+<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG" alt="78"></p>
+<p><strong>其中：</strong></p>
+<ul>
+<li>主类静态块优于主方法执行。</li>
+<li>无论生成多少类对象，静态块只执行一次。</li>
+<li>主类和非主类的构造方法、构造块谁先执行取决于代码顺序，与主类/非主类无关。</li>
+</ul>
+<h2 id="执行顺序（有继承）"><a href="#执行顺序（有继承）" class="headerlink" title="执行顺序（有继承）"></a>执行顺序（有继承）</h2><p>我们知道，在继承的情况下，子类在实例化时，首先调用父类的构造方法，然后再调用子类的构造方法。因此，结合上面的结论，我们就可以得出开始那道笔试题的结果。</p>
+<blockquote>
+<p>为了方便观察，对代码改动如下：</p>
+</blockquote>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		System.out.println(<span class="string">"----start----"</span>);</span><br><span class="line">		System.out.println(<span class="string">"---first---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//first</span></span><br><span class="line">		System.out.println(<span class="string">"---second---"</span>);</span><br><span class="line">		<span class="keyword">new</span> HelloB();<span class="comment">//second</span></span><br><span class="line">		System.out.println(<span class="string">"-----end-----"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>答案在这里：</p>
+<p><img data-src="http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG" alt="77"></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java判断素数</title>
+    <url>/java1/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<span id="more"></span>
+
+<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱你就像爱生命</title>
+    <url>/love-life/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<span id="more"></span>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>20岁光阴不再来</title>
+    <url>/no-more-20s/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<span id="more"></span>
+
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
+<ul>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+</ul>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+        <tag>告别拖延</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>递归求解1到100求和</title>
+    <url>/plus-1-100/</url>
+    <content><![CDATA[<p>递归求解1到100的和是一个常见面试题。</p>
+<span id="more"></span>
+
+<p><strong>思想：</strong></p>
+<p>思考一下，从1加到100可以分解成：</p>
+<ul>
+<li>1+（2加到100的和）</li>
+<li>1+2+（3加到100的和）</li>
+<li>1+2+3+（4加到100的和）</li>
+<li>……</li>
+</ul>
+<p>怎么样，这样是不是有点递归的味道了？递归的出口就是1。</p>
+<p>所以，可以编写如下代码：</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">if</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">return</span> n + <span class="built_in">count</span>(n - <span class="number">1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>这样，不仅可以求1到100的和，还可以求任意区间数字的和。只要改变递归出口和上限即可。</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于闰年，你不知道的那些事</title>
+    <url>/run-nian/</url>
+    <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
+<span id="more"></span>
+
+<p>判断某一年是否是闰年几乎是所有编程语言的基础练习题之一，而我们必然也熟知其规则：</p>
+<ul>
+<li>整除但4不能整除100</li>
+<li>整除100又能整除400</li>
+</ul>
+<blockquote>
+<p>这就是俗语中的“四年一闰，百年不闰，四百年再润”，我们当然可以根据这个规则编写程序判断闰年，但你知道为什么这样规定闰年的算法么？</p>
+</blockquote>
+<hr>
+<p>事实上，闰年是为了弥补因人为历法规定，造成的年度天数与地球实际公转周期的时间差而设立的。所以闰年有366天。</p>
+<p>那么具体是怎么弥补的呢？</p>
+<blockquote>
+<p>我们知道，平年一年只有365天，而实际上地球绕太阳的公转周期为365天5小时48分46秒。即一回归年。所以公历的每一年都比回归年短0.2422天，四年累计起来，共短0.9688天。</p>
+</blockquote>
+<p>大概就是一天，所以为了弥补这一天的时间差。给2月加上1天，就有了闰年。这样一来，每四年里就有一个闰年，3个平年。这就是<strong>四年一闰</strong>。</p>
+<p>那么<strong>百年不闰，四百年再闰</strong>又是怎么回事呢？</p>
+<blockquote>
+<p>是这样的，刚才说四年累计起来的时间差只有0.9688天，这比我们给闰年增加的一天还少0.0312天，所以每四年就会多出0.0312天。这样400年后，就会比实际天数多出3.12天。所以我们必须在这400年中少设3个闰年。这样公历年的平均长度与回归年就近似了。</p>
+</blockquote>
+<p>那这3个闰年怎么少呢？</p>
+<p>很简单，给百年除以400即可，比如2000-2400这400年：</p>
+<ul>
+<li>2000/400=5</li>
+<li>2100/400=5.25</li>
+<li>2200/400=5.5</li>
+<li>2300/400=5.75</li>
+<li>2400/400=6</li>
+</ul>
+<p>可以发现，正好有3个不能整除的整百年。所以规定年份是整百数的必须是400的倍数才是闰年。这就是百年不闰，四百年才闰的规定。</p>
+<p>你明白了吗？</p>
+<hr>
+<p>当然，根据规则，我们就可以编写代码判断了：</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">int</span> year;</span><br><span class="line">	cin &gt;&gt; year;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">100</span> != <span class="number">0</span>)<span class="comment">//1. 能整除4，不能整除100</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((year % <span class="number">100</span>==<span class="number">0</span>) &amp;&amp; (year % <span class="number">400</span>==<span class="number">0</span>))<span class="comment">//2. 能整除100， 又能整除400</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//其它情况不是闰年</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//不能整除4就不是闰年</span></span><br><span class="line">	{</span><br><span class="line">		cout &lt;&lt; <span class="string">"不是闰年\n"</span> &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">"pause"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>闰年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试矩阵</title>
+    <url>/test-matrix/</url>
+    <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
+<span id="more"></span>
+
+<p>最近在ThoughtWorks的#TW洞见#栏目看到了<a href="http://insights.thoughtworks.cn/test-matrix/">测试矩阵</a>的概念和介绍，觉得很有意思。也让我在另一种层面上理解了各种测试方法。</p>
+<h1 id="你晕了没"><a href="#你晕了没" class="headerlink" title="你晕了没"></a>你晕了没</h1><p>相信大家在初学测试的时候一定听过下列测试名词：单元测试、集成测试、性能测试、API测试、UI测试、压力测试、冒烟测试等等。诸如此类，不胜枚举。这么多的“测试”不知道你晕了没，反正博主开始是挺晕的。</p>
+<p>此外，不同的人对这些测试的理解也不尽相同，比如“单元测试”，在Java中，有人说一个类就是一个单元，有人说一个方法就是一个单元，甚至有人说一个完整的API就是一个单元。一千个人眼里有一千种单元测试。。。</p>
+<h1 id="测试矩阵"><a href="#测试矩阵" class="headerlink" title="测试矩阵"></a>测试矩阵</h1><blockquote>
+<p>既然有这么多的测试方法，在实际的测试工作中，我们到底怎么测试呢。像上边说的，测试种类如此繁多，难于理解，所以在测试时也难以沟通。</p>
+</blockquote>
+<p>其实，我们可以从两个维度来理解这些测试方法，并将其应用到实际工作中。</p>
+<p>其中，第一个维度就是测试实现的层次和粒度，说白了就是测哪。是方法，类，还是API？是应用、系统、还是整个平台？</p>
+<p>而我们常说的性能测试，功能测试，安全测试等等，都可以归为第二个维度，即测试的目标，也就是测什么，咋测。</p>
+<p>这两个维度结合起来就形成了下边的测试矩阵：</p>
+<table>
+<thead>
+<tr>
+<th align="left">测哪\咋测</th>
+<th align="left">功能测试</th>
+<th align="left">集成测试</th>
+<th align="left">性能测试</th>
+<th align="left">安全测试</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">端到端</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">API</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">类</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+<tr>
+<td align="left">方法</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+<td align="left">test</td>
+</tr>
+</tbody></table>
+<p>有了这样的认识，以后进行测试工作时工作起来就方便多了。我们可以进行“方法级别的功能测试”、“API级别的性能测试”等等。这样，使测试内容变得更加清晰。</p>
+<blockquote>
+<p>事实上，，而常常忽略了第二个维度，即咋测。所以，根据测试矩阵进行测试，可以避免这种问题。在实际测试工作中，大多数情况下都进行的是功能测试。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>软件测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十一旅行中的小插曲</title>
+    <url>/things-in-11travel/</url>
+    <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
+<span id="more"></span>
+
+<h2 id="动卧-x1f684"><a href="#动卧-x1f684" class="headerlink" title="动卧 🚄"></a>动卧 <span class="emoji" alias="bullettrain_side" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f684.png?v8">🚄</span></h2><p>按计划1号早上出发去苏州，高铁票。</p>
+<p>6点起床去赶9点半的高铁。但交通拥堵还是没赶上车<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span> 。。。无奈只能改签当晚的动车卧铺，小一千块的车费。</p>
+<p>于是国庆第一天，在高铁站看《闯关东》度过<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>。<br><img data-src="https://i.loli.net/2019/10/12/3saEzBhb7NOS1Xi.jpg" width="250" height="300" alt="看闯关东">(这样看图有助于治疗颈椎)</p>
+<p>第一次坐卧铺，感觉挺新鲜。环境还不错。<br><img data-src="https://i.loli.net/2019/10/11/aZUYzu1rVdic5vG.jpg" width="250" height="300" alt="动卧"></p>
+<p>刚开始只有我一个人，本来都快睡着了。后来上来了一对去南京的中年夫妇，然后。。。我就再也睡不着了。</p>
+<p>记得是大妈先开始的，打呼声虽然有些大，但还能勉强眯会眼。睡在大妈上铺的大叔表示不服，亲自示范给我们啥叫震耳欲聋，振聋发聩<span class="emoji" alias="hear_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8">🙉</span> 大妈不打呼了，因为她也被吵醒了，整个房间瞬间变成了大叔的主场。。。</p>
+<p>睡在我上铺的兄弟也睡不着了，穿上外套出去了，我知道，他一定是想去静静。也或许他是想出去问问，能不能把之前另一个女生跟他交换的铺位换回来<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<p>我觉得自己有义务提醒大叔控制下自己，于是起身敲大叔的床板，没醒。求救的眼神投向大妈，大妈顿时会意也起身，敲床板。大叔醒了。但显然大叔还没有完全清醒，嘟囔了两句家乡话。两人交谈了几句，大叔转身又睡了。</p>
+<p>声音虽然小了下来，但我知道，这只是暴风雨前的宁静。睡在我上铺的兄弟回来了，不知他是否意识到房间里的声音小了很多<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span>。</p>
+<p>果然，不一会，打鼾声又开始了。不幸的是，我没有赶在这之前睡着。</p>
+<p>南京站到了，大叔大妈终于下车了。但这时离苏州也只有不到一小时的车程，看来睡觉是不可能了。天将降大任于斯人也，必将苦其心志。苦就苦吧<span class="emoji" alias="confounded" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f616.png?v8">😖</span>。</p>
+<p>5点20分，苏州到了，我也下车了。</p>
+<h2 id="看电影-x1f3a5"><a href="#看电影-x1f3a5" class="headerlink" title="看电影 🎥"></a>看电影 <span class="emoji" alias="movie_camera" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png?v8">🎥</span></h2><p>既然是国庆，那咱也该应个景。其他电影不说，《我和我的祖国》得看吧，电影虽说得两个多小时，但也安排上了。<br>然后，我眼睛就瞎了<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span> </p>
+<p>最不忍直视的是’白昼流星’这一篇，接宇航员和老大爷死的这两幕，简直尬到了极点。还我的陈飞宇小哥哥!!!<br><img data-src="https://i.loli.net/2019/10/14/KmAZaWJP5qYk19z.jpg" width="250" height="300" alt="白昼流星">(有多尬大家参考<a href="https://www.zhihu.com/question/348312976/answer/843634337">这篇回答</a>)</p>
+<p>只能说电影想把剧情和祖国重大事件联系起来的初衷是好的，但联系不上，也不能强制联系啊。。。<br>槽点最少的一篇，当属’回归’篇了。朱一龙简直太帅了吧///<br><img data-src="https://i.loli.net/2019/10/14/5gD27LwOvRiGcl6.jpg" width="400" height="300" alt="回归"></p>
+<p>至于《中国机长》，据说戴着<a href="https://www.zhihu.com/question/346282105/answer/841583568">3D眼镜可以看出4D效果</a>，也是槽点满满啊。所以说假期电影，不能盲目从众，爱护眼睛，从我做起。</p>
+<h2 id="拙政园-x1f33f"><a href="#拙政园-x1f33f" class="headerlink" title="拙政园 🌿"></a>拙政园 <span class="emoji" alias="herb" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8">🌿</span></h2><p>到了苏州，拙政园是必定要去的，原计划到苏州的第二天去，但我低估了国庆节的客流量，只能预定第三天的票了。</p>
+<p>于是，第三天早上十点半，和家人一起兴致勃勃的到了拙政园景区，还没到门口，我们就傻眼了。这哪是看景，这分明是看人嘛 <span class="emoji" alias="weary" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f629.png?v8">😩</span> 门口早就拍好了二百米的长队。但我有点疑惑，因为拙政园的门票，在网上是按入园时间段订票的，我预订了10点半到11点半的票。这才刚刚10点半，没道理有这么多人。跟保安小哥沟通后，我们得到了答案。</p>
+<p>原来，网上所谓的‘入园时间’不过是个摆设。按照常理，如果预定的是9点半到10点半的入园票，那么10点半以后才来，票应该是作废的。然而并不是，只要预订了今天的票，今天内任何时间段都可以入园，大家都想早点去，在里面多呆点时间，当然会有这么多人了。我心里有点气愤，质问保安小哥那为什么要按时间段预定票？小哥只说他们只负责维持秩序，订票规则他也不清楚<span class="emoji" alias="flushed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f633.png?v8">😳</span></p>
+<p>尽管心里好气，但已经到了，总不能又折回去，所以只好从队伍的最后边开始排队。后面有人打电话投诉，火气很大。嗯，我很佛系了<span class="emoji" alias="expressionless" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f611.png?v8">😑</span></p>
+<p>排队这件事，精髓不在于排在你前边的人变少，而在于排在你后边的人越来越多，这样心里就会有一种莫名的满足感。半小时后，终于排到了最前面，下一波就可以进去了。后面一个插队进来的北京大叔，说山东人素质不好，还插队，只能在心里默默鄙视一下，五十步笑百步，彼此彼此罢了。</p>
+<p>终于入园了，然而此刻我已经完全没了游玩的心情，只想走马观花看一遍林子，然后就离开。然而现实连这个机会都不肯给我。入园之后，我才明白‘看人’这个词的含义。尽管园子已经足够大，但游玩的的人更多，进去之后完全没有下脚的地方。整个园林像极了一座围城，里面的人想出去，外边的人想进来。过了一会，竟然下起雨来，找了个满是人的亭子避了会雨，想着这么大的林子，古时候住在里面的人该多有钱。</p>
+<p>转悠了一会，想去看看园林博物馆，于是跟着路标出去，越走越觉得不对劲。转悠出去才发现再也进不去了，博物馆呢？！完全没看着，我们就这样被忽悠出去了<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span> 这时候，天又下起了大雨，没有伞的我们就像一群逃兵一样，匆忙打了车逃离了这个[围城]，围城外，旅游大巴还在源源不断的向城里开去。</p>
+<p>放一张[走马观花]的时候，拍的一张园林照。听解说员介绍(偷听别人的解说员说)，右侧的亭子是按照[神龙见首不见尾]的意境设计的：</p><center><img data-src="https://i.loli.net/2019/10/14/Wyamv3ucXGQ5ITA.jpg" width="550" height="400" alt="园林"></center><p></p>
+<h2 id="商务座-x1f4ba"><a href="#商务座-x1f4ba" class="headerlink" title="商务座 💺"></a>商务座 <span class="emoji" alias="seat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ba.png?v8">💺</span></h2><p>由于第一天折腾改签的时候，手滑把回程的高铁票给退了(我真是个天才<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span>)。所以只能订从上海回去的机票，从苏州去上海，还要买高铁票。</p>
+<p>开始是没有订商务座的，买的二等座。反正也就坐20多分钟，不讲究。但为啥后来又成了商务座呢？</p>
+<p>没错，我又没赶上高铁<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span> hummm, 或许苏州这个地方跟我的体质相冲。</p>
+<p>事情是这样的，吸取了第一天的教训，这次时间很充裕。买了[苏州北站]去[上海虹桥]的高铁，但我却在苏州站取了票，进站的时候刷不进去了，问了旁边的服务人员，她瞟了我一眼，翻着白眼，视线看着前方说[这里是苏州火车站，高铁站是苏州北站]。我才明白搞错了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>。。。来不及细细品味她鄙夷的表情。我又转地铁去北站，但时间已经来不及了。到了苏州北站，检了票进去(过期的票)。万幸一个半小时后，又有一趟高铁，但只有商务座了。没有任何迟疑买了票。本来想体验下商务接待区，但服务人员已经下班了，所以又坐在高铁站看《闯关东》。。。</p>
+<p>嗯，我也觉得我当时可能智商不在线。</p>
+<p>第一次坐商务座，服务很到位。送了瓶水，还送了盒月饼。座位也是电动调节的，很宽敞，没有拍照<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span></p>
+<h2 id="找酒店-x1f3e8"><a href="#找酒店-x1f3e8" class="headerlink" title="找酒店 🏨"></a>找酒店 <span class="emoji" alias="hotel" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e8.png?v8">🏨</span></h2><p>历经万难出了高铁站，因为早在机场旁边预订了汉庭，所以叫了辆滴滴开过去(3公里30块你敢信？）。本来以为今日份的suffer已经结束了，万万没想到老天爷又给我安排了一劫<span class="emoji" alias="worried" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61f.png?v8">😟</span></p>
+<p>下车后，拿着行李箱，有点懵。因为四周并没有汉庭的牌子，往后边走了一会。发现了一家汉庭，心想肯定就是这家了，拉着行李箱我就过去了。到了前台，出示预订信息，接待的小姐姐对我说，我预订的不是这家，是另一家。我有点方<span class="emoji" alias="no_mouth" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f636.png?v8">😶</span>，这不是百度地图导航的吗？但还是拖着行李箱走了。</p>
+<p>打了预订酒店电话，我描述了一下自己的位置，接电话的小哥说让我看见桥，往前走。5分钟后，果然又看见了一家汉庭。</p>
+<p>进去之后，人还蛮多的，等了好久。到了柜台，我又出示了预订信息，前台小姐姐对我说，我预订的依然不是这家，是另一家。我真的快哭了<span class="emoji" alias="sob" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8">😭</span>。再次打电话过去，小哥也对我有点无语。叹了口气，说我走了相反的方向，让我顺着立交桥往下走，桥下就是。</p>
+<p>挂了电话，我又拉着行李箱往回走。大晚上的，四下无人，强悍如我也不禁心里发虚。一边拿着手机假装打电话一边往桥下走。在桥下又看到了一家汉庭。进店之后，刚才打电话的小哥好像也认出了我，说没错，就是这家店。我终于找到了酒店<span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span><span class="emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
+<p>Checkin之后让小哥看下班车预订信息，之前已经预定好了最早的一班，想再次确认。小哥一脸狐疑的看着我，估计心里在想，像我这样脑子断线的人，应该不会想到要提前预订班车吧。当我指着预定表里说，[这行就是我]，小哥才相信。</p>
+<p>后来我就明白了，不到1千米的距离，有三家汉庭。然后百度地图给我定位到了酒店停车场，就走错了。也是自己一时着急没看清楚。</p>
+<h2 id="坐班车-x1f68c"><a href="#坐班车-x1f68c" class="headerlink" title="坐班车 🚌"></a>坐班车 <span class="emoji" alias="bus" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f68c.png?v8">🚌</span></h2><p>晚上睡了5个小时，然后就起来了，没误班车我也觉着是个奇迹<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，估计是智商归位了吧。</p>
+<p>在前台等了几分钟，车就来了。找了个比较舒服的坐，等着出发。然后，又一出小闹剧开始了。</p>
+<p>在车上坐了会儿我就觉着不对，因为人有点多。按理说大家都是预订的，应该人数刚好才对。很显然，有些人没有预订也上车了。开始大家相安无事，没有拆穿。几分钟后，师傅上车了，发现人数不对，就说[没有预订的人下车坐下一班吧，这样超载的话车也开不了]。话毕，车内没人说话，也没人动作。气氛变得有些微妙。</p>
+<p>僵持了几分钟，还是没人下车。但车上的人坐不住了，前边有个小哥说自己七点的航班，再不走就来不及了，希望大家互相理解，自觉下车。嗯，很合情合理。然而话毕，依旧没人动作。我也纳闷究竟什么人，脸皮能这么厚。环顾车内，发现一对中年夫妇，脸上表情不太自然。</p>
+<p>车上发牢骚的人越来越多。有说自己赶不上航班的，有说为什么不能自觉下车的，好像每个人都有预订一样，互相指责，千姿百态。我心里也有点着急。师傅说[实在不行就拿预定表对信息，但这样被揪出来，大家面子上也不好看。]，然而还是没人下车。没办法，大家说那就拿表对吧。</p>
+<p>师傅拿表过来了，那对中年夫妇终于坐不住了，嘴里辩驳了几句，下了车。随后，又有一些人下了车。大家都用鄙夷的眼神看着那些下车的人，好像这样能把他们看穿。车开了，透过车窗，我看到刚刚下车的那对夫妇就好像什么也没发生一样，有说有笑<span class="emoji" alias="neutral_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f610.png?v8">😐</span></p>
+<h2 id="结语-x1f33b"><a href="#结语-x1f33b" class="headerlink" title="结语 🌻"></a>结语 <span class="emoji" alias="sunflower" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f33b.png?v8">🌻</span></h2><p>每个人在旅行的过程中，都会有或好或坏的经历。重要的是保持积极向上的心态，乐观看待一切Love&amp;Peace <span class="emoji" alias="heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png?v8">❤</span></p>
+<center><img data-src="https://i.loli.net/2019/10/15/c8bBHQYPEr6ZThd.jpg" width="300" height="300" alt="Love&amp;Peace"></center>]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+        <tag>苏州</tag>
       </tags>
   </entry>
   <entry>
