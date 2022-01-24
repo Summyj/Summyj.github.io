@@ -1169,41 +1169,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java基础小练习</title>
-    <url>/Java-basic/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png">
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
-<ul>
-<li><a href="https://www.imooc.com/learn/85">Java1</a>: 数组/循环/运算符/方法</li>
-<li><a href="https://www.imooc.com/learn/124">Java2</a>: 类/封装/继承/多态</li>
-<li><a href="https://www.imooc.com/learn/110">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span></li>
-</ul>
-<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
-<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">//练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books = {"中国通史", "围城", "沉默的大多数", "古文观止", "局外人"};</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    {</span><br><span class="line">        if(!(input==1 || input==2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    {</span><br><span class="line"></span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println("请输入图书序号：");</span><br><span class="line">        int index = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try{</span><br><span class="line">            String name = books[index];</span><br><span class="line">        }</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        {</span><br><span class="line">            System.out.println("该序号不存在～");</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        System.out.println("找到了！图书为：" + books[index]);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    {</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println("请输入图书名称：");</span><br><span class="line">        String name = sc.next();</span><br><span class="line">        boolean flag = false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) {</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            {</span><br><span class="line">                flag = true;</span><br><span class="line">                break;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println("该图书存在～");</span><br><span class="line">        else</span><br><span class="line">            System.out.println("该图书不存在～");</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    {</span><br><span class="line">        if(arg == 1)</span><br><span class="line">        {</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        }</span><br><span class="line">        else{</span><br><span class="line">            SearchWithName();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) {</span><br><span class="line"></span><br><span class="line">        HelloWorld hello = new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        {</span><br><span class="line">            System.out.println("请输： 1 -- 按照序号查找， 2 -- 按照书名查找");</span><br><span class="line">            Scanner sc = new Scanner(System.in);</span><br><span class="line">            try{</span><br><span class="line">                int input = sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            }</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            {</span><br><span class="line">                System.out.println("请输入数字哦～");</span><br><span class="line">            }</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            {</span><br><span class="line">                System.out.println("非法操作序号～");</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">//练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   {</span><br><span class="line">       if(file.contains(".") &amp;&amp; file.indexOf(".")!=0 &amp;&amp; file.endsWith(".java"))</span><br><span class="line">           System.out.println("文件名正确");</span><br><span class="line">       else</span><br><span class="line">           System.out.println("文件名无效");</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   {</span><br><span class="line">       if(email.indexOf("@") &lt; email.indexOf(".") &amp;&amp; !email.endsWith("."))</span><br><span class="line">           System.out.println("邮件名正确");</span><br><span class="line">       else</span><br><span class="line">           System.out.println("邮件名无效");</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) {</span><br><span class="line"></span><br><span class="line">       HelloWorld hello = new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println("输入文件名：");</span><br><span class="line">       Scanner sc = new Scanner(System.in);</span><br><span class="line">       String file = sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println("输入邮件名：");</span><br><span class="line">       Scanner sc1 = new Scanner(System.in);</span><br><span class="line">       String email = sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">Vehicle veh1 = new Vehicle();</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html">这篇文章</a>让我明白了上边的代码发生了什么。</p>
-<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">    public static void main(String[] args) {</span><br><span class="line">        StringBuilder s1 = new StringBuilder("123");</span><br><span class="line">        String s2 = s1.toString();</span><br><span class="line">        String s3 = s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); //false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和==作用相同</span><br><span class="line">        System.out.println(s1==s2); //编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用==比较</span><br><span class="line">        System.out.println(s2.equals(s3)); // true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 == s3); //false, ==比较的是两个引用的地址</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
-<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320">这篇文章</a>写得很明白。</p>
-<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285">关于Map的Key和Value能不能为空</a></p>
-<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">💪</span></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的书架</title>
     <url>/MyBooks/</url>
     <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center">
@@ -1283,6 +1248,71 @@
       </categories>
       <tags>
         <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础小练习</title>
+    <url>/Java-basic/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png">
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。<br>测试小姐姐们聚在一起搞了个Java小培训，目的是为了练习用Java和Selenium搭建自动化测试框架。又重新回顾了Java的基础知识，包括：</p>
+<ul>
+<li><a href="https://www.imooc.com/learn/85">Java1</a>: 数组/循环/运算符/方法</li>
+<li><a href="https://www.imooc.com/learn/124">Java2</a>: 类/封装/继承/多态</li>
+<li><a href="https://www.imooc.com/learn/110">Java3</a>: 异常/字符类/集合框架(Collection&amp;Map)<br>温故知新，为了证明自己又学了一遍，以及不能让练习的代码白写，就有了这篇博客<span class="emoji" alias="see_no_evil" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f648.png?v8">🙈</span></li>
+</ul>
+<h2 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h2><p>下边是学习过程中遇到的一些代码练习题，以及一些嗑过的知识点，总结一下。</p>
+<h3 id="模拟借书"><a href="#模拟借书" class="headerlink" title="模拟借书"></a>模拟借书</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">//练习点：try catch</span><br><span class="line"></span><br><span class="line">    String[] books = {"中国通史", "围城", "沉默的大多数", "古文观止", "局外人"};</span><br><span class="line"></span><br><span class="line">    public void CheckArg(int input)</span><br><span class="line">    {</span><br><span class="line">        if(!(input==1 || input==2))</span><br><span class="line">            throw new IllegalArgumentException();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void SearchWithNo()</span><br><span class="line">    {</span><br><span class="line"></span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println("请输入图书序号：");</span><br><span class="line">        int index = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        try{</span><br><span class="line">            String name = books[index];</span><br><span class="line">        }</span><br><span class="line">        catch (ArrayIndexOutOfBoundsException e)</span><br><span class="line">        {</span><br><span class="line">            System.out.println("该序号不存在～");</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        System.out.println("找到了！图书为：" + books[index]);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void SearchWithName()</span><br><span class="line">    {</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println("请输入图书名称：");</span><br><span class="line">        String name = sc.next();</span><br><span class="line">        boolean flag = false;</span><br><span class="line"></span><br><span class="line">        for (String book : books) {</span><br><span class="line">            if(book.equals(name))</span><br><span class="line">            {</span><br><span class="line">                flag = true;</span><br><span class="line">                break;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        if(flag)</span><br><span class="line">            System.out.println("该图书存在～");</span><br><span class="line">        else</span><br><span class="line">            System.out.println("该图书不存在～");</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public void Process(int arg)</span><br><span class="line">    {</span><br><span class="line">        if(arg == 1)</span><br><span class="line">        {</span><br><span class="line">            SearchWithNo();</span><br><span class="line">        }</span><br><span class="line">        else{</span><br><span class="line">            SearchWithName();</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) {</span><br><span class="line"></span><br><span class="line">        HelloWorld hello = new HelloWorld();</span><br><span class="line"></span><br><span class="line">        while (true)</span><br><span class="line">        {</span><br><span class="line">            System.out.println("请输： 1 -- 按照序号查找， 2 -- 按照书名查找");</span><br><span class="line">            Scanner sc = new Scanner(System.in);</span><br><span class="line">            try{</span><br><span class="line">                int input = sc.nextInt();</span><br><span class="line">                hello.CheckArg(input);</span><br><span class="line">                hello.Process(input);</span><br><span class="line">            }</span><br><span class="line">            catch (InputMismatchException e)</span><br><span class="line">            {</span><br><span class="line">                System.out.println("请输入数字哦～");</span><br><span class="line">            }</span><br><span class="line">            catch (IllegalArgumentException e)</span><br><span class="line">            {</span><br><span class="line">                System.out.println("非法操作序号～");</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="校验邮件和文件名"><a href="#校验邮件和文件名" class="headerlink" title="校验邮件和文件名"></a>校验邮件和文件名</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">//练习点：string类方法</span><br><span class="line"></span><br><span class="line">   public void CheckFile(String file)</span><br><span class="line">   {</span><br><span class="line">       if(file.contains(".") &amp;&amp; file.indexOf(".")!=0 &amp;&amp; file.endsWith(".java"))</span><br><span class="line">           System.out.println("文件名正确");</span><br><span class="line">       else</span><br><span class="line">           System.out.println("文件名无效");</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   public void CheckEmail(String email)</span><br><span class="line">   {</span><br><span class="line">       if(email.indexOf("@") &lt; email.indexOf(".") &amp;&amp; !email.endsWith("."))</span><br><span class="line">           System.out.println("邮件名正确");</span><br><span class="line">       else</span><br><span class="line">           System.out.println("邮件名无效");</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) {</span><br><span class="line"></span><br><span class="line">       HelloWorld hello = new HelloWorld();</span><br><span class="line"></span><br><span class="line">       System.out.println("输入文件名：");</span><br><span class="line">       Scanner sc = new Scanner(System.in);</span><br><span class="line">       String file = sc.next();</span><br><span class="line">       hello.CheckFile(file);</span><br><span class="line"></span><br><span class="line">       System.out.println("输入邮件名：");</span><br><span class="line">       Scanner sc1 = new Scanner(System.in);</span><br><span class="line">       String email = sc1.next();</span><br><span class="line">       hello.CheckEmail(email);</span><br><span class="line"></span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p><span id="inline-toc">1. </span>深入理解对象引用及其赋值</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">Vehicle veh1 = new Vehicle();</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a href="https://www.cnblogs.com/focuschen/articles/2497768.html">这篇文章</a>让我明白了上边的代码发生了什么。</p>
+<p><span id="inline-toc">2. </span>关于StringBuilder的equals方法</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">    public static void main(String[] args) {</span><br><span class="line">        StringBuilder s1 = new StringBuilder("123");</span><br><span class="line">        String s2 = s1.toString();</span><br><span class="line">        String s3 = s1.toString();</span><br><span class="line">        System.out.println(s1.equals(s2)); //false, 由于StringBuilder类没有重写父类Object类的equals方法, 所以比较的还是s1和s2的地址，和==作用相同</span><br><span class="line">        System.out.println(s1==s2); //编辑器报错，因为s1是StringBuilder类型，s2是String类型，不同类型的数据不能用==比较</span><br><span class="line">        System.out.println(s2.equals(s3)); // true, String类重写了Object类的equals方法，比较的是s2和s3地址中的内容</span><br><span class="line">        System.out.println(s2 == s3); //false, ==比较的是两个引用的地址</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><span id="inline-toc">3. </span>通过重写Object超类的equals方法，实现比较两个类的内容相等</p>
+<p>Object超类的equals方法调用了 == 比较两个对象的地址，但更多时候我们需要它来比较两个对象的内容，所以需要重写。这也是热门面试题之一。<br>怎么做，<a href="https://blog.csdn.net/javazejian/article/details/51348320">这篇文章</a>写得很明白。</p>
+<p><span id="inline-toc">4. </span><a href="https://blog.csdn.net/ceovip/article/details/52963285">关于Map的Key和Value能不能为空</a></p>
+<p>其实还写了很多代码来着，不过就不贴了，自动化框架搭建好之后也会写博客总结的<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">💪</span></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>沉默的抗争</title>
+    <url>/Silent-protest/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
+
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<hr>
+<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
+<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
+<p>但后来项目的走向，打破了他的期望。</p>
+<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
+<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
+<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
+<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
+<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
+<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
+<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
+<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
+<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
+<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>王铁锤</tag>
       </tags>
   </entry>
   <entry>
@@ -1398,36 +1428,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>沉默的抗争</title>
-    <url>/Silent-protest/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
-
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
-
-<hr>
-<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
-<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
-<p>但后来项目的走向，打破了他的期望。</p>
-<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
-<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
-<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
-<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
-<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
-<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
-<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
-<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
-<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
-<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>王铁锤</tag>
       </tags>
   </entry>
   <entry>
@@ -2060,61 +2060,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用腾讯云Serverless服务</title>
-    <url>/bye-coding-pages/</url>
-    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/0.jpeg">
-
-<h2 id="CodingPages停服"><a href="#CodingPages停服" class="headerlink" title="CodingPages停服"></a>CodingPages停服</h2><p>CodingPages是一个国内的静态网站服务，与GithubPages类似，我在最开始搭建博客时就在用，它可以加速博客内容在国内的访问，同时由于GithubPages不能被百度爬虫，所以CodingPages作为替代品，可以方便进行百度收录，实现博客在国内的SEO。</p>
-<p>去年就折腾过一次博客的 <a href="https://jmyblog.top/PageServiceUpdate/">Pages服务</a> ，那时得知CodingPages被腾讯云收购了，也在腾讯云做了一些配置，让博客还能使用CodingPages。<br>前段时间我发现在晚上经常打不开博客内容，就算是GithubPages不稳定吧，可既然有CodingPages理论上不应该如此，但也没深究，也有小伙伴联系我说CodingPages的事，还推荐了gitee，我也依然不置可否：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/6.jpg" height="500" width="250" alt="博客来访者的吐槽">
-
-<p>直到收到了CodingPages停服的消息：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/5.jpg" height="300" width="240" alt="停服短信"> 
-
-<p>害，看来必须得搞一波了，首先进入Coding的项目详情，果然已经没了「静态网站」的入口，只能去腾讯云看看了。</p>
-<h2 id="腾讯云Serverless"><a href="#腾讯云Serverless" class="headerlink" title="腾讯云Serverless"></a>腾讯云Serverless</h2><h3 id="Serverless控制台"><a href="#Serverless控制台" class="headerlink" title="Serverless控制台"></a>Serverless控制台</h3><p>按照短信提示进入腾讯云Serverless控制台，发现了之前配置好的两个静态网站应用，其中，「Summyj.coding.me」是我在CodingPages的初始应用，「谁把钱丢了」是上次升级后的应用，也是停服之前在用的：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/2.jpg">
-
-<p>打开之前升级好的应用，发现开发部署和日志这两项置灰了，看不了细节，估计是因为停服直接凉了：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/4.jpg">
-
-<p>没办法，只能重新搞了，但我对腾讯云的这个服务又不熟悉，所以搜了下 <a href="https://github.com/serverless-components/tencent-website">咋用</a>，发现跟CodingPages的服务差不多，不难理解。</p>
-<h3 id="新建应用"><a href="#新建应用" class="headerlink" title="新建应用"></a>新建应用</h3><p>所以直接开整，新建一个应用，依次是：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/10.jpg" alt="选择静态网站">
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/11.jpg" alt="基础配置">
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/7.jpg" alt="选择代码托管">
-
-<p>保存之后就开始自动部署应用，然后就能用腾讯云分配的 <a href="https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/">二级域名</a> 来访问博客了。</p>
-<h3 id="CDN加速和自定义域名"><a href="#CDN加速和自定义域名" class="headerlink" title="CDN加速和自定义域名"></a>CDN加速和自定义域名</h3><p>到这里，就有了一个可以在国内稳定访问博客的链接，但是我还需要绑定自己的个人域名，然后设置CDN加速，和之前就没有什么区别了。然而，还是和之前一样的问题，无论是要用个人域名做源站域名还是CDN加速域名，都得搞我最讨厌的域名备案，害，想用个人域名，咋就这么难呢？</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/12.jpg">
-
-<p>之前不需要备案是因为应用的地域是香港(如下图)，大陆访问还是慢，相当于折腾了个寂寞：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/4.jpg">
-
-<p>这次我把地域设成了北京，所以要用个人域名，就得备案了，但我实在不想搞那玩意，没得办法，只能用腾讯云给的二级域名了，这样在GithubPages不稳定的时候，起码还有个备用链接可以访问博客。<br>接着给这个二级域名搞CDN加速，拿到的加速域名还更好看一点：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/13.jpg">
-
-<p>到这里，加上之前的配置，博客的访问域名和证书如下：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/17.jpg">
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/16.jpg">
-
-<div class="note info"><ul>
-<li><a href="https://jmyblog.top/">jmyblog.top</a><br>是博客本来的域名，阿里云买的，本身解析到了GithubPages，又CNAME到了腾讯云的CDN节点，做了境外CDN加速后开启了强制HTTPS，证书是腾讯云给申请的，TrustAsia签发的，有效期一年(去年6月份申请的)。<br>当然GithubPages也可以开启强制HTTPS，证书是Github给申请的，Let’s Encrypt签发的证书，一般有效期是三个月，到期会自动续签。<br>至于到底用的那个证书，不太明白这个逻辑，估计跟地域有关系吧，我这里看到的是TrustAsia签发的证书。</li>
-<li><a href="https://jmyblog-top-1306110219.file.myqcloud.com/">jmyblog-top-1306110219.file.myqcloud.com</a><br>腾讯云给的二级域名，是GithubPages国内访问不稳定时的备选，开启了国内CDN加速和强制HTTPS，证书是腾讯云默认证书，会自动续签。</li>
-</ul>
-</div>
-
-<h2 id="百度云收录"><a href="#百度云收录" class="headerlink" title="百度云收录"></a>百度云收录</h2><p>WIP</p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>CodingPages</tag>
-        <tag>腾讯云</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java判断素数</title>
     <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
     <content><![CDATA[<p>嗯，就是来秀插件的。</p>
@@ -2243,6 +2188,69 @@
       </tags>
   </entry>
   <entry>
+    <title>我注册了两个交友小程序(上)</title>
+    <url>/looking-for-the-one-qing-teng/</url>
+    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg">
+
+<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。<br>换作从前，我一定拒绝，因为我一直不喜欢这种目的性很强的相亲活动，但最近几年经过同事和朋友的劝(xi)说(nao)，感觉这也是认识别人的一种方式，所以也没那么抗拒了。<br>由于老母亲和我一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。<br>在我的追问下，她交代了自己在用的一个相亲小程序:</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
+
+<p>看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定亲自寻找男嘉宾🙈</p>
+<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/others.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网">
+
+<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
+<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
+<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
+<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingteng2.jpg" width="200" height="440" alt="默认95年">
+
+<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
+<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingtengmenus.jpg" alt="青藤菜单栏">
+
+<p>小程序有四个菜单栏：</p>
+<ul>
+<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
+<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
+<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
+<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
+</ul>
+<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息">
+
+<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
+<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
+<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/7days.jpg" width="200" height="440" alt="7日优先推荐">
+
+<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
+<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员">
+
+<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
+<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
+<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
+<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
+<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
+<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like1.jpg" width="200" height="440" alt="第一个相互喜欢">
+
+<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like3.jpg" width="200" height="440" alt="啊哈哈哈哈嗝">
+
+<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
+<p>祝我脱单成功。</p>
+]]></content>
+      <categories>
+        <category>寻找男嘉宾</category>
+      </categories>
+      <tags>
+        <tag>相亲</tag>
+        <tag>青藤之恋</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的前1/3 of 2021</title>
     <url>/my-1-3-part-of-2021/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
@@ -2317,69 +2325,6 @@
       </categories>
       <tags>
         <tag>Cook</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我注册了两个交友小程序(上)</title>
-    <url>/looking-for-the-one-qing-teng/</url>
-    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg">
-
-<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。<br>换作从前，我一定拒绝，因为我一直不喜欢这种目的性很强的相亲活动，但最近几年经过同事和朋友的劝(xi)说(nao)，感觉这也是认识别人的一种方式，所以也没那么抗拒了。<br>由于老母亲和我一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。<br>在我的追问下，她交代了自己在用的一个相亲小程序:</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
-
-<p>看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定亲自寻找男嘉宾🙈</p>
-<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/others.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网">
-
-<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
-<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
-<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
-<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingteng2.jpg" width="200" height="440" alt="默认95年">
-
-<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
-<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingtengmenus.jpg" alt="青藤菜单栏">
-
-<p>小程序有四个菜单栏：</p>
-<ul>
-<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
-<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
-<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
-<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
-</ul>
-<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息">
-
-<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
-<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
-<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/7days.jpg" width="200" height="440" alt="7日优先推荐">
-
-<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
-<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员">
-
-<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
-<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
-<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
-<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
-<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
-<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like1.jpg" width="200" height="440" alt="第一个相互喜欢">
-
-<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like3.jpg" width="200" height="440" alt="啊哈哈哈哈嗝">
-
-<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
-<p>祝我脱单成功。</p>
-]]></content>
-      <categories>
-        <category>寻找男嘉宾</category>
-      </categories>
-      <tags>
-        <tag>相亲</tag>
-        <tag>青藤之恋</tag>
       </tags>
   </entry>
   <entry>
@@ -3361,6 +3306,36 @@
       </tags>
   </entry>
   <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<span id="more"></span>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十一旅行中的小插曲</title>
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
     <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
@@ -3417,36 +3392,6 @@
       <tags>
         <tag>旅行</tag>
         <tag>苏州</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<span id="more"></span>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
       </tags>
   </entry>
   <entry>
