@@ -291,6 +291,31 @@
       </tags>
   </entry>
   <entry>
+    <title>AppUI自动化测试第三弹-Android篇</title>
+    <url>/AppUI-AutoTest-3/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
+<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
+<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
+<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
+<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
+<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
+<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
+<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>Bitrise</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AppUI自动化测试第一弹</title>
     <url>/AppUI-AutoTest/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
@@ -424,31 +449,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AppUI自动化测试第三弹-Android篇</title>
-    <url>/AppUI-AutoTest-3/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"></p>
-<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
-<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><br>接下来请依次添加以下步骤。</p>
-<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"></p>
-<h3 id="Activate-SSH-key-amp-Git-Clone"><a href="#Activate-SSH-key-amp-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"></p>
-<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"></p>
-<h3 id="导出测试报告-amp-部署到Bitrise"><a href="#导出测试报告-amp-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"></p>
-<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>Bitrise</tag>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
@@ -531,6 +531,50 @@
         <tag>BDD</tag>
         <tag>敏捷</tag>
         <tag>王铁锤</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点的SEO优化</title>
+    <url>/BlogSEO/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
+
+<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
+<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
+<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
+</div>
+<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
+<blockquote>
+<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
+</blockquote>
+<p>安装百度站点地图生成插件：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></tbody></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></tbody></table></figure>
+<p>安装结束后在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></tbody></table></figure>
+<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></tbody></table></figure>
+<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
+<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
+</div>
+
+<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
+<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
+<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></tbody></table></figure>
+<p>在博客根目录config文件添加配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></tbody></table></figure>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
+<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -620,50 +664,6 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>升级博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点的SEO优化</title>
-    <url>/BlogSEO/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
-
-<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
-<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
-<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
-</div>
-<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
-<blockquote>
-<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-</blockquote>
-<p>安装百度站点地图生成插件：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></tbody></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></tbody></table></figure>
-<p>安装结束后在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     ## 提交最新的五个链接</span><br><span class="line">  host: www.93bok.com 	     ## 百度站长平台中注册的域名</span><br><span class="line">  token: xxx	             ## 准入秘钥</span><br><span class="line">  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></tbody></table></figure>
-<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">-  type: baidu_url_submitter	</span><br></pre></td></tr></tbody></table></figure>
-<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
-<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
-</div>
-
-<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
-<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
-<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></tbody></table></figure>
-<p>在博客根目录config文件添加配置：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></tbody></table></figure>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
-<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -1367,36 +1367,6 @@
       </tags>
   </entry>
   <entry>
-    <title>沉默的抗争</title>
-    <url>/Silent-protest/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
-
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
-
-<hr>
-<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
-<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
-<p>但后来项目的走向，打破了他的期望。</p>
-<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
-<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
-<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
-<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
-<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
-<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
-<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
-<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
-<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
-<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>王铁锤</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客被停止访问之后</title>
     <url>/SiteBrokenFix/</url>
     <content><![CDATA[<h2 id="发生了什么"><a href="#发生了什么" class="headerlink" title="发生了什么"></a>发生了什么</h2><p>昨天更新了点博客内容，本地预览一切正常，然而推送之后，我的站点就没法访问了<span class="emoji" alias="scream" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f631.png?v8">😱</span></p>
@@ -1428,6 +1398,36 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>沉默的抗争</title>
+    <url>/Silent-protest/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
+
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<hr>
+<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
+<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
+<p>但后来项目的走向，打破了他的期望。</p>
+<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
+<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
+<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
+<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
+<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
+<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
+<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
+<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
+<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
+<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>王铁锤</tag>
       </tags>
   </entry>
   <entry>
@@ -1511,119 +1511,6 @@
       <tags>
         <tag>敏捷</tag>
         <tag>测试金字塔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebUI自动化测试框架Demo(下)</title>
-    <url>/WebUI-AutoTest-Demo-3/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
-
-<div class="note info"><p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
-</div>
-
-<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)
-</code></pre>
-<p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
-<ul>
-<li>提交代码</li>
-<li>执行第一轮测试(单元/集成测试)</li>
-<li>代码合到master</li>
-</ul>
-<pre><code>持续交付(Continuous Delivery)
-</code></pre>
-<p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
-<ul>
-<li>代码集成完成</li>
-<li>构建项目，将源码转换为可以运行的实际代码</li>
-<li>执行第二轮测试(端到端/手工测试)</li>
-</ul>
-<pre><code>持续部署(Continuous Deployment)
-</code></pre>
-<p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
-<ul>
-<li>持续交付流程完成</li>
-<li>利用工具自动部署到生产环境</li>
-</ul>
-<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
-<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
-<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
-<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
-</blockquote>
-<p>完成后的效果，小太阳标志：<br><img data-src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png"><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
-<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
-<blockquote>
-<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
-</blockquote>
-<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
-<blockquote>
-<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
-</blockquote>
-<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
-<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。
-</code></pre>
-<p>完成后的效果，绿色的pipeline：<br><img data-src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png"></p>
-<h3 id="下载GoCD-Server-amp-Agent"><a href="#下载GoCD-Server-amp-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary"><p>Server和Agent</p>
-<p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p>
-<p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
-</div>
-
-<p>打开GoCD官网 <a href="https://www.gocd.org/download/#osx">下载页面</a>, 根据系统下载：<br><img data-src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png"><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img data-src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png"><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img data-src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png"></p>
-<h3 id="启动Server-amp-Agent"><a href="#启动Server-amp-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./bin/go-server console</span><br></pre></td></tr></tbody></table></figure>
-<p>启动GoCD Server:<br><img data-src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png"><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a href="https://localhost:8154/">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img data-src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png"><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./bin/go-agent console</span><br></pre></td></tr></tbody></table></figure>
-<p>启动GoCD Agent:<br><img data-src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png"></p>
-<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
-<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：
-</code></pre>
-<img data-src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
-首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
-<img data-src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
-
-
-<pre><code>Material
-</code></pre>
-<p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
-<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img data-src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png"><br>输入Stage名字，这里我设为Test：<br><img data-src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png"></p>
-<pre><code>Stage
-</code></pre>
-<p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
-<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img data-src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png"></p>
-<pre><code>Job
-</code></pre>
-<p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
-<pre><code>Task
-</code></pre>
-<p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
-<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img data-src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png"><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img data-src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380"><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img data-src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430"><br>到这里，Pipeline就已经创建好了。</p>
-<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img data-src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img data-src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
-<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img data-src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png"><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img data-src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png"><br>观察console log我们可以理解pipeline的运行流程：</p>
-<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img data-src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png"><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png"><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img data-src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png"><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img data-src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png"><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img data-src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png"><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png"></p>
-<pre><code>Artifact
-</code></pre>
-<p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><img data-src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png"><br>运行结束之后，在页面上也可以看到它：<br><img data-src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png"></p>
-<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
-<blockquote>
-<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
-</blockquote>
-<p>回到首页，点击Auto的设置按钮：<br><img data-src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img data-src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png"><br><img data-src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png"><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img data-src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png"><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
-<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img data-src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png"></p>
-<p>保存，然后再次运行Pipeline:<br><img data-src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img data-src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png"></p>
-<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img data-src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img data-src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png"><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img data-src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png"></p>
-<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img data-src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png"><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img data-src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png"><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img data-src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/28b7ae892ed1">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
-<li><a href="https://devops.phodal.com/home">DevOps 元素周期表</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html">阮一峰：CI&amp;CD是什么</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>Jenkins</tag>
-        <tag>GoCD</tag>
       </tags>
   </entry>
   <entry>
@@ -1740,6 +1627,119 @@
       <tags>
         <tag>自动化测试</tag>
         <tag>TestNG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebUI自动化测试框架Demo(下)</title>
+    <url>/WebUI-AutoTest-Demo-3/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
+
+<div class="note info"><p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
+</div>
+
+<h2 id="CI-amp-CD介绍"><a href="#CI-amp-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)
+</code></pre>
+<p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
+<ul>
+<li>提交代码</li>
+<li>执行第一轮测试(单元/集成测试)</li>
+<li>代码合到master</li>
+</ul>
+<pre><code>持续交付(Continuous Delivery)
+</code></pre>
+<p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
+<ul>
+<li>代码集成完成</li>
+<li>构建项目，将源码转换为可以运行的实际代码</li>
+<li>执行第二轮测试(端到端/手工测试)</li>
+</ul>
+<pre><code>持续部署(Continuous Deployment)
+</code></pre>
+<p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
+<ul>
+<li>持续交付流程完成</li>
+<li>利用工具自动部署到生产环境</li>
+</ul>
+<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
+<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
+<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+</blockquote>
+<p>完成后的效果，小太阳标志：<br><img data-src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png"><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<blockquote>
+<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
+</blockquote>
+<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
+<blockquote>
+<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
+</blockquote>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。
+</code></pre>
+<p>完成后的效果，绿色的pipeline：<br><img data-src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png"></p>
+<h3 id="下载GoCD-Server-amp-Agent"><a href="#下载GoCD-Server-amp-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary"><p>Server和Agent</p>
+<p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p>
+<p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
+</div>
+
+<p>打开GoCD官网 <a href="https://www.gocd.org/download/#osx">下载页面</a>, 根据系统下载：<br><img data-src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png"><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img data-src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png"><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img data-src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png"></p>
+<h3 id="启动Server-amp-Agent"><a href="#启动Server-amp-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./bin/go-server console</span><br></pre></td></tr></tbody></table></figure>
+<p>启动GoCD Server:<br><img data-src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png"><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a href="https://localhost:8154/">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img data-src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png"><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./bin/go-agent console</span><br></pre></td></tr></tbody></table></figure>
+<p>启动GoCD Agent:<br><img data-src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png"></p>
+<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
+<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：
+</code></pre>
+<img data-src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
+首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
+<img data-src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
+
+
+<pre><code>Material
+</code></pre>
+<p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
+<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img data-src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png"><br>输入Stage名字，这里我设为Test：<br><img data-src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png"></p>
+<pre><code>Stage
+</code></pre>
+<p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
+<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img data-src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png"></p>
+<pre><code>Job
+</code></pre>
+<p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
+<pre><code>Task
+</code></pre>
+<p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
+<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img data-src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png"><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img data-src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380"><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img data-src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430"><br>到这里，Pipeline就已经创建好了。</p>
+<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img data-src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img data-src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
+<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img data-src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png"><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img data-src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png"><br>观察console log我们可以理解pipeline的运行流程：</p>
+<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img data-src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png"><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png"><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img data-src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png"><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img data-src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png"><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img data-src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png"><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png"></p>
+<pre><code>Artifact
+</code></pre>
+<p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><img data-src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png"><br>运行结束之后，在页面上也可以看到它：<br><img data-src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png"></p>
+<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
+<blockquote>
+<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
+</blockquote>
+<p>回到首页，点击Auto的设置按钮：<br><img data-src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img data-src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png"><br><img data-src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png"><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img data-src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png"><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
+<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img data-src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png"></p>
+<p>保存，然后再次运行Pipeline:<br><img data-src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img data-src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png"></p>
+<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img data-src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img data-src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png"><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img data-src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png"></p>
+<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img data-src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png"><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img data-src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png"><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img data-src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+<li><a href="https://devops.phodal.com/home">DevOps 元素周期表</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html">阮一峰：CI&amp;CD是什么</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>Jenkins</tag>
+        <tag>GoCD</tag>
       </tags>
   </entry>
   <entry>
@@ -2006,6 +2006,60 @@
       </tags>
   </entry>
   <entry>
+    <title>网站评论回家了</title>
+    <url>/comments-comeback/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png">
+
+<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info"><p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
+</div>
+
+<img data-src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png">
+
+<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">😔</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more">这篇博客</a>给出的解决办法：</p>
+<div class="note primary"><p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
+</div>
+
+<img data-src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png">
+
+<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img data-src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png"></p>
+<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img data-src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png"></p>
+<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>评论系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安卓模拟器快速冷启动</title>
+    <url>/emulator-cold-boot/</url>
+    <content><![CDATA[<div class="note info"><p>问题</p>
+</div>
+
+<p>博主最近搬砖，发现安卓模拟器有一些小bug，最常见的是App打不开，得冷启动模拟器后，卸载App重新安装才可以。由于项目暂时用不了真机，只能在模拟器测试，所以经常遇到这个问题，每次都得重复这个步骤：<mark class="label primary">冷启动模拟器-&gt;卸载App-&gt;安装App</mark>。</p>
+<div class="note info"><p>解决</p>
+</div>
+
+<p>首先冷启动模拟器：</p>
+<p><img data-src="https://i.loli.net/2021/08/03/rTQ1wObeRgiEqya.png" alt="Cold Boot"><br>卸载测试App，之后点击模拟器右侧菜单栏 <strong>…</strong> 按钮进入高级设置，然后进入Snapshots选项，点击TAKE SNAPSHOT：</p>
+<p><img data-src="https://i.loli.net/2021/08/03/JYDru2NTiqeoG8Q.png" alt="TAKE SNAPSHOT"><br>之后可以看到新的snapshot，这里我命名为quickboot：</p>
+<p><img data-src="https://i.loli.net/2021/08/03/ZEwqUF9OSnTQaI6.png" alt="命名snapshot"><br>打开AVD Manager页面，编辑刚才的模拟器，在高级设置中选择通过snapshot启动模拟器，点击finish：</p>
+<p><img data-src="https://i.loli.net/2021/08/03/dl2a1SJIHDR6knA.png" alt="编辑设置"><br>最后再打开编辑页面检查一遍，确保设置正确，我自己设置的时候，发现这里要选择两次才可以，感觉又是AVD Manager的一个bug。<br>设置完成后，以后再打开模拟器测试，就是一个干净的测试环境了，只需要再安装测试App就可以了，再也不用经常手动冷启动了。</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>emulator</tag>
+        <tag>coldBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用腾讯云Serverless服务</title>
     <url>/bye-coding-pages/</url>
     <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/0.jpeg">
@@ -2061,36 +2115,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网站评论回家了</title>
-    <url>/comments-comeback/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/5qCbYiSNDszno3y.png">
-
-<p>这张题图很能表示我现在激动的心情<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><div class="note info"><p>博客建立伊始，也就是2017年那个夏天，我就开始用livere评论系统。<br>后来出现过两次评论消失的情况，第一次是17/9，当时是因为改了博客的url，所以也就丢失了。<br>第二次不知道是啥时候，经常出现博客评论莫名消失的情况，所以只能在管理后台看到评论：</p>
-</div>
-
-<img data-src="https://i.loli.net/2020/05/19/FO4KepHxIStEDLn.png">
-
-<p>开始的时候觉得无所谓，后来时间长了，感觉评论还是挺重要的，否则老感觉博客没人访问一样冷冷清清<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">😔</span>。<br>然后就开始搜解决办法，但好像没有遇到跟我相似情况的小伙伴，再加上工作忙(lan)慢慢这个事也就放下了。直到今天，我终于找回了我的评论。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>多亏了<a href="https://vikifish.cn/2020/04/18/Hexo-theme-nexT-livere-comments-bug/#more">这篇博客</a>给出的解决办法：</p>
-<div class="note primary"><p>其实第二次评论消失的原因是livere插件代码中的refer值设置问题。<br>refer是个参数，评论的添加与获取都是会带上这个参数的。而默认的refer值是根据当前页面的url来获取的，如果设置的不对，就会导致评论页面地址和网页实际地址不符合，因此文章的评论无法在页面显示。<br>所以改动插件代码(虽然以前的refer设置我也看不懂是个啥)：</p>
-</div>
-
-<img data-src="https://i.loli.net/2020/05/19/sdVryhuHgqZnl15.png">
-
-<p>我的评论就回来了！！！简直就是活生生的博客历史啊有没有，可以追溯到17年：<br><img data-src="https://i.loli.net/2020/05/19/SrmgpshDyx3n7UV.png"></p>
-<p>但是第一次因为url改动而消失的评论(2017.9.11之前的)真的回不来了：<br><img data-src="https://i.loli.net/2020/05/19/KCegVLdTGMYb7pO.png"></p>
-<p>所以，欢迎大家的热情评论呀～撒花花🎉🎉🎉</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>突然发现livere不支持微信和QQ登录了，给官网发了消息在等回复。希望可以支持，否则就要考虑换个评论系统了，比如Valine啥的。<br>之前使用DaoVoice可以在线交流，很方便，但之前更新博客的时候不知道为毛一加上它，博客就不能显示，还在研究。。。</p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>评论系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java判断素数</title>
     <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
     <content><![CDATA[<p>嗯，就是来秀插件的。</p>
@@ -2102,30 +2126,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安卓模拟器快速冷启动</title>
-    <url>/emulator-cold-boot/</url>
-    <content><![CDATA[<div class="note info"><p>问题</p>
-</div>
-
-<p>博主最近搬砖，发现安卓模拟器有一些小bug，最常见的是App打不开，得冷启动模拟器后，卸载App重新安装才可以。由于项目暂时用不了真机，只能在模拟器测试，所以经常遇到这个问题，每次都得重复这个步骤：<mark class="label primary">冷启动模拟器-&gt;卸载App-&gt;安装App</mark>。</p>
-<div class="note info"><p>解决</p>
-</div>
-
-<p>首先冷启动模拟器：</p>
-<p><img data-src="https://i.loli.net/2021/08/03/rTQ1wObeRgiEqya.png" alt="Cold Boot"><br>卸载测试App，之后点击模拟器右侧菜单栏 <strong>…</strong> 按钮进入高级设置，然后进入Snapshots选项，点击TAKE SNAPSHOT：</p>
-<p><img data-src="https://i.loli.net/2021/08/03/JYDru2NTiqeoG8Q.png" alt="TAKE SNAPSHOT"><br>之后可以看到新的snapshot，这里我命名为quickboot：</p>
-<p><img data-src="https://i.loli.net/2021/08/03/ZEwqUF9OSnTQaI6.png" alt="命名snapshot"><br>打开AVD Manager页面，编辑刚才的模拟器，在高级设置中选择通过snapshot启动模拟器，点击finish：</p>
-<p><img data-src="https://i.loli.net/2021/08/03/dl2a1SJIHDR6knA.png" alt="编辑设置"><br>最后再打开编辑页面检查一遍，确保设置正确，我自己设置的时候，发现这里要选择两次才可以，感觉又是AVD Manager的一个bug。<br>设置完成后，以后再打开模拟器测试，就是一个干净的测试环境了，只需要再安装测试App就可以了，再也不用经常手动冷启动了。</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>emulator</tag>
-        <tag>coldBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -2243,69 +2243,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我注册了两个交友小程序(上)</title>
-    <url>/looking-for-the-one-qing-teng/</url>
-    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg">
-
-<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。<br>换作从前，我一定拒绝，因为我一直不喜欢这种目的性很强的相亲活动，但最近几年经过同事和朋友的劝(xi)说(nao)，感觉这也是认识别人的一种方式，所以也没那么抗拒了。<br>由于老母亲和我一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。<br>在我的追问下，她交代了自己在用的一个相亲小程序:</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
-
-<p>看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定亲自寻找男嘉宾🙈</p>
-<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/others.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网">
-
-<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
-<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
-<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
-<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingteng2.jpg" width="200" height="440" alt="默认95年">
-
-<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
-<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingtengmenus.jpg" alt="青藤菜单栏">
-
-<p>小程序有四个菜单栏：</p>
-<ul>
-<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
-<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
-<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
-<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
-</ul>
-<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息">
-
-<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
-<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
-<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/7days.jpg" width="200" height="440" alt="7日优先推荐">
-
-<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
-<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员">
-
-<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
-<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
-<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
-<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
-<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
-<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like1.jpg" width="200" height="440" alt="第一个相互喜欢">
-
-<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like3.jpg" width="200" height="440" alt="啊哈哈哈哈嗝">
-
-<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
-<p>祝我脱单成功。</p>
-]]></content>
-      <categories>
-        <category>寻找男嘉宾</category>
-      </categories>
-      <tags>
-        <tag>相亲</tag>
-        <tag>青藤之恋</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的前1/3 of 2021</title>
     <url>/my-1-3-part-of-2021/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png">
@@ -2380,6 +2317,69 @@
       </categories>
       <tags>
         <tag>Cook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我注册了两个交友小程序(上)</title>
+    <url>/looking-for-the-one-qing-teng/</url>
+    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg">
+
+<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。<br>换作从前，我一定拒绝，因为我一直不喜欢这种目的性很强的相亲活动，但最近几年经过同事和朋友的劝(xi)说(nao)，感觉这也是认识别人的一种方式，所以也没那么抗拒了。<br>由于老母亲和我一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。<br>在我的追问下，她交代了自己在用的一个相亲小程序:</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
+
+<p>看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定亲自寻找男嘉宾🙈</p>
+<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/others.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网">
+
+<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
+<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
+<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
+<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingteng2.jpg" width="200" height="440" alt="默认95年">
+
+<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
+<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qingtengmenus.jpg" alt="青藤菜单栏">
+
+<p>小程序有四个菜单栏：</p>
+<ul>
+<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
+<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
+<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
+<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
+</ul>
+<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息">
+
+<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
+<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
+<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/7days.jpg" width="200" height="440" alt="7日优先推荐">
+
+<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
+<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员">
+
+<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
+<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
+<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
+<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
+<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
+<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like1.jpg" width="200" height="440" alt="第一个相互喜欢">
+
+<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/like3.jpg" width="200" height="440" alt="啊哈哈哈哈嗝">
+
+<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
+<p>祝我脱单成功。</p>
+]]></content>
+      <categories>
+        <category>寻找男嘉宾</category>
+      </categories>
+      <tags>
+        <tag>相亲</tag>
+        <tag>青藤之恋</tag>
       </tags>
   </entry>
   <entry>
@@ -2853,6 +2853,79 @@
       </tags>
   </entry>
   <entry>
+    <title>公司上市了</title>
+    <url>/tw-nasdaq-listed/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
+
+<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
+<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
+<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
+<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
+<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
+<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"></p>
+<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
+<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
+<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
+</div>
+
+<hr>
+<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
+<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
+<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UiAutomator初体验(中)</title>
+    <url>/ui-automator-test-2/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/08/07/gVpdC1hMQHsrT64.png">
+
+<div class="note info"><p>事实上，如何上手编写最基本的UiAutomator测试，<a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing">官网</a> 上已经给出了设置步骤和简单的代码示例，只是没有从零开始介绍怎么创建一个完整的测试而已，所以我们可以基于官网文档，写一个可以在模拟器上运行的测试。</p>
+</div>
+
+<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>回到上篇博客创建好的测试项目，在app模块的build.gradle文件中，加上UiAutomator库的依赖：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">dependencies {</span><br><span class="line">    ...</span><br><span class="line">    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>添加之后Android Studio可能不会立刻下载依赖，所以为了确保可以使用uiautomator，需要在下图手动Apply一下：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/ljXOiHw7F5KQZIu.png" alt="下载依赖"></p>
+<h2 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h2><p>UI测试的第一步当然是定位元素，uiautomatorviewer工具可以做到这一点，它位于 <mark class="label primary">android-sdk/tools/bin/</mark> 目录，android-sdk就是下图中的sdk路径：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br>打开终端，定位到上述目录中，然后运行uiautomatorviewer：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/1lOsYUNK7haAxnV.png" alt="运行uiautomatorviewer"><br>如果上篇博客的环境都准备好了，就能打开uiautomatorviewer窗口，如果有已启动的设备，这里我打开了一个 <a href="https://jmyblog.top/AppUI-AutoTest-1/#%E5%90%AF%E5%8A%A8Android-Emulator">安卓模拟器</a> ，点击窗口左上角第二个按钮，就能获取设备当前页面的screenshot，右侧是页面元素信息，通过这些信息，我们就可以定位元素了。<br>UiAutomator提供了findObject()方法定位UiObject元素，以定位上图页面底部Login按钮为例：</p>
+<div class="tabs" id="定位元素写法"><ul class="nav-tabs"><li class="tab active"><a href="#定位元素写法-1">定位元素写法 1</a></li><li class="tab"><a href="#定位元素写法-2">定位元素写法 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="定位元素写法-1"><p>Kotlin：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">val loginButton: UiObject = device.findObject(</span><br><span class="line">        UiSelector().text("Login").className("android.widget.TextView")</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure></div><div class="tab-pane" id="定位元素写法-2"><p>Java：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">UiObject loginButton = device.findObject(new UiSelector()</span><br><span class="line">        .text("Login")</span><br><span class="line">        .className("android.widget.TextView"));</span><br></pre></td></tr></tbody></table></figure></div></div></div>
+
+<h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><p>接下来我们就可以编写代码测试App了，我还是用了 <a href="https://jmyblog.top/AppUI-AutoTest-1/">之前文章</a> 里的测试App，可以在 <a href="https://github.com/webdriverio/native-demo-app/releases">这里</a> 下载，然后把它安装到模拟器里。<br>我们来编写最简单的两个Case，登录和注册。</p>
+<p><img data-src="https://i.loli.net/2021/08/06/6wSmbHJQcOIKTgz.png" alt="登录和注册页面"></p>
+<div class="note info"><p>首先是登录，要实现登录操作，我们要切换到登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要先切换到登录页面，再切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
+</div>
+<p>这里我只贴出一个步骤，是去打开app的登录页面，就使用上面的元素定义，其它步骤都可以参考这个完成：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/9UVPvcLlJqCKRzD.png" alt="打开登录页面测试步骤"><br>其中，launchApp方法依然是 <a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing#accessing-ui-components">官网提供</a> 的，先定义了一个device对象，通过该对象连接设备，然后再利用PackageName打开对应的App，最后我们定位元素并点击进入登录页面。<br>设备当前打开App的PackageName可以通过以下命令得到：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">adb shell dumpsys window | grep -E 'mCurrentFocus'</span><br></pre></td></tr></tbody></table></figure>
+<p>这就是我们使用Ui Automator编写的第一个可以运行的测试。</p>
+<h2 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h2><p>有三种方式可以运行Ui Automator测试，第一种是直接在编辑器里点击运行图标：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/LualXZYnq1R49Bv.png" alt="两个地方都可以点"><br>第二种方式是通过adb shell在命令行运行：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">adb shell am instrument -w -m -e debug false -e class 'com.example.androidtest.ExampleInstrumentedTest#openLoginPage' com.example.androidtest.test/androidx.test.runner.AndroidJUnitRunner</span><br></pre></td></tr></tbody></table></figure>
+<p>第三种方式也是在命令行运行，上篇博客提到，因为Ui Automator测试位于androidTest文件夹，是一种插桩测试，所以可以利用gradle直接运行，和mvn test执行测试的道理差不多：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./gradlew connectedAndroidTest</span><br></pre></td></tr></tbody></table></figure>
+<p>后两种运行方式，官网上也给出了 <a href="https://developer.android.com/studio/test/command-line">详细介绍</a> ，并且提供了各个参数的含义。<br>值得一提的是，用第三种方式运行测试还会生成两个测试结果文件，一个是html格式，在 <mark class="label info">path_to_your_project/module_name/build/reports/androidTests/connected/</mark> 目录中：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/S7AfZ3yGMFXTRYo.png" alt="测试报告"><br>另一个是xml格式，在 <mark class="label info">path_to_your_project/module_name/build/outputs/androidTest-results/connected/</mark> 目录中。</p>
+<h2 id="PageObject"><a href="#PageObject" class="headerlink" title="PageObject"></a>PageObject</h2><p>尽管我们已经写好了测试，但把所有的步骤都放在一个文件中显然不是good practice，所以我们可以按照Page Object模式将代码进行优化，把before方法、页面元素、操作步骤和测试分开，完成后的代码结构如下：</p>
+<p><img data-src="https://i.loli.net/2021/08/07/piOLVbxPScuAw5t.png" alt="PageObject"><br>其中，selectors包里是各个页面的元素，pages包则用来存放各个页面的操作方法，公用的方法比如launchApp都放在BasePage里，真正的测试用例则统一放在tests包里，我已将 <a href="https://github.com/Summyj/UiAutomatorDemo">代码库</a> 上传到了github，不足之处还请大家批评指正。<br>以下是用三种方式执行测试的视频，直接点击编辑器图标运行大概12秒，用adb运行16秒，gradle运行也不过25秒：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE5MDYyMjk2OA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>uiautomatorviewer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>UiAutomator初体验(下)</title>
     <url>/ui-automator-test-3/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/08/07/XE59SbdlRZBJ7iW.png">
@@ -2917,34 +2990,6 @@
       </tags>
   </entry>
   <entry>
-    <title>公司上市了</title>
-    <url>/tw-nasdaq-listed/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
-
-<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
-<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
-<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
-<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
-<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
-<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"></p>
-<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
-<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
-<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
-</div>
-
-<hr>
-<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
-<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
-<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>UiAutomator初体验(上)</title>
     <url>/ui-automator-test/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png">
@@ -2978,51 +3023,6 @@
         <tag>自动化测试</tag>
         <tag>Android</tag>
         <tag>UiAutomator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>UiAutomator初体验(中)</title>
-    <url>/ui-automator-test-2/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/08/07/gVpdC1hMQHsrT64.png">
-
-<div class="note info"><p>事实上，如何上手编写最基本的UiAutomator测试，<a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing">官网</a> 上已经给出了设置步骤和简单的代码示例，只是没有从零开始介绍怎么创建一个完整的测试而已，所以我们可以基于官网文档，写一个可以在模拟器上运行的测试。</p>
-</div>
-
-<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>回到上篇博客创建好的测试项目，在app模块的build.gradle文件中，加上UiAutomator库的依赖：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">dependencies {</span><br><span class="line">    ...</span><br><span class="line">    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>添加之后Android Studio可能不会立刻下载依赖，所以为了确保可以使用uiautomator，需要在下图手动Apply一下：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/ljXOiHw7F5KQZIu.png" alt="下载依赖"></p>
-<h2 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h2><p>UI测试的第一步当然是定位元素，uiautomatorviewer工具可以做到这一点，它位于 <mark class="label primary">android-sdk/tools/bin/</mark> 目录，android-sdk就是下图中的sdk路径：</p>
-<p><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br>打开终端，定位到上述目录中，然后运行uiautomatorviewer：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/1lOsYUNK7haAxnV.png" alt="运行uiautomatorviewer"><br>如果上篇博客的环境都准备好了，就能打开uiautomatorviewer窗口，如果有已启动的设备，这里我打开了一个 <a href="https://jmyblog.top/AppUI-AutoTest-1/#%E5%90%AF%E5%8A%A8Android-Emulator">安卓模拟器</a> ，点击窗口左上角第二个按钮，就能获取设备当前页面的screenshot，右侧是页面元素信息，通过这些信息，我们就可以定位元素了。<br>UiAutomator提供了findObject()方法定位UiObject元素，以定位上图页面底部Login按钮为例：</p>
-<div class="tabs" id="定位元素写法"><ul class="nav-tabs"><li class="tab active"><a href="#定位元素写法-1">定位元素写法 1</a></li><li class="tab"><a href="#定位元素写法-2">定位元素写法 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="定位元素写法-1"><p>Kotlin：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">val loginButton: UiObject = device.findObject(</span><br><span class="line">        UiSelector().text("Login").className("android.widget.TextView")</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure></div><div class="tab-pane" id="定位元素写法-2"><p>Java：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">UiObject loginButton = device.findObject(new UiSelector()</span><br><span class="line">        .text("Login")</span><br><span class="line">        .className("android.widget.TextView"));</span><br></pre></td></tr></tbody></table></figure></div></div></div>
-
-<h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><p>接下来我们就可以编写代码测试App了，我还是用了 <a href="https://jmyblog.top/AppUI-AutoTest-1/">之前文章</a> 里的测试App，可以在 <a href="https://github.com/webdriverio/native-demo-app/releases">这里</a> 下载，然后把它安装到模拟器里。<br>我们来编写最简单的两个Case，登录和注册。</p>
-<p><img data-src="https://i.loli.net/2021/08/06/6wSmbHJQcOIKTgz.png" alt="登录和注册页面"></p>
-<div class="note info"><p>首先是登录，要实现登录操作，我们要切换到登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要先切换到登录页面，再切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
-</div>
-<p>这里我只贴出一个步骤，是去打开app的登录页面，就使用上面的元素定义，其它步骤都可以参考这个完成：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/9UVPvcLlJqCKRzD.png" alt="打开登录页面测试步骤"><br>其中，launchApp方法依然是 <a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing#accessing-ui-components">官网提供</a> 的，先定义了一个device对象，通过该对象连接设备，然后再利用PackageName打开对应的App，最后我们定位元素并点击进入登录页面。<br>设备当前打开App的PackageName可以通过以下命令得到：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">adb shell dumpsys window | grep -E 'mCurrentFocus'</span><br></pre></td></tr></tbody></table></figure>
-<p>这就是我们使用Ui Automator编写的第一个可以运行的测试。</p>
-<h2 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h2><p>有三种方式可以运行Ui Automator测试，第一种是直接在编辑器里点击运行图标：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/LualXZYnq1R49Bv.png" alt="两个地方都可以点"><br>第二种方式是通过adb shell在命令行运行：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">adb shell am instrument -w -m -e debug false -e class 'com.example.androidtest.ExampleInstrumentedTest#openLoginPage' com.example.androidtest.test/androidx.test.runner.AndroidJUnitRunner</span><br></pre></td></tr></tbody></table></figure>
-<p>第三种方式也是在命令行运行，上篇博客提到，因为Ui Automator测试位于androidTest文件夹，是一种插桩测试，所以可以利用gradle直接运行，和mvn test执行测试的道理差不多：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">./gradlew connectedAndroidTest</span><br></pre></td></tr></tbody></table></figure>
-<p>后两种运行方式，官网上也给出了 <a href="https://developer.android.com/studio/test/command-line">详细介绍</a> ，并且提供了各个参数的含义。<br>值得一提的是，用第三种方式运行测试还会生成两个测试结果文件，一个是html格式，在 <mark class="label info">path_to_your_project/module_name/build/reports/androidTests/connected/</mark> 目录中：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/S7AfZ3yGMFXTRYo.png" alt="测试报告"><br>另一个是xml格式，在 <mark class="label info">path_to_your_project/module_name/build/outputs/androidTest-results/connected/</mark> 目录中。</p>
-<h2 id="PageObject"><a href="#PageObject" class="headerlink" title="PageObject"></a>PageObject</h2><p>尽管我们已经写好了测试，但把所有的步骤都放在一个文件中显然不是good practice，所以我们可以按照Page Object模式将代码进行优化，把before方法、页面元素、操作步骤和测试分开，完成后的代码结构如下：</p>
-<p><img data-src="https://i.loli.net/2021/08/07/piOLVbxPScuAw5t.png" alt="PageObject"><br>其中，selectors包里是各个页面的元素，pages包则用来存放各个页面的操作方法，公用的方法比如launchApp都放在BasePage里，真正的测试用例则统一放在tests包里，我已将 <a href="https://github.com/Summyj/UiAutomatorDemo">代码库</a> 上传到了github，不足之处还请大家批评指正。<br>以下是用三种方式执行测试的视频，直接点击编辑器图标运行大概12秒，用adb运行16秒，gradle运行也不过25秒：</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE5MDYyMjk2OA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>uiautomatorviewer</tag>
       </tags>
   </entry>
   <entry>
@@ -3361,36 +3361,6 @@
       </tags>
   </entry>
   <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<span id="more"></span>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>人生是一场未知的旅行</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十一旅行中的小插曲</title>
     <url>/%E8%AE%B0%E5%8D%81%E4%B8%80%E6%97%85%E8%A1%8C%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8F%92%E6%9B%B2/</url>
     <content><![CDATA[<p>我人生中的这一部分，叫做冒傻气。</p>
@@ -3447,6 +3417,36 @@
       <tags>
         <tag>旅行</tag>
         <tag>苏州</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<span id="more"></span>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
       </tags>
   </entry>
   <entry>
