@@ -1754,7 +1754,7 @@
 <h2 id="腾讯云Serverless"><a href="#腾讯云Serverless" class="headerlink" title="腾讯云Serverless"></a>腾讯云Serverless</h2><h3 id="Serverless控制台"><a href="#Serverless控制台" class="headerlink" title="Serverless控制台"></a>Serverless控制台</h3><p>按照短信提示进入腾讯云Serverless控制台，发现了之前配置好的两个静态网站应用，其中，「Summyj.coding.me」是我在CodingPages的初始应用，「谁把钱丢了」是上次升级后的应用，也是停服之前在用的：</p>
 <img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/2.jpg">
 
-<p>打开之前升级好的应用，发现开发部署和日志这两项置灰了，看不了细节，估计是因为停服直接凉了：</p>
+<p>打开之前升级好的应用，发现开发部署和日志这两项置灰了，看不了细节：</p>
 <img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/4.jpg">
 
 <p>没办法，只能重新搞了，但我对腾讯云的这个服务又不熟悉，所以搜了下 <a href="https://github.com/serverless-components/tencent-website">咋用</a>，发现跟CodingPages的服务差不多，不难理解。</p>
@@ -1778,8 +1778,9 @@
 </ul>
 </div>
 
-<h2 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h2><p>WIP</p>
-]]></content>
+<h2 id="SEO验证"><a href="#SEO验证" class="headerlink" title="SEO验证"></a>SEO验证</h2><p>由于GithubPages不能被百度抓取，所以想参考 <a href="https://jmyblog.top/BlogSEO/">之前的文章</a> 把腾讯云给的二级域名做一个百度收录。</p>
+<h3 id="Google收录"><a href="#Google收录" class="headerlink" title="Google收录"></a>Google收录</h3><p>之前为了解决 <a href="https://jmyblog.top/PageServiceUpdate/#GithubPages%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">GithubPages Warning</a> ，给主站域名加上了www前缀，当时没毛病，后来发现科学上网的时候，访问博客老是会自动加上这个前缀，然后页面就挂了，只有强制去掉www才能正常打开页面。<br>所以这次我直接在GithubPages里去掉了www前缀，虽然还是会有Warning，但至少页面不会挂了，之后我需要验证一下自己之前的Google收录是否正常，所以登陆管理台，发现一切ok：</p>
+<h3 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h3><h4 id="主站"><a href="#主站" class="headerlink" title="主站"></a>主站</h4><h4 id="副站"><a href="#副站" class="headerlink" title="副站"></a>副站</h4>]]></content>
       <categories>
         <category>维护小破站</category>
       </categories>
@@ -3889,10 +3890,5 @@
     <title></title>
     <url>/baidu_verify_code-z0T5qSqoQf.html</url>
     <content><![CDATA[b3836d9f660efb9032a1db917b3972ae]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/baidu_verify_code-28UGR3n6YT.html</url>
-    <content><![CDATA[8169572e6c943813d9bcf7fe61c46ff9]]></content>
   </entry>
 </search>
