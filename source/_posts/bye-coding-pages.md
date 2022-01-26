@@ -13,7 +13,7 @@ top:
 
 ## CodingPages停服
 
-CodingPages是一个国内的静态网站服务，与GithubPages类似，我在最开始搭建博客时就在用，它可以加速博客内容在国内的访问，同时由于GithubPages不能被百度爬虫，所以CodingPages作为替代品，可以方便进行百度收录，实现博客在国内的SEO。
+CodingPages是一个国内的静态网站托管服务，与GithubPages类似，我在最开始搭建博客时就在用，它可以加速博客内容在国内的访问，同时由于GithubPages不能被百度爬虫，所以CodingPages作为替代品，可以方便进行百度收录，实现博客在国内的SEO。
 
 去年就折腾过一次博客的 [Pages服务](https://jmyblog.top/PageServiceUpdate/) ，那时得知CodingPages被腾讯云收购了，也在腾讯云做了一些配置，让博客还能使用CodingPages。
 前段时间我发现在晚上经常打不开博客内容，就算是GithubPages不稳定吧，可既然有CodingPages理论上不应该如此，但也没深究，也有小伙伴联系我说CodingPages的事，还推荐了gitee，我也依然不置可否：
@@ -60,24 +60,19 @@ CodingPages是一个国内的静态网站服务，与GithubPages类似，我在�
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/4.jpg" >
 
 这次我把地域设成了北京，所以要用个人域名，就得备案了，但我实在不想搞那玩意，没得办法，只能用腾讯云给的二级域名了，这样在GithubPages不稳定的时候，起码还有个备用链接可以访问博客。
-接着给这个二级域名搞CDN加速，拿到的加速域名还更好看一点：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/13.jpg">
-
-到这里，加上之前的配置，博客的访问域名和证书如下：
-
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/17.jpg" >
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/16.jpg" >
+到这里，加上之前的配置，博客的访问域名和对应证书如下：
 
 {% note info %}
 - [jmyblog.top](https://jmyblog.top) 
-是博客本来的域名，阿里云买的，本身解析到了GithubPages，又CNAME到了腾讯云的CDN节点，做了境外CDN加速后开启了强制HTTPS，证书是腾讯云给申请的，TrustAsia签发的，有效期一年(去年6月份申请的)。
+博客本来的域名，阿里云买的，算是博客主站，由GithubPages提供网站托管服务。
+域名本身解析到了GithubPages，又CNAME到了腾讯云的CDN节点，做了境外CDN加速后开启了强制HTTPS，证书是腾讯云给申请的，TrustAsia签发，有效期一年(去年6月份申请的)。
 当然GithubPages也可以开启强制HTTPS，证书是Github给申请的，Let's Encrypt签发的证书，一般有效期是三个月，到期会自动续签。
-至于到底用的那个证书，不太明白这个逻辑，估计跟地域有关系吧，我这里看到的是TrustAsia签发的证书。
-- [jmyblog-top-1306110219.file.myqcloud.com](https://jmyblog-top-1306110219.file.myqcloud.com/) 
-腾讯云给的二级域名，是GithubPages国内访问不稳定时的备选，开启了国内CDN加速和强制HTTPS，证书是腾讯云默认证书，会自动续签。
+至于访问主站时到底用的哪个HTTPS证书，应该跟地域有关系，我这里看到的是TrustAsia签发的证书。
+- [https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com](https://jmyblog-top-1306110219.file.myqcloud.com/) 
+腾讯云的二级域名，现在算是博客在国内的副站，作为GithubPages国内访问不稳定时的备选，由腾讯云Serverless提供网站托管服务，证书是腾讯云默认证书，会自动续签。
 {% endnote %}
 
-## 百度云收录
+## 百度收录
 
 WIP
