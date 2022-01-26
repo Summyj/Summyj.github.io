@@ -33,7 +33,7 @@ CodingPages是一个国内的静态网站托管服务，与GithubPages类似，�
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/2.jpg" >
 
-打开之前升级好的应用，发现开发部署和日志这两项置灰了，看不了细节，估计是因为停服直接凉了：
+打开之前升级好的应用，发现开发部署和日志这两项置灰了，看不了细节：
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/4.jpg" >
 
@@ -73,6 +73,50 @@ CodingPages是一个国内的静态网站托管服务，与GithubPages类似，�
 腾讯云的二级域名，现在算是博客在国内的副站，作为GithubPages国内访问不稳定时的备选，由腾讯云Serverless提供网站托管服务，证书是腾讯云默认证书，会自动续签。
 {% endnote %}
 
-## 百度收录
+## SEO验证
 
-WIP
+由于GithubPages不能被百度抓取，所以想参考 [之前的文章](https://jmyblog.top/BlogSEO/) 把腾讯云给的二级域名做一个百度收录。
+
+### Google收录
+
+之前为了解决 [GithubPages Warning](https://jmyblog.top/PageServiceUpdate/#GithubPages%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3) ，给主站域名加上了www前缀，当时没毛病，后来发现科学上网的时候，访问博客老是会自动加上这个前缀，然后页面就挂了，只有强制去掉www才能正常打开页面。
+所以这次我直接在GithubPages里去掉了www前缀，虽然还是会有Warning，但至少页面不会挂了，之后我需要验证一下自己之前的Google收录是否正常，所以登陆管理台，发现一切ok：
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/18.jpg" alt="少的可怜的web点击量(怀疑都是我点的)">
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/19.jpg" alt="Google搜索域名验证">
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/20.jpg" alt="Google搜索博名验证">
+
+
+### 百度收录
+#### 主站
+
+虽然不能抓取GithubPages，但是聊胜于无，我之前也做过百度的主站收录，就还好吧，只是发现无论是搜索域名还是博名，搜索结果要么很少，要么只能搜到别的结果，可能是因为我没交钱？
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/9.jpg" alt="百度搜索域名验证">
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/8.jpg" alt="百度搜索博名验证">
+
+而且我试着抓取一篇文章，发现也可以抓到，hummm...所以百度不能抓取GithubPages是个谣言？
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/25.jpg" alt="百度抓取文章">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/23.jpg" alt="百度sitemap抓取成功">
+
+#### 副站
+
+然后就是这次搞的副站了，验证站点所有权之后进入管理台，这个只能做手动收录，因为自动收录只能在主站做：
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/21.jpg" alt="副站手动收录">
+
+完了之后同样做搜索验证，发现。。。啥也没有？
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/27.jpg" alt="搜了个寂寞">
+
+但文章是能抓到的：
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/bye-coding-pages/26.jpg" alt="副站抓取成功">
+
+所以就这样吧，我也累了，本次折腾到此结束！
+
+
