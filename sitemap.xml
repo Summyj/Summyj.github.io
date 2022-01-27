@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jmyblog.top/about/index.html</loc>
+    
+    <lastmod>2022-01-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/bye-coding-pages/</loc>
     
     <lastmod>2022-01-27</lastmod>
@@ -129,13 +136,6 @@
   
   <url>
     <loc>https://jmyblog.top/ui-automator-test/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/about/index.html</loc>
     
     <lastmod>2022-01-24</lastmod>
     
