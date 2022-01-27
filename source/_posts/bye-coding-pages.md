@@ -66,9 +66,7 @@ CodingPages是一个国内的静态网站托管服务，与GithubPages类似，�
 {% note info %}
 - [jmyblog.top](https://jmyblog.top) 
 博客本来的域名，阿里云买的，算是博客主站，由GithubPages提供网站托管服务。
-域名本身解析到了GithubPages，又CNAME到了腾讯云的CDN节点，做了境外CDN加速后开启了强制HTTPS，证书是腾讯云给申请的，TrustAsia签发，有效期一年(去年6月份申请的)。
-当然GithubPages也可以开启强制HTTPS，证书是Github给申请的，Let's Encrypt签发的证书，一般有效期是三个月，到期会自动续签。
-至于访问主站时到底用的哪个HTTPS证书，应该跟地域有关系，我这里看到的是TrustAsia签发的证书。
+域名本身解析到了GithubPages，也开启了强制HTTPS，证书是Github给申请的，Let's Encrypt签发的证书，一般有效期是三个月，到期会自动续签。
 - [https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com](https://jmyblog-top-1306110219.file.myqcloud.com/) 
 腾讯云的二级域名，现在算是博客在国内的副站，作为GithubPages国内访问不稳定时的备选，由腾讯云Serverless提供网站托管服务，证书是腾讯云默认证书，会自动续签。
 {% endnote %}
