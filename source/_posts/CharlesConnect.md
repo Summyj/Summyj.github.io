@@ -51,12 +51,28 @@ Charles的基础配置就先这样，下边连接设备的过程中，还需要�
 
 #### 抓取Simulator请求
 
-打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启的，这里还需要设置Charles的SSL Proxy，这样才能抓取到Https的请求，打开{% label primary@Proxy-SSL Proxy Settings%}，添加你想要进行Https抓取的url地址，此后Charles只会抓取此地址的Https请求：
-![SSL Proxy Settings](https://i.loli.net/2021/07/07/fVdGbDXUhPlejHg.png)
-然后就可以正常抓取Simulator里的Https请求了：
-![Simulator请求](https://i.loli.net/2021/07/07/7ihUkHImbWsKJfV.png)
-其他请求则会提示需要开启SSL Proxy Settings：
+打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启的，开启之后Charles左边的请求列表里应该会出现一些请求信息，没有的话建议重启电脑再打开Charle，开启macOS Proxy。
+打开Simulator在你想要抓取请求的测试应用里做一些操作，确保你可以在Charles的请求列表里看到相关信息，如果看不到，可以试试重启Simulator。
+看到你要抓取的请求后，还需要开启SSL Proxy你才能看到请求的具体信息，否则会有下图的提示：
+
 ![需要开启SSL提示](https://i.loli.net/2021/07/07/orQJheFv2mKna91.png)
+
+鼠标选中想要抓取的请求域名，右键在选项列表中开启 SSL Proxy，然后就可以正常抓取Simulator里的Https请求了，如果只想关注这个请求，也可以在右键的选项列表中选中Focus，其他的请求就会被同一分组到Other Hosts：
+
+![右键选项列表](https://i.loli.net/2021/07/07/chOZeBxnHwtNSyM.png)
+![开启SSL Proxy后的Simulator请求](https://i.loli.net/2021/07/07/7ihUkHImbWsKJfV.png)
+
+打开{% label primary@Proxy-SSL Proxy Settings%}，也可以对所有在抓取的请求地址进行管理：
+![SSL Proxy Settings](https://i.loli.net/2021/07/07/fVdGbDXUhPlejHg.png)
+
+
+#### AppleTV 模拟器
+
+以上为iPhone模拟器的Charles配置，AppleTV模拟器的配置也是相似的，首先在下图页面选择 “Save Charles Root Certificate” 选项下载Charles证书保存到本地，比如桌面啥的：
+
+![下载CharlesCA并保存](https://i.loli.net/2021/07/06/6E3AXOaWcfgodDT.png)
+
+之后打开AppleTV模拟器，将下载的Charles证书手动拖到模拟器里，然后进入 Seetings -> General -> About 设置页面，此时下方应有一个证书信任的选项，点击后开启Charles证书的信任Toggle，就完成配置了，请求的抓取和上文是一样的。
 
 ### iOS 真机
 
