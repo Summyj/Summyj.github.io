@@ -1,19 +1,15 @@
 ---
-title: Charles连接iOS和Android设备
+title: Charles抓包配置大全
 date: 2021-07-05 15:12:00
 update: 2021-07-05 15:12:00
-tags: Charles
+tags: Charles抓包
 categories: 搬砖那些事儿
 copyright: true
-description: 抓包移动端请求，测试异常情况。
+description: 利用Charles抓取移动端/浏览器请求。
 top:
 ---
 
-{% note info %}
-这段时间工作时需要用到Charles来抓包移动端请求，配置的过程中踩了不少坑，所幸最后还是成功了，所以记录一下折腾的过程，非常详细，包括iOS和Android两个平台，免得以后又忘了。
-{% endnote %}
-
-## 配置Charles
+## 添加Charles Keychain
 ### 下载Charles CA
 
 打开Charles，依次点击菜单栏 {% label primary@Help - SSL Proxying - Install Charles Root Certificate%}：
@@ -24,7 +20,20 @@ top:
 之后打开电脑的 Keychain Access，搜索 “Charles” 找到Charles CA，然后设置它为始终信任：
 ![设置信任证书](https://i.loli.net/2021/07/06/SEqwaRA6sGPQ3zl.png)
 
-Charles的基础配置就先这样，下边连接设备的过程中，还需要设置一些东西。
+## 浏览器抓包
+
+打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启(打勾)的，开启之后Charles左边的请求列表里应该会出现一些请求信息，这些都是电脑上正在发出的请求，没有的话建议重启电脑再打开Charle，开启macOS Proxy。
+
+打开浏览器在你想要抓取请求的测试网站里做一些操作，直到在Charles请求列表里看到你要抓取的请求，此时还需要开启SSL Proxy你才能看到请求的具体信息，否则会有下图的提示：
+
+![需要开启SSL提示](https://i.loli.net/2021/07/07/orQJheFv2mKna91.png)
+
+鼠标选中想要抓取的请求域名，右键在选项列表中开启 SSL Proxy，然后就可以正常抓取Https请求了，如果只想关注这个请求，也可以在右键的选项列表中选中Focus，其他的请求就会被分组到Other Hosts：
+
+![右键选项列表](https://i.loli.net/2021/07/07/chOZeBxnHwtNSyM.png)
+
+打开{% label primary@Proxy-SSL Proxy Settings%}，也可以对所有在抓取的请求地址进行管理：
+![SSL Proxy Settings](https://i.loli.net/2021/07/07/fVdGbDXUhPlejHg.png)
 
 ## iOS抓包
 ### iOS Simulator
@@ -51,32 +60,61 @@ Charles的基础配置就先这样，下边连接设备的过程中，还需要�
 
 #### 抓取Simulator请求
 
-打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启的，开启之后Charles左边的请求列表里应该会出现一些请求信息，没有的话建议重启电脑再打开Charle，开启macOS Proxy。
-打开Simulator在你想要抓取请求的测试应用里做一些操作，确保你可以在Charles的请求列表里看到相关信息，如果看不到，可以试试重启Simulator。
-看到你要抓取的请求后，还需要开启SSL Proxy你才能看到请求的具体信息，否则会有下图的提示：
+打开Charles, 确保 {% label primary@Proxy-macOS Proxy%}设置是开启的，再打开Simulator在你想要抓取请求的测试应用里做一些操作，确保你可以在Charles的请求列表里看到相关信息，如果看不到，可以试试重启Simulator。
+抓取请求和上文 [浏览器抓包](https://jmyblog.top/charles-connect/#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8A%93%E5%8C%85) 一致。
 
-![需要开启SSL提示](https://i.loli.net/2021/07/07/orQJheFv2mKna91.png)
+![抓取Simulator请求](https://i.loli.net/2021/07/07/7ihUkHImbWsKJfV.png)
 
-鼠标选中想要抓取的请求域名，右键在选项列表中开启 SSL Proxy，然后就可以正常抓取Simulator里的Https请求了，如果只想关注这个请求，也可以在右键的选项列表中选中Focus，其他的请求就会被同一分组到Other Hosts：
+### iOS 真机
+#### 设置Wifi Proxy
 
-![右键选项列表](https://i.loli.net/2021/07/07/chOZeBxnHwtNSyM.png)
-![开启SSL Proxy后的Simulator请求](https://i.loli.net/2021/07/07/7ihUkHImbWsKJfV.png)
+打开Charles，点击 {% label primary@Help - SSL Proxying - Install Charles Root Certificate on a Mobile device or Remote Broswer %}:
+![Charles Proxy](https://i.loli.net/2021/07/07/GLb9lJ2gQIWaUY1.png)
+之后会打开一个弹窗，上边是你的本地IP和Charles默认端口，先别关掉它：
+![Proxy Detail](https://i.loli.net/2021/07/07/98VG6rC3EPwIx4n.png)
+打开真机以下设置，将代理配置改成手动，Server和端口号填写和上面弹窗中的一致，保存设置：
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/charles-connect/1.jpg" width = "500" height = "500" alt="设置Wifi Proxy">
+回到Charles，此时应有一个确认连接的弹窗，点击允许：
+![允许连接](https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/charles-connect/2.jpg)
 
-打开{% label primary@Proxy-SSL Proxy Settings%}，也可以对所有在抓取的请求地址进行管理：
-![SSL Proxy Settings](https://i.loli.net/2021/07/07/fVdGbDXUhPlejHg.png)
+#### 下载Charles CA
 
+打开Safari浏览器(最好打开隐私窗口)，输入 **chls.pro/ssl**，下载Charles CA：
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/charles-connect/4.jpg" width = "500" height = "500" alt="下载CharlesCA">
 
-#### AppleTV 模拟器
+#### 安装Charles CA
 
-以上为iPhone模拟器的Charles配置，AppleTV模拟器的配置也是相似的，首先在下图页面选择 “Save Charles Root Certificate” 选项下载Charles证书保存到本地，比如桌面啥的：
+进入 {% label primary@Settings - General%}，此时应该有一个 **Profile Downloaded** 选项显示，点击进入，按照下图安装即可，直到CA为Verified：
+![安装CharlesCA](https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/charles-connect/6.pic.jpg)
+
+#### 信任Charles CA
+
+去{% label primary@Settings - General - About - Certificate Trust Settings%}，打开Charles CA的信任按钮就好了：
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/charles-connect/3.jpg" width = "230" height = "500" alt="信任CharlesCA">
+
+#### 抓取Simulator请求
+
+与 [上文](https://jmyblog.top/charles-connect/#%E6%8A%93%E5%8F%96Simulator%E8%AF%B7%E6%B1%82) 一致。
+
+## tvOS抓包
+### AppleTV 模拟器
+#### 下载Charles CA
+
+在下图页面选择 “Save Charles Root Certificate” 选项下载Charles证书保存到本地，比如桌面啥的：
 
 ![下载CharlesCA并保存](https://i.loli.net/2021/07/06/6E3AXOaWcfgodDT.png)
 
-之后打开AppleTV模拟器，将下载的Charles证书手动拖到模拟器里，然后进入 Seetings -> General -> About 设置页面，此时下方应有一个证书信任的选项，点击后开启Charles证书的信任Toggle，就完成配置了，请求的抓取和上文是一样的。
+#### 信任Charles CA
 
-### iOS 真机
+打开AppleTV模拟器，将下载的Charles证书手动拖到模拟器里，进入 Seetings -> General -> About 设置页面，此时下方应有一个证书信任的选项，点击后开启Charles证书的信任Toggle，就完成配置了。
 
-此部分还没有尝试过，后续会更新。
+#### 抓取Simulator请求
+
+与 [上文](https://jmyblog.top/charles-connect/#%E6%8A%93%E5%8F%96Simulator%E8%AF%B7%E6%B1%82) 一致。
+
+### AppleTV 真机
+
+WIP
 
 ## Android抓包
 ### Android Emulator
@@ -151,11 +189,11 @@ Charles的基础配置就先这样，下边连接设备的过程中，还需要�
 
 #### 抓取Emulator请求
 
-打开Charles, 然后**关闭** {% label primary@Proxy-macOS Proxy%}设置，其它内容按照上文的 [抓取Simulator请求](https://jmyblog.top/CharlesConnect/#%E6%8A%93%E5%8F%96Simulator%E8%AF%B7%E6%B1%82) 部分做就行了，这里不再赘述。
+打开Charles, 然后**关闭** {% label primary@Proxy-macOS Proxy%}设置，其它内容按照上文iOS部分的抓取Simulator请求做就行了，这里不再赘述。
 
 ### Android真机
 
-此部分还没有尝试过，后续会更新。
+WIP
 
 ## 利用Breakpoints修改并发送请求
 ### 设置Breakpoints
