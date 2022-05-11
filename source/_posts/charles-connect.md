@@ -1,11 +1,11 @@
 ---
-title: Charles抓包配置大全
+title: 真.Charles抓包配置大全
 date: 2021-07-05 15:12:00
 update: 2021-07-05 15:12:00
-tags: Charles抓包
+tags: Charles
 categories: 搬砖那些事儿
 copyright: true
-description: 利用Charles抓取移动端/浏览器请求。
+description: Broswer/iOS/tvOS/Android.
 top:
 ---
 

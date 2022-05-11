@@ -1,15 +1,15 @@
 ---
-title: 我注册了两个交友小程序(上)
+title: 青藤之恋
 date: 2021-12-02 16:42:30
 update: 2021-12-01 16:42:30
-tags: [青藤之恋, 相亲]
-categories: 寻找男嘉宾
+tags:
+categories: 人类观察员
 copyright: true
-description: 青藤之恋，没钱就别找对象。
+description: 没钱就别找对象。
 top:
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg" >
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qing.jpeg" >
 
 ## 一些缘起
 ### 来自老母亲的担忧
@@ -21,7 +21,7 @@ top:
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
 
-看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定亲自寻找男嘉宾🙈
+看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定自己寻找男嘉宾🙈
 
 ### 朋友的推荐
 
@@ -113,6 +113,4 @@ hummm...大概这样，一切都是这么的顺利，所以开始的时候我是
 欢:broken_heart:
 我也有今天:joy:，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。
 后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。
-
-祝我脱单成功。
 

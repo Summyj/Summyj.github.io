@@ -1,15 +1,15 @@
 ---
-title: 我注册了两个交友小程序(下)
+title: 二狗平台
 date: 2021-12-10 16:42:30
 update: 2021-12-01 16:42:30
-tags: [二狗单身青年自救平台, 相亲]
-categories: 寻找男嘉宾
+tags:
+categories: 人类观察员
 copyright: true
-description: 二狗单身青年自救平台，真.单身狗福音。
+description: 总算靠点谱了。
 top:
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/i-want-u.jpeg" >
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/gouzi.jpg" >
 
 
 ## 初印象
