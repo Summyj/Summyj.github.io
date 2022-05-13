@@ -22,13 +22,17 @@ top:
 ## No.7 飞行员
 
 同事介绍的飞行员小哥哥，人不错！聊天也没有槽点，很主动，有来有回的聊了一段时间。
+
 但问题在于我们异地，而且飞行员的工作很忙，人家又在考虑飞国际，我们生活上的交点就更少了，我劝他在当地或者公司找个同事，可他同事也是飞行员(男生)，找空姐吧也不容易发展，因为每次飞遇到的人都不一样，后来我尝试说服他同性相吸。。。无果，只能祝他幸福了。
 
 ## No.8 音乐小王子
 
 华为的程序员，每天加班回到家还得聊天找对象，我经常觉得他很心酸。
+
 在二狗的纸飞机认识的，背景是我有段时间在二狗上吃瓜太多狗粮不够了，所以发个纸飞机问下大家都是咋获得狗粮的，然后就解锁了交友新姿势，因为不用加好友就可以直接在纸飞机聊起来。
+
 聊了几句他说要加我微信，因为平台规则是不能在这里发联系方式什么的，我怕被抓就让他发:
+
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7791.jpg" height=500 width=250>
 
 在微信上互相交流了下个人基本信息，开始了两个互联网人之间的对话：
@@ -40,7 +44,7 @@ top:
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7794.JPG" height=500 width=250>
 
-他又来给我推荐歌了，真.一月一首，后来我劝他别找对象了，醉心于音乐吧，时间一长肯定大有所成[手动狗头]
+他又来给我推荐歌了:joy:，真.一月一首，后来我劝他别找对象了，醉心于音乐吧，时间一长肯定大有所成[手动狗头]
 
 ## No.9 阿汤哥
 
@@ -59,7 +63,7 @@ top:
 
 {% tabs 无奖问答 %}
 <!-- tab -->
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/hhhh.gif" height=520 width=250>
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/new.gif" height=520 width=250>
 <!-- endtab -->
 <!-- tab -->
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7811.JPG" height=500 width=250>
@@ -67,7 +71,7 @@ top:
 {% endtabs %}
 
 别装了，我知道你们跟我一样，看完只会猜到一些「不可描述」的事情。。。
-总之阿汤哥很interesting，但我们真的不合适，所以只能让他去找别的女嘉宾然后祝他成功。
+总之阿汤哥很励志，但我们真的不合适，所以只能让他去找别的女嘉宾，然后祝他成功！
 
 ## No.10 得不到的男人
 
