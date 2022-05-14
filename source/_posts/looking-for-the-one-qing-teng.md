@@ -14,14 +14,22 @@ top:
 ## 一些缘起
 ### 来自老母亲的担忧
 
-前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。
-换作从前，我一定拒绝，因为我一直不喜欢这种目的性很强的相亲活动，但最近几年经过同事和朋友的劝(xi)说(nao)，感觉这也是认识别人的一种方式，所以也没那么抗拒了。
-由于老母亲和我一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。
-在我的追问下，她交代了自己在用的一个相亲小程序:
+前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。由于我们一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。在我的追问下，她交代了自己在用的一个相亲小程序:
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/xun-yuan-xiao-cheng-xu.jpg" width="200" height="400" alt="寻缘">
 
-看到这充满土味的「寻缘」页面，我突然觉得把找对象这件事交给老母亲，是一个不太明智的选择，为了证明自己更专业，我决定自己寻找男嘉宾🙈
+看到这充满土味的「寻缘」页面，又想起之前她让我加的「好心人」推荐给她的相亲群：
+
+{% tabs 好心人的故事 %}
+<!-- tab -->
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/IMG_7878.JPG" height=460 width=250>
+<!-- endtab -->
+<!-- tab -->
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/IMG_7876.jpg" height=480 width=250>
+<!-- endtab -->
+{% endtabs %}
+
+我突然觉得把找对象这件事交给老母亲，有点过于草率了，不过不就是对象么，找就找呗，我要开始认真了。
 
 ### 朋友的推荐
 
