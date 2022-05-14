@@ -4,7 +4,7 @@ date: 2022-03-19 14:24:19
 update: 2022-03-19 14:24:19
 categories: 人类观察员
 copyright: true
-description: 这世界那么多人。
+description: to die or not to die?
 top:
 ---
 
@@ -62,8 +62,10 @@ top:
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/IMG_7830.jpg" height=300 width=220 alt="我真的哭了">
 
-原本只是搓搓手想表达对这个称呼的不适，结果他又来了一个更诡异的reaction:joy:
+原本只是搓搓手想表达对这个称呼的不适，结果他又发了一个更诡异的reaction:joy:
+
 我不理解，两个刚认识不到两周的人，只见了一次面，就已经发展到可以叫「宝宝」的程度了吗？是世界变化太快还是我太old school?
+
 无论是什么，都让我觉得很下头，我想了想，可能是他有点太急于确定一段关系了，对我而言，我只是把他当作刚认识的一个朋友而已，所以没办法满足他的期待，当然也就没继续聊下去了，之前的饭钱还是AA了，最后我有跟他讨论过「宝宝」这个称呼：
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/baobao.jpg" height=100 width=220 alt="「正常」">

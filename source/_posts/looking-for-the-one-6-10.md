@@ -1,10 +1,10 @@
 ---
-title: 朋友圈里的陌生人
+title: 单身都是有原因的
 date: 2022-03-13 22:00:48
 update: 2022-03-13 22:00:48
 categories: 人类观察员
 copyright: true
-description: 单身都是有原因的。
+description: 朋友圈里的陌生人。
 top:
 ---
 
@@ -23,7 +23,11 @@ top:
 
 同事介绍的飞行员小哥哥，人不错！聊天也没有槽点，很主动，有来有回的聊了一段时间。
 
-但问题在于我们异地，而且飞行员的工作很忙，人家又在考虑飞国际，我们生活上的交点就更少了，我劝他在当地或者公司找个同事，可他同事也是飞行员(男生)，找空姐吧也不容易发展，因为每次飞遇到的人都不一样，后来我尝试说服他同性相吸。。。无果，只能祝他幸福了。
+但问题在于我们异地，而且他工作很忙，人家又在考虑飞国际，我们生活上的交点就更少了，我劝他在当地或者公司找个同事，可他认识的同事大多是飞行员(男生)，找空姐也不容易发展，因为每次飞遇到的人都不一样，无果，只能祝他幸福了。
+
+不过飞行员真的好酷！
+
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_5712.JPG" alt="夜幕(飞行员视角)">
 
 ## No.8 音乐小王子
 
@@ -39,7 +43,7 @@ top:
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_779923.JPG" height=500 width=250>
 
-聊到爱好，他说自己喜欢音乐，在学乐理什么的，然后推荐了一首歌给我，因为我唱歌还不错就让我唱这首，我录了歌发给他，然后问他还有什么别的歌推荐，就没有然后了。。。
+聊到爱好，他说自己喜欢音乐，在学乐理什么的，然后推荐了一首歌给我，因为我唱歌还不错就让我唱这首，我录了歌发给他，然后问他还有什么别的歌推荐，就没有然后了(被我的美妙歌声震慑住了？)。。。
 一个月之后：
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7794.JPG" height=500 width=250>
@@ -66,7 +70,7 @@ top:
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/new.gif" height=520 width=250>
 <!-- endtab -->
 <!-- tab -->
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7811.JPG" height=500 width=250>
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7811.JPG" height=500 width=250 alt="我觉得没救了">
 <!-- endtab -->
 {% endtabs %}
 
@@ -77,5 +81,5 @@ top:
 
 刚开始看到他是在二狗，主页照片非常的小奶狗(虽然人家年纪比我大)，后来在青藤上查看日推男嘉宾的时候又碰见了，这可不是缘分吗？然后就互相关注聊起来了。
 他说自己找对象已经自闭了，我就鼓励他不要放弃，说我俩星座很搭要不试试，就再也没有收到回复了。
-我不死心，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。
-其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」，我知道这是说我丑的意思，不说了我去更新主页照片了，美颜开十级那种。
+我(wei)不(se)死(suo)心(mi)，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。
+其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」(~~可能~~ 是说我丑？)，要不我考虑去整个容吧。。。
