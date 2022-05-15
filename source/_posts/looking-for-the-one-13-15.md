@@ -67,7 +67,7 @@ top:
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/tx.jpg" height=350 width=250>
 <!-- endtab -->
 <!-- tab -->
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/tx1.jpg" height=500 width=250 alt="还是做自己吧">
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/tx1.jpg" height=500 width=250 alt="让他做自己吧">
 <!-- endtab -->
 {% endtabs %}
 
@@ -100,8 +100,8 @@ top:
 他还是会给我发早安晚安，被拉去团建可能涉及到饮酒的时候，甚至会给我发消息说希望我别介意，可是，我真的不介意。
 
 说实话，他身上有很多大众公认的优点，比如健身、看书，确实很优秀，有时候觉得他很「老干部」，有时候又觉得他是个同龄人(上边聊天记录也可以看出来)，也会发一些表情包，很反差。
+对待感情也非常认真主动，可我们确实没什么共同话题，我真的努力了，但还是改变不了我们完全聊不到一块这个事实，或许有腹肌的帅哥都注定不会属于小姐姐(腐眼看人基)？说实话我还偷偷磕过他和12号的CP(我错了)，不过一旦接受了这个设定。。。
 
-对待感情也非常认真主动，虽然我们确实没什么共同话题，但我真的努力了，可还是改变不了我们完全聊不到一块这个事实。
 怕他对我抱有太多期待，我想请他吃顿饭当面聊聊，跟他坦白，但是他真的太忙了，约了好几次都约不上，就直接在微信上跟他说了：
 
 <img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/11-20/IMG_7946.JPG" height=400 width=400>
