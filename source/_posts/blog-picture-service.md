@@ -47,3 +47,17 @@ Github单个仓库的容量限制在1G左右，所以把图片保存在代码仓
 
 - [免费CDN：jsDelivr+Github 使用方法](https://zhuanlan.zhihu.com/p/76951130)
 - [一次艰难的图床选择经历(MWeb+PicGo+Github)](https://www.jianshu.com/p/a200f116c3ce)
+
+## 更新
+
+一点都不香了！！！这个有50M的限制。。。到了图片就访问不了了：
+
+![不香了](https://s2.loli.net/2022/05/28/8Qm2D7XIKtTJcey.png)
+
+所以目前还是用回 [SM.MS](https://sm.ms/) ，现在有Dashboard可以管理图片了：
+
+![image.png](https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png)
+
+还有5G的存储，也算靠谱了：
+
+![image.png](https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png)
