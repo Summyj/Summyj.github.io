@@ -56,8 +56,8 @@ Github单个仓库的容量限制在1G左右，所以把图片保存在代码仓
 
 所以目前还是用回 [SM.MS](https://sm.ms/) ，现在有Dashboard可以管理图片了：
 
-![image.png](https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png)
+![DashBoard](https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png)
 
 还有5G的存储，也算靠谱了：
 
-![image.png](https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png)
+![5GLimit](https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png)
