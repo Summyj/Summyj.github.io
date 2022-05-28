@@ -8,14 +8,14 @@ description: 朋友圈里的陌生人。
 top:
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/1652248087641.jpg" >
+<img src="https://s2.loli.net/2022/05/28/al8tGVduY54c3Oi.jpg" >
 
 ## No.6 人在美国
 
 二狗上加我的校友，在美国哥伦比亚读博。
 后来我们还加了微信，因为时差，我睡觉的时候他刚醒，他睡觉的时候我在搬砖，我们之间的对话大概是这样的：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7788.JPG" height=400 width=250 alt="别爱我没结果">
+<img src="https://s2.loli.net/2022/05/28/PYILeEtGQSc9W1h.jpg" height=400 width=250 alt="别爱我没结果">
 
 现在是彼此朋友圈的点赞之交。
 
@@ -27,7 +27,7 @@ top:
 
 不过飞行员真的好酷！
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_5712.JPG" alt="夜幕(飞行员视角)">
+<img src="https://s2.loli.net/2022/05/28/ldshUAJ4S6GWzQe.jpg" alt="夜幕(飞行员视角)">
 
 ## No.8 音乐小王子
 
@@ -37,16 +37,16 @@ top:
 
 聊了几句他说要加我微信，因为平台规则是不能在这里发联系方式什么的，我怕被抓就让他发:
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7791.jpg" height=500 width=250>
+<img src="https://s2.loli.net/2022/05/28/kOfXMHuWEFYgIRJ.jpg" height=500 width=250>
 
 在微信上互相交流了下个人基本信息，开始了两个互联网人之间的对话：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_779923.JPG" height=500 width=250>
+<img src="https://s2.loli.net/2022/05/28/6U8bYIasKOH3Zme.jpg" height=500 width=250>
 
 聊到爱好，他说自己喜欢音乐，在学乐理什么的，然后推荐了一首歌给我，因为我唱歌还不错就让我唱这首，我录了歌发给他，然后问他还有什么别的歌推荐，就没有然后了(被我的美妙歌声震慑住了？)。。。
 一个月之后：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7794.JPG" height=500 width=250>
+<img src="https://s2.loli.net/2022/05/28/B5iE947cS3RaYAj.jpg" height=500 width=250>
 
 他又来给我推荐歌了:joy:，真.一月一首，后来我劝他别找对象了，醉心于音乐吧，时间一长肯定大有所成[手动狗头]
 
@@ -61,16 +61,16 @@ top:
 
 闻到鸡汤的味道了吗？所以是阿汤哥：
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7812.JPG" height=380 width=250>
+<img src="https://s2.loli.net/2022/05/28/Yx39RJXTQnaKowk.jpg" height=380 width=250>
 
 接下来无奖问答，请问下图中他在排队做什么(切到第二个tab看答案)？
 
 {% tabs 无奖问答 %}
 <!-- tab -->
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/new.gif" height=520 width=250>
+<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/new.gif" height=520 width=250>
 <!-- endtab -->
 <!-- tab -->
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one-1-10/IMG_7811.JPG" height=500 width=250 alt="我觉得没救了">
+<img src="https://s2.loli.net/2022/05/28/T9hdpSaYVJZv4yg.jpg" height=500 width=250 alt="我觉得没救了">
 <!-- endtab -->
 {% endtabs %}
 
