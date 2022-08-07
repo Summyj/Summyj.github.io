@@ -1,12 +1,14 @@
 ---
-title: 又开始营业了
+title: 喜欢和不喜欢其实都没道理
 date: 2022-08-06 14:08:55
 update: 2022-07-31 14:08:55
 categories: 人类观察员
 copyright: true
-description: 还是难。
+description: 又开始营业了。
 top:
 ---
+
+<img src="https://s2.loli.net/2022/08/07/Ly74AfgW3cOT1eM.png">
 
 ## No.13 「月光男孩」
 
