@@ -66,7 +66,7 @@ top:
 <img src="https://s2.loli.net/2022/06/23/K6XwuRcNnGvsoi7.png" height=250 width=400 alt="和夜色融为一体的吉吉">
 
 {% note info %}
-以后的日子，就和黑猫吉吉一起修行吧！
+不知道吉吉具体的出生日期，只说它两个月大，所以我选择了一个喜庆的日子(4.1)作为它的生日，以后的日子，就和黑猫吉吉一起修行吧！
 {% endnote %}
 
 <img src="https://s2.loli.net/2022/06/23/IQXychPb6wKnuJO.png" height=300 width=310 alt="黑猫吉吉">

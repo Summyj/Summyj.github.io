@@ -4,8 +4,8 @@ comments: true
 type: "about"
 ---
 
-{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/000/032.htm 关于幽闭型小说 %}
-人生惟一的不幸就是自己的无能。
+{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
+那一天我二十一岁，在我一生的黄金时代。我有好多奢望，我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
 {% endblockquote %}
 ---
 <!-- <img src="https://i.loli.net/2021/07/03/6XYkWHefnZ85hql.jpg" width="200" height="200"> -->
@@ -18,8 +18,7 @@ type: "about"
 {% endcq %}
 
 {% note info %}
-本站基于**Hexo**框架搭建，并部署在 [GithubPages](https://jmyblog.top/) 和 [腾讯云Serverless](https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/) 上，由于前者是国外服务所以访问最好科学上网，否则有时候会打不开(尤其是晚上)，这时候推荐访问后者。以前写过 [一篇文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more) 来介绍搭建过程，但现在已经不适用了，不过可以看个热闹。
+本站用 [Hexo](https://hexo.io/) 框架搭建，并部署在 [GithubPages](https://summyj.github.io/) 和 [腾讯云Serverless](https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/) 上，以前写过 [一篇文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more) 来介绍搭建过程，但现在已经不适用了，不过可以看个热闹。
 博客搭建之前的文章记录在 [CSDN](https://blog.csdn.net/summy_j) 中，都是一些技术博客，但是里面的内容我现在已经看不懂了，因为工作中大多都没有用到。
-这里主要更新一些学习笔记、工(ban)作(zhuan)总结，还有一些旅行游记和生活感悟。
-如果你有问题想问博主，或者对博客有一些建议，可以通过在文章下评论，以及博客右下角的聊天弹窗和我联系(都是匿名的)；评论方式回复较慢(livere提示功能目前有一些bug)，所以推荐后者，我会尽量5mins内回复大家(毕竟不能时刻盯着手机)
+这里会更新我的一些工(ban)作(zhuan)总结和生活感悟，家人们也可以用博客右下角的匿名聊天弹窗和我联系。
 {% endnote %}
