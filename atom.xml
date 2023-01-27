@@ -6,7 +6,7 @@
   <link href="https://jmyblog.top/atom.xml" rel="self"/>
   
   <link href="https://jmyblog.top/"/>
-  <updated>2022-12-31T09:23:43.329Z</updated>
+  <updated>2023-01-27T11:19:07.143Z</updated>
   <id>https://jmyblog.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>两个人的春节</title>
+    <link href="https://jmyblog.top/sf-of-2p/"/>
+    <id>https://jmyblog.top/sf-of-2p/</id>
+    <published>2023-01-27T08:49:51.000Z</published>
+    <updated>2023-01-27T11:19:07.143Z</updated>
+    
+    <content type="html"><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png"><div class="note info"><p>种种原因，今年我没能和家人一起过年，但是，我还有小甜甜呀～</p><p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，他突然出现，带着一堆花炮，说要陪我一起跨年：</p><img data-src="https://s2.loli.net/2023/01/27/BPcStgCWyN95L4s.jpg" height="300" width="400" alt="惊喜跨年❤️"><p>之后春节假期，每一天都有他的陪伴，两个人过年，也很温馨快乐。</p><p>疫情放开以来，我一直没被感染。</p><p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p><p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p><p>这才不是一篇水文呢喂！</p></div>]]></content>
+    
+    
+    <summary type="html">和小甜甜的快乐时光~</summary>
+    
+    
+    
+    <category term="人生是一场未知的旅行" scheme="https://jmyblog.top/categories/%E4%BA%BA%E7%94%9F%E6%98%AF%E4%B8%80%E5%9C%BA%E6%9C%AA%E7%9F%A5%E7%9A%84%E6%97%85%E8%A1%8C/"/>
+    
+    
+    <category term="春节" scheme="https://jmyblog.top/tags/%E6%98%A5%E8%8A%82/"/>
+    
+  </entry>
   
   <entry>
     <title>我的2022</title>
@@ -398,33 +419,6 @@
     
     <category term="人类观察员" scheme="https://jmyblog.top/categories/%E4%BA%BA%E7%B1%BB%E8%A7%82%E5%AF%9F%E5%91%98/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Github+jsDelivr创建个人图床</title>
-    <link href="https://jmyblog.top/blog-picture-service/"/>
-    <id>https://jmyblog.top/blog-picture-service/</id>
-    <published>2021-11-19T01:49:24.000Z</published>
-    <updated>2022-05-28T14:17:26.195Z</updated>
-    
-    <content type="html"><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN@1.1/images/blog-picture-service/1.jpg"><h2 id="关于图床"><a href="#关于图床" class="headerlink" title="关于图床"></a>关于图床</h2><p>俗话说「无图言X」，图片就相当于博客的灵魂，非常重要。</p><p>在Hexo博客里插入图片，一般用html和markdown两种格式，指定图片路径之后才能展示在页面上，这里又有两种方式：</p><ul><li>图片保存在Github代码仓库，直接指定仓库里的图片路径来访问。</li><li>图片上传到「图床」，获取图片外链，用外链来展示图片。</li></ul><p>Github单个仓库的容量限制在1G左右，所以把图片保存在代码仓库，不但占用资源，而且由于GithubPages是国外服务，在国内访问加载慢，容易导致图片挂掉。</p><p>所以用图床服务，是明智的选择。一个好的图床，应该保证图片在国内外访问的稳定性，而且还能做一个图片仓库，保存博客的图片，起到文件备份的作用。</p><p>然而，同时满足这两个要求的图床，都是收费的，而且要做域名备案，比如七牛云等；作为一个怕麻烦的穷逼，这显然不是我的option，年少无知的时候用过七牛云，没想到用的只是一个测试外链，结果期限一到图片全挂了，真是血的教训。</p><p>之后我一直都用的免费图床，比如微博图床、PicGo等等，但各有各的槽点，写这篇文章之前我用的是 <a href="https://sm.ms/">SM.MS</a>，使用很方便，虽然加载速度尚可，可有时图片也会挂，而且它无法做文件备份，所以一直以来我的博客图片都像在裸奔，十分没有保障。</p><p>今天终于有闲暇再折腾图床了，然后我就发现了Github+jsDelivr的图床创建方式。</p><h2 id="Github-jsDelivr"><a href="#Github-jsDelivr" class="headerlink" title="Github+jsDelivr"></a>Github+jsDelivr</h2><ul><li>Github: 谁人不知</li><li><a href="https://www.jsdelivr.com/">jsDelivr</a>: 一个开源、免费的CDN工具</li></ul><div class="note info"><p>简而言之，就是说在Github上创建一个专门用来保存博客图片的仓库，把图片的github链接传给jsDelivr，生成一个CDN图片外链，然后再插入到博客里。<br>这样，就生成了自己的图床，图片上传到github，文件备份可以放心了；访问图片时有jsDelivr做CDN加速，速度也ok了，它不香吗？<br>虽然图片还是保存在github仓库，有1个G的容量限制，但且不说博客图片啥时候才能到1个G，就算1个G，还可以再新建一个github库来存。</p></div><p>具体做法请直接看参考文章第一篇，人说的挺清楚了，我就不啰嗦了。</p><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul><li><a href="https://zhuanlan.zhihu.com/p/76951130">免费CDN：jsDelivr+Github 使用方法</a></li><li><a href="https://www.jianshu.com/p/a200f116c3ce">一次艰难的图床选择经历(MWeb+PicGo+Github)</a></li></ul><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>一点都不香了！！！这个有50M的限制。。。到了图片就访问不了了：</p><p><img data-src="https://s2.loli.net/2022/05/28/8Qm2D7XIKtTJcey.png" alt="不香了"></p><p>所以目前还是用回 <a href="https://sm.ms/">SM.MS</a> ，现在有Dashboard可以管理图片了：</p><p><img data-src="https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png" alt="DashBoard"></p><p>还有5G的存储，也算靠谱了：</p><p><img data-src="https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png" alt="5GLimit"></p>]]></content>
-    
-    
-    <summary type="html">啧，太香了。</summary>
-    
-    
-    
-    <category term="维护小破站" scheme="https://jmyblog.top/categories/%E7%BB%B4%E6%8A%A4%E5%B0%8F%E7%A0%B4%E7%AB%99/"/>
-    
-    
-    <category term="图床" scheme="https://jmyblog.top/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-    <category term="Github" scheme="https://jmyblog.top/tags/Github/"/>
-    
-    <category term="jsDelivr" scheme="https://jmyblog.top/tags/jsDelivr/"/>
-    
-    <category term="CDN" scheme="https://jmyblog.top/tags/CDN/"/>
     
   </entry>
   
