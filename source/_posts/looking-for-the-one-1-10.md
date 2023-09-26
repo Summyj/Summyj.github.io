@@ -2,7 +2,8 @@
 title: 这世界那么多人
 date: 2022-02-26 13:55:42
 update: 2022-02-27 13:55:42
-categories: 人类观察员
+tags: 人类观察员
+categories: 人生是一场未知的旅行
 copyright: true
 description: 一些人间精品。
 top:

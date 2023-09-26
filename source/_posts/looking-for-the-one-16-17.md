@@ -2,7 +2,8 @@
 title: 喜欢和不喜欢其实都没道理
 date: 2022-08-06 14:08:55
 update: 2022-07-31 14:08:55
-categories: 人类观察员
+tags: 人类观察员
+categories: 人生是一场未知的旅行
 copyright: true
 description: 又开始营业了。
 top:

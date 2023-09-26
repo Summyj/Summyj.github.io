@@ -2,7 +2,8 @@
 title: 网友见面
 date: 2022-03-19 14:24:19
 update: 2022-03-19 14:24:19
-categories: 人类观察员
+tags: 人类观察员
+categories: 人生是一场未知的旅行
 copyright: true
 description: to be or not to be.
 top:

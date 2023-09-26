@@ -2,7 +2,8 @@
 title: 世界的参差
 date: 2022-04-01 12:33:56
 update: 2022-05-15 12:33:56
-categories: 人类观察员
+tags: 人类观察员
+categories: 人生是一场未知的旅行
 copyright: true
 description: 每个人都有自己的小世界。
 top:
