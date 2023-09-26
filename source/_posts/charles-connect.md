@@ -114,7 +114,14 @@ top:
 
 ### AppleTV 真机
 
-WIP
+![apple tv 真机连接](https://s2.loli.net/2023/09/26/bD1HSg9vL4BeRlU.png)
+
+apple tv有4Ktv和HDtv两种设备(4k比较难搞)，需要下载一个神奇的软件 apple configurator 连接tv(上图)后再以profile的方式安装Charles，可以参考 [这个链接](https://www.willowtreeapps.com/craft/a-how-to-guide-for-apple-tv-setup-with-charles-proxy) （需要科学上网）
+
+如果按照链接做的还是不顺利，这里有一些trouble shooting: 
+1. supervise tv不用路由器也可以，买一条type-c转网口的线把tv和mac连起来，再开启mac的internet sharing，这样mac和tv也在一个网段就可以开始配置
+2. tv reset之后一定不要动遥控器，先Pair!
+3. supervise之后理论上mac和tv连到同一个wifi，就可以在apple configurator的paired device里看到tv然后成功pair，不顺利的话先尝试在tv的remote app and devices页面remove设备再尝试打开apple configurator pair，还是不行那么恭喜你跟我一样，只能通过tv和mac连线的方式pair tv(HDtv用双头typeC线，4Ktv用type-C转网口线按照第一条连上), 这个是硬连接绝对不会断，甚至不用打开tv的remote app and devices页面pair就可以在apple configurator里看到设备。
 
 ## Android抓包
 ### Android Emulator
