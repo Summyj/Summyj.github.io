@@ -12,7 +12,7 @@ top:
 <img src="https://s2.loli.net/2022/08/21/EcVkwOKxCmU4svj.jpg" >
 
 {% note info %}
-前段时间一个 [冤种同事](https://blog.kedamanga.com/) 推荐了两本书给我看，主题比较相似，一个是教人怎么好好活着，一个是看别人怎么好好活着，两本书都让我有不同程度的共鸣，然后下面是一些我个人的想法。
+前段时间一个 [怨种同事](https://blog.kedamanga.com/) 推荐了两本书给我看，主题比较相似，一个是教人怎么好好活着，一个是看别人怎么好好活着，两本书都让我有不同程度的共鸣，然后下面是一些我个人的想法。
 {% endnote %}
 
 ## [人生的智慧](https://book.douban.com/subject/1292409/)
