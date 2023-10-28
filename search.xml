@@ -2063,7 +2063,14 @@
 <p><img data-src="https://i.loli.net/2021/07/06/6E3AXOaWcfgodDT.png" alt="下载CharlesCA并保存"></p>
 <h4 id="信任Charles-CA-3"><a href="#信任Charles-CA-3" class="headerlink" title="信任Charles CA"></a>信任Charles CA</h4><p>打开AppleTV模拟器，将下载的Charles证书手动拖到模拟器里，进入 Seetings -&gt; General -&gt; About 设置页面，此时下方应有一个证书信任的选项，点击后开启Charles证书的信任Toggle，就完成配置了。</p>
 <h4 id="抓取Simulator请求-2"><a href="#抓取Simulator请求-2" class="headerlink" title="抓取Simulator请求"></a>抓取Simulator请求</h4><p>与 <a href="https://jmyblog.top/charles-connect/#%E6%8A%93%E5%8F%96Simulator%E8%AF%B7%E6%B1%82">上文</a> 一致。</p>
-<h3 id="AppleTV-真机"><a href="#AppleTV-真机" class="headerlink" title="AppleTV 真机"></a>AppleTV 真机</h3><p>WIP</p>
+<h3 id="AppleTV-真机"><a href="#AppleTV-真机" class="headerlink" title="AppleTV 真机"></a>AppleTV 真机</h3><p><img data-src="https://s2.loli.net/2023/09/26/bD1HSg9vL4BeRlU.png" alt="apple tv 真机连接"></p>
+<p>apple tv有4Ktv和HDtv两种设备(4k比较难搞)，需要下载一个神奇的软件 apple configurator 连接tv(上图)后再以profile的方式安装Charles，可以参考 <a href="https://www.willowtreeapps.com/craft/a-how-to-guide-for-apple-tv-setup-with-charles-proxy">这个链接</a> （需要科学上网）</p>
+<p>如果按照链接做的还是不顺利，这里有一些trouble shooting: </p>
+<ol>
+<li>supervise tv不用路由器也可以，买一条type-c转网口的线把tv和mac连起来，再开启mac的internet sharing，这样mac和tv也在一个网段就可以开始配置</li>
+<li>tv reset之后一定不要动遥控器，先Pair!</li>
+<li>supervise之后理论上mac和tv连到同一个wifi，就可以在apple configurator的paired device里看到tv然后成功pair，不顺利的话先尝试在tv的remote app and devices页面remove设备再尝试打开apple configurator pair，还是不行那么恭喜你跟我一样，只能通过tv和mac连线的方式pair tv(HDtv用双头typeC线，4Ktv用type-C转网口线按照第一条连上), 这个是硬连接绝对不会断，甚至不用打开tv的remote app and devices页面pair就可以在apple configurator里看到设备。</li>
+</ol>
 <h2 id="Android抓包"><a href="#Android抓包" class="headerlink" title="Android抓包"></a>Android抓包</h2><h3 id="Android-Emulator"><a href="#Android-Emulator" class="headerlink" title="Android Emulator"></a>Android Emulator</h3><h4 id="设置Wifi-Proxy-1"><a href="#设置Wifi-Proxy-1" class="headerlink" title="设置Wifi Proxy"></a>设置Wifi Proxy</h4><p>打开Charles，点击 <mark class="label primary">Help - SSL Proxying - Install Charles Root Certificate on a Mobile device or Remote Broswer</mark>:<br><img data-src="https://i.loli.net/2021/07/07/GLb9lJ2gQIWaUY1.png" alt="Charles Proxy"><br>之后会打开一个弹窗，上边是你的本地IP和Charles默认端口，先别关掉它：<br><img data-src="https://i.loli.net/2021/07/07/98VG6rC3EPwIx4n.png" alt="Proxy Detail"><br>先确保模拟器网络连接正常，之后去 <mark class="label primary">Settings-Network &amp; internet-WiFi</mark>，可以看到连接到了<strong>AndroidWifi</strong>，然后按照下图设置此Wifi的Proxy，点击Wifi后的设置按钮，点击铅笔图标，将Proxy设置为Manual，Hostname和Port就是上边弹窗里对应的值：<br><img data-src="https://i.loli.net/2021/07/07/Z159rMfjOetoEuS.png" alt="设置Wifi Proxy"></p>
 <h4 id="下载Charles-CA-4"><a href="#下载Charles-CA-4" class="headerlink" title="下载Charles CA"></a>下载Charles CA</h4><p>打开模拟器的Chrome浏览器，输入 <strong>chls.pro/ssl</strong>，之后弹出下载Charles CA的提示框，选择下载：<br><img data-src="https://i.loli.net/2021/07/07/Pfxc64zlbBUF97y.png" width="230" height="500" alt="下载CA"><br>如果没有网络，尝试冷启动模拟器，看模拟器下拉框中有没有关于Wifi的限制连接提示，点击之后选择仍要连接，应该就有网了，之后再去浏览器下载CA：<br><img data-src="https://i.loli.net/2021/07/07/7M98LEFyqQSitXa.png" width="650" height="550" alt="连接网络"><br>如果这样还是下载不了，那么打开Charles，点击点击 <mark class="label primary">Help - SSL Proxying - Save Charles Root Certificate</mark> 将Charles CA下载到本地:<br><img data-src="https://i.loli.net/2021/07/07/i2JhtF56X9kWI8L.png" alt="Save Charles Root Certificate"><br>然后手动将文件拖到模拟器，也是一样的。</p>
 <h4 id="安装Charles-CA-2"><a href="#安装Charles-CA-2" class="headerlink" title="安装Charles CA"></a>安装Charles CA</h4><p>进入模拟器<mark class="label primary">Settings - Security - Encryption&amp;credentials</mark>。</p>
@@ -2255,8 +2262,11 @@
 <p>hummm…可能是外向的孤独患者，需要认可。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>单身都是有原因的</title>
@@ -2300,8 +2310,11 @@
 <h2 id="No-10-得不到的男人"><a href="#No-10-得不到的男人" class="headerlink" title="No.10 得不到的男人"></a>No.10 得不到的男人</h2><p>刚开始看到他是在二狗，主页照片非常的小奶狗(虽然人家年纪比我大)，后来在青藤上查看日推男嘉宾的时候又碰见了，这可不是缘分吗？然后就互相关注聊起来了。<br>他说自己找对象已经自闭了，我就鼓励他不要放弃，说我俩星座很搭要不试试，就再也没有收到回复了。<br>我(wei)不(se)死(suo)心(mi)，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。<br>其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」(<del>可能</del> 是说我丑？)，要不我考虑去整个容吧。。。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>网友见面</title>
@@ -2365,8 +2378,11 @@
 <p>本来觉得这种类型的交友除了在一起，最后的结局都只能相忘于江湖，但因为我们都觉得彼此挺能处的，所以现在算是朋友。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>二狗平台</title>
@@ -2430,8 +2446,11 @@
 <p>一个多月过去了，由于西安的疫情，寻找男嘉宾大计进展缓慢，没有太多故事可以更新，所以暂时搁置这个系列，等我找到了男嘉宾，或者像那个小红书的博主一样放弃了，再来回顾我和他们的故事吧，我希望我的结局是前者🙈</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>青藤之恋</title>
@@ -2491,8 +2510,11 @@
 <p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>我的前1/3 of 2021</title>
@@ -4118,8 +4140,11 @@
 <p>我们这辈子的聊天就这样结束了。<br>我愿称这个同事为「冤种同事」，真的会谢好吗。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>人类大多都在寻找着什么吧</title>
@@ -4147,8 +4172,11 @@
 <p>15号以后，我没有遇到更多的人了，感觉观察人类也是很大的精神内耗，而且这段时间一直厄运缠身，处理了很多杂事，还有很多的胡思乱想，没有精力去寻找了，暂且先停留一会吧。</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>增驾摩托车奇幻之旅(中)</title>
@@ -4709,15 +4737,18 @@
 <div class="note info"><p>一些题外话：人类观察员营业太久了，说实话我现在更多的不是抱着找对象的态度去认识男嘉宾，而真的只是观察人类而已，每次认识一个人，我都想看看他什么时候开始「不对劲」。。。<br>不过我觉得有个朋友说的话很有道理：「当你不是为了找对象而做这件事的时候，没准真正的人正在悄悄的出现」，嗯，但愿他说的对。</p>
 </div>]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>最近读了几本书</title>
     <url>/books-thinking/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/08/21/EcVkwOKxCmU4svj.jpg">
 
-<div class="note info"><p>前段时间一个 <a href="https://blog.kedamanga.com/">冤种同事</a> 推荐了两本书给我看，主题比较相似，一个是教人怎么好好活着，一个是看别人怎么好好活着，两本书都让我有不同程度的共鸣，然后下面是一些我个人的想法。</p>
+<div class="note info"><p>前段时间一个 <a href="https://blog.kedamanga.com/">怨种同事</a> 推荐了两本书给我看，主题比较相似，一个是教人怎么好好活着，一个是看别人怎么好好活着，两本书都让我有不同程度的共鸣，然后下面是一些我个人的想法。</p>
 </div>
 
 <h2 id="人生的智慧"><a href="#人生的智慧" class="headerlink" title="人生的智慧"></a><a href="https://book.douban.com/subject/1292409/">人生的智慧</a></h2><p>这本书其实是后人成书，出自叔本华的封笔之作《附录和补遗》。</p>
@@ -4862,8 +4893,11 @@
 <p>第二天，我没联系他，他也没理我，嗯，是两个成熟的相亲人了，啊不对，我明明是人类观察员！所以观察的结果就是他是个正常人，然后，相亲很专业，看来经历了很多，Over.</p>
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>将故事写成我们</title>
@@ -5016,8 +5050,11 @@
 
 ]]></content>
       <categories>
-        <category>人类观察员</category>
+        <category>人生是一场未知的旅行</category>
       </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
   </entry>
   <entry>
     <title>我的2022</title>
@@ -5111,6 +5148,67 @@
       </categories>
       <tags>
         <tag>我爱工作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>罗生门</title>
+    <url>/luo-sheng-men/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/26/C1qOvPiJBL47sD2.jpg">
+
+<h2 id="一个故事"><a href="#一个故事" class="headerlink" title="一个故事"></a>一个故事</h2><p>时为日本平安朝(794-1192)，接连灾祸导致经济萧条，饿殍遍野，弱肉强食。</p>
+<p>某冬日傍晚，大雨，冷风萧瑟。</p>
+<p>一位不久前被主人家辞退的家丁，在罗生门(日本京都中央大道朱雀路南端的一个城门)下躲雨，纠结着自己是要等着被饿死，或是去做强盗不择手段的活下去？</p>
+<p>心中尚存的善念劝他选择前者，可求生的本能还是迫使他选择后者，现在的他，需要一种勇气，做强盗的勇气。</p>
+<p>夜渐凉，他决定去门楼上过夜挨到清晨再说。于是猫着腰慢慢拾级而上，在最上一级时，小心翼翼地往里窥视。门楼内果如传闻一般，尸骸遍地，腐臭难闻，忽见尸骸中蹲着一小老太，正借着蜡烛的微光在拔一具女尸的头发。</p>
+<p>看到这情景，家丁先是骇然，后又生出强烈的对老太行为的憎恶，最终上升到对一切罪恶的反感。此时若是重又提起刚才委决不下的问题，他一定会毫不犹豫地选择饿死。</p>
+<p>趁这样的雨夜，在楼门上拔死人的头发，真是不可饶恕。</p>
+<p>于是他一跃而上，手持刀柄闪身到老太面前，呵问她为何如此，老太吓的不轻，又被挡住了逃跑的去路，只能颤声答道：头发拔下来后，去做假发。</p>
+<p>只是这样？家丁大失所望。察觉到他轻蔑的神情，老太又结巴道：拔死人头发或许不对，可这女人生前却将蛇肉充做鱼肉拿去卖，若非得了瘟疫，恐怕至今还在做这营生，不过她也是没法子，不这么做就得饿死，跟我现在一样，既然都没办法，我想她也就能谅解了。</p>
+<p>听老太这样说，家丁心中渐渐鼓起了勇气，一种刚才在门楼下所缺的勇气。饿死还是当强盗，他已不再犹疑，甚至根本不去考量还有饿死这一说。</p>
+<p>他嘲讽道：说得也对。突然上前一步揪住老太的脖颈，狠声说道：既然这样，我扒你的衣服，你也不会怪我吧，我也是不得已，否则就得饿死！</p>
+<p>他麻利的抢下衣服夹在腋下，一脚踹开老太，跨步下楼，消失在夜色里，无人知晓他的下落。</p>
+<h2 id="罗生门"><a href="#罗生门" class="headerlink" title="罗生门"></a>罗生门</h2><blockquote>
+<p>罗生门，原本只是一个城门的名字，却因上面的故事，被后人延伸为一种现象：当事情发生时，所有人都按照利于自己的方式来表述情况，从而让真相本身变得扑朔迷离，难以分辨，揭露出人性利己的本质。</p>
+</blockquote>
+<p>就像故事中的老太，女尸生前真如她所说这么不堪吗？还是她怕家丁伤害自己而编出这套说辞呢？即便她所说属实，也不是她通过拔私人头发这种下作手段来谋生的理由，这样说，只是为了给自己找一个心安的托词罢了。</p>
+<p>而这种托词，也给了家丁勇气，让他不必承受良心的谴责，最终选择做一个强盗。</p>
+<h2 id="作者其人"><a href="#作者其人" class="headerlink" title="作者其人"></a>作者其人</h2><p>每当读一本书时，我总习惯先了解作者的生平，而看完芥川龙之介的经历，就不难理解他的作品为何总是贯穿着对人性利己和丑恶现实的剖析了。</p>
+<p>芥川龙之介，1892年出生，他出生不久母亲就精神失常，后又去世，父亲多子且素来与生母不睦，他便由无子的舅父收养。十二岁时被生父废去长子继承权，销去户籍，他由此改姓正式成为芥川家养子。</p>
+<p>养父家是没落的旧世家，为维持体面，撙节度日，且家教严格，礼法繁缛，从小寄人篱下的他事事隐忍。一生未嫁的大姨母如生母般养育他，但也难免彼此伤害，因爱生恨。龙之介自小聪敏，成绩优秀，且养父一家颇好文艺，所以他自幼就受传统文化的熏陶，接触日本和中国古典文学。</p>
+<p>对于创作，他并不是那种从自身经历取材的作家，事实上，他很不认同这种做法，讨厌“将自家一己的私事，不知羞耻地写给人看”。他所有的知识都来自书本，从书中认识人生，了解人性，也从书中取材。在探讨人生、考察人性的过程中，他发现了人世间的丑恶。在写给友人的信中写道“周围尽是丑恶，自己也丑恶，面对周围的丑恶，活着就是痛苦的事”，对人性感到失望。</p>
+<p>由于道德上的“洁癖”，他极为重视人的精神世界。虽非有神论者，却十分欣赏和尊敬信教的人，以为虔诚的信仰和内心的清明，可以形成一种崇高的道德情操。他关注基督教却并未入教，始终是个冷静的旁观者，因为他做不到相信上帝，只是从艺术的角度喜欢基督教。他尤对殉教者深表崇敬，”那种为信仰奉献一切的牺牲精神，可以带来生命的升华“。</p>
+<p>1927年，龙之介服安眠药自杀，生命停留在了35岁，临终时，摆放枕边的，是一本打开的圣经。</p>
+<p>生母发狂，为人养子，个性压抑，让他终生背负着精神负累。且他从小身体孱弱，病痛不断，在人生最后那段时间里，神经衰弱、胃痉挛、肠炎、心悸接踵而来，也因担心母亲的精神病会遗传给他，经常出现幻觉，夜不能寐。他一生都在探求人性，揭露人性之恶，可这何尝不体现出他对人性善的向往和追求？他也最终解脱了自己，去寻找想象中的灵魂净土。</p>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>罗生门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客好久没更了</title>
+    <url>/why-am-not-writing-more-blogs/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
+
+<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
+<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
+<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
+<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
+<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
+<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
+<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
+<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
+<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
+<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
+</div>
+]]></content>
+      <categories>
+        <category>人生是一场未知的旅行</category>
+      </categories>
+      <tags>
+        <tag>瞎写写</tag>
       </tags>
   </entry>
   <entry>
