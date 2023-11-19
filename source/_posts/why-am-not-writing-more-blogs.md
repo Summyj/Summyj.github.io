@@ -5,7 +5,7 @@ update: 2023-10-12 15:54:59
 tags: 瞎写写
 categories: 人生是一场未知的旅行
 copyright: true
-description: 有在认真(zhao)反(jie)思(kou)。
+description: 重新思考写博客的意义。
 top:
 ---
 
@@ -32,3 +32,5 @@ top:
 
 说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 [不智慧](https://jmyblog.top/books-thinking/) 了)，所以断更是不可能断更的，最多瞎写写这样子。
 {% endnote %}
+
+> 11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈
