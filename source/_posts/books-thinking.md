@@ -3,7 +3,7 @@ title: 最近读了几本书
 date: 2022-08-21 11:01:45
 update: 2022-08-21 11:01:45
 tags: [幸福论, 隐居]
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 一些读后感。
 top:

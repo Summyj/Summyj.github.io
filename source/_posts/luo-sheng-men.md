@@ -3,7 +3,7 @@ title: 罗生门
 date: 2023-6-6 15:42:42
 update: 2023-10-26 15:42:42
 tags: 罗生门
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 人性利己。
 top:

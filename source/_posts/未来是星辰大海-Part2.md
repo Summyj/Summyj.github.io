@@ -3,7 +3,7 @@ title: 未来是星辰大海_Part2
 date: 2018-04-09 13:22:15
 update: 2018-04-09 13:22:15
 tags: 人生规划
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright:
 top:
 ---

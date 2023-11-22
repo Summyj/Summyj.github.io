@@ -3,7 +3,7 @@ title: 国庆成都三日游
 date: 2020-10-10 20:11:16
 update: 2021-06-27 20:11:16
 tags: [旅行]
-categories: [人生是一场未知的旅行]
+categories: [人生奇旅]
 copyright: true
 description: 成都，我来了；成都，我走了。
 top:

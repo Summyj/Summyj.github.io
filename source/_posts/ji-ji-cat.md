@@ -3,7 +3,7 @@ title: 我和黑猫吉吉
 date: 2022-06-19 21:49:06
 update: 2022-06-19 21:49:06
 tags: 撸猫
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 一起修行吧。
 top:

@@ -3,7 +3,7 @@ title: 将故事写成我们
 date: 2022-10-23 14:08:55
 update: 2022-07-31 14:08:55
 tags: 人类观察员
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 牵手成功！
 top:

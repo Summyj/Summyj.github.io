@@ -3,7 +3,7 @@ title: 我的厨艺进阶之路
 date: 2020-10-17 10:45:35
 update: 2020-12-03 10:45:35
 tags: [Cook]
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 吃好喝好，长生不老。
 top:

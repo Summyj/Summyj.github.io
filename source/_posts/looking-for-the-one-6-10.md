@@ -3,7 +3,7 @@ title: 单身都是有原因的
 date: 2022-03-13 22:00:48
 update: 2022-03-13 22:00:48
 tags: 人类观察员
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 朋友圈里的陌生人。
 top:

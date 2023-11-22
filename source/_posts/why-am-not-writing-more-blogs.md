@@ -3,7 +3,7 @@ title: 博客好久没更了
 date: 2023-10-12 15:54:59
 update: 2023-10-12 15:54:59
 tags: 瞎写写
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 重新思考写博客的意义。
 top:

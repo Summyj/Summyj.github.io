@@ -3,7 +3,7 @@ title: 一次被征服的爬山之旅
 date: 2019-06-03 20:09:04
 update: 2021-06-27 20:09:04
 tags: [爬山]
-categories: [人生是一场未知的旅行]
+categories: [人生奇旅]
 copyright: true
 description: 劝一个讨厌的人去爬华山吧。
 ---

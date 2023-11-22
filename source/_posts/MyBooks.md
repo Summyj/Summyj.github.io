@@ -3,7 +3,7 @@ title: 我的书架
 date: 2020-01-06 15:01:26
 update: 2020-01-06 15:01:26
 tags: [书单]
-categories: 人生是一场未知的旅行
+categories: 人生奇旅
 copyright: true
 description: 说说我书架上的那些书，供诸君参考品鉴。
 top:

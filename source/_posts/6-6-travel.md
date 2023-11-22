@@ -3,7 +3,7 @@ title: 端午色达四日游
 date: 2019-06-20 18:36:50
 update: 2021-06-27 18:36:50
 tags: [旅行]
-categories: [人生是一场未知的旅行]
+categories: [人生奇旅]
 copyright: true
 description: 依然是和朋友一起出去浪的语文课代表试游记。
 top:
