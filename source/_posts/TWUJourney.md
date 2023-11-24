@@ -253,9 +253,17 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 
 首先就是日常通勤啦，上下班都有大巴来接，分不同的班次，大概十几分钟的路程。
 上班路上看到的浦那街头壁画[《河的故事》](https://www.punebiennale.in/yerwada-mural-song-of-the-city.php)：
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNTE4MzA5OTg1Mg==' frameborder=0 'allowfullscreen'></iframe>
+
+<video width="500" height="300" controls>
+    <source src="../videos/Punewalldraw.mp4" type=video/mp4>
+</video>
+
 这个视频是从浦那办公室出发，到我们住所的全程路线，别的小伙伴拍的：
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNTE4MzQxMDUwNA==' frameborder=0 'allowfullscreen'></iframe>
+
+<video width="500" height="300" controls>
+    <source src="../videos/TWUindiaworkpath.mp4" type=video/mp4>
+</video>
+
 
 ### 组团出行
 
