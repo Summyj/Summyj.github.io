@@ -3,7 +3,7 @@ title: 我的2022
 date: 2022-12-31 15:30:20
 update: 2022-12-31 15:30:20
 tags: 2022
-categories: 人生奇旅
+categories: 心灵奇旅
 copyright: true
 description: 25岁是一个坎？
 top:

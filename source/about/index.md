@@ -4,7 +4,7 @@ comments: true
 type: "about"
 ---
 
-{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
+{% blockquote 王小波 https://book.douban.com/subject/1089243/ 黄金时代 %}
 那一天我二十一岁，在我一生的黄金时代。我有好多奢望，我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
 {% endblockquote %}
 ---
@@ -18,7 +18,7 @@ type: "about"
 {% endcq %}
 
 {% note info %}
-本站用 [Hexo](https://hexo.io/) 框架搭建，并部署在 [GithubPages](https://summyj.github.io/) 和 [腾讯云Serverless](https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/) 上，以前写过 [一篇文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more) 来介绍搭建过程，但现在已经不适用了，不过可以看个热闹。
+本站用 [Hexo](https://hexo.io/) 框架搭建，并部署在 [GithubPages](https://pages.github.com/) 和 [腾讯云Serverless](https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/) 上，以前写过 [一篇文章](http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more) 来介绍搭建过程，但现在已经不适用了，不过可以看个热闹。
 博客搭建之前的文章记录在 [CSDN](https://blog.csdn.net/summy_j) 中，都是一些技术博客，但是里面的内容我现在已经看不懂了，因为工作中大多都没有用到。
 这里会更新我的一些工(ban)作(zhuan)总结和生活感悟，家人们也可以用博客右下角的匿名聊天弹窗和我联系。
 {% endnote %}

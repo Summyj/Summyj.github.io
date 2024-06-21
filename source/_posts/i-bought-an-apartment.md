@@ -3,7 +3,7 @@ title: 我买房了
 date: 2023-08-28 11:25:05
 update: 2023-11-12 11:25:05
 tags: 买房
-categories: 人生奇旅
+categories: 心灵奇旅
 copyright: true
 description: 博主喜提21年负债。
 top:

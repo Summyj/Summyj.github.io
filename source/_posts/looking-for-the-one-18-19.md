@@ -3,7 +3,7 @@ title: 老实憨厚的程序员
 date: 2022-09-24 14:08:55
 update: 2022-07-31 14:08:55
 tags: 人类观察员
-categories: 人生奇旅
+categories: 人类观察员
 copyright: true
 description: 其实是拥有多重身份的程序员。
 top:

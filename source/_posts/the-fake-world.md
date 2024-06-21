@@ -3,7 +3,7 @@ title: 世界就是草台班子
 date: 2023-11-23 12:32:17
 update: 2023-11-24 12:32:17
 tags: [世界观]
-categories: 人生奇旅
+categories: 心灵奇旅
 copyright: true
 description: 要学会和解。
 top:

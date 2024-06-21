@@ -3,7 +3,7 @@ title: 青藤之恋
 date: 2021-12-02 16:42:30
 update: 2021-12-01 16:42:30
 tags: 人类观察员
-categories: 人生奇旅
+categories: 人类观察员
 copyright: true
 description: 没钱就别找对象。
 top:

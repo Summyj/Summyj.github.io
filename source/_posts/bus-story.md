@@ -3,7 +3,7 @@ title: 雨天挤公交有感
 date: 2021-09-01 15:21:56
 update: 2021-09-01 15:21:56
 tags: [活着]
-categories: 人生奇旅
+categories: 心灵奇旅
 copyright: true
 description: 下雨天挤公交，是门艺术。
 top:
