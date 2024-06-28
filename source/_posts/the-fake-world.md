@@ -5,7 +5,7 @@ update: 2023-11-24 12:32:17
 tags: [世界观]
 categories: 心灵奇旅
 copyright: true
-description: 凑合过呗。
+description: 凑合活着。
 top:
 ---
 
