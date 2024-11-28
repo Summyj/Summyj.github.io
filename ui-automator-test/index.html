@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.loli.net/css?family=ZCOOL+XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jmyblog.top","root":"/","images":"/images","scheme":"Mist","version":"8.5.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="UiAutomator介绍，环境准备和测试项目的创建。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UiAutomator初体验(上)">
+<meta property="og:url" content="https://jmyblog.top/ui-automator-test/index.html">
+<meta property="og:site_name" content="谁把钱丢了">
+<meta property="og:description" content="UiAutomator介绍，环境准备和测试项目的创建。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/04/k28chb6SsBjpIwH.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/04/WPT7VcmHapot1J5.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/04/r2IeHSdCPiasYbn.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/04/1Hz826lcKeNWPwV.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/04/dgVfhKHEDsjRt95.png">
+<meta property="article:published_time" content="2021-08-03T03:20:35.000Z">
+<meta property="article:modified_time" content="2024-07-30T03:27:41.699Z">
+<meta property="article:author" content="谁把钱丢了">
+<meta property="article:tag" content="自动化测试">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="UiAutomator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png">
+
+
+<link rel="canonical" href="https://jmyblog.top/ui-automator-test/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jmyblog.top/ui-automator-test/","path":"ui-automator-test/","title":"UiAutomator初体验(上)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>UiAutomator初体验(上) | 谁把钱丢了</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谁把钱丢了" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">谁把钱丢了</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everyday struggle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UiAutomator%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">UiAutomator介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.</span> <span class="nav-text">创建测试项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%86%9F%E6%82%89%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">熟悉项目结构</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="谁把钱丢了"
+      src="/images/avatar_cat.jpg">
+  <p class="site-author-name" itemprop="name">谁把钱丢了</p>
+  <div class="site-description" itemprop="description">吃好喝好，长生不老。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button site-overview-item animated">
+    <button onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    你好哇
+  </button>
+  </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Summyj" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Summyj" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=444951&auto=0&height=66"></iframe>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/phodal/tangping" title="https:&#x2F;&#x2F;github.com&#x2F;phodal&#x2F;tangping" rel="noopener" target="_blank">躺平</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jmyblog.top/ui-automator-test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar_cat.jpg">
+      <meta itemprop="name" content="谁把钱丢了">
+      <meta itemprop="description" content="吃好喝好，长生不老。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="谁把钱丢了">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          UiAutomator初体验(上)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-03 11:20:35" itemprop="dateCreated datePublished" datetime="2021-08-03T11:20:35+08:00">2021-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" itemprop="url" rel="index"><span itemprop="name">搬砖那些事儿</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">UiAutomator介绍，环境准备和测试项目的创建。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <img data-src="https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png">
+
+<blockquote>
+<p>前段时间博主写了 <a href="https://jmyblog.top/AppUI-AutoTest/">系列文章</a> 来介绍移动端的UI自动化，主要工具是Appium。之后发现Appium还是存在一些问题，比如定位不到元素、运行时间长等等。<br>后来又针对Android平台spike了其它的工具，比如Espresso、UiAutomator，它们都是安卓官网推荐的测试工具，参考了网上诸多文章，如 <a target="_blank" rel="noopener" href="https://medium.com/@phamngocson.l13cla/espresso-vs-ui-automator-66af8232259d">Espresso vs Ui Automator</a>。<br>结论是Espresso拥有更多高级的方法，但它对代码能力的要求比较高，所以对于一般QA来说难以使用，而UiAutomator更容易上手，所以我选择了UiAutomator，本来想用一篇博客介绍的，但篇幅太长，所以分了三篇博客分享。</p>
+</blockquote>
+<h2 id="UiAutomator介绍"><a href="#UiAutomator介绍" class="headerlink" title="UiAutomator介绍"></a>UiAutomator介绍</h2><p>UiAutomator是什么呢？参考 <a target="_blank" rel="noopener" href="https://developer.android.com/training/testing/ui-automator">官网介绍</a> ：</p>
+<div class="note info"><p>UI Automator 测试框架提供了一组 API，用于构建在用户应用和系统应用上执行交互的界面测试。通过 UI Automator API，您可以执行在测试设备中打开“设置”菜单或应用启动器等操作。UI Automator 测试框架非常适合编写黑盒式自动化测试，此类测试的测试代码不依赖于目标应用的内部实现细节。</p>
+</div>
+<p>hummm…官方介绍总是给人一种似懂非懂的感觉，不过问题不大，接下来我们通过实践来深入了解UiAutomator <span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1.下载 <a target="_blank" rel="noopener" href="https://developer.android.com/studio">Android Studio</a>，下载后打开以下设置确保sdk location正确：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><br>2.下载 <a target="_blank" rel="noopener" href="https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.pkg">JDK 8</a> ，这里版本一定要是8，否则打不开uiautomatorviewer工具。<br>3.下载 <a target="_blank" rel="noopener" href="https://download.eclipse.org/eclipse/downloads/drops4/R-4.20-202106111600/">swt</a> ，滑到页面底部找到这里，按照对应平台下载即可：</p>
+<p><img data-src="https://i.loli.net/2021/08/04/k28chb6SsBjpIwH.png" alt="下载swt"><br>这个也是为了打开uiautomatorviewer工具，因为uiautomatorviewer自带的swt包有一些问题，所以得自己下载一个，这个感觉是uiautomatorviewer的一个bug。<br>下载之后解压，然后把里面的swt.jar重命名为swt2.jar：</p>
+<p><img data-src="https://i.loli.net/2021/08/04/WPT7VcmHapot1J5.png" alt="swt2.jar"><br>进入上文的sdk location目录，然后再依次打开<mark class="label primary">tools/lib/x86</mark> 目录，可以看到uiautomatorviewer自带的swt包，然后复制刚才的swt2.jar到这里(我也不知道为啥不干脆替换掉原有的swt包)，下面的x86_64目录也要做同一操作：</p>
+<p><img data-src="https://i.loli.net/2021/08/04/r2IeHSdCPiasYbn.png" alt="添加swt2.jar"><br>4.所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)</span><br><span class="line">export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools</span><br><span class="line">AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)</span><br><span class="line">export AAPT_HOME</span><br><span class="line">export PATH=$PATH:$AAPT_HOME</span><br></pre></td></tr></tbody></table></figure>
+<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效，然后执行 <strong>java -version</strong>，确保java版本正确。</p>
+<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>打开Android Studio创建新项目，因为我们是要写测试，而不是开发App，所以选择No Activity后继续，这里我把项目名和包名改成了自定义的，你也可以改成别的；项目语言有Java和Kotlin，其实两者非常相像，语法略有不同，这里我选了Kotlin，你也可以用Java，影响不大：</p>
+<p><img data-src="https://i.loli.net/2021/08/04/1Hz826lcKeNWPwV.png" alt="创建项目"><br>之后Android Studio会开始用Gradle构建你的项目，右下角可以看到进度，构建完成后，在页面左上角下拉框中切换到Project视图，可以看到项目结构：</p>
+<p><img data-src="https://i.loli.net/2021/08/04/dgVfhKHEDsjRt95.png" alt="项目结构"></p>
+<h2 id="熟悉项目结构"><a href="#熟悉项目结构" class="headerlink" title="熟悉项目结构"></a>熟悉项目结构</h2><p>这是一个最基本的安卓项目代码结构，根目录和app模块各有一个build.gradle文件，我们重点关注 <strong>app</strong> 模块，src里有三个目录，main目录里一般存放App的activity文件，这里没有是因为我们前边选择了No Activity，不过这个与测试无瓜。<br>其他两个目录 <strong>androidTest</strong> 和 <strong>test</strong> 分别用来存放app的插桩测试(Instrumented tests)和单元测试，单元测试我们都知道，那什么是插桩测试呢？<br>同样引用 <a target="_blank" rel="noopener" href="https://developer.android.com/studio/test#test_types_and_location">官网介绍</a>：</p>
+<div class="note info"><p>插桩测试，位于 module-name/src/androidTest/java/ 目录，这些测试在硬件设备或模拟器上运行。这些测试有权使用 Instrumentation API，可让您获取某些信息（例如您要测试的应用的 Context），并且可让您通过测试代码来控制受测应用。在编写集成和功能界面测试来自动执行用户交互时，或者当您的测试具有模拟对象无法满足的 Android 依赖项时，可以使用这些测试。</p>
+</div>
+<p>很明显，我们要写的就是这种测试，所以无论是UiAutomator测试，还是上文提到的Espresso测试，都应该写在各模块文件夹里的AndroidTest目录中。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    我很可爱🙈 请给我钱
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.JPG" alt="谁把钱丢了 某微">
+        <span>某微</span>
+      </div>
+      <div>
+        <img src="/images/alipay.JPG" alt="谁把钱丢了 某宝">
+        <span>某宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>谁把钱丢了
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jmyblog.top/ui-automator-test/" title="UiAutomator初体验(上)">https://jmyblog.top/ui-automator-test/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 自动化测试</a>
+              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+              <a href="/tags/UiAutomator/" rel="tag"><i class="fa fa-tag"></i> UiAutomator</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/three-years-after-graduation/" rel="prev" title="工作三年后">
+                  <i class="fa fa-chevron-left"></i> 工作三年后
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/ui-automator-test-2/" rel="next" title="UiAutomator初体验(中)">
+                  UiAutomator初体验(中) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC8yOTk4Mi82NTQ3"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">谁把钱丢了</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">229k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">12:44</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+<div class="poem">
+<span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+</div>
+
+<div class="time">
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/01/2017 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Site running "+dnum+"d ";
+        document.getElementById("times").innerHTML = hnum + "h " + mnum + "m " + snum + "s";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+<script class="next-config" data-name="chatra" type="application/json">{"enable":true,"async":true,"id":"HwteKQryWizAu3qrz"}</script>
+<script src="/js/third-party/chat/chatra.js"></script>
+<script async src="https://call.chatra.io/chatra.js"></script>
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script>
+
+</body>
+</html>
