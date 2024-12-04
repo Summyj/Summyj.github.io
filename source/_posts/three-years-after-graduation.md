@@ -3,7 +3,7 @@ title: 工作三年后
 date: 2021-07-24 12:47:29
 update: 2021-07-31 12:47:29
 tags: [工作, 生活]
-categories: 心灵奇旅
+categories: 搬砖那些事儿
 copyright: true
 description: 搬砖三年，归来仍是素人。
 top:
