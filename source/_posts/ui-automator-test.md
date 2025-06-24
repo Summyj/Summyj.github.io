@@ -9,7 +9,7 @@ description: UiAutomator介绍，环境准备和测试项目的创建。
 top:
 ---
 
-<img src="https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png" >
+{% img https://i.loli.net/2021/07/31/hT5tpAjqk2xZN8L.png %}
 
 >前段时间博主写了 [系列文章](https://jmyblog.top/AppUI-AutoTest/) 来介绍移动端的UI自动化，主要工具是Appium。之后发现Appium还是存在一些问题，比如定位不到元素、运行时间长等等。
 后来又针对Android平台spike了其它的工具，比如Espresso、UiAutomator，它们都是安卓官网推荐的测试工具，参考了网上诸多文章，如 [Espresso vs Ui Automator](https://medium.com/@phamngocson.l13cla/espresso-vs-ui-automator-66af8232259d)。
@@ -27,18 +27,18 @@ hummm...官方介绍总是给人一种似懂非懂的感觉，不过问题不大
 
 1.下载 [Android Studio](https://developer.android.com/studio)，下载后打开以下设置确保sdk location正确：
 
-![sdk location](https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png)
+{% img https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png %}
 2.下载 [JDK 8](https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.pkg) ，这里版本一定要是8，否则打不开uiautomatorviewer工具。
 3.下载 [swt](https://download.eclipse.org/eclipse/downloads/drops4/R-4.20-202106111600/) ，滑到页面底部找到这里，按照对应平台下载即可：
 
-![下载swt](https://i.loli.net/2021/08/04/k28chb6SsBjpIwH.png)
+{% img https://i.loli.net/2021/08/04/k28chb6SsBjpIwH.png %}
 这个也是为了打开uiautomatorviewer工具，因为uiautomatorviewer自带的swt包有一些问题，所以得自己下载一个，这个感觉是uiautomatorviewer的一个bug。
 下载之后解压，然后把里面的swt.jar重命名为swt2.jar：
 
-![swt2.jar](https://i.loli.net/2021/08/04/WPT7VcmHapot1J5.png)
+{% img https://i.loli.net/2021/08/04/WPT7VcmHapot1J5.png %}
 进入上文的sdk location目录，然后再依次打开{% label primary@tools/lib/x86 %} 目录，可以看到uiautomatorviewer自带的swt包，然后复制刚才的swt2.jar到这里(我也不知道为啥不干脆替换掉原有的swt包)，下面的x86_64目录也要做同一操作：
 
-![添加swt2.jar](https://i.loli.net/2021/08/04/r2IeHSdCPiasYbn.png)
+{% img https://i.loli.net/2021/08/04/r2IeHSdCPiasYbn.png %}
 4.所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：
 {% codeblock lang:command %}
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk
@@ -57,10 +57,10 @@ export PATH=$PATH:$AAPT_HOME
 
 打开Android Studio创建新项目，因为我们是要写测试，而不是开发App，所以选择No Activity后继续，这里我把项目名和包名改成了自定义的，你也可以改成别的；项目语言有Java和Kotlin，其实两者非常相像，语法略有不同，这里我选了Kotlin，你也可以用Java，影响不大：
 
-![创建项目](https://i.loli.net/2021/08/04/1Hz826lcKeNWPwV.png)
+{% img https://i.loli.net/2021/08/04/1Hz826lcKeNWPwV.png %}
 之后Android Studio会开始用Gradle构建你的项目，右下角可以看到进度，构建完成后，在页面左上角下拉框中切换到Project视图，可以看到项目结构：
 
-![项目结构](https://i.loli.net/2021/08/04/dgVfhKHEDsjRt95.png)
+{% img https://i.loli.net/2021/08/04/dgVfhKHEDsjRt95.png %}
 
 ## 熟悉项目结构
 

@@ -1,9 +1,4 @@
-body {
-  background:url(https://i.loli.net/2019/12/20/XBfqokC4Zuptcb7.png);
-  background-attachment: fixed;
-  background-size: cover;
-  opacity: 1;
-}
+/* 移除背景图片，使用主题默认背景 */
 
 span#inline-toc {
     display: inline-block;
@@ -14,3 +9,746 @@ span#inline-toc {
     margin: 2px 5px 2px 0px;
     line-height: 1.5;
 }
+
+/* ==================== Medium风格文章样式 - 仅应用于文章页面和页面 ==================== */
+/* 使用.post.posts-expand和.page.posts-expand类确保只在文章页面和页面生效，不影响首页 */
+
+/* 主要内容区域 - 仅在文章页面和页面应用宽度限制，不影响首页 */
+/* 大屏桌面端 (≥1200px) */
+@media screen and (min-width: 1200px) {
+    .post.posts-expand .main,
+    .post.posts-expand,
+    .post.posts-expand .content,
+    .post.posts-expand .content-wrap,
+    .page.posts-expand .main,
+    .page.posts-expand,
+    .page.posts-expand .content,
+    .page.posts-expand .content-wrap {
+        max-width: 750px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}
+
+/* 中屏桌面端 (992px-1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .main,
+    .post.posts-expand,
+    .post.posts-expand .content,
+    .post.posts-expand .content-wrap,
+    .page.posts-expand .main,
+    .page.posts-expand,
+    .page.posts-expand .content,
+    .page.posts-expand .content-wrap {
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}
+
+/* 平板端和移动端 (<992px) 保持主题默认宽度，不做限制 */
+
+/* 仅在桌面端覆盖Next主题的默认宽度变量 - 只影响文章页面和页面 */
+@media screen and (min-width: 992px) {
+    .post.posts-expand,
+    .page.posts-expand {
+        --content-desktop: 750px !important;
+        --content-desktop-large: 750px !important;
+        --content-desktop-largest: 750px !important;
+    }
+}
+
+/* 文章内容样式 - 仅应用于文章页面和页面，完整Medium风格 */
+.post.posts-expand .post-body,
+.page.posts-expand .post-body {
+    color: #242424 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.003em !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-size: 18px !important; /* 从20px减小到18px */
+    line-height: 1.58 !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .post-body,
+    .page.posts-expand .post-body {
+        font-size: 17px !important; /* 从18px减小到17px */
+        line-height: 1.6 !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .post.posts-expand .post-body,
+    .page.posts-expand .post-body {
+        font-size: 16px !important; /* 从18px减小到16px */
+        line-height: 1.6 !important;
+    }
+}
+
+/* 段落样式 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body p,
+.page.posts-expand .post-body p {
+    margin: 0 0 1.5em 0 !important;
+    color: #242424 !important;
+    font-weight: 400 !important;
+    word-break: break-word !important;
+}
+
+/* 标题样式 - 仅应用于文章页面和页面，Medium风格 */
+.post.posts-expand .post-body h1,
+.post.posts-expand .post-body h2,
+.post.posts-expand .post-body h3,
+.post.posts-expand .post-body h4,
+.post.posts-expand .post-body h5,
+.post.posts-expand .post-body h6,
+.page.posts-expand .post-body h1,
+.page.posts-expand .post-body h2,
+.page.posts-expand .post-body h3,
+.page.posts-expand .post-body h4,
+.page.posts-expand .post-body h5,
+.page.posts-expand .post-body h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    letter-spacing: -0.022em !important;
+    margin: 2em 0 0.5em 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* Medium风格标题字体大小 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body h1,
+.page.posts-expand .post-body h1 {
+    font-size: 2.2em !important;
+    margin-top: 1.5em !important;
+}
+
+.post.posts-expand .post-body h2,
+.page.posts-expand .post-body h2 {
+    font-size: 1.8em !important;
+    margin-top: 2em !important;
+}
+
+.post.posts-expand .post-body h3,
+.page.posts-expand .post-body h3 {
+    font-size: 1.5em !important;
+}
+
+.post.posts-expand .post-body h4,
+.page.posts-expand .post-body h4 {
+    font-size: 1.3em !important;
+}
+
+.post.posts-expand .post-body h5,
+.post.posts-expand .post-body h6,
+.page.posts-expand .post-body h5,
+.page.posts-expand .post-body h6 {
+    font-size: 1.1em !important;
+}
+
+/* 引用块样式 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body blockquote,
+.page.posts-expand .post-body blockquote {
+    border-left: 3px solid #57ad68 !important;
+    padding: 0 0 0 23px !important;
+    margin: 2em 0 !important;
+    font-style: italic !important;
+    font-size: 1.0em !important; /* 从1.1em减小到1.0em，与正文相同 */
+    line-height: 1.48 !important;
+    color: #6b6b6b !important;
+    background: none !important;
+}
+
+.post.posts-expand .post-body blockquote p,
+.page.posts-expand .post-body blockquote p {
+    margin: 0 !important;
+    color: #6b6b6b !important;
+}
+
+/* 代码样式 - Medium风格 */
+.post.posts-expand .post-body code,
+.page.posts-expand .post-body code {
+    background: #f7f7f7 !important;
+    color: #e74c3c !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+    font-size: 0.85em !important;
+    border: none !important;
+}
+
+.post.posts-expand .post-body pre,
+.page.posts-expand .post-body pre {
+    background: #f8f8f8 !important;
+    border: 1px solid #e1e1e1 !important;
+    border-radius: 6px !important;
+    padding: 20px !important;
+    margin: 2em 0 !important;
+    overflow-x: auto !important;
+    font-size: 0.9em !important;
+    line-height: 1.5 !important;
+}
+
+.post.posts-expand .post-body pre code,
+.page.posts-expand .post-body pre code {
+    background: none !important;
+    color: #333 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-size: inherit !important;
+}
+
+/* 列表样式 - Medium风格 */
+.post.posts-expand .post-body ul,
+.post.posts-expand .post-body ol,
+.page.posts-expand .post-body ul,
+.page.posts-expand .post-body ol {
+    margin: 1.5em 0 !important;
+    padding-left: 1.5em !important;
+}
+
+.post.posts-expand .post-body li,
+.page.posts-expand .post-body li {
+    margin: 0.5em 0 !important;
+    line-height: inherit !important;
+}
+
+.post.posts-expand .post-body ul li,
+.page.posts-expand .post-body ul li {
+    list-style-type: disc !important;
+}
+
+.post.posts-expand .post-body ol li,
+.page.posts-expand .post-body ol li {
+    list-style-type: decimal !important;
+}
+
+/* 链接样式 - 使用Next-Mist主题原始颜色 */
+.post.posts-expand .post-body a,
+.page.posts-expand .post-body a {
+    color: #555 !important; /* $black-light - Next主题原始链接颜色 */
+    text-decoration: none !important;
+    border-bottom: 1px solid #999 !important; /* $grey-dark - Next主题原始下划线颜色 */
+    transition: all 0.2s ease !important;
+}
+
+.post.posts-expand .post-body a:hover,
+.page.posts-expand .post-body a:hover {
+    color: #222 !important; /* $black-deep - Next主题原始悬停颜色 */
+    border-bottom-color: #222 !important;
+}
+
+/* 分隔线样式 - Medium风格 */
+.post.posts-expand .post-body hr,
+.page.posts-expand .post-body hr {
+    border: none !important;
+    height: 1px !important;
+    background: #e1e1e1 !important;
+    margin: 3em auto !important;
+    width: 60% !important;
+}
+
+/* 强调文本样式 */
+.post.posts-expand .post-body strong,
+.post.posts-expand .post-body b,
+.page.posts-expand .post-body strong,
+.page.posts-expand .post-body b {
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+}
+
+.post.posts-expand .post-body em,
+.post.posts-expand .post-body i,
+.page.posts-expand .post-body em,
+.page.posts-expand .post-body i {
+    font-style: italic !important;
+    color: #6b6b6b !important;
+}
+
+/* ==================== 响应式图片优化 - Medium风格 ==================== */
+.post.posts-expand .post-body img,
+.page.posts-expand .post-body img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 2.5em auto 1em auto !important; /* 减少下边距，为alt文字留空间 */
+    border-radius: 6px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Medium风格图片说明文字 - 通过figcaption实现 */
+
+/* Medium风格图片容器样式 */
+.post.posts-expand .post-body figure,
+.page.posts-expand .post-body figure {
+    margin: 2.5em auto !important;
+    text-align: center !important;
+}
+
+.post.posts-expand .post-body figure img,
+.page.posts-expand .post-body figure img {
+    margin: 0 auto 1em auto !important; /* 为figcaption留出空间 */
+}
+
+/* Medium风格figcaption样式 */
+.post.posts-expand .post-body figure figcaption,
+.page.posts-expand .post-body figure figcaption {
+    color: #6b6b6b !important; /* 与alt文字颜色一致 */
+    font-size: 14px !important; /* 固定14px，与alt文字一致 */
+    font-style: normal !important; /* 不使用斜体 */
+    font-weight: 400 !important;
+    margin: 0.8em auto 0 auto !important; /* 与alt文字边距一致 */
+    max-width: 90% !important; /* 限制宽度 */
+    line-height: 1.5 !important;
+    text-align: center !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.post.posts-expand .post-body img:hover,
+.page.posts-expand .post-body img:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 桌面端图片样式 */
+@media screen and (min-width: 1200px) {
+    .post.posts-expand .post-body img,
+    .page.posts-expand .post-body img {
+        max-width: 90% !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .post-body img,
+    .page.posts-expand .post-body img {
+        max-width: 95% !important;
+    }
+}
+
+/* 手机端样式调整 */
+@media screen and (max-width: 767px) {
+    /* 取消悬停效果 */
+    .post.posts-expand .post-body img:hover,
+    .page.posts-expand .post-body img:hover {
+        transform: none !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* 移动端图片样式调整 */
+    
+    /* 移动端figcaption */
+    .post.posts-expand .post-body figure figcaption,
+    .page.posts-expand .post-body figure figcaption {
+        font-size: 13px !important; /* 与alt文字一致 */
+        max-width: 95% !important;
+    }
+}
+
+/* ==================== 文章标题样式 - 使用主题默认 ==================== */
+/* 移除文章标题的自定义样式，使用Next-Mist主题默认样式 */
+
+/* ==================== 文章元信息样式 ==================== */
+.content .post .post-meta,
+.post .post-meta,
+.post-meta {
+    color: #757575 !important;
+    font-size: 0.9em !important;
+    margin-bottom: 2em !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.content .post .post-meta .post-meta-item,
+.post .post-meta .post-meta-item,
+.post-meta .post-meta-item {
+    color: #757575 !important;
+}
+
+.content .post .post-meta a,
+.post .post-meta a,
+.post-meta a {
+    color: #757575 !important;
+    border-bottom: 1px solid #999 !important; /* 恢复下划线，使用与其他链接一致的样式 */
+}
+
+.content .post .post-meta a:hover,
+.post .post-meta a:hover,
+.post-meta a:hover {
+    color: #222 !important; /* 使用与其他链接一致的颜色 */
+    border-bottom-color: #222 !important; /* hover时下划线也变色 */
+}
+
+/* 美化诗词显示 */
+.poem {
+    text-align: center;
+    margin: 10px 0;
+    color: #999;
+    font-style: italic;
+}
+
+/* 侧边栏 Not By AI 徽章样式 - SVG响应式设计 */
+.not-by-ai-sidebar {
+    text-align: center;
+    margin: 15px 0 10px 0;
+    padding: 8px 0;
+}
+
+.not-by-ai-sidebar a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    line-height: 0; /* 消除SVG下方的间隙 */
+}
+
+.not-by-ai-sidebar a:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.not-by-ai-sidebar img {
+    /* SVG默认尺寸 - 桌面端，放大尺寸 */
+    width: 120px !important; /* 从100px增加到120px */
+    height: auto !important;
+    max-width: none !important;
+    min-width: 120px !important; /* 对应调整最小宽度 */
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    vertical-align: middle !important; /* 垂直居中对齐 */
+}
+
+/* 大屏桌面设备 */
+@media screen and (min-width: 1200px) {
+    .not-by-ai-sidebar img {
+        width: 140px !important; /* 从110px增加到140px */
+        min-width: 140px !important;
+    }
+}
+
+/* 平板设备 */
+@media screen and (max-width: 991px) {
+    .not-by-ai-sidebar {
+        margin: 12px 0 8px 0;
+        padding: 6px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 120px !important; /* 从100px增加到120px */
+        min-width: 120px !important;
+    }
+}
+
+/* 手机设备 */
+@media screen and (max-width: 767px) {
+    .not-by-ai-sidebar {
+        margin: 10px 0 6px 0;
+        padding: 4px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 145px !important; /* 从130px增加到145px */
+        min-width: 145px !important;
+    }
+}
+
+/* 小屏手机 */
+@media screen and (max-width: 480px) {
+    .not-by-ai-sidebar {
+        margin: 8px 0 4px 0;
+        padding: 2px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 140px !important; /* 从125px增加到140px */
+        min-width: 140px !important;
+    }
+}
+
+/* 超小屏设备 */
+@media screen and (max-width: 360px) {
+    .not-by-ai-sidebar img {
+        width: 135px !important; /* 从120px增加到135px */
+        min-width: 135px !important;
+    }
+}
+
+/* 页面底部信息居中展示 */
+.footer {
+    text-align: center !important;
+}
+
+.footer-inner {
+    text-align: center !important;
+    align-items: center !important;
+}
+
+.footer .copyright,
+.footer .wordcount,
+.footer .busuanzi-count,
+.footer .powered-by,
+.footer .beian,
+.footer .poem,
+.footer .time {
+    text-align: center !important;
+    display: block !important;
+    /* 移除强制的margin设置，保持原有行间距 */
+    width: 100% !important;
+}
+
+/* 确保footer内的所有span元素也居中 */
+.footer span,
+.footer div {
+    text-align: center !important;
+}
+
+/* 特殊处理busuanzi计数器的布局 */
+.footer .busuanzi-count .post-meta-item {
+    display: inline-block !important;
+    margin: 0 10px !important;
+    text-align: center !important;
+}
+
+/* 诗词和时间显示居中 */
+.footer .poem span,
+.footer .time span {
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+/* 版权信息居中 */
+.footer .copyright .author {
+    display: inline !important;
+    text-align: center !important;
+}
+
+/* 确保爱心动画正常工作，不覆盖主题设置 */
+.footer .copyright .with-love {
+    display: inline-block !important;
+    margin: 0 5px !important;
+    /* 不要覆盖animation属性，让主题的CSS生效 */
+}
+
+/* 侧边栏收缩时的特殊处理 - 仅在大屏幕上生效 */
+@media screen and (min-width: 992px) {
+    .sidebar-toggle:checked ~ .sidebar .not-by-ai-sidebar img {
+        width: 50px !important;
+        min-width: 50px !important;
+    }
+}
+
+/* 深色模式适配（如果主题支持） */
+@media (prefers-color-scheme: dark) {
+    .not-by-ai-sidebar img {
+        filter: brightness(0.9);
+    }
+}
+
+/* ==================== 性能优化样式 ==================== */
+/* 减少重排和重绘，提升滚动性能 - 只对文章内容应用 */
+.post.posts-expand .post-body {
+    contain: layout;
+}
+
+/* 优化图片加载 */
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 优化字体渲染 - 保持原有样式不变 */
+.post-body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 减少动画对性能的影响 */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==================== 持久化音乐播放器样式 ==================== */
+/* 固定在页面左下角，避免遮挡侧边栏按钮，完全独立于Pjax更新，确保播放连续性 */
+.persistent-music-player {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 80px !important;
+    z-index: 9999 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease !important;
+    overflow: hidden !important;
+    will-change: transform !important;
+}
+
+.persistent-music-player:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* GPU加速优化 */
+.persistent-music-player,
+.music-iframe-container,
+.music-minimize-btn {
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+}
+
+/* 最小化状态 */
+.persistent-music-player.minimized .music-iframe-container {
+    display: none !important;
+}
+
+.persistent-music-player.minimized .music-minimize-btn {
+    display: none !important;
+}
+
+.persistent-music-player.minimized {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 控制按钮容器 */
+.music-controls {
+    position: relative !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 8px !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.persistent-music-player.minimized .music-controls {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* 切换按钮（最小化状态显示） */
+.music-toggle-btn {
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    font-weight: bold !important;
+}
+
+.persistent-music-player:not(.minimized) .music-toggle-btn {
+    display: none !important;
+}
+
+.music-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    transform: scale(1.1) !important;
+}
+
+/* 最小化按钮（展开状态显示） */
+.music-minimize-btn {
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    font-weight: bold !important;
+    margin-left: 8px !important;
+}
+
+.music-minimize-btn:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    transform: scale(1.1) !important;
+}
+
+/* iframe容器 */
+.music-iframe-container {
+    padding: 0 12px 12px 12px !important;
+}
+
+.music-iframe-container iframe {
+    border-radius: 8px !important;
+    display: block !important;
+    border: none !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .persistent-music-player {
+        bottom: 15px !important;
+        left: 15px !important;
+        max-width: calc(100vw - 30px) !important;
+    }
+    
+    .music-iframe-container iframe {
+        width: 280px !important;
+        height: 380px !important;
+    }
+}
+
+/* 超小屏幕适配 */
+@media screen and (max-width: 480px) {
+    .persistent-music-player {
+        bottom: 10px !important;
+        left: 10px !important;
+        max-width: calc(100vw - 20px) !important;
+    }
+    
+    .music-iframe-container iframe {
+        width: 250px !important;
+        height: 350px !important;
+    }
+}
+
+
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    .translate-dropdown {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .translate-option {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+    
+    .translate-option:hover {
+        background-color: #3a3a3a;
+    }
+    
+    .translate-option.active {
+        background-color: #1e3a5f;
+        color: #66b3ff;
+    }
+}
+

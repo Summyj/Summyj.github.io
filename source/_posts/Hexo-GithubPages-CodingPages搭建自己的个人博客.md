@@ -182,7 +182,7 @@ GitHub Pages是用来托管 GitHub 上静态网页的免费站点，其他的不
 
 1.关于域名绑定，再次说明。血的教训告诉我们，Only需要添加两个解析。没有A记录，like this：
 
-![解析](https://i.loli.net/2019/05/16/5cdd170b0712c43179.png)
+{% img https://i.loli.net/2019/05/16/5cdd170b0712c43179.png %}
 
 之后可以在[此网站](http://ping.chinaz.com/)对你的博客进行测试，看看你的博客是否可以在国内解析到Coding，国外解析到Github。访问速度是否得到提升。
 

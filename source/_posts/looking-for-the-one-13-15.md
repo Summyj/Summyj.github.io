@@ -9,7 +9,7 @@ description: 每个人都有自己的小世界。
 top:
 ---
 
-<img src="https://s2.loli.net/2022/05/28/3ck8ZIgQKdAMj7S.jpg">
+{% img https://s2.loli.net/2022/05/28/3ck8ZIgQKdAMj7S.jpg %}
 
 ## No.13 月光男孩
 
@@ -22,10 +22,10 @@ top:
 
 {% tabs 「天意」 %}
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/aAWnBEGNTpVlwJv.jpg" height=450 width=200>
+{% img https://s2.loli.net/2022/05/28/aAWnBEGNTpVlwJv.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/gvLfcjibhy1Eqe4.jpg" height=450 width=200 alt="?!">
+{% img https://s2.loli.net/2022/05/28/gvLfcjibhy1Eqe4.jpg %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -39,22 +39,22 @@ top:
 
 {% tabs 文盲 %}
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/w1MyaoinYG3sgQS.jpg" height=450 width=200>
+{% img https://s2.loli.net/2022/05/28/w1MyaoinYG3sgQS.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/XkerNJqnvo65cKi.jpg" height=450 width=200>
+{% img https://s2.loli.net/2022/05/28/XkerNJqnvo65cKi.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/tS2nD5XJeGVU9fl.jpg" height=300 width=200>
+{% img https://s2.loli.net/2022/05/28/tS2nD5XJeGVU9fl.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/Gwxto9l7USV2fXL.jpg" height=400 width=250>
+{% img https://s2.loli.net/2022/05/28/Gwxto9l7USV2fXL.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/qscwGnzlCLNafXH.jpg" height=450 width=200>
+{% img https://s2.loli.net/2022/05/28/qscwGnzlCLNafXH.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/hWgSPY65dw742Ck.jpg" height=450 width=200>
+{% img https://s2.loli.net/2022/05/28/hWgSPY65dw742Ck.jpg %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -62,13 +62,13 @@ top:
 
 {% tabs 头像的故事 %}
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/SO32jmFlCdZ68uo.jpg" height=400 width=200>
+{% img https://s2.loli.net/2022/05/28/SO32jmFlCdZ68uo.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/7ZAGMfshJUDk8ae.jpg" height=350 width=250>
+{% img https://s2.loli.net/2022/05/28/7ZAGMfshJUDk8ae.jpg %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/05/28/JN5xB7sfwiF8oke.jpg" height=500 width=250 alt="让他做自己吧">
+{% img https://s2.loli.net/2022/05/28/JN5xB7sfwiF8oke.jpg %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -82,7 +82,7 @@ top:
 
 然后就疫情封城了，在网上没有断联的聊了快两个月(参考上边的聊天记录)，解封之后，我又等了几天，他还是没有约我，眼看着马上就春节放假了，我说：
 
-<img src="https://s2.loli.net/2022/05/28/RZXwYmQ7iFzHfho.jpg" height=300 width=200 alt="约吧求求了">
+{% img https://s2.loli.net/2022/05/28/RZXwYmQ7iFzHfho.jpg %}
 
 可算是见上面了，还是在周边的一个商场，他预约了一家比较安静的店，还问我忌口什么的，挺细心的。
 第一印象？他是我所有男嘉宾里唯一没有照骗的男生，真人也很精神小伙，挺板正的一个小哥哥，刚进门的瞬间看到他低头看手机有点被帅到，聊天的时候氛围还算可以，吃完聊完我们就一起坐地铁回来了。
@@ -111,13 +111,13 @@ top:
 
 怕他对我抱有太多期待，我想请他吃顿饭当面聊聊，但是他真的太忙了，约了好几次都约不上，就直接在微信上跟他说了：
 
-<img src="https://s2.loli.net/2022/05/28/492TiIohapMJkY8.jpg" height=400 width=400>
+{% img https://s2.loli.net/2022/05/28/492TiIohapMJkY8.jpg %}
 
 我们持续两个多月的对话，终于开始断联了，后来我又约了他几次还是想请人吃个饭，毕竟之前约饭电影什么的都是他付的钱，怪不好意思的，不过还是约不上，只能这样了。
 
 其实我很难找到一个词来形容他，后来选择了「月光男孩」，因为他经常给我发月亮(有人告诉我这就是喜欢的意思)，然后他本人也符合这个描述，像月光一样纯粹，柔和，但希望他以后可以多点开心的事情吧。
 
-<img src="https://s2.loli.net/2022/05/28/BoKSpAVMWgfUEIP.jpg" height=360 width=200 alt="月光男孩">
+{% img https://s2.loli.net/2022/05/28/BoKSpAVMWgfUEIP.jpg %}
 
 ## No.14 表弟
 
@@ -132,11 +132,11 @@ top:
 
 虽然我很不想用「见光死」这个词来形容男嘉宾，但表弟的外形真的不是我喜欢的类型，尬聊了很久还吃了顿人均一百的烤鱼：
 
-<img src="https://s2.loli.net/2022/05/28/zJiAb7TtUXoIslH.png" height=400 width=200 alt="谢谢您嘞">
+{% img https://s2.loli.net/2022/05/28/zJiAb7TtUXoIslH.png %}
 
 推完表弟，同事还给我推荐了一个跟她一个项目组的男生，说我们同岁，让我「双线操作」，她说人家「可可爱爱，白白净净」，我又信了，然后：
 
-<img src="https://s2.loli.net/2022/05/28/lQJEnABk9t1mWpG.png" height=400 width=200 alt="好可爱啊(微笑)">
+{% img https://s2.loli.net/2022/05/28/lQJEnABk9t1mWpG.png %}
 
 我们这辈子的聊天就这样结束了。
 我愿称这个同事为「冤种同事」，真的会谢好吗。

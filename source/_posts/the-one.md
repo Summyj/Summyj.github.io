@@ -9,7 +9,7 @@ description: 牵手成功！
 top:
 ---
 
-<img src="https://s2.loli.net/2022/10/29/q9DiLxdVAkuG4QT.png">
+{% img https://s2.loli.net/2022/10/29/q9DiLxdVAkuG4QT.png %}
 
 ## 羊驼
 
@@ -17,7 +17,7 @@ top:
 
 他的主页照片是一张证件照，穿着白大褂，五官端正，皮肤白净，眼神沉稳，发型。。。超像一张我之前见过的羊驼图片：
 
-<img src="https://s2.loli.net/2022/10/30/WOx6kq3RwugerP8.jpg" height=230 width=400 alt="羊驼">
+{% img https://s2.loli.net/2022/10/30/WOx6kq3RwugerP8.jpg %}
 
 不能说毫无关系，只能说是一模一样。
 
@@ -55,7 +55,7 @@ top:
 
 第三天，他还是没理我，我寻思微信不能白加，而且快周末了，好歹约出来见见凑下20号的素材，所以我打破了沉默：
 
-<img src="https://s2.loli.net/2022/11/05/7aR5KPfv8YulHOy.jpg" height=430 width=250 alt="出来聊！">
+{% img https://s2.loli.net/2022/11/05/7aR5KPfv8YulHOy.jpg %}
 
 从他回复的字数来看，好像他也不是不想跟我聊，后来他说第一次加网友不知道说点啥(信了信了)。
 
@@ -71,7 +71,7 @@ top:
 
 我出门有点晚，决定斥巨资打车去见男嘉宾，路上堵了会车，不过也只比他晚几分钟到：
 
-<img src="https://s2.loli.net/2022/11/05/voxaL4AZInJTqD5.png" height=430 width=250 alt="网友见面">
+{% img https://s2.loli.net/2022/11/05/voxaL4AZInJTqD5.png %}
 
 他在人群中很好辨认(190的身高加上羊驼的发型)，我在门外就看到了他，然后摆摆手确认了眼神。
 
@@ -107,7 +107,7 @@ top:
 
 第二天，他还是主动给我发消息分享日常，我没忍住好奇心就问了下他的想法：
 
-<img src="https://s2.loli.net/2022/11/05/Bhw4257YRde1jxm.png" height=420 width=250 alt="哦？">
+{% img https://s2.loli.net/2022/11/05/Bhw4257YRde1jxm.png %}
 
 哟，感触还挺多，不错不错，其实我主要是想听听他对一则小故事的看法，还是算了(后来他说确实看到了这篇还安慰我)。
 
@@ -127,7 +127,7 @@ top:
 
 我在门口就看到了里面的他，结果保安大叔蛮坚持的，说我没核酸不让进去，我果断扭头，换了个保安大叔不那么坚持的门才进去：
 
-<img src="https://s2.loli.net/2022/11/05/CU21ILbWQ8tPnJw.png" height=420 width=250 alt="坚持的保安大叔">
+{% img https://s2.loli.net/2022/11/05/CU21ILbWQ8tPnJw.png %}
 
 俩人终于吃上火锅了，这次比上次的好吃点，人也不多，比较安静。
 
@@ -151,7 +151,7 @@ top:
 
 我们决定做机理画，需要用石英砂混着颜料作画，各自挑了两张喜欢的图片，他的暗黑系小王子，我的可爱风小羊肖恩。
 
-<img src="https://s2.loli.net/2022/11/06/mMjHeXhQkBtRopC.png" height=300 width=500 alt="小王子和小羊肖恩">
+{% img https://s2.loli.net/2022/11/06/mMjHeXhQkBtRopC.png %}
 
 老板让我们airdrop到店里的ipad上照着画，他手机传不了，老板说：把图发给你对象让她传，他愣了一下结巴着说我们不是，但还是把图发给了我，我也说我们是朋友，老板笑了笑没说话。
 
@@ -169,7 +169,7 @@ top:
 
 他的画则比较复杂，需要老板帮忙，后来我也加入一起合作完成：
 
-<img src="https://s2.loli.net/2022/11/06/m6JzoYCk7UM8yqA.png" height=350 width=500 alt="成品">
+{% img https://s2.loli.net/2022/11/06/m6JzoYCk7UM8yqA.png %}
 
 画完之后天都黑了，我们决定先去吃饭再过来取画，然后去了旁边的商场去吃我推荐的一家中餐店。
 
@@ -209,11 +209,11 @@ top:
 
 走去酒吧街，发现刚才还堵死的路口这会又不堵了，神奇double，走到他推荐的店门口，发现人很多又作罢，后来辗转终于找到一家比较安静可以收留我们的店：
 
-<img src="https://s2.loli.net/2022/11/06/DuJqHUis1w2jQ75.png" height=300 width=330 alt="喝酒">
+{% img https://s2.loli.net/2022/11/06/DuJqHUis1w2jQ75.png %}
 
 我们坐在二楼，各自点了喜欢的酒品，然后边喝边聊，刚开始店里只有我们两个人，氛围感拉满。喝完酒，时间也不早了，叫了代驾送我们回家，结束快乐的一天：
 
-<img src="https://s2.loli.net/2022/11/06/CFqM2OiQb8Aj1t6.png" height=410 width=250 alt="快乐的一天">
+{% img https://s2.loli.net/2022/11/06/CFqM2OiQb8Aj1t6.png %}
 
 ## 第一天
 
@@ -223,7 +223,7 @@ top:
 
 那是一个起不来的工作日，又正好是他的休息日，我决定在家办公，晚上再约他出去，所以在怨种同事群里发布了消息，还被一个同事道破玄机：
 
-<img src="https://s2.loli.net/2022/11/06/K82ZxTdpqkuo4yI.png" height=330 width=250 alt="知道太多的同事">
+{% img https://s2.loli.net/2022/11/06/K82ZxTdpqkuo4yI.png %}
 
 是我喜欢的微雨天气，我们约好先去周围的商圈吃饭，雨不大的话再去公园遛弯。
 
@@ -251,7 +251,7 @@ top:
 
 他说记得呀，然后两个人把那段情节回忆了一遍：
 
-![想见你第一天](https://s2.loli.net/2022/11/06/CqROuwvz4X5UKPk.jpg)
+{% img https://s2.loli.net/2022/11/06/CqROuwvz4X5UKPk.jpg %}
 
 接着开始沉默，这跟我想象中的反应不一样，我预想的是他应该回复我说：那我们今天算是第一天吗？
 
@@ -261,11 +261,11 @@ top:
 
 他说：算！然后，牵手成功：
 
-<img src="https://s2.loli.net/2022/11/06/eYXfoyIwODGm5RP.png" height=400 width=300 alt="牵手成功！">
+{% img https://s2.loli.net/2022/11/06/eYXfoyIwODGm5RP.png %}
 
 接着当场注销二狗和青藤之恋的账号，然后发朋友圈官宣，回家后，他说：
 
-<img src="https://s2.loli.net/2022/11/06/1MeECLnBjTxyHIP.png" height=430 width=250 alt="我们的第一天">
+{% img https://s2.loli.net/2022/11/06/1MeECLnBjTxyHIP.png %}
 
 ## 日常
 
@@ -279,7 +279,7 @@ top:
 
 在一起之后，我发朋友圈的频率也降低了，因为有趣的事都只想跟他分享呀(PS: 当初安利他来二狗的朋友还没有脱单)
 
-<img src="https://s2.loli.net/2022/11/06/rAyBmQf5XTLRFV7.png" height=440 width=330 alt="我们">
+{% img https://s2.loli.net/2022/11/06/rAyBmQf5XTLRFV7.png %}
 
 ## 人类观察员
 
@@ -291,5 +291,5 @@ top:
 
 也希望大家关注我之后别的系列文章呀，嗯，比如该开始搞搞事业了，事业爱情双丰收什么的，也很妙。
 
-<img src="https://s2.loli.net/2022/11/06/jCMzGahJYPrdQ6l.jpg" height=140 width=200>
+{% img https://s2.loli.net/2022/11/06/jCMzGahJYPrdQ6l.jpg %}
 

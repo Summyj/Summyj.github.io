@@ -9,7 +9,7 @@ description: 什么是自动化测试框架，一个好的自动化测试框架�
 top:
 ---
 
-<img src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg" >
+{% img https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg %}
 
 
 ## 前言
@@ -37,11 +37,11 @@ default@"自动化测试框架"
 label default@"自动化测试框架"
 %}相当于只是一辆自行车，离我们想要的大货车(完善的自动化测试框架)差距还比较大：
 
-<img src="https://i.loli.net/2020/05/14/jCBKgVplGJZkM1n.png" >
+{% img https://i.loli.net/2020/05/14/jCBKgVplGJZkM1n.png %}
 
 以Web UI自动化为例，一般来说，MVP版本的自动化测试框架结构如下：
 
-<img src="https://i.loli.net/2020/05/14/3iMYrD2jC8R7O5U.png" alt="题图" height="370" width="400">
+{% img https://i.loli.net/2020/05/14/3iMYrD2jC8R7O5U.png %}
 
 {% note info %} 基本做法是：写好一条test case, 里面定位了页面元素，定义元素行为。最后利用WebDriver 实现测试目标。{% endnote %}
 
@@ -69,7 +69,7 @@ label default@"自动化测试框架"
 
 还是以Web UI自动化为例，一般来说，相对完善的自动化测试框架结构如下：
 
-<img src="https://i.loli.net/2020/05/14/tTnUyI9VsHY4N1q.png">
+{% img https://i.loli.net/2020/05/14/tTnUyI9VsHY4N1q.png %}
 
 可以看到，跟MVP版本相比，相对完善的自动化测试框架结构还多了Test Suite/Middle layer等元素，下面我们来说一下这些元素指的是什么。
 <br>
@@ -145,7 +145,7 @@ UI测试工具经常用到WebDriver来操控页面元素，所以一个好的测
 这样我们就能生产出拉风的大货车啦：
 {% endnote %}
 
-<img src="https://i.loli.net/2020/05/14/8xZPSG624mRkAaL.png" >
+{% img https://i.loli.net/2020/05/14/8xZPSG624mRkAaL.png %}
 
 
 ## 怎么做

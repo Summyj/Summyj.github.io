@@ -28,41 +28,41 @@ top:
 > 门票：60元
 
 到达的第一站是桃坪羌寨，据说是黄渤主演电影「杀生」的取景地，这里有新寨和旧寨之分，我们参观的重点是旧寨。旧寨依山而建，寨子看起来浑为一体。
-![羌寨](https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png)
+{% img https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png %}
 
 走进之后，里面小路四通八达，通向家家户户，幸而寨子的面积不是很大，否则外来者很容易迷路。阴天又有下雨的趋势，倒给原本古朴的寨子增添了神秘的色彩。
-<img src="https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg" width = "400" height = "500" alt="从寨内小路向上望">
+{% img https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg %}
 
 寨中的房子以石头为主要的建筑材料。石头可以就地取材，可以保持室内温度，是最合适不过的。
-![寨内房屋](https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png)
+{% img https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png %}
 
 我在寨子中爬上了最高的碉堡，碉堡下宽上窄，有七层，通过厚重的木质楼梯连接，到最顶层时，只能容下三四人站立，极目远眺可以将寨中的风景一览无余。
-![碉堡内的木质楼梯](https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg)
-<img src="https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg" width = "400" height = "500" alt="在碉堡顶层眺望的游客们">
+{% img https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg %}
+{% img https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg %}
 
 走在寨中树荫遮蔽的石板路上，脚下水声潺潺而过，若是在盛夏，那酷暑之感都消了大半。这里地下水系交罗密织，可以为寨中人提供生活用水，消防用水，再者可以调节室温，更可以在紧急时作为逃生通道，真是充满智慧的设计。
-<img src="https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png" width = "400" height = "500" alt="寨中的石板路">
-![寨中小桥](https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png)
-<img src="https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg" width = "400" height = "500" alt="桥边写生的人们">
+{% img https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png %}
+{% img https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png %}
+{% img https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg %}
 
 新寨处有许多卖车厘子的人，一番游览之后，在这里会不由自主的被那颜色艳丽的车厘子夺去目光，自然慷慨解囊。在等候午餐的间隙，品尝着清甜的车厘子，美事一桩。
-<img src="https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg" width = "400" height = "500" alt="午餐时间">
+{% img https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg %}
 
 结束游览后，在大巴车上也随处可见树木葱郁的林山，白云浮在山顶亦如仙境。
-![林山](https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg)
+{% img https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg %}
 
 ## Day 2: 天葬台与佛学院
 
 早上从观音桥出发，坐着大巴在路上，我们被几只猴子挡住了去路，只好停车。司机说我们得给这些猴子一点「过路费」他们才会走开，于是有游客给它们投喂了很多面包零食之类。这些猴子也不怕我们，甚至在大巴门口拍打窗户，还在游客窗边讨要食物，大家都感慨这些猴子也太聪明了。
 过了一阵，到了一个休息区，在这里看到了更多猴子，喂食的人也很多，它们好似知道这是游客的休息区一样，成群结队的在这里讨要食物。天气很好，我捕捉到了山间彩虹。
-![彩虹和讨食的猴子](https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg)
+{% img https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg %}
 
 中午一点，我们抵达了天葬台。
 天葬是藏族的习俗，他们相信秃鹫食用了故去的人的骨肉后，会把他们的灵魂带到更接近天际的地方。天葬台位于1/3山高的地方，去往天葬台的路上会看到很多石堆、石刻的建筑，多用骷髅头作装饰，显得更加肃穆。
-<img src="https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg" width = "400" height = "500" alt="天葬台下的肃穆建筑">
+{% img https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg %}
 
 天葬台右侧是一层层的阶梯，供游客们坐下观看天葬仪式。举行天葬在下午一点到三点间，不到一点我们就在看台上等待了。一点多，有一只秃鹫从天空中慢慢低旋停在了看台侧的山地上，有了第一只，后续的就陆续而至，抬眼望去，湛蓝的天空中许多的秃鹫回旋，大大小小的约有两百多只，场面甚是震感，这也是我第一次近距离看到秃鹫。
-![空中回旋等待的秃鹫](https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png)
+{% img https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png %}
 
 天葬仪式在一点半开始，我看到陆续有僧人和工人抬着一袋袋麻袋放在天葬台上，有游客说这就是供秃鹫们食用的尸体。
 之后他们先用帘子挡住麻袋，这样游客们就看不到秃鹫进食时血腥的场面，虽然看不到，但从天葬台上黑压压盘飞的秃鹫来看，也不难想象到他们已经从麻袋中取出了尸体。不一会，空气中就弥漫着浓重的血腥气味，大概10分钟左右，秃鹫散开，各自飞离，天葬台又恢复了平静。
@@ -70,11 +70,11 @@ top:
 
 离开了天葬台，下一站就是我们此次的重点--佛学院。
 我们在佛学院的入口处下了大巴，这里有去往山上佛学院的公交，然后乘坐公交车到达终点—坛城。
-<img src="https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg" width = "300" height = "400" alt="佛学院公交牌">
+{% img https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg %}
 
 带着一份惊喜，我们一步步的走到了观景台，从最高处的观景台俯瞰佛国，最中心是大学模样的佛学院，四周是层层渐进的红房子，用来休息住宿。远处青山平缓，高处天际湛蓝，簇簇云彩之下，是红色的佛国，这样宁心舒缓的红，伴着声声梵音，圣洁高贵。
-![俯瞰色达](https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg)
-![换个角度俯瞰色达](https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg)
+{% img https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg %}
+{% img https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg %}
 
 原本打算顺着蜿蜒曲折的路迤逦而下，谁知刚刚没走几步，头顶的乌云就不辞辛劳的开始了工作。雨点簌簌而下，我们只好去屋下躲避，我本来想说有一句歌词很合景--“爱就是晴空万里突然暴风雨”，正当我为自己反应迅速而努力喝彩时，经旁人说起才发觉原来是在下冰雹，我已经好些年有没有看到过下冰雹了，小小的白色晶状体砸在手上还是有些痛感的。
 
@@ -82,43 +82,43 @@ top:
 
 今天早上的行程还是去色达佛学院，昨天因为天气的缘故匆匆一览，今天天气凉爽，适合缓行。
 因为节假日的缘故，公交车只行至山腰处，剩下的路要步行。本着上下决不走同一条路的原则，我们挑了一处比较陡峭的台阶，打算沿台阶而上，到达山顶之后可以从公交车行驶的大道缓步而下。从下而上仰视色达，密集的红房子也是一种视觉震撼。
-<img src="https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg" width = "400" height = "500" alt="仰视角度的色达">
+{% img https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg %}
 
 沿台阶而上比较费力，所幸每走一段就会有长椅可以休息。由于这里海拔比较高，我们还买了氧气瓶以备不虞，边吸氧边拾级而上也是一种奇妙的体验。
-<img src="https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg" width = "300" height = "400" alt="累了就吸会氧">
+{% img https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg %}
 
 越往上走，视野越开阔，所见的风景越深邃悠远。我们看到了身侧有许多的佛学院的学生，身着红色的衣裳，虔诚的去往课堂，一时间我想起了大学时同舍友结伴去上课的场景，轻快愉悦。
-<img src="https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg" width = "300" height = "400" alt="山顶的佛堂">
+{% img https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg %}
 
 我们到达山顶之后，略作休息就缓步下山。一路上挑着小路而下，光顾了佛学院里的水果摊、杂货铺、早餐店、纪念品商店，这时我发觉这是一座有着生活气息的佛学院，不是一座不食人间烟火的清冷殿堂，也不是一处只供游人赏玩的旅游胜地。
 对于那些虔诚学习的学生而言，这里是佛学的殿堂。
-![山脚下的风光](https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg)
+{% img https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg %}
 
 旅途结束后回到住所，和同游的朋友们一起吃串串，打麻将也是一番趣味，卸去一天的疲惫。
-![串串吃起来](https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg)
-![麻将搓起来](https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg)
+{% img https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg %}
+{% img https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg %}
 
 ## Day 4: 西索民居与卓克基官寨
 
-![西索民居](https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg)
+{% img https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg %}
 西索民居，清晨走在略带湿意的青石小路上，周边静谧安逸，我从村庄中部穿插而过，有一瞬间，觉得这条路，路两侧的石制小屋，屋前的各色盆植鲜花似乎只供我一人独赏，这是何等的惬意。
-![民居小路](https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png)
-![远眺西索民居](https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg)
+{% img https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png %}
+{% img https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg %}
 
 > 卓克基官寨 门票 ： 60 元，部分图片来源于：[卓克基土司官寨：毛主席曾经住过的嘉绒藏族城堡](http://blog.sina.com.cn/s/blog_8b4d9d180102yj09.html)
 
 
 卓克基官寨前有一条青石台阶路，曲折而上直至寨前。石阶的里侧是片片山石垒起的石壁，石壁之上是木制的围栏，木栏外侧悬挂着各色花卉，颜色艳丽，不一而同。石壁之内乔木茂密，树荫于木栏之外为青石台阶遮蔽艳阳。走在这样诗意的石阶上，哪里还有什么忧愁。
-<img src="https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png" width = "400" height = "500" alt="石阶">
+{% img https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png %}
 
 卓克基官寨这样有特色的建筑我还是第一次见到。它是一个正方形的建筑，外侧是石砌的，里面大都是木制结构。由正门而入，东南 西北 四侧都建有房屋，彼此相连。
-![官寨大门](https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png)
+{% img https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png %}
 
 除了出入的正门侧有三层高外，其余的四侧都是五层高。一层是储物用的地方，二层是革命者的曾经的居所，三层是土司居住的地方，卧室，厨房，餐厅，管家的住所，议事的厅堂一应俱全。四层是供奉佛像金身的所在，五层有乞求长生的供奉处和僧众祷告的场所。一处官寨，涵盖万千。真的是匠心独运。
-![官寨内部](https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png)
-![四楼远望](https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png)
+{% img https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png %}
+{% img https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png %}
 
 当我在四层参观供奉佛像的大殿时，只觉得经幡高悬，佛像高大庄严，壁画精美，不由得怀揣一颗虔诚的心。走到五楼相同的位置时，想推门而入看一下这处的设置，却发觉这里没有门，只有窗。透过窗看到了与四楼同样的风景，这时才发觉四楼与五楼是打通了的，否则何以有那么高大的佛像，只是身处四楼的时候只沉浸在殿堂的威严肃穆中，忽略了其他，到了五楼才后知后觉。
-![官寨佛像](https://i.loli.net/2021/06/28/viK9INcxEVns3By.png)
+{% img https://i.loli.net/2021/06/28/viK9INcxEVns3By.png %}
 
 官寨之外设有囚室三间。第一间有一扇正常大小的窗户，屋内还算明亮；第二间有一扇小窗户，屋内顿觉昏暗不少；第三间只有一个通气口，屋内暗黑压抑，不能视物。这三间分别关押罪行由轻至重的人，看这囚室的设计，单是被关押到第三间中，无错也会觉得自己有罪的。被剥夺光明真是一件很恐怖的事情。

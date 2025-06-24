@@ -9,7 +9,7 @@ description: 啥是BugBash，以及如何做好一次BugBash。
 top:
 ---
 
-![bugbash.jpeg](https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg)
+{% img https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg %}
 
 ## 啥是BugBash
 
@@ -45,23 +45,23 @@ top:
 
 ## 我的BugBash模版
 ### 基本信息
-![image.png](https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png)
+{% img https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png %}
 
 ### 被测功能简单介绍
 简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。
 ### 主要测试场景及其checkpoints
 描述主要测试场景，和每个测试场景需要注意的测试点。
-![image.png](https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png)
+{% img https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png %}
 
 ### 测试数据
 提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。
-![image.png](https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png)
+{% img https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png %}
 
 ### 测试任务分配
 给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。
-![image.png](https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png)
+{% img https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png %}
 
 
 ### 结果讨论
 测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。
-![image.png](https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png)
+{% img https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png %}

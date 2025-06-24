@@ -128,12 +128,12 @@ top:
 
 **执行结果：**
 
-![66](http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG)
+{% img http://ou7wdump3.bkt.clouddn.com/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG %}
 
 
 **结论：**
 
-![78](http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG)
+{% img http://ou7wdump3.bkt.clouddn.com/%E5%9B%BE%E7%A4%BA.PNG %}
 
 **其中：**
 
@@ -163,4 +163,4 @@ top:
 
 答案在这里：
 
-![77](http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG)
+{% img http://ou7wdump3.bkt.clouddn.com/%E7%BB%A7%E6%89%BF%E5%90%8E%E7%BB%93%E6%9E%9C.PNG %}

@@ -9,7 +9,7 @@ description: 我要骑摩托！老天爷：不，你不想！
 top:
 ---
 
-<img src="https://s2.loli.net/2022/06/13/DtGac9qbuwiFfZz.png">
+{% img https://s2.loli.net/2022/06/13/DtGac9qbuwiFfZz.png %}
 
 ## 补考：一个人的战斗
 
@@ -18,7 +18,7 @@ top:
 还是来到了这一天，科二补考。
 早上6点半起床吃早饭出发，虽然心里还是很慌，因为昨天练车效果不佳，一路上都在担心，这次是一个人去，一路倒地铁加出租，怕那里交通不便(想考完科二再去考科四，两个考场隔了一段距离)，还带上了我的滑板车：
 
-<img src="https://s2.loli.net/2022/06/13/rfchCqdaFungtPZ.png" height=500 width=350 alt="滑板车">
+{% img https://s2.loli.net/2022/06/13/rfchCqdaFungtPZ.png %}
 
 不到9点我就已经坐在候考室了，带上了专门买的充电宝，做好了一个人再等6小时的准备。不过这次我没有等太久，大概半个多小时就叫到我了，在教练发的考试名单图片里，我甚至排到了第二名，可是我记得自己并不是第一时间报的名，所以上次我们等了6小时，肯定也是被严重潜规则插队了。
 
@@ -26,16 +26,16 @@ top:
 
 我也不知道为什么一把就过了，难道教练这次的意念魔法奏效了？考试群里，负责人还让我感谢教练，发朋友圈宣传，买饮料什么的，我只能阴阳怪气的回复：
 
-<img src="https://s2.loli.net/2022/06/13/pIRtNAXcyouOBP4.png" height=600 width=300 alt="真的栓Q">
+{% img https://s2.loli.net/2022/06/13/pIRtNAXcyouOBP4.png %}
 
 在我高高兴兴去办公室拿资料准备预约考科四，想着终于可以拿照了，一切suffer总算要结束的的时候，看到里面的工作人员接了个电话，说科四的考场突然被封了。。。听到这些，我整个人被雷劈了一样怔在当场，然后掌握了一手消息的我在群里通知：
 
-<img src="https://s2.loli.net/2022/06/13/WIDmw6ayPsUeOcG.png" height=600 width=300 alt="命运的捉弄">
+{% img https://s2.loli.net/2022/06/13/WIDmw6ayPsUeOcG.png %}
 
 我真的，不知道考个增照有这么难，一关关的像在渡劫，虽然我还撑得住，但也无法，只能回了。
 后来，群里有一个大哥，也是大老远跑过来的，来一趟不容易，看我科二过了，还加我好友想问是不是有什么操作包过的，我就在验证消息里劝他：
 
-<img src="https://s2.loli.net/2022/06/13/Akcf5ugqoCRxdyb.png" height=440 width=300 alt="醒醒吧">
+{% img https://s2.loli.net/2022/06/13/Akcf5ugqoCRxdyb.png %}
 
 后来在考试群里看到他科二挂了，科三也没考，不知道这位大哥现在怎么样了，祝他成功吧。
 
@@ -51,25 +51,25 @@ top:
 <!-- tab -->
 4月1号第一次尝试约科四无果，没理我的问题，还有大姐？excuse me?!
 
-<img src="https://s2.loli.net/2022/06/13/az2qWv4KQdRrHlL.png" height=600 width=300 alt="第一次尝试无果">
+{% img https://s2.loli.net/2022/06/13/az2qWv4KQdRrHlL.png %}
 <!-- endtab -->
 <!-- tab -->
 4月6号第二次尝试约科四依然无果，逐渐暴躁：
 
-<img src="https://s2.loli.net/2022/06/13/V79Kh2HvEsMQD6W.jpg" height=600 width=600 alt="第二次尝试无果">
+{% img https://s2.loli.net/2022/06/13/V79Kh2HvEsMQD6W.jpg %}
 答案就是他们啥也不知道而且根本无法沟通：
 
-<img src="https://s2.loli.net/2022/06/13/sjmQA63hJrxfw21.jpg" height=600 width=600 alt="无法沟通">
+{% img https://s2.loli.net/2022/06/13/sjmQA63hJrxfw21.jpg %}
 
 <!-- endtab -->
 <!-- tab -->
 知道他们靠不住以后抱着手机刷了两天，终于在8号早上约到了考试(所以他们的工作就是啥也不干然后每天确认一遍学员是否成功约到了考试？)：
 
-<img src="https://s2.loli.net/2022/06/13/LSwWuCVrQPJqeGo.png" height=600 width=300 alt="终于自己刷上了">
+{% img https://s2.loli.net/2022/06/13/LSwWuCVrQPJqeGo.png %}
 
 之后有个小哥哥同样约不到科二继续在群里质问，然而还是无果：
 
-<img src="https://s2.loli.net/2022/06/13/FyW7ODpsa89JufN.jpg" height=600 width=600 alt="别人的故事">
+{% img https://s2.loli.net/2022/06/13/FyW7ODpsa89JufN.jpg %}
 突然想到他也是之前和我一起补考科二的，但是又挂了，不知道他现在怎么样了，祝他成功吧。
 <!-- endtab -->
 {% endtabs %}
@@ -82,19 +82,19 @@ top:
 
 这次我没有带滑板，因为下雨了，而且上次发现考场周边的交通也还算方便，可以打到车。下午两点开始考试，请了半天假，一路打车转地铁坐出租终于在下午1点53分准时出现在考场门口。。。100米外：
 
-<img src="https://s2.loli.net/2022/06/15/VaGxFp1X2lLZWOU.png" height=500 width=350 alt="雨好大我好冷">
+{% img https://s2.loli.net/2022/06/15/VaGxFp1X2lLZWOU.png %}
 
 拜托诶，工作日加上雨天，怎么还有这么多人考试啊，我承认我失策了。四月中旬，天气还未回暖，雨停了一会，然后越下越大，就这样，在风雨交加中排了二个半小时队的我，终于在下午4点半进入了考场。
 
-<img src="https://s2.loli.net/2022/06/15/gP8TDhwVj3AsLiR.png" height=400 width=500 alt="候考室">
+{% img https://s2.loli.net/2022/06/15/gP8TDhwVj3AsLiR.png %}
 
 下午5点，考过了科四，赶紧打车去交警队拿照，然后他们告诉我：
 
-<img src="https://s2.loli.net/2022/06/16/BSYhfRevOi3cnzQ.png" height=600 width=300 alt="5点就下班？！">
+{% img https://s2.loli.net/2022/06/16/BSYhfRevOi3cnzQ.png %}
 
 我这辈子真的不想再来这里了，靠着对驾校的最后一丝信任，让司机师傅调转车头，把资料交到驾校办公室里工作人员的手上，亲眼看着她装进资料袋，让他们后边帮我去交警队拿照然后寄给我，至少这点应该可以做到吧？
 
-<img src="https://s2.loli.net/2022/06/15/TkcYI9MgpWyXEab.jpg" height=610 width=300 alt="等着">
+{% img https://s2.loli.net/2022/06/15/TkcYI9MgpWyXEab.jpg %}
 
 在我坐上回家的出租，想着这个照总算是拿到手了的时候，万万没有想到，事情还是没有结束。
 
@@ -113,11 +113,11 @@ top:
 
 考场在四楼，当我拖着站软的双腿爬到楼上准备过闸机时，工作人员拦住了我说不能带包进去，并指了指背后的储物箱让我放在里面，怕候考室没位置又要等，所以和一帮带包的人连忙照做：
 
-<img src="https://s2.loli.net/2022/06/15/7JGYFoSu6kX2bjz.png" height=500 width=350 alt="储物箱">
+{% img https://s2.loli.net/2022/06/15/7JGYFoSu6kX2bjz.png %}
 
 然后发现储物箱是需要掏钱的，存取一次3块，逻辑是扫码支付以后，储物箱会自动打开一个格子，同时打印一个密码纸，东西放进去，关上格子，取的时候再用密码纸对准扫码口取物，于是我开始尝试：
 
-<img src="https://s2.loli.net/2022/06/15/ynsckwhpWNqjQuL.png" height=200 width=300 alt="尽力在储物">
+{% img https://s2.loli.net/2022/06/15/ynsckwhpWNqjQuL.png %}
 
 第一次：扫码支付，格子打开，可并没有密码纸出来，白给。
 第二次：扫码支付，格子打开，拿到了密码纸，可一阵风吹过没来得及抓住，它掉在地上成为密码纸堆里的一员难以辨认，又白给，和对面同样在找密码纸的小姐姐相视心酸一笑(还笑得出来)。
@@ -145,13 +145,13 @@ top:
 
 18号，驾校通知我交科二的补考费(之前承诺是驾校包的不过我已经麻了)才能出证，交了以后他们说：
 
-<img src="https://s2.loli.net/2022/06/16/JAjUsW8FI45PpZ3.png" height=600 width=300 alt="无语">
+{% img https://s2.loli.net/2022/06/16/JAjUsW8FI45PpZ3.png %}
 
 让我摆几桌请教练吃饭(还有脸说)？我没理，过了两天到了20号我突然想到，要寄驾照好像也没问过我住哪啊，一问果然还没办🤷‍♀️，发了地址之后过了几天，我就被移出了群聊。
 
 想着这次总算寄了吧，可是等了一周还没到，市内的快递需要一周才能到？！幸亏我还加了魔法教练的微信，于是问他，结果他说：
 
-<img src="https://s2.loli.net/2022/06/16/aWyogxrwNLhQcm9.png" height=600 width=600 alt="人话">
+{% img https://s2.loli.net/2022/06/16/aWyogxrwNLhQcm9.png %}
 
 一周前我发了地址让他给我寄的时候，就找不到我的证件了，也不跟我说，就等着我去问，甚至说实体证件可要可不要？！我好好的把自己的C1驾照原件交给驾校，到现在直接没了，考个增照我照没了？
 

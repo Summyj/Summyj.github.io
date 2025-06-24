@@ -9,7 +9,7 @@ description: 沉默呵，沉默呵！不在沉默中爆发，就在沉默中灭�
 top:
 ---
 
-<img src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png" >
+{% img https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png %}
 
 {% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
 那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。

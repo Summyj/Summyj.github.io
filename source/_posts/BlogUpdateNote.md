@@ -9,7 +9,7 @@ description: 记录博客升级过程，方便以后参考。
 top:
 ---
 
-<img src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图">
+{% img https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png %}
 用Hexo和Next主题搭建博客已经两年多了，前段时间浏览一些其他小伙伴的博客，发现页面比我的好看许多。很多插件也都不适应了，遂更新一波。
 
 # 咋升级 #
@@ -102,18 +102,18 @@ hexo --version
 
 #### 文章浏览次数
 这个以前用的是leancloud，也只需要加上id就好，不过这次加上之后并没有显示效果，而且console log报错：
-<img src="https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png" alt="error">
+{% img https://i.loli.net/2019/12/03/prXyGdDzATYfIe5.png %}
 不知道怎么解决，准备在github提issue，所以先弃用了。
 
 #### Daovoice在线联系 ####
 有很多小伙伴时通过Daovoice直接联系我的，这个也可以关注微信公众号接收消息。然而这次加上之后，导致博客页面空白，直接访问不了，console log也报错：
-<img src="https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png" alt="error">
+{% img https://i.loli.net/2019/12/03/Hzag9KbwrZxIoRv.png %}
 开始没定位到是这个的问题，找了好久。。。在网上搜也没找到解决办法，反正博客也有评论系统可以联系小伙伴，遂先弃用。
 
 #### 博客宠物
 就是右下角萌萌的小黑啦。
 之前也已经下载 "hexo-helper-live2d" 和 "live2d-widget-model-hijiki"这两个依赖，在图中路径加上标记：
-<img src="https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png" alt="config">
+{% img https://i.loli.net/2019/12/03/McVxzk9ivZfWGyX.png %}
 然后在博客(非主题)配置文件加上下面的配置：
 {% codeblock lang:command %}
 #pet
@@ -142,7 +142,7 @@ live2d:
 #### 网站底部运行时间
 个人认为加上网站的运行时间还是很有意义的，看着博客已经运行这么多天，有种自豪感嘿嘿。
 参考[这篇文章](https://ldgyyf.cn/2019/05/15/Hexo/%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%BF%E5%AE%A2%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA/)完成的。
-<img src="https://i.loli.net/2021/04/28/rjxPnYqmUCkwAv7.png" >
+{% img https://i.loli.net/2021/04/28/rjxPnYqmUCkwAv7.png %}
 
 #### 酷炫标签云
 根据插件[github说明](https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md)配置就好了。
@@ -153,7 +153,7 @@ npm install hexo-tag-cloud
 
 之后操作：
 
-<img src="https://i.loli.net/2021/04/28/ZJfLhzbVkKuMnqa.png" >
+{% img https://i.loli.net/2021/04/28/ZJfLhzbVkKuMnqa.png %}
 
  ```js
 {% if site.tags.length > 1 %}
@@ -208,13 +208,13 @@ $btn-default-hover-bg         = $black-deep
 参照 [这篇文章](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2)设置的。
 
 在 /themes/next/layout/ 目录下新建一个 links.swig 文件，内容和之前一样。
-<img src="https://i.loli.net/2021/04/28/a2fDPAzZm7tFpes.png" >
-<img src="https://i.loli.net/2021/04/28/HolOS3LvVzQ19ca.png" >
+{% img https://i.loli.net/2021/04/28/a2fDPAzZm7tFpes.png %}
+{% img https://i.loli.net/2021/04/28/HolOS3LvVzQ19ca.png %}
 
 #### 改了下button的样式
 
-<img src="https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png" alt="button css">
-<img src="https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png" alt="button css">
+{% img https://i.loli.net/2019/12/20/YbyF2TEIoC6t187.png %}
+{% img https://i.loli.net/2019/12/20/Kvh4otZz852yPWx.png %}
 
 #### 站点概览加了个音乐链接
 
@@ -232,16 +232,16 @@ Path: {% label info@themes/next/source/css/_schemes/Pisces/_header.styl %}
 {% endcodeblock %}
 
 还需要改一下padding值：
-<img src="https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png" >
+{% img https://i.loli.net/2021/04/28/icDvnY3fIPuWZAQ.png %}
 
 手机端样式优化：
-<img src="https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png" >
-<img src="https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png" >
-<img src="https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png" >
+{% img https://i.loli.net/2021/04/28/7ozZp239LEPDhW6.png %}
+{% img https://i.loli.net/2021/04/28/zZTBuPS6Hxt3AlF.png %}
+{% img https://i.loli.net/2021/04/28/JZWvNnXgEe9YTOV.png %}
 
 #### 网站底部颜色修改
-<img src="https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png" >
-<img src="https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png" >
+{% img https://i.loli.net/2021/04/28/xv8WgPJUNjnb1uC.png %}
+{% img https://i.loli.net/2021/04/28/YnCLeHo73NMJ8gr.png %}
 
 #### 修改主题页面宽度
 

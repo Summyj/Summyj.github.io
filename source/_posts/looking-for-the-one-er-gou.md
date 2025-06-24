@@ -9,7 +9,7 @@ description: 总算靠点谱了。
 top:
 ---
 
-<img src="https://s2.loli.net/2022/05/28/ORMnk4yZsSmg5Vf.png" >
+{% img https://s2.loli.net/2022/05/28/ORMnk4yZsSmg5Vf.png %}
 
 
 ## 初印象
@@ -32,13 +32,13 @@ top:
 
 系统每天推荐5个男嘉宾，觉得合适可以加好友、关注，或者感觉自己配不上的话还可以推荐他上墙(下文介绍)：
 
-<img src="https://s2.loli.net/2022/05/28/oVPdQa7GZkOCfTN.jpg" alt="系统推送">
+{% img https://s2.loli.net/2022/05/28/oVPdQa7GZkOCfTN.jpg %}
 
 #### 单身广场
 
 此外还有进入「单身广场」的入口，方便寻找心仪的男嘉宾，是我的吃瓜场地1：
 
-<img src="https://s2.loli.net/2022/05/28/JKSxWMsLyOQ87ue.jpg" alt="单身广场">
+{% img https://s2.loli.net/2022/05/28/JKSxWMsLyOQ87ue.jpg %}
 
 可以筛选地区和性别，这里我就要吐槽一下，地区选项很少，很多城市都归类在其它里面，看起来很不方便，希望未来可以提供更多的城市筛选。
 
@@ -46,13 +46,13 @@ top:
 
 这里展示用户所在地区，每天被推荐次数最多的10个男嘉宾，是我的吃瓜场地2:
 
-<img src="https://s2.loli.net/2022/05/28/QKmqcVPn9TdvuRi.png" height=400 width=200 alt="推荐上墙">
+{% img https://s2.loli.net/2022/05/28/QKmqcVPn9TdvuRi.png %}
 
 #### 纸飞机
 
 也可以通过发纸飞机的方式认识男嘉宾，不过这个是匿名的，收到纸飞机的人只能看到大概的信息，如果聊的投缘可以解锁看资料加好友什么的：
 
-<img src="https://s2.loli.net/2022/05/28/z6r5I37nN4XTpQf.png" alt="纸飞机">
+{% img https://s2.loli.net/2022/05/28/z6r5I37nN4XTpQf.png %}
 
 有次想加一个小哥哥，但是狗粮(下文介绍)不够了，我想问大家有什么方式可以拿到狗粮，所以发了一个纸飞机，结果发现了新大陆，原来不加好友也能这样聊起来(上图右)。
 
@@ -64,13 +64,13 @@ top:
 
 这里和青藤之恋的「村口」页面差不多，展示嘉宾们发的动态，简单来说就是大型吃瓜现场：
 
-<img src="https://s2.loli.net/2022/05/28/qwyBQfOJtSce5rv.jpg" height=400 width=200 alt="星球">
+{% img https://s2.loli.net/2022/05/28/qwyBQfOJtSce5rv.jpg %}
 
 ### 消息
 
 可以看到好友申请、聊天列表，和一些系统消息，是故事开始的地方，尤其是聊天页面，有已读功能，聊天文本框的place holder也很耐人寻味「主动一点，让故事发生」哈哈哈哈，可谓是用心良苦了：
 
-<img src="https://s2.loli.net/2022/05/28/RGK1QOEL9oWNMZv.png" alt="消息">
+{% img https://s2.loli.net/2022/05/28/RGK1QOEL9oWNMZv.png %}
 
 不过这个文本输入框有一些可以优化的点，它不能换行，而且文本多的时候也不能滑动编辑，就很不好用。
 
@@ -78,7 +78,7 @@ top:
 
 个人信息和系统设置页，能看到最近来访和关注自己的嘉宾，啊，这里叫粉丝，也可以在匹配设置里指定系统推送男嘉宾的偏好(不用充会员！！！)，还有一个三观问答，男嘉宾申请加好友的时候需要回答问题：
 
-<img src="https://s2.loli.net/2022/05/28/bZosGQgUhlAkjau.jpg" height=400 width=200 alt="我的">
+{% img https://s2.loli.net/2022/05/28/bZosGQgUhlAkjau.jpg %}
 
 在消息页面通过男嘉宾的交友申请后，我们就会互关，所以刚开始我只关注了跟我聊天的男嘉宾。后来我又去单身广场和上墙的男嘉宾里关注了好多小哥哥，他们有的会回关，有的也会加我好友，因为就算互关了也不能直接聊起来，还是得先发起交友申请。
 
@@ -86,11 +86,11 @@ top:
 
 这里也可以设置自己的情感状态，非常细节了：
 
-<img src="https://s2.loli.net/2022/05/28/cFOrRsTHN2VqepQ.png" alt="情感状态">
+{% img https://s2.loli.net/2022/05/28/cFOrRsTHN2VqepQ.png %}
 
 最后就是个人信息，还是和青藤之恋差不多，需要传照骗，做学历和身份认证，比青藤多了一个工作认证，非常靠谱了；还有个人基本信息(昵称/年龄/星座/身高/职业)，二狗这里不需要展示收入，可能还是想少一些物质吧，很赞！
 
-<img src="https://s2.loli.net/2022/05/28/ofU4Vc58GQB9HxC.png" alt="个人信息">
+{% img https://s2.loli.net/2022/05/28/ofU4Vc58GQB9HxC.png %}
 
 再然后就是一些自我介绍、兴趣爱好、家庭背景之类的描述，以上也都需要系统审核，不过和青藤之恋的打分评价不同，这里是分青铜、白银、黄金三个等级来评价用户信息真实性和完整度，有种打游戏冲关的感觉，所以我很快就到了黄金哈哈哈:joy:
 
@@ -98,7 +98,7 @@ top:
 
 青藤之恋有「青藤币」，二狗平台也有「狗粮」，先从名字上来看就很接地气了，对比不适合穷逼的青藤币，狗粮的获取则非常容易：
 
-<img src="https://s2.loli.net/2022/05/28/ut1PYsAcLBHTwxV.jpg" alt="狗粮">
+{% img https://s2.loli.net/2022/05/28/ut1PYsAcLBHTwxV.jpg %}
 
 - 先说获取：首先注册的时候就会送狗粮红包200+，然后之后填个人信息、关注公众号也会送狗粮200+，再加上每日签到，其实就已经够用了。
 - 然后花费：解锁粉丝和访客都只需要20狗粮，解锁匿名动态也只需要10狗粮，加好友是花费狗粮最多的操作(非常感谢加我的男嘉宾了)，但也就100狗粮，所以完全可以满足我找对象和吃瓜的需求。

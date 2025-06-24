@@ -9,7 +9,7 @@ description: 离「财富自由」最近的一次，哦不，是大佬们的财�
 top:
 ---
 
-<img src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg" >
+{% img https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg %}
 
 {% note primary %}
 
@@ -23,7 +23,7 @@ top:
 
 为了上市，公司近年来做了不少的努力，比如换了logo：
 
-![logo(左旧右新)](https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png)
+{% img https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png %}
 
 又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。
 

@@ -9,7 +9,7 @@ description: 凑合活着。
 top:
 ---
 
-<img src="https://s2.loli.net/2023/11/23/pTwjIJUboOYXeE3.jpg">
+{% img https://s2.loli.net/2023/11/23/pTwjIJUboOYXeE3.jpg %}
 
 前段时间，我买完房，后来写了一篇博客来总结全程，做完这一切之后，突然觉得很难过。
 
@@ -29,7 +29,7 @@ top:
 
 然后他劝了我很多，只是我当时被这种想法吞噬，什么也听不进去，整个人像被抽走灵魂般黯然消极，然后第二天：
 
-<img src="https://s2.loli.net/2023/11/26/FV4AcwKRtsl7MHX.png" width = "200" height = "500" alt="！？">
+{% img https://s2.loli.net/2023/11/26/FV4AcwKRtsl7MHX.png %}
 
 好嘛，现在不仅行为被操纵，思想都被监控了？有朋友在群聊里提到类似的观点，还说「世界就是草台班子」。
 
@@ -39,7 +39,7 @@ top:
 
 后来我又去问ChatGPT，它给出了很多种解读方式：
 
-![chatgpt的解读](https://s2.loli.net/2023/11/24/B1TYQL6qZpotcvH.jpg)
+{% img https://s2.loli.net/2023/11/24/B1TYQL6qZpotcvH.jpg %}
 
 所以世界到底是什么样的？没有确切的答案，每个人都有自己的处世方式，一个人在不同人生阶段的世界观也不同。有常或无常，真实或虚幻，一切都取决于我们自己的想法。
 

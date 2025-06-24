@@ -9,7 +9,7 @@ description: 我想骑摩托！老天爷：不，你不想。
 top:
 ---
 
-<img src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
+{% img https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png %}
 
 ## 科二：人麻了+见鬼的2号车
 
@@ -24,15 +24,15 @@ top:
 
 第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：
 
-<img src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width=300 height=600>
+{% img https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png %}
 
 第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：
 
-<img src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width=300 height=600>
+{% img https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png %}
 
 第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：
 
-<img src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width=350 height=500>
+{% img https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png %}
 
 第五个小时，人麻了。
 
@@ -40,7 +40,7 @@ top:
 
 在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：
 
-<img src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width=300 height=600 alt="整整齐齐">
+{% img https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png %}
 
 除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。
 
@@ -58,7 +58,7 @@ top:
 
 考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：
 
-<img src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width=300 height=620 alt="等着">
+{% img https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg %}
 
 一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。
 
@@ -73,7 +73,7 @@ top:
 
 这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：
 
-<img src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width=500 height=400 alt="大盘鸡">
+{% img https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png %}
 
 当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。
 
@@ -87,13 +87,13 @@ top:
 
 {% tabs 怨种发言 %}
 <!-- tab -->
-<img src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height=600 width=300>
+{% img https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height=600 width=300>
+{% img https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png %}
 <!-- endtab -->
 <!-- tab -->
-<img src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height=620 width=300>
+{% img https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -105,7 +105,7 @@ top:
 
 沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：
 
-<img src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height=600 width=300 alt="薛定谔的「操作」">
+{% img https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png %}
 
 总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。
 
@@ -113,7 +113,7 @@ top:
 
 练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。
 
-<img src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height=400 width=500 alt="练车现场">
+{% img https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png %}
 
 为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。
 

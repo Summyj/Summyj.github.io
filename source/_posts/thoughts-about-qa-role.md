@@ -8,7 +8,7 @@ copyright: true
 description: 饭碗不稳啊。
 top:
 ---
-<img src="https://i.loli.net/2021/09/18/KteuPhzw7ngd5Rp.png" >
+{% img https://i.loli.net/2021/09/18/KteuPhzw7ngd5Rp.png %}
 
 ## 楚门的世界
 
@@ -71,7 +71,7 @@ top:
 但还是没有解答我的困惑，这些文章依然在讲方法论、布道，并没有直面测试行业本身，还是在说测试要左移、右移，要去分析需求，要写代码，要从全程把控质量。。。
 并给出了测试人员的职业方向，也是我曾以为的职业方向：
 
-<img src="https://i.loli.net/2021/09/22/pF7tW9ON4xCS8Um.png" >
+{% img https://i.loli.net/2021/09/22/pF7tW9ON4xCS8Um.png %}
 
 ## 下一步？
 

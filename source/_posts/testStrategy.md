@@ -9,7 +9,7 @@ description: 揭秘敏捷团队的测试策略设计以及QA的工(ban)作(zhuan
 top:
 ---
 
-<img src="https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png" >
+{% img https://i.loli.net/2020/11/27/Nt7m4suaOyUPfBV.png %}
 
 {% note info %}
 前段时间，有同事分享了一些测试策略设计的内容，讲的很不错。并且自己也是最近才开始接触一些新的项目，之前都是中途加入项目工作，没有全面思考过测试策略的东西，所以感触比较深。于是记了点笔记和自己的心得，这样后续再加入一些新项目，也不会手足无措了。
@@ -56,7 +56,7 @@ top:
 
 首先就是敏捷团队的质量保证策略，其实这就是许多非QA角色眼中的**狭义测试策略**，展示了敏捷开发中每个阶段团队如何协作来保证产品质量。个人认为这个是最基本的质量保证标准，每个敏捷团队都应该做好。
 
-<img src="https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png" >
+{% img https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png %}
 
 <span id="inline-toc">1.</span> **故事分析**
 BA与客户沟通清楚需求后，编写故事卡，并和QA结对写AC，或者写完AC找QA review. 
@@ -82,13 +82,13 @@ QA同学进行测试，将发现的问题与BA、开发沟通并修复，直到�
 
 Sprint report是敏捷开发管理工具Jira的一个功能，如下图，纵轴是迭代内所有故事卡的点数，横轴是迭代时间。两周一个迭代，体现了迭代内随时间推移故事卡开发的情况：
 
-<img src="https://i.loli.net/2020/12/01/vEqDKlLMYz6fA3X.png" >
+{% img https://i.loli.net/2020/12/01/vEqDKlLMYz6fA3X.png %}
 
 灰色线条是在迭代开始后，默认生成的一条该迭代的理想开发速率线，灰色地带是周末，所以没有变化(这也可以看出敏捷开发是不提倡加班的:joy:)。红色是迭代开发的真实情况，健康的敏捷开发，**红线的趋势应该是和灰线基本一致的**。
 上图就是因为两周内并不能完成迭代任务，所以又延迟了两周，此时就应该分析为什么会导致这种情况，是对需求理解不够，点数估计少了呢，还是别的原因，从而避免以后再发生同样的情况。
 这里我再贴几张迭代的Sprint report，都是我之前经历过的真实敏捷迭代(所以我都经历了什么:sob:抱走心酸的自己:persevere:)，大家可以自己尝试分析，导致下边几种情况的可能原因：
-<img src="https://i.loli.net/2020/12/01/tueAgQEZ9byo4la.png" >
-<img src="https://i.loli.net/2020/12/01/xSCBPQ9MJzLVTHb.png" >
+{% img https://i.loli.net/2020/12/01/tueAgQEZ9byo4la.png %}
+{% img https://i.loli.net/2020/12/01/xSCBPQ9MJzLVTHb.png %}
 其实之前也有两条线一致的时候，但那已经是很久之前了。。。。
 
 
@@ -214,7 +214,7 @@ Bug report是对迭代内发现问题的总结，由QA同学产出，如何做�
 
 >主要是识别敏捷开发流程中的质量风险。
 
-<img src="https://i.loli.net/2020/12/01/rjD83zVIi9e4wHq.png" >
+{% img https://i.loli.net/2020/12/01/rjD83zVIi9e4wHq.png %}
 
 <span id="inline-toc">1.</span> **需求阶段**
 

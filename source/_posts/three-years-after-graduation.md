@@ -9,7 +9,7 @@ description: 搬砖三年，归来仍是素人。
 top:
 ---
 
-<img src="https://i.loli.net/2021/07/31/FoOkzjwaQncAq3l.png">
+{% img https://i.loli.net/2021/07/31/FoOkzjwaQncAq3l.png %}
 
 ## 2018：传说中的试用期
 
@@ -26,18 +26,18 @@ top:
 由于一直在一个项目组，和周围的同事们以及客户都很熟悉，每天上班唠嗑也很欢乐，有时甚至一想到第二天要上班，还很期待，一年中项目里有人走，也有人进来，但我的快乐一直不变。
 除此之外，公司经常会办一些节日活动，比如3.7女生节的微景观DIY，第二天还放了半天假；还有万圣节做南瓜灯、中秋节做月饼，平时的人文关怀也不少。
 
-![公司的节日活动](https://i.loli.net/2021/08/01/t859kegJHNB6b7o.jpg)
+{% img https://i.loli.net/2021/08/01/t859kegJHNB6b7o.jpg %}
 
 这一年我搬了两次家，第一次搬到了一个朝北的房子(住进去之前我一直以为这房子是朝东的:joy:)，装修很不错，没什么可以自己折腾的空间，而且朝北让人住着很压抑，所以住了一个月又搬了。搬到了同小区另一个朝南的房子，装修一般，但正合我意，一番折腾之后终于把房子改造成了自己喜欢的风格，而且从此后我终于分得请南北了:satisfied:
 
-![第一次搬家(左)第二次搬家(右)](https://i.loli.net/2021/08/01/B4PdgGpbyAROq3t.jpg)
+{% img https://i.loli.net/2021/08/01/B4PdgGpbyAROq3t.jpg %}
 后来还安排了投影仪和烤箱，看电影、研究厨艺也是一种享受。
 
-![投影仪真香](https://i.loli.net/2021/08/01/t2367xjFVWkTLrR.jpg)
-![各种烤](https://i.loli.net/2021/08/01/OmK46iCosyIgezG.jpg)
+{% img https://i.loli.net/2021/08/01/t2367xjFVWkTLrR.jpg %}
+{% img https://i.loli.net/2021/08/01/OmK46iCosyIgezG.jpg %}
 住处离公司大概5公里，但没有直达的公交，于是买了一个电动滑板车🛴，每天骑着滑板去上班，单程15-20分钟就能到公司，不能骑车的天气就打车，然后就很少坐公交了。
 
-![我的滑板车](https://i.loli.net/2021/08/01/XNd4KMO5ZcWsalL.jpg)
+{% img https://i.loli.net/2021/08/01/XNd4KMO5ZcWsalL.jpg %}
 自从我用滑板出行后，发现通勤路上的滑板车越来越多了，公司里也有人买了，有次澳洲的客户来西安出差，还被我成功安利，回去后也买了一辆:laughing:
 一年中也有和同事一起去 [青海](https://jmyblog.top/5-1-travel/)、[色达](https://jmyblog.top/6-6-travel/) 旅行，和朋友去 [爬山](https://jmyblog.top/HuaShanTravel/) 等 ，经常出去玩，这一年就这样快乐的结束了。
 

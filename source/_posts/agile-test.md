@@ -9,7 +9,7 @@ description: 全是套路。
 top:
 ---
 
-<img src="https://i.loli.net/2021/09/16/XSmLbJgiMNPhHjA.png" >
+{% img https://i.loli.net/2021/09/16/XSmLbJgiMNPhHjA.png %}
 
 {% note info %}
 下周要给同事分享关于敏捷测试的session，简单介绍敏捷测试的概念和实践，虽然没有多少人听:joy:，不过准备的过程中自己还是挺有收获的，所以先用这篇博客总结下。
@@ -50,11 +50,11 @@ top:
 
 之前「有幸」参加过几次传统软件项目，包括毕业前实习的时候也是，在我看来他们有以下区别：
 
-![传统测试与敏捷测试](https://i.loli.net/2021/09/17/j2Rfx1wV4YAlmqt.png)
+{% img https://i.loli.net/2021/09/17/j2Rfx1wV4YAlmqt.png %}
 
 不难看出，两者的核心不同，传统测试以「质量检测」为核心，目标是为了发现更多的bug；敏捷测试则以「质量内建」为核心，目标在于预防缺陷：
 
-![质量内建](https://i.loli.net/2021/09/17/KZCxYy51Smk2X79.png)
+{% img https://i.loli.net/2021/09/17/KZCxYy51Smk2X79.png %}
 
 >软件的缺陷暴露的越晚，修复的成本就越高；前期对缺陷预防的少，后期发现的缺陷就会多；前期做好了缺陷预防，后面暴露的缺陷就会减少。因此，我们需要提前预防缺陷，而不是等开发完成了才发现很多的问题，这就是 **「质量内建」** 。
 
@@ -92,20 +92,20 @@ top:
 
 利用测试四象限，可以在项目开始前期，帮我们确定做什么测试的问题，比如测功能、组件、性能、可靠性等等。
 
-![测试四象限](https://i.loli.net/2021/09/18/XgT4iveAmUjVnd7.png)
+{% img https://i.loli.net/2021/09/18/XgT4iveAmUjVnd7.png %}
 
 #### 测试金字塔
 
 利用测试金字塔原则，将上边确定好的测试方法，结合项目架构，进行测试分层，确保覆盖全面：
 
-![测试金字塔](https://i.loli.net/2021/09/18/awPHkol1BumJ28A.png)
+{% img https://i.loli.net/2021/09/18/awPHkol1BumJ28A.png %}
 之前有写过 [一篇文章](https://jmyblog.top/Test-Pyramid/) 详细介绍。
 
 #### 测试矩阵
 
 确定了测试方法和测试分层，我们还需要考虑一些细节，比如用什么工具来做这些测试、在哪个环境运行、还有需要集成到CI吗等等问题，这个时候，就可以利用测试矩阵来生成细化方案：
 
-![测试矩阵](https://i.loli.net/2021/09/18/xB46Nmb9aT1zvoA.png)
+{% img https://i.loli.net/2021/09/18/xB46Nmb9aT1zvoA.png %}
 将确定要做的测试方法放在首行，纵向则陈列各种测试细节，这样清晰明了，更容易和团队达成一致。之前博主也写过 [一篇文章](https://jmyblog.top/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/) 介绍测试矩阵，但那时举的例子比较简单，现在就更加全面了。
 
 ### 持续测试
@@ -113,7 +113,7 @@ top:
 {% label info@持续测试 %} 是指在项目开发过程中，进行持续的功能测试，也包括性能、安全等的内建；形式可以是静态分析、评审，也可以是动态的测试，包括手动执行的各种测试，以及集成流水线上持续执行的自动化测试。
 事实上，也就是以用户故事为一个单位，敏捷团队日常进行的一些测试实践，比如KickOff、TDD、DeskCheck等等。
 
-![测试四象限](https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png)
+{% img https://i.loli.net/2020/11/30/TpxlCFQ4uYWa58s.png %}
 
 详细可以看我 [之前的文章](https://jmyblog.top/testStrategy/#%E6%95%8F%E6%8D%B7%E5%9B%A2%E9%98%9F%E7%9A%84%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E7%AD%96%E7%95%A5)。
 

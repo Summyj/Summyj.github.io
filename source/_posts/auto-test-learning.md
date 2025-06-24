@@ -9,7 +9,7 @@ description: 当我们说自动化测试的时候，到底在说什么？
 top:
 ---
 
-<img src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600">
+{% img https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png %}
 
 >近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。
 {% label success@绿色 %}是我目前在做的，{% label warning@黄色 %}是在实践但没有深入了解的，{% label danger@红色 %}是我没有了解或者没有实践的。

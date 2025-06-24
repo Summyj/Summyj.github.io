@@ -19,7 +19,7 @@ top:
 
 下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。
 
-<img src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" width=200 height=200>
+{% img https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg %}
 看过的/看了一部分的写了简评，以后有看完的再慢慢加:smiley:
 
 ### 工作

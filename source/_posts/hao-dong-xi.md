@@ -8,7 +8,10 @@ description: 谁不是好东西？
 top:
 ---
 
+<figure>
 <img src="https://s2.loli.net/2024/11/28/UxG7NekDrXl4s92.png" alt="豆瓣好东西剧照(我觉得最好笑的场景)">
+<figcaption>豆瓣好东西剧照(我觉得最好笑的场景)</figcaption>
+</figure>
 
 《好东西》英文名 Her Story，是最近热映的电影，讲述了单身母亲王铁梅带着女儿王茉莉，在搬家时与邻居小叶相识，而后围绕着这三位女性展开的一系列叙事。
 
@@ -62,12 +65,21 @@ top:
 
 昨天刚玩回来，去太原面食店吃了刀削面、去晋祠欣赏了山西古建筑美学、去看了太原地标永祚双塔寺，那么山西和法国有多像呢？请看下图：
 
-<img src="https://s2.loli.net/2024/12/02/ZzG1L7nQStb3rwI.jpg" alt="酒店的装饰墙是会对比的">
+<figure>
+<img src="https://s2.loli.net/2024/12/02/ZzG1L7nQStb3rwI.jpg" alt="太原永祚双塔寺双塔">
+<figcaption>太原永祚双塔寺双塔</figcaption>
+</figure>
 
 不仅如此，我还发现了中国自己的斜塔，那就是双塔中的文峰塔(图中右侧塔，原名宣文塔即东塔)，你是否观察到它往左偏了一点点呢？(看太阳照射的塔身明线对比左侧塔非常明显！)，附上拍到的纠偏碑记(博主和对象双双入镜)：
 
-<img src="https://s2.loli.net/2024/12/02/PkJ6lCcRrE5AXyM.jpg" alt="双塔和纠偏碑记">
+<figure>
+<img src="https://s2.loli.net/2024/12/02/PkJ6lCcRrE5AXyM.jpg" alt="文峰塔纠偏碑记(博主和对象双双入镜)">
+<figcaption>文峰塔纠偏碑记(博主和对象双双入镜)</figcaption>
+</figure>
 
 所以别说法国了，山西和意大利也很像！世界就是巨大的中国(手动狗头)。话又说回来了，比萨斜塔拯救委员会真的不考虑咱们的专家过去看看嘛？下图为博主去意大利旅行时拍到的斜塔：
 
-<img src="https://s2.loli.net/2024/12/02/5E1GQpgVlJoSXqW.jpg" alt="比萨斜塔">
+<figure>
+<img src="https://s2.loli.net/2024/12/02/5E1GQpgVlJoSXqW.jpg" alt="意大利比萨斜塔">
+<figcaption>意大利比萨斜塔</figcaption>
+</figure>

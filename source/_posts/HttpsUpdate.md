@@ -9,7 +9,7 @@ description: 道路千万条，安全第一条。
 top:
 ---
 
-<img src="https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png" >
+{% img https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png %}
 
 ## 事情是这样的
 
@@ -17,7 +17,7 @@ top:
 
 找到了之前写过关于申请证书的[文章](https://jmyblog.top/SiteBrokenFix/)，发现是在coding pages里申请的证书：
 
-<img src="https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png" >
+{% img https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png %}
 
 之前的证书状态正常，现在进去一看，证书状态已经失效了。点了页面上重新申请的按钮，结果申请失败。
 
@@ -29,7 +29,7 @@ top:
 
 好像之前遇到过申请失败的问题，所以按照这个操作，先去把GitHub解析暂停，再点击申请证书，这下成功了，刷新了下博客，证书的有效期已经更新到10月底了：
 
-<img src="https://i.loli.net/2020/07/30/aLlXtRmycKpk2Ji.png" >
+{% img https://i.loli.net/2020/07/30/aLlXtRmycKpk2Ji.png %}
 
 我得意的笑 :grin:
 
@@ -50,7 +50,7 @@ Let's Encrypt的官网说：
 但是根据我的域名解析设置，Coding Pages的解析线路是默认，Github Pages解析线路是境外，所以根据域名解析规则，{% label primary@Let's Encrypt在国外只能访问到Github Pages的域名验证信息，而无法访问Coding Pages的域名验证信息。 %}
 所以Coding Pages在帮我们申请证书时，就无法通过Let's Encrypt的域名验证，证书也就申请不到了：
 
-<img src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png" >
+{% img https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png %}
 
 所以这就是为什么用Coding Pages申请证书时，需要先把Github Pages的解析暂停掉了。不过别忘了证书申请成功之后，再把Github Pages的解析重新启动哦。
 

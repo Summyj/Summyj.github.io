@@ -15,7 +15,7 @@ top:
 
 {% endnote %}
 
-![ThoughtWorks University官网介绍](https://i.loli.net/2021/07/18/pJrxDV5EqydmKUh.png)
+{% img https://i.loli.net/2021/07/18/pJrxDV5EqydmKUh.png %}
 
 ## 出发之前
 ### 西安 or 印度？
@@ -42,25 +42,25 @@ top:
 7.24号，去公司办理入职，领取电脑，由于新电脑还没有到，所以暂时领了旧电脑先用着。和一起去印度的小伙伴面了基，然后一块儿走入职流程。还签了公司的TWU培训协议，这次去印度培训一个月，各种费用加起来至少得4万，公司为了培训新员工成本也不低呀。
 然后就拿到了行程单，大概是这样的：
 
-<img src="https://i.loli.net/2021/07/18/8WP2OFT6A13hGpY.jpg" width = "400" height = "400" alt="行程单">
+{% img https://i.loli.net/2021/07/18/8WP2OFT6A13hGpY.jpg %}
 
 ### 去北京
 
 入职第二天，先坐早上10点的高铁去北京，看到小伙伴们的行李才发现自己有多么克制。到了北京站已是下午3点，稍作休整后又打了企业滴滴去首都机场，一路上和司机师傅聊天，听他讲北京城的繁华也十分有趣。
 机场值机托运后，我们遇到了同样去TWU的小伙伴，是从成都过来的。一顿寒暄后在机场吃了碗面，就往登机口走去。
 
-![北京首都机场](https://i.loli.net/2021/07/18/OUCGcbAnmdyrvgp.jpg)
+{% img https://i.loli.net/2021/07/18/OUCGcbAnmdyrvgp.jpg %}
 
 飞机有点延误，晚上9点20，我们才登机。看着飞机外渐行渐远的城市灯光，对即将开启的旅程也越发期待起来。
 
-<img src="https://i.loli.net/2021/07/18/VHPOgxD31Es6hAc.jpg" width = "350" height = "500" alt="机窗外的城市灯光">
+{% img https://i.loli.net/2021/07/18/VHPOgxD31Es6hAc.jpg %}
 
 ## 到达浦那
 ### 入境登记
 
 航班虽然延误了，但却比预计时间提前半小时，在凌晨1点到达了德里机场，让我觉得有点玄幻。德里机场的佛手给我的印象很深刻：
 
-![德里机场](https://i.loli.net/2021/07/18/VXgGlZCLm5AUTic.png)
+{% img https://i.loli.net/2021/07/18/VXgGlZCLm5AUTic.png %}
 跟着人流走到机场入境登记口，做入境检查和登记，按照提示填写表格，拿上护照排队，窗口的印度小哥边对照我的表格和护照的照片，边上下打量我，感觉有点怪，不过最后他还是拿着印章在护照上按了戳。
 
 ### 到达浦那
@@ -68,11 +68,11 @@ top:
 登记完成后，我们还要坐去浦那的飞机，因为环境太陌生，费了好大劲才办好了值机托运，还在登机口碰到了去TWU的外国朋友，口语经验匮乏的我嘴仿佛被锁死，只能简单say hi然后微笑致意，嗯，毕竟微笑是人类共同的语言嘛。
 印度时间26日凌晨5点，我们登上了去浦那的飞机，第一次坐国外的飞机，感觉很奇特。
 
-<img src="https://i.loli.net/2021/07/18/xTeLE1dmBlbhSQW.jpg" width = "500" height = "500" alt="印度航空登机牌">
+{% img https://i.loli.net/2021/07/18/xTeLE1dmBlbhSQW.jpg %}
 
 飞机餐是印度咖喱和偏黄色的细长米饭，还有白色的糊状物，看着就容易让人产生不好的联想，我没忍心吃，只用面包和黄瓜垫了下肚子。
 
-![印度航空飞机餐](https://i.loli.net/2021/07/19/aKALFXpze3Z17PC.jpg)
+{% img https://i.loli.net/2021/07/19/aKALFXpze3Z17PC.jpg %}
 上午7点，我们到了浦那机场，在行李转盘旁边的卫生间洗手，我第一次体验了被外国人围观的感觉。
 
 ### 前往住所
@@ -80,13 +80,13 @@ top:
 取完行李在机场出口看到了公司接机的牌子，然后被安排坐上去住所的面包车，看着窗外浦那街头的人和车，才有种到了印度的真实感。
 早上8点多，我们到了住处，公司给TWU学员提供的住处规格相当于国内的宾馆，两栋楼，都是6层，一栋叫 [STAY@HOME](https://www.agoda.com/fabhotel-stay-home-viman-nagar_2/hotel/pune-in.html?cid=-142)，一栋叫[Home From Home](https://www.agoda.com/oyo-16625-home-from-home/hotel/pune-in.html?cid=-142)，距离大概50米，离浦那机场比较近。
 
-![STAY@HOME](https://i.loli.net/2021/07/19/JVFep1C6OP4BRwI.png)
-![Home From Home](https://i.loli.net/2021/07/19/ctpze3hHkjiaDYl.png)
+{% img https://i.loli.net/2021/07/19/JVFep1C6OP4BRwI.png %}
+{% img https://i.loli.net/2021/07/19/ctpze3hHkjiaDYl.png %}
 我和一起来的小伙伴们最后入住了STAY@HOME，在一楼休息区歇了会，前台的服务人员给我们发了房间钥匙和一张印度手机卡，然后我们就去各自的房间收拾了。
 
-![旅馆一楼休息区](https://i.loli.net/2021/07/19/2ZT5uSxJFjhIDkR.png)
-![旅馆前台](https://i.loli.net/2021/07/19/GOl6tjMuWqyZIai.png)
-![房间内部](https://i.loli.net/2021/07/18/Ud5bC9EX8ySRmGY.jpg)
+{% img https://i.loli.net/2021/07/19/2ZT5uSxJFjhIDkR.png %}
+{% img https://i.loli.net/2021/07/19/GOl6tjMuWqyZIai.png %}
+{% img https://i.loli.net/2021/07/18/Ud5bC9EX8ySRmGY.jpg %}
 房间基本上是一人一间，有的大房间是两个人一起的。从25号早上出发开始，整整一天，我一直在路上奔波，终于可以睡会了。
 
 ### 熟悉环境
@@ -107,24 +107,24 @@ trainer会定期与trainee进行 1:1 catch up，至少每周一次，跟进train
 课程分为两种，一种是Session，就是光听讲师讲，也有互动和问答环节，比如敏捷开发相关的理论知识，还有TW的文化和工作方式，这种课程还经常有group talk环节，让我蹩脚的口语无处可藏；一种是WorkShop，大多偏技术类，得提前准备工具和环境，比如代码实践、自动化测试等等。
 由于trainee的人数较多，所以随机分为A/B两组分别参加这些课程，课表都是一样的，只是讲师不同。
 
-![某次session剪影](https://i.loli.net/2021/07/19/uYNsIkfGz9DFcqW.jpg)
-![讲需求理解一致重要性的课程_鸟是我画的哈哈哈](https://i.loli.net/2021/07/19/P8Sd4H7QsDmrM3T.jpg)
+{% img https://i.loli.net/2021/07/19/uYNsIkfGz9DFcqW.jpg %}
+{% img https://i.loli.net/2021/07/19/P8Sd4H7QsDmrM3T.jpg %}
 
 这些培训课有的是需要全体trainee参加的，有的只需要对应角色参加，比如针对BA的需求拆分课、针对Dev的TDD开发课、针对QA的自动化测试和测试理论等等。也有针对BQA角色的故事卡AC编写课，针对QA&Dev的单元测试Pair编写课等等，简直就是知识的海洋。
 第二天的站会还会有Trainer来提问昨天session讲的内容，很多课程也有课后作业，为忙碌的培训生活添砖加瓦。
 
-![站会上的提问环节](https://i.loli.net/2021/07/20/imMa5JgQeClHdzV.jpg)
+{% img https://i.loli.net/2021/07/20/imMa5JgQeClHdzV.jpg %}
 
 ### 模拟项目
 
 后来，A/B两组的trainee又被各自分成不同的小组，每个组大概15人，相当于一个模拟的敏捷开发小组。在接下来的5周内，每个组都要开发完成一个相同的模拟软件项目，然后以小组为单位，进行每日站会、retro、showcase等敏捷会议。
 
-![组内站会](https://i.loli.net/2021/07/19/antQGkh6KdmCiA2.jpg)
+{% img https://i.loli.net/2021/07/19/antQGkh6KdmCiA2.jpg %}
 小组里的学员角色也不一样，有UX/BA/QA/Dev等，一个完整的敏捷开发项目组这些角色都应该有，但因为是随机分配，角色也就没那么均衡了，我所在的小组挺幸运的，因为啥也不缺，每个角色都有。
 每个小组还会被分配一个模拟的客户，就是PO(Product Owner)，然后邀请PO参加showcase，和PO比对澄清业务需求等等。PO大多是由trainer客串，也会邀请当地办公室的同事来扮演，我们小组的PO就是一个trainer。更巧的是，她正好是我的trainer-Daniel的女朋友，果然八卦无处不在。
 
-![日常工作(后面的信封上是每个trainer/trainee的名字，用来收集反馈，培训结束后发给每个人)](https://i.loli.net/2021/07/20/yFoilNcUGMIfg7m.jpg)
-![最后一次showcase](https://i.loli.net/2021/07/19/MwhdEQe4bgUSpZc.jpg)
+{% img https://i.loli.net/2021/07/20/yFoilNcUGMIfg7m.jpg %}
+{% img https://i.loli.net/2021/07/19/MwhdEQe4bgUSpZc.jpg %}
 
 ### Lunch & Learn
 
@@ -147,7 +147,7 @@ Pecha Kucha是TWU的一个演讲活动，每个trainee要在TWU培训的五周�
 刚开始看别的trainee分享，每个人都很棒，游刃有余，真的都是大佬。还有印象的几个分享是古筝、移动支付，有一个印度的小姐姐也分享了印度的传统节日，跟我的主题撞了，不过不慌。
 由于我是懒癌晚期+重度拖延症患者，15号才真正开始准备演讲的PPT，可偏偏那天电脑就突然开始死机了，后来在网上找到一种强制开机的办法，但电脑还是时不时就自动关机，就这样在心惊胆战中准备好了PPT。
 
-<img src="https://i.loli.net/2021/07/20/RazVb2EMsYxZqX1.jpg" width = "350" height = "500" alt="电脑死机了>.<">
+{% img https://i.loli.net/2021/07/20/RazVb2EMsYxZqX1.jpg %}.<">
 8.16很快就到了，白天培训的时候我还在想文案，调整PPT的排版。但无论怎么调整，都控制不住紧张的心跳，晚上还是硬着头皮演讲完了。刚开始讲的时候真的是蜜汁冷场，观众都一脸冷漠，搞得我更紧张了，眼神总是看着PPT，后期靠着提问环节的freestyle才找回了点场子。
 按照讲session的惯例，结束后收集了大家的反馈，大多数都是说我缺少eye contact，没有面向观众，还有说我准备不充分的。但更多的小伙伴还是鼓励我，都是善良的人啊。其实自己心里很有逼数，我的演讲打6分不能再多了。
 {% endnote %}
@@ -159,25 +159,25 @@ Case Study是TWU期间的一个社会调研活动，随机分组进行，每组6
 我的小组有6个人，有来自中国、印度、巴西、日本的trainee，主题是 **Inequality in India**，调研印度社会的不平等现象，包括经济、宗教、种姓、医疗四个方面。
 最令我震惊的就是种姓制度了，在培训的第三周，我们有一次和印度同事交流的机会，沟通过程中得知，在印度，低种姓的印度人根本没有机会从事那些体面的工作，只能得到打扫厕所之类的又脏又累的工作，还要遭受别人的唾弃和蔑视，真的很可怕。
 
-![PPT上关于种姓制度的一页](https://i.loli.net/2021/07/19/aFnGl7KZj2yLNdf.png)
+{% img https://i.loli.net/2021/07/19/aFnGl7KZj2yLNdf.png %}
 培训第五周，我们做了演讲分享，6个人每人讲一个部分，这次的演讲我的表现还不错，至少比Pecha Kucha好多了，所以还是有进步的。
 
 ### NGO Activity
 
 第三周的周末，TWU举办了NGO活动，邀请一些贫困地区的小学生来公司，体验代码技术带来的便利。我们和小朋友一起玩游戏，教他们使用电脑。此外，还邀请了一些卖手工艺品的小摊贩来公司售卖，我买了很多纪念品。
 
-<img src="https://i.loli.net/2021/07/19/bXoBk4EK2jszepg.jpg" width = "350" height = "500" alt="和小朋友玩游戏的trainer">
+{% img https://i.loli.net/2021/07/19/bXoBk4EK2jszepg.jpg %}
 
 ###  Graduation ceremony
 
 5周的时间过的很快，8.31号，在离开浦那前的最后一个工作日，就是我们的Graduation Day了，在酒店里进行。
 主持人先是让trainer们播放自己制作的小视频，是我们这5周经历的剪影；然后还有印度小姐姐跳舞表演节目，气氛很happy；最后就是每个小组分享，还是首先播放小组制作的小视频，里面是每个小组在这5周的经历，我们组的视频是UX做的。
 
-![视频剪影](https://i.loli.net/2021/07/20/rBjG4qsic6RoEvZ.png)
+{% img https://i.loli.net/2021/07/20/rBjG4qsic6RoEvZ.png %}
 然后就是把这五周做的模拟项目进行公开showcase，我们组是我来演示，然后BA小姐姐介绍，但是，演示过程中竟然500了，这个意外让整个会场气氛更high了，好像大家都在等这个彩蛋，我们也是所有小组唯一 showcase 500 的，特别逗。
 整个Graduation ceremony就这样在欢笑声中结束了，5周的学习生活也告一段落了，虽然整个过程大部分时间我都很自闭，但整体来说收获也是巨大的。
 
-![trainer&trainee大合照](https://i.loli.net/2021/07/19/NrTUfJ1OqVQYoX8.jpg)
+{% img https://i.loli.net/2021/07/19/NrTUfJ1OqVQYoX8.jpg %}
 
 ## 饮食篇
 ### 便利店
@@ -195,13 +195,13 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 
 虽然我们住在STAY@HOME，但住处的餐厅是在Home From Home的顶楼，厨师全是印度小哥。
 
-![Home From Home餐厅](https://i.loli.net/2021/07/19/gAyodqkEvG38SjI.png)
+{% img https://i.loli.net/2021/07/19/gAyodqkEvG38SjI.png %}
 早上可以在这吃早餐，晚上下班回来也可以在这吃饭，餐厅的账单每周一结算。我个人比较常吃的是鸡肉面条和煎蛋卷，有时候也有小伙伴叫外卖买披萨，我也可以蹭一波，除了刚开始的几天，后来这里就很少看到国外小伙伴的身影了，基本上都去外边吃了。
 
-![在餐厅吃饭的小伙伴们](https://i.loli.net/2021/07/19/iATXRQPJHhlM3wK.jpg)
+{% img https://i.loli.net/2021/07/19/iATXRQPJHhlM3wK.jpg %}
 某次空盘行动，两个吃货的盛宴：老干妈+Egg Sandwich+Chicken noodle+2 omelet+fried chicken，右边是我经常吃的Chicken noodle，配上老干妈还不错的。
 
-![空盘行动](https://i.loli.net/2021/07/20/aCTmZ9cKnXkNO26.jpg)
+{% img https://i.loli.net/2021/07/20/aCTmZ9cKnXkNO26.jpg %}
 
 ### 出去吃
 
@@ -209,14 +209,14 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 从住处往外走2公里左右，有个商场，叫Phoenix Marketcity，规格和万达广场差不多，里面有很多餐厅，还有肯德基，都可以去吃。
 此外，TWU也组织了好几次聚餐，可以好好吃一顿。
 
-<img src="https://i.loli.net/2021/07/19/lF6BD1x52IPSRK4.jpg" width = "450" height = "800" alt="外面的美食">
+{% img https://i.loli.net/2021/07/19/lF6BD1x52IPSRK4.jpg %}
 
 ### 自给自足
 
 时间长了，难免想念国内的美食，有小伙伴自带了螺蛳粉，我经常去蹭吃，第一次吃这个然后就被种草了，感觉人家带的螺蛳粉大部分都被我吃掉了，但这个是真的救命啊。
 火锅是有几次和成都的小伙伴们一起吃的，锅底也是他们提供的，正好有两个小电锅，所以奇迹般地吃上了鸳鸯锅。食材是在 Phoenix Marketcity 里的超市买的，我在超市里发现了一种叫 Chinese Noodle 的速食面条，下在锅里竟然特别好吃，获得了大家的一致好评。
 
-![螺蛳粉和火锅](https://i.loli.net/2021/07/19/FGuqYzRQkAJwpIt.jpg)
+{% img https://i.loli.net/2021/07/19/FGuqYzRQkAJwpIt.jpg %}
 
 ### 叫外卖
 
@@ -227,7 +227,7 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 
 首先就是离住所2公里左右的 Phoenix Marketcity 商场，大家习惯叫 Phoenix Mall，据说是印度最大的购物中心之一。我们经常会来这里逛逛，里边大概4/5层，结构和国内的万达很像。与国内商场不同的是，进这里边还需要做安检，和国内进地铁的流程差不多，有点奇怪。
 
-![商场门口](https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/78/28/0b/phoenix-market-city.jpg?w=1400&h=-1&s=1)
+{% img https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/78/28/0b/phoenix-market-city.jpg?w=1400&h=-1&s=1 %}
 有时候是我们自己组团去，后来公司的通勤大巴在这里也会停，我们就经常下班后在这下车，然后进里边吃饭买东西。
 
 
@@ -235,14 +235,14 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 
 第三周我们的模拟项目小组进行了唯一一次团建，还是去Phoenix Mall，里面有一个玩乐场，可以打桌球，玩跳舞机，还可以打保龄球。
 
-![大秀舞姿的trainer](https://i.loli.net/2021/07/20/R3WwcsB9yihkCt2.jpg)
-![保龄球记分板(No1!)和我帅气的背影](https://i.loli.net/2021/07/20/4wmDLG5OWUuT3xX.jpg)
+{% img https://i.loli.net/2021/07/20/R3WwcsB9yihkCt2.jpg %}
+{% img https://i.loli.net/2021/07/20/4wmDLG5OWUuT3xX.jpg %}
 
 ### 办公室的欢乐时光
 
 浦那办公室有很多娱乐设施，比如桌球、台球、乒乓球之类。办公室装修也很有意思，里面还有一排火车车厢式的会议室。TWU的trainer们还会经常组织一些游戏，一群刚毕业的小伙伴聚在一起，也有无穷欢乐。
 
-![外国小姐姐秒变印度女杀手](https://i.loli.net/2021/07/20/bqLz5OE3Y86PmCR.jpg)
+{% img https://i.loli.net/2021/07/20/bqLz5OE3Y86PmCR.jpg %}
 
 ### 自娱自乐
 
@@ -271,33 +271,33 @@ TWU所在的浦那办公室，有一个员工餐厅，早上可以去后厨找�
 来印度第二天，我们和国外的小伙伴一起步行去Phoenix Mall，回程尝试用Uber打车，但因为交流问题，费了好大劲才找到司机。后来组团出行也多是用Uber打车。
 Uber打到的车有普通轿车，也有印度的「突突车」。突突车就是下图这种三轮电动车，在浦那街头很常见，感觉像是出租车一样，价格忘记了，反正还可以接受；普通轿车的话，街头最常见的是一种S型车标的轿车，后来了解到这种车叫铃木，是印度最热销的汽车品牌，下图也有：
 
-![浦那常见的交通车辆](https://i.loli.net/2021/07/20/JrByUkmCX6KQiV2.png)
+{% img https://i.loli.net/2021/07/20/JrByUkmCX6KQiV2.png %}
 有一次中国的trainer们约我们出去吃饭，去了一家叫terttulia的餐厅，环境挺不错的：
 
-![pune terttulia](https://i.loli.net/2021/07/20/teumPcO1QFEqVH4.png)
+{% img https://i.loli.net/2021/07/20/teumPcO1QFEqVH4.png %}
 这家店所在的位置好像也很好，因为店门口的街道上来往车辆都是豪车，不像上文中提到的满是铃木车的浦那街头，我在店门口看到了一只可以脑补一出偶像剧的狗子，自带忧郁气质：
 
-<img src="https://i.loli.net/2021/07/20/iAusQoYyVC3ZxR8.jpg" width = "350" height = "500" alt="自带忧郁气质的狗子">
+{% img https://i.loli.net/2021/07/20/iAusQoYyVC3ZxR8.jpg %}
 
 
 ### Weekend Trip
 
 在TWU，会有一次全体出游的机会，比如TWU西安的出游目的地是城墙。而在浦那，出游日定在第四周的周末，行程是这样的：
-![Weekend Trip行程单](https://i.loli.net/2021/07/20/YhcHPJ8sdjltS5T.png)
+{% img https://i.loli.net/2021/07/20/YhcHPJ8sdjltS5T.png %}
 
 #### 出发
 
 周六早上按照计划出发，给大家发了纸质的行程单，里面有景点和住所介绍，当日的天气也是我喜欢的微雨天。
 
-<img src="https://i.loli.net/2021/07/20/mWVpy4MeZ9dFNT3.jpg" width = "350" height = "500" alt="坐大巴出发">
+{% img https://i.loli.net/2021/07/20/mWVpy4MeZ9dFNT3.jpg %}
 
 #### Aga Khan Palace
 
-![Aga Khan Palace](https://i.loli.net/2021/07/20/vp2NohPVtwzbKCS.png)
+{% img https://i.loli.net/2021/07/20/vp2NohPVtwzbKCS.png %}
 不一会，我们就到了Aga Khan Palace，中文名叫阿迦汗宫，是1940年囚禁莫罕达斯甘地的地方，因此成为印度重要的地标之一。附近还有他妻子和秘书的纪念碑，他们在囚禁期间不幸离世。进入宫内可以参观展示甘地一生特殊事件的照片廊，还有甘地当时的日常生活用品，如甘地的衣物和慷慨激昂的信件。
 
-![阿迦汗宫的甘地像](https://i.loli.net/2021/07/20/iXfNkMSu8H4db79.jpg)
-![宫内建筑](https://i.loli.net/2021/07/20/wiGv1mH95n3SKau.jpg)
+{% img https://i.loli.net/2021/07/20/iXfNkMSu8H4db79.jpg %}
+{% img https://i.loli.net/2021/07/20/wiGv1mH95n3SKau.jpg %}
 
 #### lonavala & khandala
 
@@ -305,18 +305,18 @@ lonavala & khandala是纸质行程单上的一个景点，上边说这里是是�
 
 #### Lagoona Resort
 
-![Lagoona Resort](https://i.loli.net/2021/07/20/raKT4xtElA5bvoy.png)
+{% img https://i.loli.net/2021/07/20/raKT4xtElA5bvoy.png %}
 游览完阿迦汗宫，我们来到了晚上休息的酒店，酒店有三层，欧式风格，房间是提前安排好的，两人一间，我和同行的西安小姐姐住一间。吃完午餐，我们在周围转了转，这里还有桌球、台球、积木等等娱乐设施，玩了一会。
 
-![酒店内部](https://i.loli.net/2021/07/20/fKtFhTJ6oCSu1O9.jpg)
+{% img https://i.loli.net/2021/07/20/fKtFhTJ6oCSu1O9.jpg %}
 到了晚上，酒店一楼有DJ party，整个楼层瞬间变成了蹦迪现场，周围还提供了酒品、自助餐、甜品，我买了几瓶酒小酌，和大家一起融入了蹦迪的队伍。
 
-![印度打碟小哥](https://i.loli.net/2021/07/20/qvS7AKlyQWbcs5Y.jpg)
-![蹦迪现场](https://i.loli.net/2021/07/20/HNDM7VY18cW2OFX.jpg)
+{% img https://i.loli.net/2021/07/20/qvS7AKlyQWbcs5Y.jpg %}
+{% img https://i.loli.net/2021/07/20/HNDM7VY18cW2OFX.jpg %}
 旁边还有个摄影棚可以和小伙伴们一起照相，戴上拍照的道具，一个人可以拿到三张照片。我们还和印度的小伙伴们打了手鼓，总之非常开心。到了晚上1点多，我已经玩不动了，回到楼上，国内的小伙伴约着一起在房间里畅聊，聊到深夜才散场。
 第二天早上吃完早餐，退了房间，我们就离开了这里，Weekend Trip就这样愉快的结束了。
 
-![最后的大合照](https://i.loli.net/2021/07/20/vBZigRAMqulyWTK.jpg)
+{% img https://i.loli.net/2021/07/20/vBZigRAMqulyWTK.jpg %}
 
 ## 其他篇
 ### 国内外trainee文化差异
@@ -343,23 +343,23 @@ lonavala & khandala是纸质行程单上的一个景点，上边说这里是是�
  - 在上下班的大巴上，有时看到下面有头顶很多东西的人走在路上，而且还走得很稳。
  - 有次坐在上班大巴上，我竟然看到了摩拜单车！但并没有扫着试试看。
 
-<img src="https://i.loli.net/2021/07/20/ERsOIDPkFarqod9.jpg" width = "350" height = "500" alt="浦那街头惊现摩拜单车">
+{% img https://i.loli.net/2021/07/20/ERsOIDPkFarqod9.jpg %}
 
 ## 再见印度
 ### 浦那出发
 
 Graduation ceremony的第二天，我们就踏上了回国的旅程，是晚上的机票，所以早上和小伙伴去Phoenix Mall买了些纪念品，我主要是买了些印度的零食，其他的买不起也带不走。中午和武汉的小伙伴们，在离住处不远的西餐厅最后吃了一次自助餐。晚上又回去收拾行李。
 
-<img src="https://i.loli.net/2021/07/20/c79B8dbvOEezMAI.jpg" width = "500" height = "400" alt="TWU纪念品">
+{% img https://i.loli.net/2021/07/20/c79B8dbvOEezMAI.jpg %}
 到了晚上，旅馆有送我们去浦那机场的面包车，和来时一样，晚上9点多，我们就到了浦那机场。
 
-<img src="https://i.loli.net/2021/07/20/M3so7nd84fEYZRr.jpg" width = "350" height = "500" alt="浦那机场">
+{% img https://i.loli.net/2021/07/20/M3so7nd84fEYZRr.jpg %}
 
 ### 到达国内
 
 回程的路线和来时一样，但心境更淡定了，又在德里机场免税店买了点纪念品。9.2日中午12点多，终于到了北京，订了下午回西安的机票，在机场吃了顿包子，真的很香，一个多月的印度咖喱真的是够了:joy:
 
-<img src="https://i.loli.net/2021/07/20/cI13G8AivFj9JSr.jpg" width = "500" height = "400" alt="真香">
+{% img https://i.loli.net/2021/07/20/cI13G8AivFj9JSr.jpg %}
 
 ## 结束之后
 
@@ -371,4 +371,4 @@ Graduation ceremony的第二天，我们就踏上了回国的旅程，是晚上�
 
 虽然很多的人和事都已经变了，但在TWU之旅结束后，我就把所有的东西收在了一个资料袋里，所以才能写出这篇博客。这样以后想回忆的时候，除了看这篇文章，也可以打开资料袋，就可以随时回到过去，看看记忆里的那些小伙伴。
 
-<img src="https://i.loli.net/2021/07/20/ImP9g5KtChEoUpV.jpg" width = "400" height = "300" alt="纪念印度之行">
+{% img https://i.loli.net/2021/07/20/ImP9g5KtChEoUpV.jpg %}

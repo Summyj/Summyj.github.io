@@ -9,7 +9,7 @@ description: 卷吗？卷就对了。
 top:
 ---
 
-<img src="https://i.loli.net/2021/07/01/UMFEbBhrX6vW5xN.png" >
+{% img https://i.loli.net/2021/07/01/UMFEbBhrX6vW5xN.png %}
 
 
 {% note default %}

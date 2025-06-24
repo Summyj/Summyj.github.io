@@ -9,7 +9,7 @@ description: 干货满满的QA打怪升级指南。
 top:
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/threes-years-in-tw/1.png" >
+{% img https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/threes-years-in-tw/1.png %}
 
 {% note info %}
 前段时间，博主 [深刻思考](https://jmyblog.top/thoughts-about-qa-role/) 了QA角色，暗叹饭碗不稳之余，也设想了下一步的实践。突然发现之前看过的这篇文章与我的设想不谋而合，所以忍不住转载之，好时时自省。
@@ -49,7 +49,7 @@ top:
 
 我用“精益价值树”给自己画了一个愿景，并细分出成为一名专业QA的必备技能。
 
-<img src="https://i.loli.net/2021/11/01/zlRE7i6fNqTStu8.png" >
+{% img https://i.loli.net/2021/11/01/zlRE7i6fNqTStu8.png %}
 
 树的“投注”层就是我为了达成目标所需要提升的能力。要识别“短板”，首先要对每一项“投注”进行打分：
 
@@ -63,7 +63,7 @@ top:
 
 “举措”非常重要，这决定了我最终能不能将提升计划落地。“举措”就是我要采取的具体行动，我习惯将理论与实际相结合。制定“举措”一定要考虑时间的投入。经过实践我发现，尽量不要在同一时间同时做3个以上的举措，时间的最小单位设定在2-3天最适宜。下图是我在提升自己API自动化测试时的举措，实践证明，这个“短板式学习法”很奏效。
 
-<img src="https://i.loli.net/2021/11/01/jOt5oyPxYiAS2LR.png" >
+{% img https://i.loli.net/2021/11/01/jOt5oyPxYiAS2LR.png %}
 
 {% note info %}
 第二年
@@ -76,7 +76,7 @@ top:
 - 每天睁开眼睛，眼前都是堆积如山的工作，但我却无法让团队成员分担（团队协作与培养他人）
 - 在项目上临时客串了几个月BA，一起出差到客户现场挖掘需求。客户有一堆想要做的东西，而时间和成本都有限，大家讨论地非常激烈，而我如鲠在喉。太少面对客户的机会，让我觉得客户仿佛有‘尖牙利爪’，不知如何应对（自信、领域知识、MVP、痛点挖掘、愿景分析、引导技术、谈判技术）
 
-<img src="https://i.loli.net/2021/11/01/FZ4PrcHmUh7TCGi.png" >
+{% img https://i.loli.net/2021/11/01/FZ4PrcHmUh7TCGi.png %}
 
 为了打破这些思维的困境，我从公司内部找到好多资料来学习。
 
@@ -86,7 +86,7 @@ top:
 
 在学习的过程中，我意识到自己的学习动机来自于偶尔听到、看到或思考的一些课题，都是些零零散散的点，不够系统。因此，我需要按照一定的方式进行归类，构造出一个新的体系来。我将这个学习过程称为 **“散点式学习法”** 。
 
-<img src="https://i.loli.net/2021/11/01/y85EOiPuCrRBJqc.png" >
+{% img https://i.loli.net/2021/11/01/y85EOiPuCrRBJqc.png %}
 
 我通过社区培训、数据、文章、思考、与大师交流等形式获得知识，然后将这些散点按照产品、需求、领域知识、通用技能4个维度进行归类。在散点图中，我用不同的颜色标记当前对知识的掌握程度，用距离中心的位置表示学习的优先级。
 
@@ -107,7 +107,7 @@ top:
 
 学到的知识越多，就越需要归纳总结。不然就很容易变成“这也会，那也会；但这也不熟，那也不精”。
 
-<img src="https://i.loli.net/2021/11/01/gqt9oHl6h2wZmSR.png" >
+{% img https://i.loli.net/2021/11/01/gqt9oHl6h2wZmSR.png %}
 
 我将自己的技能归纳为三层：
 

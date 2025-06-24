@@ -9,7 +9,7 @@ description: 一个咸鱼的碎碎念。
 top:
 ---
 
-<img src="https://s2.loli.net/2023/02/26/ViQFtOyS6I35f2g.png" >
+{% img https://s2.loli.net/2023/02/26/ViQFtOyS6I35f2g.png %}
 
 最近一段时间，我很疲惫。
 

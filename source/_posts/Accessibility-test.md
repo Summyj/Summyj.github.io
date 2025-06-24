@@ -9,7 +9,7 @@ description: 唠唠网络无障碍那些事儿。
 top:
 ---
 
-![Accessibility](https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png)
+{% img https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png %}
 
 ## 背景
 
@@ -70,7 +70,7 @@ WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工�
 
 <span id="inline-toc">1.</span>[浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane)
 
-<img src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
+{% img https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png %}
 
 <span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加[浏览器插件](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)，也可以下载[安装包](https://www.deque.com/axe/)。相比较Audits检测报告更详细。
 
@@ -90,7 +90,7 @@ The downside of the DevTools accessibility audit is that's only half of the stor
 {% note primary %}
 在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：
 {% endnote %}
-<img src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg" >
+{% img https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg %}
 不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下:satisfied:
 
 ### 持续集成

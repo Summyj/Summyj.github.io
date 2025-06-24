@@ -21,16 +21,16 @@ top:
 
 首先冷启动模拟器：
 
-![Cold Boot](https://i.loli.net/2021/08/03/rTQ1wObeRgiEqya.png)
+{% img https://i.loli.net/2021/08/03/rTQ1wObeRgiEqya.png %}
 卸载测试App，之后点击模拟器右侧菜单栏 **...** 按钮进入高级设置，然后进入Snapshots选项，点击TAKE SNAPSHOT：
 
-![TAKE SNAPSHOT](https://i.loli.net/2021/08/03/JYDru2NTiqeoG8Q.png)
+{% img https://i.loli.net/2021/08/03/JYDru2NTiqeoG8Q.png %}
 之后可以看到新的snapshot，这里我命名为quickboot：
 
-![命名snapshot](https://i.loli.net/2021/08/03/ZEwqUF9OSnTQaI6.png)
+{% img https://i.loli.net/2021/08/03/ZEwqUF9OSnTQaI6.png %}
 打开AVD Manager页面，编辑刚才的模拟器，在高级设置中选择通过snapshot启动模拟器，点击finish：
 
-![编辑设置](https://i.loli.net/2021/08/03/dl2a1SJIHDR6knA.png)
+{% img https://i.loli.net/2021/08/03/dl2a1SJIHDR6knA.png %}
 最后再打开编辑页面检查一遍，确保设置正确，我自己设置的时候，发现这里要选择两次才可以，感觉又是AVD Manager的一个bug。
 设置完成后，以后再打开模拟器测试，就是一个干净的测试环境了，只需要再安装测试App就可以了，再也不用经常手动冷启动了。
 
