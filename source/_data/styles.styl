@@ -10,6 +10,75 @@ span#inline-toc {
     line-height: 1.5;
 }
 
+/* ==================== 过滤 Livere 评论系统中的 Taboola 广告 ==================== */
+/* 隐藏 Taboola 广告容器 */
+#taboola-livere,
+div[id*="taboola"],
+div[class*="trc_related_container"],
+div[class*="tbl-trecs-container"],
+div[class*="trc_spotlight_widget"],
+div[data-placement-name*="1020_29982"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 隐藏包含 Taboola 标识的广告内容 */
+div[class*="trc_rbox_container"],
+div[class*="trc_rbox"],
+div[class*="thumbnails-b"],
+div[class*="trc-content-sponsored"],
+a[href*="taboola.com"],
+a[href*="popup.taboola.com"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 隐藏 Taboola 相关的视频广告容器 */
+figure[id*="taboola"],
+div[class*="videoCube"],
+div[class*="trc_spotlight_item"],
+div[data-item-syndicated="true"] {
+    display: none !important;
+}
+
+/* 隐藏包含特定广告文本的元素 */
+div:contains("您可能喜歡的內容"),
+div:contains("by Taboola"),
+span:contains("by Taboola") {
+    display: none !important;
+}
+
+/* 额外保护：隐藏可能遗漏的 Taboola 相关元素 */
+[class*="taboola"],
+[id*="taboola"],
+[data-placement-name],
+.trc_related_container,
+.tbl-trecs-container,
+.trc_spotlight_widget,
+.trc_elastic,
+.trc_elastic_thumbnails-b {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 防止广告容器占用空间 */
+*[class*="trc_"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+/* ==================== 结束广告过滤规则 ==================== */
+
 /* ==================== Medium风格文章样式 - 仅应用于文章页面和页面 ==================== */
 /* 使用.post.posts-expand和.page.posts-expand类确保只在文章页面和页面生效，不影响首页 */
 
@@ -595,6 +664,9 @@ html {
     will-change: transform !important;
     pointer-events: auto !important; /* 确保可交互 */
     isolation: isolate !important; /* 创建新的堆叠上下文，避免被其他元素影响 */
+    
+    /* 防止被Pjax或其他脚本影响 */
+    contain: layout style !important;
 }
 
 .persistent-music-player:hover {

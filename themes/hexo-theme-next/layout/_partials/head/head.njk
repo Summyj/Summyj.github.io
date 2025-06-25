@@ -81,19 +81,21 @@
 (function() {
   'use strict';
   
-  // 仅在本地开发环境中启用，并且需要显式启用
+  // 仅在本地开发环境中启用
   if (typeof window !== 'undefined' && 
       (window.location.hostname === 'localhost' || 
-       window.location.hostname === '127.0.0.1') &&
-      window.location.search.includes('livereload=true')) {
+       window.location.hostname === '127.0.0.1')) {
     
-    console.log('🔄 Initializing Custom Live Reload for development...');
+    console.log('🔄 Initializing Smart Live Reload for development...');
     
     let lastPageHash = null;
     let checkCount = 0;
     let isChecking = false;
     let stableCount = 0;
     let initialized = false;
+    let currentUrl = window.location.href;
+    let checkInterval = null;
+    let urlChangeDetected = false;
     
     // 生成页面内容哈希（排除动态元素）
     function generatePageHash(htmlContent) {
@@ -133,7 +135,45 @@
       }
     }
     
+    // 检测URL变化
+    function checkUrlChange() {
+      const newUrl = window.location.href;
+      if (newUrl !== currentUrl) {
+        console.log('🔗 URL changed detected!');
+        console.log('📍 From:', currentUrl);
+        console.log('📍 To:', newUrl);
+        
+        // 重置状态以适应新页面
+        currentUrl = newUrl;
+        lastPageHash = null;
+        initialized = false;
+        stableCount = 0;
+        urlChangeDetected = true;
+        
+        // URL变化后延迟重新初始化，避免误触发刷新
+        setTimeout(function() {
+          urlChangeDetected = false;
+          console.log('🔄 Reinitializing Live Reload for new page...');
+          checkForUpdates();
+        }, 2000);
+        
+        return true;
+      }
+      return false;
+    }
+    
     function checkForUpdates() {
+      // 检查URL是否变化
+      if (checkUrlChange()) {
+        return;
+      }
+      
+      // 如果刚刚检测到URL变化，跳过这次检查
+      if (urlChangeDetected) {
+        console.log('⏭️ Skipping check due to recent URL change...');
+        return;
+      }
+      
       if (isChecking) {
         return;
       }
@@ -157,12 +197,17 @@
         if (!initialized) {
           lastPageHash = currentHash;
           initialized = true;
-          console.log('🏁 Initial page hash set:', currentHash.substring(0, 8) + '...');
+          console.log('🏁 Page hash initialized:', currentHash.substring(0, 8) + '...', 'for', currentUrl);
           stableCount = 0;
         } else if (currentHash !== lastPageHash) {
           console.log('✨ Page content changed!');
           console.log('📊 Hash changed from', lastPageHash.substring(0, 8) + '...', 'to', currentHash.substring(0, 8) + '...');
           console.log('🔄 Reloading page in 1000ms...');
+          
+          // 清理定时器
+          if (checkInterval) {
+            clearInterval(checkInterval);
+          }
           
           // 重置状态，准备重新加载
           initialized = false;
@@ -187,36 +232,73 @@
       });
     }
     
-    // 等待页面完全加载后开始检查
-    setTimeout(function() {
-      checkForUpdates();
-      
-      // 每5秒检查一次更新
-      const interval = setInterval(checkForUpdates, 5000);
-      
-      // 页面卸载时清理
-      window.addEventListener('beforeunload', function() {
-        clearInterval(interval);
+    // Pjax/页面跳转监听
+    function setupNavigationListeners() {
+      // 监听 Pjax 事件
+      document.addEventListener('pjax:success', function() {
+        console.log('🚀 Pjax navigation detected');
+        urlChangeDetected = true;
+        setTimeout(function() {
+          checkUrlChange();
+        }, 500);
       });
-    }, 3000);
+      
+      // 监听 History API 变化
+      const originalPushState = history.pushState;
+      const originalReplaceState = history.replaceState;
+      
+      history.pushState = function() {
+        originalPushState.apply(history, arguments);
+        setTimeout(checkUrlChange, 100);
+      };
+      
+      history.replaceState = function() {
+        originalReplaceState.apply(history, arguments);
+        setTimeout(checkUrlChange, 100);
+      };
+      
+      // 监听 popstate 事件（浏览器前进/后退）
+      window.addEventListener('popstate', function() {
+        console.log('⬅️ Browser navigation detected');
+        setTimeout(checkUrlChange, 100);
+      });
+    }
     
-    // 监听页面焦点，用户回到页面时立即检查（仅在文件修改时间很近时）
-    window.addEventListener('focus', function() {
-      if (initialized) {
-        // 只有在最近30秒内才检查更新，避免正常浏览时的误触发
-        const lastCheck = localStorage.getItem('lastLiveReloadCheck');
-        const now = Date.now();
-        if (!lastCheck || (now - parseInt(lastCheck)) > 30000) {
+    // 初始化
+    function initialize() {
+      setupNavigationListeners();
+      
+      // 等待页面完全加载后开始检查
+      setTimeout(function() {
+        checkForUpdates();
+        
+        // 每5秒检查一次更新
+        checkInterval = setInterval(checkForUpdates, 5000);
+        
+        // 页面卸载时清理
+        window.addEventListener('beforeunload', function() {
+          if (checkInterval) {
+            clearInterval(checkInterval);
+          }
+        });
+      }, 3000);
+      
+      // 监听页面焦点，用户回到页面时立即检查
+      window.addEventListener('focus', function() {
+        if (initialized && !urlChangeDetected) {
           console.log('👁️ Page focused - checking for updates...');
-          localStorage.setItem('lastLiveReloadCheck', now.toString());
           setTimeout(checkForUpdates, 800);
         }
-      }
-    });
+      });
+    }
     
-    console.log('✅ Custom Live Reload initialized');
+    // 启动初始化
+    initialize();
+    
+    console.log('✅ Smart Live Reload initialized');
     console.log('💡 Will check for content changes every 5 seconds');
     console.log('🎯 Only real content changes will trigger reload');
+    console.log('🔗 URL changes will be handled gracefully');
   }
 })();
 </script>
@@ -276,9 +358,13 @@ if ('serviceWorker' in navigator) {
         // 添加到body末尾，确保不被Pjax影响
         document.body.appendChild(playerContainer.firstElementChild);
         
-        // 播放器默认为最小化状态
+        // 确保播放器不会被Pjax替换
         const player = document.getElementById(MUSIC_PLAYER_ID);
-        player.classList.add('minimized');
+        if (player) {
+            player.setAttribute('data-pjax-ignore', 'true');
+            // 播放器默认为最小化状态
+            player.classList.add('minimized');
+        }
     }
     
     // 音乐图标旋转控制
@@ -391,43 +477,199 @@ if ('serviceWorker' in navigator) {
         setTimeout(addMusicIconEvents, 100);
     }
     
-    // Pjax页面切换处理 - 确保音乐播放器不被重置
-    document.addEventListener('pjax:send', function() {
-        // Pjax开始时保存播放器状态
-        const player = document.getElementById(MUSIC_PLAYER_ID);
-        if (player) {
-            // 临时隐藏播放器，避免被Pjax影响
-            player.style.display = 'none';
-            console.log('🎵 Music player hidden during Pjax navigation');
-        }
-    });
-    
+    // Pjax页面切换后重新初始化（如果播放器被意外移除）
     document.addEventListener('pjax:complete', function() {
         setTimeout(function() {
             const existingPlayer = document.getElementById(MUSIC_PLAYER_ID);
-            if (existingPlayer) {
-                // 恢复播放器显示
-                existingPlayer.style.display = '';
-                console.log('🎵 Music player restored after Pjax navigation');
-            } else {
-                // 如果播放器被意外移除，重新创建
+            if (!existingPlayer) {
                 initMusicPlayer();
                 setTimeout(addMusicIconEvents, 100);
-                console.log('🎵 Music player recreated after Pjax navigation');
             }
         }, 100);
-    });
-    
-    // 处理Pjax失败的情况
-    document.addEventListener('pjax:error', function() {
-        const player = document.getElementById(MUSIC_PLAYER_ID);
-        if (player) {
-            player.style.display = '';
-            console.log('🎵 Music player restored after Pjax error');
-        }
     });
     
 })();
 
 
+</script>
+
+<script>
+/* Taboola 广告过滤脚本 - 动态移除广告元素 */
+(function() {
+  'use strict';
+  
+  console.log('🚫 启动 Taboola 广告过滤器...');
+  
+  // 需要过滤的选择器
+  const adSelectors = [
+    '#taboola-livere',
+    'div[id*="taboola"]',
+    'div[class*="trc_related_container"]',
+    'div[class*="tbl-trecs-container"]',
+    'div[class*="trc_spotlight_widget"]',
+    'div[data-placement-name*="1020_29982"]',
+    'div[class*="trc_rbox_container"]',
+    'div[class*="trc_rbox"]',
+    'div[class*="thumbnails-b"]',
+    'div[class*="trc-content-sponsored"]',
+    'a[href*="taboola.com"]',
+    'a[href*="popup.taboola.com"]',
+    'figure[id*="taboola"]',
+    'div[class*="videoCube"]',
+    'div[class*="trc_spotlight_item"]',
+    'div[data-item-syndicated="true"]',
+    '[class*="taboola"]',
+    '[id*="taboola"]',
+    '[data-placement-name]',
+    '.trc_related_container',
+    '.tbl-trecs-container',
+    '.trc_spotlight_widget',
+    '.trc_elastic',
+    '.trc_elastic_thumbnails-b'
+  ];
+  
+  // 移除广告元素的函数
+  function removeAds() {
+    let removedCount = 0;
+    
+    adSelectors.forEach(function(selector) {
+      try {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(function(element) {
+          if (element && element.parentNode) {
+            element.parentNode.removeChild(element);
+            removedCount++;
+          }
+        });
+      } catch (error) {
+        // 忽略选择器错误
+      }
+    });
+    
+    // 额外检查包含特定文本的元素
+    const textPatterns = ['您可能喜歡的內容', 'by Taboola', 'Taboola'];
+    textPatterns.forEach(function(pattern) {
+      try {
+        const walker = document.createTreeWalker(
+          document.body || document.documentElement,
+          NodeFilter.SHOW_TEXT,
+          null,
+          false
+        );
+        
+        const textNodes = [];
+        let node;
+        while (node = walker.nextNode()) {
+          if (node.textContent && node.textContent.includes(pattern)) {
+            textNodes.push(node);
+          }
+        }
+        
+        textNodes.forEach(function(textNode) {
+          let parentElement = textNode.parentElement;
+          // 向上查找可能的广告容器
+          while (parentElement && parentElement !== document.body) {
+            if (parentElement.className && 
+                (parentElement.className.includes('trc_') || 
+                 parentElement.className.includes('taboola') ||
+                 (parentElement.id && parentElement.id.includes('taboola')))) {
+              if (parentElement.parentNode) {
+                parentElement.parentNode.removeChild(parentElement);
+                removedCount++;
+                break;
+              }
+            }
+            parentElement = parentElement.parentElement;
+          }
+        });
+      } catch (error) {
+        // 忽略错误，继续处理其他模式
+      }
+    });
+    
+    if (removedCount > 0) {
+      console.log('🗑️  成功移除', removedCount, '个广告元素');
+    }
+    
+    return removedCount;
+  }
+  
+  // 立即执行一次
+  setTimeout(removeAds, 1000);
+  
+  // 页面加载完成后执行
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(removeAds, 500);
+    });
+  } else {
+    setTimeout(removeAds, 500);
+  }
+  
+  // 窗口加载完成后执行
+  window.addEventListener('load', function() {
+    setTimeout(removeAds, 1000);
+  });
+  
+  // 使用 MutationObserver 监控 DOM 变化
+  if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver(function(mutations) {
+      let shouldCheck = false;
+      
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          // 检查是否有新添加的节点包含广告相关的类名或ID
+          for (let i = 0; i < mutation.addedNodes.length; i++) {
+            const node = mutation.addedNodes[i];
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const nodeStr = node.outerHTML || '';
+              if (nodeStr.includes('taboola') || 
+                  nodeStr.includes('trc_') || 
+                  nodeStr.includes('您可能喜歡的內容')) {
+                shouldCheck = true;
+                break;
+              }
+            }
+          }
+        }
+      });
+      
+      if (shouldCheck) {
+        setTimeout(removeAds, 100);
+      }
+    });
+    
+    // 开始观察
+    if (document.body) {
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    } else {
+      // 如果 body 还没有准备好，等待一下
+      setTimeout(function() {
+        if (document.body) {
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        }
+      }, 100);
+    }
+    
+    console.log('👁️  DOM 变化监控器已启动');
+  }
+  
+  // 定期检查（每5秒）
+  setInterval(function() {
+    removeAds();
+  }, 5000);
+  
+  // Pjax 页面切换后也执行广告过滤
+  document.addEventListener('pjax:success', function() {
+    setTimeout(removeAds, 500);
+  });
+  
+  console.log('✅ Taboola 广告过滤器初始化完成');
+})();
 </script>
