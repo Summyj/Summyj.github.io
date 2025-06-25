@@ -1,0 +1,12 @@
+{{ next_data('chatra', theme.chatra) }}
+<script>
+  window.ChatraID = '{{ theme.chatra.id }}';
+  {%- if theme.chatra.embed %}
+  window.ChatraSetup = {
+    mode: 'frame',
+    injectTo: '{{ theme.chatra.embed }}'
+  };
+  {%- endif %}
+</script>
+{{ next_js('third-party/chat/chatra.js') }}
+<script{{ ' async' if theme.chatra.async }} src="https://call.chatra.io/chatra.js"></script>

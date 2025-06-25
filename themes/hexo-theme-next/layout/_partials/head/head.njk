@@ -1,0 +1,326 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Permissions-Policy" content="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), encrypted-media=()">
+{%- if theme.darkmode %}
+<meta name="theme-color" content="{{ theme.theme_color.light }}" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="{{ theme.theme_color.dark }}" media="(prefers-color-scheme: dark)">
+{%- else %}
+<meta name="theme-color" content="{{ theme.theme_color.light }}">
+{%- endif %}
+{%- if config.meta_generator %}
+  {{- meta_generator() }}
+{%- endif %}
+
+{%- if theme.preconnect %}
+  <link rel="preload" href="{{ url_for(theme.css) }}/main.css" as="style">
+  <!-- 预连接到外部资源以提高加载速度 -->
+  <link rel="preconnect" href="//fonts.loli.net" crossorigin>
+  <link rel="preconnect" href="//music.163.com" crossorigin>
+  <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="//busuanzi.ibruce.info" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.loli.net">
+  <link rel="dns-prefetch" href="//music.163.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+{%- endif %}
+{{ next_pre() }}
+
+{%- if theme.favicon.apple_touch_icon %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for(theme.favicon.apple_touch_icon) }}">
+{%- endif %}
+{%- if theme.favicon.medium %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for(theme.favicon.medium) }}">
+{%- endif %}
+{%- if theme.favicon.small %}
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}">
+{%- endif %}
+{%- if theme.favicon.safari_pinned_tab %}
+  <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}" color="{{ theme.theme_color.light }}">
+{%- endif %}
+{%- if theme.favicon.android_manifest %}
+  <link rel="manifest" href="{{ url_for(theme.favicon.android_manifest) }}">
+{%- endif %}
+
+{%- if theme.google_site_verification %}
+  <meta name="google-site-verification" content="{{ theme.google_site_verification }}">
+{%- endif %}
+{%- if theme.bing_site_verification %}
+  <meta name="msvalidate.01" content="{{ theme.bing_site_verification }}">
+{%- endif %}
+{%- if theme.yandex_site_verification %}
+  <meta name="yandex-verification" content="{{ theme.yandex_site_verification }}">
+{%- endif %}
+{%- if theme.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}">
+{%- endif %}
+
+<link rel="stylesheet" href="{{ url_for(theme.css) }}/main.css">
+
+{{ next_font() }}
+
+{{ next_vendors('fontawesome') }}
+
+{%- if theme.motion.enable %}
+  {{ next_vendors('animate_css') }}
+{%- endif %}
+
+{%- if theme.fancybox %}
+  {{ next_vendors('fancybox_css') }}
+{%- endif %}
+
+{%- if theme.pace.enable %}
+  {{ next_vendors('pace_css') }}
+  {{ next_vendors('pace_js') }}
+{%- endif %}
+
+{{ next_data('main', next_config()) }}
+{{- next_js('config.js') }}
+
+<!-- 自定义 Live Reload for Development -->
+<script>
+(function() {
+  'use strict';
+  
+  // 仅在本地开发环境中启用
+  if (typeof window !== 'undefined' && 
+      (window.location.hostname === 'localhost' || 
+       window.location.hostname === '127.0.0.1')) {
+    
+    console.log('🔄 Initializing Custom Live Reload for development...');
+    
+    let lastPageHash = null;
+    let checkCount = 0;
+    let isChecking = false;
+    let stableCount = 0;
+    let initialized = false;
+    
+    // 生成页面内容哈希（排除动态元素）
+    function generatePageHash(htmlContent) {
+      try {
+        // 移除可能变化的动态内容
+        let cleanHtml = htmlContent;
+        
+        // 移除时间戳、访问统计等动态内容的正则
+        const dynamicPatterns = [
+          /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/g,  // ISO时间戳
+          /\d{4}\/\d{2}\/\d{2}/g,                   // 日期格式
+          /\d{2}:\d{2}:\d{2}/g,                     // 时间格式
+          /<script[^>]*>[\s\S]*?<\/script>/gi,      // 所有script标签
+          /busuanzi_value_\w+/g,                    // 不蒜子统计
+          /leancloud_visitors/g,                    // LeanCloud访问统计
+          /live2d-widget/g,                         // Live2D
+          /persistent-music-player/g,               // 音乐播放器
+          /hexo-neat/g                              // hexo-neat 压缩标记
+        ];
+        
+        dynamicPatterns.forEach(function(pattern) {
+          cleanHtml = cleanHtml.replace(pattern, '');
+        });
+        
+        // 简单哈希函数
+        let hash = 0;
+        for (let i = 0; i < cleanHtml.length; i++) {
+          const char = cleanHtml.charCodeAt(i);
+          hash = ((hash << 5) - hash) + char;
+          hash = hash & hash; // 转换为32位整数
+        }
+        
+        return hash.toString();
+      } catch (error) {
+        console.log('⚠️ Error generating page hash:', error);
+        return Math.random().toString();
+      }
+    }
+    
+    function checkForUpdates() {
+      if (isChecking) {
+        return;
+      }
+      
+      isChecking = true;
+      checkCount++;
+      
+      fetch(window.location.href + '?_=' + Date.now(), {
+        method: 'GET',
+        cache: 'no-cache',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        }
+      }).then(function(response) {
+        return response.text();
+      }).then(function(html) {
+        const currentHash = generatePageHash(html);
+        
+        if (!initialized) {
+          lastPageHash = currentHash;
+          initialized = true;
+          console.log('🏁 Initial page hash set:', currentHash.substring(0, 8) + '...');
+          stableCount = 0;
+        } else if (currentHash !== lastPageHash) {
+          console.log('✨ Page content changed!');
+          console.log('📊 Hash changed from', lastPageHash.substring(0, 8) + '...', 'to', currentHash.substring(0, 8) + '...');
+          console.log('🔄 Reloading page in 1000ms...');
+          
+          // 重置状态，准备重新加载
+          initialized = false;
+          lastPageHash = null;
+          isChecking = false;
+          
+          setTimeout(function() {
+            window.location.reload();
+          }, 1000);
+          return;
+        } else {
+          stableCount++;
+          if (stableCount <= 2 || stableCount % 8 === 0) {
+            console.log('📋 Check #' + checkCount + ' - No changes detected (stable: ' + stableCount + ')');
+          }
+        }
+        
+        isChecking = false;
+      }).catch(function(error) {
+        console.log('❌ Check #' + checkCount + ' failed:', error.message);
+        isChecking = false;
+      });
+    }
+    
+    // 等待页面完全加载后开始检查
+    setTimeout(function() {
+      checkForUpdates();
+      
+      // 每5秒检查一次更新
+      const interval = setInterval(checkForUpdates, 5000);
+      
+      // 页面卸载时清理
+      window.addEventListener('beforeunload', function() {
+        clearInterval(interval);
+      });
+    }, 3000);
+    
+    // 监听页面焦点，用户回到页面时立即检查
+    window.addEventListener('focus', function() {
+      if (initialized) {
+        console.log('👁️ Page focused - checking for updates...');
+        setTimeout(checkForUpdates, 800);
+      }
+    });
+    
+    console.log('✅ Custom Live Reload initialized');
+    console.log('💡 Will check for content changes every 5 seconds');
+    console.log('🎯 Only real content changes will trigger reload');
+  }
+})();
+</script>
+
+<script>
+/* Service Worker 注册 - 提升缓存性能 */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('SW registered: ', registration);
+      })
+      .catch(registrationError => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
+/* 持久化音乐播放器 - 避免Pjax重置 */
+(function() {
+    'use strict';
+    
+    let musicPlayer = null;
+    const MUSIC_PLAYER_ID = 'persistent-music-player';
+    
+    // 创建音乐播放器HTML
+    function createMusicPlayer() {
+        const playerHtml = `
+            <div id="${MUSIC_PLAYER_ID}" class="persistent-music-player minimized">
+                <div class="music-controls">
+                    <button class="music-toggle-btn" onclick="toggleMusicPlayer()" title="点击切换播放器显示/隐藏">♪</button>
+                    <button class="music-minimize-btn" onclick="minimizeMusicPlayer()" title="最小化">−</button>
+                </div>
+                <div class="music-iframe-container">
+                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
+                            width="330" height="450" loading="lazy"
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                            src="//music.163.com/outchain/player?type=0&id=6922474495&auto=0&height=430">
+                    </iframe>
+                </div>
+            </div>
+        `;
+        return playerHtml;
+    }
+    
+    // 初始化音乐播放器
+    function initMusicPlayer() {
+        // 如果已存在，不重复创建
+        if (document.getElementById(MUSIC_PLAYER_ID)) {
+            return;
+        }
+        
+        // 创建播放器容器
+        const playerContainer = document.createElement('div');
+        playerContainer.innerHTML = createMusicPlayer();
+        
+        // 添加到body末尾，确保不被Pjax影响
+        document.body.appendChild(playerContainer.firstElementChild);
+        
+        // 播放器默认为最小化状态
+        const player = document.getElementById(MUSIC_PLAYER_ID);
+        player.classList.add('minimized');
+    }
+    
+    // 切换播放器显示/隐藏
+    window.toggleMusicPlayer = function() {
+        const player = document.getElementById(MUSIC_PLAYER_ID);
+        if (!player) return;
+        
+        if (player.classList.contains('minimized')) {
+            player.classList.remove('minimized');
+            localStorage.setItem('musicPlayerMinimized', 'false');
+        } else {
+            player.classList.add('minimized');
+            localStorage.setItem('musicPlayerMinimized', 'true');
+        }
+    };
+    
+
+    
+    // 最小化播放器
+    window.minimizeMusicPlayer = function() {
+        const player = document.getElementById(MUSIC_PLAYER_ID);
+        if (!player) return;
+        
+        player.classList.add('minimized');
+        localStorage.setItem('musicPlayerMinimized', 'true');
+    };
+    
+
+    
+    // 页面加载时初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initMusicPlayer();
+        });
+    } else {
+        initMusicPlayer();
+    }
+    
+    // Pjax页面切换后重新初始化（如果播放器被意外移除）
+    document.addEventListener('pjax:complete', function() {
+        setTimeout(function() {
+            const existingPlayer = document.getElementById(MUSIC_PLAYER_ID);
+            if (!existingPlayer) {
+                initMusicPlayer();
+            }
+        }, 100);
+    });
+    
+})();
+
+
+</script>
