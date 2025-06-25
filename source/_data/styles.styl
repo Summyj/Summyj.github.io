@@ -1,5 +1,55 @@
 /* 移除背景图片，使用主题默认背景 */
 
+/* ==================== 修复 Note 标签末尾空行问题 ==================== */
+/* 基于实际HTML结构修复: <div class="note default"><p>...</p></div> */
+/* 使用更高的优先级覆盖Medium风格的段落样式 */
+
+.note.default,
+.note.primary, 
+.note.success,
+.note.info,
+.note.warning,
+.note.danger {
+    margin-bottom: 20px !important;
+}
+
+/* 修复note内最后一个段落的底部边距 - 使用最高优先级 */
+.post.posts-expand .post-body .note.default p:last-child,
+.post.posts-expand .post-body .note.primary p:last-child,
+.post.posts-expand .post-body .note.success p:last-child,
+.post.posts-expand .post-body .note.info p:last-child,
+.post.posts-expand .post-body .note.warning p:last-child,
+.post.posts-expand .post-body .note.danger p:last-child,
+.page.posts-expand .post-body .note.default p:last-child,
+.page.posts-expand .post-body .note.primary p:last-child,
+.page.posts-expand .post-body .note.success p:last-child,
+.page.posts-expand .post-body .note.info p:last-child,
+.page.posts-expand .post-body .note.warning p:last-child,
+.page.posts-expand .post-body .note.danger p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+/* 通用note修复，确保所有note类型都被覆盖 */
+.post-body .note p:last-child,
+.post.posts-expand .post-body .note p:last-child,
+.page.posts-expand .post-body .note p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 0 0 0 !important;
+}
+
+/* ==================== 修复代码块高亮问题 ==================== */
+/* 让Next主题的默认代码高亮生效，仅修复Medium风格冲突 */
+
+/* 行内代码样式已完全移除 - 使用 NexT 主题默认样式 */
+
+/* 移除对代码块的重置，让主题的默认高亮完全生效 */
+/* 注释掉这部分CSS，让Next主题的代码高亮自然工作 */
+
+/* ==================== 结束修复规则 ==================== */
+
 span#inline-toc {
     display: inline-block;
     border-radius: 80% 100% 90% 20%;
@@ -236,38 +286,13 @@ span:contains("by Taboola") {
     color: #6b6b6b !important;
 }
 
-/* 代码样式 - Medium风格 */
-.post.posts-expand .post-body code,
-.page.posts-expand .post-body code {
-    background: #f7f7f7 !important;
-    color: #e74c3c !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
-    font-size: 0.85em !important;
-    border: none !important;
-}
+/* 行内代码样式已完全移除 - 使用 NexT 主题默认样式 */
 
-.post.posts-expand .post-body pre,
-.page.posts-expand .post-body pre {
-    background: #f8f8f8 !important;
-    border: 1px solid #e1e1e1 !important;
-    border-radius: 6px !important;
-    padding: 20px !important;
-    margin: 2em 0 !important;
-    overflow-x: auto !important;
-    font-size: 0.9em !important;
-    line-height: 1.5 !important;
-}
-
-.post.posts-expand .post-body pre code,
-.page.posts-expand .post-body pre code {
-    background: none !important;
-    color: #333 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-size: inherit !important;
-}
+/* 
+ * 代码块样式完全交给 highlight.js 处理
+ * 不对 pre 和 pre code 应用任何自定义样式
+ * 让 NexT 主题和 highlight.js 的默认 GitHub 风格完全生效
+ */
 
 /* 列表样式 - Medium风格 */
 .post.posts-expand .post-body ul,
