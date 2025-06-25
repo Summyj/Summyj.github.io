@@ -4,11 +4,27 @@
   text-align: center;
 
   button {
-    button($sidebar-highlight);
-    border: 2px solid $sidebar-highlight;
-    border-radius: 2px;
+    background: transparent;
+    color: #37c6c0;
+    cursor: pointer;
+    line-height: 2;
+    padding: 0 15px;
+    border: 2px solid #37c6c0;
+    border-radius: 20px;
     outline: 0;
     vertical-align: text-top;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: #2da8a3;
+      border-color: #2da8a3;
+      background: transparent;
+    }
+    
+    &:active {
+      transform: scale(0.98);
+      background: transparent;
+    }
   }
 }
 
@@ -30,7 +46,6 @@
     if (hexo-config('reward_settings.animation')) {
       &:hover span {
         animation: next-roll .1s infinite linear;
-        // The animation may affect :hover of img in dark mode
         pointer-events: none;
       }
     }
@@ -41,6 +56,14 @@
     margin: .8em 2em 0;
     max-width: 100%;
     width: $post-reward-img-width;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
