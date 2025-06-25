@@ -81,10 +81,11 @@
 (function() {
   'use strict';
   
-  // 仅在本地开发环境中启用
+  // 仅在本地开发环境中启用，并且需要显式启用
   if (typeof window !== 'undefined' && 
       (window.location.hostname === 'localhost' || 
-       window.location.hostname === '127.0.0.1')) {
+       window.location.hostname === '127.0.0.1') &&
+      window.location.search.includes('livereload=true')) {
     
     console.log('🔄 Initializing Custom Live Reload for development...');
     
@@ -199,11 +200,17 @@
       });
     }, 3000);
     
-    // 监听页面焦点，用户回到页面时立即检查
+    // 监听页面焦点，用户回到页面时立即检查（仅在文件修改时间很近时）
     window.addEventListener('focus', function() {
       if (initialized) {
-        console.log('👁️ Page focused - checking for updates...');
-        setTimeout(checkForUpdates, 800);
+        // 只有在最近30秒内才检查更新，避免正常浏览时的误触发
+        const lastCheck = localStorage.getItem('lastLiveReloadCheck');
+        const now = Date.now();
+        if (!lastCheck || (now - parseInt(lastCheck)) > 30000) {
+          console.log('👁️ Page focused - checking for updates...');
+          localStorage.setItem('lastLiveReloadCheck', now.toString());
+          setTimeout(checkForUpdates, 800);
+        }
       }
     });
     
@@ -240,7 +247,7 @@ if ('serviceWorker' in navigator) {
         const playerHtml = `
             <div id="${MUSIC_PLAYER_ID}" class="persistent-music-player minimized">
                 <div class="music-controls">
-                    <button class="music-toggle-btn" onclick="toggleMusicPlayer()" title="点击切换播放器显示/隐藏">♪</button>
+                    <button class="music-toggle-btn" onclick="toggleMusicPlayer()" title="点击切换播放器显示/隐藏&#10;桌面端右键开启/关闭旋转&#10;手机端长按2秒开启/关闭旋转">♪</button>
                     <button class="music-minimize-btn" onclick="minimizeMusicPlayer()" title="最小化">−</button>
                 </div>
                 <div class="music-iframe-container">
@@ -274,6 +281,78 @@ if ('serviceWorker' in navigator) {
         player.classList.add('minimized');
     }
     
+    // 音乐图标旋转控制
+    let musicIconRotating = false;
+    let longPressTimer = null;
+    
+    // 切换音乐图标旋转状态
+    function toggleMusicRotation() {
+        const toggleBtn = document.querySelector('.music-toggle-btn');
+        if (!toggleBtn) return;
+        
+        musicIconRotating = !musicIconRotating;
+        
+        if (musicIconRotating) {
+            toggleBtn.classList.add('rotating');
+            localStorage.setItem('musicIconRotating', 'true');
+        } else {
+            toggleBtn.classList.remove('rotating');
+            localStorage.setItem('musicIconRotating', 'false');
+        }
+    }
+    
+    // 恢复音乐图标旋转状态
+    function restoreMusicRotationState() {
+        const toggleBtn = document.querySelector('.music-toggle-btn');
+        if (!toggleBtn) return;
+        
+        const savedState = localStorage.getItem('musicIconRotating');
+        if (savedState === 'true') {
+            musicIconRotating = true;
+            toggleBtn.classList.add('rotating');
+        }
+    }
+    
+    // 添加音乐图标交互事件
+    function addMusicIconEvents() {
+        const toggleBtn = document.querySelector('.music-toggle-btn');
+        if (!toggleBtn) return;
+        
+        // 桌面端右键事件
+        toggleBtn.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            toggleMusicRotation();
+        });
+        
+        // 移动端长按事件
+        toggleBtn.addEventListener('touchstart', function(e) {
+            longPressTimer = setTimeout(function() {
+                toggleMusicRotation();
+                // 触觉反馈（如果支持）
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+            }, 2000);
+        });
+        
+        toggleBtn.addEventListener('touchend', function(e) {
+            if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+        });
+        
+        toggleBtn.addEventListener('touchmove', function(e) {
+            if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+        });
+        
+        // 恢复旋转状态
+        restoreMusicRotationState();
+    }
+    
     // 切换播放器显示/隐藏
     window.toggleMusicPlayer = function() {
         const player = document.getElementById(MUSIC_PLAYER_ID);
@@ -305,19 +384,47 @@ if ('serviceWorker' in navigator) {
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             initMusicPlayer();
+            setTimeout(addMusicIconEvents, 100);
         });
     } else {
         initMusicPlayer();
+        setTimeout(addMusicIconEvents, 100);
     }
     
-    // Pjax页面切换后重新初始化（如果播放器被意外移除）
+    // Pjax页面切换处理 - 确保音乐播放器不被重置
+    document.addEventListener('pjax:send', function() {
+        // Pjax开始时保存播放器状态
+        const player = document.getElementById(MUSIC_PLAYER_ID);
+        if (player) {
+            // 临时隐藏播放器，避免被Pjax影响
+            player.style.display = 'none';
+            console.log('🎵 Music player hidden during Pjax navigation');
+        }
+    });
+    
     document.addEventListener('pjax:complete', function() {
         setTimeout(function() {
             const existingPlayer = document.getElementById(MUSIC_PLAYER_ID);
-            if (!existingPlayer) {
+            if (existingPlayer) {
+                // 恢复播放器显示
+                existingPlayer.style.display = '';
+                console.log('🎵 Music player restored after Pjax navigation');
+            } else {
+                // 如果播放器被意外移除，重新创建
                 initMusicPlayer();
+                setTimeout(addMusicIconEvents, 100);
+                console.log('🎵 Music player recreated after Pjax navigation');
             }
         }, 100);
+    });
+    
+    // 处理Pjax失败的情况
+    document.addEventListener('pjax:error', function() {
+        const player = document.getElementById(MUSIC_PLAYER_ID);
+        if (player) {
+            player.style.display = '';
+            console.log('🎵 Music player restored after Pjax error');
+        }
     });
     
 })();

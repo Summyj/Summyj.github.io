@@ -584,7 +584,7 @@ html {
     position: fixed !important;
     bottom: 20px !important;
     left: 80px !important;
-    z-index: 9999 !important;
+    z-index: 99999 !important; /* 提高z-index确保在所有内容之上 */
     background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px) !important;
     border-radius: 12px !important;
@@ -593,6 +593,8 @@ html {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease !important;
     overflow: hidden !important;
     will-change: transform !important;
+    pointer-events: auto !important; /* 确保可交互 */
+    isolation: isolate !important; /* 创建新的堆叠上下文，避免被其他元素影响 */
 }
 
 .persistent-music-player:hover {
@@ -655,6 +657,7 @@ html {
     justify-content: center !important;
     transition: all 0.3s ease !important;
     font-weight: bold !important;
+    user-select: none !important; /* 防止选中文本 */
 }
 
 .persistent-music-player:not(.minimized) .music-toggle-btn {
@@ -664,6 +667,35 @@ html {
 .music-toggle-btn:hover {
     background: rgba(0, 0, 0, 0.9) !important;
     transform: scale(1.1) !important;
+}
+
+/* 音乐图标旋转动画 */
+.music-toggle-btn.rotating {
+    animation: music-icon-rotate 2s linear infinite !important;
+}
+
+@keyframes music-icon-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 鼠标悬停时的旋转状态 */
+.music-toggle-btn.rotating:hover {
+    transform: scale(1.1) rotate(360deg) !important;
+    animation: music-icon-rotate-hover 2s linear infinite !important;
+}
+
+@keyframes music-icon-rotate-hover {
+    from {
+        transform: scale(1.1) rotate(0deg);
+    }
+    to {
+        transform: scale(1.1) rotate(360deg);
+    }
 }
 
 /* 最小化按钮（展开状态显示） */
