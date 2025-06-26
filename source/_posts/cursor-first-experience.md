@@ -1,7 +1,7 @@
 ---
 title: Cursor初体验
 date: 2025-06-24 15:00:13
-tags: [AI, Cursor]
+tags: [AI, Cursor, Hexo, Next, not by AI]
 categories: 维护小破站
 copyright: true
 description: 用Cursor实现博客史诗级增强。
@@ -11,151 +11,156 @@ top:
 {% img https://s2.loli.net/2025/06/24/xwOI9LBYG3dghrT.png %}
 
 {% note default %}
-最近公司在推 **[Cursor](https://www.cursor.com/)** AI代码编辑器，全员都在用，不得不说，目前这种和AI共创的模式确实是行业趋势，之前各种 TDD/BDD/DDD 现在也都被 **PDD 取代(拼多多即视感，但全称是Prompt Driven Development)**，达到 **‘AI做杂活，人来思考’** 的效果。所以我觉得科学技术是第二生产力，人类的创造力才是第一生产力。
+最近公司在推 **[Cursor](https://www.cursor.com/)** AI代码编辑器，全员都在用，不得不说，目前这种和AI共创的模式确实是行业趋势，之前各种 TDD/BDD/DDD 现在也都被 **PDD 取代(拼多多即视感，但全称是Prompt Driven Development)**，达到 **‘AI干杂活，人来思考’** 的效果。所以我觉得科学技术是第二生产力，人类的创造力才是第一生产力。
 {% endnote %}
 
 其实Cursor流行好久了，但我在技术方面一直处在潮流后沿，也没有机会尝试，正好我也想升级博客，调整一下浏览效果，就用Cursor试试(一些公器私用)，然后打开了新世界的大门。
 
-## 版本升级
-### Hexo
+## 服务升级
+### Hexo服务
 
-npm 更新 可以看到实时
-### Next
-sub module  下次升级再看 好像也没什么大用 （都没关注更新的主题自己有什么有意思的功能
-这样的话都没必要再更新主题了 之前就是因为看看有什么优化 现在有ai优化
+首先是升级Hexo服务到最新版本，直接执行：
+```bash
+npx npm-check-updates -u && npm install
+```
+将Hexo version从 {% label info@5.4.0 %} 升级到最新的 {% label info@7.3.0 %}。
 
-## Next
-### AI自动同步
-主题配置 之前自己对比 现在用ai自动同步 解决错误变成和线上一样的 配置同步 然后接着优化风格 加自定义功能
-### 主题优化
-文章主体部分 mudeiem风格 我和AI都不知道想要啥样 于是开始拉扯 甲方
-### 徽章
-徽章 初心很好 虽然付费 但是金额是自己填的 1美元 上传到了GitHub source 自取 有博主设置了ai生成的文章总结也许我希望每个看到我博客的人 都可以不用那么的“赶时间” 看完之后也能有自己的总结和想法
+### Next主题
+#### 手动升级
+
+然后是Next主题升级，当前版本是 {% label info@8.5.0 %}，需要更新到官网最新的 {% label info@8.23.1 %}。
+
+之前每次更新我都是把最新的版本下载到本地，在Hexo的 {% label primary@_config.yml %} 中把主题设置成最新版，然后对比旧版本的配置文件手动改新的配置，在本地预览博客，让它一点点变成线上的样子，之后再加新功能和优化，但这样做是很耗时间和精力的。
+
+#### git submodule
+所以这次我想尝试新的方式。刚开始我问了**ChatGPT**，它说可以把主题文件夹作为一个 {% label primary@git submodule %} 放在博客代码库里，这样以后升级就不用自己再单独下载最新版本手动对比着看，可以直接在submodule里拉取远程代码，自动code diff，改起来会方便一些。
+
+但这样的话，就得同时控制两个代码库。每次改动后在submodule提交完了，主代码库还得再提交一次，还有把submodule的代码推到远程的安(diu)全(ren)风险。除了自动diff以外，还是得自己挨个看对比，也挺累的。
+
+#### Cursor
+这个时候我想到了Cursor，既然它这么强，帮我自动对比新旧主题版本，同步配置应该只是小case吧。然后我就把代码库移到了Cursor里，说出自己的需求，开始了不断的拉扯：
+{% img https://s2.loli.net/2025/06/24/EJu8OVcDXedi27m.png %}
+
+首先，它帮我完成了这几件事：
+
+<span id="inline-toc">1.</span> **自动识别新旧主题版本的配置差异，同步更新了所有文件。**
+
+<span id="inline-toc">2.</span> **将主题文件夹从submodule转换为普通文件夹**。简化版本管理，避免控制2个代码库的复杂性，消除了向上游仓库误推送的风险。
+
+<span id="inline-toc">3.</span> **解决 {% label info@hexo s %} 的报错**
+
+把主题换成新版后，开启本地hexo server出现了一堆依赖和兼容性错误，无法正常加载，它帮我分析错误然后解决了报错。
+
+<span id="inline-toc">4.</span> **调整配置，将本地博客预览效果变得和线上一致。**
+
+其实在第一步它已经帮我自动识别并同步改动了所有的配置，按理说本地预览应该已经和线上一样了才对，但它好像只能识别主题 {% label primary@_config.yml %} 里的配置，有很多自定义的代码配置并没有识别到。而且因为兼容性，同样的配置在最新的主题版本里并不能生效，所以又是几番拉扯，才完成了全部更新，本地预览的博客效果终于和线上一致了。
+
+---
+
+到这里，我已经可以感受到 Cursor 的强大了，以往需要1天时间才能完成的服务升级，在它的帮助下我只用了不到1小时，所以又接着用它做一些我想了很久的主题优化。
+
+## 主题优化
+### 文章主体浏览效果优化
+
+这是当前线上博客的文章主题部分浏览效果：
+{% img https://s2.loli.net/2025/06/25/yjJ4xXsCHzcEZ12.png %}
+
+我一直想把它优化成类似 [Medium](https://medium.com/) 网站的文章浏览效果：
+{% img https://s2.loli.net/2025/06/25/N8hE29ikAnoOUxt.png %}
+
+其实两者之间的区别乍一看并不大，都是图片下面加上文章段落，然后再居中展示，但Medium的展示风格看起来就是更极简，更高级。
+
+所以我给Cursor提的需求是： *文章主体部分仿照 Medium 网站的风格做优化，博客其它的部分还是使用 Next_Mist 主题的样式。*
+
+实际上这个需求相当于什么也没说:joy:，主体部分怎么定义？其它的部分又是哪些？颜色？字体？样式？其实我也不知道这些具体要改成什么样，只是希望能和Medium风格类似，看起来更简约高级就可以。我都不清楚，AI就更不清楚了，所以只能按照我给的方向不断调整方案。
+
+然后我和AI开始不停的对线，就像一个任性的甲方，盯着乙方不断改版，慢慢接近我想要的样子(然后再回退到第一版hhh)。中间好多次博客都被它改的样式全乱了，弄的我很崩溃(AI: 其实我也挺崩溃的)，好在最后终于实现了我想要的感觉：
+
+{% img https://s2.loli.net/2025/06/25/dULEkXIfi7YVu4S.png %}
+
+文章主体收窄，字体变薄，图片也变成了圆角，加上了阴影和悬浮的效果，和页面做了自适应。整体看起来确实优雅高级多了，标签的展示也做了强化：
+
+{% img https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png "Before" %}
+{% img https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png "After"%}
+
+文章主题部分的优化到此结束。
+
+### Not By AI 徽章
+
+[Not By AI](https://notbyai.fyi/cn/) 是我之前看到的一个用来标记非AI生成内容的徽章，官网的介绍是：
+
+> 人工智能（AI）是靠前人的创作内容训练而成。倘若人类就此全面仰赖AI并且放弃创作，世界各地的产出内容恐将一成不变并停滞。Not By AI是为了鼓励人们持续产出原创内容，且让这些原创内容能被注目而产生。而最终目的是确保人类文明得以持续产出创作与进步。
+
+这样的初心很触动我，在AI越来越先进的当代背景下，人类自己创作的内容也变得更加难能可贵了。之前我看到有博主在自己的文章前面，设置了AI生成的内容总结，但我并不想配置，也许我希望每个看到我博客的人，都可以不用那么的「赶时间」，看完之后也能有自己的总结和想法。
+
+因为我的博客内容符合 Not By AI 的90%规定: *如果你估计自己的内容有90%是人类所创作的，你便能将 Not By AI 贴纸加到你的网站、部落格、艺术品、视频、论文、书、播客，或其他型态的非商业用途的作品。* 所以让Cursor帮我将这个徽章加到了侧边栏，也希望我可以一直坚持自己创作内容(反正也不是什么正经内容🐶)。
+
 ### 音乐播放器
-### 去广告
-### 搜索插件
-### AI优化
-代码结构优化 图片懒加载 文件压缩 等
-### 本地浏览器自动加载预览
 
-对我这种上一篇博文还在去年11月的博主来说，好像也用不上(地狱笑话)
-
-实现一个具体的功能还是得问好几遍优化才能成功，比如这俩，所以prompt怎么问很重要
-
-### note
-
-效果：
-{% note default %}
-default
-{% endnote %}
-{% note primary %}
-primary
-{% endnote %}
-{% note success %}
-success
-{% endnote %}
 {% note info %}
-info
-{% endnote %}
-{% note warning %}
-warning
-{% endnote %}
-{% note danger %}
-danger
+之前博客的侧边栏只有一个网易云音乐的外链，而且播放时只要切换页面，音乐就会被重置。所以我让 Cursor 帮我做了一个音乐播放器，放了一个网易云音乐的歌单(都是我精心挑选的歌哟)，它目前实现的功能是：
 {% endnote %}
 
-_config 文件配置关键字：note, 我的配置如下：
-{% codeblock lang:command %}
-style: flat
-icons: true
-border_radius: 3
-{% endcodeblock %}
+<span id="inline-toc">1.</span> 默认最小化放在页面左下角，点击可以展开
+<span id="inline-toc">2.</span> 桌面端：在音乐图标上右键点击即可开启/关闭旋转
+<span id="inline-toc">3.</span> 手机端：长按音乐图标2秒即可开启/关闭旋转
+<span id="inline-toc">4.</span> 切换页面音乐会继续播放，不会被重置
+<span id="inline-toc">5.</span> 旋转状态会自动保存，下次访问页面时会恢复
 
-代码：
-```C++  
-{% note default %}
-default
-{% endnote %}
+其实本来是想实现音乐播放时自动旋转的，为了这个和 Cursor 拉扯了好久，但由于iframe的限制并不能实现，就只能实现手动打开了。
+
+### 过滤 livere 广告
+
+之前livere评论区总是会出现广告，虽然不反对人家恰饭，但这些广告还是很影响博客观感的，让 Cursor 帮我在前端过滤掉了广告，看起来就清爽多了(应该也不影响人家恰饭吧)
+{% img https://s2.loli.net/2025/06/25/rPOhcKXdyMjQ9e6.png "Before" %}
+{% img https://s2.loli.net/2025/06/25/AuMIU4eHatOk6Vm.png "After" %}
+
+### Algolia 搜索
+
+之前博客启用的是本地搜索，经常搜不到内容，现在换成了 Algolia 搜索，就能搜到了，还有统一的后台管理，只不过每次部署之前都得用 {% label info@hexo algolia %} 推送index，但是问题不大 ：
+{% img https://s2.loli.net/2025/06/25/8sN7IDVrcyEAdiP.png "Before" %}
+{% img https://s2.loli.net/2025/06/25/TSzfp1QgYDMnoGt.png "After" %}
+
+### 探索版本新功能
+
+到这里，我想做的或者想优化的功能都已经完成了，但是好像忘了一件重要的事情，既然我已经升级到了Hexo&Next的最新版本，新版本的功能我还一个都没有看呢！其实在升级的时候也粗粗看了下新的版本配置，好像没有什么有意思的新功能，所以让 Cursor 帮我看了看：
+
+{% img https://s2.loli.net/2025/06/26/NHopDjPikv7seTx.png "请听题" %}
+
+结果它检测到的配置和功能我基本都已经用上了，其它的也不感兴趣。至于更新频率和内容，Hexo更新频率不高，上一次发版已经是去年7月份，也没有大的功能变更；Next会频繁一些，不过也多数是一些优化，所以它的建议：
+
+{% img https://s2.loli.net/2025/06/26/981MRLpUcTPeHiW.png "好着呢别整了" %}
+
 {% note primary %}
-primary
+所以一段时间内我就不再更新了。但是！关于「频繁更新会引入不必要的风险」，别说频繁更新了，我上次更新已经是4年前了，这么不频繁的更新都出现一大推兼容性问题：Hexo自己的兼容问题、Next自己的兼容问题、Hexo&Next最新版本的兼容问题，光让Cursor帮我解决人都快麻了，更别说自己来，咱就是说以后发版能不能多测测，稳定了再发啊。
 {% endnote %}
-{% note success %}
-success
-{% endnote %}
+
+不过这俩工具都出了这么久了，还都是轻量级简约风格，确实也不能再有多少新功能了，不然花里胡哨的反而影响观感，对已有功能的优化才是他们的主要方向。
+
+### 代码整体优化
+
+博客的升级和功能优化都已经完成了，还想再整体看看有什么需要改进的点。
+
+让Cursor帮我扫描了下代码结构和安全风险，做一些必要的改动，比如代码结构优化、图片懒加载、文件压缩等等，让博客更稳定。现在博客的加载速度比之前快了不少，代码也更清爽干净了，棒棒哒～
+
+### Github Actions自动部署
+
+说道安全性，因为博客和主题的配置文件都包含了很多密钥信息，所以这两个文件我一直都是放在 {% label info@.gitignore %} 里，自己保存的。
+
+我想了一个新的方案：*创建 GitHub Actions工作流，把这些密钥保存在 GitHub Secrets，由 GitHub Actions自动执行完整的部署流程：hexo clean → hexo generate → hexo algolia → hexo deploy*
+
+但告诉Cursor这个想法后，它给出了一堆设置步骤、脚本、配置文件，太复杂了，甚至生成了一个自动部署方案的总结文档给我，看得我头都大了，还是算了吧。而且对于我这种上一篇博客还是去年11月发的博主，好像也不是很有必要(地狱笑话)。
+
+### 浏览器自动加载预览
+
+在本地写作时，我需要同时打开.md文件和浏览器，这样可以预览文章展示效果。之前都是保存md之后去手动刷新浏览器看效果，一来一去也挺费时费力的。不要问我是怎么忍的，我只是过惯了苦日子(苦涩)。
+
+所以想实现source文件保存之后，浏览器可以自动刷新，实现实时预览。和Cursor拉扯了好久实现了一个自定义的 {% label info@live reload %} 功能，但后来它告诉我hexo本来就有插件 {% label info@hexo-server-live %} 可以做到这件事(那我之前吃的苦算什么？！还做什么自定义插件啊！)，不过试用了一下还是自定义的好用，效果是这样的：
+
+{% img https://s2.loli.net/2025/06/26/cdZHoanDVbqJGkw.gif %}
+
+## 总结
+
 {% note info %}
-info
+Cursor确实强大，但要会用。怎么给它提示很重要，一旦跑偏就很难拉回来，所以还是需要自己思考，把控方向。这也许就是他们说的 **PDD** 吧。
 {% endnote %}
-{% note warning %}
-warning
-{% endnote %}
-{% note danger %}
-danger
-{% endnote %}
-```
-
-### label
-_config 文件配置关键字：Label , 需要用的话把值设为true即可。
-效果：
-{% label default@默认 %}
-{% label primary@主要 %}
-{% label success@成功 %}
-{% label info@信息 %}
-{% label warning@警告 %}
-{% label danger@危险 %}
-
-代码：
-```C++  
-{% label default@默认 %}
-{% label primary@主要 %}
-{% label success@成功 %}
-{% label info@信息 %}
-{% label warning@警告 %}
-{% label danger@危险 %}
-```
-### Tabs
-效果：
-{% tabs emoji %}
-<!-- tab -->
-:smile:
-<!-- endtab -->
-<!-- tab -->
-:laughing:
-<!-- endtab -->
-<!-- tab -->
-:relaxed:
-<!-- endtab -->
-{% endtabs %}
-
-
-### 引用句子
-
-代码：
-```C++  
-{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
-那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
-{% endblockquote %}
-```
-
-效果：
-{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
-那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
-{% endblockquote %}
-
-### 其他标签
-
-在 [Hexo标签](https://hexo.io/docs/tag-plugins.html) 和 [Next内置标签](https://theme-next.iissnan.com/tag-plugins.html) 可以找到。
-
-
-## 自定义标签
-### 数字块
-参考 [这个](https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97) 设置。
-
-效果：
-<span id="inline-toc">1.</span>
-<span id="inline-toc">2.</span>
-<span id="inline-toc">3.</span>
-
-
-## 参考文章
-<span id="inline-toc">1.</span>[Hexo-NexT 主题个性优化](https://blog.guanqr.com/study/blog/hexo-theme-next-customization)
-<span id="inline-toc">2.</span>[Hexo-Next搭建个人博客（主题优化）](https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/)
