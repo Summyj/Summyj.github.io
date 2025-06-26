@@ -202,11 +202,11 @@
         } else if (currentHash !== lastPageHash) {
           console.log('✨ Page content changed!');
           console.log('📊 Hash changed from', lastPageHash.substring(0, 8) + '...', 'to', currentHash.substring(0, 8) + '...');
-          console.log('🔄 Reloading page in 1000ms...');
+          console.log('🔄 Reloading page in 300ms...');
           
           // 清理定时器
           if (checkInterval) {
-            clearInterval(checkInterval);
+            clearTimeout(checkInterval);
           }
           
           // 重置状态，准备重新加载
@@ -214,14 +214,27 @@
           lastPageHash = null;
           isChecking = false;
           
+          // 减少重新加载延迟，提升响应速度
           setTimeout(function() {
             window.location.reload();
-          }, 1000);
+          }, 300);
           return;
         } else {
           stableCount++;
+          
+          // 动态调整检测间隔：没有变化时逐渐延长间隔
+          if (stableCount < 3) {
+            currentInterval = minInterval; // 前3次检测保持最快速度
+          } else if (stableCount < 10) {
+            currentInterval = 2000; // 4-10次检测每2秒一次
+          } else if (stableCount < 20) {
+            currentInterval = 3000; // 11-20次检测每3秒一次
+          } else {
+            currentInterval = maxInterval; // 20次后每5秒一次
+          }
+          
           if (stableCount <= 2 || stableCount % 8 === 0) {
-            console.log('📋 Check #' + checkCount + ' - No changes detected (stable: ' + stableCount + ')');
+            console.log('📋 Check #' + checkCount + ' - No changes detected (stable: ' + stableCount + ', interval: ' + currentInterval + 'ms)');
           }
         }
         
@@ -272,13 +285,25 @@
       setTimeout(function() {
         checkForUpdates();
         
-        // 每5秒检查一次更新
-        checkInterval = setInterval(checkForUpdates, 5000);
+        // 智能检测间隔：初期频繁检测，稳定后减少频率
+        let currentInterval = 2000; // 初始2秒检测一次
+        const maxInterval = 5000; // 最大间隔5秒
+        const minInterval = 1000; // 最小间隔1秒
+        
+        function scheduleNextCheck() {
+          clearTimeout(checkInterval);
+          checkInterval = setTimeout(() => {
+            checkForUpdates();
+            scheduleNextCheck();
+          }, currentInterval);
+        }
+        
+        scheduleNextCheck();
         
         // 页面卸载时清理
         window.addEventListener('beforeunload', function() {
           if (checkInterval) {
-            clearInterval(checkInterval);
+            clearTimeout(checkInterval);
           }
         });
       }, 3000);
@@ -287,18 +312,54 @@
       window.addEventListener('focus', function() {
         if (initialized && !urlChangeDetected) {
           console.log('👁️ Page focused - checking for updates...');
-          setTimeout(checkForUpdates, 800);
+          // 重置检测间隔为最快速度
+          currentInterval = minInterval;
+          setTimeout(checkForUpdates, 300);
         }
       });
+      
+      // 添加键盘快捷键 Ctrl+R / Cmd+R 快速刷新检测
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'r' && !e.shiftKey) {
+          if (initialized && !urlChangeDetected) {
+            console.log('⚡ Manual refresh detected - quick check...');
+            // 阻止默认刷新，先检查更新
+            e.preventDefault();
+            currentInterval = minInterval;
+            setTimeout(() => {
+              checkForUpdates();
+              // 如果500ms内没有检测到更新，则正常刷新
+              setTimeout(() => {
+                if (!isChecking) {
+                  window.location.reload();
+                }
+              }, 500);
+            }, 100);
+          }
+        }
+      });
+      
+      // 添加可见性变化监听，页面变为可见时快速检测
+      if (typeof document.visibilityState !== 'undefined') {
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden && initialized && !urlChangeDetected) {
+            console.log('👀 Page became visible - quick check...');
+            currentInterval = minInterval;
+            setTimeout(checkForUpdates, 200);
+          }
+        });
+      }
     }
     
     // 启动初始化
     initialize();
     
-    console.log('✅ Smart Live Reload initialized');
-    console.log('💡 Will check for content changes every 5 seconds');
+    console.log('✅ Enhanced Live Reload initialized');
+    console.log('💡 Smart interval: 1s → 2s → 3s → 5s based on stability');
     console.log('🎯 Only real content changes will trigger reload');
     console.log('🔗 URL changes will be handled gracefully');
+    console.log('⚡ Press Ctrl+R/Cmd+R for instant check');
+    console.log('👀 Auto-detects when page becomes visible');
   }
 })();
 </script>
