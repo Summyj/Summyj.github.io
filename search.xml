@@ -1385,6 +1385,88 @@ danger
       </tags>
   </entry>
   <entry>
+    <title>我的书架</title>
+    <url>/MyBooks/</url>
+    <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center">
+<p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
+
+</blockquote>
+
+<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。</p>
+<img data-src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" width="200" height="200">
+看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">😃</span>
+
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p><span id="inline-toc">1.</span> <strong>测试架构师修炼之道</strong>/刘琛梅/机械工业出版社</p>
+<p>这个世界上有两种QA:</p>
+<ul>
+<li><mark class="label success">技术型</mark>: 代码能力强，对新技术有狂热追求。未来发展方向一般是测试开发/测试架构师/DevOPs，甚至是全栈工程师。</li>
+<li><mark class="label success">业务型</mark>: 业务能力强，对业务了如指掌。未来发展方向一般是业务分析师/项目管理师，逐步走管理路线。</li>
+</ul>
+<p>但这只是侧重点，一个合格的QA是需要两者都基本掌握的。<br>曾经我以为自己是第一种，最近发现智商不允许，毕竟也只工作了不到一年半的时间，所以还在探索自己的方向，都先试试看。<br>这本书就告诉我们怎么从一个普通的QA发展成技术型QA。</p>
+<p><span id="inline-toc">2.</span> <strong>软技能：代码之外的生存指南</strong>/John Z. Sonmez/人民邮电出版社</p>
+<p>大学时候看过的一本书，当时看了三分之一左右，其余的草草翻了下目录简介。<br>书名中虽有 ‘代码’ 两字，其实内容跟代码一点关系也没有。<br>作者从建立个人影响力，职业规划，健康生活等方面给广大程序员们提供了宝贵的建议。<br>总之，很值得一看<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></p>
+<p><span id="inline-toc">3.</span> <strong>区块链：领导干部读本</strong>/任仲文/人民日报出版社<br><span id="inline-toc">4.</span> <strong>全程软件测试(第3版)</strong>/人民邮电出版社<br><span id="inline-toc">5.</span> <strong>深度学习</strong>/人民邮件出版社<br><span id="inline-toc">6.</span> <strong>深入敏捷测试—整个敏捷团队的学习之旅</strong>清华大学出版社<br><span id="inline-toc">7.</span> <strong>敏捷软件测试—测试人员与敏捷团队的实践指南</strong>/清华大学出版社</p>
+<p>大学时期看过的一本敏捷测试相关，里面有介绍一些敏捷测试理论如：测试四象限，测试金字塔等等，还有自动化测试，很长姿势的一本书。</p>
+<p><span id="inline-toc">8.</span> <strong>深度工作——如何有效使用每一点脑力</strong>/卡尔.纽波特/江西人民出版社<br><span id="inline-toc">9.</span> <strong>高效能人士的七个习惯</strong>/史蒂芬.科维/中国青年出版社</p>
+<p>这本是大四实习公司发的奖品，前段时间才看完。<br>作者说的对，他就是把一些大家知道但不加重视的生活原则整理成书，比如要事第一，积极主动等等，道理其实咱都明白。<br>还是推荐看，偶尔拿出来看看反思一下自己的生活也是极好的。<br>书里有一些道理我很赞同：</p>
+<div class="note primary"><p>所有的事情，都分为四种：</p>
+<ol>
+<li>重要且紧急：比如上班搬砖，住院开刀</li>
+<li>重要但不紧急： 比如健身，做职业规划</li>
+<li>不重要但紧急：比如开会，接电话</li>
+<li>不重要且不紧急：比如玩手机，刷某音</li>
+</ol>
+</div>
+<p>我们往往会忽略2， 但经常沉迷于4<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">😔</span></p>
+<p><span id="inline-toc">10.</span> <strong>有效管理敏捷团队——快速成为优秀的ScrumMaster</strong>/清华大学出版社<br><span id="inline-toc">11.</span> <strong>转行——发现一个未知的自己</strong>/埃米尼亚.伊瓦拉/机械工业出版社</p>
+<h3 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h3><p><span id="inline-toc">1.</span> <strong>沟通的艺术(看入人里/看出人外)</strong>/北京联合出版公司<br><span id="inline-toc">2.</span> <strong>社会心理学(第11版)</strong>/戴维.迈尔斯/人民邮件出版社<br><span id="inline-toc">3.</span> <strong>思考，快与慢</strong>/丹尼尔.卡尼曼<br><span id="inline-toc">4.</span> <strong>一个人住第5年</strong>/高木直子/北京联合出版公司</p>
+<p>这本书有意思，带着笑看完了。从名字就很吸引我，因为我也是一个人住。<br>作者用漫画的形式诉说自己一个人的生活，有时觉得自由，有时觉得孤独，有时会半夜起来改变家具的位置，是我本人了，真实到让我觉得作者是不是在我家安装了监视器。<br>如果你也一个人住，可以看看。</p>
+<p><span id="inline-toc">5.</span> <strong>墨菲定律</strong>/秋泉<br><span id="inline-toc">6.</span> <strong>局外人</strong>/加缪/江苏凤凰文艺出版社</p>
+<h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p><span id="inline-toc">1.</span> <strong>经济学的思维方式</strong>/保罗·海恩 (Paul Heyne)/机械工业出版社<br><span id="inline-toc">2.</span> <strong>小狗钱钱(两册)</strong>/博多.舍费尔/四川少年儿童出版社</p>
+<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p><span id="inline-toc">1.</span> <strong>中国通史</strong>/吕思勉/陕西师范大学出版社</p>
+<p>快看完了，作者是民国生人，而且做过历史教授，文字不是太白话，看起来有些障碍。好在我比较喜欢啃文言文，这种调调还可以接受，不过睡前看可能会有些催眠。所以还好(我可是高考语文考过130的人<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>)。<br>书中对史实刻画很生动，提出所谓历史，其实都是文化史，因为文化不同，所以产生政治史。所以书分两篇，上篇政治史，下篇讲文化史。<br>上篇还分析了各个朝代更替衰落的原因，并描述了朝代更迭过程中人民的思想变化，如何从“治天下不如安天下”到“安天下不如与天下安”，和儒家&amp;理学思想对政治的影响，引人深思。<br>作者说：<mark class="label info">我们所知道的中国史，相当于一个人活到一百岁，但却只有他最近几个月的记忆，是很少的。</mark></p>
+<p><span id="inline-toc">2.</span> <strong>全球通史—从史前史到21世纪(上下两册第7版)</strong>/斯塔夫里阿诺斯/北京大学出版社<br><span id="inline-toc">3.</span> <strong>万历十五年</strong>/黄仁宇/三联书店</p>
+<h3 id="文学"><a href="#文学" class="headerlink" title="文学"></a>文学</h3><p><span id="inline-toc">1.</span> <strong>诗经《风雅颂》合集</strong>/三秦出版社</p>
+<blockquote class="blockquote-center">
+<p>关关雎鸠，在河之洲。窈窕淑女，君子好逑</p>
+
+</blockquote>
+<p>上学的时候了那么多诗经里的诗词，也算是看过了吧。不过还想看看里面其它的诗词，品鉴的同时也可避免以后因为误解词句的意思而贻笑大方。<br>还是推荐这版，印刷很用心，看起来很舒适。</p>
+<p><span id="inline-toc">2.</span> <strong>花间集</strong>/赵崇祚/三秦出版社</p>
+<blockquote class="blockquote-center">
+<p>小山重叠金明灭，鬓云欲度香腮雪。懒起画娥眉，弄妆梳洗迟。照花前后镜，花面交相映。新帖绣罗襦，双双金鹧鸪。</p>
+
+</blockquote>
+<p>这是电视剧《甄嬛转》里眉庄香消玉殒时的背景音乐，是姚贝娜唱的。当时便觉得很美，后来知道是温庭筠写的。由温庭筠又知道了“花间派”，而后就买了这本。<br>也算是本工具书，这版是彩印，还有一些古代花鸟画和风景图，边赏词边品画，也很舒适。</p>
+<p><span id="inline-toc">3.</span> <strong>纳兰词</strong>/纳兰性德</p>
+<blockquote class="blockquote-center">
+<p>人生若只如初见，何事秋风悲画扇？等闲变却故人心，却道故人心易变。</p>
+
+</blockquote>
+<p>纳兰性德其人，才华横溢，出身高贵确不贪恋荣华，潇洒恣意，在妻子去世八年后也随之而去，而立之年就英年早逝。</p>
+<p><span id="inline-toc">4.</span> <strong>爱你就像爱生命</strong>/王小波/译林出版社</p>
+<p>看完了，这不是一封情书，而是一本情书。<br>“你好哇，李银河”是每封情书的开场白，直白又热烈。<br>单身的人还是不要看了(所以我为什么要看<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)</p>
+<p><span id="inline-toc">5.</span> <strong>古文观止(上下两册)</strong>/吴楚材/浙江教育出版社<br><span id="inline-toc">6.</span> <strong>呐喊</strong>/鲁迅<br><span id="inline-toc">7.</span> <strong>沉默的大多数</strong>/王小波</p>
+<p>大学的时候就看完了，是王小波最著名的杂文。王小波生活在新中国刚成立后最动荡的时期，文革，大跃进，上山下乡都赶上了，所以在杂文里也有很多他的经历。这本杂文合集文字幽默大胆，主要写他对当时中国社会/经济/文化现状的讽刺。</p>
+<p><span id="inline-toc">8.</span> <strong>围城</strong>/钱钟书</p>
+<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，各种出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
+<p><span id="inline-toc">9.</span> <strong>人间词话</strong>/王国维/中华书局</p>
+<h3 id="社科"><a href="#社科" class="headerlink" title="社科"></a>社科</h3><p><span id="inline-toc">1.</span> <strong>中国地理地图集</strong>/中国地图出版社</p>
+<p>还没看完，其实这是本工具书，因为我一向地理不好。<br>以前是分不清南北，这个毛病在我第一次找房子以为朝东结果朝北后才治好的，但有时也会失灵。<br>现在是随便说某省份和城市，反应不来是南方还是北方，经常被朋友嘲笑，所以还是买本地理书吧。<br>是挺厚的一本书，全彩印，里面详细列着我国各地的地貌，湖泊，气候，风俗等等，还有超简版中国式。称得上一本概括版的百科全书了，图文并茂，看起来也不腻。</p>
+<p><span id="inline-toc">2.</span> <strong>像人类学家一样思考</strong>/约翰.奥莫亨德罗/北京大学出版社</p>
+<h3 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h3><p><span id="inline-toc">1.</span> <strong>救护车到来前，你能做什么？</strong>/贾大成<br><span id="inline-toc">2.</span> <strong>中国居民膳食指南2016</strong>/中国营养学会/人民卫生出版社<br><span id="inline-toc">3.</span> <strong>知己</strong>/徐文兵/海南出版社<br><span id="inline-toc">4.</span> <strong>女人的身体,女人的智慧(新版)</strong>/克里斯蒂安.诺斯鲁普/上海科学普及出版社</p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><blockquote>
+<p>我的买书渠道：因为心理学&amp;理财&amp;工作相关的书都是可以报销的，所以都是在京东自营买的新书，二手书在‘多抓鱼’买。<br>最近发现一个 <a href="http://www.bwsk.com/">线上网站</a> 看书很方便。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+      </categories>
+      <tags>
+        <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java基础小练习</title>
     <url>/Java-basic/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png">
@@ -1542,88 +1624,6 @@ danger
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的书架</title>
-    <url>/MyBooks/</url>
-    <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center">
-<p>古人云：“书中自有黄金屋，书中自有颜如玉”。而我既没有黄金屋，也称不上颜如玉。所以对我而言，读书的确很重要，或许这正是“人丑就要多读书”的出处。</p>
-
-</blockquote>
-
-<h2 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h2><p>下面是我书架上目前所有书，共42本，看完这些，我就可以立地成佛了吧。。</p>
-<img data-src="https://i.loli.net/2019/11/27/DglCuIe78WTznFy.jpg" width="200" height="200">
-看过的/看了一部分的写了简评，以后有看完的再慢慢加<span class="emoji" alias="smiley" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8">😃</span>
-
-<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p><span id="inline-toc">1.</span> <strong>测试架构师修炼之道</strong>/刘琛梅/机械工业出版社</p>
-<p>这个世界上有两种QA:</p>
-<ul>
-<li><mark class="label success">技术型</mark>: 代码能力强，对新技术有狂热追求。未来发展方向一般是测试开发/测试架构师/DevOPs，甚至是全栈工程师。</li>
-<li><mark class="label success">业务型</mark>: 业务能力强，对业务了如指掌。未来发展方向一般是业务分析师/项目管理师，逐步走管理路线。</li>
-</ul>
-<p>但这只是侧重点，一个合格的QA是需要两者都基本掌握的。<br>曾经我以为自己是第一种，最近发现智商不允许，毕竟也只工作了不到一年半的时间，所以还在探索自己的方向，都先试试看。<br>这本书就告诉我们怎么从一个普通的QA发展成技术型QA。</p>
-<p><span id="inline-toc">2.</span> <strong>软技能：代码之外的生存指南</strong>/John Z. Sonmez/人民邮电出版社</p>
-<p>大学时候看过的一本书，当时看了三分之一左右，其余的草草翻了下目录简介。<br>书名中虽有 ‘代码’ 两字，其实内容跟代码一点关系也没有。<br>作者从建立个人影响力，职业规划，健康生活等方面给广大程序员们提供了宝贵的建议。<br>总之，很值得一看<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span></p>
-<p><span id="inline-toc">3.</span> <strong>区块链：领导干部读本</strong>/任仲文/人民日报出版社<br><span id="inline-toc">4.</span> <strong>全程软件测试(第3版)</strong>/人民邮电出版社<br><span id="inline-toc">5.</span> <strong>深度学习</strong>/人民邮件出版社<br><span id="inline-toc">6.</span> <strong>深入敏捷测试—整个敏捷团队的学习之旅</strong>清华大学出版社<br><span id="inline-toc">7.</span> <strong>敏捷软件测试—测试人员与敏捷团队的实践指南</strong>/清华大学出版社</p>
-<p>大学时期看过的一本敏捷测试相关，里面有介绍一些敏捷测试理论如：测试四象限，测试金字塔等等，还有自动化测试，很长姿势的一本书。</p>
-<p><span id="inline-toc">8.</span> <strong>深度工作——如何有效使用每一点脑力</strong>/卡尔.纽波特/江西人民出版社<br><span id="inline-toc">9.</span> <strong>高效能人士的七个习惯</strong>/史蒂芬.科维/中国青年出版社</p>
-<p>这本是大四实习公司发的奖品，前段时间才看完。<br>作者说的对，他就是把一些大家知道但不加重视的生活原则整理成书，比如要事第一，积极主动等等，道理其实咱都明白。<br>还是推荐看，偶尔拿出来看看反思一下自己的生活也是极好的。<br>书里有一些道理我很赞同：</p>
-<div class="note primary"><p>所有的事情，都分为四种：</p>
-<ol>
-<li>重要且紧急：比如上班搬砖，住院开刀</li>
-<li>重要但不紧急： 比如健身，做职业规划</li>
-<li>不重要但紧急：比如开会，接电话</li>
-<li>不重要且不紧急：比如玩手机，刷某音</li>
-</ol>
-</div>
-<p>我们往往会忽略2， 但经常沉迷于4<span class="emoji" alias="pensive" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8">😔</span></p>
-<p><span id="inline-toc">10.</span> <strong>有效管理敏捷团队——快速成为优秀的ScrumMaster</strong>/清华大学出版社<br><span id="inline-toc">11.</span> <strong>转行——发现一个未知的自己</strong>/埃米尼亚.伊瓦拉/机械工业出版社</p>
-<h3 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h3><p><span id="inline-toc">1.</span> <strong>沟通的艺术(看入人里/看出人外)</strong>/北京联合出版公司<br><span id="inline-toc">2.</span> <strong>社会心理学(第11版)</strong>/戴维.迈尔斯/人民邮件出版社<br><span id="inline-toc">3.</span> <strong>思考，快与慢</strong>/丹尼尔.卡尼曼<br><span id="inline-toc">4.</span> <strong>一个人住第5年</strong>/高木直子/北京联合出版公司</p>
-<p>这本书有意思，带着笑看完了。从名字就很吸引我，因为我也是一个人住。<br>作者用漫画的形式诉说自己一个人的生活，有时觉得自由，有时觉得孤独，有时会半夜起来改变家具的位置，是我本人了，真实到让我觉得作者是不是在我家安装了监视器。<br>如果你也一个人住，可以看看。</p>
-<p><span id="inline-toc">5.</span> <strong>墨菲定律</strong>/秋泉<br><span id="inline-toc">6.</span> <strong>局外人</strong>/加缪/江苏凤凰文艺出版社</p>
-<h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p><span id="inline-toc">1.</span> <strong>经济学的思维方式</strong>/保罗·海恩 (Paul Heyne)/机械工业出版社<br><span id="inline-toc">2.</span> <strong>小狗钱钱(两册)</strong>/博多.舍费尔/四川少年儿童出版社</p>
-<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p><span id="inline-toc">1.</span> <strong>中国通史</strong>/吕思勉/陕西师范大学出版社</p>
-<p>快看完了，作者是民国生人，而且做过历史教授，文字不是太白话，看起来有些障碍。好在我比较喜欢啃文言文，这种调调还可以接受，不过睡前看可能会有些催眠。所以还好(我可是高考语文考过130的人<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>)。<br>书中对史实刻画很生动，提出所谓历史，其实都是文化史，因为文化不同，所以产生政治史。所以书分两篇，上篇政治史，下篇讲文化史。<br>上篇还分析了各个朝代更替衰落的原因，并描述了朝代更迭过程中人民的思想变化，如何从“治天下不如安天下”到“安天下不如与天下安”，和儒家&amp;理学思想对政治的影响，引人深思。<br>作者说：<mark class="label info">我们所知道的中国史，相当于一个人活到一百岁，但却只有他最近几个月的记忆，是很少的。</mark></p>
-<p><span id="inline-toc">2.</span> <strong>全球通史—从史前史到21世纪(上下两册第7版)</strong>/斯塔夫里阿诺斯/北京大学出版社<br><span id="inline-toc">3.</span> <strong>万历十五年</strong>/黄仁宇/三联书店</p>
-<h3 id="文学"><a href="#文学" class="headerlink" title="文学"></a>文学</h3><p><span id="inline-toc">1.</span> <strong>诗经《风雅颂》合集</strong>/三秦出版社</p>
-<blockquote class="blockquote-center">
-<p>关关雎鸠，在河之洲。窈窕淑女，君子好逑</p>
-
-</blockquote>
-<p>上学的时候了那么多诗经里的诗词，也算是看过了吧。不过还想看看里面其它的诗词，品鉴的同时也可避免以后因为误解词句的意思而贻笑大方。<br>还是推荐这版，印刷很用心，看起来很舒适。</p>
-<p><span id="inline-toc">2.</span> <strong>花间集</strong>/赵崇祚/三秦出版社</p>
-<blockquote class="blockquote-center">
-<p>小山重叠金明灭，鬓云欲度香腮雪。懒起画娥眉，弄妆梳洗迟。照花前后镜，花面交相映。新帖绣罗襦，双双金鹧鸪。</p>
-
-</blockquote>
-<p>这是电视剧《甄嬛转》里眉庄香消玉殒时的背景音乐，是姚贝娜唱的。当时便觉得很美，后来知道是温庭筠写的。由温庭筠又知道了“花间派”，而后就买了这本。<br>也算是本工具书，这版是彩印，还有一些古代花鸟画和风景图，边赏词边品画，也很舒适。</p>
-<p><span id="inline-toc">3.</span> <strong>纳兰词</strong>/纳兰性德</p>
-<blockquote class="blockquote-center">
-<p>人生若只如初见，何事秋风悲画扇？等闲变却故人心，却道故人心易变。</p>
-
-</blockquote>
-<p>纳兰性德其人，才华横溢，出身高贵确不贪恋荣华，潇洒恣意，在妻子去世八年后也随之而去，而立之年就英年早逝。</p>
-<p><span id="inline-toc">4.</span> <strong>爱你就像爱生命</strong>/王小波/译林出版社</p>
-<p>看完了，这不是一封情书，而是一本情书。<br>“你好哇，李银河”是每封情书的开场白，直白又热烈。<br>单身的人还是不要看了(所以我为什么要看<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)</p>
-<p><span id="inline-toc">5.</span> <strong>古文观止(上下两册)</strong>/吴楚材/浙江教育出版社<br><span id="inline-toc">6.</span> <strong>呐喊</strong>/鲁迅<br><span id="inline-toc">7.</span> <strong>沉默的大多数</strong>/王小波</p>
-<p>大学的时候就看完了，是王小波最著名的杂文。王小波生活在新中国刚成立后最动荡的时期，文革，大跃进，上山下乡都赶上了，所以在杂文里也有很多他的经历。这本杂文合集文字幽默大胆，主要写他对当时中国社会/经济/文化现状的讽刺。</p>
-<p><span id="inline-toc">8.</span> <strong>围城</strong>/钱钟书</p>
-<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，各种出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
-<p><span id="inline-toc">9.</span> <strong>人间词话</strong>/王国维/中华书局</p>
-<h3 id="社科"><a href="#社科" class="headerlink" title="社科"></a>社科</h3><p><span id="inline-toc">1.</span> <strong>中国地理地图集</strong>/中国地图出版社</p>
-<p>还没看完，其实这是本工具书，因为我一向地理不好。<br>以前是分不清南北，这个毛病在我第一次找房子以为朝东结果朝北后才治好的，但有时也会失灵。<br>现在是随便说某省份和城市，反应不来是南方还是北方，经常被朋友嘲笑，所以还是买本地理书吧。<br>是挺厚的一本书，全彩印，里面详细列着我国各地的地貌，湖泊，气候，风俗等等，还有超简版中国式。称得上一本概括版的百科全书了，图文并茂，看起来也不腻。</p>
-<p><span id="inline-toc">2.</span> <strong>像人类学家一样思考</strong>/约翰.奥莫亨德罗/北京大学出版社</p>
-<h3 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h3><p><span id="inline-toc">1.</span> <strong>救护车到来前，你能做什么？</strong>/贾大成<br><span id="inline-toc">2.</span> <strong>中国居民膳食指南2016</strong>/中国营养学会/人民卫生出版社<br><span id="inline-toc">3.</span> <strong>知己</strong>/徐文兵/海南出版社<br><span id="inline-toc">4.</span> <strong>女人的身体,女人的智慧(新版)</strong>/克里斯蒂安.诺斯鲁普/上海科学普及出版社</p>
-<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><blockquote>
-<p>我的买书渠道：因为心理学&amp;理财&amp;工作相关的书都是可以报销的，所以都是在京东自营买的新书，二手书在‘多抓鱼’买。<br>最近发现一个 <a href="http://www.bwsk.com/">线上网站</a> 看书很方便。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>书单</tag>
       </tags>
   </entry>
   <entry>
@@ -2892,62 +2892,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>测试课程学习笔记第一弹：自动化测试理论</title>
-    <url>/auto-test-learning/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
-
-<blockquote>
-<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
-</blockquote>
-<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
-
-<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
-<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
-<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
-<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
-<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
-<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
-</ul>
-<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
-<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
-<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
-<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
-<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
-<div class="note default"><ul>
-<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
-<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
-<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
-</ul>
-</div>
-
-<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
-<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
-<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
-<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
-<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
-<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
-<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
-<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
-</ul>
-<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
-<ul>
-<li><mark class="label danger">Android原生Monkey</mark></li>
-<li><mark class="label danger">百度 SmartMonkey</mark></li>
-<li><mark class="label danger">腾讯 NewMonkey</mark></li>
-<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
-<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
-</ul>
-<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>敏捷测试浅谈</title>
     <url>/agile-test/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/09/16/XSmLbJgiMNPhHjA.png">
@@ -3026,6 +2970,62 @@ public class Functions {
       </categories>
       <tags>
         <tag>敏捷测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
+
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
+<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
+<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
+<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default"><ul>
+<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
+<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
+<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
+</ul>
+</div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
+<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
+<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
+<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
+<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><mark class="label danger">Android原生Monkey</mark></li>
+<li><mark class="label danger">百度 SmartMonkey</mark></li>
+<li><mark class="label danger">腾讯 NewMonkey</mark></li>
+<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
+<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -3419,17 +3419,17 @@ public class Functions {
 <p><img data-src="https://s2.loli.net/2025/06/25/dULEkXIfi7YVu4S.png"></p>
 <p>文章主体收窄，字体变薄，图片也变成了圆角，加上了阴影和悬浮的效果，和页面做了自适应。整体看起来确实优雅高级多了，标签的展示也做了强化：</p>
 <p><img data-src="https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png" alt="After"><span class="image-caption">After</span></p>
-<p>文章主题部分的优化到此结束，不过目前还有一个图片fancybox的问题没有解决，点击图片查看有时候会缩成一个小点，切换上下图片也是这样，但是切换右上角的缩略图按钮可以正常看。拉扯太多累了，以后再说(又不是不能用)。</p>
+<p>文章主题部分的优化到此结束。不过目前还有一个图片fancybox的问题没有解决，点击图片查看有时候会缩成一个小点，切换上下图片也是这样，但是点一下右上角的缩略图按钮(9个点)就可以正常看。拉扯太多累了，以后再说(又不是不能用)。</p>
 <h3 id="Not-By-AI-徽章"><a href="#Not-By-AI-徽章" class="headerlink" title="Not By AI 徽章"></a>Not By AI 徽章</h3><p><a href="https://notbyai.fyi/cn/">Not By AI</a> 是我之前看到的一个用来标记非AI生成内容的徽章，官网的介绍是：</p>
 <blockquote>
 <p>人工智能（AI）是靠前人的创作内容训练而成。倘若人类就此全面仰赖AI并且放弃创作，世界各地的产出内容恐将一成不变并停滞。Not By AI是为了鼓励人们持续产出原创内容，且让这些原创内容能被注目而产生。而最终目的是确保人类文明得以持续产出创作与进步。</p>
 </blockquote>
 <p>这样的初心很触动我，在AI越来越先进的当代背景下，人类自己创作的内容也变得更加难能可贵了。之前我看到有博主在自己的文章前面，设置了AI生成的内容总结，但我并不想配置，也许我希望每个看到我博客的人，都可以不用那么的「赶时间」，看完之后也能有自己的总结和想法。</p>
 <p>因为我的博客内容符合 Not By AI 的90%规定: <em>如果你估计自己的内容有90%是人类所创作的，你便能将 Not By AI 贴纸加到你的网站、部落格、艺术品、视频、论文、书、播客，或其他型态的非商业用途的作品。</em> 所以让Cursor帮我将这个徽章加到了侧边栏，也希望我可以一直坚持自己创作内容(反正也不是什么正经内容🐶)。</p>
-<h3 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h3><div class="note info"><p>之前博客的侧边栏只有一个网易云音乐的外链，而且播放时只要切换页面，音乐就会被重置。所以我让 Cursor 帮我做了一个音乐播放器，放了一个网易云音乐的歌单(都是我精心挑选的歌哟)，它目前实现的功能是：</p>
+<h3 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h3><div class="note info"><p>之前博客的侧边栏只有一个网易云音乐的外链，而且播放时只要切换页面，音乐就会被重置。所以我让 Cursor 帮我做了一个音乐播放器，放了一个网易云音乐的歌单(在手机浏览器可能会打不开)，它目前实现的功能是：</p>
 </div>
 
-<p><span id="inline-toc">1.</span> 默认最小化放在页面左下角，点击可以展开<br><span id="inline-toc">2.</span> 桌面端：在音乐图标上右键点击即可开启/关闭旋转<br><span id="inline-toc">3.</span> 手机端：长按音乐图标2秒即可开启/关闭旋转<br><span id="inline-toc">4.</span> 切换页面音乐会继续播放，不会被重置<br><span id="inline-toc">5.</span> 旋转状态会自动保存，下次访问页面时会恢复</p>
+<p><span id="inline-toc">1.</span> 默认最小化放在页面左下角，点击可以展开<br><span id="inline-toc">2.</span> 桌面端：在音乐图标上右键点击即可开启/关闭旋转<br><span id="inline-toc">3.</span> 手机端：长按音乐图标1秒即可开启/关闭旋转<br><span id="inline-toc">4.</span> 切换页面音乐会继续播放，不会被重置<br><span id="inline-toc">5.</span> 旋转状态会自动保存，下次访问页面时会恢复</p>
 <p>其实本来是想实现音乐播放时自动旋转的，为了这个和 Cursor 拉扯了好久，但由于iframe的限制并不能实现，就只能实现手动打开了。</p>
 <h3 id="过滤-livere-广告"><a href="#过滤-livere-广告" class="headerlink" title="过滤 livere 广告"></a>过滤 livere 广告</h3><p>之前livere评论区总是会出现广告，虽然不反对人家恰饭，但这些广告还是很影响博客观感的，让 Cursor 帮我在前端过滤掉了广告，看起来就清爽多了(应该也不影响人家恰饭吧)<br><img data-src="https://s2.loli.net/2025/06/25/rPOhcKXdyMjQ9e6.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/06/25/AuMIU4eHatOk6Vm.png" alt="After"><span class="image-caption">After</span></p>
 <h3 id="Algolia-搜索"><a href="#Algolia-搜索" class="headerlink" title="Algolia 搜索"></a>Algolia 搜索</h3><p>之前博客启用的是本地搜索，经常搜不到内容，现在换成了 Algolia 搜索，就能搜到了，还有统一的后台管理，只不过每次部署之前都得用 <mark class="label info">hexo algolia</mark> 推送index，但是问题不大 ：<br><img data-src="https://s2.loli.net/2025/06/25/8sN7IDVrcyEAdiP.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/06/25/TSzfp1QgYDMnoGt.png" alt="After"><span class="image-caption">After</span></p>
@@ -3520,7 +3520,7 @@ public class Functions {
 <p>昨天刚玩回来，去太原面食店吃了刀削面、去晋祠欣赏了山西古建筑美学、去看了太原地标永祚双塔寺，那么山西和法国有多像呢？请看下图：</p>
 <p><img data-src="https://s2.loli.net/2024/12/02/ZzG1L7nQStb3rwI.jpg" alt="酒店的装饰墙是会对比的"><span class="image-caption">酒店的装饰墙是会对比的</span></p>
 <p>不仅如此，我还发现了中国自己的斜塔，那就是双塔中的文峰塔(图中右侧塔，原名宣文塔即东塔)，你是否观察到它往左偏了一点点呢？(看太阳照射的塔身明线对比左侧塔非常明显！)，附上拍到的纠偏碑记(博主和对象双双入镜)：</p>
-<p><img data-src="https://s2.loli.net/2024/12/02/PkJ6lCcRrE5AXyM.jpg" alt="双塔和纠偏碑记"><span class="image-caption">双塔和纠偏碑记</span><br><img data-src="https://s2.loli.net/2024/12/02/PkJ6lCcRrE5AXyM.jpg" alt="双塔和纠偏碑记"><span class="image-caption">双塔和纠偏碑记</span></p>
+<p><img data-src="https://s2.loli.net/2024/12/02/PkJ6lCcRrE5AXyM.jpg" alt="双塔和纠偏碑记"><span class="image-caption">双塔和纠偏碑记</span></p>
 <p>所以别说法国了，山西和意大利也很像！世界就是巨大的中国(手动狗头)。话又说回来了，比萨斜塔拯救委员会真的不考虑咱们的专家过去看看嘛？下图为博主去意大利旅行时拍到的斜塔：</p>
 <p><img data-src="https://s2.loli.net/2024/12/02/5E1GQpgVlJoSXqW.jpg" alt="比萨斜塔"><span class="image-caption">比萨斜塔</span></p>
 ]]></content>
@@ -3529,20 +3529,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>影评</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<span id="more"></span>
-
-<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -3650,6 +3636,20 @@ public class Functions {
       </categories>
       <tags>
         <tag>买房</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<span id="more"></span>
+
+<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -4830,35 +4830,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>两个人的春节</title>
-    <url>/sf-of-2p/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
-
-<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
-<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
-<p>之后春节假期，每一天都有他的陪伴。</p>
-<ul>
-<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
-<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
-<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
-<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
-<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
-<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
-</ul>
-<p>两个人过年，也很温馨快乐。</p>
-<p>疫情放开以来，我一直没被感染。</p>
-<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
-<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
-<p>这才不是一篇水文呢喂！</p>
-</div>]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>春节</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的厨艺进阶之路</title>
     <url>/myCookingWay/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
@@ -4900,6 +4871,35 @@ public class Functions {
       </categories>
       <tags>
         <tag>Cook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两个人的春节</title>
+    <url>/sf-of-2p/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
+
+<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
+<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
+<p>之后春节假期，每一天都有他的陪伴。</p>
+<ul>
+<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
+<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
+<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
+<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
+<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
+<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
+</ul>
+<p>两个人过年，也很温馨快乐。</p>
+<p>疫情放开以来，我一直没被感染。</p>
+<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
+<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
+<p>这才不是一篇水文呢喂！</p>
+</div>]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+      </categories>
+      <tags>
+        <tag>春节</tag>
       </tags>
   </entry>
   <entry>
@@ -5434,39 +5434,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>工作三年后</title>
-    <url>/three-years-after-graduation/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/07/31/FoOkzjwaQncAq3l.png">
-
-<h2 id="2018：传说中的试用期"><a href="#2018：传说中的试用期" class="headerlink" title="2018：传说中的试用期"></a>2018：传说中的试用期</h2><p>三年前的今天「2018.7.24」，我入职了，正式成为了打工人，也开始了6个月的试用期。<br>入职第二天，我就去印度浦那参加了为期五周的 <a href="https://jmyblog.top/TWUJourney/">TWU培训</a> ，收获颇丰；培训结束之后，又无缝衔接去了一个国外的项目，TWU练的散装英语正好派上了用场。<br>领取了新的MacBook Pro电脑，18年有touch bar那款，当时的价格大概1.8w左右，给员工配新款Mac，公司真的很良心了。<br>按照公司试用期的安排，我有了一个buddy，她可以帮助我度过试用期。我的buddy也是毕业之后来公司的，刚入职时是开发，后来又做测试，是一个代码能力强的QA。<br>在她的帮助下，我逐渐融入了项目的节奏和公司文化，也开始了一系列学习，比如英语打卡、测试知识之类，总之这一年的关键字就是「学习」，然后试用期就这样无惊无险的过去了，也没加过班，一切都很顺利，我觉得自己找到了「钱多事少离家近」的工作。</p>
-<h2 id="2019：开心搬砖，快乐生活"><a href="#2019：开心搬砖，快乐生活" class="headerlink" title="2019：开心搬砖，快乐生活"></a>2019：开心搬砖，快乐生活</h2><p>这一年，是三年中最开心的一年了。<br>因为试用期结束，工作也稳定下来了，每天干的活都差不多，逐渐明白了「搬砖」是什么意思。再后来，除了搬砖，还能腾出很多时间思考和学习。<br>由于一直在一个项目组，和周围的同事们以及客户都很熟悉，每天上班唠嗑也很欢乐，有时甚至一想到第二天要上班，还很期待，一年中项目里有人走，也有人进来，但我的快乐一直不变。<br>除此之外，公司经常会办一些节日活动，比如3.7女生节的微景观DIY，第二天还放了半天假；还有万圣节做南瓜灯、中秋节做月饼，平时的人文关怀也不少。</p>
-<p><img data-src="https://i.loli.net/2021/08/01/t859kegJHNB6b7o.jpg" alt="公司的节日活动"><span class="image-caption">公司的节日活动</span></p>
-<p>这一年我搬了两次家，第一次搬到了一个朝北的房子(住进去之前我一直以为这房子是朝东的<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)，装修很不错，没什么可以自己折腾的空间，而且朝北让人住着很压抑，所以住了一个月又搬了。搬到了同小区另一个朝南的房子，装修一般，但正合我意，一番折腾之后终于把房子改造成了自己喜欢的风格，而且从此后我终于分得请南北了<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
-<p><img data-src="https://i.loli.net/2021/08/01/B4PdgGpbyAROq3t.jpg" alt="第一次搬家(左)第二次搬家(右)"><span class="image-caption">第一次搬家(左)第二次搬家(右)</span><br>后来还安排了投影仪和烤箱，看电影、研究厨艺也是一种享受。</p>
-<p><img data-src="https://i.loli.net/2021/08/01/t2367xjFVWkTLrR.jpg" alt="投影仪真香"><span class="image-caption">投影仪真香</span><br><img data-src="https://i.loli.net/2021/08/01/OmK46iCosyIgezG.jpg" alt="各种烤"><span class="image-caption">各种烤</span><br>住处离公司大概5公里，但没有直达的公交，于是买了一个电动滑板车🛴，每天骑着滑板去上班，单程15-20分钟就能到公司，不能骑车的天气就打车，然后就很少坐公交了。</p>
-<p><img data-src="https://i.loli.net/2021/08/01/XNd4KMO5ZcWsalL.jpg" alt="我的滑板车"><span class="image-caption">我的滑板车</span><br>自从我用滑板出行后，发现通勤路上的滑板车越来越多了，公司里也有人买了，有次澳洲的客户来西安出差，还被我成功安利，回去后也买了一辆<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span><br>一年中也有和同事一起去 <a href="https://jmyblog.top/5-1-travel/">青海</a>、<a href="https://jmyblog.top/6-6-travel/">色达</a> 旅行，和朋友去 <a href="https://jmyblog.top/HuaShanTravel/">爬山</a> 等 ，经常出去玩，这一年就这样快乐的结束了。</p>
-<h2 id="2020：疫情下的打工人，活着"><a href="#2020：疫情下的打工人，活着" class="headerlink" title="2020：疫情下的打工人，活着"></a>2020：疫情下的打工人，活着</h2><p>2020，对大多数人来讲都是艰难的一年吧，我也不例外。<br>因为新冠疫情，过年后不能回公司上班，但后来又说要在家办公，我也没带电脑，幸亏有个同事帮我把电脑寄到了家，然后就开始在家办公，和家人一起待了1个多月，闲暇时互相切磋麻将技艺。毕业后能有这么多和家人相聚的时间真的难得，以后估计也很少有这样的机会了，所以我们都很珍惜。</p>
-<p>2月底，我终于回到了西安，继续在家办公，期间一直潜心钻研厨艺，吃着美食、用投影仪看电影追剧，宅在家的日子倒也十分自在。<br>4月初，毕业后的第一个项目在疫情的影响下提前结束了，但下个项目还没有着落，所以被强制休假到月底，才去公司上班。然后开始了一个多月自我学习和培训的日子，也算充实。</p>
-<p>6月初，我终于有了项目，此时国内的疫情已经基本控制住了，但国外却越愈发严重起来，这也是我第一个项目提前结束的原因，所以新项目自然是国内项目。<br>早听说过国内项目加班多节奏快，而我在公司近两年的时间里，都在国外项目，从来没加过班。经历过的国内软件项目，还是毕业前 <a href="https://jmyblog.top/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/">实习</a> 的时候，而那时的体验并不好，所以刚开始不太想去，但此时形势很严峻，我没有别的选择，只能硬着头皮上了。</p>
-<p>刚开始的一个项目，虽有些不适，但也还能撑得住，有个同事听说我工作两年没加过班表示非常震惊，他是不久前来公司的，可能之前在别的公司经常加班吧，对比下来，我还真是挺「幸运」的。<br>同时，公司里也有一些微妙的变化，有人离职了，也有人「被」离职。人也越来越多了，办公室重新装修，原先的好多休闲区和休息区被拆掉，全部换成了工位，有的地方连会议室都摆上了工位，让人倍感压抑。</p>
-<p>后来，这个项目终于结束了，但还是没有适合的国外项目可以去，所以又去了另一个国内项目，节奏更加紧张，这次我 <a href="https://jmyblog.top/Silent-protest/">没撑住</a> ，心态直接崩了，然后默默的下了项目。<br>此时已是11月底，剩下的一个月，是一段五味杂陈、胡思乱想的日子，2020就这样结束了。</p>
-<h2 id="2021：优雅的躺平"><a href="#2021：优雅的躺平" class="headerlink" title="2021：优雅的躺平"></a>2021：优雅的躺平</h2><p>2021，我的本命年，目前没有什么奇怪的事情发生。<br>前四个月我是 <a href="https://jmyblog.top/my-1-3-part-of-2021/">这样度过</a> 的，总之就是拨云见日的一段时光，到今天，我已经在新项目上待了三个月，整体来说挺不错，因为熟人很多，也学了不少东西，不出意外今年会在这个项目上一直做下去，这样倒也不错，至于明年之后会如何，见招拆招吧。</p>
-<p>到今天，我已经工作整整三年了。<br>三年以前，我想开心的工作，现在，我只想优雅地躺平<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span>，我是一个习惯被安排的人，习惯于被指点江山，被激扬文字，玩游戏喜欢玩辅助，所以工作也选择了辅助角色。<br>在公司我一直无争无为，默默搬砖，除了跟在一个项目工作过的人彼此认识之外，也没有什么大的影响力，可能我忽悠不了别人，也很难被人忽悠吧。搁娱乐圈，这就叫做「搬砖三年，归来仍是素人。」</p>
-<p>记得刚入职的时候，有同事向我感慨「我要是21岁，就可劲儿造」，但我却一直心如止水，「造」不起来。后来，又有很多同事说我太佛系，不像个年轻人。<br>其实我一直都尽力搬砖，遵纪守法，不逃税不漏税，好好活着，不给别人找麻烦，作为社会人，我觉得已经很合格了，我是一个没有太多欲望的人，这就是我对自己的期望，如果这样就叫做「佛系」和「躺平」的话，那就是吧。</p>
-<p>工作后感觉时间过的更快了，好像昨天才拿到公司的offer，转眼就已经三年了，这三年我一直一个人住，所以也练就了不错的 <a href="https://jmyblog.top/myCookingWay/">厨艺</a> ，偶尔请朋友和同事来家里小聚，生活倒也平淡自在。有人老想回到过去，但我还是喜欢现在的生活，因为过去太迷茫，对未来有太多恐惧，还是现在选择更多一些，更自由。<br>按照公司的制度，我又可以更换新的办公电脑了，这次应该是16寸的MacBook Pro，之前的电脑也打算按照员工优惠回购，收拾心情，重新出发。</p>
-<h2 id="我眼里的车和房"><a href="#我眼里的车和房" class="headerlink" title="我眼里的车和房"></a>我眼里的车和房</h2><p>打工三年，我的月薪从税前四位数变成了税后五位数，这三年我每个月都攒钱，一直想买个二手的小房子，期望是用公积金就可以还贷款，这样不用降低生活质量。</p>
-<p>五月份我开始实地看房，但一直找不到合适的，房价真的虚高，我的期望根本达不到，以我能拿出手的首付，只能用得上商贷，想用公积金贷款，只能掏更多的首付，凭我一人之力，目前根本做不到。<br>至于买新房，更难，虽然我有购房资格，但抛开价格不谈，现在买房必然摇号，我并不是刚需，所以希望渺茫。更别说现在无良开发商这么多，少有不维权的楼盘，所以买房这场游戏，我只能暂时被劝退。<br>最近，西安正在进行二手房价格调控，政府出台了指导价，虽不能指望对目前涨到最高点的房价有太多约束，但总归市场还是有一些震荡，买卖双方还在观望，且先看着吧。</p>
-<p>至于买车？倒也不是不能买，但买了车，停哪呢，公司的车位已经排到了2023年，而且在西安开车太难了，除了限号，就是堵车，更别提车到手就贬值，还得买保险保养什么的，主要我一个人，买车的需求实在不强烈。<br>还是骑上我心爱的小滑板吧，它永远不会堵车。</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>工作</tag>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于QA角色</title>
     <url>/thoughts-about-qa-role/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KteuPhzw7ngd5Rp.png">
@@ -5519,6 +5486,39 @@ public class Functions {
       </categories>
       <tags>
         <tag>职业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工作三年后</title>
+    <url>/three-years-after-graduation/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/07/31/FoOkzjwaQncAq3l.png">
+
+<h2 id="2018：传说中的试用期"><a href="#2018：传说中的试用期" class="headerlink" title="2018：传说中的试用期"></a>2018：传说中的试用期</h2><p>三年前的今天「2018.7.24」，我入职了，正式成为了打工人，也开始了6个月的试用期。<br>入职第二天，我就去印度浦那参加了为期五周的 <a href="https://jmyblog.top/TWUJourney/">TWU培训</a> ，收获颇丰；培训结束之后，又无缝衔接去了一个国外的项目，TWU练的散装英语正好派上了用场。<br>领取了新的MacBook Pro电脑，18年有touch bar那款，当时的价格大概1.8w左右，给员工配新款Mac，公司真的很良心了。<br>按照公司试用期的安排，我有了一个buddy，她可以帮助我度过试用期。我的buddy也是毕业之后来公司的，刚入职时是开发，后来又做测试，是一个代码能力强的QA。<br>在她的帮助下，我逐渐融入了项目的节奏和公司文化，也开始了一系列学习，比如英语打卡、测试知识之类，总之这一年的关键字就是「学习」，然后试用期就这样无惊无险的过去了，也没加过班，一切都很顺利，我觉得自己找到了「钱多事少离家近」的工作。</p>
+<h2 id="2019：开心搬砖，快乐生活"><a href="#2019：开心搬砖，快乐生活" class="headerlink" title="2019：开心搬砖，快乐生活"></a>2019：开心搬砖，快乐生活</h2><p>这一年，是三年中最开心的一年了。<br>因为试用期结束，工作也稳定下来了，每天干的活都差不多，逐渐明白了「搬砖」是什么意思。再后来，除了搬砖，还能腾出很多时间思考和学习。<br>由于一直在一个项目组，和周围的同事们以及客户都很熟悉，每天上班唠嗑也很欢乐，有时甚至一想到第二天要上班，还很期待，一年中项目里有人走，也有人进来，但我的快乐一直不变。<br>除此之外，公司经常会办一些节日活动，比如3.7女生节的微景观DIY，第二天还放了半天假；还有万圣节做南瓜灯、中秋节做月饼，平时的人文关怀也不少。</p>
+<p><img data-src="https://i.loli.net/2021/08/01/t859kegJHNB6b7o.jpg" alt="公司的节日活动"><span class="image-caption">公司的节日活动</span></p>
+<p>这一年我搬了两次家，第一次搬到了一个朝北的房子(住进去之前我一直以为这房子是朝东的<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)，装修很不错，没什么可以自己折腾的空间，而且朝北让人住着很压抑，所以住了一个月又搬了。搬到了同小区另一个朝南的房子，装修一般，但正合我意，一番折腾之后终于把房子改造成了自己喜欢的风格，而且从此后我终于分得请南北了<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p>
+<p><img data-src="https://i.loli.net/2021/08/01/B4PdgGpbyAROq3t.jpg" alt="第一次搬家(左)第二次搬家(右)"><span class="image-caption">第一次搬家(左)第二次搬家(右)</span><br>后来还安排了投影仪和烤箱，看电影、研究厨艺也是一种享受。</p>
+<p><img data-src="https://i.loli.net/2021/08/01/t2367xjFVWkTLrR.jpg" alt="投影仪真香"><span class="image-caption">投影仪真香</span><br><img data-src="https://i.loli.net/2021/08/01/OmK46iCosyIgezG.jpg" alt="各种烤"><span class="image-caption">各种烤</span><br>住处离公司大概5公里，但没有直达的公交，于是买了一个电动滑板车🛴，每天骑着滑板去上班，单程15-20分钟就能到公司，不能骑车的天气就打车，然后就很少坐公交了。</p>
+<p><img data-src="https://i.loli.net/2021/08/01/XNd4KMO5ZcWsalL.jpg" alt="我的滑板车"><span class="image-caption">我的滑板车</span><br>自从我用滑板出行后，发现通勤路上的滑板车越来越多了，公司里也有人买了，有次澳洲的客户来西安出差，还被我成功安利，回去后也买了一辆<span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span><br>一年中也有和同事一起去 <a href="https://jmyblog.top/5-1-travel/">青海</a>、<a href="https://jmyblog.top/6-6-travel/">色达</a> 旅行，和朋友去 <a href="https://jmyblog.top/HuaShanTravel/">爬山</a> 等 ，经常出去玩，这一年就这样快乐的结束了。</p>
+<h2 id="2020：疫情下的打工人，活着"><a href="#2020：疫情下的打工人，活着" class="headerlink" title="2020：疫情下的打工人，活着"></a>2020：疫情下的打工人，活着</h2><p>2020，对大多数人来讲都是艰难的一年吧，我也不例外。<br>因为新冠疫情，过年后不能回公司上班，但后来又说要在家办公，我也没带电脑，幸亏有个同事帮我把电脑寄到了家，然后就开始在家办公，和家人一起待了1个多月，闲暇时互相切磋麻将技艺。毕业后能有这么多和家人相聚的时间真的难得，以后估计也很少有这样的机会了，所以我们都很珍惜。</p>
+<p>2月底，我终于回到了西安，继续在家办公，期间一直潜心钻研厨艺，吃着美食、用投影仪看电影追剧，宅在家的日子倒也十分自在。<br>4月初，毕业后的第一个项目在疫情的影响下提前结束了，但下个项目还没有着落，所以被强制休假到月底，才去公司上班。然后开始了一个多月自我学习和培训的日子，也算充实。</p>
+<p>6月初，我终于有了项目，此时国内的疫情已经基本控制住了，但国外却越愈发严重起来，这也是我第一个项目提前结束的原因，所以新项目自然是国内项目。<br>早听说过国内项目加班多节奏快，而我在公司近两年的时间里，都在国外项目，从来没加过班。经历过的国内软件项目，还是毕业前 <a href="https://jmyblog.top/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7-Part2/">实习</a> 的时候，而那时的体验并不好，所以刚开始不太想去，但此时形势很严峻，我没有别的选择，只能硬着头皮上了。</p>
+<p>刚开始的一个项目，虽有些不适，但也还能撑得住，有个同事听说我工作两年没加过班表示非常震惊，他是不久前来公司的，可能之前在别的公司经常加班吧，对比下来，我还真是挺「幸运」的。<br>同时，公司里也有一些微妙的变化，有人离职了，也有人「被」离职。人也越来越多了，办公室重新装修，原先的好多休闲区和休息区被拆掉，全部换成了工位，有的地方连会议室都摆上了工位，让人倍感压抑。</p>
+<p>后来，这个项目终于结束了，但还是没有适合的国外项目可以去，所以又去了另一个国内项目，节奏更加紧张，这次我 <a href="https://jmyblog.top/Silent-protest/">没撑住</a> ，心态直接崩了，然后默默的下了项目。<br>此时已是11月底，剩下的一个月，是一段五味杂陈、胡思乱想的日子，2020就这样结束了。</p>
+<h2 id="2021：优雅的躺平"><a href="#2021：优雅的躺平" class="headerlink" title="2021：优雅的躺平"></a>2021：优雅的躺平</h2><p>2021，我的本命年，目前没有什么奇怪的事情发生。<br>前四个月我是 <a href="https://jmyblog.top/my-1-3-part-of-2021/">这样度过</a> 的，总之就是拨云见日的一段时光，到今天，我已经在新项目上待了三个月，整体来说挺不错，因为熟人很多，也学了不少东西，不出意外今年会在这个项目上一直做下去，这样倒也不错，至于明年之后会如何，见招拆招吧。</p>
+<p>到今天，我已经工作整整三年了。<br>三年以前，我想开心的工作，现在，我只想优雅地躺平<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span>，我是一个习惯被安排的人，习惯于被指点江山，被激扬文字，玩游戏喜欢玩辅助，所以工作也选择了辅助角色。<br>在公司我一直无争无为，默默搬砖，除了跟在一个项目工作过的人彼此认识之外，也没有什么大的影响力，可能我忽悠不了别人，也很难被人忽悠吧。搁娱乐圈，这就叫做「搬砖三年，归来仍是素人。」</p>
+<p>记得刚入职的时候，有同事向我感慨「我要是21岁，就可劲儿造」，但我却一直心如止水，「造」不起来。后来，又有很多同事说我太佛系，不像个年轻人。<br>其实我一直都尽力搬砖，遵纪守法，不逃税不漏税，好好活着，不给别人找麻烦，作为社会人，我觉得已经很合格了，我是一个没有太多欲望的人，这就是我对自己的期望，如果这样就叫做「佛系」和「躺平」的话，那就是吧。</p>
+<p>工作后感觉时间过的更快了，好像昨天才拿到公司的offer，转眼就已经三年了，这三年我一直一个人住，所以也练就了不错的 <a href="https://jmyblog.top/myCookingWay/">厨艺</a> ，偶尔请朋友和同事来家里小聚，生活倒也平淡自在。有人老想回到过去，但我还是喜欢现在的生活，因为过去太迷茫，对未来有太多恐惧，还是现在选择更多一些，更自由。<br>按照公司的制度，我又可以更换新的办公电脑了，这次应该是16寸的MacBook Pro，之前的电脑也打算按照员工优惠回购，收拾心情，重新出发。</p>
+<h2 id="我眼里的车和房"><a href="#我眼里的车和房" class="headerlink" title="我眼里的车和房"></a>我眼里的车和房</h2><p>打工三年，我的月薪从税前四位数变成了税后五位数，这三年我每个月都攒钱，一直想买个二手的小房子，期望是用公积金就可以还贷款，这样不用降低生活质量。</p>
+<p>五月份我开始实地看房，但一直找不到合适的，房价真的虚高，我的期望根本达不到，以我能拿出手的首付，只能用得上商贷，想用公积金贷款，只能掏更多的首付，凭我一人之力，目前根本做不到。<br>至于买新房，更难，虽然我有购房资格，但抛开价格不谈，现在买房必然摇号，我并不是刚需，所以希望渺茫。更别说现在无良开发商这么多，少有不维权的楼盘，所以买房这场游戏，我只能暂时被劝退。<br>最近，西安正在进行二手房价格调控，政府出台了指导价，虽不能指望对目前涨到最高点的房价有太多约束，但总归市场还是有一些震荡，买卖双方还在观望，且先看着吧。</p>
+<p>至于买车？倒也不是不能买，但买了车，停哪呢，公司的车位已经排到了2023年，而且在西安开车太难了，除了限号，就是堵车，更别提车到手就贬值，还得买保险保养什么的，主要我一个人，买车的需求实在不强烈。<br>还是骑上我心爱的小滑板吧，它永远不会堵车。</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>工作</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -6352,13 +6352,13 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
