@@ -9,7 +9,7 @@ description: 在家办公和一些胡思乱想。
 top:
 ---
 
-{% img https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png %}
+<img src="https://i.loli.net/2021/05/19/Oe4vFPdGs7K3Nlc.png" >
 
 ## 被「内卷」了吗？
 

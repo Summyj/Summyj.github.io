@@ -9,7 +9,7 @@ description: 好想成为一个酷酷的黑客啊。
 top:
 ---
 
-{% img https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg %}
+<img src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg" >
 
 本文参考 [怎么学习新东西](https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md) 书写。
 
@@ -62,7 +62,7 @@ top:
 ### Demo实战 ###
 
 因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 [juice shop](https://github.com/bkimminich/juice-shop#docker-container-----):
-{% img https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png %}
+<img src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png" >
 它是由权威组织 [OWASP](https://owasp.org/) 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 [这里](https://pwning.owasp-juice.shop/) 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：
 
 <span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈

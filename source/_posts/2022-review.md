@@ -9,7 +9,7 @@ description: 25岁是一个坎？
 top:
 ---
 
-{% img https://s2.loli.net/2022/12/31/enty7zF1Hx9aqlJ.png %}
+<img src="https://s2.loli.net/2022/12/31/enty7zF1Hx9aqlJ.png" >
 
 {% note primary %}
 2022，我25岁。

@@ -8,7 +8,7 @@ description: 用Cursor实现博客史诗级增强。
 top:
 ---
 
-{% img https://s2.loli.net/2025/06/24/xwOI9LBYG3dghrT.png %}
+![](https://s2.loli.net/2025/06/24/xwOI9LBYG3dghrT.png)
 
 {% note default %}
 最近公司在推 **[Cursor](https://www.cursor.com/)** AI代码编辑器，全员都在用，不得不说，目前这种和AI共创的模式确实是行业趋势，之前各种 TDD/BDD/DDD 现在也都被 **PDD 取代(拼多多即视感，但全称是Prompt Driven Development)**，达到 **‘AI干杂活，人来思考’** 的效果。所以我觉得科学技术是第二生产力，人类的创造力才是第一生产力。
@@ -39,7 +39,7 @@ npx npm-check-updates -u && npm install
 
 #### Cursor
 这个时候我想到了Cursor，既然它这么强，帮我自动对比新旧主题版本，同步配置应该只是小case吧。然后我就把代码库移到了Cursor里，说出自己的需求，开始了不断的拉扯：
-{% img https://s2.loli.net/2025/06/24/EJu8OVcDXedi27m.png %}
+![](https://s2.loli.net/2025/06/24/EJu8OVcDXedi27m.png)
 
 首先，它帮我完成了这几件事：
 
@@ -62,11 +62,10 @@ npx npm-check-updates -u && npm install
 ## 主题优化
 ### 文章主体浏览效果优化
 
-这是当前线上博客的文章主题部分浏览效果：
-{% img https://s2.loli.net/2025/06/25/yjJ4xXsCHzcEZ12.png %}
-
+这是当前线上博客的文章主体部分浏览效果：
+![](https://s2.loli.net/2025/06/25/yjJ4xXsCHzcEZ12.png)
 我一直想把它优化成类似 [Medium](https://medium.com/) 网站的文章浏览效果：
-{% img https://s2.loli.net/2025/06/25/N8hE29ikAnoOUxt.png %}
+![](https://s2.loli.net/2025/06/25/N8hE29ikAnoOUxt.png)
 
 其实两者之间的区别乍一看并不大，都是图片下面加上文章段落，然后再居中展示，但Medium的展示风格看起来就是更极简，更高级。
 
@@ -76,12 +75,12 @@ npx npm-check-updates -u && npm install
 
 然后我和AI开始不停的对线，就像一个任性的甲方，盯着乙方不断改版，慢慢接近我想要的样子(然后再回退到第一版hhh)。中间好多次博客都被它改的样式全乱了，弄的我很崩溃(AI: 其实我也挺崩溃的)，好在最后终于实现了我想要的感觉：
 
-{% img https://s2.loli.net/2025/06/25/dULEkXIfi7YVu4S.png %}
+![](https://s2.loli.net/2025/06/25/dULEkXIfi7YVu4S.png)
 
 文章主体收窄，字体变薄，图片也变成了圆角，加上了阴影和悬浮的效果，和页面做了自适应。整体看起来确实优雅高级多了，标签的展示也做了强化：
 
-{% img https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png "Before" %}
-{% img https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png "After" %}
+![Before](https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png)
+![After](https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png)
 
 文章主题部分的优化到此结束。
 
@@ -112,24 +111,24 @@ npx npm-check-updates -u && npm install
 ### 过滤 livere 广告
 
 之前livere评论区总是会出现广告，虽然不反对人家恰饭，但这些广告还是很影响博客观感的，让 Cursor 帮我在前端过滤掉了广告，看起来就清爽多了(应该也不影响人家恰饭吧)
-{% img https://s2.loli.net/2025/06/25/rPOhcKXdyMjQ9e6.png "Before" %}
-{% img https://s2.loli.net/2025/06/25/AuMIU4eHatOk6Vm.png "After" %}
+![Before](https://s2.loli.net/2025/06/25/rPOhcKXdyMjQ9e6.png)
+![After](https://s2.loli.net/2025/06/25/AuMIU4eHatOk6Vm.png)
 
 ### Algolia 搜索
 
 之前博客启用的是本地搜索，经常搜不到内容，现在换成了 Algolia 搜索，就能搜到了，还有统一的后台管理，只不过每次部署之前都得用 {% label info@hexo algolia %} 推送index，但是问题不大 ：
-{% img https://s2.loli.net/2025/06/25/8sN7IDVrcyEAdiP.png "Before" %}
-{% img https://s2.loli.net/2025/06/25/TSzfp1QgYDMnoGt.png "After" %}
+![Before](https://s2.loli.net/2025/06/25/8sN7IDVrcyEAdiP.png)
+![After](https://s2.loli.net/2025/06/25/TSzfp1QgYDMnoGt.png)
 
 ### 探索版本新功能
 
 到这里，我想做的或者想优化的功能都已经完成了，但是好像忘了一件重要的事情，既然我已经升级到了Hexo&Next的最新版本，新版本的功能我还一个都没有看呢！其实在升级的时候也粗粗看了下新的版本配置，好像没有什么有意思的新功能，所以让 Cursor 帮我看了看：
 
-{% img https://s2.loli.net/2025/06/26/NHopDjPikv7seTx.png "请听题" %}
+![请听题](https://s2.loli.net/2025/06/26/NHopDjPikv7seTx.png)
 
 结果它检测到的配置和功能我基本都已经用上了，其它的也不感兴趣。至于更新频率和内容，Hexo更新频率不高，上一次发版已经是去年7月份，也没有大的功能变更；Next会频繁一些，不过也多数是一些优化，所以它的建议：
 
-{% img https://s2.loli.net/2025/06/26/981MRLpUcTPeHiW.png "好着呢别整了" %}
+![好着呢别整了](https://s2.loli.net/2025/06/26/981MRLpUcTPeHiW.png)
 
 {% note primary %}
 所以一段时间内我就不再更新了。但是！关于「频繁更新会引入不必要的风险」，别说频繁更新了，我上次更新已经是4年前了，这么不频繁的更新都出现一大推兼容性问题：Hexo自己的兼容问题、Next自己的兼容问题、Hexo&Next最新版本的兼容问题，光让Cursor帮我解决人都快麻了，更别说自己来，咱就是说以后发版能不能多测测，稳定了再发啊。
@@ -157,7 +156,7 @@ npx npm-check-updates -u && npm install
 
 所以想实现source文件保存之后，浏览器可以自动刷新，实现实时预览。和Cursor拉扯了好久实现了一个自定义的 {% label info@live reload %} 功能，但后来它告诉我hexo本来就有插件 {% label info@hexo-server-live %} 可以做到这件事(那我之前吃的苦算什么？！还做什么自定义插件啊！)，不过试用了一下还是自定义的好用，效果是这样的：
 
-{% img https://s2.loli.net/2025/06/26/cdZHoanDVbqJGkw.gif %}
+![](https://s2.loli.net/2025/06/26/cdZHoanDVbqJGkw.gif)
 
 ## 总结
 

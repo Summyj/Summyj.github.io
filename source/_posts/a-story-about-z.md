@@ -9,7 +9,7 @@ description: 我变强了，但并没有秃。
 top:
 ---
 
-{% img https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png %}
+<img src="https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png" >
 
 {% note info %}
 - 主题：职场性骚扰
@@ -48,7 +48,7 @@ Z某是去年年底加入公司的第三方外包员工，一月初开始和我�
 
 Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托了)，我礼貌回应之后就没有主动联系过他，但他开始对我有一些过度关心的言语(那会我因为别的事心情不好发了一些吐槽的朋友圈还请了一天假)：
 
-{% img https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg %}
+<img src="https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg" height=600 width=280 alt="过度关心">
 
 试问，一个有老婆孩子的正常男性会私下给女同事发消息，关心她遇到了啥不好的事吗？不过我还是没有多想，只把这个当作普通同事的关心，但还是觉得有些奇怪。
 <!-- endtab -->
@@ -57,11 +57,11 @@ Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托
 
 第一次骑摩托去加油，我发了条朋友圈，图就下边这个：
 
-{% img https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg %}
+<img src="https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg" height=400 width=300 alt="朋友圈图">
 
 Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得)，好像是他们家那边的，然后开始了一系列对我摩托车的追问：
 
-{% img https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png %}
+<img src="https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png" height=370 width=300 alt="追问">
 
 在我尴尬的回复他之前有发过摩托车后，他竟然去翻我的朋友圈找到了半个月前发的那条动态(因为我朋友圈挺活跃的基本上每天都发有时候一天发好几条)，然后，点了个赞。
 
@@ -72,7 +72,7 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 在朋友圈点赞事件的第二天，Z某又发微信给我说要单独请我喝东西「聊一聊」：
 
-{% img https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg %}
+<img src="https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg" height=600 width=280 alt="喝东西事件">
 
 虽然还是礼貌回复，不过这个人已经很明显有问题了。
 <!-- endtab -->
@@ -86,7 +86,7 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 然而，Z某无视了我的第一次警告，甚至还发了所谓的测试消息给我，想看我有没有删掉他，之后更是想让我把朋友圈权限放开：
 
-{% img https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg %}
+<img src="https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg" height=400 width=390 alt="第二次警告">
 
 我不再沉默了，明确拒绝了他并且点明了他越界的行为，他也承认是自己的「问题」向我道歉，还希望我可以回到之前和他正常交流，这当然是不可能的，所以之后除了工作上必要的会面(不说话没有眼神交流的那种多人会议)，其它场景我都对他视而不见。
 
@@ -96,11 +96,11 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 我以为Z某已经认识到了自己的错误并停止对我的骚扰，可一周以后，他又发消息说自己有话说，想到之前他虽然有越界的言语，但这只是我个人的主观感受(不过正常人都会有这种感受吧)，所以为了让他暴露更多的「想法」，拿到证据，我同意了他的要求：
 
-{% img https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg %}
+<img src="https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg" height=340 width=300 alt="有话说？">
 
 第二天，我和Z某在会议室谈了大约半小时，全程录音：
 
-{% img https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg %}
+<img src="https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg" height=220 width=300 alt="录音">
 
 {% note primary %}
 录音内容大致如下(我全程保持微笑)：
@@ -123,7 +123,7 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 万万没想到，半个月后，他竟然通过「企业微信」(?!)发消息给我想让我继续和他交流，刚开始我猜他可能以为我把他删了(其实没有就想看看他还会不会有别的举动)，所以只能用企业微信发消息给我，后来我才发现是他把我删了(一个伏笔)：
 
-{% img https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png %}
+<img src="https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png" height=500 width=250 alt="够了">
 
 这可真是压死骆驼的最后一根稻草了，事不过三，已经给过他三次机会，但他还是不知收敛，说什么「还有些不清楚」？
 我已经不想再跟他沟通了，决定按照公司流程举报处理，所以我说「你会清楚的」。
@@ -148,7 +148,7 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 举报第8天(他还不知道自己被举报)，Z某又给我微信发消息，想让我把朋友圈权限放开，还说什么「不清楚学不会」的绿茶发言(搁这儿装林俊杰呢？)：
 
-{% img https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg %}
+<img src="https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg" height=600 width=230 alt="学不会">
 
 明明已经说清楚以后私下不交流了，结果还在这说我不跟他聊天打招呼，{% label primary@所以他就是不管我之前说了什么达成了什么样的共识，就只是想继续纠缠骚扰我而已。 %}「我不知道他怎么想的」？(我可太知道了)
 
@@ -159,7 +159,7 @@ Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得
 
 Z某知道被举报的第二天，在他自己工作小组的私人微信群里公布了这件事：
 
-{% img https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg %}
+<img src="https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg" height=100 width=250 alt="狼人自曝">
 
 没错，他竟然自己自曝！我真的不李姐，难道他不明白这样的事情曝出来，会被众人唾弃的是他自己吗？！
 

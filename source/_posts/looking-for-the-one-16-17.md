@@ -9,7 +9,7 @@ description: 又开始营业了。
 top:
 ---
 
-{% img https://s2.loli.net/2022/08/07/Ly74AfgW3cOT1eM.png %}
+<img src="https://s2.loli.net/2022/08/07/Ly74AfgW3cOT1eM.png">
 
 ## No.13 「月光男孩」
 
@@ -23,23 +23,23 @@ top:
 <!-- tab -->
 先是打听了下他找对象的进展(很好没啥进展)，然后瞎聊会最近工作咋样、假期去哪玩了之类(铺垫一下)：
 
-{% img https://s2.loli.net/2022/08/06/imjWChgfeRbXtZr.png %}
+<img src="https://s2.loli.net/2022/08/06/imjWChgfeRbXtZr.png" height=500 width=250 alt="全是套路">
 <!-- endtab -->
 <!-- tab -->
 最后开门见山：
 
-{% img https://s2.loli.net/2022/08/06/f9zMlce4JB7snPk.png %}
+<img src="https://s2.loli.net/2022/08/06/f9zMlce4JB7snPk.png" height=500 width=250 alt="就是冲">
 <!-- endtab -->
 <!-- tab -->
 他说很突然，让我给他一个思考的时间，到了第二天：
 
-{% img https://s2.loli.net/2022/08/06/JaUphuNdiFK4jQZ.png %}
+<img src="https://s2.loli.net/2022/08/06/JaUphuNdiFK4jQZ.png" height=380 width=250 alt="芜湖(挺会啊)">
 <!-- endtab -->
 {% endtabs %}
 
 然后我俩就继续聊了，分享日常之类的，比如他看书，我追剧；他健身，我撸猫；他早睡，我熬夜。啊对了，还聊到了上次看电影的事，我提了一些建议：
 
-{% img https://s2.loli.net/2022/08/06/mRKwQfPIJzocgyV.png %}
+<img src="https://s2.loli.net/2022/08/06/mRKwQfPIJzocgyV.png" height=480 width=250 alt="搓手手">
 
 确实是「更喜欢」，因为他会经常去图书馆博物馆啥的，我出去玩也不喜欢人多的地方，所以比起两个人出去看电影(用投影仪在家看不行吗)，还是图书馆博物馆更清净吧。
 
@@ -93,18 +93,18 @@ top:
 <!-- tab -->
 为了表现自己并不是古板单一，他给我发了一些黄色的表情包动图，说是从前在班级群里拿的(所以为什么现在还留着?!)，在我表达出不适后，他向我道歉：
 
-{% img https://s2.loli.net/2022/08/07/EOkRC4jmALGTNW8.png %}
+<img src="https://s2.loli.net/2022/08/07/EOkRC4jmALGTNW8.png" height=520 width=250 alt="辣眼睛">
 <!-- endtab -->
 <!-- tab -->
 他给我展示自己小区里的两条流浪猫，在我感叹猫咪都有伴后，他说其中一条怀孕了还给我发了之前两条猫在一起交配的图片(说是之前同事拍的)：
 
-{% img https://s2.loli.net/2022/08/07/I7zLGXYDARHfPvC.png %}
+<img src="https://s2.loli.net/2022/08/07/I7zLGXYDARHfPvC.png" height=520 width=250 alt="。。。">
 <!-- endtab -->
 {% endtabs %}
 
 两个人的火锅吃剩了不少菜，打包回去还能炒几盘，本来说好我请客的，但他硬是抢在我前面买了单，我没有多说什么，只在回家后把饭钱转给了他，第二天他才收下，还说自己昨晚吃完拉肚子，害，真是难为他了：
 
-{% img https://s2.loli.net/2022/08/06/WU5KuDvazyoJCVl.png %}
+<img src="https://s2.loli.net/2022/08/06/WU5KuDvazyoJCVl.png" height=470 width=250 alt="“月光男孩”">
 
 这是我和「月光男孩」的最后一次聊天，后来我俩都心照不宣的没有联系对方，可能确实是因为三观不一致吧，也可能是他怕我再约他吃饭给他下毒:joy:(怕了怕了)，总之我的直觉还是很对的，有的人聊不来就是聊不来，再怎么聊也没有结果，我彻底死心了，至于12号，还是做姐妹吧。
 
@@ -121,11 +121,11 @@ top:
 
 下一个周末，我约他，他学校离我住处也挺近的，就约在中间的商场见面，他说下午4点上完课才有空，我说可以，想着到时候再约时间，因为4点也挺热的，没想到他以为就约的4点，然后：
 
-{% img https://s2.loli.net/2022/08/07/CVxHsSlfUh95z3Q.png %}
+<img src="https://s2.loli.net/2022/08/07/CVxHsSlfUh95z3Q.png" height=470 width=250 alt="?!">
 
 一下给我吓醒了，一番交涉之后还是决定去赴约，毕竟人家打着的20分钟过来也挺不容易的，于是刚睡醒的我，换衣服化妆打车20分钟后出现在帅哥歇脚的奶茶店，在这之前，他已经等了我半小时了：
 
-{% img https://s2.loli.net/2022/08/07/GlECe59bYonRrps.jpg %}
+<img src="https://s2.loli.net/2022/08/07/GlECe59bYonRrps.jpg" height=400 width=250 alt="我错了真的">
 
 外面的天气真的很热，虽然我是打车过去，但由于歉意加上心急也出了一身汗。
 找到了一楼的奶茶店，想从外面推开门进去，却发现门被锁上了，带锁的门是透明的，里面不少人被我的动静吸引了过来，奇怪的看着我，有种社死的感觉，我才意识到只有商场内部的门是开的，于是又从商场大门进去找到奶茶店，下午5点整，我出现在了帅哥眼前。
@@ -164,7 +164,7 @@ top:
 
 第一见面后，可以感受到他对我的印象非常不错(我四sei呀)，说自己很开心，还夸我可爱，当天晚上就问我的恋爱史，以及期待的恋爱模式、生气的话是冷战还是吵架等等，虽然觉得有点快但还是一一回答他了，在得知我一个人住还有switch时，他说以后可以来找我玩(?!)：
 
-{% img https://s2.loli.net/2022/08/07/N5T6W9ULpzEmY7B.png %}
+<img src="https://s2.loli.net/2022/08/07/N5T6W9ULpzEmY7B.png" height=500 width=500 alt="激动的男嘉宾">
 
 后面就是在微信上瞎聊，分享日常，我推荐他看甄嬛传(竟然还没有人看过甄嬛传！羡慕他有70多集可以看)，他看过之后经常跟我讨论剧情，我还把一则小故事讲给他听，他说我做的很对(终于碰到个三观正常的了)，后来还约着看过一次电影，吃过一次饭，来来回回的也算是AA了，当然主要是人家约我，我就掏个钱。
 

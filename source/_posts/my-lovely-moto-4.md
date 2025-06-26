@@ -9,7 +9,7 @@ description: 老天爷：你不想骑摩托！我：管你怎么想！
 top:
 ---
 
-{% img https://s2.loli.net/2022/06/03/gkGWzpRAyOnMKBQ.png %}
+<img src="https://s2.loli.net/2022/06/03/gkGWzpRAyOnMKBQ.png" width=800 height=600 alt="我的摩托车(SUNDIRO.HONDA_CBF190tr)">
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=503333680&auto=0&height=66"></iframe>
 
@@ -21,7 +21,7 @@ top:
 
 H君和L君都是冲着防赛车才学照的，之后我们去了周边的实体店各自试骑了喜欢的车型，没过多久就定了，她们都买了下图的无极250RR，不一样的颜色：
 
-{% img https://s2.loli.net/2022/06/19/gNHtLh3fO8RAmTY.png %}
+<img src="https://s2.loli.net/2022/06/19/gNHtLh3fO8RAmTY.png" width=500 height=600>
 
 而我因为喜欢的就是同事那款车，她又正好想换车，我也想着反正第一辆摩托车买个二手的练练手也不错，就和同事私下交易买了她的车，保险杠、配件什么的都是齐全的，她还把原厂的灰色坐垫换成了更复古的棕色。
 
@@ -51,25 +51,25 @@ H君和L君买的是新车，当场就在店家那买了交强险，我因为买
 <!-- tab -->
 第一次，到了办事处，给工作人员展示资料，结果人说少了一个资料，就是在物业办一个居住证明(为了办居住证办居住证系列)，而H君都拿全了，甚至都多了，有的资料人压根没要，办居住证需要什么材料又有了第四种答案，后来她给我说了办理细节，我准备第二天又去办：
 
-{% img https://s2.loli.net/2022/06/19/DylzY9NcRQrOFIs.png %}
+<img src="https://s2.loli.net/2022/06/19/DylzY9NcRQrOFIs.png" height=600 width=300 alt="第一次尝试失败">
 <!-- endtab -->
 <!-- tab -->
 第二次，我在物业办了居住证明，又拿上了一堆资料，再次来到了办事处，这次终于办好了，不过和H君说的不一样，办居住证需要什么材料又有了第五种答案：
 
-{% img https://s2.loli.net/2022/06/19/tU9Ao1zGYx5cyTk.png %}
+<img src="https://s2.loli.net/2022/06/19/tU9Ao1zGYx5cyTk.png" height=600 width=300 alt="第五种答案">
 
 当我以为终于办好了的时候，接到了工作人员的电话，说我的户口已经迁到了本市，所以不能办居住证，只能换个身份证：
 
-{% img https://s2.loli.net/2022/06/19/y8qhzHmBouKZpa5.png %}
+<img src="https://s2.loli.net/2022/06/19/y8qhzHmBouKZpa5.png" height=600 width=300 alt="人麻了">
 
 没办法，只能换身份证了，幸好两个业务的办事处离的不远，这次又详细的问了办这个又要什么资料，准备第二天再去一次，顺便去把办居住证的资料拿回来：
 
-{% img https://s2.loli.net/2022/06/19/VdPx6519vNJZpEb.png %}
+<img src="https://s2.loli.net/2022/06/19/VdPx6519vNJZpEb.png" height=500 width=300 alt="H君的鼓励(里面说的物流就是驾校把我驾照弄没了之后线上挂失的新照物流)">
 <!-- endtab -->
 <!-- tab -->
 第三次，到居住证办事处拿回了资料，又接着去办身份证，所幸这次没遇到离谱的事儿，很顺利，还可以自助拍照身份证照片，终于不是之前的丑照了，这天我也拿到了挂失后的C1D驾照，至此，我终于可以暂时远离这些政府机关的办事机构了。
 
-{% img https://s2.loli.net/2022/06/19/Ap5yntSoUJdGDFl.png %}
+<img src="https://s2.loli.net/2022/06/19/Ap5yntSoUJdGDFl.png" height=500 width=350 alt="换身份证现场">
 <!-- endtab -->
 {% endtabs %}
 
@@ -83,7 +83,7 @@ H君和L君买的是新车，当场就在店家那买了交强险，我因为买
 
 不知道为什么，我的手开始不受控制的拧油门(可能因为之前考科二的时候老因为没给油导致车熄火，所以就有了起步加油的习惯)，然后越拧越大，接着车身就失控向前猛冲，尽管我已经极力转弯，可车的保险杠还是挂到了停在路边的一辆车：
 
-{% img https://s2.loli.net/2022/06/19/1OdIT2HiWsmAbg3.jpg %}
+<img src="https://s2.loli.net/2022/06/19/1OdIT2HiWsmAbg3.jpg" height=400 width=600 alt="触目惊心">
 
 接着我和摩托车就一起倒地了，倒地的时候手还握着油门转把，轰隆隆的响，愣了两秒才松开，起身站在旁边。对面还在讨论摩托车的两个人被撞击声打断，回头震惊的看向我，也愣了两秒跑过来问我没伤着吧，我倒是没受伤，然后三人合力把摩托车扶起来。
 
@@ -101,7 +101,7 @@ H君和L君买的是新车，当场就在店家那买了交强险，我因为买
 
 原来刚才H君陪我上路练车之前，忘记把手机取下来了，打电话过去竟然关机了，铁定是被人拿走了，H君懊恼了一会，Z君也不住的吐槽她(冤种情侣)，我和同事吐槽，她也觉得震惊：
 
-{% img https://s2.loli.net/2022/06/19/5k18TYFKDpIxsnv.png %}
+<img src="https://s2.loli.net/2022/06/19/5k18TYFKDpIxsnv.png" height=600 width=300 alt="四脸震惊">
 
 我心里十分内疚，觉得是我把霉运转移到了H君身上，可能是老天爷看阻止不了我骑摩托，开始给我周围的人施法了？
 
@@ -119,7 +119,7 @@ H君和L君买的是新车，当场就在店家那买了交强险，我因为买
 
 在网上买了几个头盔，回来试戴后尺码都不合适又退掉，后来线下再出去看了一次，买了AVA的复古款头盔，本来想买米色的，可当时S码只有粉色了，懒得再折腾，为了快点骑上小摩托，就是它了：
 
-{% img https://s2.loli.net/2022/06/19/AnirzpHJK2ZS39V.png %}
+<img src="https://s2.loli.net/2022/06/19/AnirzpHJK2ZS39V.png" height=500 width=380 alt="粉色头盔">
 
 ## 骑摩托：终于开始快乐了
 
@@ -127,4 +127,4 @@ H君和L君买的是新车，当场就在店家那买了交强险，我因为买
 
 但因为我大多是通勤骑车，距离不太远而且市区内也骑不快，最多只到5档60多码，平时就放在小区和公司的地库，骑车的时候也逐渐能体会到快乐了，虽然还远没有到速度与激情的地步，毕竟为了安全，骑帅不骑快嘛。
 
-{% img https://s2.loli.net/2022/06/19/cPQJVwroFqLHY4s.png %}
+<img src="https://s2.loli.net/2022/06/19/cPQJVwroFqLHY4s.png" height=400 width=600 alt="骑上我心爱的小摩托">

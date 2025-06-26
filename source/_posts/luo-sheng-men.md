@@ -9,7 +9,7 @@ description: 人性利己。
 top:
 ---
 
-{% img https://s2.loli.net/2023/10/26/C1qOvPiJBL47sD2.jpg %}
+<img src="https://s2.loli.net/2023/10/26/C1qOvPiJBL47sD2.jpg" >
 
 ## 一个故事
 

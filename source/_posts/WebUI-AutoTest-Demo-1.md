@@ -9,7 +9,7 @@ description: Maven介绍，Demo Project Set Up.
 top:
 ---
 
-{% img https://i.loli.net/2020/05/15/Fh1dMGlPyOWAKmI.png %}
+<img src="https://i.loli.net/2020/05/15/Fh1dMGlPyOWAKmI.png" >
 
 {% note info %}
 在前几篇博客中，博主分析了一个好的自动化测试框架应有的6大要素，也学习了Java的基础语法，这些都是为了准备Web UI 自动化测试框架Demo Project workshop产出的内容。
@@ -52,7 +52,7 @@ top:
     目录结构标准化
 
 Maven提供了一套标准的目录结构，下边是最基本的：
-{% img https://i.loli.net/2020/05/20/qPQsLF6JdGVuOic.png %}
+<img src="https://i.loli.net/2020/05/20/qPQsLF6JdGVuOic.png" width="300" height="250" >
 
     用配置文件描述项目信息
 
@@ -80,7 +80,7 @@ Gradle(2012)结合了前两者的优点，它具有Ant的灵活，又有Maven的
 >常用的开发工具里面都集成了Maven，提供了图形化操作Maven项目的方式(可能有少许的Bug)，比较方便。下文Demo Project Set Up中会展示在IDEA中创建Maven项目。为了熟悉常用的Maven命令，这里我们就不用图形化操作这种方式，尝试使用本地maven创建一个简单的java工程,深入理解它的作用，体验一下Maven高度自动化构建项目的过程，并解释一些重要的概念。
 
 #### Maven安装和环境变量配置
-{% img https://i.loli.net/2020/05/21/oZpv5dSm7J4yXgP.png %}
+<img src="https://i.loli.net/2020/05/21/oZpv5dSm7J4yXgP.png" >
 
 - [MacOS](https://www.jianshu.com/p/191685a33786)
 - [Windows](https://www.jianshu.com/p/62a76daf5096)
@@ -94,7 +94,7 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -Darchet
 {% endcodeblock %}
 
 Maven将开始处理， 询问项目细节并确认设置，选择默认设置直接按Enter继续：
-{% img https://i.loli.net/2020/05/26/t7iC5AY8BeZdNuj.png %}
+<img src="https://i.loli.net/2020/05/26/t7iC5AY8BeZdNuj.png" >
 {% note primary %} 知识点来了
 
 GroupId: 工件组名，顾名思义，这个应该是公司名或是组织名。一般由三个部分组成，每个部分之间以”.”分隔，第一部分是项目用途，比如用于商业的就是”com”，用于非营利性组织的就是”org”；第二部分是公司名，比如”tengxun”、”baidu”、”alibaba”；第三部分是你的项目名。
@@ -109,21 +109,21 @@ GroupId/ArtifactId/Version 合称为**Artifact coordinates(工件坐标)**：每
 {% endnote %}
 
 之后 Maven 就开始创建项目结构，显示如下:
-{% img https://i.loli.net/2020/05/26/DeYf9bPKNWta71l.png %}
+<img src="https://i.loli.net/2020/05/26/DeYf9bPKNWta71l.png" >
 
 现在桌面已经生成了Maven项目Hello, 它具有Maven标准的目录结构，还有Maven帮我们自动生成的App.java和AppTest.java文件：
-{% img https://i.loli.net/2020/05/26/TYhkuHLzJgdvsfw.png %}
-{% img https://i.loli.net/2020/05/26/dRIEoeAKfUGsizF.png %}
+<img src="https://i.loli.net/2020/05/26/TYhkuHLzJgdvsfw.png" >
+<img src="https://i.loli.net/2020/05/26/dRIEoeAKfUGsizF.png" >
 
 #### .m2文件夹
 
 上文提到，Maven通过仓库统一管理jar包，包括本地仓库和远程仓库。Maven工作时，首先会从本地仓库中获取jar包，当无法获取指定jar包时，本地仓库会从远程仓库中下载jar包，并放入本地仓库以备将来使用。
 
 Maven本地仓库的配置文件和本地jar包存放在.m2文件夹中:
-{% img https://i.loli.net/2020/05/18/hBRzedQJP3CK4yT.png %}
+<img src="https://i.loli.net/2020/05/18/hBRzedQJP3CK4yT.png" >
 - {% label info@.m2文件夹 %}：当使用maven命令的时候，maven才会创建.m2文件夹，所以如果我们只是在电脑上下载安装了maven，你会发现在用户目录下不存在.m2文件夹，因为并没有让maven执行真正的任务。
 - {% label info@.m2/settings.xml %}: maven配置文件。默认情况下.m2文件夹是没有setting.xml的，所以我们可以看到上图中的.m2文件夹并没有setting.xml。我们一般把Maven全局仓库设置文件%MAVEN_HOME%/conf/settings.xml拷贝到这个文件夹下，修改成用户仓库设置，后者优先级更高：
-{% img https://i.loli.net/2020/05/18/UhTxj6nr7pcNe9V.png %}
+<img src="https://i.loli.net/2020/05/18/UhTxj6nr7pcNe9V.png" >
 - {% label info@.m2/repository %}: maven项目所有的jar包，下载后都会存放在此处。
 
 #### pom.xml文件结构解释
@@ -280,38 +280,38 @@ public class AppTest
 
 
 进入Hello项目根目录执行 **mvn compile** 命令编译项目的java类:
-{% img https://i.loli.net/2020/05/26/qdcOrMWeVPR1Z3G.png %}
+<img src="https://i.loli.net/2020/05/26/qdcOrMWeVPR1Z3G.png" >
 观察终端输出结果，可以看到：
 - maven运行了default lifecycle的 resources&compile 两个生命周期阶段。因为在我们的pom文件中resources阶段是在compile之前的，所以compile阶段运行的时候，在它之前的resources阶段也会被运行。
 - 我们在pom文件里添加了junit的依赖，如果本地仓库中没有相关的jar包，终端输出结果会包含去远程仓库下载的信息。由于我本地已经有了相关的jar包，所以这里终端输出结果中并没有下载相关依赖的内容。
 
 这就是使用Maven自动编译项目的过程，可以看到Hello项目的根目录下多了一个 **target** 文件夹，这个文件夹就是编译成功之后Maven帮我们生成的目标文件夹，在target/classes路径下可以看到编译好的.class文件：
-{% img https://i.loli.net/2020/05/26/EXtn39ymWNbzh7V.png %}
+<img src="https://i.loli.net/2020/05/26/EXtn39ymWNbzh7V.png" >
 
 #### 使用Maven清理项目
 继续执行 **mvn clean** 命令清理项目，清理项目的过程就是把执行"mvn compile"命令编译项目时生成的target文件夹删掉：
-{% img https://i.loli.net/2020/05/26/G4twiEaUZbCeNQR.png %}
+<img src="https://i.loli.net/2020/05/26/G4twiEaUZbCeNQR.png" >
 
 #### 使用Maven测试项目
 
 执行 **mvn test** 命令测试项目，依次运行在它之前的resources、compile生命周期阶段，然后运行surefire插件，从中央仓库下载了一些相关的jar包，执行测试并输出报告：
-{% img https://i.loli.net/2020/05/26/tp7dlvLCeBzJW9F.png %}
+<img src="https://i.loli.net/2020/05/26/tp7dlvLCeBzJW9F.png" >
 在target文件夹下可以看到编译好的源代码和测试代码文件，和其他生命周期阶段运行后的一些目标文件夹：
-{% img https://i.loli.net/2020/05/25/evEHVoR4xmQ3q2g.png %}
+<img src="https://i.loli.net/2020/05/25/evEHVoR4xmQ3q2g.png" >
 
 #### 使用Maven打包项目
 
 执行 **mvn package** 命令打包项目，依次执行在它之前的生命周期阶段，然后运行maven-jar-plugin插件打包项目：
-{% img https://i.loli.net/2020/05/26/kJN8EGcFpSMavTR.png %}
+<img src="https://i.loli.net/2020/05/26/kJN8EGcFpSMavTR.png" >
 在target文件夹可以看到打包好的jar文件：
-{% img https://i.loli.net/2020/05/26/E35Msda4onlvbP9.png %}
+<img src="https://i.loli.net/2020/05/26/E35Msda4onlvbP9.png" >
 
 #### 使用Maven安装项目
 
 执行 **mvn install** 命令安装项目包到本地仓库，这样项目包可以用作其他本地项目的依赖。依次执行在它之前的生命周期阶段，然后执行install生命周期阶段：
-{% img https://i.loli.net/2020/05/26/uZDcXbNQ68KBe4C.png %}
+<img src="https://i.loli.net/2020/05/26/uZDcXbNQ68KBe4C.png" >
 在本地仓库就可以看到Hello项目的jar包了，路径就是它的包名：
-{% img https://i.loli.net/2020/05/26/5DRTF9OtZMoxXJ3.png %}
+<img src="https://i.loli.net/2020/05/26/5DRTF9OtZMoxXJ3.png" >
 
 #### 使用Maven部署项目
 
@@ -328,12 +328,12 @@ mvn clean package
 mvn clean install
 {% endcodeblock %}
 
-{% img https://i.loli.net/2020/05/26/YZhiaIcmGxTzVBF.png %}
+<img src="https://i.loli.net/2020/05/26/YZhiaIcmGxTzVBF.png" >
 
 #### 使用Maven生成的jar包
 
 上面我们已经把Hello项目的jar包安装到了本地仓库，接下来我们练习下在别的项目中使用它，依然通过maven命令新建HelloFriend项目：
-{% img https://i.loli.net/2020/05/26/nSkF6D4fm3CyAWQ.png %}
+<img src="https://i.loli.net/2020/05/26/nSkF6D4fm3CyAWQ.png" >
 
 将App.java改名为AppFriend.java，并添加如下代码：
 
@@ -390,43 +390,43 @@ public class AppFriendTest {
 {% endcodeblock %}
 
 然后执行 **mvn test** 执行测试：
-{% img https://i.loli.net/2020/05/26/UMrVpTFjC9vyoiS.png %}
+<img src="https://i.loli.net/2020/05/26/UMrVpTFjC9vyoiS.png" >
 运行成功，说明Hello的jar包已经成功在HelloFriend项目里生效了。
 
 ## Demo Project Set Up
 ### 创建Maven Project
 
 <span id="inline-toc">1.</span> 装好JDK之后，打开IDEA，点击{% label info@File->New->Project->Maven %}，勾选“Create from archetype”，然后选择quick start：
-{% img https://i.loli.net/2020/05/15/fk5CHuj3VSzcxsK.jpg %}
+<img src="https://i.loli.net/2020/05/15/fk5CHuj3VSzcxsK.jpg" >
 
 <span id="inline-toc">2.</span> 点击Next，命名项目：
-{% img https://i.loli.net/2020/05/15/JzQ2vPyFL1tm7iA.jpg %}
+<img src="https://i.loli.net/2020/05/15/JzQ2vPyFL1tm7iA.jpg" >
 
 <span id="inline-toc">3.</span> 命名为Automation，点击Next：
-{% img https://i.loli.net/2020/05/15/nuy6grKl4vSMkEd.png %}
+<img src="https://i.loli.net/2020/05/15/nuy6grKl4vSMkEd.png" >
 
 <span id="inline-toc">4.</span>点击Finish后, 项目就创建好了，控制台输出的内容和我们上文中用命令创建的时候终端输出内容是一样的：
-{% img https://i.loli.net/2020/05/15/ejac3QP5tVzq6Ls.png %}
+<img src="https://i.loli.net/2020/05/15/ejac3QP5tVzq6Ls.png" >
 
 ### 添加Selenium依赖
 
 在IDEA点击{% label info@code->generate->dependency %}(或者在pom.xml文件里Ctrl+N->Dependency)，打开Maven Artifact Search窗口，这里可以搜索并添加依赖，搜索selenium, 因为我们是用java写代码，所以要加入selenium.java依赖包，选择任一版本：
-{% img https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png %}
+<img src="https://i.loli.net/2020/05/15/N9yA8i1kGMqOJ6I.png" >
 
 >如果怎么都打不开Maven Artifact Search窗口，还可以打开maven [中央仓库](https://mvnrepository.com/) 的网站，首页搜索selenium，选择selenium.java依赖包版本，然后将依赖包代码粘贴到pom文件中：
-{% img https://i.loli.net/2020/06/02/2pWOkP4cG7TqfKA.png %}
-{% img https://i.loli.net/2020/06/02/CawP49RQxu3gUhL.png %}
+<img src="https://i.loli.net/2020/06/02/2pWOkP4cG7TqfKA.png" >
+<img src="https://i.loli.net/2020/06/02/CawP49RQxu3gUhL.png" >
 
 
 之后在pom.xml文件里就可以看到Selenium依赖已经添加了。显示红色因为还没有下载，所以我们要点击页面右上角的Maven小图标下载依赖包:
-{% img https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png %}
+<img src="https://i.loli.net/2020/05/15/aYy6lZ4ML1UNdRS.png" >
 下载完成后就可以看到相应依赖已经添加到项目的Extenral Libraries中了：
-{% img https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png %}
+<img src="https://i.loli.net/2020/05/15/BAs3H5etboJ7Lxh.png" >
 下载的依赖文件也可以在创建项目时设置的**Local repository**路径里找到，默认是在{% label info@.m2/repository/ %}路径下。
 
 ### 下载WebDriver
 有了Selenium依赖，我们还需要下载WebDirver，因为我们是用WebDriver开启浏览器测试。这里我们下载[Firefox](https://github.com/mozilla/geckodriver/releases)和[Chrome](https://chromedriver.chromium.org/downloads )的WebDriver，下载完成后在项目新建drivers文件夹放置，便于管理：
-{% img https://i.loli.net/2020/05/15/IisXJT1xD4q2yCG.png %}
+<img src="https://i.loli.net/2020/05/15/IisXJT1xD4q2yCG.png" >
 {% note warning %}
 注意，下载WebDriver之前，需要确保电脑上已经下载了对应的浏览器，否则是不能使用的。
 {% endnote %}
@@ -464,7 +464,7 @@ public class SeleniumTest {
 {% endcodeblock %}
 
 运行成功之后，我们的Demo Project Set Up就结束了:
-{% img https://i.loli.net/2020/05/15/iDmgZtcjeTzqfEL.png %}
+<img src="https://i.loli.net/2020/05/15/iDmgZtcjeTzqfEL.png" >
 
 ## 参考资料
 - [Maven + TestNG + Jenkins搭建自动化测试框架](https://www.jianshu.com/p/28b7ae892ed1)

@@ -9,7 +9,7 @@ description: 其实是拥有多重身份的程序员。
 top:
 ---
 
-{% img https://s2.loli.net/2022/10/09/EePou4ctM9m26VL.png %}
+<img src="https://s2.loli.net/2022/10/09/EePou4ctM9m26VL.png">
 
 {% note info %}
 写完17号之后，我觉得只靠二狗这一个平台来认识男嘉宾路子太窄了，但又没有别的方式(社恐太难了)，为了打开点格局，我想到了之前被我注销账号的青藤之恋(所以其实格局也没有打开多少)，接着搞好账号，收拾心情，重新出发。
@@ -54,7 +54,7 @@ top:
 
 基于他8-11.5-6的还债时间(有时候没那么晚)，我俩会晚上11点多在小区楼下碰头，而这刚好是我平时去扔垃圾的点，所以我们就变成了「垃圾之交」，我扔垃圾，他扔他自己，扔完垃圾再在小区里遛会儿弯。
 
-{% img https://s2.loli.net/2022/10/13/EXp1fOBhYmMxN5Q.jpg %}
+<img src="https://s2.loli.net/2022/10/13/EXp1fOBhYmMxN5Q.jpg" height=470 width=200 alt="垃圾之交">
 
 <!-- endtab -->
 <!-- tab -->
@@ -64,7 +64,7 @@ top:
 
 几天后，一个下雨的晚上。
 
-{% img https://s2.loli.net/2022/10/13/yH2EgXn7ejc1PLi.jpg %}
+<img src="https://s2.loli.net/2022/10/13/yH2EgXn7ejc1PLi.jpg" height=220 width=200 alt="钥匙丢了">
 
 开锁师傅还得一段时间才到，左手饮料右手烤鸡又没有伞的他，在雨中给我发消息描述了自己的境况，然后请求借我地方吃个饭，给手机充个电。
 
@@ -112,7 +112,7 @@ top:
 
 OnCall之后我们又聊了几次，我说话都很有分寸，之后的某天我也直接坦白了自己对他只是比较欣赏而已，他说：
 
-{% img https://s2.loli.net/2022/10/16/PoYbarDwG8zQ4IR.jpg %}
+<img src="https://s2.loli.net/2022/10/16/PoYbarDwG8zQ4IR.jpg" height=490 width=200 alt="就这样吧">
 
 后来他说要下班领宵夜，问我吃不吃水果给我带点，我想着之前还管过他几顿饭高低得补回来，不吃白不吃，就说好呀，然后等着他联系我下楼去取。
 
@@ -136,7 +136,7 @@ OnCall之后我们又聊了几次，我说话都很有分寸，之后的某天�
 
 最后一次见面，是我下楼去还他的游戏卡和备用钥匙，然后，就像他说的只能相忘于江湖吧。
 
-{% img https://s2.loli.net/2022/10/16/ycH7fuZWwOz6A2k.jpg %}
+<img src="https://s2.loli.net/2022/10/16/ycH7fuZWwOz6A2k.jpg" height=410 width=200 alt="最初的起点">
 
 人类大多都在寻找着什么吧，而他就是有趣的人和事。
 
@@ -148,7 +148,7 @@ OnCall之后我们又聊了几次，我说话都很有分寸，之后的某天�
 
 他说自己喜欢摄影，看了他的朋友圈我发现何止是喜欢，也太专业了吧，每条都是他的摄影作品，在世界各地拍的，一整个风光摄影师：
 
-{% img https://s2.loli.net/2022/10/17/IUXZyETB1RtFOV9.jpg %}
+<img src="https://s2.loli.net/2022/10/17/IUXZyETB1RtFOV9.jpg" height=220 width=300 alt="品品">
 
 那段时间疫情有点反复，我们都在家办公，就聊了点在家办公摸鱼的事儿，还互秀厨艺。后面就分享下日常，过了几天到了周末，就约着面基了。
 

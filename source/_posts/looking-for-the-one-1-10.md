@@ -9,7 +9,7 @@ description: 一些人间精品。
 top:
 ---
 
-{% img https://s2.loli.net/2022/05/28/KUCYHdEzs2gak1J.jpg %}
+<img src="https://s2.loli.net/2022/05/28/KUCYHdEzs2gak1J.jpg" >
 
 ## 前景提要
 
@@ -29,23 +29,23 @@ top:
 
 程序员，说实话我对程序员有种特别的好感，可能因为置身其中比较了解行业的艰辛吧，所以很加分，互道你好后，他说：
 
-{% img https://s2.loli.net/2022/05/28/wDZhlFW4uaBsp57.jpg %}
+<img src="https://s2.loli.net/2022/05/28/wDZhlFW4uaBsp57.jpg" width="200" height="400" alt="了不得了不得">
 
 什么叫专业？这就是专业啊！！！看完之后我内心忍不住发出一声赞叹，人家问我觉得怎么样？我觉得自惭形秽，只能机械的重复「挺好的挺好的」。
 这样的男嘉宾我配不上，当然要介绍给我一个跟他同乡的好闺蜜啊，所以马上安排了起来：
 
-{% img https://s2.loli.net/2022/05/28/cCAiZ938zudfbED.jpg %}
+<img src="https://s2.loli.net/2022/05/28/cCAiZ938zudfbED.jpg" width="200" height="400" alt="芜湖">
 
 第一次当红娘的我十分激动，比给自己找对象都开心，原来单身狗的快乐源泉之一是给别人介绍对象，所以马上问闺蜜聊的怎么样，进展如何，然后她给我甩了一张聊天截图：
 
-{% img https://s2.loli.net/2022/05/28/k52cyBdtSfKrsYL.jpg %}
+<img src="https://s2.loli.net/2022/05/28/k52cyBdtSfKrsYL.jpg" width="200" height="200" alt="好家伙">
 
 明年结婚？
 时间有没有问题？
 我看他这个人多少是有点问题，男嘉宾说等她一周后出差回来要约见面，闺蜜也答应了，说不定见面的感觉不一样呢？
 接下来是闺蜜见面之后从前方带来的报道：
 
-{% img https://s2.loli.net/2022/05/28/CO3PKat6TJfxcqE.jpg %}
+<img src="https://s2.loli.net/2022/05/28/CO3PKat6TJfxcqE.jpg" width="200" height="300" alt="哈哈哈哈哈">
 
 细节就是，到了星巴克，男嘉宾一个人坐在那，什么喝的也没点，闺蜜到了跟他聊了几句，实在没忍住渴自己点了一杯喝的，问男嘉宾要点啥，男嘉宾说啥也不要，然后俩人在那尬聊了半小时。
 
@@ -57,11 +57,11 @@ top:
 
 一开始加他我是很犹豫的，虽然他资料显示是男生，可主页照片是个漂亮女生，不过人家回答我的问题很真诚，简直可以当范文了，所以冒着被掰弯的风险同意了他的申请：
 
-{% img https://s2.loli.net/2022/05/28/BdmGiac5IYPKvVt.jpg %}
+<img src="https://s2.loli.net/2022/05/28/BdmGiac5IYPKvVt.jpg" width="200" height="400" alt="范文">
 
 颤抖着手主动发出第一条消息，然后发现了他人类观察员的身份，他还展示了自己好友申请列表里的一串男生：
 
-{% img https://s2.loli.net/2022/05/28/aB7ketPQbwJE5ul.jpg %}
+<img src="https://s2.loli.net/2022/05/28/aB7ketPQbwJE5ul.jpg" width="400" height="400" alt="人类观察员">
 
 厉害了厉害了，后来他说自己是教师，怪不得！人类灵魂的工程师来做人类观察员，不能更适合了，他说自己工资太低，非常羡慕程序员的高工资，想转行什么的，是个有趣的人哈哈哈哈，不过找对象就算了，还是让他专心观察人类吧。
 
@@ -69,7 +69,7 @@ top:
 
 申请问题回答的真诚度仅次于3号男嘉宾，所以通过了他的交友申请，然后我就去忙了也没看聊天窗口，再次回来的时候他说：
 
-{% img https://s2.loli.net/2022/05/28/ryekYvNdpa4A6LS.jpg %}
+<img src="https://s2.loli.net/2022/05/28/ryekYvNdpa4A6LS.jpg" width="200" height="400" alt="excuse me?">
 
 这种抱怨的语气是什么鬼？后来他说「我们都是被动的人」，又一起聊了会书和电影，就很干，之后他倒是找过我几次，但我已经没什么想聊的欲望了，然后就结束了。
 

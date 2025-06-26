@@ -9,7 +9,7 @@ description: 听我解释！
 top:
 ---
 
-{% img https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png %}
+<img src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png" >
 
 {% note info %}
 打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)

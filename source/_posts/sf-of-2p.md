@@ -9,7 +9,7 @@ description: 和小甜甜的快乐时光~
 top:
 ---
 
-{% img https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png %}
+<img src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png" >
 
 {% note info %}
 种种原因，今年我没能和家人一起过年。

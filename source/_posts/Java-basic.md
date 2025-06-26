@@ -9,7 +9,7 @@ description: 重温了Java基础，奇怪的知识又增加了。
 top:
 ---
 
-{% img https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png %}
+<img src="https://i.loli.net/2020/05/09/hznIgy4mZYQ7Rwc.png" >
 
 ## 前言
 由于工(yi)作(qing)原因，最近有很多学习的机会[手动狗头]。

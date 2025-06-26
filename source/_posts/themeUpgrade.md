@@ -16,16 +16,16 @@ top:
 ## 解惑：theme-next&next-theme
 
 我目前用的是 [theme-next](https://github.com/theme-next/) 团队提供的Next主题，最新的是我在用的v7.8版本：
-{% img https://i.loli.net/2021/06/25/h54FWYfywklibjV.png %}
+![theme-next-v7.8](https://i.loli.net/2021/06/25/h54FWYfywklibjV.png)
 
 浏览了同道博客，发现他们用的是 [next-theme](https://github.com/next-theme) 团队提供的Next主题，最新版本确实是v8.x：
-{% img https://i.loli.net/2021/06/25/lpjf4UEsiXhkW8M.png %}
+![next-theme-v8](https://i.loli.net/2021/06/25/lpjf4UEsiXhkW8M.png)
 
 那么问题来了，同一个主题为什么有两个团队在维护呢？作为一个合格的吃瓜群众🍉，我嗅到了一丝不寻常的气息，果然，有疑惑的不止我一个人：
-{% img https://i.loli.net/2021/06/25/5fkAD2LBXtCyWux.png %}
+![同样疑惑的吃瓜群众](https://i.loli.net/2021/06/25/5fkAD2LBXtCyWux.png)
 
 紧接着我就找到了答案：
-{% img https://i.loli.net/2021/06/25/oliLXKknhpUQG51.png %}
+![原来是一场神仙打架](https://i.loli.net/2021/06/25/oliLXKknhpUQG51.png)
 
 好了，疑惑没有了，虽然已经完成了对当前使用主题的一些优化，但为了与时俱进，还是决定使用新团队开发的Next主题，当然，我心中对大佬们的敬畏是一样的😂
 
@@ -71,30 +71,30 @@ top:
 
 开启fancybox只需要在_config.xml里搜索fancybox，然后将false改成true就可以了，简单到不可置信。之后就可以点开博客里的图片，而且还能切换查看上下图、幻灯片播放、查看图片列表，而且还可以看到图片下方的描述，简直了，什么神仙功能，大佬们太棒了❤️：
 
-{% img https://i.loli.net/2021/06/25/iMc3p7a8WSoGsdQ.png %}
+![fancybox](https://i.loli.net/2021/06/25/iMc3p7a8WSoGsdQ.png)
 
 #### chatra chat
 
 事实上，之前使用的next主题也有这项配置，但一直没深入研究，不过这次使用之后也觉得超级方便！开启chatra chat只需要在_config.xml里搜索Chat Services，之后开启chat button展示，接着去chatra官网注册账号，把id加上就可以了，官网和找id的路径也在文件里注释了：
 
-{% img https://i.loli.net/2021/06/25/yVWdFzJloPquMt9.png %}
+![开启chatra chat](https://i.loli.net/2021/06/25/yVWdFzJloPquMt9.png)
 
 chatra官网中也可以进行个性化配置，包括默认回复的信息，展示文本等等：
 
-{% img https://i.loli.net/2021/06/25/ikAVf1JdjSrOxYs.png %}
-{% img https://i.loli.net/2021/06/25/J1F2fexgbtGrQ8I.png %}
-{% img https://i.loli.net/2021/06/25/ykLIPbEMOqUQT3s.png %}
+![自定义弹窗展示文本](https://i.loli.net/2021/06/25/ikAVf1JdjSrOxYs.png)
+![自定义用户信息表单](https://i.loli.net/2021/06/25/J1F2fexgbtGrQ8I.png)
+![自定义默认回复信息](https://i.loli.net/2021/06/25/ykLIPbEMOqUQT3s.png)
 
 至于使用成本，自注册之日起，会赠送10天的pro套餐，10天之后会回到免费套餐，但这并不影响简单使用，基本的聊天功能还是会支持的，所以还是推荐使用：
-{% img https://i.loli.net/2021/06/25/K7Sug1ksNRw8WyM.png %}
+![价格信息](https://i.loli.net/2021/06/25/K7Sug1ksNRw8WyM.png)
 
 Chat Services里列出的其它Chat服务tidio和gitter我也试了，但tidio貌似需要科学上网，gitter貌似只能群聊，隐私感体验较差，所以还是选择了chatra。
 chatra可以用邮件的方式提示新消息，但刚开始只能在网页上回复消息，后来发现AppStore也有这个应用，叫**Chatra**，下载后就能及时用手机回复消息了：
 
-{% img https://i.loli.net/2021/08/07/fNKCAtxyvwecpRF.png %}
+![用手机App发送消息](https://i.loli.net/2021/08/07/fNKCAtxyvwecpRF.png)
 手机端交互和网页差不多，但不能同时在线：
 
-{% img https://i.loli.net/2021/08/07/fvbPwaZUjMtzOlS.jpg %}
+![chatra手机端](https://i.loli.net/2021/08/07/fvbPwaZUjMtzOlS.jpg)
 
 
 ### 个性化设置
@@ -121,8 +121,8 @@ refer: 'jmyblog.top' + location.pathname
 
 新版Next主题内置了更多插件，只需要打开开关就能用，确实挺香的。这次升级我也把之前的Next_Gemini卡片式布局，切换到了现在的Next_Mist布局，博客展示更加返璞归真了，对比感觉还是现在的效果比较适合展示博客：
 
-{% img https://i.loli.net/2021/06/24/ibkeCQwLaV9xsXd.jpg %}
+![之前是有点花里胡哨哈](https://i.loli.net/2021/06/24/ibkeCQwLaV9xsXd.jpg)
 
-{% img https://i.loli.net/2021/06/24/cHQjPZJUMAq5fta.png %}
+![现在沉稳多了](https://i.loli.net/2021/06/24/cHQjPZJUMAq5fta.png)
 
 这段时间真折腾啊，又是升级博客服务，又是升级主题的，终于告一段落了，之后很长一段时间应该不会再有升级了。为了维护这个小破站，我真是操碎了心，接下来就是专注写作，多更新博客了。
