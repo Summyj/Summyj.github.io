@@ -390,15 +390,23 @@ if ('serviceWorker' in navigator) {
         const playerHtml = `
             <div id="${MUSIC_PLAYER_ID}" class="persistent-music-player minimized">
                 <div class="music-controls">
-                    <button class="music-toggle-btn" onclick="toggleMusicPlayer()" title="点击切换播放器显示/隐藏&#10;桌面端右键开启/关闭旋转&#10;手机端长按2秒开启/关闭旋转">♪</button>
+                    <button class="music-toggle-btn" onclick="toggleMusicPlayer()" title="点击切换播放器显示/隐藏&#10;桌面端右键开启/关闭旋转&#10;手机端长按1秒开启/关闭旋转">♪</button>
                     <button class="music-minimize-btn" onclick="minimizeMusicPlayer()" title="最小化">−</button>
                 </div>
                 <div class="music-iframe-container">
                     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
                             width="330" height="450" loading="lazy"
-                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                            src="//music.163.com/outchain/player?type=0&id=6922474495&auto=0&height=430">
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allow="autoplay; encrypted-media; fullscreen"
+                            src="https://music.163.com/outchain/player?type=0&id=6922474495&auto=0&height=430">
                     </iframe>
+                    <div class="music-fallback" style="display: none;">
+                        <p>音乐播放器加载失败</p>
+                        <a href="https://music.163.com/playlist?id=6922474495" target="_blank" rel="noopener">
+                            点击前往网易云音乐播放
+                        </a>
+                    </div>
                 </div>
             </div>
         `;
@@ -425,27 +433,90 @@ if ('serviceWorker' in navigator) {
             player.setAttribute('data-pjax-ignore', 'true');
             // 播放器默认为最小化状态
             player.classList.add('minimized');
+            
+            // 检测iframe是否加载成功
+            setTimeout(() => {
+                checkIframeLoad();
+            }, 3000);
+        }
+    }
+    
+    // 检测iframe加载状态
+    function checkIframeLoad() {
+        const iframe = document.querySelector('.music-iframe-container iframe');
+        const fallback = document.querySelector('.music-fallback');
+        
+        if (!iframe || !fallback) return;
+        
+        let loadTimeout;
+        let hasLoaded = false;
+        
+        // 监听iframe加载成功事件
+        iframe.addEventListener('load', function() {
+            hasLoaded = true;
+            clearTimeout(loadTimeout);
+            console.log('Music player iframe loaded successfully');
+        });
+        
+        // 监听iframe加载错误事件
+        iframe.addEventListener('error', function() {
+            console.warn('Music player iframe failed to load');
+            showFallback();
+        });
+        
+        // 设置超时检测 - 如果超时还没加载成功，显示备用方案
+        loadTimeout = setTimeout(() => {
+            if (!hasLoaded) {
+                console.warn('Music player iframe loading timeout');
+                showFallback();
+            }
+        }, 8000); // 增加超时时间到8秒，给iframe更多加载时间
+        
+        function showFallback() {
+            clearTimeout(loadTimeout);
+            if (fallback) {
+                iframe.style.display = 'none';
+                fallback.style.display = 'block';
+            }
         }
     }
     
     // 音乐图标旋转控制
     let musicIconRotating = false;
     let longPressTimer = null;
+    let rotationToggleTimeout = null;
     
     // 切换音乐图标旋转状态
     function toggleMusicRotation() {
+        // 防抖：避免快速重复调用
+        if (rotationToggleTimeout) {
+            console.log('🎵 Toggle rotation debounced - ignoring repeated call');
+            return;
+        }
+        
         const toggleBtn = document.querySelector('.music-toggle-btn');
-        if (!toggleBtn) return;
+        if (!toggleBtn) {
+            console.warn('🎵 Toggle button not found');
+            return;
+        }
         
         musicIconRotating = !musicIconRotating;
+        console.log('🎵 Toggling rotation state to:', musicIconRotating);
         
         if (musicIconRotating) {
             toggleBtn.classList.add('rotating');
             localStorage.setItem('musicIconRotating', 'true');
+            console.log('🎵 Rotation enabled');
         } else {
             toggleBtn.classList.remove('rotating');
             localStorage.setItem('musicIconRotating', 'false');
+            console.log('🎵 Rotation disabled');
         }
+        
+        // 设置防抖延迟，500ms内不允许再次调用
+        rotationToggleTimeout = setTimeout(function() {
+            rotationToggleTimeout = null;
+        }, 500);
     }
     
     // 恢复音乐图标旋转状态
@@ -465,32 +536,109 @@ if ('serviceWorker' in navigator) {
         const toggleBtn = document.querySelector('.music-toggle-btn');
         if (!toggleBtn) return;
         
-        // 桌面端右键事件
-        toggleBtn.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            toggleMusicRotation();
-        });
+        // 防止重复绑定事件
+        if (toggleBtn.hasAttribute('data-events-bound')) {
+            console.log('🎵 Events already bound, skipping...');
+            return;
+        }
+        toggleBtn.setAttribute('data-events-bound', 'true');
+        console.log('🎵 Binding events to music toggle button');
+        
+        // 桌面端右键事件（仅在非触摸设备上启用）
+        if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
+            toggleBtn.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                console.log('🎵 Right click detected - toggling rotation');
+                toggleMusicRotation();
+            });
+        } else {
+            console.log('🎵 Touch device detected - disabling right click rotation');
+        }
         
         // 移动端长按事件
+        let touchStartTime = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let isLongPressing = false;
+        
         toggleBtn.addEventListener('touchstart', function(e) {
+            touchStartTime = Date.now();
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isLongPressing = false;
+            
+            console.log('🎵 Touch start - starting long press timer (1s)');
+            
             longPressTimer = setTimeout(function() {
+                console.log('🎵 Long press triggered - toggling rotation');
+                isLongPressing = true;
+                // 标记为长按，避免触发点击
+                toggleBtn.setAttribute('data-long-pressed', 'true');
                 toggleMusicRotation();
                 // 触觉反馈（如果支持）
                 if (navigator.vibrate) {
                     navigator.vibrate(50);
                 }
-            }, 2000);
+            }, 1000); // 改为1秒
         });
         
         toggleBtn.addEventListener('touchend', function(e) {
+            const touchDuration = Date.now() - touchStartTime;
+            console.log('🎵 Touch end - duration:', touchDuration + 'ms', 'isLongPressing:', isLongPressing);
+            
             if (longPressTimer) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+            
+            // 如果是长按，阻止后续的点击事件
+            if (e.target.getAttribute('data-long-pressed') === 'true') {
+                e.preventDefault();
+                e.stopPropagation();
+                e.target.removeAttribute('data-long-pressed');
+            }
+        });
+        
+        toggleBtn.addEventListener('touchmove', function(e) {
+            // 计算移动距离，只有移动距离超过阈值才取消长按
+            const moveX = Math.abs(e.touches[0].clientX - touchStartX);
+            const moveY = Math.abs(e.touches[0].clientY - touchStartY);
+            const moveDistance = Math.sqrt(moveX * moveX + moveY * moveY);
+            
+            // 允许10像素的移动误差，避免轻微手抖就取消长按
+            if (moveDistance > 10) {
+                console.log('🎵 Touch move too far - canceling long press. Distance:', moveDistance);
+                if (longPressTimer) {
+                    clearTimeout(longPressTimer);
+                    longPressTimer = null;
+                }
+            }
+        });
+        
+        // 添加额外的防选中事件
+        toggleBtn.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        toggleBtn.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // 页面不可见时清理长按计时器
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden && longPressTimer) {
+                console.log('🎵 Page hidden - clearing long press timer');
                 clearTimeout(longPressTimer);
                 longPressTimer = null;
             }
         });
         
-        toggleBtn.addEventListener('touchmove', function(e) {
+        // 页面失去焦点时清理长按计时器
+        window.addEventListener('blur', function() {
             if (longPressTimer) {
+                console.log('🎵 Window blur - clearing long press timer');
                 clearTimeout(longPressTimer);
                 longPressTimer = null;
             }
@@ -498,6 +646,21 @@ if ('serviceWorker' in navigator) {
         
         // 恢复旋转状态
         restoreMusicRotationState();
+        
+        // 为最小化按钮添加移动端优化
+        const minimizeBtn = document.querySelector('.music-minimize-btn');
+        if (minimizeBtn) {
+            // 防止最小化按钮的文本选择
+            minimizeBtn.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            minimizeBtn.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+        }
     }
     
     // 切换播放器显示/隐藏
@@ -545,6 +708,13 @@ if ('serviceWorker' in navigator) {
             if (!existingPlayer) {
                 initMusicPlayer();
                 setTimeout(addMusicIconEvents, 100);
+            } else {
+                // 如果播放器存在但事件可能丢失，重新绑定
+                const toggleBtn = existingPlayer.querySelector('.music-toggle-btn');
+                if (toggleBtn && !toggleBtn.hasAttribute('data-events-bound')) {
+                    console.log('🎵 Re-binding events after Pjax navigation');
+                    setTimeout(addMusicIconEvents, 100);
+                }
             }
         }, 100);
     });
