@@ -21,7 +21,6 @@
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-helper-live2d": "^3.1.1",
-    "hexo-image-caption": "^0.1.1",
     "hexo-leancloud-counter-security": "^1.5.0",
     "hexo-neat": "^1.0.9",
     "hexo-renderer-ejs": "^2.0.0",
