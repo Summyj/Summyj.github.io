@@ -81,7 +81,7 @@ npx npm-check-updates -u && npm install
 文章主体收窄，字体变薄，图片也变成了圆角，加上了阴影和悬浮的效果，和页面做了自适应。整体看起来确实优雅高级多了，标签的展示也做了强化：
 
 {% img https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png "Before" %}
-{% img https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png "After"%}
+{% img https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png "After" %}
 
 文章主题部分的优化到此结束。
 
