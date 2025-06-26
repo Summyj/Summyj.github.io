@@ -11,7 +11,7 @@ type: "about"
 <!-- <img src="https://i.loli.net/2021/07/03/6XYkWHefnZ85hql.jpg" width="200" height="200"> -->
 <img src="https://i.loli.net/2021/08/03/93kctmnIgVCifEb.jpg" width="200" height="200">
 {% cq %}
-97年生人 :girl:
+97年生人
 一个不想努力的老阿姨
 音乐 - ~~健身~~ - 美食 - 追剧
 巨蟹座 & 天生宅 & 懒癌晚期 & 重度拖延
