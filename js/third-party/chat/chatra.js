@@ -1,10 +1,4 @@
-/* global CONFIG */
+/* global Chatra */
 
-if (CONFIG.chatra.embed) {
-  window.ChatraSetup = {
-    mode    : 'frame',
-    injectTo: CONFIG.chatra.embed
-  };
-}
-
-window.ChatraID = CONFIG.chatra.id;
+// ChatraID is already set in the template
+// This file is mainly for additional functionality if needed
