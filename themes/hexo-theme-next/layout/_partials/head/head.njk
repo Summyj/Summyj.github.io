@@ -277,6 +277,11 @@
       });
     }
     
+    // 定义全局变量
+    const maxInterval = 5000; // 最大间隔5秒
+    const minInterval = 1000; // 最小间隔1秒
+    let currentInterval = 2000; // 初始2秒检测一次
+    
     // 初始化
     function initialize() {
       setupNavigationListeners();
@@ -284,11 +289,6 @@
       // 等待页面完全加载后开始检查
       setTimeout(function() {
         checkForUpdates();
-        
-        // 智能检测间隔：初期频繁检测，稳定后减少频率
-        let currentInterval = 2000; // 初始2秒检测一次
-        const maxInterval = 5000; // 最大间隔5秒
-        const minInterval = 1000; // 最小间隔1秒
         
         function scheduleNextCheck() {
           clearTimeout(checkInterval);

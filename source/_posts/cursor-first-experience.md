@@ -82,7 +82,7 @@ npx npm-check-updates -u && npm install
 ![Before](https://s2.loli.net/2025/06/25/NHEtWj175FwkBcK.png)
 ![After](https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png)
 
-文章主题部分的优化到此结束。
+文章主题部分的优化到此结束，不过目前还有一个图片fancybox的问题没有解决，点击图片查看有时候会缩成一个小点，切换上下图片也是这样，但是切换右上角的缩略图按钮可以正常看。拉扯太多累了，以后再说(又不是不能用)。
 
 ### Not By AI 徽章
 
