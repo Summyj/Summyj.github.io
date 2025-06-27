@@ -893,12 +893,19 @@ html {
     color: white !important;
 }
 
+/* 小桌面适配 - 避免遮挡左侧按钮 */
+@media screen and (max-width: 1024px) {
+    .persistent-music-player {
+        left: 100px !important; /* 向右移动，避免遮挡回到顶部按钮 */
+    }
+}
+
 /* 移动端适配 */
 @media screen and (max-width: 768px) {
     .persistent-music-player {
         bottom: 15px !important;
-        left: 15px !important;
-        max-width: calc(100vw - 30px) !important;
+        left: 70px !important; /* 向右移动，避免遮挡左侧按钮 */
+        max-width: calc(100vw - 80px) !important; /* 调整最大宽度 */
     }
     
     .music-iframe-container iframe {
@@ -911,13 +918,26 @@ html {
 @media screen and (max-width: 480px) {
     .persistent-music-player {
         bottom: 10px !important;
-        left: 10px !important;
-        max-width: calc(100vw - 20px) !important;
+        left: 60px !important; /* 向右移动，避免遮挡左侧按钮 */
+        max-width: calc(100vw - 70px) !important; /* 调整最大宽度 */
     }
     
     .music-iframe-container iframe {
         width: 250px !important;
         height: 350px !important;
+    }
+}
+
+/* 极小屏幕适配 - 确保在最小设备上也不遮挡 */
+@media screen and (max-width: 360px) {
+    .persistent-music-player {
+        left: 55px !important; 
+        max-width: calc(100vw - 65px) !important;
+    }
+    
+    .music-iframe-container iframe {
+        width: 220px !important;
+        height: 320px !important;
     }
 }
 
