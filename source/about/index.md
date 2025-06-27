@@ -7,9 +7,9 @@ type: "about"
 {% blockquote 王小波 https://book.douban.com/subject/1089243/ 黄金时代 %}
 那一天我二十一岁，在我一生的黄金时代。我有好多奢望，我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
 {% endblockquote %}
----
-<!-- <img src="https://i.loli.net/2021/07/03/6XYkWHefnZ85hql.jpg" width="200" height="200"> -->
+
 <img src="https://i.loli.net/2021/08/03/93kctmnIgVCifEb.jpg" width="200" height="200">
+
 {% cq %}
 97年生人
 一个不想努力的老阿姨
