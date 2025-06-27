@@ -286,6 +286,13 @@ span:contains("by Taboola") {
     color: #6b6b6b !important;
 }
 
+/* 特殊处理 blockquote-center（{% cq %}标签），移除左边绿色竖条 */
+.post.posts-expand .post-body blockquote.blockquote-center,
+.page.posts-expand .post-body blockquote.blockquote-center {
+    border-left: none !important;
+    padding: 0 !important;
+}
+
 /* 行内代码样式已完全移除 - 使用 NexT 主题默认样式 */
 
 /* 
