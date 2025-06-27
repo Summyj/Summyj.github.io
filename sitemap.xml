@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jmyblog.top/about/index.html</loc>
+    
+    <lastmod>2025-06-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/cursor-first-experience/</loc>
     
     <lastmod>2025-06-26</lastmod>
@@ -812,15 +821,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/about/index.html</loc>
-    
-    <lastmod>2025-06-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/index.html</loc>
     
     <lastmod>2024-07-30</lastmod>
@@ -1032,7 +1032,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%88%AC%E5%B1%B1/</loc>
+    <loc>https://jmyblog.top/tags/%E4%B9%A6%E5%8D%95/</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1046,14 +1046,14 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E4%B9%A6%E5%8D%95/</loc>
+    <loc>https://jmyblog.top/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
+    <loc>https://jmyblog.top/tags/%E7%88%AC%E5%B1%B1/</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
