@@ -51,12 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const icon = toggleBtn.querySelector('i');
     
+    // 检查页面是否已翻译
+    const isTranslated = document.body.classList.contains('translated');
+    
     if (theme === 'dark') {
       icon.className = 'fa-solid fa-moon fa-fw';
-      toggleBtn.title = '开灯';
+      toggleBtn.title = isTranslated ? 'Lights on' : '开灯';
     } else {
       icon.className = 'fa-solid fa-sun fa-fw';
-      toggleBtn.title = '关灯';
+      toggleBtn.title = isTranslated ? 'Lights off' : '关灯';
     }
   }
 
