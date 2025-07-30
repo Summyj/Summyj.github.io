@@ -44,21 +44,27 @@ class TranslateService {
   initButton() {
     const btn = document.querySelector('.translate-btn');
     if (btn) {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.toggle();
-      });
+      // 移除可能存在的旧事件监听器
+      btn.removeEventListener('click', this.handleButtonClick);
+      // 绑定新的事件监听器
+      btn.addEventListener('click', this.handleButtonClick);
     } else {
       setTimeout(() => {
         const retryBtn = document.querySelector('.translate-btn');
         if (retryBtn) {
-          retryBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.toggle();
-          });
+          retryBtn.removeEventListener('click', this.handleButtonClick);
+          retryBtn.addEventListener('click', this.handleButtonClick);
         }
       }, this.config.retryDelay);
     }
+  }
+
+  /**
+   * 按钮点击处理函数
+   */
+  handleButtonClick = (e) => {
+    e.preventDefault();
+    this.toggle();
   }
 
   /**
@@ -95,6 +101,9 @@ class TranslateService {
     if (this.state.isTranslating) {
       this.cancel();
     } else if (this.state.isTranslated) {
+      // 立即重置按钮状态，然后执行恢复
+      this.setState({ isTranslated: false });
+      this.forceResetButton();
       this.restore();
     } else {
       this.translate();
@@ -299,9 +308,13 @@ class TranslateService {
   }
 
   /**
-   * 恢复原始内容
+   * 恢复原文
    */
   restore() {
+    // 立即重置按钮状态，让用户看到反馈
+    this.setState({ isTranslated: false });
+    this.forceResetButton();
+    
     // 恢复文本节点
     for (const [node, originalText] of this.originalContent) {
       if (node && node.textContent !== originalText) {
@@ -315,13 +328,15 @@ class TranslateService {
       document.title = originalTitle;
     }
 
+    // 恢复按钮和侧边栏
     this.restoreButtons();
     this.restoreSidebar();
     
-    this.originalContent.clear();
-    this.setState({ isTranslated: false });
+    // 移除翻译状态类
     document.body.classList.remove('translated');
-    this.updateButton(false);
+    
+    // 最后清空originalContent
+    this.originalContent.clear();
     
     this.showToast('Original content restored', 'success');
   }
@@ -341,6 +356,13 @@ class TranslateService {
         const originalTitle = this.originalContent.get(btn.key);
         if (originalTitle) {
           element.title = originalTitle;
+        } else {
+          // 如果没有找到原始标题，使用默认值
+          if (btn.selector === '.translate-btn') {
+            element.title = 'translate page';
+          } else if (btn.selector === '.theme-toggle-btn') {
+            element.title = '关灯';
+          }
         }
       }
     }
@@ -413,6 +435,9 @@ class TranslateService {
     this.hideProgress();
     document.body.classList.remove('translated');
     this.originalContent.clear();
+    
+    // 强制重置按钮
+    this.forceResetButton();
   }
 
   /**
@@ -441,9 +466,17 @@ class TranslateService {
         btn.title = 'Restore original';
       } else {
         icon.className = 'fa fa-language fa-fw';
-        btn.title = 'Translate page';
+        btn.title = 'translate page';
       }
     }
+    
+    // 调试信息
+    console.log('Button state updated:', {
+      isTranslating,
+      isTranslated: this.state.isTranslated,
+      iconClass: icon.className,
+      buttonTitle: btn.title
+    });
   }
 
   /**
@@ -479,6 +512,45 @@ class TranslateService {
       if (fill) fill.style.width = percent + '%';
       if (percentText) percentText.textContent = percent + '%';
     }
+  }
+
+  /**
+   * 强制重置按钮
+   */
+  forceResetButton() {
+    const btn = document.querySelector('.translate-btn');
+    if (!btn) return;
+
+    const icon = btn.querySelector('i');
+    if (icon) {
+      icon.className = 'fa fa-language fa-fw';
+    }
+    btn.title = 'translate page';
+    btn.classList.remove('translating');
+    
+    // 移除可能影响按钮的CSS类
+    document.body.classList.remove('translated');
+    
+    // 强制重新渲染按钮
+    btn.style.display = 'none';
+    setTimeout(() => {
+      btn.style.display = '';
+    }, 0);
+    
+    // 确保按钮状态完全重置
+    setTimeout(() => {
+      if (btn && icon) {
+        icon.className = 'fa fa-language fa-fw';
+        btn.title = 'translate page';
+        btn.classList.remove('translating');
+      }
+    }, 10);
+    
+    console.log('Button force reset:', {
+      iconClass: icon ? icon.className : 'no icon',
+      buttonTitle: btn.title,
+      bodyClasses: document.body.className
+    });
   }
 
   /**
