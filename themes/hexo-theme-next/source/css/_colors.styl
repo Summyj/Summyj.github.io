@@ -32,7 +32,8 @@
 
 if (hexo-config('darkmode')) {
   @media (prefers-color-scheme: dark) {
-    :root {
+    // 只在没有自定义主题设置时跟随系统主题
+    :root:not(.theme-dark):not(.theme-light) {
       --body-bg-color: $body-bg-color-dark;
       --content-bg-color: $content-bg-color-dark;
       --card-bg-color: $card-bg-color-dark;
@@ -64,7 +65,8 @@ if (hexo-config('darkmode')) {
       color-scheme: dark;
     }
 
-    img {
+    // 只在没有自定义主题设置时应用图片样式
+    :root:not(.theme-dark):not(.theme-light) img {
       opacity: .75;
 
       &:hover {
@@ -72,7 +74,7 @@ if (hexo-config('darkmode')) {
       }
     }
 
-    iframe {
+    :root:not(.theme-dark):not(.theme-light) iframe {
       color-scheme: light;
     }
   }

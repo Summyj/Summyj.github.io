@@ -180,7 +180,7 @@ span:contains("by Taboola") {
 /* 文章内容样式 - 仅应用于文章页面和页面，完整Medium风格 */
 .post.posts-expand .post-body,
 .page.posts-expand .post-body {
-    color: #242424 !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
     font-weight: 400 !important;
     letter-spacing: -0.003em !important;
@@ -211,7 +211,7 @@ span:contains("by Taboola") {
 .post.posts-expand .post-body p,
 .page.posts-expand .post-body p {
     margin: 0 0 1.5em 0 !important;
-    color: #242424 !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
     font-weight: 400 !important;
     word-break: break-word !important;
 }
@@ -231,7 +231,7 @@ span:contains("by Taboola") {
 .page.posts-expand .post-body h6 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
     font-weight: 700 !important;
-    color: #1a1a1a !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
     letter-spacing: -0.022em !important;
     margin: 2em 0 0.5em 0 !important;
     line-height: 1.2 !important;
@@ -276,14 +276,14 @@ span:contains("by Taboola") {
     font-style: italic !important;
     font-size: 1.0em !important; /* 从1.1em减小到1.0em，与正文相同 */
     line-height: 1.48 !important;
-    color: #6b6b6b !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
     background: none !important;
 }
 
 .post.posts-expand .post-body blockquote p,
 .page.posts-expand .post-body blockquote p {
     margin: 0 !important;
-    color: #6b6b6b !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
 }
 
 /* 特殊处理 blockquote-center（{% cq %}标签），移除左边绿色竖条 */
@@ -326,19 +326,19 @@ span:contains("by Taboola") {
     list-style-type: decimal !important;
 }
 
-/* 链接样式 - 使用Next-Mist主题原始颜色 */
+/* 链接样式 - 使用Next主题CSS变量，支持暗色模式 */
 .post.posts-expand .post-body a,
 .page.posts-expand .post-body a {
-    color: #555 !important; /* $black-light - Next主题原始链接颜色 */
+    color: var(--link-color) !important; /* 使用CSS变量，支持暗色模式 */
     text-decoration: none !important;
-    border-bottom: 1px solid #999 !important; /* $grey-dark - Next主题原始下划线颜色 */
+    border-bottom: 1px solid var(--blockquote-color) !important; /* 使用blockquote颜色作为下划线 */
     transition: all 0.2s ease !important;
 }
 
 .post.posts-expand .post-body a:hover,
 .page.posts-expand .post-body a:hover {
-    color: #222 !important; /* $black-deep - Next主题原始悬停颜色 */
-    border-bottom-color: #222 !important;
+    color: var(--link-hover-color) !important; /* 使用CSS变量，支持暗色模式 */
+    border-bottom-color: var(--link-hover-color) !important;
 }
 
 /* 分隔线样式 - Medium风格 */
@@ -357,7 +357,7 @@ span:contains("by Taboola") {
 .page.posts-expand .post-body strong,
 .page.posts-expand .post-body b {
     font-weight: 700 !important;
-    color: #1a1a1a !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
 }
 
 .post.posts-expand .post-body em,
@@ -365,7 +365,7 @@ span:contains("by Taboola") {
 .page.posts-expand .post-body em,
 .page.posts-expand .post-body i {
     font-style: italic !important;
-    color: #6b6b6b !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
 }
 
 /* ==================== 响应式图片优化 - Medium风格 ==================== */
@@ -397,7 +397,7 @@ span:contains("by Taboola") {
 /* Medium风格figcaption样式 */
 .post.posts-expand .post-body figure figcaption,
 .page.posts-expand .post-body figure figcaption {
-    color: #6b6b6b !important; /* 与alt文字颜色一致 */
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
     font-size: 14px !important; /* 固定14px，与alt文字一致 */
     font-style: normal !important; /* 不使用斜体 */
     font-weight: 400 !important;
@@ -643,6 +643,29 @@ span:contains("by Taboola") {
 @media (prefers-color-scheme: dark) {
     .not-by-ai-sidebar img {
         filter: brightness(0.9);
+    }
+    
+    /* 确保文章内容在暗色模式下有足够的对比度 */
+    .post.posts-expand .post-body,
+    .page.posts-expand .post-body {
+        color: var(--text-color) !important;
+    }
+    
+    /* 确保引用块在暗色模式下可见 */
+    .post.posts-expand .post-body blockquote,
+    .page.posts-expand .post-body blockquote {
+        color: var(--blockquote-color) !important;
+    }
+    
+    /* 确保图片说明文字在暗色模式下可见 */
+    .post.posts-expand .post-body figure figcaption,
+    .page.posts-expand .post-body figure figcaption {
+        color: var(--blockquote-color) !important;
+    }
+    
+    /* 确保图片标题在暗色模式下可见 */
+    .image-caption {
+        color: var(--blockquote-color) !important;
     }
 }
 
@@ -948,8 +971,87 @@ html {
     }
 }
 
-/* 深色模式适配 */
+/* 深色模式适配 - 系统主题跟随 */
 @media (prefers-color-scheme: dark) {
+    /* 只在没有自定义主题设置时跟随系统主题 */
+    :root:not(.theme-dark):not(.theme-light) .translate-dropdown {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .translate-option {
+        color: #ddd;
+        border-bottom-color: #444;
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .translate-option:hover {
+        background-color: #3a3a3a;
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .translate-option.active {
+        background-color: #1e3a5f;
+        color: #66b3ff;
+    }
+    
+    /* 音乐播放器夜间模式适配 - 系统主题跟随 */
+    :root:not(.theme-dark):not(.theme-light) .persistent-music-player {
+        background: rgba(40, 40, 40, 0.95) !important; /* 深色背景 */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important; /* 浅色边框 */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important; /* 更深的阴影 */
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .persistent-music-player:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important; /* 悬停时更深的阴影 */
+    }
+    
+    /* 控制按钮容器夜间模式 - 系统主题跟随 */
+    :root:not(.theme-dark):not(.theme-light) .music-controls {
+        background: rgba(255, 255, 255, 0.1) !important; /* 浅色背景 */
+    }
+    
+    /* 切换按钮夜间模式 - 系统主题跟随 */
+    :root:not(.theme-dark):not(.theme-light) .music-toggle-btn {
+        background: rgba(255, 255, 255, 0.2) !important; /* 浅色背景 */
+        color: #e0e0e0 !important; /* 浅色文字 */
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .music-toggle-btn:hover {
+        background: rgba(255, 255, 255, 0.3) !important; /* 悬停时更亮 */
+    }
+    
+    /* 最小化按钮夜间模式 - 系统主题跟随 */
+    :root:not(.theme-dark):not(.theme-light) .music-minimize-btn {
+        background: rgba(255, 255, 255, 0.15) !important; /* 浅色背景 */
+        color: #e0e0e0 !important; /* 浅色文字 */
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .music-minimize-btn:hover {
+        background: rgba(255, 255, 255, 0.25) !important; /* 悬停时更亮 */
+    }
+    
+    /* 音乐播放器备用提示夜间模式 - 系统主题跟随 */
+    :root:not(.theme-dark):not(.theme-light) .music-fallback {
+        background: rgba(255, 255, 255, 0.1) !important; /* 浅色背景 */
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .music-fallback p {
+        color: #ccc !important; /* 浅色文字 */
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .music-fallback a {
+        color: #66b3ff !important; /* 蓝色链接 */
+        border-color: #66b3ff !important;
+    }
+    
+    :root:not(.theme-dark):not(.theme-light) .music-fallback a:hover {
+        background: #66b3ff !important;
+        color: #1a1a1a !important; /* 深色文字在蓝色背景上 */
+    }
+}
+
+/* 自定义夜间模式适配 */
+body.theme-dark,
+html.theme-dark {
     .translate-dropdown {
         background: #2d2d2d;
         border-color: #444;
@@ -968,11 +1070,66 @@ html {
         background-color: #1e3a5f;
         color: #66b3ff;
     }
+    
+    /* 音乐播放器夜间模式适配 */
+    .persistent-music-player {
+        background: rgba(40, 40, 40, 0.95) !important; /* 深色背景 */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important; /* 浅色边框 */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important; /* 更深的阴影 */
+    }
+    
+    .persistent-music-player:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important; /* 悬停时更深的阴影 */
+    }
+    
+    /* 控制按钮容器夜间模式 */
+    .music-controls {
+        background: rgba(255, 255, 255, 0.1) !important; /* 浅色背景 */
+    }
+    
+    /* 切换按钮夜间模式 */
+    .music-toggle-btn {
+        background: rgba(255, 255, 255, 0.2) !important; /* 浅色背景 */
+        color: #e0e0e0 !important; /* 浅色文字 */
+    }
+    
+    .music-toggle-btn:hover {
+        background: rgba(255, 255, 255, 0.3) !important; /* 悬停时更亮 */
+    }
+    
+    /* 最小化按钮夜间模式 */
+    .music-minimize-btn {
+        background: rgba(255, 255, 255, 0.15) !important; /* 浅色背景 */
+        color: #e0e0e0 !important; /* 浅色文字 */
+    }
+    
+    .music-minimize-btn:hover {
+        background: rgba(255, 255, 255, 0.25) !important; /* 悬停时更亮 */
+    }
+    
+    /* 音乐播放器备用提示夜间模式 */
+    .music-fallback {
+        background: rgba(255, 255, 255, 0.1) !important; /* 浅色背景 */
+    }
+    
+    .music-fallback p {
+        color: #ccc !important; /* 浅色文字 */
+    }
+    
+    .music-fallback a {
+        color: #66b3ff !important; /* 蓝色链接 */
+        border-color: #66b3ff !important;
+    }
+    
+    .music-fallback a:hover {
+        background: #66b3ff !important;
+        color: #1a1a1a !important; /* 深色文字在蓝色背景上 */
+    }
 }
 
 /* 图片标题样式 - 与 figcaption 保持一致 */
 .image-caption {
-    color: #6b6b6b !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
     font-size: 14px !important;
     font-style: normal !important;
     font-weight: 400 !important;
