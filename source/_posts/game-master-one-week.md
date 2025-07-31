@@ -28,7 +28,7 @@ top:
 
 ## 挑战开始
 
-王者的段位排行是：*{% label primary@青铜 %}(III/II/I) -> {% label primary@白银 %}(III/II/I) -> {% label primary@黄金 %}(IV/III/II/I) -> {% label primary@铂金 %}(IV/III/II/I) -> {% label primary@钻石 %}(V/IV/III/II/I) -> {% label primary@星耀 %}(V/IV/III/II/I) -> {% label primary@王者 %}*
+王者的段位排行是：**青铜**(III/II/I) -> **白银**(III/II/I) -> **黄金**(IV/III/II/I) -> **铂金**(IV/III/II/I) -> **钻石**(V/IV/III/II/I) -> **星耀**(V/IV/III/II/I) -> **王者**
 
 >青铜和白银各3级，每级3⭐️；黄金和铂金各4级，每级4⭐️；钻石和星耀各5级，每级5⭐️。王者段位是最高段位，但会根据⭐️数分不同的称号，比如0-9⭐️叫最强王者，10-19⭐️叫非凡王者等等，最高是传奇王者(>=100⭐️)。一般情况下1局游戏胜利+1⭐️，失败-1⭐️，每局游戏15mins-1h不等。
 
