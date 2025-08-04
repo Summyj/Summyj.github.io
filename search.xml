@@ -334,6 +334,72 @@
       </tags>
   </entry>
   <entry>
+    <title>AppUI自动化测试第三弹-Android篇</title>
+    <url>/AppUI-AutoTest-3/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
+<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
+<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><span class="image-caption">image.png</span><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><span class="image-caption">image.png</span><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><span class="image-caption">image.png</span><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><span class="image-caption">image.png</span><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><span class="image-caption">image.png</span><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>Bitrise</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第一弹</title>
+    <url>/AppUI-AutoTest/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
+
+<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><span class="image-caption">sdk location</span><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后执行 <mark class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</mark> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk11<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk
+export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)
+export AAPT_HOME
+export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"><span class="image-caption">appium-doctor.png</span></p>
+<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个
+npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"><span class="image-caption">config.png</span></p>
+<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img data-src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><span class="image-caption">project.png</span><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
+<div class="note info"><p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
+</div>
+
+<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
+<img data-src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>WebdriverIO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浅谈自动化测试框架</title>
     <url>/AutoTest-FrameWork/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/05/15/yHdcTpMbsvJB2zh.jpg">
@@ -446,31 +512,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AppUI自动化测试第三弹-Android篇</title>
-    <url>/AppUI-AutoTest-3/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
-<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
-<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><span class="image-caption">image.png</span><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><span class="image-caption">image.png</span><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><span class="image-caption">image.png</span><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><span class="image-caption">image.png</span><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><span class="image-caption">image.png</span><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>Bitrise</tag>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>请收下这波 BDD 安利</title>
     <url>/BDD-Introduce/</url>
     <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
@@ -553,47 +594,6 @@
         <tag>BDD</tag>
         <tag>敏捷</tag>
         <tag>王铁锤</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第一弹</title>
-    <url>/AppUI-AutoTest/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/05/19/AwIHB8nugEVPGRz.png">
-
-<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><p>博主之前有文章介绍了<a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/">WebUI自动化</a>，但相较于Web端，App的使用场景更多。所以博主又开发了系列课程，共4篇博客，带大家从0到1开始简单的AppUI自动化测试，并且将测试代码集成到CI，难度为入门级别，包含iOS和Android两个平台，内容详尽，包教包会哦(是和之前WebUI自动化博文一样，看也能看懂的程度哈哈哈哈)，本篇主要带大家配置环境，然后创建测试项目。</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><span id="inline-toc">1.</span> 首先，你需要有一个IDE，推荐使用<a href="https://code.visualstudio.com/download">VS Code</a>。<br><span id="inline-toc">2.</span> <a href="https://developer.apple.com/download/more/">下载安装</a> Xcode(12.0.1)和Xcode command line tool(12.2 beta2)，直接下载后按照提示安装即可，这两个工具是为了iOS平台的自动化。安装可能需要一些时间，可以同时进行下边的步骤。<br><span id="inline-toc">3.</span> 下载 <a href="https://developer.android.com/studio">Android Studio</a> ，这是一个开发App的IDE，但我们不用它写代码，只是用它里边的一个工具，是为了Android平台的自动化。下载后打开以下设置确保sdk location正确：<br><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><span class="image-caption">sdk location</span><br><span id="inline-toc">4.</span> 使用命令下载homebrew，这是一个下载工具，可以帮助下载别的依赖：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>然后执行 <mark class="label info">export HOMEBREW_NO_AUTO_UPDATE=true</mark> ，这样就不会每次用homebrew下载东西的时候它都自动更新了，最后执行 <strong>brew -v</strong> 检查你是否安装成功。<br><span id="inline-toc">5.</span> 使用brew下载node：<strong>brew install node</strong><br><span id="inline-toc">6.</span> 使用brew下载jdk，依次执行：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk11<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><span id="inline-toc">7.</span> 使用brew下载carthage：<strong>brew install carthage</strong><br><span id="inline-toc">8.</span> 下载 <a href="https://github.com/appium/appium-desktop/releases/tag/v1.20.2">Appium desktop</a><br><span id="inline-toc">9.</span> 下载 Appium-Doctor：<strong>npm install -g appium-doctor</strong><br><span id="inline-toc">10.</span> 所有依赖都已经下载完啦，然后我们来设置环境变量，打开你本地的 .bash_profile 或者 .zshrc 文件，没有就新建一个，之后输入下边的设置，直接粘贴改动即可：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">export ANDROID_HOME=path/to/your/Android sdk (eg:/Users/usr/Library/Android/sdk)
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk
-export PATH=~/bin:$PATH:/usr/local/bin:$ANDROID_HOME/platform-tools/:$JAVA_HOME/bin
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-AAPT_HOME=/path/to/your Android sdk build-tools (eg:/Users/usr/Library/Android/sdk/build-tools/28.0，这里的28.0是我本地的版本，你需要打开对应目录查看自己的版本然后修改。)
-export AAPT_HOME
-export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>保存后执行 <strong>source .bash_profile</strong> 或者 <strong>source .zshrc</strong> 使配置生效。<br><span id="inline-toc">11.</span> 最后执行 <strong>appium-doctor</strong> 命令查看你的环境是否已经准备完成，necessary的部分全部打绿勾就可以啦，如果上边的部分都做完了，应该是没有 ❌ 的，否则就要看对应的报错然后自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/20/DL9UPqaNYrgnGsQ.png" alt="appium-doctor.png"><span class="image-caption">appium-doctor.png</span></p>
-<h2 id="创建测试项目"><a href="#创建测试项目" class="headerlink" title="创建测试项目"></a>创建测试项目</h2><p>环境准备好了，就可以着手开始创建测试项目了，这里我们使用 <a href="https://webdriver.io/docs/what-is-webdriverio">WebdriverIO</a> 来帮助我们初始化一个可以进行App自动化测试的项目，首先新增一个文件夹，之后进入该文件夹依次执行：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm init –y //在文件夹里生成一个package.json文件，记得之前WebdriverIO会默认生成的，后来好像没了，就自己手动添加一个
-npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工具<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后执行 <strong>npx wdio config</strong> 进入项目的初始化步骤，之后该程序会让我们选择各种自动化测试的工具和规范，比如选择测试框架、PageObject、测试报告类型、测试服务端等等，非常全面。这里我们按下边的设置来初始化我们的项目(上下键切换选项，空格键选中/取消选中选项，enter键选择)：</p>
-<p><img data-src="https://i.loli.net/2021/05/20/oJhBqNp4asPAljC.png" alt="config.png"><span class="image-caption">config.png</span></p>
-<p>如果把一个 <a href="https://jmyblog.top/AutoTest-FrameWork/">自动化测试框架</a> 比做车辆，那WebdriverIO就像是一个造车工厂，用各种不同的零件构造出各式各样的自动化测试框架。<br>完成后的项目结构应该如下图：<br><img data-src="https://i.loli.net/2021/05/20/p8ZGHsWCD5nPjbS.png" alt="project.png"><span class="image-caption">project.png</span><br>其中有默认的测试代码示例，相关依赖也已经写入package.json里。</p>
-<div class="note info"><p>观察示例代码，不难发现它使用的语言是javascript；采用pageobject模型，有示例的公共页面page.js、登陆页面login.page.js，login页面中还给出了selector和function的示例定义方法，所有页面都放在pageobjects文件夹中；一般我们会把所有页面的公共方法放在page.js；specs文件夹里有一个示例的e2e测试文件，在此文件中会引入各个页面并使用其方法编写测试步骤，describe/it/await等都是mocha框架的关键字。</p>
-</div>
-
-<p>我们需要再做一些改动使项目结构更加标准，在根目录新增app和config文件夹，然后把wdio.conf.js文件放入config文件夹中，app文件夹将用来存放测试app，改动之后的项目结构：</p>
-<img data-src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>WebdriverIO</tag>
       </tags>
   </entry>
   <entry>
@@ -1545,128 +1545,6 @@ danger
       </tags>
   </entry>
   <entry>
-    <title>渗透测试初识</title>
-    <url>/Penetration-Test/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
-
-<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
-<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
-<p><enter></enter></p>
-<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
-
-
-<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
-<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
-<mark class="label primary">没有它之前怎么做</mark>
-<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
-<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
-<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
-<ul>
-<li>测试方法(黑盒/白盒/灰盒)</li>
-<li>目标(服务器/数据库/Web网站…)</li>
-<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
-</ul>
-<p><span id="inline-toc">2.</span> 测试过程</p>
-<mark class="label success">信息收集</mark>
-
-<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
-<mark class="label success">技术测试</mark>
-
-<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
-<mark class="label success">人员测试</mark>
-
-<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
-<p><span id="inline-toc">3.</span> 测试之后</p>
-<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
-<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
-<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
-<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
-<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
-<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
-<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
-<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
-<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
-<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
-</div>
-
-<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
-<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
-</div>
-
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
-<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>渗透测试</tag>
-        <tag>OWASP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客Pages服务升级</title>
-    <url>/PageServiceUpdate/</url>
-    <content><![CDATA[<img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg">
-
-<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><p>首先我的博客是同时部署在GithubPages和CodingPages上的，GithubPages提供国外访问，CodingPages加速国内访问。两个服务都加了我的自定义域名 <mark class="label info">jmyblog.top</mark>，且都开启了Https。</p>
-<p>两个服务给我的自定义域名申请的Https证书都是由国外的Let’s Encrypt机构签发，一般这个证书有效期只有三个月。由于我的域名解析设置，在证书快到期时，GithubPages可以帮我自动续申请证书，而CodingPages却不能，这就导致证书到期后在国内不能通过Https的方式访问我的博客，所以每次证书快到期时，我都要登录CodingPages <a href="https://jmyblog.top/HttpsUpdate/">手动续申证书</a>。</p>
-<p>去年的时候，CodingPages服务就一直给我发短信说是升级啥的，但我没有关注，我一直是个破罐子破摔的人，只要它没有停服，博客还能访问就懒的升级。<br>直到有一天我打开博客的时候出现异常，有时是直接访问不了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjgogovj624u10stbw02.jpg" alt="1622540423142.jpg"><span class="image-caption">1622540423142.jpg</span><br>有时是一些报错，好像是https证书过期之类：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjzp6g2j61xo1g8n5f02.jpg" alt="1622540733603.jpg"><span class="image-caption">1622540733603.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazkajnejj61ww15ywjr02.jpg" alt="1622540555676.jpg"><span class="image-caption">1622540555676.jpg</span><br>所以想先手动更新一波证书，然而登录Coding之后发现并不是证书的问题，而是CodingPage旧版直接停服了，必须更新才行：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazp0008pj62l20wuk0u02.jpg" alt="1622532281585.jpg"><span class="image-caption">1622532281585.jpg</span><br>于是新的一波折腾又开始了，为了以后温故知新，我把折腾过程全程截图保存了下来，就有了这篇博客。</p>
-<h2 id="CodingPages升级腾讯云服务"><a href="#CodingPages升级腾讯云服务" class="headerlink" title="CodingPages升级腾讯云服务"></a>CodingPages升级腾讯云服务</h2><h3 id="绑定腾讯云账号"><a href="#绑定腾讯云账号" class="headerlink" title="绑定腾讯云账号"></a>绑定腾讯云账号</h3><p>先按照升级提示绑定腾讯云账号，看来腾讯是和Coding有某种关系了(后来搜了下好像是CodingPages被腾讯收购了，以后底层全用腾讯云服务，Coding这边只是一个UI的壳子)，总之不管他们啥关系，先升级再说，账号绑定完成后又开启了新的关卡：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grb00pbdghj62e80wkq9s02.jpg" alt="1622538814928.jpg"><span class="image-caption">1622538814928.jpg</span><br>然后按照指示一顿操作，终于可以使用新版Coding Pages了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyc2uyn8j62g812ijz702.jpg" alt="1622539615813.jpg"><span class="image-caption">1622539615813.jpg</span></p>
-<h3 id="旧版网站升级"><a href="#旧版网站升级" class="headerlink" title="旧版网站升级"></a>旧版网站升级</h3><p>由于我是要升级之前的网站，所以进入旧版网站列表，找到之前的静态网站，在右上角看到了「升级至新版」的入口：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydne1euj62780kstcx02.jpg" alt="1622539639577.jpg"><span class="image-caption">1622539639577.jpg</span><br>于是果断进入，选择相应的网站类型，最开始我选择了自己使用的Hexo，后来部署报错了，是因为我并没有把Hexo的配置文件上传到仓库(因为里面有许多我自己使用的插件私钥和密码，不能上传到public的仓库中)。所以后来又选择了静态网站，才部署成功：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyez5zm5j60qw0lhabu02.jpg" alt="1622539686983.jpg"><span class="image-caption">1622539686983.jpg</span><br>之后又按照提示，去阿里云更改域名的CNAME设置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd41p2dwuj61ac0g840o02.jpg" alt="1623303229231.jpg"><span class="image-caption">1623303229231.jpg</span><br>完成设置后(顺便改了下网站名字)，新版的网站就开始部署了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcygr10k3j61bs0mewha02.jpg" alt="1622539996713.jpg"><span class="image-caption">1622539996713.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyh19l0uj613r07y74z02.jpg" alt="1622540194028.jpg"><span class="image-caption">1622540194028.jpg</span><br>部署成功后，看到基本信息，有两个网站地址，一个是我的自定义域名，一个是CodingPages提供的访问域名：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd4c4r47uj625210cq8e02.jpg" alt="1623303831826.jpg"><span class="image-caption">1623303831826.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyhzt9osj624w0pudm002.jpg" alt="1622540298235.jpg"><span class="image-caption">1622540298235.jpg</span></p>
-<h3 id="申请腾讯云证书"><a href="#申请腾讯云证书" class="headerlink" title="申请腾讯云证书"></a>申请腾讯云证书</h3><p>切换到自定义域名页面，发现Https证书还在审核中：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyk7l6l7j61620f2jtx02.jpg" alt="1622541431872.jpg"><span class="image-caption">1622541431872.jpg</span><br>点击「审核中」，就跳转到了腾讯云页面，新的关卡又增加了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcykxfwymj61ag0ic0v902.jpg" alt="1622541560047.jpg"><span class="image-caption">1622541560047.jpg</span><br>所以根据提示步骤申请证书，进行域名验证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyl51q8ej61610j0n0502.jpg" alt="1622541615687.jpg"><span class="image-caption">1622541615687.jpg</span><br>去阿里云添加一条TXT的记录进行验证(证书申请成功后就可以删掉这条验证了)：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyloweifj61040kuwg902.jpg" alt="1622541722382.jpg"><span class="image-caption">1622541722382.jpg</span><br>验证成功后，到了使用证书这一步，不过我们的证书其实已经签发成功了，并不需要自己手动安装，所以忽略掉后边的步骤：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcym15hk2j610y0p076f02.jpg" alt="1622541808007.jpg"><span class="image-caption">1622541808007.jpg</span><br>等到第二天再打开Coding页面，发现域名的证书审核已经通过了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcymo4m6lj61620fsdid02.jpg" alt="1622614304295.jpg"><span class="image-caption">1622614304295.jpg</span><br>之后再访问博客，可以看到证书已经更新了，到期日为明年6/1:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"><span class="image-caption">1623054748589.jpg</span></p>
-<h3 id="探索腾讯云"><a href="#探索腾讯云" class="headerlink" title="探索腾讯云"></a>探索腾讯云</h3><p>在腾讯云工作台可以看到证书详情，可以看到它同时帮我们开启了www的subdomain访问方式：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6tw6dw3j60ni0kuwfn02.jpg" alt="1623308612737.jpg"><span class="image-caption">1623308612737.jpg</span><br>也可以进行管理:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6ueay7lj62ke0l0n2i02.jpg" alt="1623308652667.jpg"><span class="image-caption">1623308652667.jpg</span><br>域名管理：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><span class="image-caption">1623308756991.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><span class="image-caption">1623308971575.jpg</span><br>然而，世上没有免费的午餐，腾讯云的服务是要收费的，就在我刚开通一天后，它就给我发了欠费的信息：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd741nv9bj60bl0mwwgr02.jpg" height="400" width="200"><br>虽然不贵，但比起之前免费的CodingPages服务，还是有些差距。而且这里的证书期限是一年，一年以后又不知道有啥幺蛾子，先这样吧，就这样破罐子破摔的凑合着用，我已经充值了10块钱，看它能花多少。</p>
-<h2 id="GithubPages问题解决"><a href="#GithubPages问题解决" class="headerlink" title="GithubPages问题解决"></a>GithubPages问题解决</h2><p>到这里，CodingPages的升级已经完成了，然而我的博客还部署在了GithubPages，所以要再看看GithubPages的服务是否正常。不看不知道，一看吓一跳，果然有问题 <mark class="label warning">Domain's DNS record could not be retrieved...</mark>：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydajfznj61mk17oqba02.jpg" alt="1622539358158.jpg"><span class="image-caption">1622539358158.jpg</span><br>说我的DNS配置不对，要加CNAME。但是我有CNAME呀，不知道为啥有这个报错，于是为了解决这个报错，我开始了漫长的旅途。</p>
-<h3 id="百度-Google"><a href="#百度-Google" class="headerlink" title="百度&amp;Google"></a>百度&amp;Google</h3><p>首先，是在百度和谷歌寻找解决方案，找到了几种方案：<br><span id="inline-toc">1.</span> <a href="https://www.sawlove.com/github-custom-domain-use-https.html">重新绑定域名</a>：是说先把域名remove，然后再重新添加，但是没有解决我的问题。<br><span id="inline-toc">2.</span> 加上www域名前缀：是说在代码库的CNAME文件里给域名加上www前缀，然后在域名解析里也加上www，最后绑定www前缀的域名。但还是没有解决我的问题。<br><span id="inline-toc">3.</span> 让Github自己添加CNAME文件：是说绑定域名后Github会自动在代码库里加上CNAME文件，所以要先把CNAME文件删掉，再重新绑定域名等Github添加文件，然而我照做之后发现Github并没有自动给我添加CNAME文件，所以依然没有解决我的问题。</p>
-<p>总之，折腾了半天，问题还是没有解决，瞧把我给折腾的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd8vxs7z9j60qs1ac0wv02.jpg" height="600" width="350"><br>而且遇到了更多的报错，比如<mark class="label danger">Domain does not resolve to the GitHub Pages server... ：</mark><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vkp1gaj61lu0lg43f02.jpg" alt="1622785367590.jpg"><span class="image-caption">1622785367590.jpg</span><br>再比如：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30evnlej61mc0fqadr02.jpg" alt="1623129057591.jpg"><span class="image-caption">1623129057591.jpg</span></p>
-<p>真的累了，甚至想着就用github.io访问好了，GithubPages就不绑定域名了吧：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2tkvgn8j626o0gw78b02.jpg" alt="1622712116380.jpg"><span class="image-caption">1622712116380.jpg</span></p>
-<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>想归想，问题还是要解决的。<br>既然网上的办法解决不了，就乖乖去看官方文档吧，于是直接点击报错信息里的learn more，打开官方文档，开始通读全文：<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a><br>文档里提供了两种自定义域名的绑定配置方法，一种是subdomian，比如 <a href="http://www.example.com/">www.example.com</a> 或者 blog.example.com 这样的，显然我不是这种类型；另一种是apex domain，比如example.com这种的，那可不就是我的域名类型嘛，好，找到方向了。</p>
-<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="配置apex-domain"><a href="#配置apex-domain" class="headerlink" title="配置apex domain"></a>配置apex domain</h4><p>然后就按照文档里描述的apex domain的配置方法开始操作，直接跳到第五步：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda1c6edtj61bk0iatcw02.jpg" alt="1623315661401.jpg"><span class="image-caption">1623315661401.jpg</span><br>说让我添加A记录指向GithubPages提供的这些IP地址，好嘛，安排！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda3xez8lj61qg0a8jte02.jpg" alt="1623315810471.jpg"><span class="image-caption">1623315810471.jpg</span><br>然后又让我用命令验证配置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda6byoyhj61920h8gp102.jpg" alt="1623315955716.jpg"><span class="image-caption">1623315955716.jpg</span><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/pmkCEzlanyQBiD5.png" alt="image.png"><span class="image-caption">image.png</span><br>接着让我加CNAME文件到我的代码库里：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdae57e55j618s05cgne02.jpg" alt="1623316383313.jpg"><span class="image-caption">1623316383313.jpg</span><br>这个本来就有，最后是可选项，开启强制Https，也打开了，但据说要等24小时：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdaihv34jj61a60d041302.jpg" alt="1623316394352.jpg"><span class="image-caption">1623316394352.jpg</span><br>好，所有的配置都没毛病，可以添加域名了，那你倒是说说，为毛这个错它还在？！！！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vvzu3nj62am18agvy02.jpg" alt="1622786325436.jpg"><span class="image-caption">1622786325436.jpg</span><br>唉，心态崩了。<br>后来问题解决之后，冷静下来想想，此时报错可能有两个原因，一个是我没等够24小时，等够时间后check again应该就没错了；或者我不开启https应该也不会有错，但我还是想有https的，所以没有采取这种做法。<br>但是，我的关注点在这个报错，为毛我绑定的是没有www的域名，报错里却有www的subdomain?<br>好吧，接着看官方文档。</p>
-<h4 id="配置www-subdomain"><a href="#配置www-subdomain" class="headerlink" title="配置www subdomain"></a>配置www subdomain</h4><p>官方文档上说，如果用的是apex domain，推荐再给它配置www subdomain，好吧，就按你推荐的来：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb5pbocfj61a406stap02.jpg" alt="1623317938517.jpg"><span class="image-caption">1623317938517.jpg</span><br>上边还说，给apex domain配置www submain的前提是你已经按照上边的方法配置好了apex domain，虽然我的报错还在，但我认为自己还是配置好了apex domain的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb6kmrwgj619q05gjt502.jpg" alt="1623317950652.jpg"><span class="image-caption">1623317950652.jpg</span><br>所以按它说的接着来，第一步，域名解析里添加一个www的CNAME记录，指向 xxx.github.io：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb79fv7hj619y0as42e02.jpg" alt="1623317969868.jpg"><span class="image-caption">1623317969868.jpg</span><br>安排：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbb8h8q7j624805kt9v02.jpg" alt="1623318311090.jpg"><span class="image-caption">1623318311090.jpg</span><br>接着把代码库里的CNAME文件也加上www：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbct4avzj62640n042t02.jpg" alt="1623318380827.jpg"><span class="image-caption">1623318380827.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbcyyp7nj624y0me42v02.jpg" alt="1623318402390.jpg"><span class="image-caption">1623318402390.jpg</span><br>第二步，命令验证配置是否正确：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb7f8we4j61ac0dgad002.jpg" alt="1623317982442.jpg"><span class="image-caption">1623317982442.jpg</span><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/LeoMy5p6SKGX71O.png" alt="image.png"><span class="image-caption">image.png</span><br>到这里，配置就已经结束了，激动人心的时候到来了，绑定我的www域名，竟然。。。。。成功了！！！！！小绿勾也打上了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30nk1faj60s40ku77202.jpg" alt="1623130387731.jpg"><span class="image-caption">1623130387731.jpg</span><br>而且也开启了Https，由于我配置www subdomain是在配置apex domain 24小时之后，此时是已经等够24小时的，所以可以开启Https没有报错。<br>血的教训告诉我们，官方文档是真的有用。所以遇到问题，还是先看看人家让你看的官方文档，然后再搜其他的办法。</p>
-<h2 id="为啥要用CodingPages"><a href="#为啥要用CodingPages" class="headerlink" title="为啥要用CodingPages"></a>为啥要用CodingPages</h2><h3 id="CodingPages在哪"><a href="#CodingPages在哪" class="headerlink" title="CodingPages在哪"></a>CodingPages在哪</h3><p>配置好了GithubPages，目前我的个人域名DNS设置是：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3eg62esj61620gkadb02.jpg" alt="1623301889628.jpg"><span class="image-caption">1623301889628.jpg</span><br>通过命令再次验证DNS设置：<br><img data-src="https://i.loli.net/2021/06/11/JXKaRVnq3iC7GkQ.png" alt="image.png"><span class="image-caption">image.png</span><br>有没有发现什么问题？<br>是呀，CodingPages的作用在哪呢？验证到的DNS设置只指向了GithubPages服务，而且无论是访问 <a href="https://jmyblog.top/">https://jmyblog.top</a> 还是 <a href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ，显示的Https证书都是Let’s Encrypt签发的：<br><img data-src="https://i.loli.net/2021/06/11/k4UF5refWqgYNCz.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="CodingPages部署节点"><a href="#CodingPages部署节点" class="headerlink" title="CodingPages部署节点"></a>CodingPages部署节点</h3><p>然后再次探索CodingPages，发现它部署的节点是香港：<br><img data-src="https://i.loli.net/2021/06/11/8TQYjyKRqkbOnhw.png" alt="image.png"><span class="image-caption">image.png</span><br>想部署到其他节点还得备案才行：<br><img data-src="https://i.loli.net/2021/06/11/ltPUcyOdvebphfB.png" alt="image.png"><span class="image-caption">image.png</span><br>于是连接一个香港区域的VPN，然后再通过命令再次验证DNS设置，终于看到了指向CodingPages的信息和腾讯云签发的证书：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2xyjpa7j616409ejtt02.jpg" alt="1623054662478.jpg"><span class="image-caption">1623054662478.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"><span class="image-caption">1623054748589.jpg</span></p>
-<h3 id="腾讯云CDN加速"><a href="#腾讯云CDN加速" class="headerlink" title="腾讯云CDN加速"></a>腾讯云CDN加速</h3><p>登录腾讯云，发现它对站点的加速和服务区域都是境外：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><span class="image-caption">1623308756991.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><span class="image-caption">1623308971575.jpg</span><br>想切换加速区域还是得备案才行，而且还得另付国内加速的费用：<br><img data-src="https://i.loli.net/2021/06/11/6N8ZSgoWrUtIQcb.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/06/11/n5TdHZtcaL7Azs6.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>但是备案太麻烦了，而且就我这个小破站估计也没多少人看，孤芳自赏罢了，也不至于搞这么多服务。所以在已经有了GithubPages之外，我需要CodingPages的理由是什么呢？</p>
-<h3 id="使用CodingPages的理由"><a href="#使用CodingPages的理由" class="headerlink" title="使用CodingPages的理由"></a>使用CodingPages的理由</h3><p>从前用CodingPages是想用它免费的国内加速服务，现在虽然不备案就不能加速了，但仔细想了想，虽然我不想备案，也不想开启高端的CDN加速服务，还是有一些理由让我使用它的：</p>
-<p><span id="inline-toc">1.</span> 博客内容推送到百度，理由如下：</p>
-<p><img data-src="https://i.loli.net/2021/06/11/6p5iyxc4XZrM9Yo.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p><span id="inline-toc">2.</span> 一个备胎，为了保险起见，同时使用两个服务还是不错的，虽然它们的功能有一些重复。<br><span id="inline-toc">3.</span> 虽然目前只有国外加速服务，好歹能给国外的朋友提高访问体验啊，而且万一以后又想备案呢，留条后路总没错。<br><span id="inline-toc">4.</span> 虽然用它的理由的确乏善可陈，但是配都配好了，我上边折腾这么久也不能白折腾。</p>
-<h2 id="站点验证"><a href="#站点验证" class="headerlink" title="站点验证"></a>站点验证</h2><p>到这里，博客配置就已经结束了，但还是要通过第三方工具验证博客的可访问性和速度。</p>
-<h3 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h3><p>之前做了百度SEO优化，所以使用百度站长工具验证站点，首先是Https认证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2zj0qnrj61qk0s6ae502.jpg" alt="1623056320673.jpg"><span class="image-caption">1623056320673.jpg</span><br>没毛病，这Https是真的，再看看URL抓取：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3hl9bjdj626i0wa0zl02.jpg" alt="1623302070854.jpg"><span class="image-caption">1623302070854.jpg</span><br>也没毛病，看来百度可以收录我网站的URL，访问抓取都可以，放心了。</p>
-<h3 id="Google收录"><a href="#Google收录" class="headerlink" title="Google收录"></a>Google收录</h3><p>也做过Google的SEO优化，所以使用Google站点工具，先连上站点验证所有权：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2u22ec8j62l418kqah02.jpg" alt="1622714334036.jpg"><span class="image-caption">1622714334036.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2ugu9a6j62la12ewit02.jpg" alt="1622714361935.jpg"><span class="image-caption">1622714361935.jpg</span><br>然后再上传一次sitemap，确保Google可以抓取网站的URL:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3012an4j62co0sagq802.jpg" alt="1623122594184.jpg"><span class="image-caption">1623122594184.jpg</span><br>没毛病，看来也ok:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre98vekm5j61j20xcjyc02.jpg" alt="1623388402076.jpg"><span class="image-caption">1623388402076.jpg</span></p>
-<h3 id="访问速度"><a href="#访问速度" class="headerlink" title="访问速度"></a>访问速度</h3><p>通过 <a href="http://tool.chinaz.com/speedtest/">这个网站</a> 可以检测博客的访问速度，在国内测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> ，国际测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> 和 <a href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ， 结果都还不错：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9o9veadj61n41b411r02.jpg" alt="1623389603223.jpg"><span class="image-caption">1623389603223.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9omgv7sj61ne0suwjw02.jpg" alt="1623389638753.jpg"><span class="image-caption">1623389638753.jpg</span><br><img data-src="https://i.loli.net/2021/06/11/jIZwMAUEbsK4VPa.png" alt="image.png"><span class="image-caption">image.png</span><br>本来只是想记录自己是咋升级，咋解决问题的，结果却写了这么多<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，可能有一些自己的思考吧。先这样凑合着用吧，这样折腾完了，至少以后不用三个月再手动申请证书了。</p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>GithubPages</tag>
-        <tag>CodingPages</tag>
-        <tag>腾讯云</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的书架</title>
     <url>/MyBooks/</url>
     <content><![CDATA[<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><blockquote class="blockquote-center">
@@ -1746,6 +1624,128 @@ danger
       </categories>
       <tags>
         <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客Pages服务升级</title>
+    <url>/PageServiceUpdate/</url>
+    <content><![CDATA[<img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1graz9zi8goj61qm15oah202.jpg">
+
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><p>首先我的博客是同时部署在GithubPages和CodingPages上的，GithubPages提供国外访问，CodingPages加速国内访问。两个服务都加了我的自定义域名 <mark class="label info">jmyblog.top</mark>，且都开启了Https。</p>
+<p>两个服务给我的自定义域名申请的Https证书都是由国外的Let’s Encrypt机构签发，一般这个证书有效期只有三个月。由于我的域名解析设置，在证书快到期时，GithubPages可以帮我自动续申请证书，而CodingPages却不能，这就导致证书到期后在国内不能通过Https的方式访问我的博客，所以每次证书快到期时，我都要登录CodingPages <a href="https://jmyblog.top/HttpsUpdate/">手动续申证书</a>。</p>
+<p>去年的时候，CodingPages服务就一直给我发短信说是升级啥的，但我没有关注，我一直是个破罐子破摔的人，只要它没有停服，博客还能访问就懒的升级。<br>直到有一天我打开博客的时候出现异常，有时是直接访问不了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjgogovj624u10stbw02.jpg" alt="1622540423142.jpg"><span class="image-caption">1622540423142.jpg</span><br>有时是一些报错，好像是https证书过期之类：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazjzp6g2j61xo1g8n5f02.jpg" alt="1622540733603.jpg"><span class="image-caption">1622540733603.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazkajnejj61ww15ywjr02.jpg" alt="1622540555676.jpg"><span class="image-caption">1622540555676.jpg</span><br>所以想先手动更新一波证书，然而登录Coding之后发现并不是证书的问题，而是CodingPage旧版直接停服了，必须更新才行：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grazp0008pj62l20wuk0u02.jpg" alt="1622532281585.jpg"><span class="image-caption">1622532281585.jpg</span><br>于是新的一波折腾又开始了，为了以后温故知新，我把折腾过程全程截图保存了下来，就有了这篇博客。</p>
+<h2 id="CodingPages升级腾讯云服务"><a href="#CodingPages升级腾讯云服务" class="headerlink" title="CodingPages升级腾讯云服务"></a>CodingPages升级腾讯云服务</h2><h3 id="绑定腾讯云账号"><a href="#绑定腾讯云账号" class="headerlink" title="绑定腾讯云账号"></a>绑定腾讯云账号</h3><p>先按照升级提示绑定腾讯云账号，看来腾讯是和Coding有某种关系了(后来搜了下好像是CodingPages被腾讯收购了，以后底层全用腾讯云服务，Coding这边只是一个UI的壳子)，总之不管他们啥关系，先升级再说，账号绑定完成后又开启了新的关卡：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grb00pbdghj62e80wkq9s02.jpg" alt="1622538814928.jpg"><span class="image-caption">1622538814928.jpg</span><br>然后按照指示一顿操作，终于可以使用新版Coding Pages了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyc2uyn8j62g812ijz702.jpg" alt="1622539615813.jpg"><span class="image-caption">1622539615813.jpg</span></p>
+<h3 id="旧版网站升级"><a href="#旧版网站升级" class="headerlink" title="旧版网站升级"></a>旧版网站升级</h3><p>由于我是要升级之前的网站，所以进入旧版网站列表，找到之前的静态网站，在右上角看到了「升级至新版」的入口：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydne1euj62780kstcx02.jpg" alt="1622539639577.jpg"><span class="image-caption">1622539639577.jpg</span><br>于是果断进入，选择相应的网站类型，最开始我选择了自己使用的Hexo，后来部署报错了，是因为我并没有把Hexo的配置文件上传到仓库(因为里面有许多我自己使用的插件私钥和密码，不能上传到public的仓库中)。所以后来又选择了静态网站，才部署成功：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyez5zm5j60qw0lhabu02.jpg" alt="1622539686983.jpg"><span class="image-caption">1622539686983.jpg</span><br>之后又按照提示，去阿里云更改域名的CNAME设置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd41p2dwuj61ac0g840o02.jpg" alt="1623303229231.jpg"><span class="image-caption">1623303229231.jpg</span><br>完成设置后(顺便改了下网站名字)，新版的网站就开始部署了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcygr10k3j61bs0mewha02.jpg" alt="1622539996713.jpg"><span class="image-caption">1622539996713.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyh19l0uj613r07y74z02.jpg" alt="1622540194028.jpg"><span class="image-caption">1622540194028.jpg</span><br>部署成功后，看到基本信息，有两个网站地址，一个是我的自定义域名，一个是CodingPages提供的访问域名：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd4c4r47uj625210cq8e02.jpg" alt="1623303831826.jpg"><span class="image-caption">1623303831826.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyhzt9osj624w0pudm002.jpg" alt="1622540298235.jpg"><span class="image-caption">1622540298235.jpg</span></p>
+<h3 id="申请腾讯云证书"><a href="#申请腾讯云证书" class="headerlink" title="申请腾讯云证书"></a>申请腾讯云证书</h3><p>切换到自定义域名页面，发现Https证书还在审核中：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyk7l6l7j61620f2jtx02.jpg" alt="1622541431872.jpg"><span class="image-caption">1622541431872.jpg</span><br>点击「审核中」，就跳转到了腾讯云页面，新的关卡又增加了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcykxfwymj61ag0ic0v902.jpg" alt="1622541560047.jpg"><span class="image-caption">1622541560047.jpg</span><br>所以根据提示步骤申请证书，进行域名验证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyl51q8ej61610j0n0502.jpg" alt="1622541615687.jpg"><span class="image-caption">1622541615687.jpg</span><br>去阿里云添加一条TXT的记录进行验证(证书申请成功后就可以删掉这条验证了)：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcyloweifj61040kuwg902.jpg" alt="1622541722382.jpg"><span class="image-caption">1622541722382.jpg</span><br>验证成功后，到了使用证书这一步，不过我们的证书其实已经签发成功了，并不需要自己手动安装，所以忽略掉后边的步骤：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcym15hk2j610y0p076f02.jpg" alt="1622541808007.jpg"><span class="image-caption">1622541808007.jpg</span><br>等到第二天再打开Coding页面，发现域名的证书审核已经通过了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcymo4m6lj61620fsdid02.jpg" alt="1622614304295.jpg"><span class="image-caption">1622614304295.jpg</span><br>之后再访问博客，可以看到证书已经更新了，到期日为明年6/1:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"><span class="image-caption">1623054748589.jpg</span></p>
+<h3 id="探索腾讯云"><a href="#探索腾讯云" class="headerlink" title="探索腾讯云"></a>探索腾讯云</h3><p>在腾讯云工作台可以看到证书详情，可以看到它同时帮我们开启了www的subdomain访问方式：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6tw6dw3j60ni0kuwfn02.jpg" alt="1623308612737.jpg"><span class="image-caption">1623308612737.jpg</span><br>也可以进行管理:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6ueay7lj62ke0l0n2i02.jpg" alt="1623308652667.jpg"><span class="image-caption">1623308652667.jpg</span><br>域名管理：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><span class="image-caption">1623308756991.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><span class="image-caption">1623308971575.jpg</span><br>然而，世上没有免费的午餐，腾讯云的服务是要收费的，就在我刚开通一天后，它就给我发了欠费的信息：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd741nv9bj60bl0mwwgr02.jpg" height="400" width="200"><br>虽然不贵，但比起之前免费的CodingPages服务，还是有些差距。而且这里的证书期限是一年，一年以后又不知道有啥幺蛾子，先这样吧，就这样破罐子破摔的凑合着用，我已经充值了10块钱，看它能花多少。</p>
+<h2 id="GithubPages问题解决"><a href="#GithubPages问题解决" class="headerlink" title="GithubPages问题解决"></a>GithubPages问题解决</h2><p>到这里，CodingPages的升级已经完成了，然而我的博客还部署在了GithubPages，所以要再看看GithubPages的服务是否正常。不看不知道，一看吓一跳，果然有问题 <mark class="label warning">Domain's DNS record could not be retrieved...</mark>：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grcydajfznj61mk17oqba02.jpg" alt="1622539358158.jpg"><span class="image-caption">1622539358158.jpg</span><br>说我的DNS配置不对，要加CNAME。但是我有CNAME呀，不知道为啥有这个报错，于是为了解决这个报错，我开始了漫长的旅途。</p>
+<h3 id="百度-Google"><a href="#百度-Google" class="headerlink" title="百度&amp;Google"></a>百度&amp;Google</h3><p>首先，是在百度和谷歌寻找解决方案，找到了几种方案：<br><span id="inline-toc">1.</span> <a href="https://www.sawlove.com/github-custom-domain-use-https.html">重新绑定域名</a>：是说先把域名remove，然后再重新添加，但是没有解决我的问题。<br><span id="inline-toc">2.</span> 加上www域名前缀：是说在代码库的CNAME文件里给域名加上www前缀，然后在域名解析里也加上www，最后绑定www前缀的域名。但还是没有解决我的问题。<br><span id="inline-toc">3.</span> 让Github自己添加CNAME文件：是说绑定域名后Github会自动在代码库里加上CNAME文件，所以要先把CNAME文件删掉，再重新绑定域名等Github添加文件，然而我照做之后发现Github并没有自动给我添加CNAME文件，所以依然没有解决我的问题。</p>
+<p>总之，折腾了半天，问题还是没有解决，瞧把我给折腾的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd8vxs7z9j60qs1ac0wv02.jpg" height="600" width="350"><br>而且遇到了更多的报错，比如<mark class="label danger">Domain does not resolve to the GitHub Pages server... ：</mark><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vkp1gaj61lu0lg43f02.jpg" alt="1622785367590.jpg"><span class="image-caption">1622785367590.jpg</span><br>再比如：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30evnlej61mc0fqadr02.jpg" alt="1623129057591.jpg"><span class="image-caption">1623129057591.jpg</span></p>
+<p>真的累了，甚至想着就用github.io访问好了，GithubPages就不绑定域名了吧：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2tkvgn8j626o0gw78b02.jpg" alt="1622712116380.jpg"><span class="image-caption">1622712116380.jpg</span></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>想归想，问题还是要解决的。<br>既然网上的办法解决不了，就乖乖去看官方文档吧，于是直接点击报错信息里的learn more，打开官方文档，开始通读全文：<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a><br>文档里提供了两种自定义域名的绑定配置方法，一种是subdomian，比如 <a href="http://www.example.com/">www.example.com</a> 或者 blog.example.com 这样的，显然我不是这种类型；另一种是apex domain，比如example.com这种的，那可不就是我的域名类型嘛，好，找到方向了。</p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h4 id="配置apex-domain"><a href="#配置apex-domain" class="headerlink" title="配置apex domain"></a>配置apex domain</h4><p>然后就按照文档里描述的apex domain的配置方法开始操作，直接跳到第五步：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda1c6edtj61bk0iatcw02.jpg" alt="1623315661401.jpg"><span class="image-caption">1623315661401.jpg</span><br>说让我添加A记录指向GithubPages提供的这些IP地址，好嘛，安排！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda3xez8lj61qg0a8jte02.jpg" alt="1623315810471.jpg"><span class="image-caption">1623315810471.jpg</span><br>然后又让我用命令验证配置：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grda6byoyhj61920h8gp102.jpg" alt="1623315955716.jpg"><span class="image-caption">1623315955716.jpg</span><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/pmkCEzlanyQBiD5.png" alt="image.png"><span class="image-caption">image.png</span><br>接着让我加CNAME文件到我的代码库里：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdae57e55j618s05cgne02.jpg" alt="1623316383313.jpg"><span class="image-caption">1623316383313.jpg</span><br>这个本来就有，最后是可选项，开启强制Https，也打开了，但据说要等24小时：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdaihv34jj61a60d041302.jpg" alt="1623316394352.jpg"><span class="image-caption">1623316394352.jpg</span><br>好，所有的配置都没毛病，可以添加域名了，那你倒是说说，为毛这个错它还在？！！！：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2vvzu3nj62am18agvy02.jpg" alt="1622786325436.jpg"><span class="image-caption">1622786325436.jpg</span><br>唉，心态崩了。<br>后来问题解决之后，冷静下来想想，此时报错可能有两个原因，一个是我没等够24小时，等够时间后check again应该就没错了；或者我不开启https应该也不会有错，但我还是想有https的，所以没有采取这种做法。<br>但是，我的关注点在这个报错，为毛我绑定的是没有www的域名，报错里却有www的subdomain?<br>好吧，接着看官方文档。</p>
+<h4 id="配置www-subdomain"><a href="#配置www-subdomain" class="headerlink" title="配置www subdomain"></a>配置www subdomain</h4><p>官方文档上说，如果用的是apex domain，推荐再给它配置www subdomain，好吧，就按你推荐的来：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb5pbocfj61a406stap02.jpg" alt="1623317938517.jpg"><span class="image-caption">1623317938517.jpg</span><br>上边还说，给apex domain配置www submain的前提是你已经按照上边的方法配置好了apex domain，虽然我的报错还在，但我认为自己还是配置好了apex domain的：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb6kmrwgj619q05gjt502.jpg" alt="1623317950652.jpg"><span class="image-caption">1623317950652.jpg</span><br>所以按它说的接着来，第一步，域名解析里添加一个www的CNAME记录，指向 xxx.github.io：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb79fv7hj619y0as42e02.jpg" alt="1623317969868.jpg"><span class="image-caption">1623317969868.jpg</span><br>安排：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbb8h8q7j624805kt9v02.jpg" alt="1623318311090.jpg"><span class="image-caption">1623318311090.jpg</span><br>接着把代码库里的CNAME文件也加上www：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbct4avzj62640n042t02.jpg" alt="1623318380827.jpg"><span class="image-caption">1623318380827.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdbcyyp7nj624y0me42v02.jpg" alt="1623318402390.jpg"><span class="image-caption">1623318402390.jpg</span><br>第二步，命令验证配置是否正确：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grdb7f8we4j61ac0dgad002.jpg" alt="1623317982442.jpg"><span class="image-caption">1623317982442.jpg</span><br>没毛病：<br><img data-src="https://i.loli.net/2021/06/11/LeoMy5p6SKGX71O.png" alt="image.png"><span class="image-caption">image.png</span><br>到这里，配置就已经结束了，激动人心的时候到来了，绑定我的www域名，竟然。。。。。成功了！！！！！小绿勾也打上了：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd30nk1faj60s40ku77202.jpg" alt="1623130387731.jpg"><span class="image-caption">1623130387731.jpg</span><br>而且也开启了Https，由于我配置www subdomain是在配置apex domain 24小时之后，此时是已经等够24小时的，所以可以开启Https没有报错。<br>血的教训告诉我们，官方文档是真的有用。所以遇到问题，还是先看看人家让你看的官方文档，然后再搜其他的办法。</p>
+<h2 id="为啥要用CodingPages"><a href="#为啥要用CodingPages" class="headerlink" title="为啥要用CodingPages"></a>为啥要用CodingPages</h2><h3 id="CodingPages在哪"><a href="#CodingPages在哪" class="headerlink" title="CodingPages在哪"></a>CodingPages在哪</h3><p>配置好了GithubPages，目前我的个人域名DNS设置是：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3eg62esj61620gkadb02.jpg" alt="1623301889628.jpg"><span class="image-caption">1623301889628.jpg</span><br>通过命令再次验证DNS设置：<br><img data-src="https://i.loli.net/2021/06/11/JXKaRVnq3iC7GkQ.png" alt="image.png"><span class="image-caption">image.png</span><br>有没有发现什么问题？<br>是呀，CodingPages的作用在哪呢？验证到的DNS设置只指向了GithubPages服务，而且无论是访问 <a href="https://jmyblog.top/">https://jmyblog.top</a> 还是 <a href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ，显示的Https证书都是Let’s Encrypt签发的：<br><img data-src="https://i.loli.net/2021/06/11/k4UF5refWqgYNCz.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="CodingPages部署节点"><a href="#CodingPages部署节点" class="headerlink" title="CodingPages部署节点"></a>CodingPages部署节点</h3><p>然后再次探索CodingPages，发现它部署的节点是香港：<br><img data-src="https://i.loli.net/2021/06/11/8TQYjyKRqkbOnhw.png" alt="image.png"><span class="image-caption">image.png</span><br>想部署到其他节点还得备案才行：<br><img data-src="https://i.loli.net/2021/06/11/ltPUcyOdvebphfB.png" alt="image.png"><span class="image-caption">image.png</span><br>于是连接一个香港区域的VPN，然后再通过命令再次验证DNS设置，终于看到了指向CodingPages的信息和腾讯云签发的证书：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2xyjpa7j616409ejtt02.jpg" alt="1623054662478.jpg"><span class="image-caption">1623054662478.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2yiir5aj61620gcjv002.jpg" alt="1623054748589.jpg"><span class="image-caption">1623054748589.jpg</span></p>
+<h3 id="腾讯云CDN加速"><a href="#腾讯云CDN加速" class="headerlink" title="腾讯云CDN加速"></a>腾讯云CDN加速</h3><p>登录腾讯云，发现它对站点的加速和服务区域都是境外：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6uvk1caj619z08iabi02.jpg" alt="1623308756991.jpg"><span class="image-caption">1623308756991.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd6v2r0blj614n0jeq5402.jpg" alt="1623308971575.jpg"><span class="image-caption">1623308971575.jpg</span><br>想切换加速区域还是得备案才行，而且还得另付国内加速的费用：<br><img data-src="https://i.loli.net/2021/06/11/6N8ZSgoWrUtIQcb.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/06/11/n5TdHZtcaL7Azs6.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>但是备案太麻烦了，而且就我这个小破站估计也没多少人看，孤芳自赏罢了，也不至于搞这么多服务。所以在已经有了GithubPages之外，我需要CodingPages的理由是什么呢？</p>
+<h3 id="使用CodingPages的理由"><a href="#使用CodingPages的理由" class="headerlink" title="使用CodingPages的理由"></a>使用CodingPages的理由</h3><p>从前用CodingPages是想用它免费的国内加速服务，现在虽然不备案就不能加速了，但仔细想了想，虽然我不想备案，也不想开启高端的CDN加速服务，还是有一些理由让我使用它的：</p>
+<p><span id="inline-toc">1.</span> 博客内容推送到百度，理由如下：</p>
+<p><img data-src="https://i.loli.net/2021/06/11/6p5iyxc4XZrM9Yo.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p><span id="inline-toc">2.</span> 一个备胎，为了保险起见，同时使用两个服务还是不错的，虽然它们的功能有一些重复。<br><span id="inline-toc">3.</span> 虽然目前只有国外加速服务，好歹能给国外的朋友提高访问体验啊，而且万一以后又想备案呢，留条后路总没错。<br><span id="inline-toc">4.</span> 虽然用它的理由的确乏善可陈，但是配都配好了，我上边折腾这么久也不能白折腾。</p>
+<h2 id="站点验证"><a href="#站点验证" class="headerlink" title="站点验证"></a>站点验证</h2><p>到这里，博客配置就已经结束了，但还是要通过第三方工具验证博客的可访问性和速度。</p>
+<h3 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h3><p>之前做了百度SEO优化，所以使用百度站长工具验证站点，首先是Https认证：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2zj0qnrj61qk0s6ae502.jpg" alt="1623056320673.jpg"><span class="image-caption">1623056320673.jpg</span><br>没毛病，这Https是真的，再看看URL抓取：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3hl9bjdj626i0wa0zl02.jpg" alt="1623302070854.jpg"><span class="image-caption">1623302070854.jpg</span><br>也没毛病，看来百度可以收录我网站的URL，访问抓取都可以，放心了。</p>
+<h3 id="Google收录"><a href="#Google收录" class="headerlink" title="Google收录"></a>Google收录</h3><p>也做过Google的SEO优化，所以使用Google站点工具，先连上站点验证所有权：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2u22ec8j62l418kqah02.jpg" alt="1622714334036.jpg"><span class="image-caption">1622714334036.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd2ugu9a6j62la12ewit02.jpg" alt="1622714361935.jpg"><span class="image-caption">1622714361935.jpg</span><br>然后再上传一次sitemap，确保Google可以抓取网站的URL:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1grd3012an4j62co0sagq802.jpg" alt="1623122594184.jpg"><span class="image-caption">1623122594184.jpg</span><br>没毛病，看来也ok:<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre98vekm5j61j20xcjyc02.jpg" alt="1623388402076.jpg"><span class="image-caption">1623388402076.jpg</span></p>
+<h3 id="访问速度"><a href="#访问速度" class="headerlink" title="访问速度"></a>访问速度</h3><p>通过 <a href="http://tool.chinaz.com/speedtest/">这个网站</a> 可以检测博客的访问速度，在国内测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> ，国际测速 <a href="https://jmyblog.top/">https://jmyblog.top</a> 和 <a href="https://www.jmyblog.top/">https://www.jmyblog.top</a> ， 结果都还不错：<br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9o9veadj61n41b411r02.jpg" alt="1623389603223.jpg"><span class="image-caption">1623389603223.jpg</span><br><img data-src="http://ww1.sinaimg.cn/large/006UcYZmgy1gre9omgv7sj61ne0suwjw02.jpg" alt="1623389638753.jpg"><span class="image-caption">1623389638753.jpg</span><br><img data-src="https://i.loli.net/2021/06/11/jIZwMAUEbsK4VPa.png" alt="image.png"><span class="image-caption">image.png</span><br>本来只是想记录自己是咋升级，咋解决问题的，结果却写了这么多<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，可能有一些自己的思考吧。先这样凑合着用吧，这样折腾完了，至少以后不用三个月再手动申请证书了。</p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>GithubPages</tag>
+        <tag>CodingPages</tag>
+        <tag>腾讯云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>渗透测试初识</title>
+    <url>/Penetration-Test/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
+
+<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
+<p><enter></enter></p>
+<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
+
+
+<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
+<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
+<mark class="label primary">没有它之前怎么做</mark>
+<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
+<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
+<ul>
+<li>测试方法(黑盒/白盒/灰盒)</li>
+<li>目标(服务器/数据库/Web网站…)</li>
+<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
+</ul>
+<p><span id="inline-toc">2.</span> 测试过程</p>
+<mark class="label success">信息收集</mark>
+
+<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
+<mark class="label success">技术测试</mark>
+
+<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
+<mark class="label success">人员测试</mark>
+
+<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
+<p><span id="inline-toc">3.</span> 测试之后</p>
+<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
+<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
+<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
+<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
+<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
+<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
+<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
+<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
+<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
+<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
+</div>
+
+<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
+<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
+</div>
+
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
+<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>渗透测试</tag>
+        <tag>OWASP</tag>
       </tags>
   </entry>
   <entry>
@@ -2892,6 +2892,62 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
+
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
+<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
+<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
+<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default"><ul>
+<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
+<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
+<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
+</ul>
+</div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
+<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
+<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
+<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
+<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><mark class="label danger">Android原生Monkey</mark></li>
+<li><mark class="label danger">百度 SmartMonkey</mark></li>
+<li><mark class="label danger">腾讯 NewMonkey</mark></li>
+<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
+<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>敏捷测试浅谈</title>
     <url>/agile-test/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/09/16/XSmLbJgiMNPhHjA.png">
@@ -2970,62 +3026,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>敏捷测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试课程学习笔记第一弹：自动化测试理论</title>
-    <url>/auto-test-learning/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
-
-<blockquote>
-<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
-</blockquote>
-<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
-
-<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
-<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
-<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
-<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
-<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
-<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
-</ul>
-<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
-<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
-<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
-<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
-<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
-<div class="note default"><ul>
-<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
-<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
-<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
-</ul>
-</div>
-
-<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
-<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
-<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
-<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
-<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
-<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
-<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
-<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
-</ul>
-<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
-<ul>
-<li><mark class="label danger">Android原生Monkey</mark></li>
-<li><mark class="label danger">百度 SmartMonkey</mark></li>
-<li><mark class="label danger">腾讯 NewMonkey</mark></li>
-<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
-<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
-</ul>
-<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -3433,10 +3433,11 @@ public class Functions {
 <p>其实本来是想实现音乐播放时自动旋转的，为了这个和 Cursor 拉扯了好久，但由于iframe的限制并不能实现，就只能实现手动打开了。</p>
 <h3 id="过滤-livere-广告"><a href="#过滤-livere-广告" class="headerlink" title="过滤 livere 广告"></a>过滤 livere 广告</h3><p>之前livere评论区总是会出现广告，虽然不反对人家恰饭，但这些广告还是很影响博客观感的，让 Cursor 帮我在前端过滤掉了广告，看起来就清爽多了(应该也不影响人家恰饭吧)<br><img data-src="https://s2.loli.net/2025/06/25/rPOhcKXdyMjQ9e6.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/06/25/AuMIU4eHatOk6Vm.png" alt="After"><span class="image-caption">After</span></p>
 <h3 id="Algolia-搜索"><a href="#Algolia-搜索" class="headerlink" title="Algolia 搜索"></a>Algolia 搜索</h3><p>之前博客启用的是本地搜索，经常搜不到内容，现在换成了 Algolia 搜索，就能搜到了，还有统一的后台管理，只不过每次部署之前都得用 <mark class="label info">hexo algolia</mark> 推送index，但是问题不大 ：<br><img data-src="https://s2.loli.net/2025/06/25/8sN7IDVrcyEAdiP.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/06/25/TSzfp1QgYDMnoGt.png" alt="After"><span class="image-caption">After</span></p>
-<h3 id="博客翻译"><a href="#博客翻译" class="headerlink" title="博客翻译"></a>博客翻译</h3><p>右上角加了一个谷歌翻译的跳转链接，直接翻译当前页面。加这个是因为有外国友人看到了我的博客还说很治愈，难为他还能从中文得到治愈，那翻译之后可能会更治愈吧(玄学)。刚开始让Cursor帮我调用谷歌翻译API，直接在博客翻译，但还是没有谷歌翻译好用，不破坏页面原本的样式，而且hover还能显示原文，挺好用的，就不折腾了：</p>
+<h3 id="博客翻译"><a href="#博客翻译" class="headerlink" title="博客翻译"></a>博客翻译</h3><p>右上角加了一个谷歌翻译的跳转链接，直接翻译当前页面。加这个是因为有外国友人看到了我的博客说很治愈，难为他还能从中文得到治愈，那翻译之后可能会更治愈吧(玄学)。</p>
+<p>刚开始让Cursor帮我调用谷歌翻译API，直接在博客翻译，但还是没有谷歌翻译好用，不破坏页面原本的样式，而且hover还能显示原文，挺好用的，就不折腾了：</p>
 <p><img data-src="https://s2.loli.net/2025/07/31/o9nEFbkLlM6pN14.png" alt="谷歌翻译"><span class="image-caption">谷歌翻译</span></p>
 <p>其实现在浏览器也有很多翻译插件，所以加这个更多是想表现自己能跟国际接轨，格局拉满。</p>
-<h3 id="Darkmode"><a href="#Darkmode" class="headerlink" title="Darkmode"></a>Darkmode</h3><p>Next主题本身就有Darkmode，是跟随系统的，但打开之后发现文字啥也看不见，可能是做了主题优化，所以又用Cursor改了一下：</p>
+<h3 id="Darkmode"><a href="#Darkmode" class="headerlink" title="Darkmode"></a>Darkmode</h3><p>Next主题本身就有Darkmode，是跟随系统的，但打开之后发现文字啥也看不见，可能是上面做了主题优化的原因，所以又用Cursor改了一下：</p>
 <p><img data-src="https://s2.loli.net/2025/07/31/sBevu2ha4MmgdIU.png" alt="Before"><span class="image-caption">Before</span><br><img data-src="https://s2.loli.net/2025/07/31/NDBjgkanURvl83d.png" alt="After"><span class="image-caption">After</span></p>
 <p>除了优化，也给页面导航栏加上了一个自定义按钮，可以自由切换日间(太阳图标)和夜间模式(月亮图标)。优先级是默认会跟随系统，但也可以切换模式，不过切换之后就不会跟着系统变了，也很合理。</p>
 <h3 id="探索版本新功能"><a href="#探索版本新功能" class="headerlink" title="探索版本新功能"></a>探索版本新功能</h3><p>到这里，我想做的或者想优化的功能都已经完成了，但是好像忘了一件重要的事情，既然我已经升级到了Hexo&amp;Next的最新版本，新版本的功能我还一个都没有看呢！其实在升级的时候也粗粗看了下新的版本配置，好像没有什么有意思的新功能，所以让 Cursor 帮我看了看：</p>
@@ -3512,13 +3513,17 @@ public class Functions {
 <p><img data-src="https://s2.loli.net/2025/07/27/BQKUInsq3dpOz2D.png" alt="一些战绩"><span class="image-caption">一些战绩</span></p>
 <p>本来我只用庄周，但从钻石段位开始有禁用英雄的环节，到了星耀庄周更容易被禁，所以偶尔会用蔡文姬和孙膑，整体的表现都不错：</p>
 <p><img data-src="https://s2.loli.net/2025/07/27/gOGN8aUfemxBKyr.jpg" alt="庄周评分"><span class="image-caption">庄周评分</span></p>
-<h2 id="最强王者"><a href="#最强王者" class="headerlink" title="最强王者"></a>最强王者</h2><p>刚开始的时候我一直连胜，几乎每天都能上升一个段位，很快就升到了 <mark class="label info">星耀II</mark>。但从这时开始，我明显感觉到自己被游戏做局了，经常匹配到离谱的队友，送人头的，不参团的，比比皆是。玩辅助本来就要靠阵容和团队取胜，所以我不是连跪，就是输一局赢一局：</p>
-<p><img data-src="https://s2.loli.net/2025/07/27/8R9cSBriTFAf54j.png" alt="好好好"><span class="image-caption">好好好</span></p>
+<h2 id="最强王者"><a href="#最强王者" class="headerlink" title="最强王者"></a>最强王者</h2><p>刚开始的时候我一直连胜，几乎每天都能上升一个段位，很快就升到了 <mark class="label info">星耀II</mark>。</p>
+<p>但从这时开始，我明显感觉到自己被游戏做局了，赢的局都是队友给力、输出爆炸全面碾压对面，金牌银牌随便拿：<br><img data-src="https://s2.loli.net/2025/08/04/N7XfWsjgCikltRU.jpg" alt="全面碾压"><span class="image-caption">全面碾压</span></p>
+<p>输的局都是匹配到离谱的队友，送人头的、不参团的，输出全瞎被对方全面碾压：<br><img data-src="https://s2.loli.net/2025/08/04/8ns1kSB7TVLhWcO.jpg" alt="全面被碾压"><span class="image-caption">全面被碾压</span></p>
+<p>举报队友发现这些人都不是第一次坑，做局明显到令人发指：<br><img data-src="https://s2.loli.net/2025/08/04/fWTdPtEmbgQS8UN.jpg" alt="都是坑"><span class="image-caption">都是坑</span></p>
+<p>赢一局之后，就会被做局连跪，或者赢一局输一局：<br><img data-src="https://s2.loli.net/2025/08/04/dWVoY6vcjb1IOi5.png" alt="好好好"><span class="image-caption">好好好</span></p>
+<p>玩辅助本来就要靠阵容和团队取胜，所以输赢全靠系统安排你这局是在哪一边(碾压 or 被碾压)，很少有势均力敌的局，非常折磨心态，也毫无趣味可言。</p>
 <p>就这样，我的段位在 <mark class="label info">星耀II</mark> 和 <mark class="label info">星耀I</mark> 之间来回游移，本来从周一开始打，周五已经到了 <mark class="label info">星耀II</mark>，想着周末就能打上 <mark class="label success">王者</mark>， 但被调戏了2天也没能实现：</p>
 <p><img data-src="https://s2.loli.net/2025/07/27/CfismBx96teDEhq.jpg" alt="可恶！"><span class="image-caption">可恶！</span></p>
 <p>不过这样的成就已经很惊人了，到了第二天，也不知道是不是游戏做局结束了，最终还是以一局顶级游走连+3⭐️升级 <mark class="label success">王者</mark>🎉，四舍五入也算是一周时间单排上王者吧：</p>
 <p><img data-src="https://s2.loli.net/2025/07/27/kgmdSDosWH1j4Y9.png" alt="顶级游走"><span class="image-caption">顶级游走</span></p>
-<div class="note info"><p>虽然打到了王者段位，但我还是觉得这个游戏玩久了很无趣。首先，不同段位的队友游戏操作和意识差距并不大，甚至给我一种一直在和同一批人打游戏的感觉，而且长时间玩很容易被它的匹配机制做局，非常影响游戏体验。所以这次之后，我还是会慢慢褪去热度，然后卸载App继续弃游(它值得)。</p>
+<div class="note info"><p>虽然打到了王者段位，但这个游戏玩久了真的很无趣。首先，不同段位的队友游戏操作和意识差距并不大，甚至给我一种一直在和同一批人打游戏的感觉，而且长时间玩很容易被它的匹配机制做局，非常影响游戏体验。所以这次之后，我还是会慢慢褪去热度，然后卸载App继续弃游(它值得)。</p>
 </div>
 
 <h2 id="关于庄周"><a href="#关于庄周" class="headerlink" title="关于庄周"></a>关于庄周</h2><h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>庄周是王者荣耀2015年内测的时候发布的第一批英雄，它的原型是战国时期的哲学家和道家学派代表人物：<strong>庄子</strong>，可以说是我的精神偶像。</p>
@@ -3527,7 +3532,7 @@ public class Functions {
 <blockquote>
 <p>每6秒进入一次「自然梦境」解控并免疫、减伤回血、加移速，持续两秒。<br>1技能「化蝶」也可以给自己解控、对敌人造成减速和伤害，持续两秒。<br>2技能「蝴蝶效应」可以伤害敌人、增加自己和队友的移速，持续5秒，可以叠加5层伤害。每次「自然梦境」结束后，也会自动释放一次2技能。<br>3技能(大招)「天人合一」可以解除自己和一定范围内队友所受的控制，免控加护盾，持续1.5秒。</p>
 </blockquote>
-<p>这种不停的解控和加移速的技能，使庄周成为一个让人「毫无攻击欲望」的英雄(骄傲)。</p>
+<p>这种不停的解控和加移速的技能，也使得庄周成为一个让人「毫无攻击欲望」的英雄(骄傲)。</p>
 <h3 id="皮肤"><a href="#皮肤" class="headerlink" title="皮肤"></a>皮肤</h3><h4 id="逍遥幻梦"><a href="#逍遥幻梦" class="headerlink" title="逍遥幻梦"></a>逍遥幻梦</h4><p>庄周的默认皮肤「逍遥幻梦」结合了「庄周梦蝶」和庄子《逍遥游》里「北冥有鱼，其名为鲲」的传说，是一个坐在鱼(琨)上梦蝶打瞌睡的庄周，很贴合英雄设定，是我比较喜欢的。因为坐骑是鱼，所以游戏里的玩家都把庄周叫鱼。头发颜色也说明精神状态很好了：</p>
 <p><img data-src="https://s2.loli.net/2025/07/27/1V8j6FfANQHdiZT.gif"></p>
 <p>对应的台词很欠打，也有一些来自庄子作品里的名句：</p>
@@ -3547,6 +3552,7 @@ public class Functions {
 <p><img data-src="https://s2.loli.net/2025/07/28/KLH23Id8SY9RGov.jpg" alt="角色设定"><span class="image-caption">角色设定</span></p>
 <h3 id="邪门CP"><a href="#邪门CP" class="headerlink" title="邪门CP"></a>邪门CP</h3><p>这次还了解到游戏早期庄周还有一个同人CP，竟然是和扁鹊的「药鱼CP」，震惊我。。。玩这么长时间游戏竟然是在搞基，真的没想到。</p>
 <p><img data-src="https://s2.loli.net/2025/07/28/RurxE4LNcWgtQFO.jpg" alt="邪门CP"><span class="image-caption">邪门CP</span></p>
+<p>正巧有次匹配到扁鹊，配合十分默契双双拿到顶级，合理怀疑是不是有什么CP加成(对面甄姬疑似被做局)：<br><img data-src="https://s2.loli.net/2025/08/04/JRyb7dYZhBVos8Q.jpg" alt="夫夫同心"><span class="image-caption">夫夫同心</span></p>
 <h2 id="还会再见面吗"><a href="#还会再见面吗" class="headerlink" title="还会再见面吗"></a>还会再见面吗</h2><p>因为我基本上只用这一个英雄打王者，所以熟练度很高，这次打到王者之后游走的段位升到了10段，梦境护卫的称号我也很喜欢：</p>
 <p><img data-src="https://s2.loli.net/2025/07/27/zSbgyhxPHmOojf4.jpg" alt="游戏名片"><span class="image-caption">游戏名片</span></p>
 <p>以后我可能还会偶尔下载App，再用庄周玩几局，而且今年是王者荣耀10周年，听说会送皮肤，也期待一下「云端筑梦师」的返场。</p>
@@ -4141,6 +4147,91 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>喜欢和不喜欢其实都没道理</title>
+    <url>/looking-for-the-one-16-17/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/08/07/Ly74AfgW3cOT1eM.png">
+
+<h2 id="No-13-「月光男孩」"><a href="#No-13-「月光男孩」" class="headerlink" title="No.13 「月光男孩」"></a>No.13 「月光男孩」</h2><p>正如本系列 <a href="https://jmyblog.top/looking-for-the-one-15/#%E4%BA%BA%E7%B1%BB%E5%A4%A7%E5%A4%9A%E9%83%BD%E5%9C%A8%E5%AF%BB%E6%89%BE%E7%9D%80%E4%BB%80%E4%B9%88%E5%90%A7">上文</a> 所述，由于琐事缠身和精神内耗，我决定让人类观察员先歇业一会，谁想到不久后我就经历了 <a href="https://jmyblog.top/a-story-about-z/">一则小故事</a> ，对男性群体有了一些偏见，感觉相比较于女生，男生的「坏心思」还是很多的，我自认没有知人之明，只能暂时敬而远之，所以不想再认识新的男嘉宾了。</p>
+<p>其实，在之前接触过的所有男嘉宾里，<a href="https://jmyblog.top/looking-for-the-one-13-15/#No-13-%E6%9C%88%E5%85%89%E7%94%B7%E5%AD%A9">13号</a> 给我的印象是最好的，后来我还会经常想到他，有时还会想到 <a href="https://jmyblog.top/looking-for-the-one-11-15/#No-12-%E5%B0%8F%E5%8F%AF%E7%88%B1">12号</a>，hummm…或许我只是单纯磕他俩的CP?也可能这就是喜欢的意思?(这个可能性比较大)</p>
+<p>这样的想法不时浮现在我的脑海，在小故事之后更强烈了，可是12号已经被我处成姐妹了，他也有对象了(后来他说是假的骗我)，倒是13号有时还会找我聊几句，应该还有戏，其实之前是因为我感觉我俩聊不来才结束的，人家娃本身没啥硬伤，而且我俩还有「天意」(不知道是啥的请补前文)，几番纠结后，我又又冲了：</p>
+<div class="tabs" id="冲了"><ul class="nav-tabs"><li class="tab active"><a href="#冲了-1">冲了 1</a></li><li class="tab"><a href="#冲了-2">冲了 2</a></li><li class="tab"><a href="#冲了-3">冲了 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="冲了-1"><p>先是打听了下他找对象的进展(很好没啥进展)，然后瞎聊会最近工作咋样、假期去哪玩了之类(铺垫一下)：</p>
+<img data-src="https://s2.loli.net/2022/08/06/imjWChgfeRbXtZr.png" height="500" width="250" alt="全是套路"><span class="image-caption">全是套路</span></div><div class="tab-pane" id="冲了-2"><p>最后开门见山：</p>
+<img data-src="https://s2.loli.net/2022/08/06/f9zMlce4JB7snPk.png" height="500" width="250" alt="就是冲"><span class="image-caption">就是冲</span></div><div class="tab-pane" id="冲了-3"><p>他说很突然，让我给他一个思考的时间，到了第二天：</p>
+<img data-src="https://s2.loli.net/2022/08/06/JaUphuNdiFK4jQZ.png" height="380" width="250" alt="芜湖(挺会啊)"><span class="image-caption">芜湖(挺会啊)</span></div></div></div>
+
+<p>然后我俩就继续聊了，分享日常之类的，比如他看书，我追剧；他健身，我撸猫；他早睡，我熬夜。啊对了，还聊到了上次看电影的事，我提了一些建议：</p>
+<img data-src="https://s2.loli.net/2022/08/06/mRKwQfPIJzocgyV.png" height="480" width="250" alt="搓手手"><span class="image-caption">搓手手</span>
+
+<p>确实是「更喜欢」，因为他会经常去图书馆博物馆啥的，我出去玩也不喜欢人多的地方，所以比起两个人出去看电影(用投影仪在家看不行吗)，还是图书馆博物馆更清净吧。</p>
+<p>这样一周以后，我看他还没有约我的意思(虽说中间一个假期他去单位团建了，可就500米的距离晚上也可以约啊，好吧这很「月光男孩」)，想着是我提出要继续聊的，那就主动约他好了，然后就约他晚上在小区楼下一个火锅店吃饭，之前和朋友在那吃过感觉还行。</p>
+<p>当天约的，因为距离不远，我还提前给商家打电话让留个清净点的包间。<br>晚上8点，他先到了，说包间没有空调，我去了之后才发现，所谓的「包间」并不是封闭的，离大堂很近也很吵，只有一台看起来年代久远的立式电风扇吹着毫无作用的热风。<br>这确实是我失察了，上次和朋友来的时候整家店只有我们一桌，并没有观察店内的布置，最后决定就在大堂里吃了，最起码有空调能凉快点。</p>
+<p>我穿着家居服也没咋打扮(小区楼下挺近就没收拾)，他还是印象中帅气的精神小伙，聊了会最近彼此的生活和工作，刚开始氛围还行，直到我提到了最近公司发生的一些事情，他的反应表现出了我俩完全不一样的三观：</p>
+<div class="tabs" id="三观冲突"><ul class="nav-tabs"><li class="tab active"><a href="#三观冲突-1">三观冲突 1</a></li><li class="tab"><a href="#三观冲突-2">三观冲突 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="三观冲突-1"><p><strong>领导说什么就是什么</strong></p>
+<p><mark class="label info">事件：</mark>公司的员工A某在工作群里表达自己的合理权益，和leader产生冲突，对方怼他「不要自以为是」，另一位leader甚至当场让他暂停工作等通知，第二天A某就被赶出了项目组，这在公司引起了轩然大波。</p>
+<p><mark class="label primary">我的想法：</mark>在我司文化里，A某是在维护自己的合理权益，言语并无不妥之处，而leader「不要自以为是」这句近乎人身攻击的话是非常不合适的，另一位leader的做法更是细思极恐，第一天让暂停工作，第二天A某就真的下项目了，需要仔细调查还A某一个公道。</p>
+<p><mark class="label danger">他的想法：</mark>领导说什么A某就应该点头称是才对，怎么还敢跟领导顶嘴导致自己被下项目，怪他没和领导「处好关系」。</p>
+<p>我理解他在国企和我司的文化不一样，但试图说服他理解我司文化(在我看来三观正常的做法)，我失败了，他完全不能理解我的想法而且坚持自己的想法是对的。</p></div><div class="tab-pane" id="三观冲突-2"><p><strong>Z某太笨了</strong></p>
+<p><mark class="label info">事件：</mark>我提到了一则小故事里Z某的 <a href="https://jmyblog.top/a-story-about-SH/#%E5%BC%80%E5%A7%8B%E4%B8%8D%E5%AF%B9%E5%8A%B2">4个不对劲行为</a></p>
+<p><mark class="label primary">我的想法：</mark>文章里已经说了。</p>
+<p><mark class="label danger">他的想法：</mark></p>
+<ul>
+<li>追车事件：Z某是想跟在我后面让我带着他走(excuse me?)</li>
+<li>朋友圈点赞事件：Z某只是对一个骑摩托的女生表示好奇(excuse me?!)</li>
+<li>喝东西事件：Z某有问题但做法太笨了，换做他会用别的理由先把我骗出来再说别的(excuse me?!!!)</li>
+</ul>
+<p>如果说上一个三观冲突我还可以理解是因为工作环境不一样，这里我完全不能理解和接受，甚至觉得他有些「金玉其外」了，和Z某是一类人而且比Z某更可怕，非常下头，也不想跟他争辩了。</p></div></div></div>
+
+<p>火锅店里的人逐渐多了起来，后面还有几桌划拳的醉酒男，我看着对面还在说Z某笨的男生，眼中却只有另一个和他外表不相符的灵魂，没了继续了解的欲望。<br>其实，这不是我第一次发现他「表里不一」了，在之前的接触中，他也有一些让我下头的瞬间，只是没这次下头那么彻底：</p>
+<div class="tabs" id="下头"><ul class="nav-tabs"><li class="tab active"><a href="#下头-1">下头 1</a></li><li class="tab"><a href="#下头-2">下头 2</a></li><li class="tab"><a href="#下头-3">下头 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="下头-1"><p>他的朋友圈背景是「人生的路就像内裤，哪一条不是自己选的？」，和他「饱读诗书」的人设不太相符。</p></div><div class="tab-pane" id="下头-2"><p>为了表现自己并不是古板单一，他给我发了一些黄色的表情包动图，说是从前在班级群里拿的(所以为什么现在还留着?!)，在我表达出不适后，他向我道歉：</p>
+<img data-src="https://s2.loli.net/2022/08/07/EOkRC4jmALGTNW8.png" height="520" width="250" alt="辣眼睛"><span class="image-caption">辣眼睛</span></div><div class="tab-pane" id="下头-3"><p>他给我展示自己小区里的两条流浪猫，在我感叹猫咪都有伴后，他说其中一条怀孕了还给我发了之前两条猫在一起交配的图片(说是之前同事拍的)：</p>
+<img data-src="https://s2.loli.net/2022/08/07/I7zLGXYDARHfPvC.png" height="520" width="250" alt="。。。"><span class="image-caption">。。。</span></div></div></div>
+
+<p>两个人的火锅吃剩了不少菜，打包回去还能炒几盘，本来说好我请客的，但他硬是抢在我前面买了单，我没有多说什么，只在回家后把饭钱转给了他，第二天他才收下，还说自己昨晚吃完拉肚子，害，真是难为他了：</p>
+<img data-src="https://s2.loli.net/2022/08/06/WU5KuDvazyoJCVl.png" height="470" width="250" alt="“月光男孩”"><span class="image-caption">“月光男孩”</span>
+
+<p>这是我和「月光男孩」的最后一次聊天，后来我俩都心照不宣的没有联系对方，可能确实是因为三观不一致吧，也可能是他怕我再约他吃饭给他下毒<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>(怕了怕了)，总之我的直觉还是很对的，有的人聊不来就是聊不来，再怎么聊也没有结果，我彻底死心了，至于12号，还是做姐妹吧。</p>
+<h2 id="No-16-就业咨询"><a href="#No-16-就业咨询" class="headerlink" title="No.16 就业咨询"></a>No.16 就业咨询</h2><p>二狗上加到的帅哥，计算机专业研究生，比我小一岁，还在读研，我俩主页照骗上穿的衣服是同款，有种情侣装的感觉hhhh，不过我严重怀疑他是来找我做就业咨询的，毕竟我搬砖都快4年了，而他还要再上二年学。</p>
+<p>他问我西安计算机的就业情况，说因为我俩一个行业所以想认识一下多交流交流，还说自己本科是c9高校所以研究生随便上了个211(一些凡尔赛)。。。当然我们还有聊别的，比如他本科在华为打码的同学以及他自己毕业后的去处，再比如他已经开始有后移迹象的发际线和脱发困扰。</p>
+<p>他聊天蛮有梗的，挺逗，除了同款衣服之外我俩的车也是一个牌子(他的电动车，我的滑板车)，平时也会互相分享日常，比如他健身，我搬砖；他上课，我下班。<br>他的朋友圈有很多约拍(他拍别人)还有自己的自拍照，hummm…不得不说挺帅的，他的外形长相很符合当下小鲜肉的主流审美，可以去参加选秀节目的那种。</p>
+<p>周末他约我出去，我没有推荐的地方(自从13号被我毒的拉肚子之后我决定以后就让男嘉宾推荐面基地点)，他想约在市中心商圈，我想了想，相比于顶着大热天公交转地铁一小时去人多的地方只为一睹帅哥容颜这种事，还是宅家比较好，就拒绝了。</p>
+<p>下一个周末，我约他，他学校离我住处也挺近的，就约在中间的商场见面，他说下午4点上完课才有空，我说可以，想着到时候再约时间，因为4点也挺热的，没想到他以为就约的4点，然后：</p>
+<img data-src="https://s2.loli.net/2022/08/07/CVxHsSlfUh95z3Q.png" height="470" width="250" alt="?!"><span class="image-caption">?!</span>
+
+<p>一下给我吓醒了，一番交涉之后还是决定去赴约，毕竟人家打着的20分钟过来也挺不容易的，于是刚睡醒的我，换衣服化妆打车20分钟后出现在帅哥歇脚的奶茶店，在这之前，他已经等了我半小时了：</p>
+<img data-src="https://s2.loli.net/2022/08/07/GlECe59bYonRrps.jpg" height="400" width="250" alt="我错了真的"><span class="image-caption">我错了真的</span>
+
+<p>外面的天气真的很热，虽然我是打车过去，但由于歉意加上心急也出了一身汗。<br>找到了一楼的奶茶店，想从外面推开门进去，却发现门被锁上了，带锁的门是透明的，里面不少人被我的动静吸引了过来，奇怪的看着我，有种社死的感觉，我才意识到只有商场内部的门是开的，于是又从商场大门进去找到奶茶店，下午5点整，我出现在了帅哥眼前。</p>
+<p>第一反应是幸好帅哥的位置看不到我刚才社死的场景，然后就道歉毕竟因为是自己没有说清楚导致人家等了半小时，然后帅哥真人也很帅，有点像焉栩嘉(除了头发没那么浓密)，确实适合去选秀。</p>
+<p>我本来想着坐一会吃个饭逛逛商场啥的，没想到我们只聊了10分钟天就结束了，而且宛如就业咨询现场，他一直在问我工作上的问题，比如我在什么公司、和华为比怎么样、年薪大概多少(这是可以问的吗?)、应届生可以拿多少、西安这边有什么值得去的互联网公司等等，由于心有歉意我都很细致的回答了他。<br>10分钟之后，他说我来得太晚了，本来可以多聊一会的，但自己和朋友还有约要去别的地方一趟，就走了，走了，了。</p>
+<p>讲道理，虽然是我迟到了，但你有事可以提前说啊，改天约也行，就让我着急忙慌的过来做了10分钟就业咨询?!真就大无语，也太不会来事儿了吧，长得帅就可以为所欲为吗？我长得美我说什么了吗？</p>
+<p>接下来的时间，我寻思反正来都来了，给自己买了杯奶茶，坐了一会冷静了下，跟一个姐妹疯狂吐槽了一会，在商场里转了转买了点东西就回家了。</p>
+<p>后来我想着得不到人赚点内推费也是不错的，就把公司的招聘链接发给他，还帮他问了最近的实习生岗位，很遗憾并没有，而且他也不是应届生，所以感觉内推费也🈚️了，挺亏的。</p>
+<h2 id="No-17-羊羊"><a href="#No-17-羊羊" class="headerlink" title="No.17 羊羊"></a>No.17 羊羊</h2><p>见完16号的同天晚上，我又和17号男嘉宾面基了。</p>
+<p>想不到什么「特别」的描述，就用他的网名做标题吧。<br>事情是这样的，他在我和16号约见面的同天中午加了我，浅聊了下发现他就在我小区旁边的一个厂子上班，是车企工程师，住的也很近。</p>
+<p>和16号就业咨询会结束后回家继续聊天，他还猜出了我的公司名字说有朋友也在我司，就挺巧，也算聊得来，因为离得近他说要不晚上出去遛个弯，我还沉浸在16号的阴影中，觉得换个心情也不错就答应了。</p>
+<p>然后就是+v详聊见面时间和地点，晚上8点半，男嘉宾到我小区楼下，我俩一起打车去了下午见16号的同一个商场吃饭，衣服都没换的我，看到那家奶茶店，觉得人生真的挺drama.</p>
+<p>吃饭过程挺愉快的，菜没剩下价格也很合适，聊的很轻松自在，吃完饭外边已经凉快多了，决定散步走回去，一路上继续聊彼此的各种经历，还有小型认车标大赛(毕竟是车企工程师嘛)，听他讲各种品牌车型的趣事等等，晚上10点半才到家，总之，完全驱散了16号给我的阴影。</p>
+<p>啊对，第一印象，他的长相和上面两位当然不能比，甚至没有到达平均分(他说之前约过一个女生，结果对方在地铁口看到他直接说自己不舒服走了，可能是丑到人家了&gt;.&lt;)，身高体型倒还不错，戴上口罩可以装作是个帅哥。</p>
+<p>不过我对长相已经不是很看重了，经历了一则小故事以及重新认识了月光男孩，感觉金玉其外的人太多了。<br>他有一个很大的优点，他的大学专业以及现在的工作，都是因为喜欢才选择的，之前还参加过大学生方程式比赛，在散步回家的路上听他讲自己的专业和工作，感觉整个人都在发光。<br>所以这个优点就是他知道自己喜欢什么，并且在干着自己喜欢的工作。</p>
+<p>这个优点在我看来很了不起，因为没几个人可以做到，甚至没几个人知道自己真正喜欢干什么，就像我一样，专业也好，工作也好，都是随波逐流的选择，根本谈不上喜不喜欢，所以我觉得他很不错。</p>
+<p>第一见面后，可以感受到他对我的印象非常不错(我四sei呀)，说自己很开心，还夸我可爱，当天晚上就问我的恋爱史，以及期待的恋爱模式、生气的话是冷战还是吵架等等，虽然觉得有点快但还是一一回答他了，在得知我一个人住还有switch时，他说以后可以来找我玩(?!)：</p>
+<img data-src="https://s2.loli.net/2022/08/07/N5T6W9ULpzEmY7B.png" height="500" width="500" alt="激动的男嘉宾"><span class="image-caption">激动的男嘉宾</span>
+
+<p>后面就是在微信上瞎聊，分享日常，我推荐他看甄嬛传(竟然还没有人看过甄嬛传！羡慕他有70多集可以看)，他看过之后经常跟我讨论剧情，我还把一则小故事讲给他听，他说我做的很对(终于碰到个三观正常的了)，后来还约着看过一次电影，吃过一次饭，来来回回的也算是AA了，当然主要是人家约我，我就掏个钱。</p>
+<p>再后来就没有后来了。</p>
+<p>怎么说呢，他真的很好，三观正常又有大优点，也能聊得来，我也尝试多跟人家接触了，但还是没有那种喜欢的感觉，就只是觉得这人挺能处。<br>发觉这一点之后，他再约我我就没有去了，回复消息也越来越少，说话也更有分寸感，他可能也慢慢感觉到我的态度，没有再主动联系我了，就是逐渐相忘于江湖吧。</p>
+<p>也许不喜欢一个人就像喜欢一个人一样，都没有什么道理，如果非要说一个我为什么不和17号在一起的理由，可能是我们俩不够势均力敌吧。</p>
+<h2 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h2><p>啊啊啊，西安的天气真的太热了，最近每天都高温预警，出去一趟感觉体表温度都40+了，空气都是烫的，没有空调真的不能活，更别说和男嘉宾约会了，而且现在手上没有新的男嘉宾了，不过我会努力的！</p>
+<div class="note info"><p>一些题外话：人类观察员营业太久了，说实话我现在更多的不是抱着找对象的态度去认识男嘉宾，而真的只是观察人类而已，每次认识一个人，我都想看看他什么时候开始「不对劲」。。。<br>不过我觉得有个朋友说的话很有道理：「当你不是为了找对象而做这件事的时候，没准真正的人正在悄悄的出现」，嗯，但愿他说的对。</p>
+</div>]]></content>
+      <categories>
+        <category>人类观察员</category>
+      </categories>
+      <tags>
+        <tag>人类观察员</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>老实憨厚的程序员</title>
     <url>/looking-for-the-one-18-19/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/10/09/EePou4ctM9m26VL.png">
@@ -4221,91 +4312,6 @@ public class Functions {
 <p>坐了会，我发现天有些暗了雨也快下了，就说要不回家？他说好，然后就送我回家了，现在想来其实都到饭点儿了也没吃个饭啥的，可能俩人都觉着有些无聊吧，到家后俩人吐槽了下核酸政策，互道晚安。</p>
 <p>第二天，我没联系他，他也没理我，嗯，是两个成熟的相亲人了，啊不对，我明明是人类观察员！所以观察的结果就是他是个正常人，然后，相亲很专业，看来经历了很多，Over.</p>
 ]]></content>
-      <categories>
-        <category>人类观察员</category>
-      </categories>
-      <tags>
-        <tag>人类观察员</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>喜欢和不喜欢其实都没道理</title>
-    <url>/looking-for-the-one-16-17/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/08/07/Ly74AfgW3cOT1eM.png">
-
-<h2 id="No-13-「月光男孩」"><a href="#No-13-「月光男孩」" class="headerlink" title="No.13 「月光男孩」"></a>No.13 「月光男孩」</h2><p>正如本系列 <a href="https://jmyblog.top/looking-for-the-one-15/#%E4%BA%BA%E7%B1%BB%E5%A4%A7%E5%A4%9A%E9%83%BD%E5%9C%A8%E5%AF%BB%E6%89%BE%E7%9D%80%E4%BB%80%E4%B9%88%E5%90%A7">上文</a> 所述，由于琐事缠身和精神内耗，我决定让人类观察员先歇业一会，谁想到不久后我就经历了 <a href="https://jmyblog.top/a-story-about-z/">一则小故事</a> ，对男性群体有了一些偏见，感觉相比较于女生，男生的「坏心思」还是很多的，我自认没有知人之明，只能暂时敬而远之，所以不想再认识新的男嘉宾了。</p>
-<p>其实，在之前接触过的所有男嘉宾里，<a href="https://jmyblog.top/looking-for-the-one-13-15/#No-13-%E6%9C%88%E5%85%89%E7%94%B7%E5%AD%A9">13号</a> 给我的印象是最好的，后来我还会经常想到他，有时还会想到 <a href="https://jmyblog.top/looking-for-the-one-11-15/#No-12-%E5%B0%8F%E5%8F%AF%E7%88%B1">12号</a>，hummm…或许我只是单纯磕他俩的CP?也可能这就是喜欢的意思?(这个可能性比较大)</p>
-<p>这样的想法不时浮现在我的脑海，在小故事之后更强烈了，可是12号已经被我处成姐妹了，他也有对象了(后来他说是假的骗我)，倒是13号有时还会找我聊几句，应该还有戏，其实之前是因为我感觉我俩聊不来才结束的，人家娃本身没啥硬伤，而且我俩还有「天意」(不知道是啥的请补前文)，几番纠结后，我又又冲了：</p>
-<div class="tabs" id="冲了"><ul class="nav-tabs"><li class="tab active"><a href="#冲了-1">冲了 1</a></li><li class="tab"><a href="#冲了-2">冲了 2</a></li><li class="tab"><a href="#冲了-3">冲了 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="冲了-1"><p>先是打听了下他找对象的进展(很好没啥进展)，然后瞎聊会最近工作咋样、假期去哪玩了之类(铺垫一下)：</p>
-<img data-src="https://s2.loli.net/2022/08/06/imjWChgfeRbXtZr.png" height="500" width="250" alt="全是套路"><span class="image-caption">全是套路</span></div><div class="tab-pane" id="冲了-2"><p>最后开门见山：</p>
-<img data-src="https://s2.loli.net/2022/08/06/f9zMlce4JB7snPk.png" height="500" width="250" alt="就是冲"><span class="image-caption">就是冲</span></div><div class="tab-pane" id="冲了-3"><p>他说很突然，让我给他一个思考的时间，到了第二天：</p>
-<img data-src="https://s2.loli.net/2022/08/06/JaUphuNdiFK4jQZ.png" height="380" width="250" alt="芜湖(挺会啊)"><span class="image-caption">芜湖(挺会啊)</span></div></div></div>
-
-<p>然后我俩就继续聊了，分享日常之类的，比如他看书，我追剧；他健身，我撸猫；他早睡，我熬夜。啊对了，还聊到了上次看电影的事，我提了一些建议：</p>
-<img data-src="https://s2.loli.net/2022/08/06/mRKwQfPIJzocgyV.png" height="480" width="250" alt="搓手手"><span class="image-caption">搓手手</span>
-
-<p>确实是「更喜欢」，因为他会经常去图书馆博物馆啥的，我出去玩也不喜欢人多的地方，所以比起两个人出去看电影(用投影仪在家看不行吗)，还是图书馆博物馆更清净吧。</p>
-<p>这样一周以后，我看他还没有约我的意思(虽说中间一个假期他去单位团建了，可就500米的距离晚上也可以约啊，好吧这很「月光男孩」)，想着是我提出要继续聊的，那就主动约他好了，然后就约他晚上在小区楼下一个火锅店吃饭，之前和朋友在那吃过感觉还行。</p>
-<p>当天约的，因为距离不远，我还提前给商家打电话让留个清净点的包间。<br>晚上8点，他先到了，说包间没有空调，我去了之后才发现，所谓的「包间」并不是封闭的，离大堂很近也很吵，只有一台看起来年代久远的立式电风扇吹着毫无作用的热风。<br>这确实是我失察了，上次和朋友来的时候整家店只有我们一桌，并没有观察店内的布置，最后决定就在大堂里吃了，最起码有空调能凉快点。</p>
-<p>我穿着家居服也没咋打扮(小区楼下挺近就没收拾)，他还是印象中帅气的精神小伙，聊了会最近彼此的生活和工作，刚开始氛围还行，直到我提到了最近公司发生的一些事情，他的反应表现出了我俩完全不一样的三观：</p>
-<div class="tabs" id="三观冲突"><ul class="nav-tabs"><li class="tab active"><a href="#三观冲突-1">三观冲突 1</a></li><li class="tab"><a href="#三观冲突-2">三观冲突 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="三观冲突-1"><p><strong>领导说什么就是什么</strong></p>
-<p><mark class="label info">事件：</mark>公司的员工A某在工作群里表达自己的合理权益，和leader产生冲突，对方怼他「不要自以为是」，另一位leader甚至当场让他暂停工作等通知，第二天A某就被赶出了项目组，这在公司引起了轩然大波。</p>
-<p><mark class="label primary">我的想法：</mark>在我司文化里，A某是在维护自己的合理权益，言语并无不妥之处，而leader「不要自以为是」这句近乎人身攻击的话是非常不合适的，另一位leader的做法更是细思极恐，第一天让暂停工作，第二天A某就真的下项目了，需要仔细调查还A某一个公道。</p>
-<p><mark class="label danger">他的想法：</mark>领导说什么A某就应该点头称是才对，怎么还敢跟领导顶嘴导致自己被下项目，怪他没和领导「处好关系」。</p>
-<p>我理解他在国企和我司的文化不一样，但试图说服他理解我司文化(在我看来三观正常的做法)，我失败了，他完全不能理解我的想法而且坚持自己的想法是对的。</p></div><div class="tab-pane" id="三观冲突-2"><p><strong>Z某太笨了</strong></p>
-<p><mark class="label info">事件：</mark>我提到了一则小故事里Z某的 <a href="https://jmyblog.top/a-story-about-SH/#%E5%BC%80%E5%A7%8B%E4%B8%8D%E5%AF%B9%E5%8A%B2">4个不对劲行为</a></p>
-<p><mark class="label primary">我的想法：</mark>文章里已经说了。</p>
-<p><mark class="label danger">他的想法：</mark></p>
-<ul>
-<li>追车事件：Z某是想跟在我后面让我带着他走(excuse me?)</li>
-<li>朋友圈点赞事件：Z某只是对一个骑摩托的女生表示好奇(excuse me?!)</li>
-<li>喝东西事件：Z某有问题但做法太笨了，换做他会用别的理由先把我骗出来再说别的(excuse me?!!!)</li>
-</ul>
-<p>如果说上一个三观冲突我还可以理解是因为工作环境不一样，这里我完全不能理解和接受，甚至觉得他有些「金玉其外」了，和Z某是一类人而且比Z某更可怕，非常下头，也不想跟他争辩了。</p></div></div></div>
-
-<p>火锅店里的人逐渐多了起来，后面还有几桌划拳的醉酒男，我看着对面还在说Z某笨的男生，眼中却只有另一个和他外表不相符的灵魂，没了继续了解的欲望。<br>其实，这不是我第一次发现他「表里不一」了，在之前的接触中，他也有一些让我下头的瞬间，只是没这次下头那么彻底：</p>
-<div class="tabs" id="下头"><ul class="nav-tabs"><li class="tab active"><a href="#下头-1">下头 1</a></li><li class="tab"><a href="#下头-2">下头 2</a></li><li class="tab"><a href="#下头-3">下头 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="下头-1"><p>他的朋友圈背景是「人生的路就像内裤，哪一条不是自己选的？」，和他「饱读诗书」的人设不太相符。</p></div><div class="tab-pane" id="下头-2"><p>为了表现自己并不是古板单一，他给我发了一些黄色的表情包动图，说是从前在班级群里拿的(所以为什么现在还留着?!)，在我表达出不适后，他向我道歉：</p>
-<img data-src="https://s2.loli.net/2022/08/07/EOkRC4jmALGTNW8.png" height="520" width="250" alt="辣眼睛"><span class="image-caption">辣眼睛</span></div><div class="tab-pane" id="下头-3"><p>他给我展示自己小区里的两条流浪猫，在我感叹猫咪都有伴后，他说其中一条怀孕了还给我发了之前两条猫在一起交配的图片(说是之前同事拍的)：</p>
-<img data-src="https://s2.loli.net/2022/08/07/I7zLGXYDARHfPvC.png" height="520" width="250" alt="。。。"><span class="image-caption">。。。</span></div></div></div>
-
-<p>两个人的火锅吃剩了不少菜，打包回去还能炒几盘，本来说好我请客的，但他硬是抢在我前面买了单，我没有多说什么，只在回家后把饭钱转给了他，第二天他才收下，还说自己昨晚吃完拉肚子，害，真是难为他了：</p>
-<img data-src="https://s2.loli.net/2022/08/06/WU5KuDvazyoJCVl.png" height="470" width="250" alt="“月光男孩”"><span class="image-caption">“月光男孩”</span>
-
-<p>这是我和「月光男孩」的最后一次聊天，后来我俩都心照不宣的没有联系对方，可能确实是因为三观不一致吧，也可能是他怕我再约他吃饭给他下毒<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>(怕了怕了)，总之我的直觉还是很对的，有的人聊不来就是聊不来，再怎么聊也没有结果，我彻底死心了，至于12号，还是做姐妹吧。</p>
-<h2 id="No-16-就业咨询"><a href="#No-16-就业咨询" class="headerlink" title="No.16 就业咨询"></a>No.16 就业咨询</h2><p>二狗上加到的帅哥，计算机专业研究生，比我小一岁，还在读研，我俩主页照骗上穿的衣服是同款，有种情侣装的感觉hhhh，不过我严重怀疑他是来找我做就业咨询的，毕竟我搬砖都快4年了，而他还要再上二年学。</p>
-<p>他问我西安计算机的就业情况，说因为我俩一个行业所以想认识一下多交流交流，还说自己本科是c9高校所以研究生随便上了个211(一些凡尔赛)。。。当然我们还有聊别的，比如他本科在华为打码的同学以及他自己毕业后的去处，再比如他已经开始有后移迹象的发际线和脱发困扰。</p>
-<p>他聊天蛮有梗的，挺逗，除了同款衣服之外我俩的车也是一个牌子(他的电动车，我的滑板车)，平时也会互相分享日常，比如他健身，我搬砖；他上课，我下班。<br>他的朋友圈有很多约拍(他拍别人)还有自己的自拍照，hummm…不得不说挺帅的，他的外形长相很符合当下小鲜肉的主流审美，可以去参加选秀节目的那种。</p>
-<p>周末他约我出去，我没有推荐的地方(自从13号被我毒的拉肚子之后我决定以后就让男嘉宾推荐面基地点)，他想约在市中心商圈，我想了想，相比于顶着大热天公交转地铁一小时去人多的地方只为一睹帅哥容颜这种事，还是宅家比较好，就拒绝了。</p>
-<p>下一个周末，我约他，他学校离我住处也挺近的，就约在中间的商场见面，他说下午4点上完课才有空，我说可以，想着到时候再约时间，因为4点也挺热的，没想到他以为就约的4点，然后：</p>
-<img data-src="https://s2.loli.net/2022/08/07/CVxHsSlfUh95z3Q.png" height="470" width="250" alt="?!"><span class="image-caption">?!</span>
-
-<p>一下给我吓醒了，一番交涉之后还是决定去赴约，毕竟人家打着的20分钟过来也挺不容易的，于是刚睡醒的我，换衣服化妆打车20分钟后出现在帅哥歇脚的奶茶店，在这之前，他已经等了我半小时了：</p>
-<img data-src="https://s2.loli.net/2022/08/07/GlECe59bYonRrps.jpg" height="400" width="250" alt="我错了真的"><span class="image-caption">我错了真的</span>
-
-<p>外面的天气真的很热，虽然我是打车过去，但由于歉意加上心急也出了一身汗。<br>找到了一楼的奶茶店，想从外面推开门进去，却发现门被锁上了，带锁的门是透明的，里面不少人被我的动静吸引了过来，奇怪的看着我，有种社死的感觉，我才意识到只有商场内部的门是开的，于是又从商场大门进去找到奶茶店，下午5点整，我出现在了帅哥眼前。</p>
-<p>第一反应是幸好帅哥的位置看不到我刚才社死的场景，然后就道歉毕竟因为是自己没有说清楚导致人家等了半小时，然后帅哥真人也很帅，有点像焉栩嘉(除了头发没那么浓密)，确实适合去选秀。</p>
-<p>我本来想着坐一会吃个饭逛逛商场啥的，没想到我们只聊了10分钟天就结束了，而且宛如就业咨询现场，他一直在问我工作上的问题，比如我在什么公司、和华为比怎么样、年薪大概多少(这是可以问的吗?)、应届生可以拿多少、西安这边有什么值得去的互联网公司等等，由于心有歉意我都很细致的回答了他。<br>10分钟之后，他说我来得太晚了，本来可以多聊一会的，但自己和朋友还有约要去别的地方一趟，就走了，走了，了。</p>
-<p>讲道理，虽然是我迟到了，但你有事可以提前说啊，改天约也行，就让我着急忙慌的过来做了10分钟就业咨询?!真就大无语，也太不会来事儿了吧，长得帅就可以为所欲为吗？我长得美我说什么了吗？</p>
-<p>接下来的时间，我寻思反正来都来了，给自己买了杯奶茶，坐了一会冷静了下，跟一个姐妹疯狂吐槽了一会，在商场里转了转买了点东西就回家了。</p>
-<p>后来我想着得不到人赚点内推费也是不错的，就把公司的招聘链接发给他，还帮他问了最近的实习生岗位，很遗憾并没有，而且他也不是应届生，所以感觉内推费也🈚️了，挺亏的。</p>
-<h2 id="No-17-羊羊"><a href="#No-17-羊羊" class="headerlink" title="No.17 羊羊"></a>No.17 羊羊</h2><p>见完16号的同天晚上，我又和17号男嘉宾面基了。</p>
-<p>想不到什么「特别」的描述，就用他的网名做标题吧。<br>事情是这样的，他在我和16号约见面的同天中午加了我，浅聊了下发现他就在我小区旁边的一个厂子上班，是车企工程师，住的也很近。</p>
-<p>和16号就业咨询会结束后回家继续聊天，他还猜出了我的公司名字说有朋友也在我司，就挺巧，也算聊得来，因为离得近他说要不晚上出去遛个弯，我还沉浸在16号的阴影中，觉得换个心情也不错就答应了。</p>
-<p>然后就是+v详聊见面时间和地点，晚上8点半，男嘉宾到我小区楼下，我俩一起打车去了下午见16号的同一个商场吃饭，衣服都没换的我，看到那家奶茶店，觉得人生真的挺drama.</p>
-<p>吃饭过程挺愉快的，菜没剩下价格也很合适，聊的很轻松自在，吃完饭外边已经凉快多了，决定散步走回去，一路上继续聊彼此的各种经历，还有小型认车标大赛(毕竟是车企工程师嘛)，听他讲各种品牌车型的趣事等等，晚上10点半才到家，总之，完全驱散了16号给我的阴影。</p>
-<p>啊对，第一印象，他的长相和上面两位当然不能比，甚至没有到达平均分(他说之前约过一个女生，结果对方在地铁口看到他直接说自己不舒服走了，可能是丑到人家了&gt;.&lt;)，身高体型倒还不错，戴上口罩可以装作是个帅哥。</p>
-<p>不过我对长相已经不是很看重了，经历了一则小故事以及重新认识了月光男孩，感觉金玉其外的人太多了。<br>他有一个很大的优点，他的大学专业以及现在的工作，都是因为喜欢才选择的，之前还参加过大学生方程式比赛，在散步回家的路上听他讲自己的专业和工作，感觉整个人都在发光。<br>所以这个优点就是他知道自己喜欢什么，并且在干着自己喜欢的工作。</p>
-<p>这个优点在我看来很了不起，因为没几个人可以做到，甚至没几个人知道自己真正喜欢干什么，就像我一样，专业也好，工作也好，都是随波逐流的选择，根本谈不上喜不喜欢，所以我觉得他很不错。</p>
-<p>第一见面后，可以感受到他对我的印象非常不错(我四sei呀)，说自己很开心，还夸我可爱，当天晚上就问我的恋爱史，以及期待的恋爱模式、生气的话是冷战还是吵架等等，虽然觉得有点快但还是一一回答他了，在得知我一个人住还有switch时，他说以后可以来找我玩(?!)：</p>
-<img data-src="https://s2.loli.net/2022/08/07/N5T6W9ULpzEmY7B.png" height="500" width="500" alt="激动的男嘉宾"><span class="image-caption">激动的男嘉宾</span>
-
-<p>后面就是在微信上瞎聊，分享日常，我推荐他看甄嬛传(竟然还没有人看过甄嬛传！羡慕他有70多集可以看)，他看过之后经常跟我讨论剧情，我还把一则小故事讲给他听，他说我做的很对(终于碰到个三观正常的了)，后来还约着看过一次电影，吃过一次饭，来来回回的也算是AA了，当然主要是人家约我，我就掏个钱。</p>
-<p>再后来就没有后来了。</p>
-<p>怎么说呢，他真的很好，三观正常又有大优点，也能聊得来，我也尝试多跟人家接触了，但还是没有那种喜欢的感觉，就只是觉得这人挺能处。<br>发觉这一点之后，他再约我我就没有去了，回复消息也越来越少，说话也更有分寸感，他可能也慢慢感觉到我的态度，没有再主动联系我了，就是逐渐相忘于江湖吧。</p>
-<p>也许不喜欢一个人就像喜欢一个人一样，都没有什么道理，如果非要说一个我为什么不和17号在一起的理由，可能是我们俩不够势均力敌吧。</p>
-<h2 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h2><p>啊啊啊，西安的天气真的太热了，最近每天都高温预警，出去一趟感觉体表温度都40+了，空气都是烫的，没有空调真的不能活，更别说和男嘉宾约会了，而且现在手上没有新的男嘉宾了，不过我会努力的！</p>
-<div class="note info"><p>一些题外话：人类观察员营业太久了，说实话我现在更多的不是抱着找对象的态度去认识男嘉宾，而真的只是观察人类而已，每次认识一个人，我都想看看他什么时候开始「不对劲」。。。<br>不过我觉得有个朋友说的话很有道理：「当你不是为了找对象而做这件事的时候，没准真正的人正在悄悄的出现」，嗯，但愿他说的对。</p>
-</div>]]></content>
       <categories>
         <category>人类观察员</category>
       </categories>
@@ -5594,86 +5600,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>公司上市了</title>
-    <url>/tw-nasdaq-listed/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
-
-<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
-<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
-<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
-<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
-<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
-<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"><span class="image-caption">logo(左旧右新)</span></p>
-<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
-<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
-<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
-</div>
-
-<hr>
-<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
-<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
-<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>人生</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>UiAutomator初体验(中)</title>
-    <url>/ui-automator-test-2/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/08/07/gVpdC1hMQHsrT64.png">
-
-<div class="note info"><p>事实上，如何上手编写最基本的UiAutomator测试，<a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing">官网</a> 上已经给出了设置步骤和简单的代码示例，只是没有从零开始介绍怎么创建一个完整的测试而已，所以我们可以基于官网文档，写一个可以在模拟器上运行的测试。</p>
-</div>
-
-<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>回到上篇博客创建好的测试项目，在app模块的build.gradle文件中，加上UiAutomator库的依赖：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">dependencies {
-    ...
-    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>添加之后Android Studio可能不会立刻下载依赖，所以为了确保可以使用uiautomator，需要在下图手动Apply一下：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/ljXOiHw7F5KQZIu.png" alt="下载依赖"><span class="image-caption">下载依赖</span></p>
-<h2 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h2><p>UI测试的第一步当然是定位元素，uiautomatorviewer工具可以做到这一点，它位于 <mark class="label primary">android-sdk/tools/bin/</mark> 目录，android-sdk就是下图中的sdk路径：</p>
-<p><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><span class="image-caption">sdk location</span><br>打开终端，定位到上述目录中，然后运行uiautomatorviewer：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/1lOsYUNK7haAxnV.png" alt="运行uiautomatorviewer"><span class="image-caption">运行uiautomatorviewer</span><br>如果上篇博客的环境都准备好了，就能打开uiautomatorviewer窗口，如果有已启动的设备，这里我打开了一个 <a href="https://jmyblog.top/AppUI-AutoTest-1/#%E5%90%AF%E5%8A%A8Android-Emulator">安卓模拟器</a> ，点击窗口左上角第二个按钮，就能获取设备当前页面的screenshot，右侧是页面元素信息，通过这些信息，我们就可以定位元素了。<br>UiAutomator提供了findObject()方法定位UiObject元素，以定位上图页面底部Login按钮为例：</p>
-<div class="tabs" id="定位元素写法"><ul class="nav-tabs"><li class="tab active"><a href="#定位元素写法-1">定位元素写法 1</a></li><li class="tab"><a href="#定位元素写法-2">定位元素写法 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="定位元素写法-1"><p>Kotlin：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">val loginButton: UiObject = device.findObject(
-        UiSelector().text("Login").className("android.widget.TextView")
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div><div class="tab-pane" id="定位元素写法-2"><p>Java：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">UiObject loginButton = device.findObject(new UiSelector()
-        .text("Login")
-        .className("android.widget.TextView"));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div></div></div>
-
-<h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><p>接下来我们就可以编写代码测试App了，我还是用了 <a href="https://jmyblog.top/AppUI-AutoTest-1/">之前文章</a> 里的测试App，可以在 <a href="https://github.com/webdriverio/native-demo-app/releases">这里</a> 下载，然后把它安装到模拟器里。<br>我们来编写最简单的两个Case，登录和注册。</p>
-<p><img data-src="https://i.loli.net/2021/08/06/6wSmbHJQcOIKTgz.png" alt="登录和注册页面"><span class="image-caption">登录和注册页面</span></p>
-<div class="note info"><p>首先是登录，要实现登录操作，我们要切换到登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要先切换到登录页面，再切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
-</div>
-<p>这里我只贴出一个步骤，是去打开app的登录页面，就使用上面的元素定义，其它步骤都可以参考这个完成：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/9UVPvcLlJqCKRzD.png" alt="打开登录页面测试步骤"><span class="image-caption">打开登录页面测试步骤</span><br>其中，launchApp方法依然是 <a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing#accessing-ui-components">官网提供</a> 的，先定义了一个device对象，通过该对象连接设备，然后再利用PackageName打开对应的App，最后我们定位元素并点击进入登录页面。<br>设备当前打开App的PackageName可以通过以下命令得到：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">adb shell dumpsys window | grep -E 'mCurrentFocus'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这就是我们使用Ui Automator编写的第一个可以运行的测试。</p>
-<h2 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h2><p>有三种方式可以运行Ui Automator测试，第一种是直接在编辑器里点击运行图标：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/LualXZYnq1R49Bv.png" alt="两个地方都可以点"><span class="image-caption">两个地方都可以点</span><br>第二种方式是通过adb shell在命令行运行：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">adb shell am instrument -w -m -e debug false -e class 'com.example.androidtest.ExampleInstrumentedTest#openLoginPage' com.example.androidtest.test/androidx.test.runner.AndroidJUnitRunner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>第三种方式也是在命令行运行，上篇博客提到，因为Ui Automator测试位于androidTest文件夹，是一种插桩测试，所以可以利用gradle直接运行，和mvn test执行测试的道理差不多：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">./gradlew connectedAndroidTest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>后两种运行方式，官网上也给出了 <a href="https://developer.android.com/studio/test/command-line">详细介绍</a> ，并且提供了各个参数的含义。<br>值得一提的是，用第三种方式运行测试还会生成两个测试结果文件，一个是html格式，在 <mark class="label info">path_to_your_project/module_name/build/reports/androidTests/connected/</mark> 目录中：</p>
-<p><img data-src="https://i.loli.net/2021/08/06/S7AfZ3yGMFXTRYo.png" alt="测试报告"><span class="image-caption">测试报告</span><br>另一个是xml格式，在 <mark class="label info">path_to_your_project/module_name/build/outputs/androidTest-results/connected/</mark> 目录中。</p>
-<h2 id="PageObject"><a href="#PageObject" class="headerlink" title="PageObject"></a>PageObject</h2><p>尽管我们已经写好了测试，但把所有的步骤都放在一个文件中显然不是good practice，所以我们可以按照Page Object模式将代码进行优化，把before方法、页面元素、操作步骤和测试分开，完成后的代码结构如下：</p>
-<p><img data-src="https://i.loli.net/2021/08/07/piOLVbxPScuAw5t.png" alt="PageObject"><span class="image-caption">PageObject</span><br>其中，selectors包里是各个页面的元素，pages包则用来存放各个页面的操作方法，公用的方法比如launchApp都放在BasePage里，真正的测试用例则统一放在tests包里，我已将 <a href="https://github.com/Summyj/UiAutomatorDemo">代码库</a> 上传到了github，不足之处还请大家批评指正。<br>以下是用三种方式执行测试的视频，直接点击编辑器图标运行大概12秒，用adb运行16秒，gradle运行也不过25秒：</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE5MDYyMjk2OA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>uiautomatorviewer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>转载：我在ThoughtWorks的头三年</title>
     <url>/threes-years-in-tw/</url>
     <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/threes-years-in-tw/1.png">
@@ -5777,6 +5703,86 @@ public class Functions {
       </categories>
       <tags>
         <tag>职业规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公司上市了</title>
+    <url>/tw-nasdaq-listed/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
+
+<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
+<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
+<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
+<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
+<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
+<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"><span class="image-caption">logo(左旧右新)</span></p>
+<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
+<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
+<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
+</div>
+
+<hr>
+<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
+<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
+<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UiAutomator初体验(中)</title>
+    <url>/ui-automator-test-2/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/08/07/gVpdC1hMQHsrT64.png">
+
+<div class="note info"><p>事实上，如何上手编写最基本的UiAutomator测试，<a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing">官网</a> 上已经给出了设置步骤和简单的代码示例，只是没有从零开始介绍怎么创建一个完整的测试而已，所以我们可以基于官网文档，写一个可以在模拟器上运行的测试。</p>
+</div>
+
+<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>回到上篇博客创建好的测试项目，在app模块的build.gradle文件中，加上UiAutomator库的依赖：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">dependencies {
+    ...
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>添加之后Android Studio可能不会立刻下载依赖，所以为了确保可以使用uiautomator，需要在下图手动Apply一下：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/ljXOiHw7F5KQZIu.png" alt="下载依赖"><span class="image-caption">下载依赖</span></p>
+<h2 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h2><p>UI测试的第一步当然是定位元素，uiautomatorviewer工具可以做到这一点，它位于 <mark class="label primary">android-sdk/tools/bin/</mark> 目录，android-sdk就是下图中的sdk路径：</p>
+<p><img data-src="https://i.loli.net/2021/05/20/2eIfnzWbQY4VsNP.png" alt="sdk location"><span class="image-caption">sdk location</span><br>打开终端，定位到上述目录中，然后运行uiautomatorviewer：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/1lOsYUNK7haAxnV.png" alt="运行uiautomatorviewer"><span class="image-caption">运行uiautomatorviewer</span><br>如果上篇博客的环境都准备好了，就能打开uiautomatorviewer窗口，如果有已启动的设备，这里我打开了一个 <a href="https://jmyblog.top/AppUI-AutoTest-1/#%E5%90%AF%E5%8A%A8Android-Emulator">安卓模拟器</a> ，点击窗口左上角第二个按钮，就能获取设备当前页面的screenshot，右侧是页面元素信息，通过这些信息，我们就可以定位元素了。<br>UiAutomator提供了findObject()方法定位UiObject元素，以定位上图页面底部Login按钮为例：</p>
+<div class="tabs" id="定位元素写法"><ul class="nav-tabs"><li class="tab active"><a href="#定位元素写法-1">定位元素写法 1</a></li><li class="tab"><a href="#定位元素写法-2">定位元素写法 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="定位元素写法-1"><p>Kotlin：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">val loginButton: UiObject = device.findObject(
+        UiSelector().text("Login").className("android.widget.TextView")
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div><div class="tab-pane" id="定位元素写法-2"><p>Java：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">UiObject loginButton = device.findObject(new UiSelector()
+        .text("Login")
+        .className("android.widget.TextView"));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div></div></div>
+
+<h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h2><p>接下来我们就可以编写代码测试App了，我还是用了 <a href="https://jmyblog.top/AppUI-AutoTest-1/">之前文章</a> 里的测试App，可以在 <a href="https://github.com/webdriverio/native-demo-app/releases">这里</a> 下载，然后把它安装到模拟器里。<br>我们来编写最简单的两个Case，登录和注册。</p>
+<p><img data-src="https://i.loli.net/2021/08/06/6wSmbHJQcOIKTgz.png" alt="登录和注册页面"><span class="image-caption">登录和注册页面</span></p>
+<div class="note info"><p>首先是登录，要实现登录操作，我们要切换到登录页面，之后输入邮箱和密码，再点击登录即可。<br>然后是注册，需要先切换到登录页面，再切换到注册tab页，之后输入邮箱、密码、确认密码字段，最后点击注册即可。</p>
+</div>
+<p>这里我只贴出一个步骤，是去打开app的登录页面，就使用上面的元素定义，其它步骤都可以参考这个完成：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/9UVPvcLlJqCKRzD.png" alt="打开登录页面测试步骤"><span class="image-caption">打开登录页面测试步骤</span><br>其中，launchApp方法依然是 <a href="https://developer.android.com/training/testing/ui-testing/uiautomator-testing#accessing-ui-components">官网提供</a> 的，先定义了一个device对象，通过该对象连接设备，然后再利用PackageName打开对应的App，最后我们定位元素并点击进入登录页面。<br>设备当前打开App的PackageName可以通过以下命令得到：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">adb shell dumpsys window | grep -E 'mCurrentFocus'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这就是我们使用Ui Automator编写的第一个可以运行的测试。</p>
+<h2 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h2><p>有三种方式可以运行Ui Automator测试，第一种是直接在编辑器里点击运行图标：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/LualXZYnq1R49Bv.png" alt="两个地方都可以点"><span class="image-caption">两个地方都可以点</span><br>第二种方式是通过adb shell在命令行运行：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">adb shell am instrument -w -m -e debug false -e class 'com.example.androidtest.ExampleInstrumentedTest#openLoginPage' com.example.androidtest.test/androidx.test.runner.AndroidJUnitRunner<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>第三种方式也是在命令行运行，上篇博客提到，因为Ui Automator测试位于androidTest文件夹，是一种插桩测试，所以可以利用gradle直接运行，和mvn test执行测试的道理差不多：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">./gradlew connectedAndroidTest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>后两种运行方式，官网上也给出了 <a href="https://developer.android.com/studio/test/command-line">详细介绍</a> ，并且提供了各个参数的含义。<br>值得一提的是，用第三种方式运行测试还会生成两个测试结果文件，一个是html格式，在 <mark class="label info">path_to_your_project/module_name/build/reports/androidTests/connected/</mark> 目录中：</p>
+<p><img data-src="https://i.loli.net/2021/08/06/S7AfZ3yGMFXTRYo.png" alt="测试报告"><span class="image-caption">测试报告</span><br>另一个是xml格式，在 <mark class="label info">path_to_your_project/module_name/build/outputs/androidTest-results/connected/</mark> 目录中。</p>
+<h2 id="PageObject"><a href="#PageObject" class="headerlink" title="PageObject"></a>PageObject</h2><p>尽管我们已经写好了测试，但把所有的步骤都放在一个文件中显然不是good practice，所以我们可以按照Page Object模式将代码进行优化，把before方法、页面元素、操作步骤和测试分开，完成后的代码结构如下：</p>
+<p><img data-src="https://i.loli.net/2021/08/07/piOLVbxPScuAw5t.png" alt="PageObject"><span class="image-caption">PageObject</span><br>其中，selectors包里是各个页面的元素，pages包则用来存放各个页面的操作方法，公用的方法比如launchApp都放在BasePage里，真正的测试用例则统一放在tests包里，我已将 <a href="https://github.com/Summyj/UiAutomatorDemo">代码库</a> 上传到了github，不足之处还请大家批评指正。<br>以下是用三种方式执行测试的视频，直接点击编辑器图标运行大概12秒，用adb运行16秒，gradle运行也不过25秒：</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTE5MDYyMjk2OA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+      </categories>
+      <tags>
+        <tag>自动化测试</tag>
+        <tag>uiautomatorviewer</tag>
       </tags>
   </entry>
   <entry>
@@ -5888,6 +5894,34 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
+    <title>博客好久没更了</title>
+    <url>/why-am-not-writing-more-blogs/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
+
+<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
+<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
+<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
+<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
+<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
+<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
+<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
+<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
+<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
+<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
+</div>
+
+<blockquote>
+<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+      </categories>
+      <tags>
+        <tag>瞎写写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
@@ -5956,34 +5990,6 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </categories>
       <tags>
         <tag>闰年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客好久没更了</title>
-    <url>/why-am-not-writing-more-blogs/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
-
-<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
-<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
-<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
-<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
-<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
-<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
-<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
-<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
-<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
-<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
-</div>
-
-<blockquote>
-<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>瞎写写</tag>
       </tags>
   </entry>
   <entry>
