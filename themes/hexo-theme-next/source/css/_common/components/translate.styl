@@ -5,12 +5,9 @@
     border-radius: 2px;
     padding: 0 10px;
     transition-property: background;
-    
-    // 移除自定义样式，使用通用样式
-    &:hover {
-      // 使用与其他菜单按钮相同的hover效果
-      background: var(--menu-item-bg-color);
-    }
+
+    // 取消 hover 的灰色背景
+    &:hover { background: transparent; }
 
     i {
       font-size: 16px;

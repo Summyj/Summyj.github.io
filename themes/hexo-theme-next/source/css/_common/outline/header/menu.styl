@@ -24,10 +24,18 @@
     border-bottom: 0;
     display: block;
     font-size: $font-size-smaller;
-    transition: border-color $transition-ease;
+    transition: border-color $transition-ease, transform .15s ease;
+    will-change: transform;
 
-    &:hover, &.menu-item-active {
+    /* hover 上浮效果，不改变背景 */
+    &:hover { 
+      background: transparent; 
+      transform: translateY(-2px);
+    }
+    /* 选中态：保持原背景，同时也有上浮效果 */
+    &.menu-item-active { 
       background: var(--menu-item-bg-color);
+      transform: translateY(-2px);
     }
   }
 

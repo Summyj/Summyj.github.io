@@ -1,10 +1,40 @@
 .post-body .label {
   color: $text-color;
   padding: 0 2px;
+  
+  display: inline-block;
+  line-height: 1.6;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid rgba(#000, .04);
+  box-shadow: 0 1px 2px rgba(#000, .06);
+  background-image: linear-gradient(180deg, rgba(#fff, .55), rgba(#fff, 0));
+  transition: background-color .2s ease, box-shadow .2s ease, transform .05s ease;
+
+  & + .label {
+    margin-left: 2px;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(#000, .12);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 
   for $type in $note-types {
     &.{$type} {
       background: $label[$type];
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-body .label {
+    border: 1px solid rgba(#000, .28);
+    box-shadow: 0 1px 2px rgba(#000, .35);
+    background-image: linear-gradient(180deg, rgba(#000, .14), rgba(#000, 0));
   }
 }
