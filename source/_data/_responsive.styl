@@ -1,0 +1,148 @@
+/* ==================== 响应式设计样式 ==================== */
+
+/* 修复移动端菜单不水平 */
+@media screen and (max-width: 767px) {
+  .site-nav .menu {
+    display: flex !important;
+    justify-content: center !important; /* 居中显示 */
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .site-nav .menu .menu-item {
+    margin: 0 5px !important;
+  }
+  
+  .site-nav .menu .menu-item a {
+    transform: none !important;
+    padding: 8px !important;
+  }
+  
+  .site-nav .menu .menu-item a:hover,
+  .site-nav .menu .menu-item-active a {
+    transform: none !important;
+  }
+  
+  /* 移动端隐藏搜索图标 */
+  .site-nav .menu .menu-item-search {
+    display: none !important;
+  }
+}
+
+/* 调整桌面端标题位置 */
+@media screen and (min-width: 992px) {
+  .site-brand-container {
+    padding-left: 30px !important;
+  }
+}
+
+/* 调整桌面端菜单栏图标位置 */
+@media screen and (min-width: 992px) {
+  .site-nav .menu {
+    padding-right: 20px !important;
+  }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .persistent-music-player {
+    bottom: 15px !important;
+    left: 70px !important; /* 向右移动，避免遮挡左侧按钮 */
+    max-width: calc(100vw - 80px) !important; /* 调整最大宽度 */
+  }
+  
+  .music-iframe-container iframe {
+    width: 280px !important;
+    height: 380px !important;
+  }
+  
+  /* 确保在所有移动端设备上隐藏搜索图标 */
+  .site-nav .menu .menu-item-search {
+    display: none !important;
+  }
+}
+
+/* 超小屏幕适配 */
+@media screen and (max-width: 480px) {
+  .persistent-music-player {
+    bottom: 10px !important;
+    left: 60px !important; /* 向右移动，避免遮挡左侧按钮 */
+    max-width: calc(100vw - 70px) !important; /* 调整最大宽度 */
+  }
+  
+  .music-iframe-container iframe {
+    width: 250px !important;
+    height: 350px !important;
+  }
+}
+
+/* 极小屏幕适配 - 确保在最小设备上也不遮挡 */
+@media screen and (max-width: 360px) {
+  .persistent-music-player {
+    left: 55px !important; 
+    max-width: calc(100vw - 65px) !important;
+  }
+  
+  .music-iframe-container iframe {
+    width: 220px !important;
+    height: 320px !important;
+  }
+}
+
+/* 小桌面适配 - 避免遮挡左侧按钮 */
+@media screen and (max-width: 1024px) {
+  .persistent-music-player {
+    left: 100px !important; /* 向右移动，避免遮挡回到顶部按钮 */
+  }
+}
+
+/* 手机端样式调整 */
+@media screen and (max-width: 767px) {
+  /* 取消悬停效果 */
+  .post.posts-expand .post-body img:hover,
+  .page.posts-expand .post-body img:hover {
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* 移动端图片样式调整 */
+  
+  /* 移动端figcaption */
+  .post.posts-expand .post-body figure figcaption,
+  .page.posts-expand .post-body figure figcaption {
+    font-size: 13px !important; /* 与alt文字一致 */
+    max-width: 95% !important;
+  }
+  
+  /* 移动端隐藏搜索图标 */
+  .site-nav .menu .menu-item-search {
+    display: none !important;
+  }
+}
+
+/* 修改搜索弹窗高度和位置，按照next-Mist风格 */
+.search-popup {
+  height: 200% !important;
+  margin: 2.5% auto !important;
+  max-width: 800px !important;
+  border-radius: 8px !important;
+}
+
+mobile() {
+  .search-popup {
+    height: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* 为了固定header，调整main内容上边距 */
+.main {
+  padding-top: 90px !important; /* 根据header高度调整 */
+}
+
+mobile() {
+  .main {
+    padding-top: 80px !important; /* 移动端稍微减少一点 */
+  }
+} 

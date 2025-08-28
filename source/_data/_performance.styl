@@ -1,0 +1,32 @@
+/* ==================== 性能优化样式 ==================== */
+/* 减少重排和重绘，提升滚动性能 - 只对文章内容应用 */
+.post.posts-expand .post-body {
+    contain: layout;
+}
+
+/* 优化图片加载 */
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 400px;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 优化字体渲染 - 保持原有样式不变 */
+.post-body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 减少动画对性能的影响 */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+} 

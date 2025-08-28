@@ -1,0 +1,321 @@
+/* ==================== Medium风格文章样式 ==================== */
+/* 仅应用于文章页面和页面，不影响首页 */
+
+/* 主要内容区域 - 仅在文章页面和页面应用宽度限制，不影响首页 */
+/* 大屏桌面端 (≥1200px) */
+@media screen and (min-width: 1200px) {
+    .post.posts-expand .main,
+    .post.posts-expand,
+    .post.posts-expand .content,
+    .post.posts-expand .content-wrap,
+    .page.posts-expand .main,
+    .page.posts-expand,
+    .page.posts-expand .content,
+    .page.posts-expand .content-wrap {
+        max-width: 750px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}
+
+/* 中屏桌面端 (992px-1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .main,
+    .post.posts-expand,
+    .post.posts-expand .content,
+    .post.posts-expand .content-wrap,
+    .page.posts-expand .main,
+    .page.posts-expand,
+    .page.posts-expand .content,
+    .page.posts-expand .content-wrap {
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}
+
+/* 平板端和移动端 (<992px) 保持主题默认宽度，不做限制 */
+
+/* 仅在桌面端覆盖Next主题的默认宽度变量 - 只影响文章页面和页面 */
+@media screen and (min-width: 992px) {
+    .post.posts-expand,
+    .page.posts-expand {
+        --content-desktop: 750px !important;
+        --content-desktop-large: 750px !important;
+        --content-desktop-largest: 750px !important;
+    }
+}
+
+/* 文章内容样式 - 仅应用于文章页面和页面，完整Medium风格 */
+.post.posts-expand .post-body,
+.page.posts-expand .post-body {
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.003em !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-size: 18px !important; /* 从20px减小到18px */
+    line-height: 1.58 !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .post-body,
+    .page.posts-expand .post-body {
+        font-size: 17px !important; /* 从18px减小到17px */
+        line-height: 1.6 !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .post.posts-expand .post-body,
+    .page.posts-expand .post-body {
+        font-size: 16px !important; /* 从18px减小到16px */
+        line-height: 1.6 !important;
+    }
+}
+
+/* 段落样式 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body p,
+.page.posts-expand .post-body p {
+    margin: 0 0 1.5em 0 !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
+    font-weight: 400 !important;
+    word-break: break-word !important;
+}
+
+/* 标题样式 - 仅应用于文章页面和页面，Medium风格 */
+.post.posts-expand .post-body h1,
+.post.posts-expand .post-body h2,
+.post.posts-expand .post-body h3,
+.post.posts-expand .post-body h4,
+.post.posts-expand .post-body h5,
+.post.posts-expand .post-body h6,
+.page.posts-expand .post-body h1,
+.page.posts-expand .post-body h2,
+.page.posts-expand .post-body h3,
+.page.posts-expand .post-body h4,
+.page.posts-expand .post-body h5,
+.page.posts-expand .post-body h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-weight: 700 !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
+    letter-spacing: -0.022em !important;
+    margin: 2em 0 0.5em 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* Medium风格标题字体大小 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body h1,
+.page.posts-expand .post-body h1 {
+    font-size: 2.2em !important;
+    margin-top: 1.5em !important;
+}
+
+.post.posts-expand .post-body h2,
+.page.posts-expand .post-body h2 {
+    font-size: 1.8em !important;
+    margin-top: 2em !important;
+}
+
+.post.posts-expand .post-body h3,
+.page.posts-expand .post-body h3 {
+    font-size: 1.5em !important;
+}
+
+.post.posts-expand .post-body h4,
+.page.posts-expand .post-body h4 {
+    font-size: 1.3em !important;
+}
+
+.post.posts-expand .post-body h5,
+.post.posts-expand .post-body h6,
+.page.posts-expand .post-body h5,
+.page.posts-expand .post-body h6 {
+    font-size: 1.1em !important;
+}
+
+/* 引用块样式 - 仅应用于文章页面和页面 */
+.post.posts-expand .post-body blockquote,
+.page.posts-expand .post-body blockquote {
+    border-left: 3px solid #57ad68 !important;
+    padding: 0 0 0 23px !important;
+    margin: 2em 0 !important;
+    font-style: italic !important;
+    font-size: 1.0em !important; /* 从1.1em减小到1.0em，与正文相同 */
+    line-height: 1.48 !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
+    background: none !important;
+}
+
+.post.posts-expand .post-body blockquote p,
+.page.posts-expand .post-body blockquote p {
+    margin: 0 !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
+}
+
+/* 特殊处理 blockquote-center（{% cq %}标签），移除左边绿色竖条 */
+.post.posts-expand .post-body blockquote.blockquote-center,
+.page.posts-expand .post-body blockquote.blockquote-center {
+    border-left: none !important;
+    padding: 0 !important;
+}
+
+/* 行内代码样式已完全移除 - 使用 NexT 主题默认样式 */
+
+/* 
+ * 代码块样式完全交给 highlight.js 处理
+ * 不对 pre 和 pre code 应用任何自定义样式
+ * 让 NexT 主题和 highlight.js 的默认 GitHub 风格完全生效
+ */
+
+/* 列表样式 - Medium风格 */
+.post.posts-expand .post-body ul,
+.post.posts-expand .post-body ol,
+.page.posts-expand .post-body ul,
+.page.posts-expand .post-body ol {
+    margin: 1.5em 0 !important;
+    padding-left: 1.5em !important;
+}
+
+.post.posts-expand .post-body li,
+.page.posts-expand .post-body li {
+    margin: 0.5em 0 !important;
+    line-height: inherit !important;
+}
+
+.post.posts-expand .post-body ul li,
+.page.posts-expand .post-body ul li {
+    list-style-type: disc !important;
+}
+
+.post.posts-expand .post-body ol li,
+.page.posts-expand .post-body ol li {
+    list-style-type: decimal !important;
+}
+
+/* 链接样式 - 使用Next主题CSS变量，支持暗色模式 */
+.post.posts-expand .post-body a,
+.page.posts-expand .post-body a {
+    color: var(--link-color) !important; /* 使用CSS变量，支持暗色模式 */
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--blockquote-color) !important; /* 使用blockquote颜色作为下划线 */
+    transition: all 0.2s ease !important;
+}
+
+.post.posts-expand .post-body a:hover,
+.page.posts-expand .post-body a:hover {
+    color: var(--link-hover-color) !important; /* 使用CSS变量，支持暗色模式 */
+    border-bottom-color: var(--link-hover-color) !important;
+}
+
+/* 分隔线样式 - Medium风格 */
+.post.posts-expand .post-body hr,
+.page.posts-expand .post-body hr {
+    border: none !important;
+    height: 1px !important;
+    background: #e1e1e1 !important;
+    margin: 3em auto !important;
+    width: 60% !important;
+}
+
+/* 强调文本样式 */
+.post.posts-expand .post-body strong,
+.post.posts-expand .post-body b,
+.page.posts-expand .post-body strong,
+.page.posts-expand .post-body b {
+    font-weight: 700 !important;
+    color: var(--text-color) !important; /* 使用CSS变量，支持暗色模式 */
+}
+
+.post.posts-expand .post-body em,
+.post.posts-expand .post-body i,
+.page.posts-expand .post-body em,
+.page.posts-expand .post-body i {
+    font-style: italic !important;
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
+}
+
+/* ==================== 响应式图片优化 - Medium风格 ==================== */
+.post.posts-expand .post-body img,
+.page.posts-expand .post-body img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 1em auto 1em auto !important; /* 减少上边距，减少留白 */
+    border-radius: 6px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Medium风格图片说明文字 - 通过figcaption实现 */
+
+/* Medium风格图片容器样式 */
+.post.posts-expand .post-body figure,
+.page.posts-expand .post-body figure {
+    margin: 1em auto !important;
+    text-align: center !important;
+}
+
+.post.posts-expand .post-body figure img,
+.page.posts-expand .post-body figure img {
+    margin: 0 auto 1em auto !important; /* 为figcaption留出空间 */
+}
+
+/* Medium风格figcaption样式 */
+.post.posts-expand .post-body figure figcaption,
+.page.posts-expand .post-body figure figcaption {
+    color: var(--blockquote-color) !important; /* 使用CSS变量，支持暗色模式 */
+    font-size: 14px !important; /* 固定14px，与alt文字一致 */
+    font-style: normal !important; /* 不使用斜体 */
+    font-weight: 400 !important;
+    margin: 0.8em auto 0 auto !important; /* 与alt文字边距一致 */
+    max-width: 90% !important; /* 限制宽度 */
+    line-height: 1.5 !important;
+    text-align: center !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.post.posts-expand .post-body img:hover,
+.page.posts-expand .post-body img:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 桌面端图片样式 */
+@media screen and (min-width: 1200px) {
+    .post.posts-expand .post-body img,
+    .page.posts-expand .post-body img {
+        max-width: 90% !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .post.posts-expand .post-body img,
+    .page.posts-expand .post-body img {
+        max-width: 95% !important;
+    }
+}
+
+/* 手机端样式调整 */
+@media screen and (max-width: 767px) {
+    /* 取消悬停效果 */
+    .post.posts-expand .post-body img:hover,
+    .page.posts-expand .post-body img:hover {
+        transform: none !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* 移动端图片样式调整 */
+    
+    /* 移动端figcaption */
+    .post.posts-expand .post-body figure figcaption,
+    .page.posts-expand .post-body figure figcaption {
+        font-size: 13px !important; /* 与alt文字一致 */
+        max-width: 95% !important;
+    }
+}
+
+/* ==================== 文章标题样式 - 使用主题默认 ==================== */
+/* 移除文章标题的自定义样式，使用Next-Mist主题默认样式 */ 

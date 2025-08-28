@@ -1,0 +1,52 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('header.header');
+  if (!header) {
+    console.warn('Header element not found');
+    return;
+  }
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  function updateHeader() {
+    const currentScrollY = window.scrollY;
+
+    // 在页面顶部时显示header
+    if (currentScrollY <= 70) {
+      header.classList.remove('hidden');
+      header.classList.remove('scrolled');
+    } else {
+      // 添加滚动阴影效果
+      header.classList.add('scrolled');
+      
+      // 简单的滚动方向判断
+      if (currentScrollY > lastScrollY) {
+        // 向下滚动时隐藏
+        header.classList.add('hidden');
+      } else {
+        // 向上滚动时显示
+        header.classList.remove('hidden');
+      }
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }
+
+  // 监听滚动事件
+  window.addEventListener('scroll', onScroll, { passive: true });
+  
+  // 初始化时确保header可见
+  setTimeout(() => {
+    header.classList.remove('hidden');
+  }, 100);
+});
+</script> 

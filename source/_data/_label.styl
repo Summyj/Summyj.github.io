@@ -1,0 +1,142 @@
+/* ==================== Label 标签样式修改 ==================== */
+/* 修改label效果：文字直接变色并加粗显示，适配Darkmode */
+
+/* 基础label样式重置 */
+.post-body .label {
+  /* 移除原有的背景、边框、阴影等样式 */
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: inline !important;
+  line-height: inherit !important;
+  font-weight: 700 !important; /* 加粗显示 */
+  font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", "Arial Rounded MT Bold", "Segoe UI", "Helvetica Neue", Arial, sans-serif !important; /* 可爱字体 */
+  font-size: 1.05em !important; /* 稍微增大字体 */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1) !important; /* 添加轻微文字阴影 */
+  transition: none !important;
+  transform: none !important;
+  
+  /* 移除hover效果 */
+  &:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  
+  /* 移除active效果 */
+  &:active {
+    transform: none !important;
+  }
+  
+  /* 移除label之间的间距 */
+  & + .label {
+    margin-left: 0 !important;
+  }
+}
+
+/* 各类型label的颜色定义 */
+/* default - 灰色 */
+.post-body .label.default {
+  color: #777 !important;
+}
+
+/* primary - 紫色 */
+.post-body .label.primary {
+  color: #6f42c1 !important;
+}
+
+/* success - 绿色 */
+.post-body .label.success {
+  color: #5cb85c !important;
+}
+
+/* info - 蓝色 */
+.post-body .label.info {
+  color: #428bca !important;
+}
+
+/* warning - 橙色 */
+.post-body .label.warning {
+  color: #f0ad4e !important;
+}
+
+/* danger - 红色 */
+.post-body .label.danger {
+  color: #d9534f !important;
+}
+
+/* ==================== Darkmode 适配 ==================== */
+@media (prefers-color-scheme: dark) {
+  /* 暗色模式下的通用文字阴影 */
+  .post-body .label {
+    text-shadow: 0 1px 2px rgba(255,255,255,0.1) !important; /* 暗色模式下的文字阴影 */
+  }
+  
+  /* default - 暗色模式下的灰色 */
+  .post-body .label.default {
+    color: #b0b0b0 !important;
+  }
+  
+  /* primary - 暗色模式下的紫色 */
+  .post-body .label.primary {
+    color: #a855f7 !important;
+  }
+  
+  /* success - 暗色模式下的绿色 */
+  .post-body .label.success {
+    color: #4ade80 !important;
+  }
+  
+  /* info - 暗色模式下的蓝色 */
+  .post-body .label.info {
+    color: #60a5fa !important;
+  }
+  
+  /* warning - 暗色模式下的橙色 */
+  .post-body .label.warning {
+    color: #fbbf24 !important;
+  }
+  
+  /* danger - 暗色模式下的红色 */
+  .post-body .label.danger {
+    color: #f87171 !important;
+  }
+}
+
+/* 手动暗色模式适配（主题类触发） */
+/* 手动暗色模式下的通用文字阴影 */
+html.theme-dark .post-body .label,
+body.theme-dark .post-body .label {
+  text-shadow: 0 1px 2px rgba(255,255,255,0.1) !important; /* 手动暗色模式下的文字阴影 */
+}
+
+html.theme-dark .post-body .label.default,
+body.theme-dark .post-body .label.default {
+  color: #b0b0b0 !important;
+}
+
+html.theme-dark .post-body .label.primary,
+body.theme-dark .post-body .label.primary {
+  color: #a855f7 !important;
+}
+
+html.theme-dark .post-body .label.success,
+body.theme-dark .post-body .label.success {
+  color: #4ade80 !important;
+}
+
+html.theme-dark .post-body .label.info,
+body.theme-dark .post-body .label.info {
+  color: #60a5fa !important;
+}
+
+html.theme-dark .post-body .label.warning,
+body.theme-dark .post-body .label.warning {
+  color: #fbbf24 !important;
+}
+
+html.theme-dark .post-body .label.danger,
+body.theme-dark .post-body .label.danger {
+  color: #f87171 !important;
+} 

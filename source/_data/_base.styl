@@ -1,0 +1,300 @@
+/* ==================== 基础样式和修复 ==================== */
+
+/* 移除背景图片，使用主题默认背景 */
+
+/* ==================== 修复 Note 标签末尾空行问题 ==================== */
+/* 基于实际HTML结构修复: <div class="note default"><p>...</p></div> */
+/* 使用更高的优先级覆盖Medium风格的段落样式 */
+
+.note.default,
+.note.primary, 
+.note.success,
+.note.info,
+.note.warning,
+.note.danger {
+    margin-bottom: 20px !important;
+}
+
+/* 修复note内最后一个段落的底部边距 - 使用最高优先级 */
+.post.posts-expand .post-body .note p:last-child,
+.page.posts-expand .post-body .note p:last-child,
+.post-body .note p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+/* ==================== 修复代码块高亮问题 ==================== */
+/* 让Next主题的默认代码高亮生效，仅修复Medium风格冲突 */
+
+/* 行内代码样式已完全移除 - 使用 NexT 主题默认样式 */
+
+/* 移除对代码块的重置，让主题的默认高亮完全生效 */
+/* 注释掉这部分CSS，让Next主题的代码高亮自然工作 */
+
+/* ==================== 结束修复规则 ==================== */
+
+/* ==================== 内联目录样式 ==================== */
+span#inline-toc {
+    display: inline-block;
+    border-radius: 80% 100% 90% 20%;
+    background-color: rgb(227, 242, 253);
+    color: #555;
+    padding: 0.05em 0.4em;
+    margin: 2px 5px 2px 0px;
+    line-height: 1.5;
+}
+
+/* ==================== 过滤 Livere 评论系统中的 Taboola 广告 ==================== */
+/* 隐藏 Taboola 广告容器 */
+#taboola-livere,
+div[id*="taboola"],
+div[class*="trc_related_container"],
+div[class*="tbl-trecs-container"],
+div[class*="trc_spotlight_widget"],
+div[data-placement-name*="1020_29982"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 隐藏包含 Taboola 标识的广告内容 */
+div[class*="trc_rbox_container"],
+div[class*="trc_rbox"],
+div[class*="thumbnails-b"],
+div[class*="trc-content-sponsored"],
+a[href*="taboola.com"],
+a[href*="popup.taboola.com"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 隐藏 Taboola 相关的视频广告容器 */
+figure[id*="taboola"],
+div[class*="videoCube"],
+div[class*="trc_spotlight_item"],
+div[data-item-syndicated="true"] {
+    display: none !important;
+}
+
+/* 隐藏包含特定广告文本的元素 */
+div:contains("您可能喜歡的內容"),
+div:contains("by Taboola"),
+span:contains("by Taboola") {
+    display: none !important;
+}
+
+/* 额外保护：隐藏可能遗漏的 Taboola 相关元素 */
+[class*="taboola"],
+[id*="taboola"],
+[data-placement-name],
+.trc_related_container,
+.tbl-trecs-container,
+.trc_spotlight_widget,
+.trc_elastic,
+.trc_elastic_thumbnails-b {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 防止广告容器占用空间 */
+*[class*="trc_"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+/* ==================== 结束广告过滤规则 ==================== */
+
+/* ==================== 文章元信息样式 ==================== */
+.post .post-meta,
+.post-meta {
+    color: #757575 !important;
+    font-size: 0.9em !important;
+    margin-bottom: 2em !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.post .post-meta .post-meta-item,
+.post-meta .post-meta-item {
+    color: #757575 !important;
+}
+
+.post .post-meta a,
+.post-meta a {
+    color: #757575 !important;
+    border-bottom: 1px solid #999 !important; /* 恢复下划线，使用与其他链接一致的样式 */
+}
+
+.post .post-meta a:hover,
+.post-meta a:hover {
+    color: #222 !important; /* 使用与其他链接一致的颜色 */
+    border-bottom-color: #222 !important; /* hover时下划线也变色 */
+}
+
+/* ==================== 诗词显示样式 ==================== */
+.poem {
+    text-align: center;
+    margin: 10px 0;
+    color: #999;
+    font-style: italic;
+}
+
+/* ==================== 侧边栏 Not By AI 徽章样式 ==================== */
+/* SVG响应式设计 */
+.not-by-ai-sidebar {
+    text-align: center;
+    margin: 15px 0 10px 0;
+    padding: 8px 0;
+}
+
+.not-by-ai-sidebar a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    line-height: 0; /* 消除SVG下方的间隙 */
+}
+
+.not-by-ai-sidebar a:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.not-by-ai-sidebar img {
+    /* SVG默认尺寸 - 桌面端，放大尺寸 */
+    width: 120px !important; /* 从100px增加到120px */
+    height: auto !important;
+    max-width: none !important;
+    min-width: 120px !important; /* 对应调整最小宽度 */
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    vertical-align: middle !important; /* 垂直居中对齐 */
+}
+
+/* 大屏桌面设备 */
+@media screen and (min-width: 1200px) {
+    .not-by-ai-sidebar img {
+        width: 140px !important; /* 从110px增加到140px */
+        min-width: 140px !important;
+    }
+}
+
+/* 平板设备 */
+@media screen and (max-width: 991px) {
+    .not-by-ai-sidebar {
+        margin: 12px 0 8px 0;
+        padding: 6px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 120px !important; /* 从100px增加到120px */
+        min-width: 120px !important;
+    }
+}
+
+/* 手机设备 */
+@media screen and (max-width: 767px) {
+    .not-by-ai-sidebar {
+        margin: 10px 0 6px 0;
+        padding: 4px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 145px !important; /* 从130px增加到145px */
+        min-width: 145px !important;
+    }
+}
+
+/* 小屏手机 */
+@media screen and (max-width: 480px) {
+    .not-by-ai-sidebar {
+        margin: 8px 0 4px 0;
+        padding: 2px 0;
+    }
+    
+    .not-by-ai-sidebar img {
+        width: 140px !important; /* 从125px增加到140px */
+        min-width: 140px !important;
+    }
+}
+
+/* 超小屏设备 */
+@media screen and (max-width: 360px) {
+    .not-by-ai-sidebar img {
+        width: 135px !important; /* 从120px增加到135px */
+        min-width: 135px !important;
+    }
+}
+
+/* 侧边栏收缩时的特殊处理 - 仅在大屏幕上生效 */
+@media screen and (min-width: 992px) {
+    .sidebar-toggle:checked ~ .sidebar .not-by-ai-sidebar img {
+        width: 50px !important;
+        min-width: 50px !important;
+    }
+}
+
+/* ==================== 页面底部信息居中展示 ==================== */
+.footer {
+    text-align: center !important;
+}
+
+.footer-inner {
+    text-align: center !important;
+    align-items: center !important;
+}
+
+.footer .copyright,
+.footer .wordcount,
+.footer .busuanzi-count,
+.footer .powered-by,
+.footer .beian,
+.footer .poem,
+.footer .time {
+    text-align: center !important;
+    display: block !important;
+    /* 移除强制的margin设置，保持原有行间距 */
+    width: 100% !important;
+}
+
+/* 确保footer内的所有span元素也居中 */
+.footer span,
+.footer div {
+    text-align: center !important;
+}
+
+/* 特殊处理busuanzi计数器的布局 */
+.footer .busuanzi-count .post-meta-item {
+    display: inline-block !important;
+    margin: 0 10px !important;
+    text-align: center !important;
+}
+
+/* 诗词和时间显示居中 */
+.footer .poem span,
+.footer .time span {
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+/* 版权信息居中 */
+.footer .copyright .author {
+    display: inline !important;
+    text-align: center !important;
+}
+
+/* 确保爱心动画正常工作，不覆盖主题设置 */
+.footer .copyright .with-love {
+    display: inline-block !important;
+    margin: 0 5px !important;
+    /* 不要覆盖animation属性，让主题的CSS生效 */
+} 

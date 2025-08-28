@@ -1,0 +1,202 @@
+/* ==================== Note 标签样式 ==================== */
+
+/* ==================== Note 标签美化：info 填充卡片（已移除，使用下方统一样式） ==================== */
+
+/* 统一移除 note 的伪元素图标（确保不显示任何图标） */
+.note::before { content: none !important; display: none !important; }
+
+/* ==================== Note 标签填充样式（无图标） ==================== */
+/* 通用外观 */
+.post .post-body .note,
+.page .post-body .note,
+.note {
+    display: block !important;
+    padding: 16px 18px 16px 12px !important;
+    margin: 16px 0 !important;
+    border-radius: 10px !important;
+    border: none !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04) !important;
+}
+
+/* default - 中性灰 */
+.note.default { background: #f5f5f5 !important; color: #333 !important; border-left: 6px solid #bdbdbd !important; padding-left: 12px !important; }
+.note.default a { color: #333 !important; border-bottom-color: #666 !important; }
+.note.default a:hover { color: #111 !important; border-bottom-color: #111 !important; }
+
+/* primary - 紫色 */
+.note.primary { background: #f4f0ff !important; color: #4a148c !important; border-left: 6px solid #6b46c1 !important; padding-left: 12px !important; }
+.note.primary a { color: #4a148c !important; border-bottom-color: #4a148c !important; }
+.note.primary a:hover { color: #6b46c1 !important; border-bottom-color: #6b46c1 !important; }
+
+/* success - 绿色 */
+.note.success { background: #e8f5e9 !important; color: #0f5132 !important; border-left: 6px solid #2e7d32 !important; padding-left: 12px !important; }
+.note.success a { color: #1b5e20 !important; border-bottom-color: #1b5e20 !important; }
+.note.success a:hover { color: #2e7d32 !important; border-bottom-color: #2e7d32 !important; }
+
+/* info - 调整为蓝色系（高优先级覆盖） */
+.post .post-body .note.info,
+.page .post-body .note.info,
+.note.info {
+    background: #eef6ff !important;
+    color: #1e3a8a !important;
+    border-left: 6px solid #3b82f6 !important;
+    padding: 16px 18px 16px 12px !important;
+}
+.post .post-body .note.info a,
+.page .post-body .note.info a,
+.note.info a { color: var(--link-color) !important; border-bottom-color: var(--link-color) !important; }
+.post .post-body .note.info a:hover,
+.page .post-body .note.info a:hover,
+.note.info a:hover { color: var(--link-hover-color) !important; border-bottom-color: var(--link-hover-color) !important; }
+
+/* warning - 橙色 */
+.note.warning { background: #fff4e5 !important; color: #663c00 !important; border-left: 6px solid #f59e0b !important; padding-left: 12px !important; }
+.note.warning a { color: #7c4a00 !important; border-bottom-color: #7c4a00 !important; }
+.note.warning a:hover { color: #f59e0b !important; border-bottom-color: #f59e0b !important; }
+
+/* danger - 红色 */
+.note.danger { background: #fdecea !important; color: #7f1d1d !important; border-left: 6px solid #d32f2f !important; padding-left: 12px !important; }
+.note.danger a { color: #7f1d1d !important; border-bottom-color: #7f1d1d !important; }
+.note.danger a:hover { color: #d32f2f !important; border-bottom-color: #d32f2f !important; }
+
+/* 系统暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+    /* 只在没有手动设置主题时应用暗色样式 */
+    :root:not(.theme-dark):not(.theme-light) .note.default { background: #2a2a2a !important; color: #e5e5e5 !important; border-left-color: #666 !important; }
+    :root:not(.theme-dark):not(.theme-light) .note.primary { background: #20143a !important; color: #e6d9ff !important; border-left-color: #8b5cf6 !important; }
+    :root:not(.theme-dark):not(.theme-light) .note.success { background: #143d1a !important; color: #cde9ce !important; border-left-color: #4caf50 !important; }
+    :root:not(.theme-dark):not(.theme-light) .note.info    { background: #0f2140 !important; color: #dbeafe !important; border-left-color: #60a5fa !important; }
+    :root:not(.theme-dark):not(.theme-light) .note.warning { background: #3b2e0a !important; color: #ffe8b6 !important; border-left-color: #f59e0b !important; }
+    :root:not(.theme-dark):not(.theme-light) .note.danger  { background: #3d0c0c !important; color: #f5c2c7 !important; border-left-color: #ef4444 !important; }
+}
+
+/* 手动日间模式样式 */
+html.theme-light .post .post-body .note,
+html.theme-light .page .post-body .note,
+html.theme-light .note {
+    color: #333 !important;
+}
+
+html.theme-light .post .post-body .note.default,
+html.theme-light .page .post-body .note.default,
+html.theme-light .note.default {
+    background: #f5f5f5 !important;
+    border-left-color: #bdbdbd !important;
+}
+
+html.theme-light .post .post-body .note.primary,
+html.theme-light .page .post-body .note.primary,
+html.theme-light .note.primary {
+    background: #f4f0ff !important;
+    border-left-color: #6b46c1 !important;
+    color: #4a148c !important;
+}
+
+html.theme-light .post .post-body .note.success,
+html.theme-light .page .post-body .note.success,
+html.theme-light .note.success {
+    background: #e8f5e9 !important;
+    border-left-color: #2e7d32 !important;
+    color: #0f5132 !important;
+}
+
+html.theme-light .post .post-body .note.info,
+html.theme-light .page .post-body .note.info,
+html.theme-light .note.info {
+    background: #eef6ff !important;
+    border-left-color: #3b82f6 !important;
+    color: #1e3a8a !important;
+}
+
+html.theme-light .post .post-body .note.warning,
+html.theme-light .page .post-body .note.warning,
+html.theme-light .note.warning {
+    background: #fff4e5 !important;
+    border-left-color: #f59e0b !important;
+    color: #663c00 !important;
+}
+
+html.theme-light .post .post-body .note.danger,
+html.theme-light .page .post-body .note.danger,
+html.theme-light .note.danger {
+    background: #fdecea !important;
+    border-left-color: #d32f2f !important;
+    color: #7f1d1d !important;
+}
+
+/* 强制左侧色条显示（高优先级，放在文件底部） */
+.post .post-body .note.default,
+.page .post-body .note.default,
+.note.default { border-left: 6px solid #bdbdbd !important; }
+
+.post .post-body .note.primary,
+.page .post-body .note.primary,
+.note.primary { border-left: 6px solid #6b46c1 !important; }
+
+.post .post-body .note.success,
+.page .post-body .note.success,
+.note.success { border-left: 6px solid #2e7d32 !important; }
+
+.post .post-body .note.info,
+.page .post-body .note.info,
+.note.info { border-left: 6px solid #3b82f6 !important; }
+
+.post .post-body .note.warning,
+.page .post-body .note.warning,
+.note.warning { border-left: 6px solid #f59e0b !important; }
+
+.post .post-body .note.danger,
+.page .post-body .note.danger,
+.note.danger { border-left: 6px solid #d32f2f !important; }
+
+/* 暗色模式（主题类触发）确保在手动切换暗色时也生效 */
+html.theme-dark .post .post-body .note,
+html.theme-dark .page .post-body .note,
+html.theme-dark .note { color: #e5e5e5 !important; }
+
+html.theme-dark .post .post-body .note.default,
+html.theme-dark .page .post-body .note.default,
+html.theme-dark .note.default {
+    background: #2a2a2a !important;
+    border-left-color: #666 !important;
+}
+
+html.theme-dark .post .post-body .note.primary,
+html.theme-dark .page .post-body .note.primary,
+html.theme-dark .note.primary {
+    background: #2b2140 !important;
+    border-left-color: #8b5cf6 !important;
+    color: #e6d9ff !important;
+}
+
+html.theme-dark .post .post-body .note.success,
+html.theme-dark .page .post-body .note.success,
+html.theme-dark .note.success {
+    background: #1c2d1f !important;
+    border-left-color: #4caf50 !important;
+    color: #cde9ce !important;
+}
+
+html.theme-dark .post .post-body .note.info,
+html.theme-dark .page .post-body .note.info,
+html.theme-dark .note.info {
+    background: #0f2140 !important;
+    border-left-color: #60a5fa !important;
+    color: #dbeafe !important;
+}
+
+html.theme-dark .post .post-body .note.warning,
+html.theme-dark .page .post-body .note.warning,
+html.theme-dark .note.warning {
+    background: #3b2e0a !important;
+    border-left-color: #f59e0b !important;
+    color: #ffe8b6 !important;
+}
+
+html.theme-dark .post .post-body .note.danger,
+html.theme-dark .page .post-body .note.danger,
+html.theme-dark .note.danger {
+    background: #3d0c0c !important;
+    border-left-color: #ef4444 !important;
+    color: #f5c2c7 !important;
+} 

@@ -1,0 +1,222 @@
+/* ==================== 持久化音乐播放器样式 ==================== */
+/* 固定在页面左下角，避免遮挡侧边栏按钮，完全独立于Pjax更新，确保播放连续性 */
+.persistent-music-player {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 80px !important;
+    z-index: 99999 !important; /* 提高z-index确保在所有内容之上 */
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease !important;
+    overflow: hidden !important;
+    will-change: transform !important;
+    pointer-events: auto !important; /* 确保可交互 */
+    isolation: isolate !important; /* 创建新的堆叠上下文，避免被其他元素影响 */
+    
+    /* 防止被Pjax或其他脚本影响 */
+    contain: layout style !important;
+    
+    /* 防止选中播放器内容 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+}
+
+.persistent-music-player:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* GPU加速优化 */
+.persistent-music-player,
+.music-iframe-container,
+.music-minimize-btn {
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+}
+
+/* 最小化状态 */
+.persistent-music-player.minimized .music-iframe-container {
+    display: none !important;
+}
+
+.persistent-music-player.minimized .music-minimize-btn {
+    display: none !important;
+}
+
+.persistent-music-player.minimized {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 控制按钮容器 */
+.music-controls {
+    position: relative !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 8px !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.persistent-music-player.minimized .music-controls {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* 切换按钮（最小化状态显示） */
+.music-toggle-btn {
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    font-weight: bold !important;
+    /* 防止选中文本的多重保护 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    /* 防止长按菜单 */
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    /* 防止拖拽 */
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}
+
+.persistent-music-player:not(.minimized) .music-toggle-btn {
+    display: none !important;
+}
+
+.music-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    transform: scale(1.1) !important;
+}
+
+/* 音乐图标旋转动画 */
+.music-toggle-btn.rotating {
+    animation: music-icon-rotate 2s linear infinite !important;
+}
+
+@keyframes music-icon-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 鼠标悬停时的旋转状态 */
+.music-toggle-btn.rotating:hover {
+    transform: scale(1.1) rotate(360deg) !important;
+    animation: music-icon-rotate-hover 2s linear infinite !important;
+}
+
+@keyframes music-icon-rotate-hover {
+    from {
+        transform: scale(1.1) rotate(0deg);
+    }
+    to {
+        transform: scale(1.1) rotate(360deg);
+    }
+}
+
+/* 最小化按钮（展开状态显示） */
+.music-minimize-btn {
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    font-weight: bold !important;
+    margin-left: 8px !important;
+    /* 防止选中文本的多重保护 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    /* 防止长按菜单 */
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    /* 防止拖拽 */
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}
+
+.music-minimize-btn:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    transform: scale(1.1) !important;
+}
+
+/* iframe容器 */
+.music-iframe-container {
+    padding: 0 12px 12px 12px !important;
+}
+
+.music-iframe-container iframe {
+    border-radius: 8px !important;
+    display: block !important;
+    border: none !important;
+}
+
+/* 音乐播放器备用提示 */
+.music-fallback {
+    padding: 20px !important;
+    text-align: center !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+}
+
+.music-fallback p {
+    margin: 0 0 10px 0 !important;
+    color: #666 !important;
+    font-size: 14px !important;
+}
+
+.music-fallback a {
+    color: #007bff !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    border: 1px solid #007bff !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+}
+
+.music-fallback a:hover {
+    background: #007bff !important;
+    color: white !important;
+}
+
+/* 音乐播放器响应式样式已移至 _responsive.styl */ 

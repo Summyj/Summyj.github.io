@@ -50,6 +50,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     
+    // 强制重新计算样式以确保背景图片更新
+    const header = document.querySelector('header.header');
+    if (header) {
+      // 强制触发重绘以确保CSS样式生效
+      header.style.backgroundImage = 'none';
+      header.offsetHeight; // 强制重排
+      // 使用setTimeout确保样式重置生效后再应用新样式
+      setTimeout(() => {
+        header.style.backgroundImage = '';
+        header.offsetHeight; // 再次强制重排
+      }, 10);
+    }
+    
+    // 强制更新徽章样式
+    const badge = document.querySelector('.not-by-ai-badge');
+    if (badge) {
+      // 强制触发徽章样式重新计算
+      badge.style.filter = 'none';
+      badge.offsetHeight; // 强制重排
+      setTimeout(() => {
+        badge.style.filter = '';
+        badge.offsetHeight; // 再次强制重排
+      }, 10);
+    }
+    
+    // 强制更新代码块和note标签样式
+    const codeBlocks = document.querySelectorAll('pre, code, .note, figure.highlight, .highlight');
+    if (codeBlocks.length > 0) {
+      // 强制触发样式重新计算
+      codeBlocks.forEach(element => {
+        // 临时修改样式以强制重绘
+        const originalDisplay = element.style.display;
+        element.style.display = 'none';
+        element.offsetHeight; // 强制重排
+        element.style.display = originalDisplay;
+        element.offsetHeight; // 再次强制重排
+      });
+    }
+    
+    // 强制更新所有使用CSS变量的元素
+    const elementsWithVars = document.querySelectorAll('*');
+    elementsWithVars.forEach(element => {
+      const computedStyle = window.getComputedStyle(element);
+      if (computedStyle.getPropertyValue('--highlight-background') || 
+          computedStyle.getPropertyValue('--highlight-foreground') ||
+          computedStyle.getPropertyValue('--text-color')) {
+        element.offsetHeight; // 强制重排
+      }
+    });
+    
+    // 触发自定义事件，通知其他组件主题已切换
+    const themeChangeEvent = new CustomEvent('themeChanged', {
+      detail: { theme: theme }
+    });
+    document.dispatchEvent(themeChangeEvent);
+    
     updateToggleButton();
   }
 

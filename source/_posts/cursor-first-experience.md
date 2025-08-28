@@ -60,6 +60,9 @@ npx npm-check-updates -u && npm install
 到这里，我已经可以感受到 Cursor 的强大了，以往需要1天时间才能完成的服务升级，在它的帮助下我只用了不到1小时，所以又接着用它做一些我想了很久的主题优化。
 
 ## 主题优化
+
+接下来是用Cursor完成的一系列主题优化。
+
 ### 文章主体浏览效果优化
 
 这是当前线上博客的文章主体部分浏览效果：
@@ -83,6 +86,18 @@ npx npm-check-updates -u && npm install
 ![After](https://s2.loli.net/2025/06/25/3pshRg758IZFoGq.png)
 
 文章主题部分的优化到此结束。不过目前还有一个图片fancybox的问题没有解决，点击图片查看有时候会缩成一个小点，切换上下图片也是这样，但是点一下右上角的缩略图按钮(9个点)就可以正常看。拉扯太多累了，以后再说(又不是不能用)。
+
+### New Header
+
+博客之前使用的Mist主题默认Header，是简单的灰色的背景，上面贴着标题和菜单栏。虽然我一直坚信「大道至简」，但太简单就显得有些过时了：
+
+![Before-Light](https://s2.loli.net/2025/08/28/FOLWk87IRTXAN6Q.png)
+![Before-Night](https://s2.loli.net/2025/08/28/jRLmnM4FthTbwui.png)
+
+新的header增加了高度并且添加了背景图片(豆包AI生成)，标题和菜单栏分别放在两边，整体风格更加现代。向下滑动页面或者打开sidebar会自动收起header，向下滑动页面可以唤醒header：
+
+![After-Light](https://s2.loli.net/2025/08/28/879PQBUe1RGfI32.png)
+![After-Night](https://s2.loli.net/2025/08/28/eGqklJ2K7bWDxZ4.png)
 
 ### Not By AI 徽章
 
@@ -137,7 +152,7 @@ Next主题本身就有Darkmode，是跟随系统的，但打开之后发现文�
 ![Before](https://s2.loli.net/2025/07/31/sBevu2ha4MmgdIU.png)
 ![After](https://s2.loli.net/2025/07/31/NDBjgkanURvl83d.png)
 
-除了优化，也给页面导航栏加上了一个自定义按钮，可以自由切换日间(太阳图标)和夜间模式(月亮图标)。优先级是默认会跟随系统，但也可以切换模式，不过切换之后就不会跟着系统变了，也很合理。
+此外，Sidebar也新增了日间模式，还给页面导航栏加上了一个自定义按钮，可以自由切换日间(太阳图标)和夜间模式(月亮图标)。优先级是默认会跟随系统，但也可以切换模式，不过切换之后就不会跟着系统变了，也很合理。
 
 ### 探索版本新功能
 

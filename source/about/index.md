@@ -1,4 +1,6 @@
 ---
+title: 关于
+header: false
 date: 2017-08-03 21:35:26
 comments: true
 type: "about"
