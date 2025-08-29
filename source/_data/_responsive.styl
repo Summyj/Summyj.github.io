@@ -47,7 +47,7 @@
 @media screen and (max-width: 768px) {
   .persistent-music-player {
     bottom: 15px !important;
-    left: 70px !important; /* 向右移动，避免遮挡左侧按钮 */
+    left: 20px !important; /* 改为距离左边20px，避免遮挡footer文字 */
     max-width: calc(100vw - 80px) !important; /* 调整最大宽度 */
   }
   
@@ -66,7 +66,7 @@
 @media screen and (max-width: 480px) {
   .persistent-music-player {
     bottom: 10px !important;
-    left: 60px !important; /* 向右移动，避免遮挡左侧按钮 */
+    left: 15px !important; /* 调整为距离左边15px，避免遮挡footer文字 */
     max-width: calc(100vw - 70px) !important; /* 调整最大宽度 */
   }
   
@@ -79,7 +79,7 @@
 /* 极小屏幕适配 - 确保在最小设备上也不遮挡 */
 @media screen and (max-width: 360px) {
   .persistent-music-player {
-    left: 55px !important; 
+    left: 10px !important; /* 调整为距离左边10px，避免遮挡footer文字 */
     max-width: calc(100vw - 65px) !important;
   }
   
@@ -92,7 +92,7 @@
 /* 小桌面适配 - 避免遮挡左侧按钮 */
 @media screen and (max-width: 1024px) {
   .persistent-music-player {
-    left: 100px !important; /* 向右移动，避免遮挡回到顶部按钮 */
+    left: 70px !important; /* 调整位置，与回到顶部按钮保持20px距离 */
   }
 }
 
