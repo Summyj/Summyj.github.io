@@ -6,8 +6,8 @@ comments: true
 type: "about"
 ---
 
-{% blockquote 王小波 https://book.douban.com/subject/1089243/ 黄金时代 %}
-那一天我二十一岁，在我一生的黄金时代。我有好多奢望，我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
+{% blockquote 王小波 https://book.douban.com/subject/1776683/ 沉默的大多数 %}
+我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
 {% endblockquote %}
 
 <img src="https://i.loli.net/2021/08/03/93kctmnIgVCifEb.jpg" width="200" height="200">
