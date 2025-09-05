@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jmyblog.top/the-art-of-living/</loc>
+    <lastmod>2025-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/books-thinking/</loc>
+    <lastmod>2025-09-05</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/cursor-first-experience/</loc>
-    <lastmod>2025-08-28</lastmod>
+    <lastmod>2025-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/game-master-one-week/</loc>
+    <lastmod>2025-09-04</lastmod>
   </url>
   <url>
     <loc>https://jmyblog.top/How-to-Write/</loc>
     <lastmod>2025-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/game-master-one-week/</loc>
-    <lastmod>2025-08-20</lastmod>
   </url>
   <url>
     <loc>https://jmyblog.top/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</loc>
@@ -57,11 +65,11 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/ui-automator-test/</loc>
+    <loc>https://jmyblog.top/why-am-not-writing-more-blogs/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/why-am-not-writing-more-blogs/</loc>
+    <loc>https://jmyblog.top/ui-automator-test/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -81,6 +89,10 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
+    <loc>https://jmyblog.top/sparks-in-my-life/</loc>
+    <lastmod>2025-06-27</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/testStrategy/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
@@ -93,19 +105,15 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/sparks-in-my-life/</loc>
-    <lastmod>2025-06-27</lastmod>
-  </url>
-  <url>
     <loc>https://jmyblog.top/my-lovely-moto/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/myCookingWay/</loc>
+    <loc>https://jmyblog.top/sf-of-2p/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/sf-of-2p/</loc>
+    <loc>https://jmyblog.top/myCookingWay/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -205,11 +213,11 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/bye-coding-pages/</loc>
+    <loc>https://jmyblog.top/charles-connect/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/charles-connect/</loc>
+    <loc>https://jmyblog.top/bye-coding-pages/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -222,10 +230,6 @@
   </url>
   <url>
     <loc>https://jmyblog.top/blog-picture-service/</loc>
-    <lastmod>2025-06-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/books-thinking/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -245,15 +249,15 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-1/</loc>
-    <lastmod>2025-06-27</lastmod>
-  </url>
-  <url>
     <loc>https://jmyblog.top/TWUJourney/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
     <loc>https://jmyblog.top/Test-Pyramid/</loc>
+    <lastmod>2025-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-1/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -321,11 +325,11 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/AutoTest-FrameWork/</loc>
+    <loc>https://jmyblog.top/AppUI-AutoTest/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/AppUI-AutoTest/</loc>
+    <loc>https://jmyblog.top/AutoTest-FrameWork/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -337,15 +341,7 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/6-6-travel/</loc>
-    <lastmod>2025-06-27</lastmod>
-  </url>
-  <url>
     <loc>https://jmyblog.top/Accessibility-test/</loc>
-    <lastmod>2025-06-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jmyblog.top/AppUI-AutoTest-2/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
@@ -353,15 +349,23 @@
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
+    <loc>https://jmyblog.top/AppUI-AutoTest-2/</loc>
+    <lastmod>2025-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://jmyblog.top/6-6-travel/</loc>
+    <lastmod>2025-06-27</lastmod>
+  </url>
+  <url>
     <loc>https://jmyblog.top/2022-review/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/5-1-travel/</loc>
+    <loc>https://jmyblog.top/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
   <url>
-    <loc>https://jmyblog.top/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</loc>
+    <loc>https://jmyblog.top/5-1-travel/</loc>
     <lastmod>2025-06-27</lastmod>
   </url>
 </urlset> 
