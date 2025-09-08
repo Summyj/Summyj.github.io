@@ -13,11 +13,14 @@
         color: var(--text-color) !important;
     }
     
-    /* 确保引用块在暗色模式下可见 */
+    /* 确保引用块不受正文颜色影响 - 使用更高优先级 */
     .post.posts-expand .post-body blockquote,
-    .page.posts-expand .post-body blockquote {
-        color: var(--blockquote-color) !important;
+    .page.posts-expand .post-body blockquote,
+    .post.posts-expand .post-body blockquote p,
+    .page.posts-expand .post-body blockquote p {
+        color: #bbb !important; /* 暗色模式下使用 #bbb 颜色 */
     }
+    
     
     /* 确保图片说明文字在暗色模式下可见 */
     .post.posts-expand .post-body figure figcaption,
@@ -36,12 +39,20 @@
     /* 仅当未手动选择主题时，跟随系统为亮色 */
     :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body,
     :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body {
-        color: #333 !important;
+        color: #242424 !important;
     }
     
     :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body p,
     :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body p {
-        color: #333 !important;
+        color: #242424 !important;
+    }
+    
+    /* 确保引用块不受正文颜色影响 - 使用更高优先级 */
+    :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body blockquote,
+    :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body blockquote,
+    :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body blockquote p,
+    :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body blockquote p {
+        color: #666 !important; /* 亮色模式下使用 #666 颜色 */
     }
     
     :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body h1,
@@ -63,7 +74,7 @@
     :root:not(.theme-dark):not(.theme-light) .post.posts-expand .post-body b,
     :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body strong,
     :root:not(.theme-dark):not(.theme-light) .page.posts-expand .post-body b {
-        color: #333 !important;
+        color: #242424 !important;
     }
 }
 
@@ -71,7 +82,7 @@
 html.theme-light .post.posts-expand .post-body,
 body.theme-light .post.posts-expand .post-body,
 html.theme-light .page.posts-expand .post-body,
-body.theme-light .page.posts-expand .post-body { color: #333 !important; }
+body.theme-light .page.posts-expand .post-body { color: #242424 !important; }
 
 /* 手动日间模式下清除徽章滤镜 */
 html.theme-light .not-by-ai-sidebar img,
@@ -82,7 +93,17 @@ body.theme-light .not-by-ai-sidebar img {
 html.theme-light .post.posts-expand .post-body p,
 body.theme-light .post.posts-expand .post-body p,
 html.theme-light .page.posts-expand .post-body p,
-body.theme-light .page.posts-expand .post-body p { color: #333 !important; }
+body.theme-light .page.posts-expand .post-body p { color: #242424 !important; }
+
+/* 手动亮色主题下确保引用块不受正文颜色影响 */
+html.theme-light .post.posts-expand .post-body blockquote,
+body.theme-light .post.posts-expand .post-body blockquote,
+html.theme-light .page.posts-expand .post-body blockquote,
+body.theme-light .page.posts-expand .post-body blockquote,
+html.theme-light .post.posts-expand .post-body blockquote p,
+body.theme-light .post.posts-expand .post-body blockquote p,
+html.theme-light .page.posts-expand .post-body blockquote p,
+body.theme-light .page.posts-expand .post-body blockquote p { color: #666 !important; }
 
 html.theme-light .post.posts-expand .post-body h1,
 html.theme-light .post.posts-expand .post-body h2,
@@ -116,7 +137,7 @@ body.theme-light .post.posts-expand .post-body b,
 html.theme-light .page.posts-expand .post-body strong,
 html.theme-light .page.posts-expand .post-body b,
 body.theme-light .page.posts-expand .post-body strong,
-body.theme-light .page.posts-expand .post-body b { color: #333 !important; }
+body.theme-light .page.posts-expand .post-body b { color: #242424 !important; }
 
 /* 亮色模式下：文章标题与菜单栏文字颜色加深 */
 @media (prefers-color-scheme: light) {
@@ -129,7 +150,7 @@ body.theme-light .page.posts-expand .post-body b { color: #333 !important; }
     }
     :root:not(.theme-dark):not(.theme-light) .site-nav .menu .menu-item a,
     :root:not(.theme-dark):not(.theme-light) .menu .menu-item a {
-        color: #333 !important;
+        color: #242424 !important;
     }
     :root:not(.theme-dark):not(.theme-light) .site-nav .menu .menu-item a:hover,
     :root:not(.theme-dark):not(.theme-light) .menu .menu-item a:hover {
@@ -146,7 +167,7 @@ body.theme-light .posts-expand .post-title-link::before { background: #222 !impo
 html.theme-light .site-nav .menu .menu-item a,
 body.theme-light .site-nav .menu .menu-item a,
 html.theme-light .menu .menu-item a,
-body.theme-light .menu .menu-item a { color: #333 !important; }
+body.theme-light .menu .menu-item a { color: #242424 !important; }
 
 html.theme-light .site-nav .menu .menu-item a:hover,
 body.theme-light .site-nav .menu .menu-item a:hover,
@@ -232,6 +253,24 @@ body.theme-light .menu .menu-item a:hover { color: #222 !important; }
 }
 
 /* 自定义夜间模式适配 */
+/* 手动设置的暗色模式下的展开说说按钮样式 */
+html.theme-dark .post-button .btn,
+body.theme-dark .post-button .btn {
+    border-bottom-color: #666666 !important; /* 使用更亮的颜色，在暗色背景下可见 */
+}
+
+html.theme-dark .post-button .btn:hover,
+body.theme-dark .post-button .btn:hover {
+    border-bottom-color: #999999 !important; /* hover时使用更亮的颜色 */
+}
+
+/* 手动暗色模式下分类链接hover颜色优化 */
+html.theme-dark .post-meta a:hover,
+body.theme-dark .post-meta a:hover {
+    color: #cccccc !important; /* 使用更亮的颜色，在暗色背景下可见 */
+    border-bottom-color: #cccccc !important;
+}
+
 body.theme-dark,
 html.theme-dark {
     /* 手动暗色模式下的徽章样式 */
@@ -310,5 +349,20 @@ html.theme-dark {
     .music-fallback a:hover {
         background: #66b3ff !important;
         color: #1a1a1a !important; /* 深色文字在蓝色背景上 */
+    }
+    
+    /* 暗色模式下展开说说按钮的下划线颜色优化 */
+    .post-button .btn {
+        border-bottom-color: #666666 !important; /* 使用更亮的颜色，在暗色背景下可见 */
+    }
+    
+    .post-button .btn:hover {
+        border-bottom-color: #999999 !important; /* hover时使用更亮的颜色 */
+    }
+    
+    /* 暗色模式下分类链接hover颜色优化 */
+    .post-meta a:hover {
+        color: #cccccc !important; /* 使用更亮的颜色，在暗色背景下可见 */
+        border-bottom-color: #cccccc !important;
     }
 } 
