@@ -30,6 +30,30 @@ const pjax = new Pjax({
 });
 
 document.addEventListener('pjax:success', () => {
+  // 在页面内容更新后立即处理侧边栏状态，避免闪烁
+  if (CONFIG.sidebar.display !== 'remove') {
+    const hasTOC = document.querySelector('.post-toc:not(.placeholder-toc)');
+    const sidebarInner = document.querySelector('.sidebar-inner');
+    
+    if (sidebarInner) {
+      // 添加加载状态类，暂时禁用过渡动画
+      sidebarInner.classList.add('pjax-loading');
+      
+      // 立即设置正确的状态，不等待其他初始化
+      sidebarInner.classList.remove('sidebar-nav-active', 'sidebar-toc-active', 'sidebar-overview-active');
+      if (hasTOC) {
+        sidebarInner.classList.add('sidebar-nav-active', 'sidebar-toc-active');
+      } else {
+        sidebarInner.classList.add('sidebar-overview-active');
+      }
+      
+      // 使用requestAnimationFrame确保DOM更新后再移除加载状态
+      requestAnimationFrame(() => {
+        sidebarInner.classList.remove('pjax-loading');
+      });
+    }
+  }
+  
   pjax.executeScripts(document.querySelectorAll('script[data-pjax]'));
   NexT.boot.refresh();
   // Define Motion Sequence & Bootstrap Motion.
@@ -42,10 +66,9 @@ document.addEventListener('pjax:success', () => {
       .add(NexT.motion.middleWares.postList)
       .bootstrap();
   }
+  
+  // 确保侧边栏位置正确更新
   if (CONFIG.sidebar.display !== 'remove') {
-    const hasTOC = document.querySelector('.post-toc:not(.placeholder-toc)');
-    document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-    NexT.utils.activateSidebarPanel(hasTOC ? 0 : 1);
     NexT.utils.updateSidebarPosition();
   }
 });

@@ -1,0 +1,39 @@
+/* ==================== 侧边栏平滑切换优化 ==================== */
+
+/* 防止侧边栏在PJAX加载时出现闪烁 */
+.sidebar-inner {
+  /* 在PJAX加载期间暂时禁用所有过渡动画 */
+  &.pjax-loading {
+    .sidebar-panel {
+      transition: none !important;
+      animation: none !important;
+    }
+    
+    .sidebar-nav li {
+      transition: none !important;
+    }
+  }
+}
+
+/* 优化侧边栏面板的激活动画 */
+.sidebar-panel {
+  /* 减少过渡延迟，让切换更快 */
+  &.site-overview-wrap,
+  &.post-toc-wrap {
+    transition-delay: 0.1s, 0.1s, 0s !important;
+  }
+}
+
+/* 确保侧边栏导航按钮的激活状态更明显 */
+.sidebar-nav {
+  .sidebar-nav-toc,
+  .sidebar-nav-overview {
+    transition: all 0.2s ease;
+  }
+  
+  .sidebar-toc-active & .sidebar-nav-toc,
+  .sidebar-overview-active & .sidebar-nav-overview {
+    border-bottom-color: $sidebar-highlight !important;
+    color: $sidebar-highlight !important;
+  }
+}
