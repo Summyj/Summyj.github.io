@@ -82,12 +82,12 @@ symbol:
   period: "。"
   colon: "："
 reward:
-  donate: ☕️, 🍵, or🥤?
-  wechatpay: 奶茶！(我可以都要吗🙈)
-  alipay: 某宝
+  donate: 👋
+  wechatpay: 钱来
+  alipay: 钱来
   paypal: PayPal
   bitcoin: 比特币
-  comment: would you buy me a drink?
+  comment: ㊗️钱从四面八方来👇
 follow_me:
   welcome: 欢迎关注我的其它发布渠道
 accessibility:
