@@ -11,7 +11,7 @@ top:
 ![](https://s2.loli.net/2025/06/24/xwOI9LBYG3dghrT.png)
 
 {% note default %}
-最近公司在推 **[Cursor](https://www.cursor.com/)** AI代码编辑器，全员都在用，不得不说，目前这种和AI共创的模式确实是行业趋势，之前各种 TDD/BDD/DDD 现在也都被 **PDD 取代(拼多多即视感，但全称是Prompt Driven Development)**，达到 **‘AI干杂活，人来思考’** 的效果。所以我觉得科学技术是第二生产力，人类的创造力才是第一生产力。
+最近公司在推 [Cursor](https://www.cursor.com/) AI代码编辑器，全员都在用，不得不说，目前这种和AI共创的模式确实是行业趋势，之前各种 TDD/BDD/DDD 现在也都被 **PDD** 取代(拼多多即视感，但全称是Prompt Driven Development)，达到 **‘AI干杂活，人来思考’** 的效果。所以我觉得科学技术是第二生产力，人类的创造力才是第一生产力。
 {% endnote %}
 
 其实Cursor流行好久了，但我在技术方面一直处在潮流后沿，也没有机会尝试，正好我也想升级博客，调整一下浏览效果，就用Cursor试试(一些公器私用)，然后打开了新世界的大门。

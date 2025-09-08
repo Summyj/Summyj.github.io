@@ -95,21 +95,21 @@ danger
 ### label
 _config 文件配置关键字：Label , 需要用的话把值设为true即可。
 效果：
-{% label default@默认 %}
-{% label primary@主要 %}
-{% label success@成功 %}
-{% label info@信息 %}
-{% label warning@警告 %}
-{% label danger@危险 %}
+{% label default@default %}
+{% label primary@primary %}
+{% label success@success %}
+{% label info@info %}
+{% label warning@warning %}
+{% label danger@danger %}
 
 代码：
 ```C++  
-{% label default@默认 %}
-{% label primary@主要 %}
-{% label success@成功 %}
-{% label info@信息 %}
-{% label warning@警告 %}
-{% label danger@危险 %}
+{% label default@default %}
+{% label primary@primary %}
+{% label success@success %}
+{% label info@info %}
+{% label warning@warning %}
+{% label danger@danger %}
 ```
 ### Tabs
 效果：
