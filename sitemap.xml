@@ -4,7 +4,7 @@
   <url>
     <loc>https://jmyblog.top/i-got-married/</loc>
     
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/my-lovely-moto-2/</loc>
+    <loc>https://jmyblog.top/my-lovely-moto-3/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/my-lovely-moto-3/</loc>
+    <loc>https://jmyblog.top/my-lovely-moto-2/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -551,15 +551,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/auto-test-learning/</loc>
-    
-    <lastmod>2025-06-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/blog-picture-service/</loc>
     
     <lastmod>2025-06-27</lastmod>
@@ -569,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-2/</loc>
+    <loc>https://jmyblog.top/auto-test-learning/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -579,6 +570,15 @@
   
   <url>
     <loc>https://jmyblog.top/WebUI-AutoTest-Demo-3/</loc>
+    
+    <lastmod>2025-06-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/WebUI-AutoTest-Demo-2/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -767,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/AppUI-AutoTest/</loc>
+    <loc>https://jmyblog.top/AppUI-AutoTest-3/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -776,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/AppUI-AutoTest-3/</loc>
+    <loc>https://jmyblog.top/AppUI-AutoTest/</loc>
     
     <lastmod>2025-06-27</lastmod>
     
@@ -877,7 +877,7 @@
 
   <url>
     <loc>https://jmyblog.top/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -885,616 +885,616 @@
   
   <url>
     <loc>https://jmyblog.top/tags/2022/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/TED/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%91%8A%E5%88%AB%E6%8B%96%E5%BB%B6/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%97%85%E8%A1%8C/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%BD%91%E7%BB%9C%E6%97%A0%E9%9A%9C%E7%A2%8D/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Appium/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Bitrise/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/iOS/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/WebdriverIO/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Android/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/WebdriverIO/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/BDD/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%95%8F%E6%8D%B7/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%8E%8B%E9%93%81%E9%94%A4/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/SEO/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Hexo/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Next/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/SEO/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/BugBash/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/life/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/git/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/Markdown/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/GithubPages/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/CodingPages/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/Markdown/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%88%AC%E5%B1%B1/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Java/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%B9%A6%E5%8D%95/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/OWASP/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%B7%A5%E4%BD%9C/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/ThoughtWorks-University/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%B5%8B%E8%AF%95%E9%87%91%E5%AD%97%E5%A1%94/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Maven/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/TestNG/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Jenkins/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/GoCD/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/TestNG/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%80%A7%E9%AA%9A%E6%89%B0/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%A5%B3%E6%9D%83/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%95%8F%E6%8D%B7%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/Github/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/jsDelivr/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/CDN/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%B9%B8%E7%A6%8F%E8%AE%BA/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E9%9A%90%E5%B1%85/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/Github/</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/jsDelivr/</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/CDN/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%B4%BB%E7%9D%80/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Charles/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/AI/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Cursor/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/not-by-AI/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/emulator/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/coldBoot/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%BD%B1%E8%AF%84/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%B9%B0%E6%88%BF/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%BB%93%E5%A9%9A/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%92%B8%E7%8C%AB/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%BA%BA%E7%B1%BB%E8%A7%82%E5%AF%9F%E5%91%98/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%BD%97%E7%94%9F%E9%97%A8/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%BC%94%E5%94%B1%E4%BC%9A/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%BA%94%E6%9C%88%E5%A4%A9/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%91%A9%E6%89%98%E8%BD%A6/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/Cook/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%98%A5%E8%8A%82/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%88%91%E7%88%B1%E5%B7%A5%E4%BD%9C/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%81%AB%E8%8A%B1/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%B8%96%E7%95%8C%E8%A7%82/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/next-theme/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/theme-next/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%81%8C%E4%B8%9A/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/uiautomatorviewer/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/UiAutomator/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/%E9%97%B0%E5%B9%B4/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%9E%8E%E5%86%99%E5%86%99/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E9%97%B0%E5%B9%B4/</loc>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%9C%AA%E6%9D%A5/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E8%8B%8F%E5%B7%9E/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/tags/%E9%80%92%E5%BD%92/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1503,28 +1503,28 @@
   
   <url>
     <loc>https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/categories/%E7%BB%B4%E6%8A%A4%E5%B0%8F%E7%A0%B4%E7%AB%99/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jmyblog.top/categories/%E4%BA%BA%E7%B1%BB%E8%A7%82%E5%AF%9F%E5%91%98/</loc>
-    <lastmod>2025-09-20</lastmod>
+    <lastmod>2025-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
