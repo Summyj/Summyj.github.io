@@ -2,8 +2,8 @@
 title: 难忘的TWU之旅
 date: 2018-09-10 12:30:02
 update: 2019-12-05 15:55:44
-tags: [工作, 旅行, ThoughtWorks University]
-categories: [心灵奇旅]
+tags: [ThoughtWorks University]
+categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: ThoughtWorks University，一次难忘的学习旅行。
 top:

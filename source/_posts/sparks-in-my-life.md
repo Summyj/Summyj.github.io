@@ -3,7 +3,7 @@ title: 坐标之力
 date: 2024-06-21 16:51:28
 update: 2024-06-21 16:51:28
 tags: [火花]
-categories: [心灵奇旅]
+categories: [心灵奇旅, 生活碎碎念]
 copyright: true
 description: 一些福至心灵的瞬间。
 top:

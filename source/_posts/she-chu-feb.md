@@ -2,8 +2,8 @@
 title: 社畜的内心独白
 date: 2023-02-26 14:45:45
 update: 2023-02-26 14:45:45
-tags: 我爱工作
-categories: 搬砖那些事儿
+tags: 社畜
+categories: [搬砖那些事儿, 王铁锤的故事]
 copyright: true
 description: 一个咸鱼的碎碎念。
 top:

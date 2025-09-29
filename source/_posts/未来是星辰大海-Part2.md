@@ -2,8 +2,8 @@
 title: 未来是星辰大海_Part2
 date: 2018-04-09 13:22:15
 update: 2018-04-09 13:22:15
-tags: 人生规划
-categories: 心灵奇旅
+tags: [Offer]
+categories: [心灵奇旅, 时间过慢点]
 copyright:
 top:
 ---

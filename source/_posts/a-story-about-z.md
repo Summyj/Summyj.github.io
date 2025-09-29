@@ -3,7 +3,7 @@ title: 一则小故事
 date: 2022-07-23 11:28:07
 update: 2022-07-23 11:28:07
 tags: [性骚扰, 女权]
-categories: 心灵奇旅
+categories: [搬砖那些事儿, 王铁锤的故事]
 copyright: true
 description: 我变强了，但并没有秃。
 top:

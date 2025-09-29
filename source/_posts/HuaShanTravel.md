@@ -2,8 +2,8 @@
 title: 一次被征服的爬山之旅
 date: 2019-06-03 20:09:04
 update: 2021-06-27 20:09:04
-tags: [爬山]
-categories: [心灵奇旅]
+tags: 华山
+categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: 劝一个讨厌的人去爬华山吧。
 ---

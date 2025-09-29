@@ -3,7 +3,7 @@ title: 敏捷测试浅谈
 date: 2021-08-21 17:49:52
 update: 2021-09-01 17:49:52
 tags: [敏捷测试]
-categories: 搬砖那些事儿
+categories: [搬砖那些事儿, 测试理论和实践]
 copyright: true
 description: 全是套路。
 top:

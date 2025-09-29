@@ -1,7 +1,7 @@
 ---
 title: Cursor初体验
 date: 2025-06-21 15:00:13
-tags: [AI, Cursor, Hexo, Next, not by AI]
+tags: [AI, Cursor, not by AI]
 categories: 维护小破站
 copyright: true
 description: 用Cursor实现博客史诗级增强。

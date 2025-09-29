@@ -3,8 +3,8 @@ title: 请收下这波 BDD 安利
 date: 2019-10-17 15:19:24
 update: 2019-10-17 15:19:24
 catalog: true
-tags: [BDD, 敏捷, 王铁锤]
-categories: 搬砖那些事儿
+tags: [BDD]
+categories: [搬砖那些事儿, 测试理论和实践]
 copyright: true
 top:  
 ---

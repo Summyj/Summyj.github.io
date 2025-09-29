@@ -3,7 +3,7 @@ title: 渗透测试初识
 date: 2020-05-04 15:16:47
 update: 2020-05-04 15:16:47
 tags: [渗透测试, OWASP]
-categories: [搬砖那些事儿]
+categories: [搬砖那些事儿, 我学习我快乐]
 copyright: true
 description: 好想成为一个酷酷的黑客啊。
 top:

@@ -2,8 +2,8 @@
 title: 办公室版围城
 date: 2021-06-27 11:11:26
 update: 2021-06-27 11:11:26
-tags: [王铁锤]
-categories: 搬砖那些事儿
+tags: [围城]
+categories: [搬砖那些事儿, 王铁锤的故事]
 copyright: true
 description: 有人入职，有人离职，有人roll off，还有人要写下半年的期望。
 top:

@@ -2,7 +2,7 @@
 title: 博客搭建折腾记
 date: 2017-08-06 22:27:56
 update: 2017-08-06 22:27:56
-tags: [Hexo,GithubPages,CodingPages]
+tags: [Hexo, Next, GithubPages, CodingPages]
 categories: 维护小破站
 copyright: true
 top:

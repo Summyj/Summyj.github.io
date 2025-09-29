@@ -2,8 +2,8 @@
 title: 测试课程学习笔记第一弹：自动化测试理论
 date: 2020-01-17 16:23:03
 update: 2020-01-17 16:23:03
-tags: [学习笔记, 自动化测试]
-categories: [搬砖那些事儿]
+tags: [自动化测试理论]
+categories: [搬砖那些事儿, 我学习我快乐]
 copyright: true
 description: 当我们说自动化测试的时候，到底在说什么？
 top:

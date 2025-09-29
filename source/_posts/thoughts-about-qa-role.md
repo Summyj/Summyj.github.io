@@ -2,8 +2,8 @@
 title: 关于QA角色
 date: 2021-08-28 15:22:22
 update: 2021-09-01 15:22:22
-tags: 职业
-categories: 搬砖那些事儿
+tags: QA
+categories: [搬砖那些事儿, 搬砖碎碎念]
 copyright: true
 description: 饭碗不稳啊。
 top:

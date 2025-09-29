@@ -2,7 +2,7 @@
 title: 博客被停止访问之后
 date: 2020-04-23 09:24:08
 update: 2020-04-23 09:24:08
-tags: [Hexo]
+tags: [Https]
 categories: [维护小破站]
 copyright: true
 description: 由于存在网路安全性问题，该站点已停止访问。

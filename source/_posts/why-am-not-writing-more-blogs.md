@@ -3,7 +3,7 @@ title: 博客好久没更了
 date: 2023-10-12 15:54:59
 update: 2023-10-12 15:54:59
 tags: 瞎写写
-categories: 心灵奇旅
+categories: [心灵奇旅, 生活碎碎念]
 copyright: true
 description: 听我解释！
 top:

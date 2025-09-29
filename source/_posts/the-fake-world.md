@@ -2,8 +2,8 @@
 title: 世界就是草台班子
 date: 2023-11-23 12:32:17
 update: 2023-11-24 12:32:17
-tags: [世界观]
-categories: 心灵奇旅
+tags: [草台班子]
+categories: [心灵奇旅, 生活碎碎念]
 copyright: true
 description: 凑合活着。
 top:

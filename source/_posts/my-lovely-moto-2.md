@@ -2,8 +2,8 @@
 title: 增驾摩托车奇幻之旅(中)
 date: 2022-05-16 15:16:13
 update: 2022-06-03 15:16:13
-tags: 摩托车
-categories: 心灵奇旅
+tags: 科目二
+categories: [心灵奇旅, 骑上我心爱的小摩托]
 copyright: true
 description: 我想骑摩托！老天爷：不，你不想。
 top:

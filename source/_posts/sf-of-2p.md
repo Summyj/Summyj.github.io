@@ -2,8 +2,8 @@
 title: 两个人的春节
 date: 2023-01-27 16:49:51
 update: 2023-01-27 16:49:51
-tags: 春节
-categories: 心灵奇旅
+tags: [2023, 春节]
+categories: [心灵奇旅, 时间过慢点]
 copyright: true
 description: 和小甜甜的快乐时光~
 top:

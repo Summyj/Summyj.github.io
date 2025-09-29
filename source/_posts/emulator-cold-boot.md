@@ -2,8 +2,8 @@
 title: 安卓模拟器快速冷启动
 date: 2021-07-15 09:54:40
 update: 2021-08-03 09:54:40
-tags: [emulator, coldBoot]
-categories: 搬砖那些事儿
+tags: [emulator, Android]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: 通过保存snapshot快速冷启动安卓模拟器。
 top:

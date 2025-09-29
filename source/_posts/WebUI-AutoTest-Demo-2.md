@@ -2,8 +2,8 @@
 title: WebUI自动化测试框架Demo(中)
 date: 2020-05-16 15:05:41
 update: 2020-05-15 15:05:41
-tags: [自动化测试, TestNG]
-categories: [搬砖那些事儿]
+tags: [TestNG]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: Demo Project代码优化，TestNG介绍，TestNG注解基本使用。
 top:

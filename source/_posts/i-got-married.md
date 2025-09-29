@@ -2,7 +2,7 @@
 title: 我结婚了
 date: 2024-09-28 14:36:14
 tags: 结婚
-categories: 心灵奇旅
+categories: [心灵奇旅, 生活碎碎念]
 copyright: true
 description: 总花费1800的结婚攻略。
 top:

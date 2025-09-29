@@ -2,8 +2,8 @@
 title: 当代打工人职场生存现状
 date: 2020-11-10 22:47:24
 update: 2021-06-29 22:47:24
-tags: [王铁锤]
-categories: 搬砖那些事儿
+tags: [KPI, 内卷]
+categories: [搬砖那些事儿, 王铁锤的故事]
 copyright: true
 description: 卷吗？卷就对了。
 top:

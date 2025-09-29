@@ -2,8 +2,8 @@
 title: 最近读了几本书
 date: 2022-08-21 11:01:45
 update: 2022-08-21 11:01:45
-tags: [幸福论, 隐居]
-categories: 心灵奇旅
+tags: [幸福论, 隐居, 叔本华]
+categories: [心灵奇旅, 我读书我进步]
 copyright: true
 description: 一些读后感。
 top:

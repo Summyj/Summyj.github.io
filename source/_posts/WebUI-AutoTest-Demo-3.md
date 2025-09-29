@@ -2,8 +2,8 @@
 title: WebUI自动化测试框架Demo(下)
 date: 2020-05-17 15:05:47
 update: 2020-05-15 15:05:47
-tags: [自动化测试, Jenkins, GoCD]
-categories: [搬砖那些事儿]
+tags: [Jenkins, GoCD]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: 利用Jenkins/GoCD和Github实现Demo Project的CI集成。
 top:

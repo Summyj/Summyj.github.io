@@ -2,8 +2,8 @@
 title: 骑上我心爱的小摩托
 date: 2022-05-18 15:16:13
 update: 2022-06-03 15:16:13
-tags: 摩托车
-categories: 心灵奇旅
+tags: [买车, 骑摩托]
+categories: [心灵奇旅, 骑上我心爱的小摩托]
 copyright: true
 description: 老天爷：你不想骑摩托！我：管你怎么想！
 top:

@@ -2,8 +2,8 @@
 title: UiAutomator初体验(中)
 date: 2021-08-05 11:20:35
 update: 2021-08-03 11:20:35
-tags: [自动化测试, uiautomatorviewer]
-categories: 搬砖那些事儿
+tags: [uiautomatorviewer]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: 利用uiautomatorviewer定位元素并编写代码。
 top:

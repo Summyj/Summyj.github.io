@@ -2,8 +2,8 @@
 title: 转载：我在ThoughtWorks的头三年
 date: 2021-10-24 17:07:41
 update: 2021-11-01 17:07:41
-tags: 职业规划
-categories: 搬砖那些事儿
+tags: QA
+categories: [搬砖那些事儿, 搬砖碎碎念]
 copyright: false
 description: 干货满满的QA打怪升级指南。
 top:

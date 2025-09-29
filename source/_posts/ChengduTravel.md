@@ -2,8 +2,8 @@
 title: 国庆成都三日游
 date: 2020-10-10 20:11:16
 update: 2021-06-27 20:11:16
-tags: [旅行]
-categories: [心灵奇旅]
+tags: [成都]
+categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: 成都，我来了；成都，我走了。
 top:

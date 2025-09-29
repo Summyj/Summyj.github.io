@@ -2,8 +2,8 @@
 title: UiAutomator初体验(上)
 date: 2021-08-03 11:20:35
 update: 2021-08-03 11:20:35
-tags: [自动化测试, UiAutomator, Android]
-categories: 搬砖那些事儿
+tags: [UiAutomator, Android]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: UiAutomator介绍，环境准备和测试项目的创建。
 top:

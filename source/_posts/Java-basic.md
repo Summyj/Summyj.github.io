@@ -3,7 +3,7 @@ title: Java基础小练习
 date: 2020-05-09 17:13:01
 update: 2020-05-09 17:13:01
 tags: Java
-categories: [搬砖那些事儿]
+categories: [搬砖那些事儿, 我学习我快乐]
 copyright: true
 description: 重温了Java基础，奇怪的知识又增加了。
 top:

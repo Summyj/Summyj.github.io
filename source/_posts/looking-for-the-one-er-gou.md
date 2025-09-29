@@ -2,8 +2,8 @@
 title: 二狗平台
 date: 2021-12-10 16:42:30
 update: 2021-12-01 16:42:30
-tags: 人类观察员
-categories: 人类观察员
+tags: 二狗
+categories: [心灵奇旅, 人类观察员]
 copyright: true
 description: 总算靠点谱了。
 top:

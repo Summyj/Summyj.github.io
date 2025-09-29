@@ -2,7 +2,7 @@
 title: Github+jsDelivr创建个人图床
 date: 2021-11-19 09:49:24
 update: 2021-11-19 09:49:24
-tags: [图床, Github, jsDelivr, CDN]
+tags: [jsDelivr]
 categories: 维护小破站
 copyright: true
 description: 啧，太香了。

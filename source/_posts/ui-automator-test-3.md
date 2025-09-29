@@ -2,8 +2,8 @@
 title: UiAutomator初体验(下)
 date: 2021-08-07 11:20:35
 update: 2021-08-03 11:20:35
-tags: [自动化测试, Bitrise]
-categories: 搬砖那些事儿
+tags: [Bitrise]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: 持续集成，将代码部署到Bitrise CI。
 top:

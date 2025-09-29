@@ -2,8 +2,8 @@
 title: 公司上市了
 date: 2021-09-16 15:23:30
 update: 2021-09-18 15:23:30
-tags: 人生
-categories: 搬砖那些事儿
+tags: [nasdaq, 上市]
+categories: [搬砖那些事儿, 搬砖碎碎念]
 copyright: true
 description: 离「财富自由」最近的一次，哦不，是大佬们的财富自由。
 top:

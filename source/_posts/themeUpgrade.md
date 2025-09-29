@@ -2,7 +2,7 @@
 title: 博客Next主题升级
 date: 2021-06-16 10:46:28
 update: 2021-06-24 10:46:28
-tags: [next-theme, theme-next]
+tags: [next-theme]
 categories: [维护小破站]
 copyright: true
 description: 返璞归真式主题升级。

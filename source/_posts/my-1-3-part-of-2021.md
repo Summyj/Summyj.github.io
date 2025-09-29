@@ -2,8 +2,8 @@
 title: 我的前1/3 of 2021
 date: 2021-04-28 16:10:51
 update: 2021-04-28 16:10:51
-tags: 活着
-categories: 心灵奇旅
+tags: [2021, 内卷]
+categories: [心灵奇旅, 生活碎碎念]
 copyright: true
 description: 在家办公和一些胡思乱想。
 top:

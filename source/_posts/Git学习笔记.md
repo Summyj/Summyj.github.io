@@ -2,8 +2,8 @@
 title: Git学习笔记
 date: 2017-09-11 18:05:07
 update: 2017-09-11 18:05:07
-tags: [git,学习笔记]
-categories: 搬砖那些事儿
+tags: [git]
+categories: [搬砖那些事儿, 我学习我快乐]
 copyright: true
 top:
 ---

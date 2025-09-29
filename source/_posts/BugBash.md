@@ -3,7 +3,7 @@ title: BugBash知多少
 date: 2020-03-15 10:10:19
 update: 2020-03-27 10:10:19
 tags: [BugBash]
-categories: [搬砖那些事儿]
+categories: [搬砖那些事儿, 测试理论和实践]
 copyright: true
 description: 啥是BugBash，以及如何做好一次BugBash。
 top:

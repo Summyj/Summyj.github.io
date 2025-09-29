@@ -2,8 +2,8 @@
 title: 浅谈自动化测试框架
 date: 2020-05-13 16:08:42
 update: 2020-05-13 16:08:42
-tags: [自动化测试]
-categories: [搬砖那些事儿]
+tags: [自动化测试框架]
+categories: [搬砖那些事儿, 自动化测试]
 copyright: true
 description: 什么是自动化测试框架，一个好的自动化测试框架通常需要什么元素。
 top:

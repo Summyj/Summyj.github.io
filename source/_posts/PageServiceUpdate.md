@@ -2,7 +2,7 @@
 title: 博客Pages服务升级
 date: 2021-06-08 16:54:05
 update: 2021-06-08 16:54:05
-tags: [CodingPages, GithubPages, 腾讯云]
+tags: [CodingPages, 腾讯云]
 categories: [维护小破站]
 copyright: true
 description: 想用自定义域名，可太难了。

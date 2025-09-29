@@ -3,7 +3,7 @@ title: 真.Charles抓包配置大全
 date: 2021-07-05 15:12:00
 update: 2021-07-05 15:12:00
 tags: Charles
-categories: 搬砖那些事儿
+categories: [搬砖那些事儿, 我学习我快乐]
 copyright: true
 description: Broswer/iOS/tvOS/Android.
 top:

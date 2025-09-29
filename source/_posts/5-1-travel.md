@@ -2,8 +2,8 @@
 title: 五一青海三日游
 date: 2019-05-15 14:49:23
 update: 2021-06-27 14:49:23
-tags: [旅行]
-categories: [心灵奇旅]
+tags: [青海]
+categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: 和朋友一起出去浪的语文课代表试游记。
 top:

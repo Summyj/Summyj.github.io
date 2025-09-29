@@ -2,8 +2,8 @@
 title: 人类大多都在寻找着什么吧
 date: 2022-04-14 12:33:56
 update: 2022-05-15 12:33:56
-tags: 人类观察员
-categories: 人类观察员
+tags: 程序员
+categories: [心灵奇旅, 人类观察员]
 copyright: true
 description: 时而寻找，时而遗忘。
 top:
