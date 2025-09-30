@@ -3,7 +3,7 @@ title: 我的厨艺进阶之路
 date: 2020-10-17 10:45:35
 update: 2020-12-03 10:45:35
 tags: [Cooking]
-categories: [心灵奇旅, 好吃好喝好看好玩]
+categories: [心灵奇旅, 吃喝玩乐]
 copyright: true
 description: 吃好喝好，长生不老。
 top:

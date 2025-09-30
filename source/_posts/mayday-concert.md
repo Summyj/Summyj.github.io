@@ -3,7 +3,7 @@ title: 五月天演唱会
 date: 2023-09-10 14:55:34
 update: 2023-11-22 14:55:34
 tags: [五月天]
-categories: [心灵奇旅, 好吃好喝好看好玩]
+categories: [心灵奇旅, 吃喝玩乐]
 copyright: true
 description: 好好好想见到你。
 top:

@@ -2,7 +2,7 @@
 title: 王者荣耀的故事
 date: 2025-07-27 14:02:13
 tags: [王者荣耀]
-categories: [心灵奇旅, 好吃好喝好看好玩]
+categories: [心灵奇旅, 吃喝玩乐]
 copyright: true
 description: 关于我一周单排到王者这件事。
 top:
