@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jmyblog.top/tags/index.html</loc>
+    
+    <lastmod>2025-09-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/categories/index.html</loc>
+    
+    <lastmod>2025-09-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/my-lovely-moto-4/</loc>
     
     <lastmod>2025-09-30</lastmod>
@@ -830,24 +848,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/index.html</loc>
-    
-    <lastmod>2025-06-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/categories/index.html</loc>
-    
-    <lastmod>2025-06-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/baidu_verify_code-z0T5qSqoQf.html</loc>
     
     <lastmod>2025-06-27</lastmod>
@@ -919,13 +919,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/Appium/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/Bitrise/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -934,6 +927,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/iOS/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/Appium/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -996,13 +996,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/first/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/git/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1032,6 +1025,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/CodingPages/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/first/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1129,6 +1129,13 @@
   </url>
   
   <url>
+    <loc>https://jmyblog.top/tags/TestNG/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/tags/Jenkins/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1143,27 +1150,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E6%80%A7%E9%AA%9A%E6%89%B0/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/%E5%A5%B3%E6%9D%83/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/TestNG/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/KPI/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1172,6 +1158,20 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%86%85%E5%8D%B7/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E6%80%A7%E9%AA%9A%E6%89%B0/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E5%A5%B3%E6%9D%83/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1402,14 +1402,14 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/</loc>
+    <loc>https://jmyblog.top/tags/%E7%A7%91%E7%9B%AE%E5%9B%9B/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%A7%91%E7%9B%AE%E5%9B%9B/</loc>
+    <loc>https://jmyblog.top/tags/%E7%A7%91%E7%9B%AE%E4%BA%8C/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1430,6 +1430,13 @@
   </url>
   
   <url>
+    <loc>https://jmyblog.top/tags/%E5%A2%9E%E9%A9%BE/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/tags/Cooking/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1437,7 +1444,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E5%A2%9E%E9%A9%BE/</loc>
+    <loc>https://jmyblog.top/tags/%E7%A4%BE%E7%95%9C/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1452,13 +1459,6 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%98%A5%E8%8A%82/</loc>
-    <lastmod>2025-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/%E7%A4%BE%E7%95%9C/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1719,14 +1719,14 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/%E7%94%9F%E6%B4%BB%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
+    <loc>https://jmyblog.top/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/%E7%94%9F%E6%B4%BB%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
     <lastmod>2025-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

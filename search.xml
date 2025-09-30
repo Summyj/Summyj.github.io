@@ -235,6 +235,39 @@
       </tags>
   </entry>
   <entry>
+    <title>AppUI自动化测试第三弹-iOS篇</title>
+    <url>/AppUI-AutoTest-2/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
+<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
+<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
+<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img data-src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><span class="image-caption">image.png</span><br>编辑以下设置，然后点击confirm后继续：<br><img data-src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
+<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
+<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img data-src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><span class="image-caption">image.png</span><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<ul>
+<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img data-src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><span class="image-caption">image.png</span><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img data-src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"><span class="image-caption">image.png</span></li>
+<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img data-src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"><span class="image-caption">image.png</span></li>
+</ul>
+<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img data-src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><span class="image-caption">image.png</span><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img data-src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>成功：<br><img data-src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><span class="image-caption">image.png</span><br>失败：<br><img data-src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"><span class="image-caption">image.png</span></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Bitrise</tag>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AppUI自动化测试第二弹</title>
     <url>/AppUI-AutoTest-1/</url>
     <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/BaDFwHCvbWk8g1x.png" alt="image.png"><span class="image-caption">image.png</span></p>
@@ -302,39 +335,6 @@
       </categories>
       <tags>
         <tag>Appium</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第三弹-iOS篇</title>
-    <url>/AppUI-AutoTest-2/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
-<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
-<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
-<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img data-src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><span class="image-caption">image.png</span><br>编辑以下设置，然后点击confirm后继续：<br><img data-src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
-<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
-<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img data-src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><span class="image-caption">image.png</span><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<ul>
-<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img data-src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><span class="image-caption">image.png</span><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img data-src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"><span class="image-caption">image.png</span></li>
-<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img data-src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"><span class="image-caption">image.png</span></li>
-</ul>
-<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img data-src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><span class="image-caption">image.png</span><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img data-src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>成功：<br><img data-src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><span class="image-caption">image.png</span><br>失败：<br><img data-src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"><span class="image-caption">image.png</span></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Bitrise</tag>
-        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
@@ -944,20 +944,6 @@ header.post-header {
       </tags>
   </entry>
   <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>first</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git学习笔记</title>
     <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
@@ -1223,6 +1209,20 @@ header.post-header {
         <tag>Next</tag>
         <tag>GithubPages</tag>
         <tag>CodingPages</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -2378,258 +2378,6 @@ public class SeleniumTest {
       </tags>
   </entry>
   <entry>
-    <title>WebUI自动化测试框架Demo(下)</title>
-    <url>/WebUI-AutoTest-Demo-3/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
-
-<div class="note info"><p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
-</div>
-
-<h2 id="CI-CD介绍"><a href="#CI-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)
-</code></pre>
-<p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
-<ul>
-<li><p>提交代码</p>
-</li>
-<li><p>执行第一轮测试(单元/集成测试)</p>
-</li>
-<li><p>代码合到master</p>
-<p>  持续交付(Continuous Delivery)</p>
-</li>
-</ul>
-<p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
-<ul>
-<li><p>代码集成完成</p>
-</li>
-<li><p>构建项目，将源码转换为可以运行的实际代码</p>
-</li>
-<li><p>执行第二轮测试(端到端/手工测试)</p>
-<p>  持续部署(Continuous Deployment)</p>
-</li>
-</ul>
-<p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
-<ul>
-<li>持续交付流程完成</li>
-<li>利用工具自动部署到生产环境</li>
-</ul>
-<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
-<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
-<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
-<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
-</blockquote>
-<p>完成后的效果，小太阳标志：<br><img data-src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png"><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
-<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
-<blockquote>
-<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
-</blockquote>
-<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
-<blockquote>
-<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
-</blockquote>
-<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
-<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。
-</code></pre>
-<p>完成后的效果，绿色的pipeline：<br><img data-src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png"></p>
-<h3 id="下载GoCD-Server-Agent"><a href="#下载GoCD-Server-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary"><p>Server和Agent</p>
-<p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p>
-<p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
-</div>
-
-<p>打开GoCD官网 <a href="https://www.gocd.org/download/#osx">下载页面</a>, 根据系统下载：<br><img data-src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png"><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img data-src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png"><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img data-src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png"></p>
-<h3 id="启动Server-Agent"><a href="#启动Server-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">./bin/go-server console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>启动GoCD Server:<br><img data-src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png"><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a href="https://localhost:8154/">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img data-src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png"><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">./bin/go-agent console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>启动GoCD Agent:<br><img data-src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png"></p>
-<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
-<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：
-</code></pre>
-<img data-src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
-首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
-<img data-src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
-
-
-<pre><code>Material
-</code></pre>
-<p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
-<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img data-src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png"><br>输入Stage名字，这里我设为Test：<br><img data-src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png"></p>
-<pre><code>Stage
-</code></pre>
-<p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
-<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img data-src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png"></p>
-<pre><code>Job
-</code></pre>
-<p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
-<pre><code>Task
-</code></pre>
-<p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
-<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img data-src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png"><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img data-src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380"><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img data-src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430"><br>到这里，Pipeline就已经创建好了。</p>
-<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img data-src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img data-src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
-<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img data-src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png"><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img data-src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png"><br>观察console log我们可以理解pipeline的运行流程：</p>
-<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img data-src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png"><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png"><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img data-src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png"><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img data-src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png"><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img data-src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png"><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png"></p>
-<pre><code>Artifact
-</code></pre>
-<p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><img data-src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png"><br>运行结束之后，在页面上也可以看到它：<br><img data-src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png"></p>
-<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
-<blockquote>
-<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
-</blockquote>
-<p>回到首页，点击Auto的设置按钮：<br><img data-src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img data-src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png"><br><img data-src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png"><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img data-src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png"><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
-<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img data-src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png"></p>
-<p>保存，然后再次运行Pipeline:<br><img data-src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img data-src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png"></p>
-<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img data-src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img data-src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png"><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img data-src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png"></p>
-<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img data-src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png"><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img data-src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png"><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img data-src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/28b7ae892ed1">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
-<li><a href="https://devops.phodal.com/home">DevOps 元素周期表</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html">阮一峰：CI&amp;CD是什么</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Jenkins</tag>
-        <tag>GoCD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一则小故事</title>
-    <url>/a-story-about-z/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png">
-
-<div class="note info"><ul>
-<li>主题：职场性骚扰</li>
-<li>主角：我，Z某</li>
-<li>时间线：2022.05 - 2022.07</li>
-</ul>
-</div>
-
-<h2 id="Z某其人"><a href="#Z某其人" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>Z某是去年年底加入公司的第三方外包员工，一月初开始和我在同一个项目工作。</p>
-<p>最初由于疫情一直各自在家办公，工作原因日常交流非常频繁，每天都会线上开会沟通，复工后开始线下接触，不过也只会聊工作，后来工作上也分开了，交集不是很多，私下也没有任何联系，一切正常。</p>
-<p>个人方面，Z某给人的第一印象其实是比较好的，外表看起来文质彬彬，谈吐让人觉得比较舒服，工作上也认真努力，其它的我不是很了解，只知道他结婚了，孩子也在上学，后来有段时间他请了好几次假，听说是家里人(好像是他老婆？)生病了蛮严重的要回去照顾。</p>
-<p>所以刚开始大家(包括我)对他的评价都挺好，感觉就是一个对工作、对家庭都很负责且认真踏实的人。</p>
-<h2 id="开始不对劲"><a href="#开始不对劲" class="headerlink" title="开始不对劲"></a>开始不对劲</h2><p>转折是在5月份，Z某的一些行为让我觉得不对劲：</p>
-<div class="tabs" id="不对劲"><ul class="nav-tabs"><li class="tab active"><a href="#不对劲-1">不对劲 1</a></li><li class="tab"><a href="#不对劲-2">不对劲 2</a></li><li class="tab"><a href="#不对劲-3">不对劲 3</a></li><li class="tab"><a href="#不对劲-4">不对劲 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="不对劲-1"><p><strong>追车</strong></p>
-<p>没有摩托之前我上下班都是用电动滑板车🛴通勤，时速大概20km/h，走在自行车道时只有那种山地自行车🚴才能跟得上我，而且需要骑的比较努力，这是前提。</p>
-<p>某次下班，我骑着滑板车停在路口等红绿灯，感觉背后有人盯着我，回头发现是骑着共享单车的Z某，简单打了个招呼后等到绿灯，想着我比较快各走各的就行了，没想到Z某非常努力的骑着共享单车跟在我的后面，甚至还并排跟我说话。</p>
-<p>我当时非常尴尬，因为自行车道还有电动车在走，他也不在乎一路被滴就要并排跟我走，我只能尬笑着简单回应他，心里恨不得滑板车时速再加20码，到下个红绿灯，他说自己家的方向也在这边，所以跟我回家路线就比较重叠，我只能内心苦笑。</p>
-<p>接下来一路，他都非常努力的骑车跟着我，一直到我小区门口，现在想来有点后怕，不过当时只是觉得这人有点奇怪，没多想。</p></div><div class="tab-pane" id="不对劲-2"><p><strong>过度关心</strong></p>
-<p>Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托了)，我礼貌回应之后就没有主动联系过他，但他开始对我有一些过度关心的言语(那会我因为别的事心情不好发了一些吐槽的朋友圈还请了一天假)：</p>
-<img data-src="https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg" height="600" width="280" alt="过度关心"><span class="image-caption">过度关心</span>
-
-<p>试问，一个有老婆孩子的正常男性会私下给女同事发消息，关心她遇到了啥不好的事吗？不过我还是没有多想，只把这个当作普通同事的关心，但还是觉得有些奇怪。</p></div><div class="tab-pane" id="不对劲-3"><p><strong>朋友圈点赞</strong></p>
-<p>第一次骑摩托去加油，我发了条朋友圈，图就下边这个：</p>
-<img data-src="https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg" height="400" width="300" alt="朋友圈图"><span class="image-caption">朋友圈图</span>
-
-<p>Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得)，好像是他们家那边的，然后开始了一系列对我摩托车的追问：</p>
-<img data-src="https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png" height="370" width="300" alt="追问"><span class="image-caption">追问</span>
-
-<p>在我尴尬的回复他之前有发过摩托车后，他竟然去翻我的朋友圈找到了半个月前发的那条动态(因为我朋友圈挺活跃的基本上每天都发有时候一天发好几条)，然后，点了个赞。</p>
-<p>我觉得非常的诡异，然后联想到前边这俩事件，开始觉得这个人不对劲，但也没有表露什么。</p></div><div class="tab-pane" id="不对劲-4"><p><strong>喝东西</strong></p>
-<p>在朋友圈点赞事件的第二天，Z某又发微信给我说要单独请我喝东西「聊一聊」：</p>
-<img data-src="https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg" height="600" width="280" alt="喝东西事件"><span class="image-caption">喝东西事件</span>
-
-<p>虽然还是礼貌回复，不过这个人已经很明显有问题了。</p></div></div></div>
-
-<h2 id="第一次机会：禁朋友圈"><a href="#第一次机会：禁朋友圈" class="headerlink" title="第一次机会：禁朋友圈"></a>第一次机会：禁朋友圈</h2><p>在感觉到Z某有问题后，我听取了一些朋友的建议，决定不回复他发的消息然后对他禁掉朋友圈和动态(不删掉是因为想保留证据怕他还会有别的举动)，希望他可以得到警示并停止自己的行为，这是我给他的第一次机会。</p>
-<h2 id="第二次机会：点名越界行为"><a href="#第二次机会：点名越界行为" class="headerlink" title="第二次机会：点名越界行为"></a>第二次机会：点名越界行为</h2><p>然而，Z某无视了我的第一次警告，甚至还发了所谓的测试消息给我，想看我有没有删掉他，之后更是想让我把朋友圈权限放开：</p>
-<img data-src="https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg" height="400" width="390" alt="第二次警告"><span class="image-caption">第二次警告</span>
-
-<p>我不再沉默了，明确拒绝了他并且点明了他越界的行为，他也承认是自己的「问题」向我道歉，还希望我可以回到之前和他正常交流，这当然是不可能的，所以之后除了工作上必要的会面(不说话没有眼神交流的那种多人会议)，其它场景我都对他视而不见。</p>
-<p>这是我给他的第二次机会。</p>
-<h2 id="第三次机会：正面交锋"><a href="#第三次机会：正面交锋" class="headerlink" title="第三次机会：正面交锋"></a>第三次机会：正面交锋</h2><p>我以为Z某已经认识到了自己的错误并停止对我的骚扰，可一周以后，他又发消息说自己有话说，想到之前他虽然有越界的言语，但这只是我个人的主观感受(不过正常人都会有这种感受吧)，所以为了让他暴露更多的「想法」，拿到证据，我同意了他的要求：</p>
-<img data-src="https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg" height="340" width="300" alt="有话说？"><span class="image-caption">有话说？</span>
-
-<p>第二天，我和Z某在会议室谈了大约半小时，全程录音：</p>
-<img data-src="https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg" height="220" width="300" alt="录音"><span class="image-caption">录音</span>
-
-<div class="note primary"><p>录音内容大致如下(我全程保持微笑)：</p>
-<ul>
-<li>7min 15s - 9min 55s: 承认自己对我有不切实际的想法，加我微信是有别的目的，以及越界是自己的问题，还说怕我会觉得他是一个无耻好色的老男人(可不就是嘛)。</li>
-<li>12min 0s - 13min 30s: 说自己还有一点理性，要遵守我的界限，想让我继续跟他交流。</li>
-<li>15min 50s - 17min 40s : 再次承认自己对我有别的想法，然后我拒绝并提出以后私下不交流。</li>
-<li>18min 25s -20min 40s :说自己还是有别的想法但没什么用，还「发誓」自己之前没有过对别的女同事越界，然后我提到了他的家庭，他说人有时候没那么理性。</li>
-<li>21min 05s - 22min 15s: 同意我提出的私下不交流，然后他哭了？！</li>
-<li>23min 0s - end 依然坚持提出要遵守我的界限，想让我继续跟他交流，我拒绝了，然后应他的要求留他独自在会议室思考人生。</li>
-</ul>
-</div>
-
-<p>谈话之后，我虽然非常不适，而且已经拿到了他性骚扰我的实锤，但还想着他可能是一个家庭的主心骨，生活压力大，工作不容易，怕对他造成很大的影响(因为大概知道如果举报之后，他很可能会丢掉这份工作，他自己的公司也可能会fire他)，所以不想举报他，只是明确表示拒绝并且达成了之后除了工作私下不交流的共识。</p>
-<p>说白了，我就准备忍着膈应直到他下项目(因为第三方一般到年底就合约到期了)，反正已经说清楚了，只要他后边不继续骚扰我，剩下半年相安无事也就罢了(我可太善良了)。</p>
-<p>这是我给他的第三次机会。</p>
-<h2 id="最后一根稻草"><a href="#最后一根稻草" class="headerlink" title="最后一根稻草"></a>最后一根稻草</h2><p>万万没想到，半个月后，他竟然通过「企业微信」(?!)发消息给我想让我继续和他交流，刚开始我猜他可能以为我把他删了(其实没有就想看看他还会不会有别的举动)，所以只能用企业微信发消息给我，后来我才发现是他把我删了(一个伏笔)：</p>
-<img data-src="https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png" height="500" width="250" alt="够了"><span class="image-caption">够了</span>
-
-<p>这可真是压死骆驼的最后一根稻草了，事不过三，已经给过他三次机会，但他还是不知收敛，说什么「还有些不清楚」？<br>我已经不想再跟他沟通了，决定按照公司流程举报处理，所以我说「你会清楚的」。</p>
-<h2 id="举报和处理"><a href="#举报和处理" class="headerlink" title="举报和处理"></a>举报和处理</h2><p>当天下午，我就开始查公司处理这种事的流程资料，查到之后，直接和相关同事约了会详谈，后来就是一系列调查处理，公司给的结论是确认Z某行为不当，会和他解除劳动合同并把这件事同步给他自己的公司，我很满意，毕竟我的诉求就是让他尽快消失在我眼前。</p>
-<p>整个处理过程历时18天，虽然有点久，不过公司调查还是挺隐秘的，因为我手里的证据已经足够说明整个事情，根本不用找他聊，所以到第12天Z某才知道自己被举报，并且他自己的公司和我的部门leader都轮番找他约谈，目的就是让他认识到自己的错误，有个心理准备，然后再辞退他，减少他之后私下报复我的可能性，中间为了安全我也几次在家办公。</p>
-<p>公司当然没有说是我举报他，只是说他被人举报有不当行为，警告他注意言行，也没说让他直接下项目辞退他，不过他但凡还有点脑子都会猜到是我吧。</p>
-<p>最后的处理结果，当然是他被辞退，last day当天他的backup就已经在onboarding了，上午交接完工作，下午3点他就走人了。</p>
-<h2 id="Z某其人-1"><a href="#Z某其人-1" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>事情到这里真的结束了，不过为了首尾呼应，重新聊聊卸下面具后的Z某其人吧，首先来品品「最后一根稻草」之后，Z某做出的其它一系列奇葩举动：</p>
-<div class="tabs" id="z某其人"><ul class="nav-tabs"><li class="tab active"><a href="#z某其人-1">Z某其人 1</a></li><li class="tab"><a href="#z某其人-2">Z某其人 2</a></li><li class="tab"><a href="#z某其人-3">Z某其人 3</a></li><li class="tab"><a href="#z某其人-4">Z某其人 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="z某其人-1"><p><strong>学不会</strong></p>
-<p>举报第8天(他还不知道自己被举报)，Z某又给我微信发消息，想让我把朋友圈权限放开，还说什么「不清楚学不会」的绿茶发言(搁这儿装林俊杰呢？)：</p>
-<img data-src="https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg" height="600" width="230" alt="学不会"><span class="image-caption">学不会</span>
-
-<p>明明已经说清楚以后私下不交流了，结果还在这说我不跟他聊天打招呼，<mark class="label primary">所以他就是不管我之前说了什么达成了什么样的共识，就只是想继续纠缠骚扰我而已。</mark>「我不知道他怎么想的」？(我可太知道了)</p>
-<p>这里有个细节是微信提示打招呼内容，这种就是他把我删了，然后又把我加回来，我这边就会有这个提示(drama的老男人)。</p></div><div class="tab-pane" id="z某其人-2"><p><strong>狼人自曝</strong></p>
-<p>Z某知道被举报的第二天，在他自己工作小组的私人微信群里公布了这件事：</p>
-<img data-src="https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg" height="100" width="250" alt="狼人自曝"><span class="image-caption">狼人自曝</span>
-
-<p>没错，他竟然自己自曝！我真的不李姐，难道他不明白这样的事情曝出来，会被众人唾弃的是他自己吗？！</p>
-<p>本来公司出于对他的尊重，想保留他的最后一丝体面，根本没有向更多人透露这件事，没想到他竟然自曝！引起大家的猜测和好奇，真的是脸都不要了。</p>
-<p>我之前以为他认识到自己的错误默默走了就好了，可他这样做，感觉根本不觉得自己有错，还挺委屈？！因为没几个知情人，所以大家的回复也大多是安慰他让他配合调查，「清者自清」，给我气坏了。</p></div><div class="tab-pane" id="z某其人-3"><p><strong>隐形的枪</strong></p>
-<p>自曝的第二天，他又跟同组的同事(一个知情的姐妹)主动提起这件事，可能察觉到姐妹是知情的，就对姐妹说「你别装了，我知道你知情」，然后撕下面具说出了下面这段话：</p>
-<blockquote>
-<p>有的人手里有把枪，但是她不告诉你自己手里有抢，而是等你靠近后，直接开枪打死你。</p>
-</blockquote>
-<p>这已经表明Z某猜到是我举报的他，而且不觉得自己有错，甚至怪我不提前把后果告诉他就直接举报，这就是他扭曲的三观。</p></div><div class="tab-pane" id="z某其人-4"><p><strong>电话骚扰</strong></p>
-<p>他被辞退当天下午7时，给我打了电话，一般情况下陌生来电我都是直接挂掉，因为那天买了东西所以怕是快递的电话就接了，没想到是他。</p>
-<p>他问是不是我举报的他，想确认一下，在我默认之后，说我没必要这样做，导致他被fire这么严重的后果，他说话还有点哽咽，后来又很气愤，说我不善良(他在跟我聊善良？！)，说自己又没做什么伤害我的事，不就是发了几条信息说了一些话么，还说他觉得自己还算是比较善良的人(excume me?!)。。。</p>
-<p>总之就是在说我不应该举报他让他丢工作，还想带偏我让我觉得自己不善良做错了，给我气坏了，这次我没忍着，正面刚了他几句挂了电话拉黑，这是我和Z某的最后一次交锋。</p></div></div></div>
-
-<p>总结：<strong>Z某就是一个又蠢又坏的好色无耻绿茶老男人。</strong></p>
-<h2 id="我的心路历程"><a href="#我的心路历程" class="headerlink" title="我的心路历程"></a>我的心路历程</h2><blockquote>
-<p>整件事情的时间线是5月到7月，从发觉Z某不对劲给他机会到举报他再到他走人，大概2个月。</p>
-</blockquote>
-<mark class="label info">吃瓜</mark>
-
-<p>一开始，我是抱着吃瓜的心态看待这件事(没错自己吃自己的瓜)，想看这个老男人都能整出什么幺蛾子来，还分享给了几个姐妹一起讨论怎么整治他。</p>
-<mark class="label info">生气</mark>
-
-<p>接着就很生气，因为这人根本不觉得自己有错，甚至还挺委屈，明明我是受害者，但他全程都把自己的姿态放得很低，经常绿茶发言还哭哭啼啼的，好像他才是受害者，而且一边扮演受害者的角色一边不停的骚扰我，就一整个情感PUA大师呗？！巧了，我可是反PUA专家。</p>
-<p>在我和他约谈的时候，也多次提到他的家庭，他都避而不谈，只说是自己的问题，希望我不要不理他之类的话，然后就非常心疼Z某老婆，一个女人，给他生了孩子，自己还生着病(一开始提到的)，可能还帮他操持着一家子的柴米油盐，结果自己的老公在外边搞这个，一代入就更生气了。</p>
-<mark class="label info">害怕</mark>
-
-<p>虽然我全程表现的很镇定，还和Z某正面交锋刚他，不过我也只是个女孩子啊。</p>
-<p>我知道世界上没有绝对的黑与白，正常人心里都会有一些灰色地带，可这种事发生在我身上还是第一次，刷新了我的三观，所以就有种对未知的恐惧和后怕。</p>
-<p>而且他知道是我举报的他，最后打电话给我的时候也表达了一些愤怒，他也知道我住在哪，虽然不知道具体楼栋和门牌号，但谁知道这种人会不会做出啥疯狂的事儿来，比如蹲在小区门口藏个刀捅我、往我脸上泼硫酸啥的(一些猜想)，所以这段时间我上下班路上都很小心，经常回头看看有没有人跟着我。</p>
-<mark class="label info">委屈</mark>
-
-<p>还有些委屈，就觉得我做了什么要遇上这样的事，还得自己一个人默默处理好，那段时间我工作的时候也经常失神、心不在焉，每天承受那种被人暗自窥视的不适感，心很累。</p>
-<mark class="label info">思考</mark>
-
-<p>接着就在想，如果Z某不是第三方员工，而是公司的正式员工，或者职级比我高很多的人，我还会这么直接的举报吗？或者公司在我举报之后会站在我这边处理他吗？如果这种事不是发生在外企，而是国内公司或体制内的企业，受害者还会勇敢发声吗？这些问题，我都不敢给出肯定的回答。</p>
-<p>而且就算是我这种情况，好多姐妹说换做她们，最多也只会阴阳怪气的在微信里羞辱Z某，并不会直接举报他。但我觉得这样没用，他连这种事都做得出来，阴阳怪气能让他受到惩罚吗？</p>
-<p>甚至被举报之后他都不觉得自己有错，还怪我，所以后来我都想把这件事和录音po到网上，让那些人网暴他，让他身败名裂，但还是算了，这样做的话，被网暴的不只有他，可能还有我。</p>
-<mark class="label info">女性的困境</mark>
-
-<p>这件事结束之后，我还想到之前也有别的男同事对我说过一些轻微冒犯的话，分享给姐妹之后她说要不以后就直接说，可这样的话，别人会觉得我难相处孤立我吧？而且这些男同事在我们看来都已经是人比较好的男生了，可就连他们有时也会说出一些不合适的话，甚至他们自己并不觉得是冒犯的。</p>
-<p>所以我觉得这是一个社会问题，公共良俗还有很大的进步空间，比如最近的社会事件(唐山打人什么的)，需要对女性多一些关怀吧，只有当大家都觉得不合适的时候，我的发声才有意义，在这之前，只要不是特别冒犯的举动，我应该也只会忍忍一笑而过吧。</p>
-<h2 id="我变强了"><a href="#我变强了" class="headerlink" title="我变强了"></a>我变强了</h2><p>经历过这件事之后，我觉得自己的内心更强大了(虽然本来也很强大)，然后就是奉劝大家，看人真的不能看表面，千万不要以貌取人，毕竟这个世界上金玉其外的人太多了，要学会辨别。</p>
-<div class="note warning"><p>最后，Z某也知道我的博客链接，所以如果你看到了这篇，希望可以认识到自己的错误，多关注自己的家庭，以后不要再对别的女生有冒犯的举动，洗心革面，做个人吧。</p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>王铁锤的故事</category>
-      </categories>
-      <tags>
-        <tag>性骚扰</tag>
-        <tag>女权</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WebUI自动化测试框架Demo(中)</title>
     <url>/WebUI-AutoTest-Demo-2/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/05/15/hVCWgPazcRirtLj.jpg">
@@ -2872,6 +2620,123 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>WebUI自动化测试框架Demo(下)</title>
+    <url>/WebUI-AutoTest-Demo-3/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/19/dKSi3gZFTJchr6P.png">
+
+<div class="note info"><p>上篇博客我们已经完成了Demo Project的代码优化, 这篇文章我们就利用Jenkins和GoCD这两种工具来实现Demo Project的持续集成。</p>
+</div>
+
+<h2 id="CI-CD介绍"><a href="#CI-CD介绍" class="headerlink" title="CI&amp;CD介绍"></a>CI&amp;CD介绍</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><pre><code>持续集成CI(Continuous Integration)
+</code></pre>
+<p>持续集成指的是，频繁地（一天多次）将代码集成到主干。基本流程为：</p>
+<ul>
+<li><p>提交代码</p>
+</li>
+<li><p>执行第一轮测试(单元/集成测试)</p>
+</li>
+<li><p>代码合到master</p>
+<p>  持续交付(Continuous Delivery)</p>
+</li>
+</ul>
+<p>持续交付指的是，频繁地将软件的新版本，交付给质量团队或者用户，以供评审。如果评审通过，当前代码就是一个可以直接部署的版本。基本流程为：</p>
+<ul>
+<li><p>代码集成完成</p>
+</li>
+<li><p>构建项目，将源码转换为可以运行的实际代码</p>
+</li>
+<li><p>执行第二轮测试(端到端/手工测试)</p>
+<p>  持续部署(Continuous Deployment)</p>
+</li>
+</ul>
+<p>持续部署是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境。持续部署的目标是，代码在任何时刻都是可部署的，可以进入生产阶段。基本流程为：</p>
+<ul>
+<li>持续交付流程完成</li>
+<li>利用工具自动部署到生产环境</li>
+</ul>
+<p>持续部署和持续交付的区别在于，前者可以自动化部署过程，后者只能手工部署。</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><p>CI&amp;CD的实现离不开自动化工具，比较流行的有关注持续集成的Jenkins/Travis CI/…, 关注持续交付/部署的GoCD等等。</p>
+<h2 id="使用Jenkins集成"><a href="#使用Jenkins集成" class="headerlink" title="使用Jenkins集成"></a>使用Jenkins集成</h2><blockquote>
+<p>Jenkins 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+</blockquote>
+<p>完成后的效果，小太阳标志：<br><img data-src="https://i.loli.net/2020/05/17/Q5FMxDSWvgNUoXB.png"><br>首先把本地的DemoProject推送到Github，然后请直接按照 <a href="https://www.jianshu.com/p/28b7ae892ed1">这篇文章的Jenkins部分</a> 设置，已经写的很详细了，主要包括：</p>
+<p><span id="inline-toc">1.</span> Jenkins安装：在本地8080端口运行Jenkins并设置管理员账号</p>
+<blockquote>
+<p>小知识：WAR(Web应用程序归档，英語：Web application archive)，也是一种Java归档，存储XML文件、Java类、JSP和Web应用程序中的其他文件。</p>
+</blockquote>
+<p><span id="inline-toc">2.</span> Jenkins配置：添加JDK和Maven<br><span id="inline-toc">3.</span> Jenkins添加GitHub server：Github生成token并在github的DemoProject项目里添加本地Webhook</p>
+<blockquote>
+<p>这部分Payload URL里的Jenkins server IP就是你电脑的IP，可以通过<strong>ifconfig</strong>命令获得，在结果的最后一行。</p>
+</blockquote>
+<p><span id="inline-toc">4.</span> Jenkins新建并配置Maven项目：绑定Github的DemoProject<br><span id="inline-toc">5.</span> Jenkins运行Maven项目并查看结果</p>
+<h2 id="使用GoCD集成"><a href="#使用GoCD集成" class="headerlink" title="使用GoCD集成"></a>使用GoCD集成</h2><pre><code>GoCD是一种开源工具，用于软件开发，可帮助团队和组织使软件的持续交付/部署(CD)自动化。
+</code></pre>
+<p>完成后的效果，绿色的pipeline：<br><img data-src="https://i.loli.net/2020/05/26/eKa2fnP1oMQB7WL.png"></p>
+<h3 id="下载GoCD-Server-Agent"><a href="#下载GoCD-Server-Agent" class="headerlink" title="下载GoCD Server&amp;Agent"></a>下载GoCD Server&amp;Agent</h3><div class="note primary"><p>Server和Agent</p>
+<p>GoCD的基础架构由Server和Agent组成，Server 负责配置和控制，Agent负责执行。</p>
+<p>Server：控制一切配置，关联仓库，触发pipeline执行，配置每个Job对应的Agent，将Job分配给Agent去执行，整理信息判断该Stage的状态。<br>Agent：接收Server分配的Job，执行Job下的Task（运行命令、部署等），并将Job的状态报告给Server。</p>
+</div>
+
+<p>打开GoCD官网 <a href="https://www.gocd.org/download/#osx">下载页面</a>, 根据系统下载：<br><img data-src="https://i.loli.net/2020/05/28/UmGMZHN7CudP5zJ.png"><br>这里我们下载19.9.0版本，所以点击下方 show old releases按钮，下载Server&amp;Agent:<br><img data-src="https://i.loli.net/2020/05/28/tUZ5lM4WDznbroh.png"><br>解压后放在新建的Pipeline文件夹下，就安装完成了：<br><img data-src="https://i.loli.net/2020/05/28/TZPhSqW6frYkC7b.png"></p>
+<h3 id="启动Server-Agent"><a href="#启动Server-Agent" class="headerlink" title="启动Server&amp;Agent"></a>启动Server&amp;Agent</h3><p>首先确保自己安装了Java11, 然后切换到server目录执行：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">./bin/go-server console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>启动GoCD Server:<br><img data-src="https://i.loli.net/2020/05/28/AgyOR9KpqYLvHPl.png"><br>Server启动成功后，默认的端口号是 8153/8154 (HTTPS)，访问 <a href="https://localhost:8154/">https://localhost:8154</a> 就可以看到GoCD Server页面啦：<br><img data-src="https://i.loli.net/2020/05/28/roFANt8naqGH9SR.png"><br>打开一个新的终端窗口，同样切换到agent目录执行：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">./bin/go-agent console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>启动GoCD Agent:<br><img data-src="https://i.loli.net/2020/05/28/yRMoriNK2bQlqUh.png"></p>
+<h3 id="创建Pipeline"><a href="#创建Pipeline" class="headerlink" title="创建Pipeline"></a>创建Pipeline</h3><p>回到Server页面，点击页面按钮，创建Pipeline。</p>
+<pre><code>Pipeline: 管道，在GoCD里，Pipeline就像是一个工作流水线。它的结构如下所示：
+</code></pre>
+<img data-src="https://i.loli.net/2020/05/28/T5nXiopQ4OAWVNC.png">
+首先指定Pipeline的Material，就是Demo Project在Github上的仓库地址：
+<img data-src="https://i.loli.net/2020/05/28/wPsHAvpSVMeg3bh.png">
+
+
+<pre><code>Material
+</code></pre>
+<p>用来触发Pipeline的条件，可以是代码的存储仓库，可以是其他Pipeline某个Stage执行成功后的产出。在这里，我们把Github仓库作为Material，如果有新的改动会触发Pipeline重新运行。</p>
+<p>接着输入Pipeline名字，自定义就可以。这里我设为Auto:<br><img data-src="https://i.loli.net/2020/06/01/WoS7B3KN4qYL8jF.png"><br>输入Stage名字，这里我设为Test：<br><img data-src="https://i.loli.net/2020/06/01/EAmzj12fKLsvOrt.png"></p>
+<pre><code>Stage
+</code></pre>
+<p>pipeline可以有多个Stage，每个Stage按照顺序执行，一个Stage Fail，则不会执行后边的Stage，pipeline也会是Fail状态。比如常见的这几个stage: Build，Package，Deploy，Smoke，FunctionTest</p>
+<p>创建job和tasks，这里创建了一个名为run_tests的job, 并给它加上一个task，脚本命令:mvn test<br><img data-src="https://i.loli.net/2020/06/01/6Oxp31ysZQ8goe7.png"></p>
+<pre><code>Job
+</code></pre>
+<p>一个Stage可以有多个Job，多个Job之间是相互独立的，一个Job失败，不会影响其他Job的执行，但是一个Stage中的任何一个Job失败，则这个Stage失败</p>
+<pre><code>Task
+</code></pre>
+<p>一个Job由一个或多个Task组成，且Task按照顺序执行，一个Task fail，则后续的Task都不会被执行。Task就是Script，用命令行对代码进行进行编译，部署，或者运行测试。</p>
+<p>点击”Save + Edit Full Config”按钮，保存pipeline并进入pipeline的设置界面，可以看到，它是按照 pipeline(Auto)-&gt; stage(Test) -&gt; job(run_tests)的结构展示的，在job的Tasks tab中，也已经加上了我们上边设置的mvn test：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>首先打开Auto pipeline设置，在Materials Tab下，可以看到我们设置的远程仓库地址：<br><img data-src="https://i.loli.net/2020/06/01/hguki5Ctl8zaHST.png"><br>接着点击上边的Url, 进入Edit Material页面，给Material加上一个Destination Directory，然后保存。因为在运行pipeline的时候，Server会从远程仓库克隆代码到Agent上去运行，需要设置Destination Directory，Server就会把克隆的的代码放进这个Destination Directory里，所以它的名字一般就是代码库的名字：<br><img data-src="https://i.loli.net/2020/06/01/1VJ6r2bRQI3BLOx.png" width="340" height="380"><br>接着进入job设置页面，点击右边的Tasks Tab：<br><img data-src="https://i.loli.net/2020/06/01/l2WCYqejKFuw9hX.png"><br>点击Custom Command按钮，进入Edit Custom Command task页面。将Working Directory设为我们刚才添加的Destination Directory，然后保存：<br><img data-src="https://i.loli.net/2020/06/01/pwLmgRn7GHTEFlC.png" width="340" height="430"><br>到这里，Pipeline就已经创建好了。</p>
+<h3 id="运行pipeline"><a href="#运行pipeline" class="headerlink" title="运行pipeline"></a>运行pipeline</h3><h4 id="运行成功"><a href="#运行成功" class="headerlink" title="运行成功"></a>运行成功</h4><p>回到Pipeline首页, 点击Pause按钮，取消pipeline的暂停状态，取消之后pipeline就会自动运行了：<br><img data-src="https://i.loli.net/2020/06/01/jAINYbglrB7HFd2.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/MbOUDyBxQjirYHZ.png" width="340" height="300"><br>如果我们的代码没有问题，前面的设置也做好了的话，在运行过程中应该会跳出chrome/firefox窗口测试。pipeline就会运行成功了(绿色的标志)：<br><img data-src="https://i.loli.net/2020/06/01/XugQEJG6SR8wylx.png" width="340" height="300"></p>
+<h4 id="console-log和本地目录结构解读"><a href="#console-log和本地目录结构解读" class="headerlink" title="console log和本地目录结构解读"></a>console log和本地目录结构解读</h4><p>点击绿色状态条进入运行结果界面，里面有当前代码库的版本号，作者，以及comment信息；还可以在右侧看到运行历史，以后多次运行的时候，也可以看到之前的运行结果：<br><img data-src="https://i.loli.net/2020/06/01/CPNkGsM58eKozlv.png"><br>点击上图中的job名称run_tests，可以看到本次运行的console log:<br><img data-src="https://i.loli.net/2020/06/01/fHeIkUuWD9Ynhc3.png"><br>观察console log我们可以理解pipeline的运行流程：</p>
+<p><span id="inline-toc">1.</span> Server开始准备并克隆代码到Agent<br><img data-src="https://i.loli.net/2020/06/01/3bL6KV7ivwufAcX.png"><br>上图中，Agent会生成Auto/1/Test/1/run_tests文件夹记录本次运行信息，然后，Server克隆远程代码到Agent对应的Pipeline文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/xghnt9A7YDJWC4l.png"><br>第一次运行之后，Server将会持续check远程仓库中的代码更新，并自动运行Pipeline，这是它的默认机制。<br><span id="inline-toc">2.</span> 设置环境变量<br><img data-src="https://i.loli.net/2020/06/01/BUsoWfS85gyjxvk.png"><br><span id="inline-toc">3.</span> 在Agent运行task<br>准备工作做好之后，Server就会把Job分配给Agent去执行，这里是build代码并执行命令 <strong>mvn test</strong> , 输出内容在本系列第一篇博客介绍Maven的时候已经给大家 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-1/#%E4%BD%BF%E7%94%A8Maven%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">剖析过了</a> :<br><img data-src="https://i.loli.net/2020/06/01/UMBKXvbWL9siulE.png"><br><span id="inline-toc">4.</span> Agent将运行结果报告给Server<br><img data-src="https://i.loli.net/2020/06/01/R3enSwrBATx1zYE.png"><br>Agent将记录本次运行信息的文件夹Auto/1/Test/1/run_tests，上传到本地Server文件夹下：<br><img data-src="https://i.loli.net/2020/06/01/eObyG4WmvJHg9hP.png"></p>
+<pre><code>Artifact
+</code></pre>
+<p>Artifact是运行Job的产出物，在Agent生成，由Server接收并保存。存放在上图的 <strong>artifact</strong> 文件夹下。<br>比如此次运行中Agent生成的Auto/1/Test/1/run_tests文件夹，就是由Server接收保存的。它有一个保存运行日志console.log的cruise-output文件夹：<br><img data-src="https://i.loli.net/2020/06/01/mv1zS4twIC7d6G8.png"><br>运行结束之后，在页面上也可以看到它：<br><img data-src="https://i.loli.net/2020/06/01/IgyWiRALq1Kfh3x.png"></p>
+<h3 id="利用Custom-Tabs展示测试报告"><a href="#利用Custom-Tabs展示测试报告" class="headerlink" title="利用Custom Tabs展示测试报告"></a>利用Custom Tabs展示测试报告</h3><p>我们已经理解了Artifact的概念，知道它是在Agent生成，由Server接收并保存的。</p>
+<blockquote>
+<p>还记得我们在本系列第二篇博客中提到的 <a href="https://jmyblog.top/WebUI-AutoTest-Demo-2/#TestNG-Report">TestNG测试报告</a> 吗？它也是在Agent生成的，这里我们就新建一个Artifact来让Server接收Agent生成的TestNG测试报告，并利用Custom Tabs将它展示在页面上。</p>
+</blockquote>
+<p>回到首页，点击Auto的设置按钮：<br><img data-src="https://i.loli.net/2020/06/01/hrjgN7QpREdlCwZ.png" width="340" height="300"><br>进入Job run_tests的Artifacts Tab, 添加一个Test Artifact:<br><img data-src="https://i.loli.net/2020/06/01/9tJCNTMsRaGWxqV.png"><br><img data-src="https://i.loli.net/2020/06/02/r3DHx1Oz9tKXmqv.png"><br>这里的Source就是指Artifact在Agent的生成路径，由于Agent的Working Directory是AutoTest文件夹，所以这里我们用Agent本地文件夹的绝对路径 <strong>AutoTest/target/surefire-reports</strong> 来获得测试报告。<br>没错，Maven的surefire插件会帮我们保存TestNG测试报告index.html:<br><img data-src="https://i.loli.net/2020/06/01/xuiPTJvkBZ9Rpsw.png"><br>Destination就是Server存放测试报告的路径，这里是相对路径。我们指定TestResult文件夹来保存测试报告，它比较完整的路径是 run_tests/TestResult，和上文中artifact文件夹下的run_tests/cruise-output是同一级。</p>
+<p>保存之后，切换到Custom Tabs下，新建TestResult Tab，用来展示我们获取的index.html文件，路径 <strong>TestResult/surefire-reports/index.html</strong> ：<br><img data-src="https://i.loli.net/2020/06/02/Mvn2PpYIl7DfOaK.png"></p>
+<p>保存，然后再次运行Pipeline:<br><img data-src="https://i.loli.net/2020/06/01/bTX3FeNJ5hqHPZ4.png" width="340" height="300"><br><img data-src="https://i.loli.net/2020/06/01/tuKZHPbk3hoUlFe.png" width="340" height="300"><br>运行完成之后，在console log可以看到Agent上传测试报告的过程，首先是把surefire-reports文件夹下的内容上传到Server的TestResult文件夹，然后还上传了Agent自己生成的index.html测试报告到系统默认的testoutput文件夹：<br><img data-src="https://i.loli.net/2020/06/01/1x34XyBNoG25imq.png"></p>
+<p>在Artifacts Tab可以看到多了两个artifact文件夹，TestResult文件夹是我们添加的，testoutput文件夹是系统默认生成的，它们都是test artifact：<br><img data-src="https://i.loli.net/2020/06/01/BY1ikDzFc4Rl8Hf.png" width="370" height="500"><br>图中一共有3个index.html文件，图片下方的index.html和testoutput/result文件夹里的index.html是Agent自己生成的测试报告，内容一致，默认会放在名为testoutput的Test Artifact文件夹里。展示在Test Tab下：<br><img data-src="https://i.loli.net/2020/06/01/Lzy8UaEvg5HcIFu.png"><br>TestResult Tab里展示的是我们指定的surefire文件夹下的index.html文件：<br><img data-src="https://i.loli.net/2020/06/01/odCli5zbFgDXpHN.png"></p>
+<h3 id="其它的pipeline设置"><a href="#其它的pipeline设置" class="headerlink" title="其它的pipeline设置"></a>其它的pipeline设置</h3><p>以上都是最基本的GoCD使用，它还有很多比较高端的设置，这里再举几个例子。<br><span id="inline-toc">1.</span> Label Template<br>pipeline的build number可以自己配置，默认是1/2/3。实际项目中，build number一般会表示特定的含义，比如版本号等等：<br><img data-src="https://i.loli.net/2020/06/02/JNd7UVsXEutA2qy.png"><br><span id="inline-toc">2.</span> Timer Settings<br>可以设置触发Pipeline的运行时间，有固定的语法，比如 ‘0 0 10 ? * MON-FRI’ 就是让pipeline在周内每天早上10点整运行：<br><img data-src="https://i.loli.net/2020/06/02/MY8bkZ7LoXTAVtz.png"><br><span id="inline-toc">3.</span> Agent的Resource标签<br>当有多个Agent时，可能每个Agent有不同的配置，不同的空间大小，根据Agent的不同，可以通过设置Resource标签指定Job在某一类的Agent上执行：<br><img data-src="https://i.loli.net/2020/06/01/KOsPSIf9gWkwGYD.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/28b7ae892ed1">Maven + TestNG + Jenkins搭建自动化测试框架</a></li>
+<li><a href="https://devops.phodal.com/home">DevOps 元素周期表</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html">阮一峰：CI&amp;CD是什么</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Jenkins</tag>
+        <tag>GoCD</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>当代打工人职场生存现状</title>
     <url>/WorkerStates/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2021/07/01/UMFEbBhrX6vW5xN.png">
@@ -2901,6 +2766,141 @@ public class Functions {
       <tags>
         <tag>KPI</tag>
         <tag>内卷</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一则小故事</title>
+    <url>/a-story-about-z/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png">
+
+<div class="note info"><ul>
+<li>主题：职场性骚扰</li>
+<li>主角：我，Z某</li>
+<li>时间线：2022.05 - 2022.07</li>
+</ul>
+</div>
+
+<h2 id="Z某其人"><a href="#Z某其人" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>Z某是去年年底加入公司的第三方外包员工，一月初开始和我在同一个项目工作。</p>
+<p>最初由于疫情一直各自在家办公，工作原因日常交流非常频繁，每天都会线上开会沟通，复工后开始线下接触，不过也只会聊工作，后来工作上也分开了，交集不是很多，私下也没有任何联系，一切正常。</p>
+<p>个人方面，Z某给人的第一印象其实是比较好的，外表看起来文质彬彬，谈吐让人觉得比较舒服，工作上也认真努力，其它的我不是很了解，只知道他结婚了，孩子也在上学，后来有段时间他请了好几次假，听说是家里人(好像是他老婆？)生病了蛮严重的要回去照顾。</p>
+<p>所以刚开始大家(包括我)对他的评价都挺好，感觉就是一个对工作、对家庭都很负责且认真踏实的人。</p>
+<h2 id="开始不对劲"><a href="#开始不对劲" class="headerlink" title="开始不对劲"></a>开始不对劲</h2><p>转折是在5月份，Z某的一些行为让我觉得不对劲：</p>
+<div class="tabs" id="不对劲"><ul class="nav-tabs"><li class="tab active"><a href="#不对劲-1">不对劲 1</a></li><li class="tab"><a href="#不对劲-2">不对劲 2</a></li><li class="tab"><a href="#不对劲-3">不对劲 3</a></li><li class="tab"><a href="#不对劲-4">不对劲 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="不对劲-1"><p><strong>追车</strong></p>
+<p>没有摩托之前我上下班都是用电动滑板车🛴通勤，时速大概20km/h，走在自行车道时只有那种山地自行车🚴才能跟得上我，而且需要骑的比较努力，这是前提。</p>
+<p>某次下班，我骑着滑板车停在路口等红绿灯，感觉背后有人盯着我，回头发现是骑着共享单车的Z某，简单打了个招呼后等到绿灯，想着我比较快各走各的就行了，没想到Z某非常努力的骑着共享单车跟在我的后面，甚至还并排跟我说话。</p>
+<p>我当时非常尴尬，因为自行车道还有电动车在走，他也不在乎一路被滴就要并排跟我走，我只能尬笑着简单回应他，心里恨不得滑板车时速再加20码，到下个红绿灯，他说自己家的方向也在这边，所以跟我回家路线就比较重叠，我只能内心苦笑。</p>
+<p>接下来一路，他都非常努力的骑车跟着我，一直到我小区门口，现在想来有点后怕，不过当时只是觉得这人有点奇怪，没多想。</p></div><div class="tab-pane" id="不对劲-2"><p><strong>过度关心</strong></p>
+<p>Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托了)，我礼貌回应之后就没有主动联系过他，但他开始对我有一些过度关心的言语(那会我因为别的事心情不好发了一些吐槽的朋友圈还请了一天假)：</p>
+<img data-src="https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg" height="600" width="280" alt="过度关心"><span class="image-caption">过度关心</span>
+
+<p>试问，一个有老婆孩子的正常男性会私下给女同事发消息，关心她遇到了啥不好的事吗？不过我还是没有多想，只把这个当作普通同事的关心，但还是觉得有些奇怪。</p></div><div class="tab-pane" id="不对劲-3"><p><strong>朋友圈点赞</strong></p>
+<p>第一次骑摩托去加油，我发了条朋友圈，图就下边这个：</p>
+<img data-src="https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg" height="400" width="300" alt="朋友圈图"><span class="image-caption">朋友圈图</span>
+
+<p>Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得)，好像是他们家那边的，然后开始了一系列对我摩托车的追问：</p>
+<img data-src="https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png" height="370" width="300" alt="追问"><span class="image-caption">追问</span>
+
+<p>在我尴尬的回复他之前有发过摩托车后，他竟然去翻我的朋友圈找到了半个月前发的那条动态(因为我朋友圈挺活跃的基本上每天都发有时候一天发好几条)，然后，点了个赞。</p>
+<p>我觉得非常的诡异，然后联想到前边这俩事件，开始觉得这个人不对劲，但也没有表露什么。</p></div><div class="tab-pane" id="不对劲-4"><p><strong>喝东西</strong></p>
+<p>在朋友圈点赞事件的第二天，Z某又发微信给我说要单独请我喝东西「聊一聊」：</p>
+<img data-src="https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg" height="600" width="280" alt="喝东西事件"><span class="image-caption">喝东西事件</span>
+
+<p>虽然还是礼貌回复，不过这个人已经很明显有问题了。</p></div></div></div>
+
+<h2 id="第一次机会：禁朋友圈"><a href="#第一次机会：禁朋友圈" class="headerlink" title="第一次机会：禁朋友圈"></a>第一次机会：禁朋友圈</h2><p>在感觉到Z某有问题后，我听取了一些朋友的建议，决定不回复他发的消息然后对他禁掉朋友圈和动态(不删掉是因为想保留证据怕他还会有别的举动)，希望他可以得到警示并停止自己的行为，这是我给他的第一次机会。</p>
+<h2 id="第二次机会：点名越界行为"><a href="#第二次机会：点名越界行为" class="headerlink" title="第二次机会：点名越界行为"></a>第二次机会：点名越界行为</h2><p>然而，Z某无视了我的第一次警告，甚至还发了所谓的测试消息给我，想看我有没有删掉他，之后更是想让我把朋友圈权限放开：</p>
+<img data-src="https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg" height="400" width="390" alt="第二次警告"><span class="image-caption">第二次警告</span>
+
+<p>我不再沉默了，明确拒绝了他并且点明了他越界的行为，他也承认是自己的「问题」向我道歉，还希望我可以回到之前和他正常交流，这当然是不可能的，所以之后除了工作上必要的会面(不说话没有眼神交流的那种多人会议)，其它场景我都对他视而不见。</p>
+<p>这是我给他的第二次机会。</p>
+<h2 id="第三次机会：正面交锋"><a href="#第三次机会：正面交锋" class="headerlink" title="第三次机会：正面交锋"></a>第三次机会：正面交锋</h2><p>我以为Z某已经认识到了自己的错误并停止对我的骚扰，可一周以后，他又发消息说自己有话说，想到之前他虽然有越界的言语，但这只是我个人的主观感受(不过正常人都会有这种感受吧)，所以为了让他暴露更多的「想法」，拿到证据，我同意了他的要求：</p>
+<img data-src="https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg" height="340" width="300" alt="有话说？"><span class="image-caption">有话说？</span>
+
+<p>第二天，我和Z某在会议室谈了大约半小时，全程录音：</p>
+<img data-src="https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg" height="220" width="300" alt="录音"><span class="image-caption">录音</span>
+
+<div class="note primary"><p>录音内容大致如下(我全程保持微笑)：</p>
+<ul>
+<li>7min 15s - 9min 55s: 承认自己对我有不切实际的想法，加我微信是有别的目的，以及越界是自己的问题，还说怕我会觉得他是一个无耻好色的老男人(可不就是嘛)。</li>
+<li>12min 0s - 13min 30s: 说自己还有一点理性，要遵守我的界限，想让我继续跟他交流。</li>
+<li>15min 50s - 17min 40s : 再次承认自己对我有别的想法，然后我拒绝并提出以后私下不交流。</li>
+<li>18min 25s -20min 40s :说自己还是有别的想法但没什么用，还「发誓」自己之前没有过对别的女同事越界，然后我提到了他的家庭，他说人有时候没那么理性。</li>
+<li>21min 05s - 22min 15s: 同意我提出的私下不交流，然后他哭了？！</li>
+<li>23min 0s - end 依然坚持提出要遵守我的界限，想让我继续跟他交流，我拒绝了，然后应他的要求留他独自在会议室思考人生。</li>
+</ul>
+</div>
+
+<p>谈话之后，我虽然非常不适，而且已经拿到了他性骚扰我的实锤，但还想着他可能是一个家庭的主心骨，生活压力大，工作不容易，怕对他造成很大的影响(因为大概知道如果举报之后，他很可能会丢掉这份工作，他自己的公司也可能会fire他)，所以不想举报他，只是明确表示拒绝并且达成了之后除了工作私下不交流的共识。</p>
+<p>说白了，我就准备忍着膈应直到他下项目(因为第三方一般到年底就合约到期了)，反正已经说清楚了，只要他后边不继续骚扰我，剩下半年相安无事也就罢了(我可太善良了)。</p>
+<p>这是我给他的第三次机会。</p>
+<h2 id="最后一根稻草"><a href="#最后一根稻草" class="headerlink" title="最后一根稻草"></a>最后一根稻草</h2><p>万万没想到，半个月后，他竟然通过「企业微信」(?!)发消息给我想让我继续和他交流，刚开始我猜他可能以为我把他删了(其实没有就想看看他还会不会有别的举动)，所以只能用企业微信发消息给我，后来我才发现是他把我删了(一个伏笔)：</p>
+<img data-src="https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png" height="500" width="250" alt="够了"><span class="image-caption">够了</span>
+
+<p>这可真是压死骆驼的最后一根稻草了，事不过三，已经给过他三次机会，但他还是不知收敛，说什么「还有些不清楚」？<br>我已经不想再跟他沟通了，决定按照公司流程举报处理，所以我说「你会清楚的」。</p>
+<h2 id="举报和处理"><a href="#举报和处理" class="headerlink" title="举报和处理"></a>举报和处理</h2><p>当天下午，我就开始查公司处理这种事的流程资料，查到之后，直接和相关同事约了会详谈，后来就是一系列调查处理，公司给的结论是确认Z某行为不当，会和他解除劳动合同并把这件事同步给他自己的公司，我很满意，毕竟我的诉求就是让他尽快消失在我眼前。</p>
+<p>整个处理过程历时18天，虽然有点久，不过公司调查还是挺隐秘的，因为我手里的证据已经足够说明整个事情，根本不用找他聊，所以到第12天Z某才知道自己被举报，并且他自己的公司和我的部门leader都轮番找他约谈，目的就是让他认识到自己的错误，有个心理准备，然后再辞退他，减少他之后私下报复我的可能性，中间为了安全我也几次在家办公。</p>
+<p>公司当然没有说是我举报他，只是说他被人举报有不当行为，警告他注意言行，也没说让他直接下项目辞退他，不过他但凡还有点脑子都会猜到是我吧。</p>
+<p>最后的处理结果，当然是他被辞退，last day当天他的backup就已经在onboarding了，上午交接完工作，下午3点他就走人了。</p>
+<h2 id="Z某其人-1"><a href="#Z某其人-1" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>事情到这里真的结束了，不过为了首尾呼应，重新聊聊卸下面具后的Z某其人吧，首先来品品「最后一根稻草」之后，Z某做出的其它一系列奇葩举动：</p>
+<div class="tabs" id="z某其人"><ul class="nav-tabs"><li class="tab active"><a href="#z某其人-1">Z某其人 1</a></li><li class="tab"><a href="#z某其人-2">Z某其人 2</a></li><li class="tab"><a href="#z某其人-3">Z某其人 3</a></li><li class="tab"><a href="#z某其人-4">Z某其人 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="z某其人-1"><p><strong>学不会</strong></p>
+<p>举报第8天(他还不知道自己被举报)，Z某又给我微信发消息，想让我把朋友圈权限放开，还说什么「不清楚学不会」的绿茶发言(搁这儿装林俊杰呢？)：</p>
+<img data-src="https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg" height="600" width="230" alt="学不会"><span class="image-caption">学不会</span>
+
+<p>明明已经说清楚以后私下不交流了，结果还在这说我不跟他聊天打招呼，<mark class="label primary">所以他就是不管我之前说了什么达成了什么样的共识，就只是想继续纠缠骚扰我而已。</mark>「我不知道他怎么想的」？(我可太知道了)</p>
+<p>这里有个细节是微信提示打招呼内容，这种就是他把我删了，然后又把我加回来，我这边就会有这个提示(drama的老男人)。</p></div><div class="tab-pane" id="z某其人-2"><p><strong>狼人自曝</strong></p>
+<p>Z某知道被举报的第二天，在他自己工作小组的私人微信群里公布了这件事：</p>
+<img data-src="https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg" height="100" width="250" alt="狼人自曝"><span class="image-caption">狼人自曝</span>
+
+<p>没错，他竟然自己自曝！我真的不李姐，难道他不明白这样的事情曝出来，会被众人唾弃的是他自己吗？！</p>
+<p>本来公司出于对他的尊重，想保留他的最后一丝体面，根本没有向更多人透露这件事，没想到他竟然自曝！引起大家的猜测和好奇，真的是脸都不要了。</p>
+<p>我之前以为他认识到自己的错误默默走了就好了，可他这样做，感觉根本不觉得自己有错，还挺委屈？！因为没几个知情人，所以大家的回复也大多是安慰他让他配合调查，「清者自清」，给我气坏了。</p></div><div class="tab-pane" id="z某其人-3"><p><strong>隐形的枪</strong></p>
+<p>自曝的第二天，他又跟同组的同事(一个知情的姐妹)主动提起这件事，可能察觉到姐妹是知情的，就对姐妹说「你别装了，我知道你知情」，然后撕下面具说出了下面这段话：</p>
+<blockquote>
+<p>有的人手里有把枪，但是她不告诉你自己手里有抢，而是等你靠近后，直接开枪打死你。</p>
+</blockquote>
+<p>这已经表明Z某猜到是我举报的他，而且不觉得自己有错，甚至怪我不提前把后果告诉他就直接举报，这就是他扭曲的三观。</p></div><div class="tab-pane" id="z某其人-4"><p><strong>电话骚扰</strong></p>
+<p>他被辞退当天下午7时，给我打了电话，一般情况下陌生来电我都是直接挂掉，因为那天买了东西所以怕是快递的电话就接了，没想到是他。</p>
+<p>他问是不是我举报的他，想确认一下，在我默认之后，说我没必要这样做，导致他被fire这么严重的后果，他说话还有点哽咽，后来又很气愤，说我不善良(他在跟我聊善良？！)，说自己又没做什么伤害我的事，不就是发了几条信息说了一些话么，还说他觉得自己还算是比较善良的人(excume me?!)。。。</p>
+<p>总之就是在说我不应该举报他让他丢工作，还想带偏我让我觉得自己不善良做错了，给我气坏了，这次我没忍着，正面刚了他几句挂了电话拉黑，这是我和Z某的最后一次交锋。</p></div></div></div>
+
+<p>总结：<strong>Z某就是一个又蠢又坏的好色无耻绿茶老男人。</strong></p>
+<h2 id="我的心路历程"><a href="#我的心路历程" class="headerlink" title="我的心路历程"></a>我的心路历程</h2><blockquote>
+<p>整件事情的时间线是5月到7月，从发觉Z某不对劲给他机会到举报他再到他走人，大概2个月。</p>
+</blockquote>
+<mark class="label info">吃瓜</mark>
+
+<p>一开始，我是抱着吃瓜的心态看待这件事(没错自己吃自己的瓜)，想看这个老男人都能整出什么幺蛾子来，还分享给了几个姐妹一起讨论怎么整治他。</p>
+<mark class="label info">生气</mark>
+
+<p>接着就很生气，因为这人根本不觉得自己有错，甚至还挺委屈，明明我是受害者，但他全程都把自己的姿态放得很低，经常绿茶发言还哭哭啼啼的，好像他才是受害者，而且一边扮演受害者的角色一边不停的骚扰我，就一整个情感PUA大师呗？！巧了，我可是反PUA专家。</p>
+<p>在我和他约谈的时候，也多次提到他的家庭，他都避而不谈，只说是自己的问题，希望我不要不理他之类的话，然后就非常心疼Z某老婆，一个女人，给他生了孩子，自己还生着病(一开始提到的)，可能还帮他操持着一家子的柴米油盐，结果自己的老公在外边搞这个，一代入就更生气了。</p>
+<mark class="label info">害怕</mark>
+
+<p>虽然我全程表现的很镇定，还和Z某正面交锋刚他，不过我也只是个女孩子啊。</p>
+<p>我知道世界上没有绝对的黑与白，正常人心里都会有一些灰色地带，可这种事发生在我身上还是第一次，刷新了我的三观，所以就有种对未知的恐惧和后怕。</p>
+<p>而且他知道是我举报的他，最后打电话给我的时候也表达了一些愤怒，他也知道我住在哪，虽然不知道具体楼栋和门牌号，但谁知道这种人会不会做出啥疯狂的事儿来，比如蹲在小区门口藏个刀捅我、往我脸上泼硫酸啥的(一些猜想)，所以这段时间我上下班路上都很小心，经常回头看看有没有人跟着我。</p>
+<mark class="label info">委屈</mark>
+
+<p>还有些委屈，就觉得我做了什么要遇上这样的事，还得自己一个人默默处理好，那段时间我工作的时候也经常失神、心不在焉，每天承受那种被人暗自窥视的不适感，心很累。</p>
+<mark class="label info">思考</mark>
+
+<p>接着就在想，如果Z某不是第三方员工，而是公司的正式员工，或者职级比我高很多的人，我还会这么直接的举报吗？或者公司在我举报之后会站在我这边处理他吗？如果这种事不是发生在外企，而是国内公司或体制内的企业，受害者还会勇敢发声吗？这些问题，我都不敢给出肯定的回答。</p>
+<p>而且就算是我这种情况，好多姐妹说换做她们，最多也只会阴阳怪气的在微信里羞辱Z某，并不会直接举报他。但我觉得这样没用，他连这种事都做得出来，阴阳怪气能让他受到惩罚吗？</p>
+<p>甚至被举报之后他都不觉得自己有错，还怪我，所以后来我都想把这件事和录音po到网上，让那些人网暴他，让他身败名裂，但还是算了，这样做的话，被网暴的不只有他，可能还有我。</p>
+<mark class="label info">女性的困境</mark>
+
+<p>这件事结束之后，我还想到之前也有别的男同事对我说过一些轻微冒犯的话，分享给姐妹之后她说要不以后就直接说，可这样的话，别人会觉得我难相处孤立我吧？而且这些男同事在我们看来都已经是人比较好的男生了，可就连他们有时也会说出一些不合适的话，甚至他们自己并不觉得是冒犯的。</p>
+<p>所以我觉得这是一个社会问题，公共良俗还有很大的进步空间，比如最近的社会事件(唐山打人什么的)，需要对女性多一些关怀吧，只有当大家都觉得不合适的时候，我的发声才有意义，在这之前，只要不是特别冒犯的举动，我应该也只会忍忍一笑而过吧。</p>
+<h2 id="我变强了"><a href="#我变强了" class="headerlink" title="我变强了"></a>我变强了</h2><p>经历过这件事之后，我觉得自己的内心更强大了(虽然本来也很强大)，然后就是奉劝大家，看人真的不能看表面，千万不要以貌取人，毕竟这个世界上金玉其外的人太多了，要学会辨别。</p>
+<div class="note warning"><p>最后，Z某也知道我的博客链接，所以如果你看到了这篇，希望可以认识到自己的错误，多关注自己的家庭，以后不要再对别的女生有冒犯的举动，洗心革面，做个人吧。</p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
+      </categories>
+      <tags>
+        <tag>性骚扰</tag>
+        <tag>女权</tag>
       </tags>
   </entry>
   <entry>
@@ -4781,75 +4781,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>增驾摩托车奇幻之旅(中)</title>
-    <url>/my-lovely-moto-2/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
-
-<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
-</code></pre>
-<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
-<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
-<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
-<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
-<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
-
-<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
-
-<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
-<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
-
-<p>第五个小时，人麻了。</p>
-<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
-<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
-
-<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
-<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
-<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
-<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
-<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
-<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
-<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
-
-<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
-<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
-<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
-<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
-<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
-<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
-<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
-
-<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
-<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
-</code></pre>
-<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
-<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
-<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
-
-<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
-<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
-</code></pre>
-<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
-<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
-
-<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
-<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
-<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
-<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
-
-<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
-<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>骑上我心爱的小摩托</category>
-      </categories>
-      <tags>
-        <tag>科目二</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>增驾摩托车奇幻之旅(下)</title>
     <url>/my-lovely-moto-3/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/DtGac9qbuwiFfZz.png">
@@ -4942,6 +4873,75 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>增驾摩托车奇幻之旅(中)</title>
+    <url>/my-lovely-moto-2/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
+
+<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
+</code></pre>
+<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
+<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
+<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
+<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
+<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
+
+<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
+
+<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
+<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
+
+<p>第五个小时，人麻了。</p>
+<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
+<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
+
+<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
+<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
+<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
+<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
+<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
+<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
+<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
+
+<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
+<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
+<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
+<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
+<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
+<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
+<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
+
+<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
+<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
+</code></pre>
+<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
+<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
+<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
+
+<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
+<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
+</code></pre>
+<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
+<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
+
+<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
+<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
+<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
+<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
+
+<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
+<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
+      </categories>
+      <tags>
+        <tag>科目二</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>骑上我心爱的小摩托</title>
     <url>/my-lovely-moto-4/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/03/gkGWzpRAyOnMKBQ.png" width="800" height="600" alt="我的摩托车(SUNDIRO.HONDA_CBF190tr)"><span class="image-caption">我的摩托车(SUNDIRO.HONDA_CBF190tr)</span>
@@ -5012,51 +5012,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>我的厨艺进阶之路</title>
-    <url>/myCookingWay/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
-
-<p>作为新时代的「空巢青年」，做饭可谓是一个必备技能了。</p>
-<p>小时候家里大多都是老爸<span class="emoji" alias="man" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f468.png?v8">👨</span>做饭，每次看他随便拿出一个食材就能想到做什么菜，怎么做，即使最简单的食材也可以做成一道菜，就觉得很神奇。</p>
-<p>在家人的影(bi)响(po)下，初高中那会就已经会做一些简单的菜了，也打下了不错的切菜功底<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">✌</span>，但真正学会做饭，还是从毕业后的空巢生活开始的。</p>
-<p>– 多图预警 –</p>
-<h2 id="早餐篇"><a href="#早餐篇" class="headerlink" title="早餐篇"></a>早餐篇</h2><p>「一日之计在于晨」，说实话，早餐并没有太花心思做。</p>
-<p>之前的固定搭配是胡萝卜葱花鸡蛋卷🥚+自己煮的粥🥣，后来又开始搭配纯牛奶🥛喝，有时加点水果蔬菜🍅，感觉营养就比较全面了：<br><img data-src="https://i.loli.net/2020/12/03/PNAzln8bfECFKa3.jpg"></p>
-<p>现在很少做鸡蛋卷了，比较喜欢纯牛奶🥛+麦片+鸡蛋🥚的搭配，或者纯牛奶🥛+鸡蛋🥚+面包🍞的标准搭配，营养都很全面：<br><img data-src="https://i.loli.net/2020/12/03/oHFDUjY3PJcTl5x.jpg"></p>
-<p>这里推荐 <mark class="label success">良品铺子</mark> 家的「每日坚果水果荟燕麦片」，还有 <mark class="label success">小熊家电</mark> 的「蒸蛋器」。</p>
-<p>鸡蛋卷的教程可以在「下厨房」APP里搜，很简单的。</p>
-<h2 id="午饭篇"><a href="#午饭篇" class="headerlink" title="午饭篇"></a>午饭篇</h2><p>午饭可就到了大显身手的时候了<span class="emoji" alias="metal" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span>。主食还是米饭，或者各种杂粮粥，配菜可就多了<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></p>
-<p>搭配1: 杂粮粥🥣+老干妈土豆丝🥔+醋溜娃娃菜+可乐鸡翅<br>搭配2: 黑米粥🥣+老干妈土豆丝🥔+肉末炒鸡蛋+煎饼🥞<br><img data-src="https://i.loli.net/2020/12/03/6Os7ERPASYb9FGn.png" width="600" height="300"></p>
-<p>搭配3: 糯米红枣粥🥣+西红柿炒鸡蛋🍅+醋溜娃娃菜+妈妈做的饼👩<br>搭配4: 糯米饭🍚+凉拌酸辣茄子🍆+清炒土豆片🥔<br><img data-src="https://i.loli.net/2020/12/03/gHPV73t8YDeQnZL.png" width="550" height="300"></p>
-<p>搭配5: 糯米饭🍚+麻婆豆腐+鱼香肉丝<br>搭配6: 红薯小米粥🥣+凉拌黄瓜皮老铺🥒+老干妈土豆丝🥔<br><img data-src="https://i.loli.net/2020/12/03/peg6iVZFDfsXKB4.png" width="600" height="300"></p>
-<p>搭配7: 糯米南瓜粥🎃+酸辣带鱼🐟+虾仁滑蛋🍤+煮玉米🌽<br>搭配8(早中餐一起吃)): 纯牛奶🥛+糯米饭🍚+煮鸡蛋+红烧茄子🍆+西红柿炒西葫芦<br><img data-src="https://i.loli.net/2020/12/03/H6i59XOltxoseJ3.png" width="550" height="300"></p>
-<p>搭配9: 糯米饭🍚+酸辣平菇🍄+西红柿炒西葫芦<br>搭配10: 糯米饭🍚+青菜炒鸡蛋🥬+西红柿炒土豆片<br><img data-src="https://i.loli.net/2020/12/03/ZqQJmR6GOypi38H.png" width="600" height="300"></p>
-<p>搭配11: 糯米饭🍚+西红柿辣椒炒鸡蛋🥚+酸辣娃娃菜+肉丸萝卜汤🥣<br>搭配12: 糯米饭🍚+酸辣娃娃菜+肉末炒西芹<br><img data-src="https://i.loli.net/2020/12/03/bJEl9z6yLmesPxk.png" width="600" height="300"></p>
-<p>菜品单独展示，第一组：香煎孜然豆腐、蒜蓉粉丝娃娃菜、红烧带鱼🐟、麻婆豆腐<br><img data-src="https://i.loli.net/2020/12/03/MIHUyelGozkv1c2.jpg"></p>
-<p>第二组：青菜炒平菇🥬、红烧茄子🍆、手撕包菜、鱼香肉丝<br><img data-src="https://i.loli.net/2020/12/03/5CyYM2RXBsVn1hj.jpg"></p>
-<p>配汤组：枸杞银耳汤、疙瘩汤、萝卜肉丸汤<br><img data-src="https://i.loli.net/2020/12/03/1aYqCPMB7pdRjSm.jpg" width="600" height="200"></p>
-<p>其实还有很多，没有存图<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>，这些菜品都可以在「下厨房」APP搜索教程，个人认为最省时好做的菜品有：西红柿炒鸡蛋、老干妈土豆丝、酸辣娃娃菜、青菜炒鸡蛋。</p>
-<h2 id="晚餐篇"><a href="#晚餐篇" class="headerlink" title="晚餐篇"></a>晚餐篇</h2><p>晚餐主要会做一些速食，或者吃中午的剩菜剩饭<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，比午饭耗时少，毕竟晚餐要少吃一些。</p>
-<p>一组速食：酸辣挂面、家常版阳春面、酸辣速冻饺子、螺蛳粉<span class="emoji" alias="yum" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png?v8">😋</span><br><img data-src="https://i.loli.net/2020/12/03/v8QbfkM9Hw72Wty.jpg"></p>
-<p>说到螺蛳粉，我还是比较有发言权的哈哈哈，淘宝排名前5的店都吃遍了，好欢螺、嘻螺会、良品铺子、李子柒还有其他几家的都吃遍了，个人认为还是李子柒家的最好吃<span class="emoji" alias="thumbsup" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">👍</span></p>
-<p>有时候会整点硬菜，煎个牛排啥的<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>，意面算是第5种速食了，做起来也很快：<br><img data-src="https://i.loli.net/2020/12/03/RqTOExXmvFnVBJw.jpg" width="400" height="600"></p>
-<h2 id="烘焙篇"><a href="#烘焙篇" class="headerlink" title="烘焙篇"></a>烘焙篇</h2><p>工具是「小熊电器」的烤箱，其实烘焙自己做的种类也不多，主要用来烤鸡翅、烤红薯、烤饼干、做纸杯蛋糕：<br><img data-src="https://i.loli.net/2020/12/03/91VdOgUC2ruADZ4.jpg"></p>
-<p>有时会买腌制好的鸡翅来直接烤，有时也会买生鸡翅，自己配酱汁腌制，烤鸡翅很快，230度烤15-20分钟即可；烤红薯时间比较长，需要先230度烤30分钟，再200度烤20分钟左右；饼干和纸杯蛋糕比较麻烦，需要按照教程做。</p>
-<h2 id="便当篇"><a href="#便当篇" class="headerlink" title="便当篇"></a>便当篇</h2><p>作为一个会做饭的上班族，当然少不了带便当。但也不是每天都带，看心情<span class="emoji" alias="star" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span>，我一般是前一天晚上做好第二天要带的便当：</p>
-<img data-src="https://i.loli.net/2020/12/03/KdyLMiYnDbEO2pJ.jpg" width="500" height="600">
-
-<h2 id="外卖篇"><a href="#外卖篇" class="headerlink" title="外卖篇"></a>外卖篇</h2><p>什么？！竟然还有外卖篇，想不到吧<span class="emoji" alias="grinning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8">😀</span>，但有时候不想做饭，也是会点外卖的，一组外卖：<br><img data-src="https://i.loli.net/2020/12/03/d81bNuGAHcYJgtn.jpg"></p>
-<div class="note info"><p>说了这么多，那到底怎么才能学会做饭呢？一句话：<strong>只要你做，就能会；不做，永远不会</strong>，哈哈哈哈哈哈哈哈哈。</p>
-</div>]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>吃喝玩乐</category>
-      </categories>
-      <tags>
-        <tag>Cooking</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>增驾摩托车奇幻之旅(上)</title>
     <url>/my-lovely-moto/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
@@ -5122,34 +5077,48 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>两个人的春节</title>
-    <url>/sf-of-2p/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
+    <title>我的厨艺进阶之路</title>
+    <url>/myCookingWay/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
 
-<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
-<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
-<p>之后春节假期，每一天都有他的陪伴。</p>
-<ul>
-<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
-<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
-<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
-<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
-<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
-<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
-</ul>
-<p>两个人过年，也很温馨快乐。</p>
-<p>疫情放开以来，我一直没被感染。</p>
-<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
-<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
-<p>这才不是一篇水文呢喂！</p>
+<p>作为新时代的「空巢青年」，做饭可谓是一个必备技能了。</p>
+<p>小时候家里大多都是老爸<span class="emoji" alias="man" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f468.png?v8">👨</span>做饭，每次看他随便拿出一个食材就能想到做什么菜，怎么做，即使最简单的食材也可以做成一道菜，就觉得很神奇。</p>
+<p>在家人的影(bi)响(po)下，初高中那会就已经会做一些简单的菜了，也打下了不错的切菜功底<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">✌</span>，但真正学会做饭，还是从毕业后的空巢生活开始的。</p>
+<p>– 多图预警 –</p>
+<h2 id="早餐篇"><a href="#早餐篇" class="headerlink" title="早餐篇"></a>早餐篇</h2><p>「一日之计在于晨」，说实话，早餐并没有太花心思做。</p>
+<p>之前的固定搭配是胡萝卜葱花鸡蛋卷🥚+自己煮的粥🥣，后来又开始搭配纯牛奶🥛喝，有时加点水果蔬菜🍅，感觉营养就比较全面了：<br><img data-src="https://i.loli.net/2020/12/03/PNAzln8bfECFKa3.jpg"></p>
+<p>现在很少做鸡蛋卷了，比较喜欢纯牛奶🥛+麦片+鸡蛋🥚的搭配，或者纯牛奶🥛+鸡蛋🥚+面包🍞的标准搭配，营养都很全面：<br><img data-src="https://i.loli.net/2020/12/03/oHFDUjY3PJcTl5x.jpg"></p>
+<p>这里推荐 <mark class="label success">良品铺子</mark> 家的「每日坚果水果荟燕麦片」，还有 <mark class="label success">小熊家电</mark> 的「蒸蛋器」。</p>
+<p>鸡蛋卷的教程可以在「下厨房」APP里搜，很简单的。</p>
+<h2 id="午饭篇"><a href="#午饭篇" class="headerlink" title="午饭篇"></a>午饭篇</h2><p>午饭可就到了大显身手的时候了<span class="emoji" alias="metal" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span>。主食还是米饭，或者各种杂粮粥，配菜可就多了<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></p>
+<p>搭配1: 杂粮粥🥣+老干妈土豆丝🥔+醋溜娃娃菜+可乐鸡翅<br>搭配2: 黑米粥🥣+老干妈土豆丝🥔+肉末炒鸡蛋+煎饼🥞<br><img data-src="https://i.loli.net/2020/12/03/6Os7ERPASYb9FGn.png" width="600" height="300"></p>
+<p>搭配3: 糯米红枣粥🥣+西红柿炒鸡蛋🍅+醋溜娃娃菜+妈妈做的饼👩<br>搭配4: 糯米饭🍚+凉拌酸辣茄子🍆+清炒土豆片🥔<br><img data-src="https://i.loli.net/2020/12/03/gHPV73t8YDeQnZL.png" width="550" height="300"></p>
+<p>搭配5: 糯米饭🍚+麻婆豆腐+鱼香肉丝<br>搭配6: 红薯小米粥🥣+凉拌黄瓜皮老铺🥒+老干妈土豆丝🥔<br><img data-src="https://i.loli.net/2020/12/03/peg6iVZFDfsXKB4.png" width="600" height="300"></p>
+<p>搭配7: 糯米南瓜粥🎃+酸辣带鱼🐟+虾仁滑蛋🍤+煮玉米🌽<br>搭配8(早中餐一起吃)): 纯牛奶🥛+糯米饭🍚+煮鸡蛋+红烧茄子🍆+西红柿炒西葫芦<br><img data-src="https://i.loli.net/2020/12/03/H6i59XOltxoseJ3.png" width="550" height="300"></p>
+<p>搭配9: 糯米饭🍚+酸辣平菇🍄+西红柿炒西葫芦<br>搭配10: 糯米饭🍚+青菜炒鸡蛋🥬+西红柿炒土豆片<br><img data-src="https://i.loli.net/2020/12/03/ZqQJmR6GOypi38H.png" width="600" height="300"></p>
+<p>搭配11: 糯米饭🍚+西红柿辣椒炒鸡蛋🥚+酸辣娃娃菜+肉丸萝卜汤🥣<br>搭配12: 糯米饭🍚+酸辣娃娃菜+肉末炒西芹<br><img data-src="https://i.loli.net/2020/12/03/bJEl9z6yLmesPxk.png" width="600" height="300"></p>
+<p>菜品单独展示，第一组：香煎孜然豆腐、蒜蓉粉丝娃娃菜、红烧带鱼🐟、麻婆豆腐<br><img data-src="https://i.loli.net/2020/12/03/MIHUyelGozkv1c2.jpg"></p>
+<p>第二组：青菜炒平菇🥬、红烧茄子🍆、手撕包菜、鱼香肉丝<br><img data-src="https://i.loli.net/2020/12/03/5CyYM2RXBsVn1hj.jpg"></p>
+<p>配汤组：枸杞银耳汤、疙瘩汤、萝卜肉丸汤<br><img data-src="https://i.loli.net/2020/12/03/1aYqCPMB7pdRjSm.jpg" width="600" height="200"></p>
+<p>其实还有很多，没有存图<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>，这些菜品都可以在「下厨房」APP搜索教程，个人认为最省时好做的菜品有：西红柿炒鸡蛋、老干妈土豆丝、酸辣娃娃菜、青菜炒鸡蛋。</p>
+<h2 id="晚餐篇"><a href="#晚餐篇" class="headerlink" title="晚餐篇"></a>晚餐篇</h2><p>晚餐主要会做一些速食，或者吃中午的剩菜剩饭<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，比午饭耗时少，毕竟晚餐要少吃一些。</p>
+<p>一组速食：酸辣挂面、家常版阳春面、酸辣速冻饺子、螺蛳粉<span class="emoji" alias="yum" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png?v8">😋</span><br><img data-src="https://i.loli.net/2020/12/03/v8QbfkM9Hw72Wty.jpg"></p>
+<p>说到螺蛳粉，我还是比较有发言权的哈哈哈，淘宝排名前5的店都吃遍了，好欢螺、嘻螺会、良品铺子、李子柒还有其他几家的都吃遍了，个人认为还是李子柒家的最好吃<span class="emoji" alias="thumbsup" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">👍</span></p>
+<p>有时候会整点硬菜，煎个牛排啥的<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>，意面算是第5种速食了，做起来也很快：<br><img data-src="https://i.loli.net/2020/12/03/RqTOExXmvFnVBJw.jpg" width="400" height="600"></p>
+<h2 id="烘焙篇"><a href="#烘焙篇" class="headerlink" title="烘焙篇"></a>烘焙篇</h2><p>工具是「小熊电器」的烤箱，其实烘焙自己做的种类也不多，主要用来烤鸡翅、烤红薯、烤饼干、做纸杯蛋糕：<br><img data-src="https://i.loli.net/2020/12/03/91VdOgUC2ruADZ4.jpg"></p>
+<p>有时会买腌制好的鸡翅来直接烤，有时也会买生鸡翅，自己配酱汁腌制，烤鸡翅很快，230度烤15-20分钟即可；烤红薯时间比较长，需要先230度烤30分钟，再200度烤20分钟左右；饼干和纸杯蛋糕比较麻烦，需要按照教程做。</p>
+<h2 id="便当篇"><a href="#便当篇" class="headerlink" title="便当篇"></a>便当篇</h2><p>作为一个会做饭的上班族，当然少不了带便当。但也不是每天都带，看心情<span class="emoji" alias="star" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span>，我一般是前一天晚上做好第二天要带的便当：</p>
+<img data-src="https://i.loli.net/2020/12/03/KdyLMiYnDbEO2pJ.jpg" width="500" height="600">
+
+<h2 id="外卖篇"><a href="#外卖篇" class="headerlink" title="外卖篇"></a>外卖篇</h2><p>什么？！竟然还有外卖篇，想不到吧<span class="emoji" alias="grinning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8">😀</span>，但有时候不想做饭，也是会点外卖的，一组外卖：<br><img data-src="https://i.loli.net/2020/12/03/d81bNuGAHcYJgtn.jpg"></p>
+<div class="note info"><p>说了这么多，那到底怎么才能学会做饭呢？一句话：<strong>只要你做，就能会；不做，永远不会</strong>，哈哈哈哈哈哈哈哈哈。</p>
 </div>]]></content>
       <categories>
         <category>心灵奇旅</category>
-        <category>时间过慢点</category>
+        <category>吃喝玩乐</category>
       </categories>
       <tags>
-        <tag>2023</tag>
-        <tag>春节</tag>
+        <tag>Cooking</tag>
       </tags>
   </entry>
   <entry>
@@ -5185,6 +5154,37 @@ public class Functions {
       </categories>
       <tags>
         <tag>社畜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两个人的春节</title>
+    <url>/sf-of-2p/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
+
+<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
+<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
+<p>之后春节假期，每一天都有他的陪伴。</p>
+<ul>
+<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
+<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
+<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
+<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
+<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
+<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
+</ul>
+<p>两个人过年，也很温馨快乐。</p>
+<p>疫情放开以来，我一直没被感染。</p>
+<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
+<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
+<p>这才不是一篇水文呢喂！</p>
+</div>]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>时间过慢点</category>
+      </categories>
+      <tags>
+        <tag>2023</tag>
+        <tag>春节</tag>
       </tags>
   </entry>
   <entry>
@@ -6687,12 +6687,12 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
   </entry>
   <entry>
-    <title>categories</title>
+    <title></title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
+    <title></title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
