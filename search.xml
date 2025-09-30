@@ -26,6 +26,7 @@
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
         <tag>2022</tag>
@@ -55,10 +56,10 @@
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
         <tag>TED</tag>
-        <tag>告别拖延</tag>
       </tags>
   </entry>
   <entry>
@@ -122,9 +123,10 @@
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
+        <tag>青海</tag>
       </tags>
   </entry>
   <entry>
@@ -172,9 +174,10 @@
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
+        <tag>色达</tag>
       </tags>
   </entry>
   <entry>
@@ -225,6 +228,7 @@
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>网络无障碍</tag>
@@ -294,9 +298,9 @@
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Appium</tag>
       </tags>
   </entry>
@@ -326,9 +330,9 @@
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Bitrise</tag>
         <tag>iOS</tag>
       </tags>
@@ -351,9 +355,9 @@
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Bitrise</tag>
         <tag>Android</tag>
       </tags>
@@ -393,9 +397,9 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
 <img data-src="https://i.loli.net/2021/05/20/T2DvQJGWrgsYqlH.png" width="200" height="280">]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>WebdriverIO</tag>
       </tags>
   </entry>
@@ -506,9 +510,10 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
 </im>]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
+        <tag>自动化测试框架</tag>
       </tags>
   </entry>
   <entry>
@@ -589,11 +594,60 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
         <tag>BDD</tag>
-        <tag>敏捷</tag>
-        <tag>王铁锤</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点的SEO优化</title>
+    <url>/BlogSEO/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
+
+<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
+<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
+<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
+</div>
+<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
+<blockquote>
+<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
+</blockquote>
+<p>安装百度站点地图生成插件：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidusitemap:
+  path: baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-baidu-url-submit --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装结束后在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidu_url_submit:
+  count: 5 				     ## 提交最新的五个链接
+  host: www.93bok.com 	     ## 百度站长平台中注册的域名
+  token: xxx	             ## 准入秘钥
+  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">-  type: baidu_url_submitter	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><span class="image-caption">image.png</span><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
+<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
+</div>
+
+<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
+<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
+<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">sitemap:
+  path: sitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
+<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -791,59 +845,7 @@ header.post-header {
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-        <tag>升级博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点的SEO优化</title>
-    <url>/BlogSEO/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
-
-<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
-<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
-<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
-</div>
-<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
-<blockquote>
-<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-</blockquote>
-<p>安装百度站点地图生成插件：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidusitemap:
-  path: baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-baidu-url-submit --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>安装结束后在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidu_url_submit:
-  count: 5 				     ## 提交最新的五个链接
-  host: www.93bok.com 	     ## 百度站长平台中注册的域名
-  token: xxx	             ## 准入秘钥
-  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">-  type: baidu_url_submitter	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><span class="image-caption">image.png</span><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
-<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
-</div>
-
-<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
-<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
-<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">sitemap:
-  path: sitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
-<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>SEO</tag>
+        <tag>theme-next</tag>
       </tags>
   </entry>
   <entry>
@@ -881,6 +883,7 @@ header.post-header {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
         <tag>BugBash</tag>
@@ -934,9 +937,10 @@ header.post-header {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
+        <tag>成都</tag>
       </tags>
   </entry>
   <entry>
@@ -947,9 +951,10 @@ header.post-header {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
-        <tag>life</tag>
+        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,10 +1048,10 @@ header.post-header {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>git</tag>
-        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1215,6 +1220,7 @@ header.post-header {
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Next</tag>
         <tag>GithubPages</tag>
         <tag>CodingPages</tag>
       </tags>
@@ -1319,8 +1325,45 @@ danger
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Markdown</tag>
+        <tag>写作标签</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给博客的Https证书续期</title>
+    <url>/HttpsUpdate/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png">
+
+<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><p>前几天突然发现博客的Https证书失效了，网站又被标记成了<mark class="label danger">不安全</mark>。</p>
+<p>找到了之前写过关于申请证书的<a href="https://jmyblog.top/SiteBrokenFix/">文章</a>，发现是在coding pages里申请的证书：</p>
+<img data-src="https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png">
+
+<p>之前的证书状态正常，现在进去一看，证书状态已经失效了。点了页面上重新申请的按钮，结果申请失败。</p>
+<p>网上搜索了下报错信息，我果然不是一个人，但大家的情况又跟我不一样，所以一时也没找到合适的解决办法。</p>
+<p>这个时候突然发现自己之前写的文章有这么一句话：</p>
+<pre><code>一开始SSL证书申请失败，后来按照网上的解决方案去域名解析把GitHub解析暂停就申请成功了。
+</code></pre>
+<p>好像之前遇到过申请失败的问题，所以按照这个操作，先去把GitHub解析暂停，再点击申请证书，这下成功了，刷新了下博客，证书的有效期已经更新到10月底了：</p>
+<img data-src="https://i.loli.net/2020/07/30/aLlXtRmycKpk2Ji.png">
+
+<p>我得意的笑 <span class="emoji" alias="grin" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f601.png?v8">😁</span></p>
+<h2 id="知其所以然"><a href="#知其所以然" class="headerlink" title="知其所以然"></a>知其所以然</h2><p>问题是解决了，但是作为一个好学的孩子，不但要知其然，还要知其所以然。</p>
+<p>首先，Coding Pages给我们申请的证书有效期是三个月，是由 <a href="https://letsencrypt.org/zh-cn/getting-started/">Let’s Encrypt</a> 签发的，它是国外一个免费的证书颁发机构（CA）。</p>
+<div class="note info"><p>Let’s Encrypt的官网说：</p>
+<p>要从 Let’s Encrypt 获取您网站域名的证书，您必须证明您对域名的实际控制权。您可以在您的 Web 主机上运行使用 ACME 协议的软件来获取 Let’s Encrypt 证书。</p>
+</div>
+
+<p>这个意思简单，就是说你得证明这个域名是你的，我们才给你发证书。那咋证明呢？其实也简单，只要Let’s Encrypt能在国外通过访问站点获得域名验证信息，就能验证域名所有权了。</p>
+<p>但是根据我的域名解析设置，Coding Pages的解析线路是默认，Github Pages解析线路是境外，所以根据域名解析规则，<mark class="label primary">Let's Encrypt在国外只能访问到Github Pages的域名验证信息，而无法访问Coding Pages的域名验证信息。</mark><br>所以Coding Pages在帮我们申请证书时，就无法通过Let’s Encrypt的域名验证，证书也就申请不到了：</p>
+<img data-src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png">
+
+<p>所以这就是为什么用Coding Pages申请证书时，需要先把Github Pages的解析暂停掉了。不过别忘了证书申请成功之后，再把Github Pages的解析重新启动哦。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span> <a href="https://zwen.net/githubcodingblog.html">Github+Coding国内外博客双线部署并支持全站https</a><br><span id="inline-toc">2.</span> <a href="https://blog.csdn.net/dataiyangu/article/details/83374438">hexo 托管到coding，pages申请ssl/tls证书失败</a></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>Https</tag>
       </tags>
   </entry>
   <entry>
@@ -1341,9 +1384,10 @@ danger
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>爬山</tag>
+        <tag>华山</tag>
       </tags>
   </entry>
   <entry>
@@ -1501,6 +1545,7 @@ danger
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -1571,7 +1616,7 @@ danger
 <p><span id="inline-toc">5.</span> <strong>古文观止(上下两册)</strong>/吴楚材/浙江教育出版社<br><span id="inline-toc">6.</span> <strong>呐喊</strong>/鲁迅<br><span id="inline-toc">7.</span> <strong>沉默的大多数</strong>/王小波</p>
 <p>大学的时候就看完了，是王小波最著名的杂文。王小波生活在新中国刚成立后最动荡的时期，文革，大跃进，上山下乡都赶上了，所以在杂文里也有很多他的经历。这本杂文合集文字幽默大胆，主要写他对当时中国社会/经济/文化现状的讽刺。</p>
 <p><span id="inline-toc">8.</span> <strong>围城</strong>/钱钟书</p>
-<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，各种出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
+<p>看完了再也不相信爱情了<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>背景在民国时期，讲了男主和四个女人的情感经历，结婚后两人之间又各种猜忌，经常出口伤人，因为各种生活琐事争吵不断。<br>书中最后一幕是婚后不久，男主又一次与妻子争吵，夺门而出。情绪冷静之后想回家说点软话哄哄对方，不想回去之后发现妻子竟收拾东西回娘家了。而后续又会发生什么不得而知，也许是两人会就此分开，也许男主会软言讨好把女主接回来，继续过着争吵不休的生活。<br>其实我是觉得男主和女主都太作了，明明心里是有对方的，却又控制不住互相伤害。<br>书中对许多配角的性格刻画和心理描写也令人拍案叫绝，太真实了。<br>没看过的一定要看，看过的也可以再看。</p>
 <p><span id="inline-toc">9.</span> <strong>人间词话</strong>/王国维/中华书局</p>
 <h3 id="社科"><a href="#社科" class="headerlink" title="社科"></a>社科</h3><p><span id="inline-toc">1.</span> <strong>中国地理地图集</strong>/中国地图出版社</p>
 <p>还没看完，其实这是本工具书，因为我一向地理不好。<br>以前是分不清南北，这个毛病在我第一次找房子以为朝东结果朝北后才治好的，但有时也会失灵。<br>现在是随便说某省份和城市，反应不来是南方还是北方，经常被朋友嘲笑，所以还是买本地理书吧。<br>是挺厚的一本书，全彩印，里面详细列着我国各地的地貌，湖泊，气候，风俗等等，还有超简版中国式。称得上一本概括版的百科全书了，图文并茂，看起来也不腻。</p>
@@ -1583,47 +1628,10 @@ danger
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>我读书我进步</category>
       </categories>
       <tags>
         <tag>书单</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给博客的Https证书续期</title>
-    <url>/HttpsUpdate/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png">
-
-<h2 id="事情是这样的"><a href="#事情是这样的" class="headerlink" title="事情是这样的"></a>事情是这样的</h2><p>前几天突然发现博客的Https证书失效了，网站又被标记成了<mark class="label danger">不安全</mark>。</p>
-<p>找到了之前写过关于申请证书的<a href="https://jmyblog.top/SiteBrokenFix/">文章</a>，发现是在coding pages里申请的证书：</p>
-<img data-src="https://i.loli.net/2020/04/23/Skv28M5PJiC1Fwo.png">
-
-<p>之前的证书状态正常，现在进去一看，证书状态已经失效了。点了页面上重新申请的按钮，结果申请失败。</p>
-<p>网上搜索了下报错信息，我果然不是一个人，但大家的情况又跟我不一样，所以一时也没找到合适的解决办法。</p>
-<p>这个时候突然发现自己之前写的文章有这么一句话：</p>
-<pre><code>一开始SSL证书申请失败，后来按照网上的解决方案去域名解析把GitHub解析暂停就申请成功了。
-</code></pre>
-<p>好像之前遇到过申请失败的问题，所以按照这个操作，先去把GitHub解析暂停，再点击申请证书，这下成功了，刷新了下博客，证书的有效期已经更新到10月底了：</p>
-<img data-src="https://i.loli.net/2020/07/30/aLlXtRmycKpk2Ji.png">
-
-<p>我得意的笑 <span class="emoji" alias="grin" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f601.png?v8">😁</span></p>
-<h2 id="知其所以然"><a href="#知其所以然" class="headerlink" title="知其所以然"></a>知其所以然</h2><p>问题是解决了，但是作为一个好学的孩子，不但要知其然，还要知其所以然。</p>
-<p>首先，Coding Pages给我们申请的证书有效期是三个月，是由 <a href="https://letsencrypt.org/zh-cn/getting-started/">Let’s Encrypt</a> 签发的，它是国外一个免费的证书颁发机构（CA）。</p>
-<div class="note info"><p>Let’s Encrypt的官网说：</p>
-<p>要从 Let’s Encrypt 获取您网站域名的证书，您必须证明您对域名的实际控制权。您可以在您的 Web 主机上运行使用 ACME 协议的软件来获取 Let’s Encrypt 证书。</p>
-</div>
-
-<p>这个意思简单，就是说你得证明这个域名是你的，我们才给你发证书。那咋证明呢？其实也简单，只要Let’s Encrypt能在国外通过访问站点获得域名验证信息，就能验证域名所有权了。</p>
-<p>但是根据我的域名解析设置，Coding Pages的解析线路是默认，Github Pages解析线路是境外，所以根据域名解析规则，<mark class="label primary">Let's Encrypt在国外只能访问到Github Pages的域名验证信息，而无法访问Coding Pages的域名验证信息。</mark><br>所以Coding Pages在帮我们申请证书时，就无法通过Let’s Encrypt的域名验证，证书也就申请不到了：</p>
-<img data-src="https://i.loli.net/2020/04/23/RPNsrEyMSUV9uD1.png">
-
-<p>所以这就是为什么用Coding Pages申请证书时，需要先把Github Pages的解析暂停掉了。不过别忘了证书申请成功之后，再把Github Pages的解析重新启动哦。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span> <a href="https://zwen.net/githubcodingblog.html">Github+Coding国内外博客双线部署并支持全站https</a><br><span id="inline-toc">2.</span> <a href="https://blog.csdn.net/dataiyangu/article/details/83374438">hexo 托管到coding，pages申请ssl/tls证书失败</a></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1662,7 +1670,6 @@ danger
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>GithubPages</tag>
         <tag>CodingPages</tag>
         <tag>腾讯云</tag>
       </tags>
@@ -1742,6 +1749,7 @@ danger
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>渗透测试</tag>
@@ -1773,9 +1781,10 @@ danger
 </div>]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
       </categories>
       <tags>
-        <tag>王铁锤</tag>
+        <tag>PUA</tag>
       </tags>
   </entry>
   <entry>
@@ -1811,7 +1820,7 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>Https</tag>
       </tags>
   </entry>
   <entry>
@@ -1846,9 +1855,10 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
       </categories>
       <tags>
-        <tag>王铁锤</tag>
+        <tag>围城</tag>
       </tags>
   </entry>
   <entry>
@@ -1980,10 +1990,9 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <img data-src="https://i.loli.net/2021/07/20/ImP9g5KtChEoUpV.jpg" width="400" height="300" alt="纪念印度之行"><span class="image-caption">纪念印度之行</span>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
-        <tag>工作</tag>
         <tag>ThoughtWorks University</tag>
       </tags>
   </entry>
@@ -2027,9 +2036,9 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
-        <tag>敏捷</tag>
         <tag>测试金字塔</tag>
       </tags>
   </entry>
@@ -2362,9 +2371,9 @@ public class SeleniumTest {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Maven</tag>
       </tags>
   </entry>
@@ -2478,11 +2487,146 @@ public class SeleniumTest {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Jenkins</tag>
         <tag>GoCD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一则小故事</title>
+    <url>/a-story-about-z/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png">
+
+<div class="note info"><ul>
+<li>主题：职场性骚扰</li>
+<li>主角：我，Z某</li>
+<li>时间线：2022.05 - 2022.07</li>
+</ul>
+</div>
+
+<h2 id="Z某其人"><a href="#Z某其人" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>Z某是去年年底加入公司的第三方外包员工，一月初开始和我在同一个项目工作。</p>
+<p>最初由于疫情一直各自在家办公，工作原因日常交流非常频繁，每天都会线上开会沟通，复工后开始线下接触，不过也只会聊工作，后来工作上也分开了，交集不是很多，私下也没有任何联系，一切正常。</p>
+<p>个人方面，Z某给人的第一印象其实是比较好的，外表看起来文质彬彬，谈吐让人觉得比较舒服，工作上也认真努力，其它的我不是很了解，只知道他结婚了，孩子也在上学，后来有段时间他请了好几次假，听说是家里人(好像是他老婆？)生病了蛮严重的要回去照顾。</p>
+<p>所以刚开始大家(包括我)对他的评价都挺好，感觉就是一个对工作、对家庭都很负责且认真踏实的人。</p>
+<h2 id="开始不对劲"><a href="#开始不对劲" class="headerlink" title="开始不对劲"></a>开始不对劲</h2><p>转折是在5月份，Z某的一些行为让我觉得不对劲：</p>
+<div class="tabs" id="不对劲"><ul class="nav-tabs"><li class="tab active"><a href="#不对劲-1">不对劲 1</a></li><li class="tab"><a href="#不对劲-2">不对劲 2</a></li><li class="tab"><a href="#不对劲-3">不对劲 3</a></li><li class="tab"><a href="#不对劲-4">不对劲 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="不对劲-1"><p><strong>追车</strong></p>
+<p>没有摩托之前我上下班都是用电动滑板车🛴通勤，时速大概20km/h，走在自行车道时只有那种山地自行车🚴才能跟得上我，而且需要骑的比较努力，这是前提。</p>
+<p>某次下班，我骑着滑板车停在路口等红绿灯，感觉背后有人盯着我，回头发现是骑着共享单车的Z某，简单打了个招呼后等到绿灯，想着我比较快各走各的就行了，没想到Z某非常努力的骑着共享单车跟在我的后面，甚至还并排跟我说话。</p>
+<p>我当时非常尴尬，因为自行车道还有电动车在走，他也不在乎一路被滴就要并排跟我走，我只能尬笑着简单回应他，心里恨不得滑板车时速再加20码，到下个红绿灯，他说自己家的方向也在这边，所以跟我回家路线就比较重叠，我只能内心苦笑。</p>
+<p>接下来一路，他都非常努力的骑车跟着我，一直到我小区门口，现在想来有点后怕，不过当时只是觉得这人有点奇怪，没多想。</p></div><div class="tab-pane" id="不对劲-2"><p><strong>过度关心</strong></p>
+<p>Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托了)，我礼貌回应之后就没有主动联系过他，但他开始对我有一些过度关心的言语(那会我因为别的事心情不好发了一些吐槽的朋友圈还请了一天假)：</p>
+<img data-src="https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg" height="600" width="280" alt="过度关心"><span class="image-caption">过度关心</span>
+
+<p>试问，一个有老婆孩子的正常男性会私下给女同事发消息，关心她遇到了啥不好的事吗？不过我还是没有多想，只把这个当作普通同事的关心，但还是觉得有些奇怪。</p></div><div class="tab-pane" id="不对劲-3"><p><strong>朋友圈点赞</strong></p>
+<p>第一次骑摩托去加油，我发了条朋友圈，图就下边这个：</p>
+<img data-src="https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg" height="400" width="300" alt="朋友圈图"><span class="image-caption">朋友圈图</span>
+
+<p>Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得)，好像是他们家那边的，然后开始了一系列对我摩托车的追问：</p>
+<img data-src="https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png" height="370" width="300" alt="追问"><span class="image-caption">追问</span>
+
+<p>在我尴尬的回复他之前有发过摩托车后，他竟然去翻我的朋友圈找到了半个月前发的那条动态(因为我朋友圈挺活跃的基本上每天都发有时候一天发好几条)，然后，点了个赞。</p>
+<p>我觉得非常的诡异，然后联想到前边这俩事件，开始觉得这个人不对劲，但也没有表露什么。</p></div><div class="tab-pane" id="不对劲-4"><p><strong>喝东西</strong></p>
+<p>在朋友圈点赞事件的第二天，Z某又发微信给我说要单独请我喝东西「聊一聊」：</p>
+<img data-src="https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg" height="600" width="280" alt="喝东西事件"><span class="image-caption">喝东西事件</span>
+
+<p>虽然还是礼貌回复，不过这个人已经很明显有问题了。</p></div></div></div>
+
+<h2 id="第一次机会：禁朋友圈"><a href="#第一次机会：禁朋友圈" class="headerlink" title="第一次机会：禁朋友圈"></a>第一次机会：禁朋友圈</h2><p>在感觉到Z某有问题后，我听取了一些朋友的建议，决定不回复他发的消息然后对他禁掉朋友圈和动态(不删掉是因为想保留证据怕他还会有别的举动)，希望他可以得到警示并停止自己的行为，这是我给他的第一次机会。</p>
+<h2 id="第二次机会：点名越界行为"><a href="#第二次机会：点名越界行为" class="headerlink" title="第二次机会：点名越界行为"></a>第二次机会：点名越界行为</h2><p>然而，Z某无视了我的第一次警告，甚至还发了所谓的测试消息给我，想看我有没有删掉他，之后更是想让我把朋友圈权限放开：</p>
+<img data-src="https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg" height="400" width="390" alt="第二次警告"><span class="image-caption">第二次警告</span>
+
+<p>我不再沉默了，明确拒绝了他并且点明了他越界的行为，他也承认是自己的「问题」向我道歉，还希望我可以回到之前和他正常交流，这当然是不可能的，所以之后除了工作上必要的会面(不说话没有眼神交流的那种多人会议)，其它场景我都对他视而不见。</p>
+<p>这是我给他的第二次机会。</p>
+<h2 id="第三次机会：正面交锋"><a href="#第三次机会：正面交锋" class="headerlink" title="第三次机会：正面交锋"></a>第三次机会：正面交锋</h2><p>我以为Z某已经认识到了自己的错误并停止对我的骚扰，可一周以后，他又发消息说自己有话说，想到之前他虽然有越界的言语，但这只是我个人的主观感受(不过正常人都会有这种感受吧)，所以为了让他暴露更多的「想法」，拿到证据，我同意了他的要求：</p>
+<img data-src="https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg" height="340" width="300" alt="有话说？"><span class="image-caption">有话说？</span>
+
+<p>第二天，我和Z某在会议室谈了大约半小时，全程录音：</p>
+<img data-src="https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg" height="220" width="300" alt="录音"><span class="image-caption">录音</span>
+
+<div class="note primary"><p>录音内容大致如下(我全程保持微笑)：</p>
+<ul>
+<li>7min 15s - 9min 55s: 承认自己对我有不切实际的想法，加我微信是有别的目的，以及越界是自己的问题，还说怕我会觉得他是一个无耻好色的老男人(可不就是嘛)。</li>
+<li>12min 0s - 13min 30s: 说自己还有一点理性，要遵守我的界限，想让我继续跟他交流。</li>
+<li>15min 50s - 17min 40s : 再次承认自己对我有别的想法，然后我拒绝并提出以后私下不交流。</li>
+<li>18min 25s -20min 40s :说自己还是有别的想法但没什么用，还「发誓」自己之前没有过对别的女同事越界，然后我提到了他的家庭，他说人有时候没那么理性。</li>
+<li>21min 05s - 22min 15s: 同意我提出的私下不交流，然后他哭了？！</li>
+<li>23min 0s - end 依然坚持提出要遵守我的界限，想让我继续跟他交流，我拒绝了，然后应他的要求留他独自在会议室思考人生。</li>
+</ul>
+</div>
+
+<p>谈话之后，我虽然非常不适，而且已经拿到了他性骚扰我的实锤，但还想着他可能是一个家庭的主心骨，生活压力大，工作不容易，怕对他造成很大的影响(因为大概知道如果举报之后，他很可能会丢掉这份工作，他自己的公司也可能会fire他)，所以不想举报他，只是明确表示拒绝并且达成了之后除了工作私下不交流的共识。</p>
+<p>说白了，我就准备忍着膈应直到他下项目(因为第三方一般到年底就合约到期了)，反正已经说清楚了，只要他后边不继续骚扰我，剩下半年相安无事也就罢了(我可太善良了)。</p>
+<p>这是我给他的第三次机会。</p>
+<h2 id="最后一根稻草"><a href="#最后一根稻草" class="headerlink" title="最后一根稻草"></a>最后一根稻草</h2><p>万万没想到，半个月后，他竟然通过「企业微信」(?!)发消息给我想让我继续和他交流，刚开始我猜他可能以为我把他删了(其实没有就想看看他还会不会有别的举动)，所以只能用企业微信发消息给我，后来我才发现是他把我删了(一个伏笔)：</p>
+<img data-src="https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png" height="500" width="250" alt="够了"><span class="image-caption">够了</span>
+
+<p>这可真是压死骆驼的最后一根稻草了，事不过三，已经给过他三次机会，但他还是不知收敛，说什么「还有些不清楚」？<br>我已经不想再跟他沟通了，决定按照公司流程举报处理，所以我说「你会清楚的」。</p>
+<h2 id="举报和处理"><a href="#举报和处理" class="headerlink" title="举报和处理"></a>举报和处理</h2><p>当天下午，我就开始查公司处理这种事的流程资料，查到之后，直接和相关同事约了会详谈，后来就是一系列调查处理，公司给的结论是确认Z某行为不当，会和他解除劳动合同并把这件事同步给他自己的公司，我很满意，毕竟我的诉求就是让他尽快消失在我眼前。</p>
+<p>整个处理过程历时18天，虽然有点久，不过公司调查还是挺隐秘的，因为我手里的证据已经足够说明整个事情，根本不用找他聊，所以到第12天Z某才知道自己被举报，并且他自己的公司和我的部门leader都轮番找他约谈，目的就是让他认识到自己的错误，有个心理准备，然后再辞退他，减少他之后私下报复我的可能性，中间为了安全我也几次在家办公。</p>
+<p>公司当然没有说是我举报他，只是说他被人举报有不当行为，警告他注意言行，也没说让他直接下项目辞退他，不过他但凡还有点脑子都会猜到是我吧。</p>
+<p>最后的处理结果，当然是他被辞退，last day当天他的backup就已经在onboarding了，上午交接完工作，下午3点他就走人了。</p>
+<h2 id="Z某其人-1"><a href="#Z某其人-1" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>事情到这里真的结束了，不过为了首尾呼应，重新聊聊卸下面具后的Z某其人吧，首先来品品「最后一根稻草」之后，Z某做出的其它一系列奇葩举动：</p>
+<div class="tabs" id="z某其人"><ul class="nav-tabs"><li class="tab active"><a href="#z某其人-1">Z某其人 1</a></li><li class="tab"><a href="#z某其人-2">Z某其人 2</a></li><li class="tab"><a href="#z某其人-3">Z某其人 3</a></li><li class="tab"><a href="#z某其人-4">Z某其人 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="z某其人-1"><p><strong>学不会</strong></p>
+<p>举报第8天(他还不知道自己被举报)，Z某又给我微信发消息，想让我把朋友圈权限放开，还说什么「不清楚学不会」的绿茶发言(搁这儿装林俊杰呢？)：</p>
+<img data-src="https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg" height="600" width="230" alt="学不会"><span class="image-caption">学不会</span>
+
+<p>明明已经说清楚以后私下不交流了，结果还在这说我不跟他聊天打招呼，<mark class="label primary">所以他就是不管我之前说了什么达成了什么样的共识，就只是想继续纠缠骚扰我而已。</mark>「我不知道他怎么想的」？(我可太知道了)</p>
+<p>这里有个细节是微信提示打招呼内容，这种就是他把我删了，然后又把我加回来，我这边就会有这个提示(drama的老男人)。</p></div><div class="tab-pane" id="z某其人-2"><p><strong>狼人自曝</strong></p>
+<p>Z某知道被举报的第二天，在他自己工作小组的私人微信群里公布了这件事：</p>
+<img data-src="https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg" height="100" width="250" alt="狼人自曝"><span class="image-caption">狼人自曝</span>
+
+<p>没错，他竟然自己自曝！我真的不李姐，难道他不明白这样的事情曝出来，会被众人唾弃的是他自己吗？！</p>
+<p>本来公司出于对他的尊重，想保留他的最后一丝体面，根本没有向更多人透露这件事，没想到他竟然自曝！引起大家的猜测和好奇，真的是脸都不要了。</p>
+<p>我之前以为他认识到自己的错误默默走了就好了，可他这样做，感觉根本不觉得自己有错，还挺委屈？！因为没几个知情人，所以大家的回复也大多是安慰他让他配合调查，「清者自清」，给我气坏了。</p></div><div class="tab-pane" id="z某其人-3"><p><strong>隐形的枪</strong></p>
+<p>自曝的第二天，他又跟同组的同事(一个知情的姐妹)主动提起这件事，可能察觉到姐妹是知情的，就对姐妹说「你别装了，我知道你知情」，然后撕下面具说出了下面这段话：</p>
+<blockquote>
+<p>有的人手里有把枪，但是她不告诉你自己手里有抢，而是等你靠近后，直接开枪打死你。</p>
+</blockquote>
+<p>这已经表明Z某猜到是我举报的他，而且不觉得自己有错，甚至怪我不提前把后果告诉他就直接举报，这就是他扭曲的三观。</p></div><div class="tab-pane" id="z某其人-4"><p><strong>电话骚扰</strong></p>
+<p>他被辞退当天下午7时，给我打了电话，一般情况下陌生来电我都是直接挂掉，因为那天买了东西所以怕是快递的电话就接了，没想到是他。</p>
+<p>他问是不是我举报的他，想确认一下，在我默认之后，说我没必要这样做，导致他被fire这么严重的后果，他说话还有点哽咽，后来又很气愤，说我不善良(他在跟我聊善良？！)，说自己又没做什么伤害我的事，不就是发了几条信息说了一些话么，还说他觉得自己还算是比较善良的人(excume me?!)。。。</p>
+<p>总之就是在说我不应该举报他让他丢工作，还想带偏我让我觉得自己不善良做错了，给我气坏了，这次我没忍着，正面刚了他几句挂了电话拉黑，这是我和Z某的最后一次交锋。</p></div></div></div>
+
+<p>总结：<strong>Z某就是一个又蠢又坏的好色无耻绿茶老男人。</strong></p>
+<h2 id="我的心路历程"><a href="#我的心路历程" class="headerlink" title="我的心路历程"></a>我的心路历程</h2><blockquote>
+<p>整件事情的时间线是5月到7月，从发觉Z某不对劲给他机会到举报他再到他走人，大概2个月。</p>
+</blockquote>
+<mark class="label info">吃瓜</mark>
+
+<p>一开始，我是抱着吃瓜的心态看待这件事(没错自己吃自己的瓜)，想看这个老男人都能整出什么幺蛾子来，还分享给了几个姐妹一起讨论怎么整治他。</p>
+<mark class="label info">生气</mark>
+
+<p>接着就很生气，因为这人根本不觉得自己有错，甚至还挺委屈，明明我是受害者，但他全程都把自己的姿态放得很低，经常绿茶发言还哭哭啼啼的，好像他才是受害者，而且一边扮演受害者的角色一边不停的骚扰我，就一整个情感PUA大师呗？！巧了，我可是反PUA专家。</p>
+<p>在我和他约谈的时候，也多次提到他的家庭，他都避而不谈，只说是自己的问题，希望我不要不理他之类的话，然后就非常心疼Z某老婆，一个女人，给他生了孩子，自己还生着病(一开始提到的)，可能还帮他操持着一家子的柴米油盐，结果自己的老公在外边搞这个，一代入就更生气了。</p>
+<mark class="label info">害怕</mark>
+
+<p>虽然我全程表现的很镇定，还和Z某正面交锋刚他，不过我也只是个女孩子啊。</p>
+<p>我知道世界上没有绝对的黑与白，正常人心里都会有一些灰色地带，可这种事发生在我身上还是第一次，刷新了我的三观，所以就有种对未知的恐惧和后怕。</p>
+<p>而且他知道是我举报的他，最后打电话给我的时候也表达了一些愤怒，他也知道我住在哪，虽然不知道具体楼栋和门牌号，但谁知道这种人会不会做出啥疯狂的事儿来，比如蹲在小区门口藏个刀捅我、往我脸上泼硫酸啥的(一些猜想)，所以这段时间我上下班路上都很小心，经常回头看看有没有人跟着我。</p>
+<mark class="label info">委屈</mark>
+
+<p>还有些委屈，就觉得我做了什么要遇上这样的事，还得自己一个人默默处理好，那段时间我工作的时候也经常失神、心不在焉，每天承受那种被人暗自窥视的不适感，心很累。</p>
+<mark class="label info">思考</mark>
+
+<p>接着就在想，如果Z某不是第三方员工，而是公司的正式员工，或者职级比我高很多的人，我还会这么直接的举报吗？或者公司在我举报之后会站在我这边处理他吗？如果这种事不是发生在外企，而是国内公司或体制内的企业，受害者还会勇敢发声吗？这些问题，我都不敢给出肯定的回答。</p>
+<p>而且就算是我这种情况，好多姐妹说换做她们，最多也只会阴阳怪气的在微信里羞辱Z某，并不会直接举报他。但我觉得这样没用，他连这种事都做得出来，阴阳怪气能让他受到惩罚吗？</p>
+<p>甚至被举报之后他都不觉得自己有错，还怪我，所以后来我都想把这件事和录音po到网上，让那些人网暴他，让他身败名裂，但还是算了，这样做的话，被网暴的不只有他，可能还有我。</p>
+<mark class="label info">女性的困境</mark>
+
+<p>这件事结束之后，我还想到之前也有别的男同事对我说过一些轻微冒犯的话，分享给姐妹之后她说要不以后就直接说，可这样的话，别人会觉得我难相处孤立我吧？而且这些男同事在我们看来都已经是人比较好的男生了，可就连他们有时也会说出一些不合适的话，甚至他们自己并不觉得是冒犯的。</p>
+<p>所以我觉得这是一个社会问题，公共良俗还有很大的进步空间，比如最近的社会事件(唐山打人什么的)，需要对女性多一些关怀吧，只有当大家都觉得不合适的时候，我的发声才有意义，在这之前，只要不是特别冒犯的举动，我应该也只会忍忍一笑而过吧。</p>
+<h2 id="我变强了"><a href="#我变强了" class="headerlink" title="我变强了"></a>我变强了</h2><p>经历过这件事之后，我觉得自己的内心更强大了(虽然本来也很强大)，然后就是奉劝大家，看人真的不能看表面，千万不要以貌取人，毕竟这个世界上金玉其外的人太多了，要学会辨别。</p>
+<div class="note warning"><p>最后，Z某也知道我的博客链接，所以如果你看到了这篇，希望可以认识到自己的错误，多关注自己的家庭，以后不要再对别的女生有冒犯的举动，洗心革面，做个人吧。</p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
+      </categories>
+      <tags>
+        <tag>性骚扰</tag>
+        <tag>女权</tag>
       </tags>
   </entry>
   <entry>
@@ -2721,9 +2865,9 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>TestNG</tag>
       </tags>
   </entry>
@@ -2752,143 +2896,11 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
       </categories>
       <tags>
-        <tag>王铁锤</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一则小故事</title>
-    <url>/a-story-about-z/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/07/23/dtEjI9VsoQzrURx.png">
-
-<div class="note info"><ul>
-<li>主题：职场性骚扰</li>
-<li>主角：我，Z某</li>
-<li>时间线：2022.05 - 2022.07</li>
-</ul>
-</div>
-
-<h2 id="Z某其人"><a href="#Z某其人" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>Z某是去年年底加入公司的第三方外包员工，一月初开始和我在同一个项目工作。</p>
-<p>最初由于疫情一直各自在家办公，工作原因日常交流非常频繁，每天都会线上开会沟通，复工后开始线下接触，不过也只会聊工作，后来工作上也分开了，交集不是很多，私下也没有任何联系，一切正常。</p>
-<p>个人方面，Z某给人的第一印象其实是比较好的，外表看起来文质彬彬，谈吐让人觉得比较舒服，工作上也认真努力，其它的我不是很了解，只知道他结婚了，孩子也在上学，后来有段时间他请了好几次假，听说是家里人(好像是他老婆？)生病了蛮严重的要回去照顾。</p>
-<p>所以刚开始大家(包括我)对他的评价都挺好，感觉就是一个对工作、对家庭都很负责且认真踏实的人。</p>
-<h2 id="开始不对劲"><a href="#开始不对劲" class="headerlink" title="开始不对劲"></a>开始不对劲</h2><p>转折是在5月份，Z某的一些行为让我觉得不对劲：</p>
-<div class="tabs" id="不对劲"><ul class="nav-tabs"><li class="tab active"><a href="#不对劲-1">不对劲 1</a></li><li class="tab"><a href="#不对劲-2">不对劲 2</a></li><li class="tab"><a href="#不对劲-3">不对劲 3</a></li><li class="tab"><a href="#不对劲-4">不对劲 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="不对劲-1"><p><strong>追车</strong></p>
-<p>没有摩托之前我上下班都是用电动滑板车🛴通勤，时速大概20km/h，走在自行车道时只有那种山地自行车🚴才能跟得上我，而且需要骑的比较努力，这是前提。</p>
-<p>某次下班，我骑着滑板车停在路口等红绿灯，感觉背后有人盯着我，回头发现是骑着共享单车的Z某，简单打了个招呼后等到绿灯，想着我比较快各走各的就行了，没想到Z某非常努力的骑着共享单车跟在我的后面，甚至还并排跟我说话。</p>
-<p>我当时非常尴尬，因为自行车道还有电动车在走，他也不在乎一路被滴就要并排跟我走，我只能尬笑着简单回应他，心里恨不得滑板车时速再加20码，到下个红绿灯，他说自己家的方向也在这边，所以跟我回家路线就比较重叠，我只能内心苦笑。</p>
-<p>接下来一路，他都非常努力的骑车跟着我，一直到我小区门口，现在想来有点后怕，不过当时只是觉得这人有点奇怪，没多想。</p></div><div class="tab-pane" id="不对劲-2"><p><strong>过度关心</strong></p>
-<p>Z某在一个同事群里加了我的私人微信(这个时候我已经有摩托了)，我礼貌回应之后就没有主动联系过他，但他开始对我有一些过度关心的言语(那会我因为别的事心情不好发了一些吐槽的朋友圈还请了一天假)：</p>
-<img data-src="https://s2.loli.net/2022/07/23/cyNJdUPHBxSrhej.jpg" height="600" width="280" alt="过度关心"><span class="image-caption">过度关心</span>
-
-<p>试问，一个有老婆孩子的正常男性会私下给女同事发消息，关心她遇到了啥不好的事吗？不过我还是没有多想，只把这个当作普通同事的关心，但还是觉得有些奇怪。</p></div><div class="tab-pane" id="不对劲-3"><p><strong>朋友圈点赞</strong></p>
-<p>第一次骑摩托去加油，我发了条朋友圈，图就下边这个：</p>
-<img data-src="https://s2.loli.net/2022/07/23/ORZrwiFTUAYGLeD.jpg" height="400" width="300" alt="朋友圈图"><span class="image-caption">朋友圈图</span>
-
-<p>Z某神奇的从上图左下角的后视镜里发现有一家KFC(真是了不得)，好像是他们家那边的，然后开始了一系列对我摩托车的追问：</p>
-<img data-src="https://s2.loli.net/2022/07/23/u6fC3EK8WqGSUsY.png" height="370" width="300" alt="追问"><span class="image-caption">追问</span>
-
-<p>在我尴尬的回复他之前有发过摩托车后，他竟然去翻我的朋友圈找到了半个月前发的那条动态(因为我朋友圈挺活跃的基本上每天都发有时候一天发好几条)，然后，点了个赞。</p>
-<p>我觉得非常的诡异，然后联想到前边这俩事件，开始觉得这个人不对劲，但也没有表露什么。</p></div><div class="tab-pane" id="不对劲-4"><p><strong>喝东西</strong></p>
-<p>在朋友圈点赞事件的第二天，Z某又发微信给我说要单独请我喝东西「聊一聊」：</p>
-<img data-src="https://s2.loli.net/2022/07/23/2zkFsSeOj4uZpl3.jpg" height="600" width="280" alt="喝东西事件"><span class="image-caption">喝东西事件</span>
-
-<p>虽然还是礼貌回复，不过这个人已经很明显有问题了。</p></div></div></div>
-
-<h2 id="第一次机会：禁朋友圈"><a href="#第一次机会：禁朋友圈" class="headerlink" title="第一次机会：禁朋友圈"></a>第一次机会：禁朋友圈</h2><p>在感觉到Z某有问题后，我听取了一些朋友的建议，决定不回复他发的消息然后对他禁掉朋友圈和动态(不删掉是因为想保留证据怕他还会有别的举动)，希望他可以得到警示并停止自己的行为，这是我给他的第一次机会。</p>
-<h2 id="第二次机会：点名越界行为"><a href="#第二次机会：点名越界行为" class="headerlink" title="第二次机会：点名越界行为"></a>第二次机会：点名越界行为</h2><p>然而，Z某无视了我的第一次警告，甚至还发了所谓的测试消息给我，想看我有没有删掉他，之后更是想让我把朋友圈权限放开：</p>
-<img data-src="https://s2.loli.net/2022/07/23/5riPmQqnIZEFG3s.jpg" height="400" width="390" alt="第二次警告"><span class="image-caption">第二次警告</span>
-
-<p>我不再沉默了，明确拒绝了他并且点明了他越界的行为，他也承认是自己的「问题」向我道歉，还希望我可以回到之前和他正常交流，这当然是不可能的，所以之后除了工作上必要的会面(不说话没有眼神交流的那种多人会议)，其它场景我都对他视而不见。</p>
-<p>这是我给他的第二次机会。</p>
-<h2 id="第三次机会：正面交锋"><a href="#第三次机会：正面交锋" class="headerlink" title="第三次机会：正面交锋"></a>第三次机会：正面交锋</h2><p>我以为Z某已经认识到了自己的错误并停止对我的骚扰，可一周以后，他又发消息说自己有话说，想到之前他虽然有越界的言语，但这只是我个人的主观感受(不过正常人都会有这种感受吧)，所以为了让他暴露更多的「想法」，拿到证据，我同意了他的要求：</p>
-<img data-src="https://s2.loli.net/2022/07/23/aObMcK2XVIUZWwN.jpg" height="340" width="300" alt="有话说？"><span class="image-caption">有话说？</span>
-
-<p>第二天，我和Z某在会议室谈了大约半小时，全程录音：</p>
-<img data-src="https://s2.loli.net/2022/07/23/JuvwLkPYqTFZSbg.jpg" height="220" width="300" alt="录音"><span class="image-caption">录音</span>
-
-<div class="note primary"><p>录音内容大致如下(我全程保持微笑)：</p>
-<ul>
-<li>7min 15s - 9min 55s: 承认自己对我有不切实际的想法，加我微信是有别的目的，以及越界是自己的问题，还说怕我会觉得他是一个无耻好色的老男人(可不就是嘛)。</li>
-<li>12min 0s - 13min 30s: 说自己还有一点理性，要遵守我的界限，想让我继续跟他交流。</li>
-<li>15min 50s - 17min 40s : 再次承认自己对我有别的想法，然后我拒绝并提出以后私下不交流。</li>
-<li>18min 25s -20min 40s :说自己还是有别的想法但没什么用，还「发誓」自己之前没有过对别的女同事越界，然后我提到了他的家庭，他说人有时候没那么理性。</li>
-<li>21min 05s - 22min 15s: 同意我提出的私下不交流，然后他哭了？！</li>
-<li>23min 0s - end 依然坚持提出要遵守我的界限，想让我继续跟他交流，我拒绝了，然后应他的要求留他独自在会议室思考人生。</li>
-</ul>
-</div>
-
-<p>谈话之后，我虽然非常不适，而且已经拿到了他性骚扰我的实锤，但还想着他可能是一个家庭的主心骨，生活压力大，工作不容易，怕对他造成很大的影响(因为大概知道如果举报之后，他很可能会丢掉这份工作，他自己的公司也可能会fire他)，所以不想举报他，只是明确表示拒绝并且达成了之后除了工作私下不交流的共识。</p>
-<p>说白了，我就准备忍着膈应直到他下项目(因为第三方一般到年底就合约到期了)，反正已经说清楚了，只要他后边不继续骚扰我，剩下半年相安无事也就罢了(我可太善良了)。</p>
-<p>这是我给他的第三次机会。</p>
-<h2 id="最后一根稻草"><a href="#最后一根稻草" class="headerlink" title="最后一根稻草"></a>最后一根稻草</h2><p>万万没想到，半个月后，他竟然通过「企业微信」(?!)发消息给我想让我继续和他交流，刚开始我猜他可能以为我把他删了(其实没有就想看看他还会不会有别的举动)，所以只能用企业微信发消息给我，后来我才发现是他把我删了(一个伏笔)：</p>
-<img data-src="https://s2.loli.net/2022/07/23/A8YgL9OroPkZfxS.png" height="500" width="250" alt="够了"><span class="image-caption">够了</span>
-
-<p>这可真是压死骆驼的最后一根稻草了，事不过三，已经给过他三次机会，但他还是不知收敛，说什么「还有些不清楚」？<br>我已经不想再跟他沟通了，决定按照公司流程举报处理，所以我说「你会清楚的」。</p>
-<h2 id="举报和处理"><a href="#举报和处理" class="headerlink" title="举报和处理"></a>举报和处理</h2><p>当天下午，我就开始查公司处理这种事的流程资料，查到之后，直接和相关同事约了会详谈，后来就是一系列调查处理，公司给的结论是确认Z某行为不当，会和他解除劳动合同并把这件事同步给他自己的公司，我很满意，毕竟我的诉求就是让他尽快消失在我眼前。</p>
-<p>整个处理过程历时18天，虽然有点久，不过公司调查还是挺隐秘的，因为我手里的证据已经足够说明整个事情，根本不用找他聊，所以到第12天Z某才知道自己被举报，并且他自己的公司和我的部门leader都轮番找他约谈，目的就是让他认识到自己的错误，有个心理准备，然后再辞退他，减少他之后私下报复我的可能性，中间为了安全我也几次在家办公。</p>
-<p>公司当然没有说是我举报他，只是说他被人举报有不当行为，警告他注意言行，也没说让他直接下项目辞退他，不过他但凡还有点脑子都会猜到是我吧。</p>
-<p>最后的处理结果，当然是他被辞退，last day当天他的backup就已经在onboarding了，上午交接完工作，下午3点他就走人了。</p>
-<h2 id="Z某其人-1"><a href="#Z某其人-1" class="headerlink" title="Z某其人"></a>Z某其人</h2><p>事情到这里真的结束了，不过为了首尾呼应，重新聊聊卸下面具后的Z某其人吧，首先来品品「最后一根稻草」之后，Z某做出的其它一系列奇葩举动：</p>
-<div class="tabs" id="z某其人"><ul class="nav-tabs"><li class="tab active"><a href="#z某其人-1">Z某其人 1</a></li><li class="tab"><a href="#z某其人-2">Z某其人 2</a></li><li class="tab"><a href="#z某其人-3">Z某其人 3</a></li><li class="tab"><a href="#z某其人-4">Z某其人 4</a></li></ul><div class="tab-content"><div class="tab-pane active" id="z某其人-1"><p><strong>学不会</strong></p>
-<p>举报第8天(他还不知道自己被举报)，Z某又给我微信发消息，想让我把朋友圈权限放开，还说什么「不清楚学不会」的绿茶发言(搁这儿装林俊杰呢？)：</p>
-<img data-src="https://s2.loli.net/2022/07/24/yWrXGRdeQHmSj5L.jpg" height="600" width="230" alt="学不会"><span class="image-caption">学不会</span>
-
-<p>明明已经说清楚以后私下不交流了，结果还在这说我不跟他聊天打招呼，<mark class="label primary">所以他就是不管我之前说了什么达成了什么样的共识，就只是想继续纠缠骚扰我而已。</mark>「我不知道他怎么想的」？(我可太知道了)</p>
-<p>这里有个细节是微信提示打招呼内容，这种就是他把我删了，然后又把我加回来，我这边就会有这个提示(drama的老男人)。</p></div><div class="tab-pane" id="z某其人-2"><p><strong>狼人自曝</strong></p>
-<p>Z某知道被举报的第二天，在他自己工作小组的私人微信群里公布了这件事：</p>
-<img data-src="https://s2.loli.net/2022/07/24/OzqEmx8T7oraPWY.jpg" height="100" width="250" alt="狼人自曝"><span class="image-caption">狼人自曝</span>
-
-<p>没错，他竟然自己自曝！我真的不李姐，难道他不明白这样的事情曝出来，会被众人唾弃的是他自己吗？！</p>
-<p>本来公司出于对他的尊重，想保留他的最后一丝体面，根本没有向更多人透露这件事，没想到他竟然自曝！引起大家的猜测和好奇，真的是脸都不要了。</p>
-<p>我之前以为他认识到自己的错误默默走了就好了，可他这样做，感觉根本不觉得自己有错，还挺委屈？！因为没几个知情人，所以大家的回复也大多是安慰他让他配合调查，「清者自清」，给我气坏了。</p></div><div class="tab-pane" id="z某其人-3"><p><strong>隐形的枪</strong></p>
-<p>自曝的第二天，他又跟同组的同事(一个知情的姐妹)主动提起这件事，可能察觉到姐妹是知情的，就对姐妹说「你别装了，我知道你知情」，然后撕下面具说出了下面这段话：</p>
-<blockquote>
-<p>有的人手里有把枪，但是她不告诉你自己手里有抢，而是等你靠近后，直接开枪打死你。</p>
-</blockquote>
-<p>这已经表明Z某猜到是我举报的他，而且不觉得自己有错，甚至怪我不提前把后果告诉他就直接举报，这就是他扭曲的三观。</p></div><div class="tab-pane" id="z某其人-4"><p><strong>电话骚扰</strong></p>
-<p>他被辞退当天下午7时，给我打了电话，一般情况下陌生来电我都是直接挂掉，因为那天买了东西所以怕是快递的电话就接了，没想到是他。</p>
-<p>他问是不是我举报的他，想确认一下，在我默认之后，说我没必要这样做，导致他被fire这么严重的后果，他说话还有点哽咽，后来又很气愤，说我不善良(他在跟我聊善良？！)，说自己又没做什么伤害我的事，不就是发了几条信息说了一些话么，还说他觉得自己还算是比较善良的人(excume me?!)。。。</p>
-<p>总之就是在说我不应该举报他让他丢工作，还想带偏我让我觉得自己不善良做错了，给我气坏了，这次我没忍着，正面刚了他几句挂了电话拉黑，这是我和Z某的最后一次交锋。</p></div></div></div>
-
-<p>总结：<strong>Z某就是一个又蠢又坏的好色无耻绿茶老男人。</strong></p>
-<h2 id="我的心路历程"><a href="#我的心路历程" class="headerlink" title="我的心路历程"></a>我的心路历程</h2><blockquote>
-<p>整件事情的时间线是5月到7月，从发觉Z某不对劲给他机会到举报他再到他走人，大概2个月。</p>
-</blockquote>
-<mark class="label info">吃瓜</mark>
-
-<p>一开始，我是抱着吃瓜的心态看待这件事(没错自己吃自己的瓜)，想看这个老男人都能整出什么幺蛾子来，还分享给了几个姐妹一起讨论怎么整治他。</p>
-<mark class="label info">生气</mark>
-
-<p>接着就很生气，因为这人根本不觉得自己有错，甚至还挺委屈，明明我是受害者，但他全程都把自己的姿态放得很低，经常绿茶发言还哭哭啼啼的，好像他才是受害者，而且一边扮演受害者的角色一边不停的骚扰我，就一整个情感PUA大师呗？！巧了，我可是反PUA专家。</p>
-<p>在我和他约谈的时候，也多次提到他的家庭，他都避而不谈，只说是自己的问题，希望我不要不理他之类的话，然后就非常心疼Z某老婆，一个女人，给他生了孩子，自己还生着病(一开始提到的)，可能还帮他操持着一家子的柴米油盐，结果自己的老公在外边搞这个，一代入就更生气了。</p>
-<mark class="label info">害怕</mark>
-
-<p>虽然我全程表现的很镇定，还和Z某正面交锋刚他，不过我也只是个女孩子啊。</p>
-<p>我知道世界上没有绝对的黑与白，正常人心里都会有一些灰色地带，可这种事发生在我身上还是第一次，刷新了我的三观，所以就有种对未知的恐惧和后怕。</p>
-<p>而且他知道是我举报的他，最后打电话给我的时候也表达了一些愤怒，他也知道我住在哪，虽然不知道具体楼栋和门牌号，但谁知道这种人会不会做出啥疯狂的事儿来，比如蹲在小区门口藏个刀捅我、往我脸上泼硫酸啥的(一些猜想)，所以这段时间我上下班路上都很小心，经常回头看看有没有人跟着我。</p>
-<mark class="label info">委屈</mark>
-
-<p>还有些委屈，就觉得我做了什么要遇上这样的事，还得自己一个人默默处理好，那段时间我工作的时候也经常失神、心不在焉，每天承受那种被人暗自窥视的不适感，心很累。</p>
-<mark class="label info">思考</mark>
-
-<p>接着就在想，如果Z某不是第三方员工，而是公司的正式员工，或者职级比我高很多的人，我还会这么直接的举报吗？或者公司在我举报之后会站在我这边处理他吗？如果这种事不是发生在外企，而是国内公司或体制内的企业，受害者还会勇敢发声吗？这些问题，我都不敢给出肯定的回答。</p>
-<p>而且就算是我这种情况，好多姐妹说换做她们，最多也只会阴阳怪气的在微信里羞辱Z某，并不会直接举报他。但我觉得这样没用，他连这种事都做得出来，阴阳怪气能让他受到惩罚吗？</p>
-<p>甚至被举报之后他都不觉得自己有错，还怪我，所以后来我都想把这件事和录音po到网上，让那些人网暴他，让他身败名裂，但还是算了，这样做的话，被网暴的不只有他，可能还有我。</p>
-<mark class="label info">女性的困境</mark>
-
-<p>这件事结束之后，我还想到之前也有别的男同事对我说过一些轻微冒犯的话，分享给姐妹之后她说要不以后就直接说，可这样的话，别人会觉得我难相处孤立我吧？而且这些男同事在我们看来都已经是人比较好的男生了，可就连他们有时也会说出一些不合适的话，甚至他们自己并不觉得是冒犯的。</p>
-<p>所以我觉得这是一个社会问题，公共良俗还有很大的进步空间，比如最近的社会事件(唐山打人什么的)，需要对女性多一些关怀吧，只有当大家都觉得不合适的时候，我的发声才有意义，在这之前，只要不是特别冒犯的举动，我应该也只会忍忍一笑而过吧。</p>
-<h2 id="我变强了"><a href="#我变强了" class="headerlink" title="我变强了"></a>我变强了</h2><p>经历过这件事之后，我觉得自己的内心更强大了(虽然本来也很强大)，然后就是奉劝大家，看人真的不能看表面，千万不要以貌取人，毕竟这个世界上金玉其外的人太多了，要学会辨别。</p>
-<div class="note warning"><p>最后，Z某也知道我的博客链接，所以如果你看到了这篇，希望可以认识到自己的错误，多关注自己的家庭，以后不要再对别的女生有冒犯的举动，洗心革面，做个人吧。</p>
-</div>]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>性骚扰</tag>
-        <tag>女权</tag>
+        <tag>KPI</tag>
+        <tag>内卷</tag>
       </tags>
   </entry>
   <entry>
@@ -2967,9 +2979,108 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
         <tag>敏捷测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试课程学习笔记第一弹：自动化测试理论</title>
+    <url>/auto-test-learning/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
+
+<blockquote>
+<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
+</blockquote>
+<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
+
+<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
+<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
+<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
+<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
+<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
+<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
+</ul>
+<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
+<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
+<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
+<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
+<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
+<div class="note default"><ul>
+<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
+<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
+<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
+</ul>
+</div>
+
+<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
+<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
+<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
+<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
+<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
+<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
+<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
+<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
+</ul>
+<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
+<ul>
+<li><mark class="label danger">Android原生Monkey</mark></li>
+<li><mark class="label danger">百度 SmartMonkey</mark></li>
+<li><mark class="label danger">腾讯 NewMonkey</mark></li>
+<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
+<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
+</ul>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>自动化测试理论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github+jsDelivr创建个人图床</title>
+    <url>/blog-picture-service/</url>
+    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN@1.1/images/blog-picture-service/1.jpg">
+
+<h2 id="关于图床"><a href="#关于图床" class="headerlink" title="关于图床"></a>关于图床</h2><p>俗话说「无图言X」，图片就相当于博客的灵魂，非常重要。</p>
+<p>在Hexo博客里插入图片，一般用html和markdown两种格式，指定图片路径之后才能展示在页面上，这里又有两种方式：</p>
+<ul>
+<li>图片保存在Github代码仓库，直接指定仓库里的图片路径来访问。</li>
+<li>图片上传到「图床」，获取图片外链，用外链来展示图片。</li>
+</ul>
+<p>Github单个仓库的容量限制在1G左右，所以把图片保存在代码仓库，不但占用资源，而且由于GithubPages是国外服务，在国内访问加载慢，容易导致图片挂掉。</p>
+<p>所以用图床服务，是明智的选择。一个好的图床，应该保证图片在国内外访问的稳定性，而且还能做一个图片仓库，保存博客的图片，起到文件备份的作用。</p>
+<p>然而，同时满足这两个要求的图床，都是收费的，而且要做域名备案，比如七牛云等；作为一个怕麻烦的穷逼，这显然不是我的option，年少无知的时候用过七牛云，没想到用的只是一个测试外链，结果期限一到图片全挂了，真是血的教训。</p>
+<p>之后我一直都用的免费图床，比如微博图床、PicGo等等，但各有各的槽点，写这篇文章之前我用的是 <a href="https://sm.ms/">SM.MS</a>，使用很方便，虽然加载速度尚可，可有时图片也会挂，而且它无法做文件备份，所以一直以来我的博客图片都像在裸奔，十分没有保障。</p>
+<p>今天终于有闲暇再折腾图床了，然后我就发现了Github+jsDelivr的图床创建方式。</p>
+<h2 id="Github-jsDelivr"><a href="#Github-jsDelivr" class="headerlink" title="Github+jsDelivr"></a>Github+jsDelivr</h2><ul>
+<li>Github: 谁人不知</li>
+<li><a href="https://www.jsdelivr.com/">jsDelivr</a>: 一个开源、免费的CDN工具</li>
+</ul>
+<div class="note info"><p>简而言之，就是说在Github上创建一个专门用来保存博客图片的仓库，把图片的github链接传给jsDelivr，生成一个CDN图片外链，然后再插入到博客里。<br>这样，就生成了自己的图床，图片上传到github，文件备份可以放心了；访问图片时有jsDelivr做CDN加速，速度也ok了，它不香吗？<br>虽然图片还是保存在github仓库，有1个G的容量限制，但且不说博客图片啥时候才能到1个G，就算1个G，还可以再新建一个github库来存。</p>
+</div>
+
+<p>具体做法请直接看参考文章第一篇，人说的挺清楚了，我就不啰嗦了。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/76951130">免费CDN：jsDelivr+Github 使用方法</a></li>
+<li><a href="https://www.jianshu.com/p/a200f116c3ce">一次艰难的图床选择经历(MWeb+PicGo+Github)</a></li>
+</ul>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>一点都不香了！！！这个有50M的限制。。。到了图片就访问不了了：</p>
+<p><img data-src="https://s2.loli.net/2022/05/28/8Qm2D7XIKtTJcey.png" alt="不香了"><span class="image-caption">不香了</span></p>
+<p>所以目前还是用回 <a href="https://sm.ms/">SM.MS</a> ，现在有Dashboard可以管理图片了：</p>
+<p><img data-src="https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png" alt="DashBoard"><span class="image-caption">DashBoard</span></p>
+<p>还有5G的存储，也算靠谱了：</p>
+<p><img data-src="https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png" alt="5GLimit"><span class="image-caption">5GLimit</span></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>jsDelivr</tag>
       </tags>
   </entry>
   <entry>
@@ -3034,111 +3145,12 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>我读书我进步</category>
       </categories>
       <tags>
         <tag>幸福论</tag>
         <tag>隐居</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github+jsDelivr创建个人图床</title>
-    <url>/blog-picture-service/</url>
-    <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN@1.1/images/blog-picture-service/1.jpg">
-
-<h2 id="关于图床"><a href="#关于图床" class="headerlink" title="关于图床"></a>关于图床</h2><p>俗话说「无图言X」，图片就相当于博客的灵魂，非常重要。</p>
-<p>在Hexo博客里插入图片，一般用html和markdown两种格式，指定图片路径之后才能展示在页面上，这里又有两种方式：</p>
-<ul>
-<li>图片保存在Github代码仓库，直接指定仓库里的图片路径来访问。</li>
-<li>图片上传到「图床」，获取图片外链，用外链来展示图片。</li>
-</ul>
-<p>Github单个仓库的容量限制在1G左右，所以把图片保存在代码仓库，不但占用资源，而且由于GithubPages是国外服务，在国内访问加载慢，容易导致图片挂掉。</p>
-<p>所以用图床服务，是明智的选择。一个好的图床，应该保证图片在国内外访问的稳定性，而且还能做一个图片仓库，保存博客的图片，起到文件备份的作用。</p>
-<p>然而，同时满足这两个要求的图床，都是收费的，而且要做域名备案，比如七牛云等；作为一个怕麻烦的穷逼，这显然不是我的option，年少无知的时候用过七牛云，没想到用的只是一个测试外链，结果期限一到图片全挂了，真是血的教训。</p>
-<p>之后我一直都用的免费图床，比如微博图床、PicGo等等，但各有各的槽点，写这篇文章之前我用的是 <a href="https://sm.ms/">SM.MS</a>，使用很方便，虽然加载速度尚可，可有时图片也会挂，而且它无法做文件备份，所以一直以来我的博客图片都像在裸奔，十分没有保障。</p>
-<p>今天终于有闲暇再折腾图床了，然后我就发现了Github+jsDelivr的图床创建方式。</p>
-<h2 id="Github-jsDelivr"><a href="#Github-jsDelivr" class="headerlink" title="Github+jsDelivr"></a>Github+jsDelivr</h2><ul>
-<li>Github: 谁人不知</li>
-<li><a href="https://www.jsdelivr.com/">jsDelivr</a>: 一个开源、免费的CDN工具</li>
-</ul>
-<div class="note info"><p>简而言之，就是说在Github上创建一个专门用来保存博客图片的仓库，把图片的github链接传给jsDelivr，生成一个CDN图片外链，然后再插入到博客里。<br>这样，就生成了自己的图床，图片上传到github，文件备份可以放心了；访问图片时有jsDelivr做CDN加速，速度也ok了，它不香吗？<br>虽然图片还是保存在github仓库，有1个G的容量限制，但且不说博客图片啥时候才能到1个G，就算1个G，还可以再新建一个github库来存。</p>
-</div>
-
-<p>具体做法请直接看参考文章第一篇，人说的挺清楚了，我就不啰嗦了。</p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li><a href="https://zhuanlan.zhihu.com/p/76951130">免费CDN：jsDelivr+Github 使用方法</a></li>
-<li><a href="https://www.jianshu.com/p/a200f116c3ce">一次艰难的图床选择经历(MWeb+PicGo+Github)</a></li>
-</ul>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>一点都不香了！！！这个有50M的限制。。。到了图片就访问不了了：</p>
-<p><img data-src="https://s2.loli.net/2022/05/28/8Qm2D7XIKtTJcey.png" alt="不香了"><span class="image-caption">不香了</span></p>
-<p>所以目前还是用回 <a href="https://sm.ms/">SM.MS</a> ，现在有Dashboard可以管理图片了：</p>
-<p><img data-src="https://s2.loli.net/2022/05/28/Zt68ySuJb9YOhpD.png" alt="DashBoard"><span class="image-caption">DashBoard</span></p>
-<p>还有5G的存储，也算靠谱了：</p>
-<p><img data-src="https://s2.loli.net/2022/05/28/pu3Be61SJDdrf9j.png" alt="5GLimit"><span class="image-caption">5GLimit</span></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>图床</tag>
-        <tag>Github</tag>
-        <tag>jsDelivr</tag>
-        <tag>CDN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试课程学习笔记第一弹：自动化测试理论</title>
-    <url>/auto-test-learning/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2019/11/19/bKwNRZ3XJYpPyI5.png" alt="题图" height="400" width="600"><span class="image-caption">题图</span>
-
-<blockquote>
-<p>近段时间报名了一个自动化测试课程，首先学习了自动化测试理论。有很多也是我目前在做的，还有一些之前没有了解到。所以想整理一下，分点描述。</p>
-</blockquote>
-<mark class="label success">绿色</mark>是我目前在做的，<mark class="label warning">黄色</mark>是在实践但没有深入了解的，<mark class="label danger">红色</mark>是我没有了解或者没有实践的。
-
-<h2 id="分层测试体系"><a href="#分层测试体系" class="headerlink" title="分层测试体系"></a>分层测试体系</h2><p>也就是说自动化测试，要根据 <mark class="label success">测试金字塔</mark>分层来做。之前我写了 <a href="http://jmyblog.top/Test-Pyramid/">这篇文章</a> 总结了一下。 </p>
-<h2 id="自动化测试场景"><a href="#自动化测试场景" class="headerlink" title="自动化测试场景"></a>自动化测试场景</h2><ul>
-<li><mark class="label success">冒烟测试</mark>：check主要功能</li>
-<li><mark class="label success">功能测试</mark>：自动化case覆盖功能</li>
-<li><mark class="label danger">验收测试</mark>：兼容性测试，可用性测试，无障碍测试等，这部分我目前是Manual测试</li>
-<li><mark class="label danger">性能测试</mark>： 测试性能/卡顿/应用健壮性，这部分也没了解过，我目前没做过</li>
-</ul>
-<h2 id="对自动化测试的错误观点和假“瓶颈”"><a href="#对自动化测试的错误观点和假“瓶颈”" class="headerlink" title="对自动化测试的错误观点和假“瓶颈”"></a>对自动化测试的错误观点和假“瓶颈”</h2><p>澄清了一些对自动化测试常见的错误观点，还有我们“以为”的瓶颈<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span></p>
-<p><span id="inline-toc">1.</span> <mark class="label success">UI和业务流程变更导致自动化测试代码不可用</mark></p>
-<p>这种问题其实是一种Technical debt.<br>比如一般UI自动化测试，都是根据 <strong>id/class</strong> 等属性定位页面元素，然后对页面进行测试的。然而，这些元素并非一成不变，这就导致需要频繁更换，使代码变得难以维护，此时我们可以在写测试的时候，要求开发给元素加上一个固定的 <strong>QA-hook</strong>，这样就不用频繁更换了。</p>
-<p><span id="inline-toc">2.</span> <mark class="label danger">UI自动化测试只能模拟人工</mark></p>
-<p>另一种说法是“UI自动化测试”就是机器点点点。<br>按课程所说，UI自动化测试发展到现在是有3个阶段：</p>
-<div class="note default"><ul>
-<li><mark class="label success">传统自动化测试</mark>：就是我现在做的，写常规测试，加断言，需要用例维护。可以帮助做回归测试。</li>
-<li><mark class="label danger">自动探索测试</mark>：可以利用自动化对新功能进行测试，也可以对老功能做回归。没有接触过。</li>
-<li><mark class="label danger">codeless方向及智能生成测试用例方向</mark>：自动智能化生成case，不用写代码就可以完成自动化测试。也没有接触过。</li>
-</ul>
-</div>
-
-<h2 id="根据分层测试体系控制自动化场景和规模"><a href="#根据分层测试体系控制自动化场景和规模" class="headerlink" title="根据分层测试体系控制自动化场景和规模"></a>根据分层测试体系控制自动化场景和规模</h2><p>就是在项目开发上线整个流程中的自动化测试实践，主要是三个部分：<br><span id="inline-toc">1.</span> <mark class="label success">核心用例自动化覆盖</mark><br>写Smoke测试覆盖核心功能，这块已经实践了。<br><span id="inline-toc">2.</span> <mark class="label success">基础回归自动化覆盖</mark><br>老功能用自动化覆盖，也实践了。<br><span id="inline-toc">3.</span> <mark class="label success">新功能手工测试</mark><br>这块其实说的有点笼统，应该是对新功能做一些不能自动化的测试，比如探索测试，可用性测试等等。基础的功能测试应当提前写好自动化case去覆盖。</p>
-<h2 id="如何高效落地自动化"><a href="#如何高效落地自动化" class="headerlink" title="如何高效落地自动化"></a>如何高效落地自动化</h2><p>以移动端自动化测试为例，要做到三点：<br><span id="inline-toc">1.</span> <mark class="label warning">了解待测产品和平台</mark><br>移动端有Android/iOS/App/小程序等应用，我是没有深入了解其差异的。而Desktop端有哪些应用也并没有了解。<br><span id="inline-toc">2.</span> <mark class="label warning">精通好的测试框架</mark><br>比如Selenium(虽然是TW开发的), Appium等等，前者目前在用，但远远谈不上精通。后者完全无了解。<br><span id="inline-toc">3.</span> <mark class="label warning">掌握一些自动化测试代码编写技巧和关键点</mark><br>比如PageObject模型，TDD，智能等待，失败重试机制。这些 Good Practice 项目上在用，但自己没有深入了解。</p>
-<h2 id="常用自动化测试框架"><a href="#常用自动化测试框架" class="headerlink" title="常用自动化测试框架"></a>常用自动化测试框架</h2><ul>
-<li><mark class="label warning">Web应用自动化</mark>：Selenium</li>
-<li><mark class="label danger">App手机应用自动化</mark>：Appium</li>
-<li><mark class="label danger">PC端的应用的GUI自动化</mark>：Unkown</li>
-<li><mark class="label danger">微信小程序自动化</mark>：App+Web测试技术的外延形态</li>
-<li><mark class="label danger">智能设备自动化</mark>：Unknown</li>
-</ul>
-<h2 id="自动化遍历测试和探索测试工具"><a href="#自动化遍历测试和探索测试工具" class="headerlink" title="自动化遍历测试和探索测试工具"></a>自动化遍历测试和探索测试工具</h2><p>是指能够以自动化的方式对 app 进行充分的功能遍历以探索 bug 的工具，以移动端为例。</p>
-<ul>
-<li><mark class="label danger">Android原生Monkey</mark></li>
-<li><mark class="label danger">百度 SmartMonkey</mark></li>
-<li><mark class="label danger">腾讯 NewMonkey</mark></li>
-<li><mark class="label danger">阿里 Macaca 的 NoSmoke</mark></li>
-<li><mark class="label danger">Google出品的 AppCrawler</mark></li>
-</ul>
-<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><div class="note info"><p>这么多的红色和黄色，主要是一些新型工具的学习，看来真是学海无涯啊<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span></p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-      </categories>
-      <tags>
-        <tag>自动化测试</tag>
-        <tag>学习笔记</tag>
+        <tag>叔本华</tag>
       </tags>
   </entry>
   <entry>
@@ -3193,9 +3205,10 @@ public class Functions {
 </div>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
-        <tag>活着</tag>
+        <tag>个人尊严</tag>
       </tags>
   </entry>
   <entry>
@@ -3351,6 +3364,7 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>Charles</tag>
@@ -3383,7 +3397,7 @@ public class Functions {
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>评论系统</tag>
+        <tag>livere</tag>
       </tags>
   </entry>
   <entry>
@@ -3472,8 +3486,6 @@ public class Functions {
         <category>维护小破站</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
         <tag>AI</tag>
         <tag>Cursor</tag>
         <tag>not by AI</tag>
@@ -3497,10 +3509,11 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
+        <tag>Android</tag>
         <tag>emulator</tag>
-        <tag>coldBoot</tag>
       </tags>
   </entry>
   <entry>
@@ -3577,9 +3590,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>吃喝玩乐</category>
       </categories>
       <tags>
-        <tag>游戏</tag>
+        <tag>王者荣耀</tag>
       </tags>
   </entry>
   <entry>
@@ -3622,9 +3636,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>吃喝玩乐</category>
       </categories>
       <tags>
-        <tag>影评</tag>
+        <tag>好东西</tag>
       </tags>
   </entry>
   <entry>
@@ -3729,6 +3744,7 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
         <tag>买房</tag>
@@ -3747,9 +3763,9 @@ public class Functions {
 <p>最后一次当伴娘是在老姐的婚礼上。跟着走了一天流程，递完戒指后终于没活的我，只能跑到楼梯间里躲清闲，而老姐还在下面穿着晚礼服挂着疲惫的笑容敬酒。那时我就坐在台阶上想，我到底是会多喜欢一个人，才会让自己也做到这种程度?</p>
 <p>答案就是我不会做，多喜欢也不会。除了觉得吵之外，后来的我又有一些想法，让我对婚礼的看法上升到了反感的地步。</p>
 <p>首先，办婚礼疯狂出钱出力，到最后也挣不了几个份子钱(有钱人随意)。其次，传统婚礼真的有太多充满槽点的所谓习(zao)俗(po)，网上一大堆，这里不做赘述。</p>
-<p>最后，也是最让我反感的一点，<strong>为什么总是有人要把婚礼或者结婚这件事，捧上神坛渲染成人生大事？</strong> 有种不办婚礼是这辈子的遗憾，办了婚礼结完婚这辈子也就到这了的感觉。</p>
-<p>就像高考、买房、生娃这些事情一样，「高考失利这辈子就完了」、「不买房没有归属感」、「不生娃老了就完了」，我请问呢？到底是谁在传播这些观念，散播焦虑？谁获利，谁买单，好难猜啊。</p>
-<p>作为心理咨询师，强哥也碰到过无数来求助的父母，他们的孩子都已经抑郁到要自杀了，还在问孩子不上学怎么办，嘴里不停念叨着 ‘不能不上学’，像被洗脑了一样，真的很可怕。<em>实际上人除了活着过好每一天之外，根本没有什么大生大事。</em></p>
+<p>最后，也是最让我反感的一点，<strong>为什么总是有人要把婚礼或者结婚这件事，捧上神坛渲染成人生大事？</strong> 有种不办婚礼是这辈子的遗憾，办了婚礼结完婚这辈子也就到这了的感觉，可人生明明还有很多事啊！</p>
+<p>就像高考、买房、生娃这些事情一样，「高考失利这辈子就完了」、「不买房没有归属感」、「不生娃老了就完了」，到底是谁在传播这些观念，散播焦虑？谁获利，谁买单，好难猜啊。</p>
+<p>作为心理咨询师，强哥也碰到过无数来求助的父母，他们的孩子都已经抑郁到要自杀了，还在问孩子不上学怎么办，嘴里不停念叨着 ‘不能不上学’，像被洗脑了一样，真的很可怕。<em>实际上人除了活着过好每一天之外，根本没有什么大生大事，因为人是随时会死的。</em></p>
 <p>当然，以上只是我的看法，但近年来一些婚庆相关机构接连倒闭，证明不想买单的人越来越多了。不过还是有很多人喜欢婚礼这种仪式感，也有摒弃传统的婚礼模式，自己DIY婚礼流程的，都没毛病，但是开心最重要。</p>
 <p>所以我的想法就是不办婚礼，只请亲近的朋友家人吃个饭通知一下，强哥觉得都行。至于父母嘛，当然还是觉得要办一下，可以理解他们的想法，但是建议无效，因为做决策的是我们，他们也尊重我们的决定。</p>
 <p>身边有朋友听说我们不办婚礼之后，第一反应都是 “那你们父母也同意？”，让我觉得很莫名其妙。应该只有巨婴和需要父母资助的啃老族，才必须考虑父母的意见吧？<em>两个人的事情只有自己有权决定，至于别人，只有通知的义务，没有必须采纳意见的义务，一个人同理。</em> 这是最基本的人权，不应该被习俗、孝顺或其它的观念道德绑架。</p>
@@ -3841,6 +3857,7 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
         <tag>结婚</tag>
@@ -3855,6 +3872,7 @@ public class Functions {
 <iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -3996,6 +4014,7 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -4051,9 +4070,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
-        <tag>撸猫</tag>
+        <tag>吉吉</tag>
       </tags>
   </entry>
   <entry>
@@ -4098,10 +4118,11 @@ public class Functions {
 <p>hummm…可能是外向的孤独患者，需要认可。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>孤独患者</tag>
       </tags>
   </entry>
   <entry>
@@ -4166,10 +4187,12 @@ public class Functions {
 <p>本来觉得这种类型的交友除了在一起，最后的结局都只能相忘于江湖，但因为我们都觉得彼此挺能处的，所以现在算是朋友。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>宝宝</tag>
+        <tag>小可爱</tag>
       </tags>
   </entry>
   <entry>
@@ -4238,10 +4261,11 @@ public class Functions {
 <p>我们这辈子的聊天就这样结束了。<br>我愿称这个同事为「冤种同事」，真的会谢好吗。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>月光男孩</tag>
       </tags>
   </entry>
   <entry>
@@ -4270,10 +4294,11 @@ public class Functions {
 <p>15号以后，我没有遇到更多的人了，感觉观察人类也是很大的精神内耗，而且这段时间一直厄运缠身，处理了很多杂事，还有很多的胡思乱想，没有精力去寻找了，暂且先停留一会吧。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>程序员</tag>
       </tags>
   </entry>
   <entry>
@@ -4355,10 +4380,11 @@ public class Functions {
 <div class="note info"><p>一些题外话：人类观察员营业太久了，说实话我现在更多的不是抱着找对象的态度去认识男嘉宾，而真的只是观察人类而已，每次认识一个人，我都想看看他什么时候开始「不对劲」。。。<br>不过我觉得有个朋友说的话很有道理：「当你不是为了找对象而做这件事的时候，没准真正的人正在悄悄的出现」，嗯，但愿他说的对。</p>
 </div>]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>“月光男孩”</tag>
       </tags>
   </entry>
   <entry>
@@ -4443,10 +4469,11 @@ public class Functions {
 <p>第二天，我没联系他，他也没理我，嗯，是两个成熟的相亲人了，啊不对，我明明是人类观察员！所以观察的结果就是他是个正常人，然后，相亲很专业，看来经历了很多，Over.</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>生活支线玩家</tag>
       </tags>
   </entry>
   <entry>
@@ -4491,10 +4518,11 @@ public class Functions {
 <h2 id="No-10-得不到的男人"><a href="#No-10-得不到的男人" class="headerlink" title="No.10 得不到的男人"></a>No.10 得不到的男人</h2><p>刚开始看到他是在二狗，主页照片非常的小奶狗(虽然人家年纪比我大)，后来在青藤上查看日推男嘉宾的时候又碰见了，这可不是缘分吗？然后就互相关注聊起来了。<br>他说自己找对象已经自闭了，我就鼓励他不要放弃，说我俩星座很搭要不试试，就再也没有收到回复了。<br>我(wei)不(se)死(suo)心(mi)，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。<br>其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」(<del>可能</del> 是说我丑？)，要不我考虑去整个容吧。。。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>阿汤哥</tag>
       </tags>
   </entry>
   <entry>
@@ -4559,10 +4587,11 @@ public class Functions {
 <p>一个多月过去了，由于西安的疫情，寻找男嘉宾大计进展缓慢，没有太多故事可以更新，所以暂时搁置这个系列，等我找到了男嘉宾，或者像那个小红书的博主一样放弃了，再来回顾我和他们的故事吧，我希望我的结局是前者🙈</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>二狗</tag>
       </tags>
   </entry>
   <entry>
@@ -4623,10 +4652,11 @@ public class Functions {
 <p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>青藤之恋</tag>
       </tags>
   </entry>
   <entry>
@@ -4661,9 +4691,11 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>我读书我进步</category>
       </categories>
       <tags>
         <tag>罗生门</tag>
+        <tag>芥川龙之介</tag>
       </tags>
   </entry>
   <entry>
@@ -4707,9 +4739,9 @@ public class Functions {
 <img data-src="https://s2.loli.net/2023/11/23/eoB3WGmjXf1AFS4.jpg" width="300" height="300" alt="我不转弯！！！"><span class="image-caption">我不转弯！！！</span>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>吃喝玩乐</category>
       </categories>
       <tags>
-        <tag>演唱会</tag>
         <tag>五月天</tag>
       </tags>
   </entry>
@@ -4741,9 +4773,80 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
-        <tag>活着</tag>
+        <tag>内卷</tag>
+        <tag>2021</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>增驾摩托车奇幻之旅(中)</title>
+    <url>/my-lovely-moto-2/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
+
+<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
+</code></pre>
+<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
+<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
+<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
+<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
+<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
+
+<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
+
+<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
+<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
+
+<p>第五个小时，人麻了。</p>
+<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
+<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
+
+<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
+<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
+<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
+<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
+<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
+<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
+<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
+
+<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
+<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
+<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
+<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
+<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
+<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
+<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
+
+<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
+<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
+</code></pre>
+<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
+<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
+<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
+
+<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
+<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
+</code></pre>
+<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
+<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
+
+<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
+<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
+<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
+<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
+
+<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
+<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
+      </categories>
+      <tags>
+        <tag>科目二</tag>
       </tags>
   </entry>
   <entry>
@@ -4832,77 +4935,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
       </categories>
       <tags>
-        <tag>摩托车</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>增驾摩托车奇幻之旅(中)</title>
-    <url>/my-lovely-moto-2/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
-
-<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
-</code></pre>
-<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
-<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
-<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
-<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
-<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
-
-<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
-
-<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
-<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
-
-<p>第五个小时，人麻了。</p>
-<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
-<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
-
-<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
-<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
-<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
-<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
-<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
-<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
-<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
-
-<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
-<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
-<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
-<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
-<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
-<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
-<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
-
-<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
-<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
-</code></pre>
-<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
-<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
-<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
-
-<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
-<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
-</code></pre>
-<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
-<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
-
-<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
-<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
-<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
-<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
-
-<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
-<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>摩托车</tag>
+        <tag>科目四</tag>
       </tags>
   </entry>
   <entry>
@@ -4968,9 +5004,56 @@ public class Functions {
 <img data-src="https://s2.loli.net/2022/06/19/cPQJVwroFqLHY4s.png" height="400" width="600" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
       </categories>
       <tags>
-        <tag>摩托车</tag>
+        <tag>买车</tag>
+        <tag>骑摩托</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的厨艺进阶之路</title>
+    <url>/myCookingWay/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
+
+<p>作为新时代的「空巢青年」，做饭可谓是一个必备技能了。</p>
+<p>小时候家里大多都是老爸<span class="emoji" alias="man" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f468.png?v8">👨</span>做饭，每次看他随便拿出一个食材就能想到做什么菜，怎么做，即使最简单的食材也可以做成一道菜，就觉得很神奇。</p>
+<p>在家人的影(bi)响(po)下，初高中那会就已经会做一些简单的菜了，也打下了不错的切菜功底<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">✌</span>，但真正学会做饭，还是从毕业后的空巢生活开始的。</p>
+<p>– 多图预警 –</p>
+<h2 id="早餐篇"><a href="#早餐篇" class="headerlink" title="早餐篇"></a>早餐篇</h2><p>「一日之计在于晨」，说实话，早餐并没有太花心思做。</p>
+<p>之前的固定搭配是胡萝卜葱花鸡蛋卷🥚+自己煮的粥🥣，后来又开始搭配纯牛奶🥛喝，有时加点水果蔬菜🍅，感觉营养就比较全面了：<br><img data-src="https://i.loli.net/2020/12/03/PNAzln8bfECFKa3.jpg"></p>
+<p>现在很少做鸡蛋卷了，比较喜欢纯牛奶🥛+麦片+鸡蛋🥚的搭配，或者纯牛奶🥛+鸡蛋🥚+面包🍞的标准搭配，营养都很全面：<br><img data-src="https://i.loli.net/2020/12/03/oHFDUjY3PJcTl5x.jpg"></p>
+<p>这里推荐 <mark class="label success">良品铺子</mark> 家的「每日坚果水果荟燕麦片」，还有 <mark class="label success">小熊家电</mark> 的「蒸蛋器」。</p>
+<p>鸡蛋卷的教程可以在「下厨房」APP里搜，很简单的。</p>
+<h2 id="午饭篇"><a href="#午饭篇" class="headerlink" title="午饭篇"></a>午饭篇</h2><p>午饭可就到了大显身手的时候了<span class="emoji" alias="metal" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span>。主食还是米饭，或者各种杂粮粥，配菜可就多了<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></p>
+<p>搭配1: 杂粮粥🥣+老干妈土豆丝🥔+醋溜娃娃菜+可乐鸡翅<br>搭配2: 黑米粥🥣+老干妈土豆丝🥔+肉末炒鸡蛋+煎饼🥞<br><img data-src="https://i.loli.net/2020/12/03/6Os7ERPASYb9FGn.png" width="600" height="300"></p>
+<p>搭配3: 糯米红枣粥🥣+西红柿炒鸡蛋🍅+醋溜娃娃菜+妈妈做的饼👩<br>搭配4: 糯米饭🍚+凉拌酸辣茄子🍆+清炒土豆片🥔<br><img data-src="https://i.loli.net/2020/12/03/gHPV73t8YDeQnZL.png" width="550" height="300"></p>
+<p>搭配5: 糯米饭🍚+麻婆豆腐+鱼香肉丝<br>搭配6: 红薯小米粥🥣+凉拌黄瓜皮老铺🥒+老干妈土豆丝🥔<br><img data-src="https://i.loli.net/2020/12/03/peg6iVZFDfsXKB4.png" width="600" height="300"></p>
+<p>搭配7: 糯米南瓜粥🎃+酸辣带鱼🐟+虾仁滑蛋🍤+煮玉米🌽<br>搭配8(早中餐一起吃)): 纯牛奶🥛+糯米饭🍚+煮鸡蛋+红烧茄子🍆+西红柿炒西葫芦<br><img data-src="https://i.loli.net/2020/12/03/H6i59XOltxoseJ3.png" width="550" height="300"></p>
+<p>搭配9: 糯米饭🍚+酸辣平菇🍄+西红柿炒西葫芦<br>搭配10: 糯米饭🍚+青菜炒鸡蛋🥬+西红柿炒土豆片<br><img data-src="https://i.loli.net/2020/12/03/ZqQJmR6GOypi38H.png" width="600" height="300"></p>
+<p>搭配11: 糯米饭🍚+西红柿辣椒炒鸡蛋🥚+酸辣娃娃菜+肉丸萝卜汤🥣<br>搭配12: 糯米饭🍚+酸辣娃娃菜+肉末炒西芹<br><img data-src="https://i.loli.net/2020/12/03/bJEl9z6yLmesPxk.png" width="600" height="300"></p>
+<p>菜品单独展示，第一组：香煎孜然豆腐、蒜蓉粉丝娃娃菜、红烧带鱼🐟、麻婆豆腐<br><img data-src="https://i.loli.net/2020/12/03/MIHUyelGozkv1c2.jpg"></p>
+<p>第二组：青菜炒平菇🥬、红烧茄子🍆、手撕包菜、鱼香肉丝<br><img data-src="https://i.loli.net/2020/12/03/5CyYM2RXBsVn1hj.jpg"></p>
+<p>配汤组：枸杞银耳汤、疙瘩汤、萝卜肉丸汤<br><img data-src="https://i.loli.net/2020/12/03/1aYqCPMB7pdRjSm.jpg" width="600" height="200"></p>
+<p>其实还有很多，没有存图<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>，这些菜品都可以在「下厨房」APP搜索教程，个人认为最省时好做的菜品有：西红柿炒鸡蛋、老干妈土豆丝、酸辣娃娃菜、青菜炒鸡蛋。</p>
+<h2 id="晚餐篇"><a href="#晚餐篇" class="headerlink" title="晚餐篇"></a>晚餐篇</h2><p>晚餐主要会做一些速食，或者吃中午的剩菜剩饭<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，比午饭耗时少，毕竟晚餐要少吃一些。</p>
+<p>一组速食：酸辣挂面、家常版阳春面、酸辣速冻饺子、螺蛳粉<span class="emoji" alias="yum" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png?v8">😋</span><br><img data-src="https://i.loli.net/2020/12/03/v8QbfkM9Hw72Wty.jpg"></p>
+<p>说到螺蛳粉，我还是比较有发言权的哈哈哈，淘宝排名前5的店都吃遍了，好欢螺、嘻螺会、良品铺子、李子柒还有其他几家的都吃遍了，个人认为还是李子柒家的最好吃<span class="emoji" alias="thumbsup" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">👍</span></p>
+<p>有时候会整点硬菜，煎个牛排啥的<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>，意面算是第5种速食了，做起来也很快：<br><img data-src="https://i.loli.net/2020/12/03/RqTOExXmvFnVBJw.jpg" width="400" height="600"></p>
+<h2 id="烘焙篇"><a href="#烘焙篇" class="headerlink" title="烘焙篇"></a>烘焙篇</h2><p>工具是「小熊电器」的烤箱，其实烘焙自己做的种类也不多，主要用来烤鸡翅、烤红薯、烤饼干、做纸杯蛋糕：<br><img data-src="https://i.loli.net/2020/12/03/91VdOgUC2ruADZ4.jpg"></p>
+<p>有时会买腌制好的鸡翅来直接烤，有时也会买生鸡翅，自己配酱汁腌制，烤鸡翅很快，230度烤15-20分钟即可；烤红薯时间比较长，需要先230度烤30分钟，再200度烤20分钟左右；饼干和纸杯蛋糕比较麻烦，需要按照教程做。</p>
+<h2 id="便当篇"><a href="#便当篇" class="headerlink" title="便当篇"></a>便当篇</h2><p>作为一个会做饭的上班族，当然少不了带便当。但也不是每天都带，看心情<span class="emoji" alias="star" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span>，我一般是前一天晚上做好第二天要带的便当：</p>
+<img data-src="https://i.loli.net/2020/12/03/KdyLMiYnDbEO2pJ.jpg" width="500" height="600">
+
+<h2 id="外卖篇"><a href="#外卖篇" class="headerlink" title="外卖篇"></a>外卖篇</h2><p>什么？！竟然还有外卖篇，想不到吧<span class="emoji" alias="grinning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8">😀</span>，但有时候不想做饭，也是会点外卖的，一组外卖：<br><img data-src="https://i.loli.net/2020/12/03/d81bNuGAHcYJgtn.jpg"></p>
+<div class="note info"><p>说了这么多，那到底怎么才能学会做饭呢？一句话：<strong>只要你做，就能会；不做，永远不会</strong>，哈哈哈哈哈哈哈哈哈。</p>
+</div>]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>吃喝玩乐</category>
+      </categories>
+      <tags>
+        <tag>Cooking</tag>
       </tags>
   </entry>
   <entry>
@@ -5032,53 +5115,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
       </categories>
       <tags>
-        <tag>摩托车</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的厨艺进阶之路</title>
-    <url>/myCookingWay/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
-
-<p>作为新时代的「空巢青年」，做饭可谓是一个必备技能了。</p>
-<p>小时候家里大多都是老爸<span class="emoji" alias="man" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f468.png?v8">👨</span>做饭，每次看他随便拿出一个食材就能想到做什么菜，怎么做，即使最简单的食材也可以做成一道菜，就觉得很神奇。</p>
-<p>在家人的影(bi)响(po)下，初高中那会就已经会做一些简单的菜了，也打下了不错的切菜功底<span class="emoji" alias="v" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270c.png?v8">✌</span>，但真正学会做饭，还是从毕业后的空巢生活开始的。</p>
-<p>– 多图预警 –</p>
-<h2 id="早餐篇"><a href="#早餐篇" class="headerlink" title="早餐篇"></a>早餐篇</h2><p>「一日之计在于晨」，说实话，早餐并没有太花心思做。</p>
-<p>之前的固定搭配是胡萝卜葱花鸡蛋卷🥚+自己煮的粥🥣，后来又开始搭配纯牛奶🥛喝，有时加点水果蔬菜🍅，感觉营养就比较全面了：<br><img data-src="https://i.loli.net/2020/12/03/PNAzln8bfECFKa3.jpg"></p>
-<p>现在很少做鸡蛋卷了，比较喜欢纯牛奶🥛+麦片+鸡蛋🥚的搭配，或者纯牛奶🥛+鸡蛋🥚+面包🍞的标准搭配，营养都很全面：<br><img data-src="https://i.loli.net/2020/12/03/oHFDUjY3PJcTl5x.jpg"></p>
-<p>这里推荐 <mark class="label success">良品铺子</mark> 家的「每日坚果水果荟燕麦片」，还有 <mark class="label success">小熊家电</mark> 的「蒸蛋器」。</p>
-<p>鸡蛋卷的教程可以在「下厨房」APP里搜，很简单的。</p>
-<h2 id="午饭篇"><a href="#午饭篇" class="headerlink" title="午饭篇"></a>午饭篇</h2><p>午饭可就到了大显身手的时候了<span class="emoji" alias="metal" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png?v8">🤘</span>。主食还是米饭，或者各种杂粮粥，配菜可就多了<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></p>
-<p>搭配1: 杂粮粥🥣+老干妈土豆丝🥔+醋溜娃娃菜+可乐鸡翅<br>搭配2: 黑米粥🥣+老干妈土豆丝🥔+肉末炒鸡蛋+煎饼🥞<br><img data-src="https://i.loli.net/2020/12/03/6Os7ERPASYb9FGn.png" width="600" height="300"></p>
-<p>搭配3: 糯米红枣粥🥣+西红柿炒鸡蛋🍅+醋溜娃娃菜+妈妈做的饼👩<br>搭配4: 糯米饭🍚+凉拌酸辣茄子🍆+清炒土豆片🥔<br><img data-src="https://i.loli.net/2020/12/03/gHPV73t8YDeQnZL.png" width="550" height="300"></p>
-<p>搭配5: 糯米饭🍚+麻婆豆腐+鱼香肉丝<br>搭配6: 红薯小米粥🥣+凉拌黄瓜皮老铺🥒+老干妈土豆丝🥔<br><img data-src="https://i.loli.net/2020/12/03/peg6iVZFDfsXKB4.png" width="600" height="300"></p>
-<p>搭配7: 糯米南瓜粥🎃+酸辣带鱼🐟+虾仁滑蛋🍤+煮玉米🌽<br>搭配8(早中餐一起吃)): 纯牛奶🥛+糯米饭🍚+煮鸡蛋+红烧茄子🍆+西红柿炒西葫芦<br><img data-src="https://i.loli.net/2020/12/03/H6i59XOltxoseJ3.png" width="550" height="300"></p>
-<p>搭配9: 糯米饭🍚+酸辣平菇🍄+西红柿炒西葫芦<br>搭配10: 糯米饭🍚+青菜炒鸡蛋🥬+西红柿炒土豆片<br><img data-src="https://i.loli.net/2020/12/03/ZqQJmR6GOypi38H.png" width="600" height="300"></p>
-<p>搭配11: 糯米饭🍚+西红柿辣椒炒鸡蛋🥚+酸辣娃娃菜+肉丸萝卜汤🥣<br>搭配12: 糯米饭🍚+酸辣娃娃菜+肉末炒西芹<br><img data-src="https://i.loli.net/2020/12/03/bJEl9z6yLmesPxk.png" width="600" height="300"></p>
-<p>菜品单独展示，第一组：香煎孜然豆腐、蒜蓉粉丝娃娃菜、红烧带鱼🐟、麻婆豆腐<br><img data-src="https://i.loli.net/2020/12/03/MIHUyelGozkv1c2.jpg"></p>
-<p>第二组：青菜炒平菇🥬、红烧茄子🍆、手撕包菜、鱼香肉丝<br><img data-src="https://i.loli.net/2020/12/03/5CyYM2RXBsVn1hj.jpg"></p>
-<p>配汤组：枸杞银耳汤、疙瘩汤、萝卜肉丸汤<br><img data-src="https://i.loli.net/2020/12/03/1aYqCPMB7pdRjSm.jpg" width="600" height="200"></p>
-<p>其实还有很多，没有存图<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>，这些菜品都可以在「下厨房」APP搜索教程，个人认为最省时好做的菜品有：西红柿炒鸡蛋、老干妈土豆丝、酸辣娃娃菜、青菜炒鸡蛋。</p>
-<h2 id="晚餐篇"><a href="#晚餐篇" class="headerlink" title="晚餐篇"></a>晚餐篇</h2><p>晚餐主要会做一些速食，或者吃中午的剩菜剩饭<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，比午饭耗时少，毕竟晚餐要少吃一些。</p>
-<p>一组速食：酸辣挂面、家常版阳春面、酸辣速冻饺子、螺蛳粉<span class="emoji" alias="yum" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60b.png?v8">😋</span><br><img data-src="https://i.loli.net/2020/12/03/v8QbfkM9Hw72Wty.jpg"></p>
-<p>说到螺蛳粉，我还是比较有发言权的哈哈哈，淘宝排名前5的店都吃遍了，好欢螺、嘻螺会、良品铺子、李子柒还有其他几家的都吃遍了，个人认为还是李子柒家的最好吃<span class="emoji" alias="thumbsup" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">👍</span></p>
-<p>有时候会整点硬菜，煎个牛排啥的<span class="emoji" alias="wink" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png?v8">😉</span>，意面算是第5种速食了，做起来也很快：<br><img data-src="https://i.loli.net/2020/12/03/RqTOExXmvFnVBJw.jpg" width="400" height="600"></p>
-<h2 id="烘焙篇"><a href="#烘焙篇" class="headerlink" title="烘焙篇"></a>烘焙篇</h2><p>工具是「小熊电器」的烤箱，其实烘焙自己做的种类也不多，主要用来烤鸡翅、烤红薯、烤饼干、做纸杯蛋糕：<br><img data-src="https://i.loli.net/2020/12/03/91VdOgUC2ruADZ4.jpg"></p>
-<p>有时会买腌制好的鸡翅来直接烤，有时也会买生鸡翅，自己配酱汁腌制，烤鸡翅很快，230度烤15-20分钟即可；烤红薯时间比较长，需要先230度烤30分钟，再200度烤20分钟左右；饼干和纸杯蛋糕比较麻烦，需要按照教程做。</p>
-<h2 id="便当篇"><a href="#便当篇" class="headerlink" title="便当篇"></a>便当篇</h2><p>作为一个会做饭的上班族，当然少不了带便当。但也不是每天都带，看心情<span class="emoji" alias="star" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span>，我一般是前一天晚上做好第二天要带的便当：</p>
-<img data-src="https://i.loli.net/2020/12/03/KdyLMiYnDbEO2pJ.jpg" width="500" height="600">
-
-<h2 id="外卖篇"><a href="#外卖篇" class="headerlink" title="外卖篇"></a>外卖篇</h2><p>什么？！竟然还有外卖篇，想不到吧<span class="emoji" alias="grinning" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8">😀</span>，但有时候不想做饭，也是会点外卖的，一组外卖：<br><img data-src="https://i.loli.net/2020/12/03/d81bNuGAHcYJgtn.jpg"></p>
-<div class="note info"><p>说了这么多，那到底怎么才能学会做饭呢？一句话：<strong>只要你做，就能会；不做，永远不会</strong>，哈哈哈哈哈哈哈哈哈。</p>
-</div>]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-      </categories>
-      <tags>
-        <tag>Cook</tag>
+        <tag>增驾</tag>
       </tags>
   </entry>
   <entry>
@@ -5105,8 +5145,10 @@ public class Functions {
 </div>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
+        <tag>2023</tag>
         <tag>春节</tag>
       </tags>
   </entry>
@@ -5139,9 +5181,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
       </categories>
       <tags>
-        <tag>我爱工作</tag>
+        <tag>社畜</tag>
       </tags>
   </entry>
   <entry>
@@ -5170,6 +5213,7 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
         <tag>火花</tag>
@@ -5372,9 +5416,9 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
-        <tag>敏捷</tag>
         <tag>测试策略</tag>
       </tags>
   </entry>
@@ -5434,9 +5478,12 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
-        <tag>人生</tag>
+        <tag>真和假</tag>
+        <tag>人生的意义</tag>
+        <tag>对抗虚无</tag>
       </tags>
   </entry>
   <entry>
@@ -5467,9 +5514,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
-        <tag>世界观</tag>
+        <tag>草台班子</tag>
       </tags>
   </entry>
   <entry>
@@ -5623,10 +5671,11 @@ public class Functions {
 
 ]]></content>
       <categories>
+        <category>心灵奇旅</category>
         <category>人类观察员</category>
       </categories>
       <tags>
-        <tag>人类观察员</tag>
+        <tag>羊驼</tag>
       </tags>
   </entry>
   <entry>
@@ -5699,7 +5748,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>next-theme</tag>
-        <tag>theme-next</tag>
       </tags>
   </entry>
   <entry>
@@ -5752,9 +5800,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>搬砖碎碎念</category>
       </categories>
       <tags>
-        <tag>职业</tag>
+        <tag>QA</tag>
       </tags>
   </entry>
   <entry>
@@ -5784,10 +5833,17 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>搬砖碎碎念</category>
       </categories>
       <tags>
-        <tag>工作</tag>
-        <tag>生活</tag>
+        <tag>2021</tag>
+        <tag>2018</tag>
+        <tag>2019</tag>
+        <tag>2020</tag>
+        <tag>试用期</tag>
+        <tag>搬砖</tag>
+        <tag>疫情</tag>
+        <tag>躺平</tag>
       </tags>
   </entry>
   <entry>
@@ -5891,9 +5947,10 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>搬砖碎碎念</category>
       </categories>
       <tags>
-        <tag>职业规划</tag>
+        <tag>QA</tag>
       </tags>
   </entry>
   <entry>
@@ -5919,9 +5976,11 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>搬砖碎碎念</category>
       </categories>
       <tags>
-        <tag>人生</tag>
+        <tag>nasdaq</tag>
+        <tag>上市</tag>
       </tags>
   </entry>
   <entry>
@@ -5970,9 +6029,9 @@ public class Functions {
 <iframe height="498" width="510" src="https://player.youku.com/embed/XNTE5MDYyMjk2OA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>uiautomatorviewer</tag>
       </tags>
   </entry>
@@ -6034,9 +6093,9 @@ public class Functions {
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Bitrise</tag>
       </tags>
   </entry>
@@ -6077,9 +6136,9 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
       </categories>
       <tags>
-        <tag>自动化测试</tag>
         <tag>Android</tag>
         <tag>UiAutomator</tag>
       </tags>
@@ -6107,6 +6166,7 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
       </categories>
       <tags>
         <tag>瞎写写</tag>
@@ -6178,6 +6238,7 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>闰年</tag>
@@ -6302,6 +6363,7 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
         <tag>敏捷测试</tag>
@@ -6350,9 +6412,10 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
-        <tag>人生规划</tag>
+        <tag>Offer</tag>
       </tags>
   </entry>
   <entry>
@@ -6399,10 +6462,10 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
-        <tag>人生</tag>
-        <tag>未来</tag>
+        <tag>毕业</tag>
       </tags>
   </entry>
   <entry>
@@ -6467,9 +6530,10 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
       </categories>
       <tags>
-        <tag>软件测试</tag>
+        <tag>测试矩阵</tag>
       </tags>
   </entry>
   <entry>
@@ -6497,6 +6561,7 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>我读书我进步</category>
       </categories>
       <tags>
         <tag>王小波</tag>
@@ -6554,9 +6619,9 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 <center><img data-src="https://i.loli.net/2019/10/15/c8bBHQYPEr6ZThd.jpg" width="300" height="300" alt="Love&amp;Peace"><span class="image-caption">Love&amp;Peace</span></center>]]></content>
       <categories>
         <category>心灵奇旅</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
         <tag>苏州</tag>
       </tags>
   </entry>
@@ -6593,6 +6658,7 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 ]]></content>
       <categories>
         <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
         <tag>递归</tag>

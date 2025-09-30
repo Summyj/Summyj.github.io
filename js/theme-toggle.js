@@ -170,29 +170,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
     const handleSystemThemeChange = (e) => {
-      console.log('System theme changed:', e.matches ? 'dark' : 'light');
-      console.log('Current theme mode:', getCurrentTheme());
+      // console.log('System theme changed:', e.matches ? 'dark' : 'light');
+      // console.log('Current theme mode:', getCurrentTheme());
       if (getCurrentTheme() === 'auto') {
-        console.log('Auto mode detected, updating theme');
+        // console.log('Auto mode detected, updating theme');
         setTheme('auto');
       } else {
-        console.log('Not in auto mode, ignoring system theme change');
+        // console.log('Not in auto mode, ignoring system theme change');
       }
     };
     
     // 添加监听器
     if (mediaQuery.addEventListener) {
       mediaQuery.addEventListener('change', handleSystemThemeChange);
-      console.log('System theme listener added using addEventListener');
+      // console.log('System theme listener added using addEventListener');
     } else {
       // 兼容旧版本浏览器
       mediaQuery.addListener(handleSystemThemeChange);
-      console.log('System theme listener added using addListener');
+      // console.log('System theme listener added using addListener');
     }
     
     // 立即检查当前系统主题
-    console.log('Current system theme:', mediaQuery.matches ? 'dark' : 'light');
-    console.log('System theme listener setup complete');
+    // console.log('Current system theme:', mediaQuery.matches ? 'dark' : 'light');
+    // console.log('System theme listener setup complete');
   }
 
   // 注册切换按钮事件
