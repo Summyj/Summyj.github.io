@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
               fid: 0
             };
 
-            console.log('Performance Metrics:', metrics);
+            // console.log('Performance Metrics:', metrics);
             this.storeMetrics(metrics);
           }, 0);
         });
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
               img.addEventListener('load', () => {
                 const loadTime = performance.now() - startTime;
                 if (loadTime > 1000) {
-                  console.warn(`Slow image load: ${img.src} (${loadTime.toFixed(2)}ms)`);
+                  // console.warn(`Slow image load: ${img.src} (${loadTime.toFixed(2)}ms)`);
                 }
               });
               
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const lcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const lastEntry = entries[entries.length - 1];
-            console.log('LCP:', lastEntry.startTime);
+            // console.log('LCP:', lastEntry.startTime);
           });
           lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -92,19 +92,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 clsValue += entry.value;
               }
             }
-            console.log('CLS:', clsValue);
+            // console.log('CLS:', clsValue);
           });
           clsObserver.observe({ entryTypes: ['layout-shift'] });
 
           // 监控FID
           const fidObserver = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
-              console.log('FID:', entry.processingStart - entry.startTime);
+              // console.log('FID:', entry.processingStart - entry.startTime);
             }
           });
           fidObserver.observe({ entryTypes: ['first-input'] });
         } catch (e) {
-          console.warn('Performance Observer not fully supported');
+          // console.warn('Performance Observer not fully supported');
         }
       }
     },
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.addEventListener('beforeunload', () => {
         if (navigator.sendBeacon) {
           // 可以发送到分析服务
-          console.log('Web Vitals:', vitals);
+          // console.log('Web Vitals:', vitals);
         }
       });
     },

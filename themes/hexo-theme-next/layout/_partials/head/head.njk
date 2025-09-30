@@ -87,7 +87,7 @@
       (window.location.hostname === 'localhost' || 
        window.location.hostname === '127.0.0.1')) {
     
-    console.log('🔄 Initializing Smart Live Reload for development...');
+    // console.log('🔄 Initializing Smart Live Reload for development...');
     
     let lastPageHash = null;
     let checkCount = 0;
@@ -131,7 +131,7 @@
         
         return hash.toString();
       } catch (error) {
-        console.log('⚠️ Error generating page hash:', error);
+        // console.log('⚠️ Error generating page hash:', error);
         return Math.random().toString();
       }
     }
@@ -140,9 +140,9 @@
     function checkUrlChange() {
       const newUrl = window.location.href;
       if (newUrl !== currentUrl) {
-        console.log('🔗 URL changed detected!');
-        console.log('📍 From:', currentUrl);
-        console.log('📍 To:', newUrl);
+        // console.log('🔗 URL changed detected!');
+        // console.log('📍 From:', currentUrl);
+        // console.log('📍 To:', newUrl);
         
         // 重置状态以适应新页面
         currentUrl = newUrl;
@@ -154,7 +154,7 @@
         // URL变化后延迟重新初始化，避免误触发刷新
         setTimeout(function() {
           urlChangeDetected = false;
-          console.log('🔄 Reinitializing Live Reload for new page...');
+          // console.log('🔄 Reinitializing Live Reload for new page...');
           checkForUpdates();
         }, 2000);
         
@@ -171,7 +171,7 @@
       
       // 如果刚刚检测到URL变化，跳过这次检查
       if (urlChangeDetected) {
-        console.log('⏭️ Skipping check due to recent URL change...');
+        // console.log('⏭️ Skipping check due to recent URL change...');
         return;
       }
       
@@ -198,12 +198,12 @@
         if (!initialized) {
           lastPageHash = currentHash;
           initialized = true;
-          console.log('🏁 Page hash initialized:', currentHash.substring(0, 8) + '...', 'for', currentUrl);
+          // console.log('🏁 Page hash initialized:', currentHash.substring(0, 8) + '...', 'for', currentUrl);
           stableCount = 0;
         } else if (currentHash !== lastPageHash) {
-          console.log('✨ Page content changed!');
-          console.log('📊 Hash changed from', lastPageHash.substring(0, 8) + '...', 'to', currentHash.substring(0, 8) + '...');
-          console.log('🔄 Reloading page in 300ms...');
+          // console.log('✨ Page content changed!');
+          // console.log('📊 Hash changed from', lastPageHash.substring(0, 8) + '...', 'to', currentHash.substring(0, 8) + '...');
+          // console.log('🔄 Reloading page in 300ms...');
           
           // 清理定时器
           if (checkInterval) {
@@ -235,13 +235,13 @@
           }
           
           if (stableCount <= 2 || stableCount % 8 === 0) {
-            console.log('📋 Check #' + checkCount + ' - No changes detected (stable: ' + stableCount + ', interval: ' + currentInterval + 'ms)');
+            // console.log('📋 Check #' + checkCount + ' - No changes detected (stable: ' + stableCount + ', interval: ' + currentInterval + 'ms)');
           }
         }
         
         isChecking = false;
       }).catch(function(error) {
-        console.log('❌ Check #' + checkCount + ' failed:', error.message);
+        // console.log('❌ Check #' + checkCount + ' failed:', error.message);
         isChecking = false;
       });
     }
@@ -250,7 +250,7 @@
     function setupNavigationListeners() {
       // 监听 Pjax 事件
       document.addEventListener('pjax:success', function() {
-        console.log('🚀 Pjax navigation detected');
+        // console.log('🚀 Pjax navigation detected');
         urlChangeDetected = true;
         setTimeout(function() {
           checkUrlChange();
@@ -273,7 +273,7 @@
       
       // 监听 popstate 事件（浏览器前进/后退）
       window.addEventListener('popstate', function() {
-        console.log('⬅️ Browser navigation detected');
+        // console.log('⬅️ Browser navigation detected');
         setTimeout(checkUrlChange, 100);
       });
     }
@@ -312,7 +312,7 @@
       // 监听页面焦点，用户回到页面时立即检查
       window.addEventListener('focus', function() {
         if (initialized && !urlChangeDetected) {
-          console.log('👁️ Page focused - checking for updates...');
+          // console.log('👁️ Page focused - checking for updates...');
           // 重置检测间隔为最快速度
           currentInterval = minInterval;
           setTimeout(checkForUpdates, 300);
@@ -323,7 +323,7 @@
       document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'r' && !e.shiftKey) {
           if (initialized && !urlChangeDetected) {
-            console.log('⚡ Manual refresh detected - quick check...');
+            // console.log('⚡ Manual refresh detected - quick check...');
             // 阻止默认刷新，先检查更新
             e.preventDefault();
             currentInterval = minInterval;
@@ -344,7 +344,7 @@
       if (typeof document.visibilityState !== 'undefined') {
         document.addEventListener('visibilitychange', function() {
           if (!document.hidden && initialized && !urlChangeDetected) {
-            console.log('👀 Page became visible - quick check...');
+            // console.log('👀 Page became visible - quick check...');
             currentInterval = minInterval;
             setTimeout(checkForUpdates, 200);
           }
@@ -355,12 +355,12 @@
     // 启动初始化
     initialize();
     
-    console.log('✅ Enhanced Live Reload initialized');
-    console.log('💡 Smart interval: 1s → 2s → 3s → 5s based on stability');
-    console.log('🎯 Only real content changes will trigger reload');
-    console.log('🔗 URL changes will be handled gracefully');
-    console.log('⚡ Press Ctrl+R/Cmd+R for instant check');
-    console.log('👀 Auto-detects when page becomes visible');
+    // console.log('✅ Enhanced Live Reload initialized');
+    // console.log('💡 Smart interval: 1s → 2s → 3s → 5s based on stability');
+    // console.log('🎯 Only real content changes will trigger reload');
+    // console.log('🔗 URL changes will be handled gracefully');
+    // console.log('⚡ Press Ctrl+R/Cmd+R for instant check');
+    // console.log('👀 Auto-detects when page becomes visible');
   }
 })();
 </script>
@@ -371,10 +371,10 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then(registration => {
-        console.log('SW registered: ', registration);
+        // console.log('SW registered: ', registration);
       })
       .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
+        // console.log('SW registration failed: ', registrationError);
       });
   });
 }
@@ -456,19 +456,19 @@ if ('serviceWorker' in navigator) {
         iframe.addEventListener('load', function() {
             hasLoaded = true;
             clearTimeout(loadTimeout);
-            console.log('Music player iframe loaded successfully');
+            // console.log('Music player iframe loaded successfully');
         });
         
         // 监听iframe加载错误事件
         iframe.addEventListener('error', function() {
-            console.warn('Music player iframe failed to load');
+            // console.warn('Music player iframe failed to load');
             showFallback();
         });
         
         // 设置超时检测 - 如果超时还没加载成功，显示备用方案
         loadTimeout = setTimeout(() => {
             if (!hasLoaded) {
-                console.warn('Music player iframe loading timeout');
+                // console.warn('Music player iframe loading timeout');
                 showFallback();
             }
         }, 8000); // 增加超时时间到8秒，给iframe更多加载时间
@@ -491,27 +491,27 @@ if ('serviceWorker' in navigator) {
     function toggleMusicRotation() {
         // 防抖：避免快速重复调用
         if (rotationToggleTimeout) {
-            console.log('🎵 Toggle rotation debounced - ignoring repeated call');
+            // console.log('🎵 Toggle rotation debounced - ignoring repeated call');
             return;
         }
         
         const toggleBtn = document.querySelector('.music-toggle-btn');
         if (!toggleBtn) {
-            console.warn('🎵 Toggle button not found');
+            // console.warn('🎵 Toggle button not found');
             return;
         }
         
         musicIconRotating = !musicIconRotating;
-        console.log('🎵 Toggling rotation state to:', musicIconRotating);
+        // console.log('🎵 Toggling rotation state to:', musicIconRotating);
         
         if (musicIconRotating) {
             toggleBtn.classList.add('rotating');
             localStorage.setItem('musicIconRotating', 'true');
-            console.log('🎵 Rotation enabled');
+            // console.log('🎵 Rotation enabled');
         } else {
             toggleBtn.classList.remove('rotating');
             localStorage.setItem('musicIconRotating', 'false');
-            console.log('🎵 Rotation disabled');
+            // console.log('🎵 Rotation disabled');
         }
         
         // 设置防抖延迟，500ms内不允许再次调用
@@ -539,21 +539,21 @@ if ('serviceWorker' in navigator) {
         
         // 防止重复绑定事件
         if (toggleBtn.hasAttribute('data-events-bound')) {
-            console.log('🎵 Events already bound, skipping...');
+            // console.log('🎵 Events already bound, skipping...');
             return;
         }
         toggleBtn.setAttribute('data-events-bound', 'true');
-        console.log('🎵 Binding events to music toggle button');
+        // console.log('🎵 Binding events to music toggle button');
         
         // 桌面端右键事件（仅在非触摸设备上启用）
         if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
             toggleBtn.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
-                console.log('🎵 Right click detected - toggling rotation');
+                // console.log('🎵 Right click detected - toggling rotation');
                 toggleMusicRotation();
             });
         } else {
-            console.log('🎵 Touch device detected - disabling right click rotation');
+            // console.log('🎵 Touch device detected - disabling right click rotation');
         }
         
         // 移动端长按事件
@@ -568,10 +568,10 @@ if ('serviceWorker' in navigator) {
             touchStartY = e.touches[0].clientY;
             isLongPressing = false;
             
-            console.log('🎵 Touch start - starting long press timer (1s)');
+            // console.log('🎵 Touch start - starting long press timer (1s)');
             
             longPressTimer = setTimeout(function() {
-                console.log('🎵 Long press triggered - toggling rotation');
+                // console.log('🎵 Long press triggered - toggling rotation');
                 isLongPressing = true;
                 // 标记为长按，避免触发点击
                 toggleBtn.setAttribute('data-long-pressed', 'true');
@@ -585,7 +585,7 @@ if ('serviceWorker' in navigator) {
         
         toggleBtn.addEventListener('touchend', function(e) {
             const touchDuration = Date.now() - touchStartTime;
-            console.log('🎵 Touch end - duration:', touchDuration + 'ms', 'isLongPressing:', isLongPressing);
+            // console.log('🎵 Touch end - duration:', touchDuration + 'ms', 'isLongPressing:', isLongPressing);
             
             if (longPressTimer) {
                 clearTimeout(longPressTimer);
@@ -608,7 +608,7 @@ if ('serviceWorker' in navigator) {
             
             // 允许10像素的移动误差，避免轻微手抖就取消长按
             if (moveDistance > 10) {
-                console.log('🎵 Touch move too far - canceling long press. Distance:', moveDistance);
+                // console.log('🎵 Touch move too far - canceling long press. Distance:', moveDistance);
                 if (longPressTimer) {
                     clearTimeout(longPressTimer);
                     longPressTimer = null;
@@ -630,7 +630,7 @@ if ('serviceWorker' in navigator) {
         // 页面不可见时清理长按计时器
         document.addEventListener('visibilitychange', function() {
             if (document.hidden && longPressTimer) {
-                console.log('🎵 Page hidden - clearing long press timer');
+                // console.log('🎵 Page hidden - clearing long press timer');
                 clearTimeout(longPressTimer);
                 longPressTimer = null;
             }
@@ -639,7 +639,7 @@ if ('serviceWorker' in navigator) {
         // 页面失去焦点时清理长按计时器
         window.addEventListener('blur', function() {
             if (longPressTimer) {
-                console.log('🎵 Window blur - clearing long press timer');
+                // console.log('🎵 Window blur - clearing long press timer');
                 clearTimeout(longPressTimer);
                 longPressTimer = null;
             }
@@ -730,7 +730,7 @@ if ('serviceWorker' in navigator) {
 (function() {
   'use strict';
   
-  console.log('🚫 启动 Taboola 广告过滤器（资源阻止版）...');
+  // console.log('🚫 启动 Taboola 广告过滤器（资源阻止版）...');
   
   // 阻止 Taboola 相关的资源加载
   function blockTaboolaResources() {
@@ -742,7 +742,7 @@ if ('serviceWorker' in navigator) {
       
       xhr.open = function(method, url, ...args) {
         if (url && (url.includes('taboola.com') || url.includes('trc.taboola.com'))) {
-          console.log('🚫 阻止 Taboola 请求:', url);
+          // console.log('🚫 阻止 Taboola 请求:', url);
           return;
         }
         return originalOpen.apply(this, [method, url, ...args]);
@@ -755,7 +755,7 @@ if ('serviceWorker' in navigator) {
     const originalFetch = window.fetch;
     window.fetch = function(url, options) {
       if (url && (url.includes('taboola.com') || url.includes('trc.taboola.com'))) {
-        console.log('🚫 阻止 Taboola fetch 请求:', url);
+        // console.log('🚫 阻止 Taboola fetch 请求:', url);
         return Promise.reject(new Error('Blocked Taboola request'));
       }
       return originalFetch.apply(this, arguments);
@@ -771,7 +771,7 @@ if ('serviceWorker' in navigator) {
         Object.defineProperty(element, 'src', {
           set: function(value) {
             if (value && (value.includes('taboola.com') || value.includes('trc.taboola.com'))) {
-              console.log('🚫 阻止 Taboola 脚本加载:', value);
+              // console.log('🚫 阻止 Taboola 脚本加载:', value);
               return;
             }
             return originalSrcSetter.call(this, value);
@@ -824,7 +824,7 @@ if ('serviceWorker' in navigator) {
     });
     
     if (removedCount > 0) {
-      console.log('🗑️  成功移除', removedCount, '个广告元素');
+      // console.log('🗑️  成功移除', removedCount, '个广告元素');
     }
     
     return removedCount;
@@ -858,6 +858,6 @@ if ('serviceWorker' in navigator) {
     setTimeout(removeAds, 1000);
   });
   
-  console.log('✅ Taboola 广告过滤器初始化完成（资源阻止版）');
+  // console.log('✅ Taboola 广告过滤器初始化完成（资源阻止版）');
 })();
 </script>
