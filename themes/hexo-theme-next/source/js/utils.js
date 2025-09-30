@@ -302,6 +302,14 @@ NexT.utils = {
     });
   },
 
+  registerActiveSidebarMenuItem() {
+    document.querySelectorAll('.site-state-item a[href]').forEach(target => {
+      const isSamePath = target.pathname === location.pathname || target.pathname === location.pathname.replace('index.html', '');
+      const isSubPath = !CONFIG.root.startsWith(target.pathname) && location.pathname.startsWith(target.pathname);
+      target.classList.toggle('site-state-item-active', target.hostname === location.hostname && (isSamePath || isSubPath));
+    });
+  },
+
   registerLangSelect() {
     const selects = document.querySelectorAll('.lang-select');
     selects.forEach(sel => {

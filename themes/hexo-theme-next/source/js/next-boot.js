@@ -54,6 +54,7 @@ NexT.boot.refresh = function() {
   NexT.utils.registerCodeblock();
   NexT.utils.registerTabsTag();
   NexT.utils.registerActiveMenuItem();
+  NexT.utils.registerActiveSidebarMenuItem();
   NexT.utils.registerLangSelect();
   NexT.utils.registerSidebarTOC();
   NexT.utils.registerPostReward();

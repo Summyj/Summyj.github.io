@@ -12,6 +12,19 @@ if (hexo-config('site_state')) {
     a {
       border-bottom: 0;
       display: block;
+      transition: transform .15s ease;
+      will-change: transform;
+
+      /* hover 上浮效果，不改变背景 */
+      &:hover { 
+        background: transparent; 
+        transform: translateY(-2px);
+      }
+      /* 选中态：保持原背景，同时也有上浮效果 */
+      &.site-state-item-active { 
+        background: transparent;
+        transform: translateY(-2px);
+      }
     }
   }
 
