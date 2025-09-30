@@ -46,43 +46,52 @@ span#inline-toc {
 }
 
 /* ==================== 过滤 Livere 评论系统中的 Taboola 广告 ==================== */
-/* 隐藏 Taboola 广告容器 */
+/* 隐藏 Taboola 广告容器 - 增强版 */
 #taboola-livere,
 div[id*="taboola"],
 div[class*="trc_related_container"],
 div[class*="tbl-trecs-container"],
 div[class*="trc_spotlight_widget"],
-div[data-placement-name*="1020_29982"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-}
-
-/* 隐藏包含 Taboola 标识的广告内容 */
+div[data-placement-name*="1020_29982"],
+div[data-placement-name*="1020_29982"] *,
 div[class*="trc_rbox_container"],
 div[class*="trc_rbox"],
 div[class*="thumbnails-b"],
 div[class*="trc-content-sponsored"],
-a[href*="taboola.com"],
-a[href*="popup.taboola.com"] {
+div[class*="trc_spotlight_item"],
+div[data-item-syndicated="true"],
+figure[id*="taboola"],
+div[class*="videoCube"] {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    pointer-events: none !important;
 }
 
-/* 隐藏 Taboola 相关的视频广告容器 */
-figure[id*="taboola"],
-div[class*="videoCube"],
-div[class*="trc_spotlight_item"],
-div[data-item-syndicated="true"] {
+/* 隐藏 Taboola 广告链接 */
+a[href*="taboola.com"],
+a[href*="popup.taboola.com"],
+a[href*="trc.taboola.com"] {
     display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 /* 隐藏包含特定广告文本的元素 */
 div:contains("您可能喜歡的內容"),
 div:contains("by Taboola"),
-span:contains("by Taboola") {
+span:contains("by Taboola"),
+div:contains("推荐内容"),
+div:contains("相关推荐") {
     display: none !important;
 }
 
@@ -94,7 +103,11 @@ span:contains("by Taboola") {
 .tbl-trecs-container,
 .trc_spotlight_widget,
 .trc_elastic,
-.trc_elastic_thumbnails-b {
+.trc_elastic_thumbnails-b,
+.trc_rbox_container,
+.trc_rbox,
+.thumbnails-b,
+.trc-content-sponsored {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -104,13 +117,57 @@ span:contains("by Taboola") {
     width: 0 !important;
     height: 0 !important;
     overflow: hidden !important;
-}
-
-/* 防止广告容器占用空间 */
-*[class*="trc_"] {
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
+    pointer-events: none !important;
+}
+
+/* 防止广告容器占用空间和影响布局 */
+*[class*="trc_"],
+*[id*="taboola"],
+*[data-placement-name] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+}
+
+/* 特别针对 Livere 评论区域的广告 */
+#lv-container *[class*="trc_"],
+#lv-container *[id*="taboola"],
+#lv-container *[data-placement-name],
+.livere-comment *[class*="trc_"],
+.livere-comment *[id*="taboola"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    pointer-events: none !important;
+}
+
+/* 阻止广告相关的iframe */
+iframe[src*="taboola.com"],
+iframe[src*="trc.taboola.com"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
 }
 /* ==================== 结束广告过滤规则 ==================== */
 

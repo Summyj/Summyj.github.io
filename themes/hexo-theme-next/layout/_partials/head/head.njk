@@ -726,45 +726,90 @@ if ('serviceWorker' in navigator) {
 </script>
 
 <script>
-/* Taboola 广告过滤脚本 - 动态移除广告元素 */
+/* Taboola 广告过滤脚本 - 资源阻止版 */
 (function() {
   'use strict';
   
-  console.log('🚫 启动 Taboola 广告过滤器...');
+  console.log('🚫 启动 Taboola 广告过滤器（资源阻止版）...');
   
-  // 需要过滤的选择器
-  const adSelectors = [
-    '#taboola-livere',
-    'div[id*="taboola"]',
-    'div[class*="trc_related_container"]',
-    'div[class*="tbl-trecs-container"]',
-    'div[class*="trc_spotlight_widget"]',
-    'div[data-placement-name*="1020_29982"]',
-    'div[class*="trc_rbox_container"]',
-    'div[class*="trc_rbox"]',
-    'div[class*="thumbnails-b"]',
-    'div[class*="trc-content-sponsored"]',
-    'a[href*="taboola.com"]',
-    'a[href*="popup.taboola.com"]',
-    'figure[id*="taboola"]',
-    'div[class*="videoCube"]',
-    'div[class*="trc_spotlight_item"]',
-    'div[data-item-syndicated="true"]',
-    '[class*="taboola"]',
-    '[id*="taboola"]',
-    '[data-placement-name]',
-    '.trc_related_container',
-    '.tbl-trecs-container',
-    '.trc_spotlight_widget',
-    '.trc_elastic',
-    '.trc_elastic_thumbnails-b'
-  ];
+  // 阻止 Taboola 相关的资源加载
+  function blockTaboolaResources() {
+    // 阻止 XMLHttpRequest 请求
+    const originalXHR = window.XMLHttpRequest;
+    window.XMLHttpRequest = function() {
+      const xhr = new originalXHR();
+      const originalOpen = xhr.open;
+      
+      xhr.open = function(method, url, ...args) {
+        if (url && (url.includes('taboola.com') || url.includes('trc.taboola.com'))) {
+          console.log('🚫 阻止 Taboola 请求:', url);
+          return;
+        }
+        return originalOpen.apply(this, [method, url, ...args]);
+      };
+      
+      return xhr;
+    };
+    
+    // 阻止 fetch 请求
+    const originalFetch = window.fetch;
+    window.fetch = function(url, options) {
+      if (url && (url.includes('taboola.com') || url.includes('trc.taboola.com'))) {
+        console.log('🚫 阻止 Taboola fetch 请求:', url);
+        return Promise.reject(new Error('Blocked Taboola request'));
+      }
+      return originalFetch.apply(this, arguments);
+    };
+    
+    // 阻止动态脚本加载
+    const originalCreateElement = document.createElement;
+    document.createElement = function(tagName) {
+      const element = originalCreateElement.call(this, tagName);
+      
+      if (tagName.toLowerCase() === 'script') {
+        const originalSrcSetter = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src').set;
+        Object.defineProperty(element, 'src', {
+          set: function(value) {
+            if (value && (value.includes('taboola.com') || value.includes('trc.taboola.com'))) {
+              console.log('🚫 阻止 Taboola 脚本加载:', value);
+              return;
+            }
+            return originalSrcSetter.call(this, value);
+          },
+          get: function() {
+            return this.getAttribute('src');
+          }
+        });
+      }
+      
+      return element;
+    };
+  }
   
-  // 移除广告元素的函数
+  // 简单的广告移除函数
   function removeAds() {
     let removedCount = 0;
     
-    adSelectors.forEach(function(selector) {
+    // 只处理最明显的广告元素
+    const selectors = [
+      '#taboola-livere',
+      'div[class*="trc_related_container"]',
+      'div[class*="tbl-trecs-container"]',
+      'div[class*="trc_spotlight_widget"]',
+      'div[data-placement-name*="1020_29982"]',
+      'div[class*="trc_rbox_container"]',
+      'div[class*="trc_rbox"]',
+      'div[class*="thumbnails-b"]',
+      'div[class*="trc-content-sponsored"]',
+      'figure[id*="taboola"]',
+      'div[class*="videoCube"]',
+      'div[class*="trc_spotlight_item"]',
+      'div[data-item-syndicated="true"]',
+      'a[href*="popup.taboola.com"]',
+      'a[href*="trc.taboola.com"]'
+    ];
+    
+    selectors.forEach(function(selector) {
       try {
         const elements = document.querySelectorAll(selector);
         elements.forEach(function(element) {
@@ -774,48 +819,7 @@ if ('serviceWorker' in navigator) {
           }
         });
       } catch (error) {
-        // 忽略选择器错误
-      }
-    });
-    
-    // 额外检查包含特定文本的元素
-    const textPatterns = ['您可能喜歡的內容', 'by Taboola', 'Taboola'];
-    textPatterns.forEach(function(pattern) {
-      try {
-        const walker = document.createTreeWalker(
-          document.body || document.documentElement,
-          NodeFilter.SHOW_TEXT,
-          null,
-          false
-        );
-        
-        const textNodes = [];
-        let node;
-        while (node = walker.nextNode()) {
-          if (node.textContent && node.textContent.includes(pattern)) {
-            textNodes.push(node);
-          }
-        }
-        
-        textNodes.forEach(function(textNode) {
-          let parentElement = textNode.parentElement;
-          // 向上查找可能的广告容器
-          while (parentElement && parentElement !== document.body) {
-            if (parentElement.className && 
-                (parentElement.className.includes('trc_') || 
-                 parentElement.className.includes('taboola') ||
-                 (parentElement.id && parentElement.id.includes('taboola')))) {
-              if (parentElement.parentNode) {
-                parentElement.parentNode.removeChild(parentElement);
-                removedCount++;
-                break;
-              }
-            }
-            parentElement = parentElement.parentElement;
-          }
-        });
-      } catch (error) {
-        // 忽略错误，继续处理其他模式
+        // 忽略错误
       }
     });
     
@@ -826,82 +830,34 @@ if ('serviceWorker' in navigator) {
     return removedCount;
   }
   
-  // 立即执行一次
-  setTimeout(removeAds, 1000);
-  
   // 页面加载完成后执行
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(removeAds, 500);
-    });
-  } else {
-    setTimeout(removeAds, 500);
+  function initAdFilter() {
+    // 立即执行一次
+    removeAds();
+    
+    // 延迟执行，确保动态内容加载完成
+    setTimeout(removeAds, 2000);
+    setTimeout(removeAds, 5000);
+    
+    // 定期检查（减少频率）
+    setInterval(removeAds, 10000);
   }
   
-  // 窗口加载完成后执行
-  window.addEventListener('load', function() {
+  // 立即阻止资源加载
+  blockTaboolaResources();
+  
+  // 初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAdFilter);
+  } else {
+    initAdFilter();
+  }
+  
+  // Pjax 页面切换后执行
+  document.addEventListener('pjax:success', function() {
     setTimeout(removeAds, 1000);
   });
   
-  // 使用 MutationObserver 监控 DOM 变化
-  if (typeof MutationObserver !== 'undefined') {
-    const observer = new MutationObserver(function(mutations) {
-      let shouldCheck = false;
-      
-      mutations.forEach(function(mutation) {
-        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-          // 检查是否有新添加的节点包含广告相关的类名或ID
-          for (let i = 0; i < mutation.addedNodes.length; i++) {
-            const node = mutation.addedNodes[i];
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              const nodeStr = node.outerHTML || '';
-              if (nodeStr.includes('taboola') || 
-                  nodeStr.includes('trc_') || 
-                  nodeStr.includes('您可能喜歡的內容')) {
-                shouldCheck = true;
-                break;
-              }
-            }
-          }
-        }
-      });
-      
-      if (shouldCheck) {
-        setTimeout(removeAds, 100);
-      }
-    });
-    
-    // 开始观察
-    if (document.body) {
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-    } else {
-      // 如果 body 还没有准备好，等待一下
-      setTimeout(function() {
-        if (document.body) {
-          observer.observe(document.body, {
-            childList: true,
-            subtree: true
-          });
-        }
-      }, 100);
-    }
-    
-    console.log('👁️  DOM 变化监控器已启动');
-  }
-  
-  // 定期检查（每5秒）
-  setInterval(function() {
-    removeAds();
-  }, 5000);
-  
-  // Pjax 页面切换后也执行广告过滤
-  document.addEventListener('pjax:success', function() {
-    setTimeout(removeAds, 500);
-  });
-  
-  console.log('✅ Taboola 广告过滤器初始化完成');
+  console.log('✅ Taboola 广告过滤器初始化完成（资源阻止版）');
 })();
 </script>
