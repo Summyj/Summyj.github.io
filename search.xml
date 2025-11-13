@@ -33,33 +33,57 @@
       </tags>
   </entry>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<span id="more"></span>
+    <title>网络无障碍</title>
+    <url>/Accessibility-test/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"><span class="image-caption">Accessibility</span></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<mark class="label info">网络无障碍测试</mark>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<mark class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></mark></p>
+<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
+<blockquote>
+<p>网络无障碍辅助功能（Accessibility，也被称为 <mark class="label danger">a11y</mark>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+</blockquote>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
+<div class="note info"><p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
+</div>
 
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
+<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
 <ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
+<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
 </ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
+<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<mark class="label info">前端童鞋</mark>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
+<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning"><p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
+</div>
+<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
+<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
+<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
+<img data-src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
+
+<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
+<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
+<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
+<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
+<div class="note info"><p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
+</div>
+<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
+<div class="note primary"><p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
+</div>
+<img data-src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
+不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
+
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
+<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
 ]]></content>
       <categories>
-        <category>心灵奇旅</category>
-        <category>时间过慢点</category>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
       </categories>
       <tags>
-        <tag>TED</tag>
+        <tag>网络无障碍</tag>
       </tags>
   </entry>
   <entry>
@@ -130,141 +154,33 @@
       </tags>
   </entry>
   <entry>
-    <title>端午色达四日游</title>
-    <url>/6-6-travel/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>端午节假期又和朋友一起报团去四川色达旅游，以下内容还是转载自 <a href="http://www.mafengwo.cn/i/13623502.html">朋友写的语文课代表式游记</a> ，加了一些自己拍的照片和感想，这次是三人行啦，由于来去匆忙，这次没有时间去成都街头走走。</p>
+    <title>20岁光阴不再来</title>
+    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<span id="more"></span>
 
-</blockquote>
-
-<h2 id="日期加花费"><a href="#日期加花费" class="headerlink" title="日期加花费"></a>日期加花费</h2><div class="note info"><p>出行日期： 6.6-6.9<br>出行方式： 报团 899/人<br>个人花费：团费899+餐饮门票331+往返车票263*2 = 1756<br>出发地： 西安<br>集合地： 成都</p>
-</div>
-
-<h2 id="Day-1-桃坪羌寨"><a href="#Day-1-桃坪羌寨" class="headerlink" title="Day 1: 桃坪羌寨"></a>Day 1: 桃坪羌寨</h2><blockquote>
-<p>门票：60元</p>
-</blockquote>
-<p>到达的第一站是桃坪羌寨，据说是黄渤主演电影「杀生」的取景地，这里有新寨和旧寨之分，我们参观的重点是旧寨。旧寨依山而建，寨子看起来浑为一体。<br><img data-src="https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png" alt="羌寨"><span class="image-caption">羌寨</span></p>
-<p>走进之后，里面小路四通八达，通向家家户户，幸而寨子的面积不是很大，否则外来者很容易迷路。阴天又有下雨的趋势，倒给原本古朴的寨子增添了神秘的色彩。<br><img data-src="https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg" width="400" height="500" alt="从寨内小路向上望"><span class="image-caption">从寨内小路向上望</span></p>
-<p>寨中的房子以石头为主要的建筑材料。石头可以就地取材，可以保持室内温度，是最合适不过的。<br><img data-src="https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png" alt="寨内房屋"><span class="image-caption">寨内房屋</span></p>
-<p>我在寨子中爬上了最高的碉堡，碉堡下宽上窄，有七层，通过厚重的木质楼梯连接，到最顶层时，只能容下三四人站立，极目远眺可以将寨中的风景一览无余。<br><img data-src="https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg" alt="碉堡内的木质楼梯"><span class="image-caption">碉堡内的木质楼梯</span><br><img data-src="https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg" width="400" height="500" alt="在碉堡顶层眺望的游客们"><span class="image-caption">在碉堡顶层眺望的游客们</span></p>
-<p>走在寨中树荫遮蔽的石板路上，脚下水声潺潺而过，若是在盛夏，那酷暑之感都消了大半。这里地下水系交罗密织，可以为寨中人提供生活用水，消防用水，再者可以调节室温，更可以在紧急时作为逃生通道，真是充满智慧的设计。<br><img data-src="https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png" width="400" height="500" alt="寨中的石板路"><span class="image-caption">寨中的石板路</span><br><img data-src="https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png" alt="寨中小桥"><span class="image-caption">寨中小桥</span><br><img data-src="https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg" width="400" height="500" alt="桥边写生的人们"><span class="image-caption">桥边写生的人们</span></p>
-<p>新寨处有许多卖车厘子的人，一番游览之后，在这里会不由自主的被那颜色艳丽的车厘子夺去目光，自然慷慨解囊。在等候午餐的间隙，品尝着清甜的车厘子，美事一桩。<br><img data-src="https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg" width="400" height="500" alt="午餐时间"><span class="image-caption">午餐时间</span></p>
-<p>结束游览后，在大巴车上也随处可见树木葱郁的林山，白云浮在山顶亦如仙境。<br><img data-src="https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg" alt="林山"><span class="image-caption">林山</span></p>
-<h2 id="Day-2-天葬台与佛学院"><a href="#Day-2-天葬台与佛学院" class="headerlink" title="Day 2: 天葬台与佛学院"></a>Day 2: 天葬台与佛学院</h2><p>早上从观音桥出发，坐着大巴在路上，我们被几只猴子挡住了去路，只好停车。司机说我们得给这些猴子一点「过路费」他们才会走开，于是有游客给它们投喂了很多面包零食之类。这些猴子也不怕我们，甚至在大巴门口拍打窗户，还在游客窗边讨要食物，大家都感慨这些猴子也太聪明了。<br>过了一阵，到了一个休息区，在这里看到了更多猴子，喂食的人也很多，它们好似知道这是游客的休息区一样，成群结队的在这里讨要食物。天气很好，我捕捉到了山间彩虹。<br><img data-src="https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg" alt="彩虹和讨食的猴子"><span class="image-caption">彩虹和讨食的猴子</span></p>
-<p>中午一点，我们抵达了天葬台。<br>天葬是藏族的习俗，他们相信秃鹫食用了故去的人的骨肉后，会把他们的灵魂带到更接近天际的地方。天葬台位于1/3山高的地方，去往天葬台的路上会看到很多石堆、石刻的建筑，多用骷髅头作装饰，显得更加肃穆。<br><img data-src="https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg" width="400" height="500" alt="天葬台下的肃穆建筑"><span class="image-caption">天葬台下的肃穆建筑</span></p>
-<p>天葬台右侧是一层层的阶梯，供游客们坐下观看天葬仪式。举行天葬在下午一点到三点间，不到一点我们就在看台上等待了。一点多，有一只秃鹫从天空中慢慢低旋停在了看台侧的山地上，有了第一只，后续的就陆续而至，抬眼望去，湛蓝的天空中许多的秃鹫回旋，大大小小的约有两百多只，场面甚是震感，这也是我第一次近距离看到秃鹫。<br><img data-src="https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png" alt="空中回旋等待的秃鹫"><span class="image-caption">空中回旋等待的秃鹫</span></p>
-<p>天葬仪式在一点半开始，我看到陆续有僧人和工人抬着一袋袋麻袋放在天葬台上，有游客说这就是供秃鹫们食用的尸体。<br>之后他们先用帘子挡住麻袋，这样游客们就看不到秃鹫进食时血腥的场面，虽然看不到，但从天葬台上黑压压盘飞的秃鹫来看，也不难想象到他们已经从麻袋中取出了尸体。不一会，空气中就弥漫着浓重的血腥气味，大概10分钟左右，秃鹫散开，各自飞离，天葬台又恢复了平静。<br>整个过程庄严肃穆，让我想到了佛祖割肉喂鹰的故事，万物有灵。</p>
-<p>离开了天葬台，下一站就是我们此次的重点–佛学院。<br>我们在佛学院的入口处下了大巴，这里有去往山上佛学院的公交，然后乘坐公交车到达终点—坛城。<br><img data-src="https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg" width="300" height="400" alt="佛学院公交牌"><span class="image-caption">佛学院公交牌</span></p>
-<p>带着一份惊喜，我们一步步的走到了观景台，从最高处的观景台俯瞰佛国，最中心是大学模样的佛学院，四周是层层渐进的红房子，用来休息住宿。远处青山平缓，高处天际湛蓝，簇簇云彩之下，是红色的佛国，这样宁心舒缓的红，伴着声声梵音，圣洁高贵。<br><img data-src="https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg" alt="俯瞰色达"><span class="image-caption">俯瞰色达</span><br><img data-src="https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg" alt="换个角度俯瞰色达"><span class="image-caption">换个角度俯瞰色达</span></p>
-<p>原本打算顺着蜿蜒曲折的路迤逦而下，谁知刚刚没走几步，头顶的乌云就不辞辛劳的开始了工作。雨点簌簌而下，我们只好去屋下躲避，我本来想说有一句歌词很合景–“爱就是晴空万里突然暴风雨”，正当我为自己反应迅速而努力喝彩时，经旁人说起才发觉原来是在下冰雹，我已经好些年有没有看到过下冰雹了，小小的白色晶状体砸在手上还是有些痛感的。</p>
-<h2 id="Day-3-色达佛学院"><a href="#Day-3-色达佛学院" class="headerlink" title="Day 3: 色达佛学院"></a>Day 3: 色达佛学院</h2><p>今天早上的行程还是去色达佛学院，昨天因为天气的缘故匆匆一览，今天天气凉爽，适合缓行。<br>因为节假日的缘故，公交车只行至山腰处，剩下的路要步行。本着上下决不走同一条路的原则，我们挑了一处比较陡峭的台阶，打算沿台阶而上，到达山顶之后可以从公交车行驶的大道缓步而下。从下而上仰视色达，密集的红房子也是一种视觉震撼。<br><img data-src="https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg" width="400" height="500" alt="仰视角度的色达"><span class="image-caption">仰视角度的色达</span></p>
-<p>沿台阶而上比较费力，所幸每走一段就会有长椅可以休息。由于这里海拔比较高，我们还买了氧气瓶以备不虞，边吸氧边拾级而上也是一种奇妙的体验。<br><img data-src="https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg" width="300" height="400" alt="累了就吸会氧"><span class="image-caption">累了就吸会氧</span></p>
-<p>越往上走，视野越开阔，所见的风景越深邃悠远。我们看到了身侧有许多的佛学院的学生，身着红色的衣裳，虔诚的去往课堂，一时间我想起了大学时同舍友结伴去上课的场景，轻快愉悦。<br><img data-src="https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg" width="300" height="400" alt="山顶的佛堂"><span class="image-caption">山顶的佛堂</span></p>
-<p>我们到达山顶之后，略作休息就缓步下山。一路上挑着小路而下，光顾了佛学院里的水果摊、杂货铺、早餐店、纪念品商店，这时我发觉这是一座有着生活气息的佛学院，不是一座不食人间烟火的清冷殿堂，也不是一处只供游人赏玩的旅游胜地。<br>对于那些虔诚学习的学生而言，这里是佛学的殿堂。<br><img data-src="https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg" alt="山脚下的风光"><span class="image-caption">山脚下的风光</span></p>
-<p>旅途结束后回到住所，和同游的朋友们一起吃串串，打麻将也是一番趣味，卸去一天的疲惫。<br><img data-src="https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg" alt="串串吃起来"><span class="image-caption">串串吃起来</span><br><img data-src="https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg" alt="麻将搓起来"><span class="image-caption">麻将搓起来</span></p>
-<h2 id="Day-4-西索民居与卓克基官寨"><a href="#Day-4-西索民居与卓克基官寨" class="headerlink" title="Day 4: 西索民居与卓克基官寨"></a>Day 4: 西索民居与卓克基官寨</h2><p><img data-src="https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg" alt="西索民居"><span class="image-caption">西索民居</span><br>西索民居，清晨走在略带湿意的青石小路上，周边静谧安逸，我从村庄中部穿插而过，有一瞬间，觉得这条路，路两侧的石制小屋，屋前的各色盆植鲜花似乎只供我一人独赏，这是何等的惬意。<br><img data-src="https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png" alt="民居小路"><span class="image-caption">民居小路</span><br><img data-src="https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg" alt="远眺西索民居"><span class="image-caption">远眺西索民居</span></p>
-<blockquote>
-<p>卓克基官寨 门票 ： 60 元，部分图片来源于：<a href="http://blog.sina.com.cn/s/blog_8b4d9d180102yj09.html">卓克基土司官寨：毛主席曾经住过的嘉绒藏族城堡</a></p>
-</blockquote>
-<p>卓克基官寨前有一条青石台阶路，曲折而上直至寨前。石阶的里侧是片片山石垒起的石壁，石壁之上是木制的围栏，木栏外侧悬挂着各色花卉，颜色艳丽，不一而同。石壁之内乔木茂密，树荫于木栏之外为青石台阶遮蔽艳阳。走在这样诗意的石阶上，哪里还有什么忧愁。<br><img data-src="https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png" width="400" height="500" alt="石阶"><span class="image-caption">石阶</span></p>
-<p>卓克基官寨这样有特色的建筑我还是第一次见到。它是一个正方形的建筑，外侧是石砌的，里面大都是木制结构。由正门而入，东南 西北 四侧都建有房屋，彼此相连。<br><img data-src="https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png" alt="官寨大门"><span class="image-caption">官寨大门</span></p>
-<p>除了出入的正门侧有三层高外，其余的四侧都是五层高。一层是储物用的地方，二层是革命者的曾经的居所，三层是土司居住的地方，卧室，厨房，餐厅，管家的住所，议事的厅堂一应俱全。四层是供奉佛像金身的所在，五层有乞求长生的供奉处和僧众祷告的场所。一处官寨，涵盖万千。真的是匠心独运。<br><img data-src="https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png" alt="官寨内部"><span class="image-caption">官寨内部</span><br><img data-src="https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png" alt="四楼远望"><span class="image-caption">四楼远望</span></p>
-<p>当我在四层参观供奉佛像的大殿时，只觉得经幡高悬，佛像高大庄严，壁画精美，不由得怀揣一颗虔诚的心。走到五楼相同的位置时，想推门而入看一下这处的设置，却发觉这里没有门，只有窗。透过窗看到了与四楼同样的风景，这时才发觉四楼与五楼是打通了的，否则何以有那么高大的佛像，只是身处四楼的时候只沉浸在殿堂的威严肃穆中，忽略了其他，到了五楼才后知后觉。<br><img data-src="https://i.loli.net/2021/06/28/viK9INcxEVns3By.png" alt="官寨佛像"><span class="image-caption">官寨佛像</span></p>
-<p>官寨之外设有囚室三间。第一间有一扇正常大小的窗户，屋内还算明亮；第二间有一扇小窗户，屋内顿觉昏暗不少；第三间只有一个通气口，屋内暗黑压抑，不能视物。这三间分别关押罪行由轻至重的人，看这囚室的设计，单是被关押到第三间中，无错也会觉得自己有罪的。被剥夺光明真是一件很恐怖的事情。</p>
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
+<ul>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
+</ul>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
-        <category>世界那么大</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
-        <tag>色达</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络无障碍</title>
-    <url>/Accessibility-test/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"><span class="image-caption">Accessibility</span></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<mark class="label info">网络无障碍测试</mark>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<mark class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></mark></p>
-<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
-<blockquote>
-<p>网络无障碍辅助功能（Accessibility，也被称为 <mark class="label danger">a11y</mark>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
-</blockquote>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
-<div class="note info"><p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
-</div>
-
-<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
-<ul>
-<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
-<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
-</ul>
-<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<mark class="label info">前端童鞋</mark>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
-<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
-
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning"><p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
-</div>
-<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
-<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
-<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
-<img data-src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
-
-<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
-<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
-<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
-<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
-<div class="note info"><p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
-</div>
-<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
-<div class="note primary"><p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
-</div>
-<img data-src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
-不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
-
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
-<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
-      </categories>
-      <tags>
-        <tag>网络无障碍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第三弹-iOS篇</title>
-    <url>/AppUI-AutoTest-2/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
-<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
-<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
-<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img data-src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><span class="image-caption">image.png</span><br>编辑以下设置，然后点击confirm后继续：<br><img data-src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
-<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
-<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img data-src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><span class="image-caption">image.png</span><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<ul>
-<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img data-src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><span class="image-caption">image.png</span><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img data-src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"><span class="image-caption">image.png</span></li>
-<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img data-src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"><span class="image-caption">image.png</span></li>
-</ul>
-<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img data-src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><span class="image-caption">image.png</span><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img data-src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>成功：<br><img data-src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><span class="image-caption">image.png</span><br>失败：<br><img data-src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"><span class="image-caption">image.png</span></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Bitrise</tag>
-        <tag>iOS</tag>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -335,6 +251,90 @@
       </categories>
       <tags>
         <tag>Appium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AppUI自动化测试第三弹-iOS篇</title>
+    <url>/AppUI-AutoTest-2/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>通过前两篇博客我们有了一个测试代码库，没有的话可以直接fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 到你的github账户，之后就可以进行CI集成啦，本来是想iOS和Android一起讲的，但篇幅太长，就分开了，多图预警。。。</p>
+<h2 id="Bitrise介绍"><a href="#Bitrise介绍" class="headerlink" title="Bitrise介绍"></a>Bitrise介绍</h2><p><a href="https://www.bitrise.io/">Bitrise</a> 是一款CI工具，与同领域其它工具，比如Jenkins/GoCD/Travis CI的不同在于它是专门用来部署手机应用的，它内置了很多手机应用开发的插件，可以帮助开发团队快速搭建环境、构建部署应用，并执行测试。此外，简洁易懂的UI也是它的一大优势。</p>
+<p>由于Bitrise是一个部署App的工具，所以我们需要一个App开发代码库，Bitrise提供给我们两个可以使用的代码库，把它们fork到你的github就行：<a href="https://github.com/bitrise-io/sample-apps-ios-simple-objc">iOS</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">Android</a>。</p>
+<p>由于步骤不尽相同，所以两个平台分开讲，开始之前请先注册一个Bitrise账号，然后登录，选择standard plan，你会看到如下页面：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="创建iOS应用"><a href="#创建iOS应用" class="headerlink" title="创建iOS应用"></a>创建iOS应用</h2><p>选择 add first app，会进入创建应用页面，选择自己的Bitrise账号，然后选择Private后继续：<br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>下一步是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的iOS应用代码库 <strong>sample-apps-ios-simple-objc</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/24/835XDmsRhif7PCl.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/24/XJkaPhegf62cK1Y.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现iOS图标，说明它被识别为一个iOS app，完成后我们选择 app-store 为导出方式：<br><img data-src="https://i.loli.net/2021/05/24/XuqvxZcNVnSl5LE.png" alt="image.png"><span class="image-caption">image.png</span><br>编辑以下设置，然后点击confirm后继续：<br><img data-src="https://i.loli.net/2021/05/24/lvsUiuCqImEkZga.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/24/zNgWhZAep1suL8t.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/24/R1lQBKVOtpTN9JX.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/24/pDifPg2hGw9ROcl.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
+<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-ios-simple-objc</strong> 这个代码库。</p>
+<h3 id="添加Simulator"><a href="#添加Simulator" class="headerlink" title="添加Simulator"></a>添加Simulator</h3><p>第三步是启动模拟器，就像在本地运行测试一样，我们需要用模拟器执行测试。由于模拟器启动很慢，所以把它放在第三步，可以利用上面的方法搜索到这一步，然后修改Device Model、OS version、Platform，这三个值分别对应测试代码库文件 ios.conf.js 里的deviceName、platformVersion、platformName，在我的代码库里它就对应下图的值:<br><img data-src="https://i.loli.net/2021/05/24/Qr9CitX4TwjNEae.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>我们先保留以上三步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/24/eJPU6g3AQf52cHy.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/24/6bvo2qVZQJiLUrM.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/24/YJTKr2nZFby1P6j.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/24/FWTqsZHCjLbR3p5.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/24/mzqBDbnFk3ew2rx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里ios.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/24/pFK1HIQv2aDBmiR.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/HSrBmEPCRUysTuD.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="配置WebDriver-Agent"><a href="#配置WebDriver-Agent" class="headerlink" title="配置WebDriver Agent"></a>配置WebDriver Agent</h3><p>还是搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/XBCVvrxsTWOpLIl.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/24/D1iT3QGEnmtxu4d.png" alt="image.png"><span class="image-caption">image.png</span><br>其实上边几步是可以合到一步的，但为了方便定位错误，我们分的越细越好。这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，这样我们就可以通过Terminal或者Screen sharing连接到Bitrise的远程机器了，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/24/HLoqAcZhWnmKfTv.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<ul>
+<li>Screen Sharing方式<br>Mac电脑搜索Screen Sharing，然后按照上图提供的地址和用户名密码连接即可，不用保存密码，因为每次运行地址和密码信息都不一样：<br><img data-src="https://i.loli.net/2021/05/24/LkcajHwsOi2NGdJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/2XTuhMC4RzvL1dj.png" alt="image.png"><span class="image-caption">image.png</span><br>连接成功后，可以看到模拟器已经启动并安装好了测试app：<br><img data-src="https://i.loli.net/2021/05/24/owjWUS7AJXz2CcO.png" alt="image.png"><span class="image-caption">image.png</span></li>
+<li>Terminal方式<br>按照Bitrise提供的地址和密码连接即可，但只能通过命令行访问，不能直观的看到机器：<br><img data-src="https://i.loli.net/2021/05/24/UClrYfRTsPz9pvN.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/8tuIP7OLKgi5b3R.png" alt="image.png"><span class="image-caption">image.png</span></li>
+</ul>
+<p>可以看到测试已经开始运行，并尝试连接模拟器：<br><img data-src="https://i.loli.net/2021/05/24/SqhAMYJP6HG91KL.png" alt="image.png"><span class="image-caption">image.png</span><br>然而，在Bitrise远程机器上启动模拟器太慢了，即使我们把初始化simulator的步骤放在第三步，但无法确定它是否成功启动，所以在执行测试时也经常连不上模拟器。只能延长等待时间或者重试次数(这里会重试前10次，每次5分钟左右)，但也还是经常连不上，然后测试就会挂掉，目前我没找到解决方式(也可能是我网络太差或者bitrise免费版会有一些限制)，这算是一个痛点了，在我之前的Build里，只有两次测试执行成功：<br><img data-src="https://i.loli.net/2021/05/24/reWRbGQHMacCt72.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/24/4ZJHWCGgRUzjb8m.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/24/k1DOBazSQie7v2R.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>成功：<br><img data-src="https://i.loli.net/2021/05/24/qQFKNkY5IfhjuTO.png" alt="image.png"><span class="image-caption">image.png</span><br>失败：<br><img data-src="https://i.loli.net/2021/05/24/wvBzbI3ya4tWUHQ.png" alt="image.png"><span class="image-caption">image.png</span></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Bitrise</tag>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>端午色达四日游</title>
+    <url>/6-6-travel/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>端午节假期又和朋友一起报团去四川色达旅游，以下内容还是转载自 <a href="http://www.mafengwo.cn/i/13623502.html">朋友写的语文课代表式游记</a> ，加了一些自己拍的照片和感想，这次是三人行啦，由于来去匆忙，这次没有时间去成都街头走走。</p>
+
+</blockquote>
+
+<h2 id="日期加花费"><a href="#日期加花费" class="headerlink" title="日期加花费"></a>日期加花费</h2><div class="note info"><p>出行日期： 6.6-6.9<br>出行方式： 报团 899/人<br>个人花费：团费899+餐饮门票331+往返车票263*2 = 1756<br>出发地： 西安<br>集合地： 成都</p>
+</div>
+
+<h2 id="Day-1-桃坪羌寨"><a href="#Day-1-桃坪羌寨" class="headerlink" title="Day 1: 桃坪羌寨"></a>Day 1: 桃坪羌寨</h2><blockquote>
+<p>门票：60元</p>
+</blockquote>
+<p>到达的第一站是桃坪羌寨，据说是黄渤主演电影「杀生」的取景地，这里有新寨和旧寨之分，我们参观的重点是旧寨。旧寨依山而建，寨子看起来浑为一体。<br><img data-src="https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png" alt="羌寨"><span class="image-caption">羌寨</span></p>
+<p>走进之后，里面小路四通八达，通向家家户户，幸而寨子的面积不是很大，否则外来者很容易迷路。阴天又有下雨的趋势，倒给原本古朴的寨子增添了神秘的色彩。<br><img data-src="https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg" width="400" height="500" alt="从寨内小路向上望"><span class="image-caption">从寨内小路向上望</span></p>
+<p>寨中的房子以石头为主要的建筑材料。石头可以就地取材，可以保持室内温度，是最合适不过的。<br><img data-src="https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png" alt="寨内房屋"><span class="image-caption">寨内房屋</span></p>
+<p>我在寨子中爬上了最高的碉堡，碉堡下宽上窄，有七层，通过厚重的木质楼梯连接，到最顶层时，只能容下三四人站立，极目远眺可以将寨中的风景一览无余。<br><img data-src="https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg" alt="碉堡内的木质楼梯"><span class="image-caption">碉堡内的木质楼梯</span><br><img data-src="https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg" width="400" height="500" alt="在碉堡顶层眺望的游客们"><span class="image-caption">在碉堡顶层眺望的游客们</span></p>
+<p>走在寨中树荫遮蔽的石板路上，脚下水声潺潺而过，若是在盛夏，那酷暑之感都消了大半。这里地下水系交罗密织，可以为寨中人提供生活用水，消防用水，再者可以调节室温，更可以在紧急时作为逃生通道，真是充满智慧的设计。<br><img data-src="https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png" width="400" height="500" alt="寨中的石板路"><span class="image-caption">寨中的石板路</span><br><img data-src="https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png" alt="寨中小桥"><span class="image-caption">寨中小桥</span><br><img data-src="https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg" width="400" height="500" alt="桥边写生的人们"><span class="image-caption">桥边写生的人们</span></p>
+<p>新寨处有许多卖车厘子的人，一番游览之后，在这里会不由自主的被那颜色艳丽的车厘子夺去目光，自然慷慨解囊。在等候午餐的间隙，品尝着清甜的车厘子，美事一桩。<br><img data-src="https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg" width="400" height="500" alt="午餐时间"><span class="image-caption">午餐时间</span></p>
+<p>结束游览后，在大巴车上也随处可见树木葱郁的林山，白云浮在山顶亦如仙境。<br><img data-src="https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg" alt="林山"><span class="image-caption">林山</span></p>
+<h2 id="Day-2-天葬台与佛学院"><a href="#Day-2-天葬台与佛学院" class="headerlink" title="Day 2: 天葬台与佛学院"></a>Day 2: 天葬台与佛学院</h2><p>早上从观音桥出发，坐着大巴在路上，我们被几只猴子挡住了去路，只好停车。司机说我们得给这些猴子一点「过路费」他们才会走开，于是有游客给它们投喂了很多面包零食之类。这些猴子也不怕我们，甚至在大巴门口拍打窗户，还在游客窗边讨要食物，大家都感慨这些猴子也太聪明了。<br>过了一阵，到了一个休息区，在这里看到了更多猴子，喂食的人也很多，它们好似知道这是游客的休息区一样，成群结队的在这里讨要食物。天气很好，我捕捉到了山间彩虹。<br><img data-src="https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg" alt="彩虹和讨食的猴子"><span class="image-caption">彩虹和讨食的猴子</span></p>
+<p>中午一点，我们抵达了天葬台。<br>天葬是藏族的习俗，他们相信秃鹫食用了故去的人的骨肉后，会把他们的灵魂带到更接近天际的地方。天葬台位于1/3山高的地方，去往天葬台的路上会看到很多石堆、石刻的建筑，多用骷髅头作装饰，显得更加肃穆。<br><img data-src="https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg" width="400" height="500" alt="天葬台下的肃穆建筑"><span class="image-caption">天葬台下的肃穆建筑</span></p>
+<p>天葬台右侧是一层层的阶梯，供游客们坐下观看天葬仪式。举行天葬在下午一点到三点间，不到一点我们就在看台上等待了。一点多，有一只秃鹫从天空中慢慢低旋停在了看台侧的山地上，有了第一只，后续的就陆续而至，抬眼望去，湛蓝的天空中许多的秃鹫回旋，大大小小的约有两百多只，场面甚是震感，这也是我第一次近距离看到秃鹫。<br><img data-src="https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png" alt="空中回旋等待的秃鹫"><span class="image-caption">空中回旋等待的秃鹫</span></p>
+<p>天葬仪式在一点半开始，我看到陆续有僧人和工人抬着一袋袋麻袋放在天葬台上，有游客说这就是供秃鹫们食用的尸体。<br>之后他们先用帘子挡住麻袋，这样游客们就看不到秃鹫进食时血腥的场面，虽然看不到，但从天葬台上黑压压盘飞的秃鹫来看，也不难想象到他们已经从麻袋中取出了尸体。不一会，空气中就弥漫着浓重的血腥气味，大概10分钟左右，秃鹫散开，各自飞离，天葬台又恢复了平静。<br>整个过程庄严肃穆，让我想到了佛祖割肉喂鹰的故事，万物有灵。</p>
+<p>离开了天葬台，下一站就是我们此次的重点–佛学院。<br>我们在佛学院的入口处下了大巴，这里有去往山上佛学院的公交，然后乘坐公交车到达终点—坛城。<br><img data-src="https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg" width="300" height="400" alt="佛学院公交牌"><span class="image-caption">佛学院公交牌</span></p>
+<p>带着一份惊喜，我们一步步的走到了观景台，从最高处的观景台俯瞰佛国，最中心是大学模样的佛学院，四周是层层渐进的红房子，用来休息住宿。远处青山平缓，高处天际湛蓝，簇簇云彩之下，是红色的佛国，这样宁心舒缓的红，伴着声声梵音，圣洁高贵。<br><img data-src="https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg" alt="俯瞰色达"><span class="image-caption">俯瞰色达</span><br><img data-src="https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg" alt="换个角度俯瞰色达"><span class="image-caption">换个角度俯瞰色达</span></p>
+<p>原本打算顺着蜿蜒曲折的路迤逦而下，谁知刚刚没走几步，头顶的乌云就不辞辛劳的开始了工作。雨点簌簌而下，我们只好去屋下躲避，我本来想说有一句歌词很合景–“爱就是晴空万里突然暴风雨”，正当我为自己反应迅速而努力喝彩时，经旁人说起才发觉原来是在下冰雹，我已经好些年有没有看到过下冰雹了，小小的白色晶状体砸在手上还是有些痛感的。</p>
+<h2 id="Day-3-色达佛学院"><a href="#Day-3-色达佛学院" class="headerlink" title="Day 3: 色达佛学院"></a>Day 3: 色达佛学院</h2><p>今天早上的行程还是去色达佛学院，昨天因为天气的缘故匆匆一览，今天天气凉爽，适合缓行。<br>因为节假日的缘故，公交车只行至山腰处，剩下的路要步行。本着上下决不走同一条路的原则，我们挑了一处比较陡峭的台阶，打算沿台阶而上，到达山顶之后可以从公交车行驶的大道缓步而下。从下而上仰视色达，密集的红房子也是一种视觉震撼。<br><img data-src="https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg" width="400" height="500" alt="仰视角度的色达"><span class="image-caption">仰视角度的色达</span></p>
+<p>沿台阶而上比较费力，所幸每走一段就会有长椅可以休息。由于这里海拔比较高，我们还买了氧气瓶以备不虞，边吸氧边拾级而上也是一种奇妙的体验。<br><img data-src="https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg" width="300" height="400" alt="累了就吸会氧"><span class="image-caption">累了就吸会氧</span></p>
+<p>越往上走，视野越开阔，所见的风景越深邃悠远。我们看到了身侧有许多的佛学院的学生，身着红色的衣裳，虔诚的去往课堂，一时间我想起了大学时同舍友结伴去上课的场景，轻快愉悦。<br><img data-src="https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg" width="300" height="400" alt="山顶的佛堂"><span class="image-caption">山顶的佛堂</span></p>
+<p>我们到达山顶之后，略作休息就缓步下山。一路上挑着小路而下，光顾了佛学院里的水果摊、杂货铺、早餐店、纪念品商店，这时我发觉这是一座有着生活气息的佛学院，不是一座不食人间烟火的清冷殿堂，也不是一处只供游人赏玩的旅游胜地。<br>对于那些虔诚学习的学生而言，这里是佛学的殿堂。<br><img data-src="https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg" alt="山脚下的风光"><span class="image-caption">山脚下的风光</span></p>
+<p>旅途结束后回到住所，和同游的朋友们一起吃串串，打麻将也是一番趣味，卸去一天的疲惫。<br><img data-src="https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg" alt="串串吃起来"><span class="image-caption">串串吃起来</span><br><img data-src="https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg" alt="麻将搓起来"><span class="image-caption">麻将搓起来</span></p>
+<h2 id="Day-4-西索民居与卓克基官寨"><a href="#Day-4-西索民居与卓克基官寨" class="headerlink" title="Day 4: 西索民居与卓克基官寨"></a>Day 4: 西索民居与卓克基官寨</h2><p><img data-src="https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg" alt="西索民居"><span class="image-caption">西索民居</span><br>西索民居，清晨走在略带湿意的青石小路上，周边静谧安逸，我从村庄中部穿插而过，有一瞬间，觉得这条路，路两侧的石制小屋，屋前的各色盆植鲜花似乎只供我一人独赏，这是何等的惬意。<br><img data-src="https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png" alt="民居小路"><span class="image-caption">民居小路</span><br><img data-src="https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg" alt="远眺西索民居"><span class="image-caption">远眺西索民居</span></p>
+<blockquote>
+<p>卓克基官寨 门票 ： 60 元，部分图片来源于：<a href="http://blog.sina.com.cn/s/blog_8b4d9d180102yj09.html">卓克基土司官寨：毛主席曾经住过的嘉绒藏族城堡</a></p>
+</blockquote>
+<p>卓克基官寨前有一条青石台阶路，曲折而上直至寨前。石阶的里侧是片片山石垒起的石壁，石壁之上是木制的围栏，木栏外侧悬挂着各色花卉，颜色艳丽，不一而同。石壁之内乔木茂密，树荫于木栏之外为青石台阶遮蔽艳阳。走在这样诗意的石阶上，哪里还有什么忧愁。<br><img data-src="https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png" width="400" height="500" alt="石阶"><span class="image-caption">石阶</span></p>
+<p>卓克基官寨这样有特色的建筑我还是第一次见到。它是一个正方形的建筑，外侧是石砌的，里面大都是木制结构。由正门而入，东南 西北 四侧都建有房屋，彼此相连。<br><img data-src="https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png" alt="官寨大门"><span class="image-caption">官寨大门</span></p>
+<p>除了出入的正门侧有三层高外，其余的四侧都是五层高。一层是储物用的地方，二层是革命者的曾经的居所，三层是土司居住的地方，卧室，厨房，餐厅，管家的住所，议事的厅堂一应俱全。四层是供奉佛像金身的所在，五层有乞求长生的供奉处和僧众祷告的场所。一处官寨，涵盖万千。真的是匠心独运。<br><img data-src="https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png" alt="官寨内部"><span class="image-caption">官寨内部</span><br><img data-src="https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png" alt="四楼远望"><span class="image-caption">四楼远望</span></p>
+<p>当我在四层参观供奉佛像的大殿时，只觉得经幡高悬，佛像高大庄严，壁画精美，不由得怀揣一颗虔诚的心。走到五楼相同的位置时，想推门而入看一下这处的设置，却发觉这里没有门，只有窗。透过窗看到了与四楼同样的风景，这时才发觉四楼与五楼是打通了的，否则何以有那么高大的佛像，只是身处四楼的时候只沉浸在殿堂的威严肃穆中，忽略了其他，到了五楼才后知后觉。<br><img data-src="https://i.loli.net/2021/06/28/viK9INcxEVns3By.png" alt="官寨佛像"><span class="image-caption">官寨佛像</span></p>
+<p>官寨之外设有囚室三间。第一间有一扇正常大小的窗户，屋内还算明亮；第二间有一扇小窗户，屋内顿觉昏暗不少；第三间只有一个通气口，屋内暗黑压抑，不能视物。这三间分别关押罪行由轻至重的人，看这囚室的设计，单是被关押到第三间中，无错也会觉得自己有罪的。被剥夺光明真是一件很恐怖的事情。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>世界那么大</category>
+      </categories>
+      <tags>
+        <tag>色达</tag>
       </tags>
   </entry>
   <entry>
@@ -651,6 +651,47 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
       </tags>
   </entry>
   <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"><span class="image-caption">bugbash.jpeg</span></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">时间：产品上线前一两周，测试结束之后。
+地点：最好找个会议室，线上也行
+人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员
+事件：大家一起找bug<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<mark class="label default">TO DO</mark>/<mark class="label warning">IN PROGRESS</mark>/<mark class="label success">DONE</mark>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img data-src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img data-src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img data-src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img data-src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img data-src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"><span class="image-caption">image.png</span></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图"><span class="image-caption">题图</span>
@@ -849,47 +890,6 @@ header.post-header {
       </tags>
   </entry>
   <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"><span class="image-caption">bugbash.jpeg</span></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">时间：产品上线前一两周，测试结束之后。
-地点：最好找个会议室，线上也行
-人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员
-事件：大家一起找bug<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<mark class="label default">TO DO</mark>/<mark class="label warning">IN PROGRESS</mark>/<mark class="label success">DONE</mark>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img data-src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img data-src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img data-src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img data-src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img data-src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"><span class="image-caption">image.png</span></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>测试理论和实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>国庆成都三日游</title>
     <url>/ChengduTravel/</url>
     <content><![CDATA[<blockquote class="blockquote-center">
@@ -941,6 +941,20 @@ header.post-header {
       </categories>
       <tags>
         <tag>成都</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FirstBlog</title>
+    <url>/FirstBlog/</url>
+    <content><![CDATA[<p>FistPage in my blog.</p>
+<p>the future is whitin reach.</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -1209,20 +1223,6 @@ header.post-header {
         <tag>Next</tag>
         <tag>GithubPages</tag>
         <tag>CodingPages</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FirstBlog</title>
-    <url>/FirstBlog/</url>
-    <content><![CDATA[<p>FistPage in my blog.</p>
-<p>the future is whitin reach.</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -1675,88 +1675,6 @@ danger
       </tags>
   </entry>
   <entry>
-    <title>渗透测试初识</title>
-    <url>/Penetration-Test/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
-
-<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
-<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
-<p><enter></enter></p>
-<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
-
-
-<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
-<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
-<mark class="label primary">没有它之前怎么做</mark>
-<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
-<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
-<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
-<ul>
-<li>测试方法(黑盒/白盒/灰盒)</li>
-<li>目标(服务器/数据库/Web网站…)</li>
-<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
-</ul>
-<p><span id="inline-toc">2.</span> 测试过程</p>
-<mark class="label success">信息收集</mark>
-
-<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
-<mark class="label success">技术测试</mark>
-
-<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
-<mark class="label success">人员测试</mark>
-
-<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
-<p><span id="inline-toc">3.</span> 测试之后</p>
-<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
-<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
-<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
-<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
-<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
-<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
-<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
-<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
-<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
-<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
-</div>
-
-<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
-<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
-</div>
-
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
-<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
-      </categories>
-      <tags>
-        <tag>渗透测试</tag>
-        <tag>OWASP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>沉默的抗争</title>
     <url>/Silent-protest/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
@@ -1859,6 +1777,88 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
       </categories>
       <tags>
         <tag>围城</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>渗透测试初识</title>
+    <url>/Penetration-Test/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
+
+<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
+<p><enter></enter></p>
+<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
+
+
+<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
+<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
+<mark class="label primary">没有它之前怎么做</mark>
+<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
+<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
+<ul>
+<li>测试方法(黑盒/白盒/灰盒)</li>
+<li>目标(服务器/数据库/Web网站…)</li>
+<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
+</ul>
+<p><span id="inline-toc">2.</span> 测试过程</p>
+<mark class="label success">信息收集</mark>
+
+<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
+<mark class="label success">技术测试</mark>
+
+<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
+<mark class="label success">人员测试</mark>
+
+<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
+<p><span id="inline-toc">3.</span> 测试之后</p>
+<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
+<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
+<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
+<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
+<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
+<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
+<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
+<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
+<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
+<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
+</div>
+
+<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
+<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
+</div>
+
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
+<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>渗透测试</tag>
+        <tag>OWASP</tag>
       </tags>
   </entry>
   <entry>
@@ -3643,6 +3643,119 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>我结婚了</title>
+    <url>/i-got-married/</url>
+    <content><![CDATA[<p><img data-src="https://s2.loli.net/2025/09/09/lGAz4dQ8nEZqIsy.jpg" alt="摄于西安市雁塔区民政局婚姻登记处内"><span class="image-caption">摄于西安市雁塔区民政局婚姻登记处内</span></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="note info"><p>在 <a href="https://jmyblog.top/the-one/">将故事写成我们</a> 之后，我和强哥走过了两年的时光，从不是很熟逐渐发展到没有边界(比如追着对方闻自己的臭屁)。日常相处也很契合，之前一个人的时候，老是莫名碰到很多倒霉的事，但是我们两个人一起，无论做什么事都很顺利，真的很神奇。</p>
+</div>
+
+<p>所以他也顺其自然的成为了我的结婚搭子，毕竟大女人就是会负责到底💪</p>
+<h2 id="婚礼-0"><a href="#婚礼-0" class="headerlink" title="婚礼 0"></a>婚礼 0</h2><p>从小到大我参加过不少婚礼，小时候边吃席边凑热闹，长大了也当过几次站桩伴娘。我对这件事的看法就是 <em>办的人未必想办，来的人也未必想来，而且又吵又累。</em></p>
+<p>场地和酒席要提前半年甚至一年定，婚礼流程和仪式也像复制粘贴般。<br>新娘凌晨就要起床，一天换N套衣服和妆容；新郎也要早起接亲，绞尽脑汁塞红包开门做(bei)游(nue)戏(dai)；然后换场地继续走流程，有的还要出外景；仪式后还得挨个和一年都见不上几次甚至完全没见过面的「亲戚」打招呼敬酒，从早忙到晚行程拉满。</p>
+<p>最后一次当伴娘是在老姐的婚礼上。跟着走了一天流程，递完戒指后终于没活的我，只能跑到楼梯间里躲清闲，而老姐还在下面穿着晚礼服挂着疲惫的笑容敬酒。那时我就坐在台阶上想，我到底是会多喜欢一个人，才会让自己也做到这种程度?</p>
+<p>答案就是我不会做，多喜欢也不会。除了觉得吵之外，后来的我又有一些想法，让我对婚礼的看法上升到了反感的地步。</p>
+<p>首先，办婚礼疯狂出钱出力，到最后也挣不了几个份子钱(有钱人随意)。其次，传统婚礼真的有太多充满槽点的所谓习(zao)俗(po)，网上一大堆，这里不做赘述。</p>
+<p>最后，也是最让我反感的一点，<strong>为什么总是有人要把婚礼或者结婚这件事，捧上神坛渲染成人生大事？</strong> 有种不办婚礼是这辈子的遗憾，办了婚礼结完婚这辈子也就到这了的感觉，可人生明明还有很多事啊！</p>
+<p>就像高考、买房、生娃这些事情一样，「高考失利这辈子就完了」、「不买房没有归属感」、「不生娃老了就完了」，到底是谁在传播这些观念，散播焦虑？谁获利，谁买单，好难猜啊。</p>
+<p>作为心理咨询师，强哥也碰到过无数来求助的父母，他们的孩子都已经抑郁到要自杀了，还在问孩子不上学怎么办，嘴里不停念叨着 ‘不能不上学’，像被洗脑了一样，真的很可怕。<em>实际上人除了活着过好每一天之外，根本没有什么大生大事，因为人是随时会死的。</em></p>
+<p>当然，以上只是我的看法，但近年来一些婚庆相关机构接连倒闭，证明不想买单的人越来越多了。不过还是有很多人喜欢婚礼这种仪式感，也有摒弃传统的婚礼模式，自己DIY婚礼流程的，都没毛病，但是开心最重要。</p>
+<p>所以我的想法就是不办婚礼，只请亲近的朋友家人吃个饭通知一下，强哥觉得都行。至于父母嘛，当然还是觉得要办一下，可以理解他们的想法，但是建议无效，因为做决策的是我们，他们也尊重我们的决定。</p>
+<p>身边有朋友听说我们不办婚礼之后，第一反应都是 “那你们父母也同意？”，让我觉得很莫名其妙。应该只有巨婴和需要父母资助的啃老族，才必须考虑父母的意见吧？<em>两个人的事情只有自己有权决定，至于别人，只有通知的义务，没有必须采纳意见的义务，一个人同理。</em> 这是最基本的人权，不应该被习俗、孝顺或其它的观念道德绑架。</p>
+<h2 id="婚检-30"><a href="#婚检-30" class="headerlink" title="婚检 -30"></a>婚检 -30</h2><p>法定婚假只有3天，但在西安，参加婚检还可以加10天，这样就能拥有整整13天婚假(不含节假日)！所以婚检必须做。就算没有利诱，做婚检也是很有必要的，万一查出点啥来还能及时脱身(不是)，而且免费。预约了一家合眼缘的医院，流程是这样的：</p>
+<p><img data-src="https://s2.loli.net/2025/09/16/Fs7B4i9z5SR2Jy8.jpg" alt="婚检流程"><span class="image-caption">婚检流程</span></p>
+<p>比我想象中简单很多，做的也很快(但是这些检查感觉也查不出什么来的样子)。在医院填了一堆表格，检查报告和婚检证明当天是拿不到的，不过医院贴心的提供了邮寄服务(12元/位)，再加上材料打印的钱一共30。</p>
+<h2 id="结婚照-332"><a href="#结婚照-332" class="headerlink" title="结婚照 -332"></a>结婚照 -332</h2><p>从上面对婚礼的吐槽已经可以看出我对拍婚纱照这件事的看法了，我也实在无法想象自己穿着各种服装，在烈日炎炎下被围观，被摄影师操控着玩Cosplay的样子。所以我们只拍一张照：<strong>结婚登记照</strong></p>
+<h3 id="买衣服-160"><a href="#买衣服-160" class="headerlink" title="买衣服 -160"></a>买衣服 -160</h3><p>结婚登记照要求红底，大家一般都穿白衬衫拍。但我们没有纯白的衣服，于是去优衣库怒刷160买了两件白色短袖，既舒适又清新，平时也可以穿，我很满意。</p>
+<h3 id="拍照-172"><a href="#拍照-172" class="headerlink" title="拍照 -172"></a>拍照 -172</h3><p>刚开始准备自己拍，但是我们俩都太手残了拍的没法看，考虑到登记照片一拍就是终身处刑，而且自己拍的还是会担心不满足要求，要是到时候因为这个领证失败就得不偿失了，所以还是得慎重一点。</p>
+<p>最后找了一家合眼缘的照相馆，买了172的结婚登记照套餐：<em>1张精修电子版+4张二寸纸质版+1张6寸放大照片及6寸相框。</em> 也包括服装和妆造，不过服装就还是穿自己买的白短袖，至于妆造，他们叫韩式清透妆，韩是挺韩的，但化完之后真的很像中了换头术。</p>
+<p>照相馆里人蛮多的，等了好一会才到我们。为了搭配强哥190的身高我只能站在凳子上，两个人按照摄影师的指示并排对着镜头微笑，拍照全程就只有5分钟，但到最后嘴角还是有笑僵了的感觉。一个姿势拍了十几张照片选了一张精修，并在当天拿到照片，完美结束！</p>
+<h2 id="戒指-0"><a href="#戒指-0" class="headerlink" title="戒指 0"></a>戒指 0</h2><p>在传统习俗里，结婚的时候都要买一些首饰，据说有什么三金甚至五金(听起来像五金建材工具)，也就是金项链、金耳环、金手镯等等，不过大家最认可的还是戒指。</p>
+<p>但是我不认可。首先我从来都不喜欢给身上戴东西，感觉又累赘又不方便，项链、耳环(没有耳洞)、手串(智能手环算吗)之类的从来不买，也没做过美甲(妈生指甲躲过一劫)。其次，我也不相信这玩意儿能代表爱情，而且还不保值、容易丢。</p>
+<p>不过强哥还是想买，那好吧。开始想着要买就买纯金的，也比较保值，款式方面之前看到有种 <em>莫比乌斯环</em> 蛮有意思的，但看了好久都没有中意的，只好之后再看(算了吧算了吧算了吧)。</p>
+<h2 id="道具装饰-320"><a href="#道具装饰-320" class="headerlink" title="道具装饰 -320"></a>道具装饰 -320</h2><p>虽然不办婚礼，但我们也买了一些喜庆的道具和装饰布置了家里，毕竟仪式感是自己给的。家里布置的有气球、拉旗、彩灯、小喜字、窗花…，领证道具有定制可乐、古风新郎新娘胸针、手举牌…，氛围拉满：</p>
+<p><img data-src="https://s2.loli.net/2025/09/16/DpWV14Yy2rogkxI.jpg" alt="一些道具"><span class="image-caption">一些道具</span></p>
+<h2 id="领证当天-1118"><a href="#领证当天-1118" class="headerlink" title="领证当天 -1118"></a>领证当天 -1118</h2><p>准备了这么多东西，终于来到了结婚最后也是最重要的步骤：领证。俗套的预约了在一起两年的纪念日去领，在周内人应该不多(后来发现是我想的不多)，安排了一些有仪式感的活动，有种一日婚礼的感觉。天气很不错，老天爷真给面子(第二天就狂风暴雨刚好错开)。</p>
+<p><strong>当天的ootd:</strong> <em>优衣库白短袖 + 杏色裤子 + 米色回力帆布鞋 + 白色帆布包</em></p>
+<p><img data-src="https://s2.loli.net/2025/09/16/rKkJY7H1nPd9SeQ.jpg" alt="领证当天的ootd"><span class="image-caption">领证当天的ootd</span></p>
+<h3 id="跟拍-化妆-交通-0"><a href="#跟拍-化妆-交通-0" class="headerlink" title="跟拍-化妆-交通 0"></a>跟拍-化妆-交通 0</h3><p>现在有很多领证跟拍，不过对我来说，这种事当然是自己拍才更有意义，所以全程我们都拿着自拍杆，还有拍立得，从早上起床开始，记录一整天的行程。</p>
+<p>化妆当然也是自己来，睡到自然醒起床化了个日常妆，给强哥也简单修饰了下，然后出发去领证。领证当天的全程交通由老司机强哥负责，除了早上有点着急(预约了11点领证10点多才出发)，其它时间开的还是很从容的。</p>
+<h3 id="领证-0"><a href="#领证-0" class="headerlink" title="领证 0"></a>领证 0</h3><h4 id="民政局初览"><a href="#民政局初览" class="headerlink" title="民政局初览"></a>民政局初览</h4><p>雁塔区民政局在南飞鸿乐荟中心商场顶层，领完证直接消费，商业嗅觉太牛了，之前来过感觉环境很不错(这个商场的厕所是我体验过最好拉的)。地库有直达的电梯(爱情基地电梯)，电梯里也有喜庆的氛围贴纸：</p>
+<p><img data-src="https://s2.loli.net/2025/09/17/SMQJ1mGBYo58Zae.jpg" alt="爱情基地电梯"><span class="image-caption">爱情基地电梯</span></p>
+<p>整层是一个开放平台，主要有登记处、颁证厅，还有很多喜庆的雕塑和装饰，供大家拍照留念，虽然是工作日，但人也挺多的：</p>
+<p><img data-src="https://s2.loli.net/2025/09/17/SWFquUC4b6pI1B7.jpg" alt="民政局初览"><span class="image-caption">民政局初览</span></p>
+<h4 id="登记处"><a href="#登记处" class="headerlink" title="登记处"></a>登记处</h4><p>跟着人流进门右转准备取号排队登记，工作人员却突然对着我们后面的人说「你的心情我能理解，但是离婚就只有两个窗口」，没想到一进门就碰到了drama。</p>
+<p>这个时候我才发现进门右手边是结婚登记，有5个窗口(文首有图)；左手边是离婚登记室，只有两个。中间只隔着一条走道，没有任何物理遮挡，整个登记处就这样被一分为二，甚至共享一个取号机，机器首页显示结婚登记和离婚登记两个选项：</p>
+<p><img data-src="https://s2.loli.net/2025/09/17/Er1SgVut5F8aITJ.jpg" alt="一分为二的登记处"><span class="image-caption">一分为二的登记处</span></p>
+<p>两边的氛围差距明显，结婚登记这边声音嘈杂，满是喜悦的笑声；离婚登记那边却一片死寂，人人面色如霜。两拨人看着对方都心情复杂，这样的反差很有戏剧性，果然搞drama还得是官方。</p>
+<p>至于为什么结婚是登记窗口，离婚是登记室，我猜测是因为离婚容易产生冲突，关起门来可以保留一些体面。不过我觉得结婚也好，离婚也好，都是好事，就不能给离婚也搞一个应景的打卡装饰吗？</p>
+<p>工作人员仔细核对了我们的证件，帮我们取号，等待区域人很多也很热闹，全是拿着道具的新人和跟拍，拿着自拍杆的我们在这里显得十分另类：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/NncXgjkKpI5dHVT.jpg" alt="好多人啊"><span class="image-caption">好多人啊</span></p>
+<p>没过多久就到我们了，走过去坐在登记窗口对面，提交户口本、身份证、照片，等待工作人员核对资料，然后按流程问话：</p>
+<blockquote>
+<p>工作人员：双方是否自愿登记结婚？<br>我们：是<br>工作人员：双方对彼此的婚姻状况和健康状况都了解吗？<br>我们：了解</p>
+</blockquote>
+<p>接着采集指纹、拍合影，登记双方的职业和学历、电话号码，最后进行电子登记和签名，工作人员说着「恭喜两位结婚」把证书递给我们(不需要工本费)，领证的过程就结束了。</p>
+<p>全程只有8分钟，一点不夸张，过程中还听到旁边一对办理失败的八卦。所以对我来说，结婚就是领证那一天的事儿，但对工作人员，结婚就是领证那8分钟的事儿。</p>
+<h4 id="颁证厅"><a href="#颁证厅" class="headerlink" title="颁证厅"></a>颁证厅</h4><p>领完证出来发现大家都在颁证厅门口排队，这里看起来应该是一个举行结婚宣誓仪式的地方，可能因为人太多，所以直接让大家拍照留念了：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/uUonT2O86QBDbFJ.jpg" alt="颁证厅"><span class="image-caption">颁证厅</span></p>
+<p>本来我还挺期待这个宣誓仪式的，算是为数不多有仪式感的活动，只好算啦。颁证厅里并不大，几排中式座椅，装饰成囍堂的样子，主要是在中间的颁证台拍照：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/uOFXZK7tLHmp8Tf.jpg" alt="囍堂"><span class="image-caption">囍堂</span></p>
+<p>等了半小时，突然被告知这里12点要关门，大家顿时紧张起来，工作人员甚至给每对新人计时30s，前面一对的跟拍小姐姐说自己脑子晕了，让新人自己想动作然后咔咔一顿拍，也是不容易，好在最后我们卡点拍照成功，后来看到竟然还有人关在里面拍，真的太拼了。</p>
+<h4 id="拍照打卡"><a href="#拍照打卡" class="headerlink" title="拍照打卡"></a>拍照打卡</h4><p>从颁证厅出来，开始了我们的平台tour，探索这里的布置和装饰，拍照留念，整个雕塑系列有一个土味的名字「爱情七步曲」：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/4uW7JyTRFqCcw1I.jpg" alt="一些布置"><span class="image-caption">一些布置</span></p>
+<p>不过这里最出片的还是这条爱心长廊，整条长廊贴着红色的爱心，下面是商场顶层的透明玻璃，简直是氛围感之神：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/v421zJDKZS7TsAL.jpg" alt="不同角度的爱心长廊"><span class="image-caption">不同角度的爱心长廊</span></p>
+<h3 id="福利-10"><a href="#福利-10" class="headerlink" title="福利 +10"></a>福利 +10</h3><p>领证的时候，工作人员告诉我们可以领取两个免费福利：<strong>乐高和刮刮乐</strong>。其实领证之前也搜过关于领证当天都有什么福利，发现地域差异很大，而且挑了几个尝试结果都失败：</p>
+<p><span id="inline-toc">1</span> <strong>免费喝喜茶</strong> ：说是领证当天可以免费领一杯喜茶，正好在商场搜到一家，走过去发现在装修还没开业，然后打电话问周边另一家被告知没有这个活动了，失败+1。<br><span id="inline-toc">2</span><strong>大润发礼品</strong> ：说是领证当天可以去大润发超市领一份免费礼品，网上说的真假不一，打电话过去问人家说没有这个活动，失败+2。<br><span id="inline-toc">3</span><strong>海底捞礼品</strong> ：领证当天去吃海底捞可以享受氛围感布置和免费礼品，不过人家说要提前预约才可以，而且我们当天没有吃海底捞的打算，所以主动放弃，失败+3。</p>
+<p>所以还是官方的福利最靠谱啊。</p>
+<h4 id="乐高-0"><a href="#乐高-0" class="headerlink" title="乐高 0"></a>乐高 0</h4><p>乐高是商场的一家婚纱店提供的，<del>感觉</del> 主要是为了拉客源(一进门工作人员就让强哥登记信息让我加微信)，但是我们要让商家失望了，以下是在这里和工作人员的对话：</p>
+<blockquote>
+<p>工作人员：我们今天除了免费乐高还可以享受520元的跟拍服务，咱们这边需要跟拍吗？<br>强哥：呃，暂时不用了。<br>工作人员：行，咱婚期定了没？<br>我：就今天嘛。<br>工作人员：啊不是，我是说婚礼日期？<br>我：hummm, 我们不办婚礼。<br>工作人员：啊？不办婚礼？行，好嘞(天塌了)。<br>工作人员：如果说后期需要回门宴什么的，需要礼服也可以联系我们，可以享受9折的。<br>齐声：好的好的。</p>
+</blockquote>
+<p>现在想想其实可以多应和人家，给人一种潜在单子的情绪价值，毕竟工作人员态度也蛮好的(没把我们赶出去)，还祝我们新婚快乐。挑了一组可爱兔子乐高：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/FhGi4dCpMY2vOwK.jpg" alt="兔子乐高"><span class="image-caption">兔子乐高</span></p>
+<h4 id="刮刮乐-10"><a href="#刮刮乐-10" class="headerlink" title="刮刮乐 +10"></a>刮刮乐 +10</h4><p>刮刮乐是在商场一层中国福利彩票门店领取，登记信息后拿到一张，刮开之后中10元！还是很满足的：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/ogGWXsmq15vHLUc.jpg" alt="刮刮乐"><span class="image-caption">刮刮乐</span></p>
+<h3 id="午餐-206"><a href="#午餐-206" class="headerlink" title="午餐 -206"></a>午餐 -206</h3><p>午餐直接在商场解决，找了家看起来不错的川菜店，味道也很好。吃完饭又上去平台拍了几张拍立得，在商场转了一会，就出发去下一个活动：</p>
+<p><img data-src="https://s2.loli.net/2025/09/18/kBdiIaoPqnxOpv7.jpg" alt="商场内部"><span class="image-caption">商场内部</span></p>
+<h3 id="马杀鸡-396"><a href="#马杀鸡-396" class="headerlink" title="马杀鸡 -396"></a>马杀鸡 -396</h3><p>在乐荟中心转了大半天，我们都很累了，强哥开车更累。所以下一个活动，就是。。。按摩！</p>
+<p>按摩是我的常规活动，每隔一段时间就要来一次舒缓身心。我比较喜欢去那种影院式按摩店，有包间、投影仪、带餐食，一般会做包含足浴、全身按摩，时长在1-2小时的项目，有时候还会过夜，每次做完感觉身体和灵魂都得到了升华。</p>
+<p>晚上的活动是在大雁塔广场那边，所以在周围找了一家环境不错的足浴店，买了80分钟的双人按摩套餐，名字叫「活力重现*固本沐足」，听起来是我们现在需要的。然后马上开车过去，把车子停在大悦城商场，又费了一番波折才找到地方：</p>
+<p><img data-src="https://s2.loli.net/2025/09/19/bzKHoAf215DgGmj.jpg" alt="固本沐足现场"><span class="image-caption">固本沐足现场</span></p>
+<p>在这里待了两个小时，做完之后也不负所望，感觉浑身又充满了活力，元气满满，然后直接去吃晚餐！</p>
+<h3 id="晚餐-526"><a href="#晚餐-526" class="headerlink" title="晚餐 -526"></a>晚餐 -526</h3><p>晚餐是在大悦城商场顶层，强哥预订了一家不错的牛排餐厅，在靠窗的位置，还有一些有氛围感的布置，窗外可以看到大雁塔和大唐不夜城的夜景。</p>
+<p><img data-src="https://s2.loli.net/2025/09/20/k6RsxI2upoOQ951.jpg" alt="夜景西餐"><span class="image-caption">夜景西餐</span></p>
+<p>菜品很精致，味道也不错，这道惠灵顿牛排让我们想到了孙红雷演的电视剧《好先生》，在里面他演一个厨师，拿手菜就是这个：</p>
+<p><img data-src="https://s2.loli.net/2025/09/20/1YSnNDajOCtQhuf.jpg" alt="惠灵顿牛排"><span class="image-caption">惠灵顿牛排</span></p>
+<p>饭后在大雁塔广场和大悦城里转着消食，大雁塔广场上游人如织，晚上的月亮很圆，月光皎洁，星星应该也很多，可惜有光污染看不到：</p>
+<p><img data-src="https://s2.loli.net/2025/09/20/fTC8FWjcp5EbJzN.jpg" alt="月下玄奘"><span class="image-caption">月下玄奘</span></p>
+<p>大悦城里也很热闹，这里标志性的布置是悟空雕塑，双手合十的结法印造型，据说是面向大雁塔和玄奘雕塑的：</p>
+<p><img data-src="https://s2.loli.net/2025/09/20/Yq4EFGUzPacgKfl.jpg" alt="悟空雕像"><span class="image-caption">悟空雕像</span></p>
+<p>转了好一会，强哥说他还没有买到想买的东西，我问他想买什么，他说他也不知道，大概是一种有纪念意义的东西，但是转了好久也没有合眼缘的。不过我觉得今天的乐高和刮刮乐就很有纪念意义啊，而且还免费。</p>
+<p>后来大唐不夜城也没力气转了，于是开车回家，正好在驿站关门之前拿到了意大利签证快递，而且顺利过签！领证的一天完美结束！这个婚对我们来说也算是结完了。</p>
+<p>虽然我们已经尽量让结婚这件事简单点了，但领证还是折腾了一整天，回家也又晚又累(连正事都没力气办)，过了12点才睡觉，难以想象那些办婚礼的人都是怎么熬的，应该更累吧。</p>
+<h2 id="视频剪辑-0"><a href="#视频剪辑-0" class="headerlink" title="视频剪辑 0"></a>视频剪辑 0</h2><p>不找跟拍，当然也不会找人剪视频了。其实平时我做过不少vlog，而且领证当天全程录视频，积累了不少素材，所以也准备自己剪一个领证视频，不过第一次剪长片还是有点挑战。</p>
+<p>刚开始用iMovie排片，发现很难用(也可能是我不会用)，而且免费的功能太少。然后改用剪映，功能很强大，还有不少免费模版和素材，自动识别字幕也很好用。自己做了片头片尾，还加了不少转场和彩蛋，连肝三天终于成片，还能免费导出，太良心了：</p>
+<p><img data-src="https://s2.loli.net/2025/09/20/jv4FRQsr3qNoU7g.jpg" alt="剪辑现场"><span class="image-caption">剪辑现场</span><br><img data-src="https://s2.loli.net/2025/09/20/FVyCOWNjhgDpSnd.png" alt="一些片尾"><span class="image-caption">一些片尾</span></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<p>幸福但不快乐的事情</p>
+</blockquote>
+<p>以前老听到有人说关于「幸福但不快乐的事情」，那时候觉得很困惑，幸福快乐不应该是一体的吗，怎么会存在幸福，但不快乐的事情呢？但现在我有点理解了。</p>
+<p>比如结婚，除了这篇讲到的、完全和结婚本身强相关的事情外，其实结婚前我们还有装修房子、搬家整理、办签证等很多事要办。这些事情在结婚前的半年内集中出现，经常需要并行做几件事，当然，做这些事都是为了两个人的生活，是幸福的事。</p>
+<p>但是，从这些事情中我能学到的东西很少，更多的是精力和体力的消耗，所以在做这些事情的过程中，我并不觉得快乐，只觉得又杂又累。</p>
+<p>后来我们复盘了一下，发现做这些事情并非不能带给我们快乐，只是它们都是延迟满足、延时得到快乐的事情。但我们往往还没有感受到一件事完成后的快乐，又要马上去做下一件事，最后感受到的只有疲惫。</p>
+<p>或许只有即时得到的感官快乐，才能让人不觉得累吧，比如吃喝、玩游戏、听音乐、看电影。所以我们决定以后做事，尽量一件一件来，而且要在充分感受到上件事完成后的快乐、放松消化后，再去做另一件事。</p>
+<p>拿到签证后，我们又马上开始准备旅行攻略，然后发现结婚的总花费还没有在欧洲住一晚贵。不过好在就只剩这一件事了，所以整个蜜月之旅我们都是非常放松和享受的，详情请看下一篇：蜜月旅行(努力补更中)。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>结婚</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我买房了</title>
     <url>/i-bought-an-apartment/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/30/t8bgFdo9qx3EX4j.png">
@@ -3748,119 +3861,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>买房</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我结婚了</title>
-    <url>/i-got-married/</url>
-    <content><![CDATA[<p><img data-src="https://s2.loli.net/2025/09/09/lGAz4dQ8nEZqIsy.jpg" alt="摄于西安市雁塔区民政局婚姻登记处内"><span class="image-caption">摄于西安市雁塔区民政局婚姻登记处内</span></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="note info"><p>在 <a href="https://jmyblog.top/the-one/">将故事写成我们</a> 之后，我和强哥走过了两年的时光，从不是很熟逐渐发展到没有边界(比如追着对方闻自己的臭屁)。日常相处也很契合，之前一个人的时候，老是莫名碰到很多倒霉的事，但是我们两个人一起，无论做什么事都很顺利，真的很神奇。</p>
-</div>
-
-<p>所以他也顺其自然的成为了我的结婚搭子，毕竟大女人就是会负责到底💪</p>
-<h2 id="婚礼-0"><a href="#婚礼-0" class="headerlink" title="婚礼 0"></a>婚礼 0</h2><p>从小到大我参加过不少婚礼，小时候边吃席边凑热闹，长大了也当过几次站桩伴娘。我对这件事的看法就是 <em>办的人未必想办，来的人也未必想来，而且又吵又累。</em></p>
-<p>场地和酒席要提前半年甚至一年定，婚礼流程和仪式也像复制粘贴般。<br>新娘凌晨就要起床，一天换N套衣服和妆容；新郎也要早起接亲，绞尽脑汁塞红包开门做(bei)游(nue)戏(dai)；然后换场地继续走流程，有的还要出外景；仪式后还得挨个和一年都见不上几次甚至完全没见过面的「亲戚」打招呼敬酒，从早忙到晚行程拉满。</p>
-<p>最后一次当伴娘是在老姐的婚礼上。跟着走了一天流程，递完戒指后终于没活的我，只能跑到楼梯间里躲清闲，而老姐还在下面穿着晚礼服挂着疲惫的笑容敬酒。那时我就坐在台阶上想，我到底是会多喜欢一个人，才会让自己也做到这种程度?</p>
-<p>答案就是我不会做，多喜欢也不会。除了觉得吵之外，后来的我又有一些想法，让我对婚礼的看法上升到了反感的地步。</p>
-<p>首先，办婚礼疯狂出钱出力，到最后也挣不了几个份子钱(有钱人随意)。其次，传统婚礼真的有太多充满槽点的所谓习(zao)俗(po)，网上一大堆，这里不做赘述。</p>
-<p>最后，也是最让我反感的一点，<strong>为什么总是有人要把婚礼或者结婚这件事，捧上神坛渲染成人生大事？</strong> 有种不办婚礼是这辈子的遗憾，办了婚礼结完婚这辈子也就到这了的感觉，可人生明明还有很多事啊！</p>
-<p>就像高考、买房、生娃这些事情一样，「高考失利这辈子就完了」、「不买房没有归属感」、「不生娃老了就完了」，到底是谁在传播这些观念，散播焦虑？谁获利，谁买单，好难猜啊。</p>
-<p>作为心理咨询师，强哥也碰到过无数来求助的父母，他们的孩子都已经抑郁到要自杀了，还在问孩子不上学怎么办，嘴里不停念叨着 ‘不能不上学’，像被洗脑了一样，真的很可怕。<em>实际上人除了活着过好每一天之外，根本没有什么大生大事，因为人是随时会死的。</em></p>
-<p>当然，以上只是我的看法，但近年来一些婚庆相关机构接连倒闭，证明不想买单的人越来越多了。不过还是有很多人喜欢婚礼这种仪式感，也有摒弃传统的婚礼模式，自己DIY婚礼流程的，都没毛病，但是开心最重要。</p>
-<p>所以我的想法就是不办婚礼，只请亲近的朋友家人吃个饭通知一下，强哥觉得都行。至于父母嘛，当然还是觉得要办一下，可以理解他们的想法，但是建议无效，因为做决策的是我们，他们也尊重我们的决定。</p>
-<p>身边有朋友听说我们不办婚礼之后，第一反应都是 “那你们父母也同意？”，让我觉得很莫名其妙。应该只有巨婴和需要父母资助的啃老族，才必须考虑父母的意见吧？<em>两个人的事情只有自己有权决定，至于别人，只有通知的义务，没有必须采纳意见的义务，一个人同理。</em> 这是最基本的人权，不应该被习俗、孝顺或其它的观念道德绑架。</p>
-<h2 id="婚检-30"><a href="#婚检-30" class="headerlink" title="婚检 -30"></a>婚检 -30</h2><p>法定婚假只有3天，但在西安，参加婚检还可以加10天，这样就能拥有整整13天婚假(不含节假日)！所以婚检必须做。就算没有利诱，做婚检也是很有必要的，万一查出点啥来还能及时脱身(不是)，而且免费。预约了一家合眼缘的医院，流程是这样的：</p>
-<p><img data-src="https://s2.loli.net/2025/09/16/Fs7B4i9z5SR2Jy8.jpg" alt="婚检流程"><span class="image-caption">婚检流程</span></p>
-<p>比我想象中简单很多，做的也很快(但是这些检查感觉也查不出什么来的样子)。在医院填了一堆表格，检查报告和婚检证明当天是拿不到的，不过医院贴心的提供了邮寄服务(12元/位)，再加上材料打印的钱一共30。</p>
-<h2 id="结婚照-332"><a href="#结婚照-332" class="headerlink" title="结婚照 -332"></a>结婚照 -332</h2><p>从上面对婚礼的吐槽已经可以看出我对拍婚纱照这件事的看法了，我也实在无法想象自己穿着各种服装，在烈日炎炎下被围观，被摄影师操控着玩Cosplay的样子。所以我们只拍一张照：<strong>结婚登记照</strong></p>
-<h3 id="买衣服-160"><a href="#买衣服-160" class="headerlink" title="买衣服 -160"></a>买衣服 -160</h3><p>结婚登记照要求红底，大家一般都穿白衬衫拍。但我们没有纯白的衣服，于是去优衣库怒刷160买了两件白色短袖，既舒适又清新，平时也可以穿，我很满意。</p>
-<h3 id="拍照-172"><a href="#拍照-172" class="headerlink" title="拍照 -172"></a>拍照 -172</h3><p>刚开始准备自己拍，但是我们俩都太手残了拍的没法看，考虑到登记照片一拍就是终身处刑，而且自己拍的还是会担心不满足要求，要是到时候因为这个领证失败就得不偿失了，所以还是得慎重一点。</p>
-<p>最后找了一家合眼缘的照相馆，买了172的结婚登记照套餐：<em>1张精修电子版+4张二寸纸质版+1张6寸放大照片及6寸相框。</em> 也包括服装和妆造，不过服装就还是穿自己买的白短袖，至于妆造，他们叫韩式清透妆，韩是挺韩的，但化完之后真的很像中了换头术。</p>
-<p>照相馆里人蛮多的，等了好一会才到我们。为了搭配强哥190的身高我只能站在凳子上，两个人按照摄影师的指示并排对着镜头微笑，拍照全程就只有5分钟，但到最后嘴角还是有笑僵了的感觉。一个姿势拍了十几张照片选了一张精修，并在当天拿到照片，完美结束！</p>
-<h2 id="戒指-0"><a href="#戒指-0" class="headerlink" title="戒指 0"></a>戒指 0</h2><p>在传统习俗里，结婚的时候都要买一些首饰，据说有什么三金甚至五金(听起来像五金建材工具)，也就是金项链、金耳环、金手镯等等，不过大家最认可的还是戒指。</p>
-<p>但是我不认可。首先我从来都不喜欢给身上戴东西，感觉又累赘又不方便，项链、耳环(没有耳洞)、手串(智能手环算吗)之类的从来不买，也没做过美甲(妈生指甲躲过一劫)。其次，我也不相信这玩意儿能代表爱情，而且还不保值、容易丢。</p>
-<p>不过强哥还是想买，那好吧。开始想着要买就买纯金的，也比较保值，款式方面之前看到有种 <em>莫比乌斯环</em> 蛮有意思的，但看了好久都没有中意的，只好之后再看(算了吧算了吧算了吧)。</p>
-<h2 id="道具装饰-320"><a href="#道具装饰-320" class="headerlink" title="道具装饰 -320"></a>道具装饰 -320</h2><p>虽然不办婚礼，但我们也买了一些喜庆的道具和装饰布置了家里，毕竟仪式感是自己给的。家里布置的有气球、拉旗、彩灯、小喜字、窗花…，领证道具有定制可乐、古风新郎新娘胸针、手举牌…，氛围拉满：</p>
-<p><img data-src="https://s2.loli.net/2025/09/16/DpWV14Yy2rogkxI.jpg" alt="一些道具"><span class="image-caption">一些道具</span></p>
-<h2 id="领证当天-1118"><a href="#领证当天-1118" class="headerlink" title="领证当天 -1118"></a>领证当天 -1118</h2><p>准备了这么多东西，终于来到了结婚最后也是最重要的步骤：领证。俗套的预约了在一起两年的纪念日去领，在周内人应该不多(后来发现是我想的不多)，安排了一些有仪式感的活动，有种一日婚礼的感觉。天气很不错，老天爷真给面子(第二天就狂风暴雨刚好错开)。</p>
-<p><strong>当天的ootd:</strong> <em>优衣库白短袖 + 杏色裤子 + 米色回力帆布鞋 + 白色帆布包</em></p>
-<p><img data-src="https://s2.loli.net/2025/09/16/rKkJY7H1nPd9SeQ.jpg" alt="领证当天的ootd"><span class="image-caption">领证当天的ootd</span></p>
-<h3 id="跟拍-化妆-交通-0"><a href="#跟拍-化妆-交通-0" class="headerlink" title="跟拍-化妆-交通 0"></a>跟拍-化妆-交通 0</h3><p>现在有很多领证跟拍，不过对我来说，这种事当然是自己拍才更有意义，所以全程我们都拿着自拍杆，还有拍立得，从早上起床开始，记录一整天的行程。</p>
-<p>化妆当然也是自己来，睡到自然醒起床化了个日常妆，给强哥也简单修饰了下，然后出发去领证。领证当天的全程交通由老司机强哥负责，除了早上有点着急(预约了11点领证10点多才出发)，其它时间开的还是很从容的。</p>
-<h3 id="领证-0"><a href="#领证-0" class="headerlink" title="领证 0"></a>领证 0</h3><h4 id="民政局初览"><a href="#民政局初览" class="headerlink" title="民政局初览"></a>民政局初览</h4><p>雁塔区民政局在南飞鸿乐荟中心商场顶层，领完证直接消费，商业嗅觉太牛了，之前来过感觉环境很不错(这个商场的厕所是我体验过最好拉的)。地库有直达的电梯(爱情基地电梯)，电梯里也有喜庆的氛围贴纸：</p>
-<p><img data-src="https://s2.loli.net/2025/09/17/SMQJ1mGBYo58Zae.jpg" alt="爱情基地电梯"><span class="image-caption">爱情基地电梯</span></p>
-<p>整层是一个开放平台，主要有登记处、颁证厅，还有很多喜庆的雕塑和装饰，供大家拍照留念，虽然是工作日，但人也挺多的：</p>
-<p><img data-src="https://s2.loli.net/2025/09/17/SWFquUC4b6pI1B7.jpg" alt="民政局初览"><span class="image-caption">民政局初览</span></p>
-<h4 id="登记处"><a href="#登记处" class="headerlink" title="登记处"></a>登记处</h4><p>跟着人流进门右转准备取号排队登记，工作人员却突然对着我们后面的人说「你的心情我能理解，但是离婚就只有两个窗口」，没想到一进门就碰到了drama。</p>
-<p>这个时候我才发现进门右手边是结婚登记，有5个窗口(文首有图)；左手边是离婚登记室，只有两个。中间只隔着一条走道，没有任何物理遮挡，整个登记处就这样被一分为二，甚至共享一个取号机，机器首页显示结婚登记和离婚登记两个选项：</p>
-<p><img data-src="https://s2.loli.net/2025/09/17/Er1SgVut5F8aITJ.jpg" alt="一分为二的登记处"><span class="image-caption">一分为二的登记处</span></p>
-<p>两边的氛围差距明显，结婚登记这边声音嘈杂，满是喜悦的笑声；离婚登记那边却一片死寂，人人面色如霜。两拨人看着对方都心情复杂，这样的反差很有戏剧性，果然搞drama还得是官方。</p>
-<p>至于为什么结婚是登记窗口，离婚是登记室，我猜测是因为离婚容易产生冲突，关起门来可以保留一些体面。不过我觉得结婚也好，离婚也好，都是好事，就不能给离婚也搞一个应景的打卡装饰吗？</p>
-<p>工作人员仔细核对了我们的证件，帮我们取号，等待区域人很多也很热闹，全是拿着道具的新人和跟拍，拿着自拍杆的我们在这里显得十分另类：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/NncXgjkKpI5dHVT.jpg" alt="好多人啊"><span class="image-caption">好多人啊</span></p>
-<p>没过多久就到我们了，走过去坐在登记窗口对面，提交户口本、身份证、照片，等待工作人员核对资料，然后按流程问话：</p>
-<blockquote>
-<p>工作人员：双方是否自愿登记结婚？<br>我们：是<br>工作人员：双方对彼此的婚姻状况和健康状况都了解吗？<br>我们：了解</p>
-</blockquote>
-<p>接着采集指纹、拍合影，登记双方的职业和学历、电话号码，最后进行电子登记和签名，工作人员说着「恭喜两位结婚」把证书递给我们(不需要工本费)，领证的过程就结束了。</p>
-<p>全程只有8分钟，一点不夸张，过程中还听到旁边一对办理失败的八卦。所以对我来说，结婚就是领证那一天的事儿，但对工作人员，结婚就是领证那8分钟的事儿。</p>
-<h4 id="颁证厅"><a href="#颁证厅" class="headerlink" title="颁证厅"></a>颁证厅</h4><p>领完证出来发现大家都在颁证厅门口排队，这里看起来应该是一个举行结婚宣誓仪式的地方，可能因为人太多，所以直接让大家拍照留念了：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/uUonT2O86QBDbFJ.jpg" alt="颁证厅"><span class="image-caption">颁证厅</span></p>
-<p>本来我还挺期待这个宣誓仪式的，算是为数不多有仪式感的活动，只好算啦。颁证厅里并不大，几排中式座椅，装饰成囍堂的样子，主要是在中间的颁证台拍照：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/uOFXZK7tLHmp8Tf.jpg" alt="囍堂"><span class="image-caption">囍堂</span></p>
-<p>等了半小时，突然被告知这里12点要关门，大家顿时紧张起来，工作人员甚至给每对新人计时30s，前面一对的跟拍小姐姐说自己脑子晕了，让新人自己想动作然后咔咔一顿拍，也是不容易，好在最后我们卡点拍照成功，后来看到竟然还有人关在里面拍，真的太拼了。</p>
-<h4 id="拍照打卡"><a href="#拍照打卡" class="headerlink" title="拍照打卡"></a>拍照打卡</h4><p>从颁证厅出来，开始了我们的平台tour，探索这里的布置和装饰，拍照留念，整个雕塑系列有一个土味的名字「爱情七步曲」：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/4uW7JyTRFqCcw1I.jpg" alt="一些布置"><span class="image-caption">一些布置</span></p>
-<p>不过这里最出片的还是这条爱心长廊，整条长廊贴着红色的爱心，下面是商场顶层的透明玻璃，简直是氛围感之神：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/v421zJDKZS7TsAL.jpg" alt="不同角度的爱心长廊"><span class="image-caption">不同角度的爱心长廊</span></p>
-<h3 id="福利-10"><a href="#福利-10" class="headerlink" title="福利 +10"></a>福利 +10</h3><p>领证的时候，工作人员告诉我们可以领取两个免费福利：<strong>乐高和刮刮乐</strong>。其实领证之前也搜过关于领证当天都有什么福利，发现地域差异很大，而且挑了几个尝试结果都失败：</p>
-<p><span id="inline-toc">1</span> <strong>免费喝喜茶</strong> ：说是领证当天可以免费领一杯喜茶，正好在商场搜到一家，走过去发现在装修还没开业，然后打电话问周边另一家被告知没有这个活动了，失败+1。<br><span id="inline-toc">2</span><strong>大润发礼品</strong> ：说是领证当天可以去大润发超市领一份免费礼品，网上说的真假不一，打电话过去问人家说没有这个活动，失败+2。<br><span id="inline-toc">3</span><strong>海底捞礼品</strong> ：领证当天去吃海底捞可以享受氛围感布置和免费礼品，不过人家说要提前预约才可以，而且我们当天没有吃海底捞的打算，所以主动放弃，失败+3。</p>
-<p>所以还是官方的福利最靠谱啊。</p>
-<h4 id="乐高-0"><a href="#乐高-0" class="headerlink" title="乐高 0"></a>乐高 0</h4><p>乐高是商场的一家婚纱店提供的，<del>感觉</del> 主要是为了拉客源(一进门工作人员就让强哥登记信息让我加微信)，但是我们要让商家失望了，以下是在这里和工作人员的对话：</p>
-<blockquote>
-<p>工作人员：我们今天除了免费乐高还可以享受520元的跟拍服务，咱们这边需要跟拍吗？<br>强哥：呃，暂时不用了。<br>工作人员：行，咱婚期定了没？<br>我：就今天嘛。<br>工作人员：啊不是，我是说婚礼日期？<br>我：hummm, 我们不办婚礼。<br>工作人员：啊？不办婚礼？行，好嘞(天塌了)。<br>工作人员：如果说后期需要回门宴什么的，需要礼服也可以联系我们，可以享受9折的。<br>齐声：好的好的。</p>
-</blockquote>
-<p>现在想想其实可以多应和人家，给人一种潜在单子的情绪价值，毕竟工作人员态度也蛮好的(没把我们赶出去)，还祝我们新婚快乐。挑了一组可爱兔子乐高：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/FhGi4dCpMY2vOwK.jpg" alt="兔子乐高"><span class="image-caption">兔子乐高</span></p>
-<h4 id="刮刮乐-10"><a href="#刮刮乐-10" class="headerlink" title="刮刮乐 +10"></a>刮刮乐 +10</h4><p>刮刮乐是在商场一层中国福利彩票门店领取，登记信息后拿到一张，刮开之后中10元！还是很满足的：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/ogGWXsmq15vHLUc.jpg" alt="刮刮乐"><span class="image-caption">刮刮乐</span></p>
-<h3 id="午餐-206"><a href="#午餐-206" class="headerlink" title="午餐 -206"></a>午餐 -206</h3><p>午餐直接在商场解决，找了家看起来不错的川菜店，味道也很好。吃完饭又上去平台拍了几张拍立得，在商场转了一会，就出发去下一个活动：</p>
-<p><img data-src="https://s2.loli.net/2025/09/18/kBdiIaoPqnxOpv7.jpg" alt="商场内部"><span class="image-caption">商场内部</span></p>
-<h3 id="马杀鸡-396"><a href="#马杀鸡-396" class="headerlink" title="马杀鸡 -396"></a>马杀鸡 -396</h3><p>在乐荟中心转了大半天，我们都很累了，强哥开车更累。所以下一个活动，就是。。。按摩！</p>
-<p>按摩是我的常规活动，每隔一段时间就要来一次舒缓身心。我比较喜欢去那种影院式按摩店，有包间、投影仪、带餐食，一般会做包含足浴、全身按摩，时长在1-2小时的项目，有时候还会过夜，每次做完感觉身体和灵魂都得到了升华。</p>
-<p>晚上的活动是在大雁塔广场那边，所以在周围找了一家环境不错的足浴店，买了80分钟的双人按摩套餐，名字叫「活力重现*固本沐足」，听起来是我们现在需要的。然后马上开车过去，把车子停在大悦城商场，又费了一番波折才找到地方：</p>
-<p><img data-src="https://s2.loli.net/2025/09/19/bzKHoAf215DgGmj.jpg" alt="固本沐足现场"><span class="image-caption">固本沐足现场</span></p>
-<p>在这里待了两个小时，做完之后也不负所望，感觉浑身又充满了活力，元气满满，然后直接去吃晚餐！</p>
-<h3 id="晚餐-526"><a href="#晚餐-526" class="headerlink" title="晚餐 -526"></a>晚餐 -526</h3><p>晚餐是在大悦城商场顶层，强哥预订了一家不错的牛排餐厅，在靠窗的位置，还有一些有氛围感的布置，窗外可以看到大雁塔和大唐不夜城的夜景。</p>
-<p><img data-src="https://s2.loli.net/2025/09/20/k6RsxI2upoOQ951.jpg" alt="夜景西餐"><span class="image-caption">夜景西餐</span></p>
-<p>菜品很精致，味道也不错，这道惠灵顿牛排让我们想到了孙红雷演的电视剧《好先生》，在里面他演一个厨师，拿手菜就是这个：</p>
-<p><img data-src="https://s2.loli.net/2025/09/20/1YSnNDajOCtQhuf.jpg" alt="惠灵顿牛排"><span class="image-caption">惠灵顿牛排</span></p>
-<p>饭后在大雁塔广场和大悦城里转着消食，大雁塔广场上游人如织，晚上的月亮很圆，月光皎洁，星星应该也很多，可惜有光污染看不到：</p>
-<p><img data-src="https://s2.loli.net/2025/09/20/fTC8FWjcp5EbJzN.jpg" alt="月下玄奘"><span class="image-caption">月下玄奘</span></p>
-<p>大悦城里也很热闹，这里标志性的布置是悟空雕塑，双手合十的结法印造型，据说是面向大雁塔和玄奘雕塑的：</p>
-<p><img data-src="https://s2.loli.net/2025/09/20/Yq4EFGUzPacgKfl.jpg" alt="悟空雕像"><span class="image-caption">悟空雕像</span></p>
-<p>转了好一会，强哥说他还没有买到想买的东西，我问他想买什么，他说他也不知道，大概是一种有纪念意义的东西，但是转了好久也没有合眼缘的。不过我觉得今天的乐高和刮刮乐就很有纪念意义啊，而且还免费。</p>
-<p>后来大唐不夜城也没力气转了，于是开车回家，正好在驿站关门之前拿到了意大利签证快递，而且顺利过签！领证的一天完美结束！这个婚对我们来说也算是结完了。</p>
-<p>虽然我们已经尽量让结婚这件事简单点了，但领证还是折腾了一整天，回家也又晚又累(连正事都没力气办)，过了12点才睡觉，难以想象那些办婚礼的人都是怎么熬的，应该更累吧。</p>
-<h2 id="视频剪辑-0"><a href="#视频剪辑-0" class="headerlink" title="视频剪辑 0"></a>视频剪辑 0</h2><p>不找跟拍，当然也不会找人剪视频了。其实平时我做过不少vlog，而且领证当天全程录视频，积累了不少素材，所以也准备自己剪一个领证视频，不过第一次剪长片还是有点挑战。</p>
-<p>刚开始用iMovie排片，发现很难用(也可能是我不会用)，而且免费的功能太少。然后改用剪映，功能很强大，还有不少免费模版和素材，自动识别字幕也很好用。自己做了片头片尾，还加了不少转场和彩蛋，连肝三天终于成片，还能免费导出，太良心了：</p>
-<p><img data-src="https://s2.loli.net/2025/09/20/jv4FRQsr3qNoU7g.jpg" alt="剪辑现场"><span class="image-caption">剪辑现场</span><br><img data-src="https://s2.loli.net/2025/09/20/FVyCOWNjhgDpSnd.png" alt="一些片尾"><span class="image-caption">一些片尾</span></p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
-<p>幸福但不快乐的事情</p>
-</blockquote>
-<p>以前老听到有人说关于「幸福但不快乐的事情」，那时候觉得很困惑，幸福快乐不应该是一体的吗，怎么会存在幸福，但不快乐的事情呢？但现在我有点理解了。</p>
-<p>比如结婚，除了这篇讲到的、完全和结婚本身强相关的事情外，其实结婚前我们还有装修房子、搬家整理、办签证等很多事要办。这些事情一件接着一件，在结婚前的半年集中出现，有时还需要并行做几件事。当然，做这些事都是为了两个人的生活，是幸福的事。</p>
-<p>但是，从这些事情中我能学到的东西很少，更多的是精力和体力的消耗，所以在做这些事情的过程中，我并不觉得快乐，只觉得又杂又累。</p>
-<p>后来我们复盘了一下，发现做这些事情并非不能带给我们快乐，只是它们都是延迟满足、延时得到快乐的事情。但这些事情太过集中，一件接着一件，往往在还没有感受到一件事完成后的快乐时，又要马上去做下一件事，这样当然感觉不到快乐，只有疲累。</p>
-<p>或许只有即时得到的感官快乐，才能让人不觉得累吧，比如吃喝、玩游戏、听音乐、看电影。所以我们决定以后做事，尽量一件一件来，而且要在充分感受到上件事完成后的快乐、放松消化后，再去做另一件事。</p>
-<p>拿到签证后，我们又马上开始准备旅行攻略，然后发现结婚的总花费还没有在欧洲住一晚贵。好在就只剩这一件事了，所以整个蜜月之旅我们都是非常放松和享受的，详情请看下一篇(努力补更中)。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>结婚</tag>
       </tags>
   </entry>
   <entry>
@@ -4781,6 +4781,75 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>增驾摩托车奇幻之旅(中)</title>
+    <url>/my-lovely-moto-2/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
+
+<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
+</code></pre>
+<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
+<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
+<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
+<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
+<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
+
+<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
+
+<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
+<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
+
+<p>第五个小时，人麻了。</p>
+<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
+<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
+<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
+
+<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
+<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
+<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
+<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
+<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
+<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
+<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
+
+<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
+<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
+<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
+<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
+<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
+<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
+<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
+
+<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
+<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
+</code></pre>
+<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
+<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
+<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
+
+<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
+<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
+</code></pre>
+<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
+<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
+
+<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
+<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
+<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
+<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
+
+<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
+<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
+      </categories>
+      <tags>
+        <tag>科目二</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>增驾摩托车奇幻之旅(下)</title>
     <url>/my-lovely-moto-3/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/DtGac9qbuwiFfZz.png">
@@ -4873,72 +4942,68 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>增驾摩托车奇幻之旅(中)</title>
-    <url>/my-lovely-moto-2/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/lV9TGjfFbgCaWHD.png">
+    <title>增驾摩托车奇幻之旅(上)</title>
+    <url>/my-lovely-moto/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
 
-<h2 id="科二：人麻了-见鬼的2号车"><a href="#科二：人麻了-见鬼的2号车" class="headerlink" title="科二：人麻了+见鬼的2号车"></a>科二：人麻了+见鬼的2号车</h2><pre><code>事件发生时间：2月28日
+<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
+<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
+<p>Deal! </p>
+<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
 </code></pre>
-<p>虽然没练过科三，只有科二练了多次还算有点自信，但基于对驾校「包过」承诺的信任，而且我也看了科三的视频，将各种操作熟记于心，所以即使心里没太多底，还是打算直接去考试。</p>
-<p>早上7点半带上我的沙哑低炮音出发，还是四人租车行，8点半到达考场，领了考试牌后就坐在候考室里，候考室的环境很简陋，室内不到一百平，脚踩着坑坑洼洼的水泥地，有限的座位导致一部分人站在后面，整个空间比较紧凑。<br>没想到，我们在这里一等就是6个多小时。</p>
-<p>第一个小时，听考场的师傅讲考试注意事项，并按考试名单(据说是报名顺序)开始叫人排队考试，我们则认真看科二科三的视频，回忆各种操作点，同时努力克制尿意，怕被叫到的时候自己不在(因为那师傅说如果叫到名字的人没来就把他放在名单最后)。</p>
-<p>第二个小时，考试群里开始有一些人探讨结果，群主还通知说上车前给教练打电话，有他在旁边就一定能过，我们猜测这就是所谓「包过」的操作，心中有了一些安慰：</p>
-<img data-src="https://s2.loli.net/2022/06/13/O83odwQGsg9tczC.png" width="300" height="600">
+<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
+<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
+<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
+<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
+<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
+<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
+<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
 
-<p>第三个小时，开始怀疑考试名单的公正性，因为如果按照报名顺序来考试，那我们这些一到点就报名的人，怎么也不会都三个小时了还没排到，但是无解。同时考试群里开始接龙考试结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/xpGEthc4NeSrFvs.png" width="300" height="600">
-
-<p>第四个小时，中午的饭点到了，但因为不确定我们什么时候被叫到，所以还是在候考室等，窗外不时有人抽烟，烟雾随风飘到室内，怕自己的沙哑低音炮更沙哑，只能友善提醒他们站远一点抽，然后无聊的四个人开始研究手相：</p>
-<img data-src="https://s2.loli.net/2022/06/13/DqmUSG48bxA2Ncn.png" width="350" height="500">
-
-<p>第五个小时，人麻了。</p>
-<p>第六个小时，手机快没电了，也没带充电宝，麻中麻。</p>
-<p>在朝着「麻中麻中麻」的状态转变的时候，终于到我们考了，等了6个小时，考试却只有5分钟，结果：</p>
-<img data-src="https://s2.loli.net/2022/06/13/K1d4AabhOM9Se2q.png" width="300" height="600" alt="整整齐齐"><span class="image-caption">整整齐齐</span>
-
-<p>除了H君一把满分过，我、L君、Z君三个人整整齐齐的挂了。其中，我最自信也最离谱，不仅起步就熄火甚至连第一个半坡都没上上去，而且在坡上熄火滑了下来，两把都是这样。</p>
-<p>这和我之前练车的状态完全不一样，L君也觉得很离谱(她周末明明还来练了车)，后来三个人复盘了一下，发现我们是用同一辆车考的，就是2号车，我们上车的时候都发现这辆车非常容易熄火，他们两个人还说即使开着一档，没有加油，车子也会莫名其妙的开始加速，这导致他们在桩考的时候撞杆，H君则是用1号车考的。</p>
-<p>我们当然按照上面说的考试之前给教练打了电话，他也过来跟我们打了招呼，然后，他就站在旁边，看着我们考试，完全没有想象中的有什么「包过」操作，所以为什么之前说「我在你旁边你绝对能过」？难道他在用什么意念魔法操纵考试车？总之我们还是挂了，非常离谱。</p>
-<h2 id="科三：看过即考过"><a href="#科三：看过即考过" class="headerlink" title="科三：看过即考过"></a>科三：看过即考过</h2><p>我最有自信的科二都挂了，连车都没练过的科三当然更没有把握，但还是硬着头皮去考了，心中默想着之前看过的视频里科三的操作点，然后，我竟然神奇的一把满分过了科三，非常的魔幻，我们四个人都过了。</p>
-<p>我们也在考试之前给教练打了电话(虽然不知道有什么用)，但他没有过来在旁边看我们考试，也许没有他的「魔法加持」，反而容易过了？总之这次车子没有莫名其妙的熄火，可能是之前人麻了挂了一科之后醒了？</p>
-<h2 id="所谓的「包过」"><a href="#所谓的「包过」" class="headerlink" title="所谓的「包过」"></a>所谓的「包过」</h2><p>考完科三，已经是下午5点多了，天色渐晚，考试还在进行，考场也快下班了。在考试群里咨询科二怎么办，教练说让我们等着，本着「中国人不骗中国人」的原则，我们就一直等着：</p>
-<img data-src="https://s2.loli.net/2022/06/13/M5S7xcFazv6K1CG.jpg" width="300" height="620" alt="等着"><span class="image-caption">等着</span>
-
-<p>一个多小时以后，下午6点多，天黑了，教练让我们重新做身份验证，再考一次，L君和Z君没有用2号车，摸着黑自己考过了科二，而我，好死不死又轮到了2号车，由于科三一把过，所以我觉得可能不是车的问题，也许当时自己人麻了吧，操作不当，这样想着我还是上了2号车。</p>
-<p>然而，第一把还是莫名其妙熄火了，我没有换车，依然用2号车考第二把，这次成功上了半坡，但是，绕桩的时候出现了之前L君和Z君描述的问题，我没有加油，但车子突然失控一般开始加速，导致我撞杆了，所以，第二把也挂了。</p>
-<p>我不知道怎么办了，打电话给驾校老板，让他安排无论如何今天过科二，但是无果，然后我就明白了，所谓的「包过」操作，就是在白天正常考试挂了之后，等考场下班再免费安排一次补考，还是自己考。<br>说白了根本没有「包过」，就是自己过。</p>
-<p>这太可笑了，报名的时候明明承诺我们只用来这里两次，我们已经来了一次考科一和练车，这次来了是计划考科二科三科四拿照的，结果我们等了6个小时人麻了不说，我的科二也没有过还要补考，之前承诺的「包过」就是个笑话，他们三个还要再来一次单独考科四。</p>
-<p>气不过找老板理论，他还是来来回回那些话术，说的我脑仁疼，在我们的据理力争下，给我们每人退了60块钱，不过这根本不能治愈我的心塞，在我要求之后接送我补考的时候，他竟然以之前报名的时候便宜了50块钱接送费为由拒绝我，又气到语塞，罢了罢了，我已经不想再听他说话了。</p>
-<p>这个时候已经是晚上8点半，从早上8点半开始，在这里待了12个小时，没有吃饭的四个人，折腾了一天经历了这么多离谱的事情(尤其是我)，就地找了一家炒菜店，豪掷百金点了份大盘鸡，然后驱车回家结束了疲惫的一天：</p>
-<img data-src="https://s2.loli.net/2022/06/13/CrG39j6YHQeEpzM.png" width="500" height="400" alt="大盘鸡"><span class="image-caption">大盘鸡</span>
-
-<p>当天是周一，但我觉得我只能用接下来的一周来治愈这天发生的一切。</p>
-<h2 id="大怨种发烧"><a href="#大怨种发烧" class="headerlink" title="大怨种发烧"></a>大怨种发烧</h2><pre><code>事件发生时间：3月1日
+<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
 </code></pre>
-<p>前一天折腾一天，回家又收拾了半天，很晚才睡，然后控制不住去回想那些离谱的事儿，比如6小时、2号车，又比如驾校老板可笑的毫无意义的话术，越想越气睡不着，整个人变成一个大怨种。</p>
-<p>再加上之前就因为去考场变成了沙哑低音炮，不太舒服，终于在凌晨4点被难受醒，发现有点低烧，鼻子也开始不通了，只能请个病假，在家调整自己，继续被怨种心态折磨：</p>
-<div class="tabs" id="怨种发言"><ul class="nav-tabs"><li class="tab active"><a href="#怨种发言-1">怨种发言 1</a></li><li class="tab"><a href="#怨种发言-2">怨种发言 2</a></li><li class="tab"><a href="#怨种发言-3">怨种发言 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="怨种发言-1"><img data-src="https://s2.loli.net/2022/06/13/V4NuECRzoHwgM2n.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-2"><img data-src="https://s2.loli.net/2022/06/13/MRoznjSDZteqQI8.png" height="600" width="300"></div><div class="tab-pane" id="怨种发言-3"><img data-src="https://s2.loli.net/2022/06/13/jkyqwhLgcZ61teN.jpg" height="620" width="300"></div></div></div>
+<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
+<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
+<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
+<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
 
-<p>已经分不清是因为生病导致的怨种心态，还是被怨种心态折磨生病，总之真的累了，决定先把这个放一段时间，转移注意力。不过被我说中了，坑确实还没完。</p>
-<h2 id="练车还是白给"><a href="#练车还是白给" class="headerlink" title="练车还是白给"></a>练车还是白给</h2><pre><code>事件发生时间：3月27日
+<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
+<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
+
+<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
+<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
 </code></pre>
-<p>沉寂了一个月以后(在这期间H君等三位早已考完科四拿到了照)，感觉自己的心态已经平复了(还能咋办呢，自己报的名，哭着也得把照考完)，所以又约了考试，约完之后，群里负责人又说最近系统升级了，不好操作什么的，让我们好好练车，我就寻思之前有啥操作，大无语：</p>
-<img data-src="https://s2.loli.net/2022/06/13/LXs92rJOw5DtIWy.png" height="600" width="300" alt="薛定谔的「操作」"><span class="image-caption">薛定谔的「操作」</span>
+<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
+<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
+<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
 
-<p>总之还是得来练车，万恶之源L君陪我一起，早上9点到考场开始练，一共3个车排了3队，人很多，排一轮得四五十分钟，还是有大叔在队伍抽烟，这次我很坚决的让他们找别的地方抽。</p>
-<p>这里又有一个奇葩的插曲，有个女生带了个大叔，练车的只有女生，但他们两个间隔一段距离都在排队，女生练完之后，又和大叔交换位置继续排，大叔就跑到队尾重新替她排，真的打开了我的眼界，这样也可以？早知道也让L君这样替我排了，离谱。</p>
-<p>练车的时候，2号车又出现了问题，刚开始师傅还说是学员的操作不当，当然不是(没人比我更懂2号车了)，后来在大家的抱怨下，师傅换了车，然后检查发现2号车确实马达有问题。。。</p>
-<img data-src="https://s2.loli.net/2022/06/13/YOcxW95VRZ7BuXH.png" height="400" width="500" alt="练车现场"><span class="image-caption">练车现场</span>
+<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
+<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
 
-<p>为什么说这次练车是白给呢？因为这次来只有一个目的，就是听到「考试合格」的系统语音播报(练车的时候也开了考试系统)，可即使我没有用2号车练，也没有听到这个语音，L君旁观甚至觉得我的表现还不如第一次来考科一那天练车的水平，她让我别练了，说我心态不对，练多了反而会适得其反。</p>
-<p>准备回去的时候，有个教练说可以稍我和L君到公交站，路上聊到考照，他问我们是不是在西安本地找的驾校报名，在得到肯定的答复后他一脸了然，用吐槽的语气说：你们报名的时候肯定忽悠是包过吧，其实哪有什么包过，都是自己练车过，不可能有什么操作的，我苦笑，心想我可太明白了，可我明白的太晚了。</p>
+<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
+<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
+<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
+<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
+<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
+<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
+
+<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
+<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
+<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
+<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
+<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
+<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
+</code></pre>
+<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
+<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
+
+<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
         <category>骑上我心爱的小摩托</category>
       </categories>
       <tags>
-        <tag>科目二</tag>
+        <tag>增驾</tag>
       </tags>
   </entry>
   <entry>
@@ -5012,71 +5077,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>增驾摩托车奇幻之旅(上)</title>
-    <url>/my-lovely-moto/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
-
-<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
-<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
-<p>Deal! </p>
-<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
-</code></pre>
-<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
-<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
-<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
-<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
-<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
-<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
-<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
-
-<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
-</code></pre>
-<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
-<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
-<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
-<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
-
-<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
-<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
-
-<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
-<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
-</code></pre>
-<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
-<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
-<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
-
-<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
-<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
-
-<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
-<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
-<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
-<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
-<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
-<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
-
-<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
-<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
-<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
-<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
-<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
-<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
-</code></pre>
-<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
-<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
-
-<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>骑上我心爱的小摩托</category>
-      </categories>
-      <tags>
-        <tag>增驾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的厨艺进阶之路</title>
     <url>/myCookingWay/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/82ec95aLFtVkzAJ.png">
@@ -5122,6 +5122,37 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>两个人的春节</title>
+    <url>/sf-of-2p/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
+
+<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
+<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
+<p>之后春节假期，每一天都有他的陪伴。</p>
+<ul>
+<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
+<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
+<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
+<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
+<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
+<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
+</ul>
+<p>两个人过年，也很温馨快乐。</p>
+<p>疫情放开以来，我一直没被感染。</p>
+<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
+<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
+<p>这才不是一篇水文呢喂！</p>
+</div>]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>时间过慢点</category>
+      </categories>
+      <tags>
+        <tag>2023</tag>
+        <tag>春节</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>社畜的内心独白</title>
     <url>/she-chu-feb/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2023/02/26/ViQFtOyS6I35f2g.png">
@@ -5154,37 +5185,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>社畜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两个人的春节</title>
-    <url>/sf-of-2p/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png">
-
-<div class="note info"><p>种种原因，今年我没能和家人一起过年。</p>
-<p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p>
-<p>之后春节假期，每一天都有他的陪伴。</p>
-<ul>
-<li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li>
-<li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li>
-<li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li>
-<li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li>
-<li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li>
-<li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li>
-</ul>
-<p>两个人过年，也很温馨快乐。</p>
-<p>疫情放开以来，我一直没被感染。</p>
-<p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p>
-<p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p>
-<p>这才不是一篇水文呢喂！</p>
-</div>]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>时间过慢点</category>
-      </categories>
-      <tags>
-        <tag>2023</tag>
-        <tag>春节</tag>
       </tags>
   </entry>
   <entry>
@@ -6144,35 +6144,6 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
-    <title>博客好久没更了</title>
-    <url>/why-am-not-writing-more-blogs/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
-
-<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
-<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
-<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
-<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
-<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
-<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
-<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
-<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
-<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
-<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
-</div>
-
-<blockquote>
-<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>瞎写写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
@@ -6242,6 +6213,35 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </categories>
       <tags>
         <tag>闰年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客好久没更了</title>
+    <url>/why-am-not-writing-more-blogs/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
+
+<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
+<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
+<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
+<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
+<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
+<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
+<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
+<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
+<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
+<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
+</div>
+
+<blockquote>
+<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>瞎写写</tag>
       </tags>
   </entry>
   <entry>
