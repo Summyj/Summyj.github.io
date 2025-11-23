@@ -58,18 +58,39 @@ class GoogleTranslateService {
     const currentUrl = window.location.href;
     const urlObj = new URL(currentUrl);
     
-    // 如果已经在 translate.goog 域名下，先提取原始域名
-    let hostname = urlObj.hostname;
-    if (hostname.includes('.translate.goog')) {
-      // 移除 .translate.goog 后缀，恢复原始域名
-      hostname = hostname.replace('.translate.goog', '');
+    // 如果已经在翻译页面，先提取原始URL
+    let originalUrl = currentUrl;
+    if (urlObj.hostname.includes('.translate.goog')) {
+      // 从 translate.goog 恢复原始URL
+      const hostname = urlObj.hostname.replace('.translate.goog', '');
+      let path = urlObj.pathname + urlObj.search;
+      // 移除翻译参数
+      const params = new URLSearchParams(urlObj.search);
+      params.delete('_x_tr_sl');
+      params.delete('_x_tr_tl');
+      params.delete('_x_tr_hl');
+      params.delete('_x_tr_pto');
+      if (params.toString()) {
+        path = urlObj.pathname + '?' + params.toString();
+      } else {
+        path = urlObj.pathname;
+      }
+      originalUrl = urlObj.protocol + '//' + hostname + path;
     }
     
-    // 使用 translate.goog 域名格式，直接在域名前插入 translate.goog
-    // 例如: https://jmyblog.top/ -> https://jmyblog.top.translate.goog/
-    const translateUrl = `${urlObj.protocol}//${hostname}.translate.goog${urlObj.pathname}${urlObj.search}?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp`;
+    // 检查是否已经在 Google Translate 页面
+    if (urlObj.hostname.includes('translate.google.com')) {
+      // 如果已经在翻译页面，提示用户
+      this.showToast('您已经在翻译页面了', 'info');
+      return;
+    }
     
-    // 在当前窗口跳转到翻译页面
+    // 使用 Google Translate 的标准网页翻译服务
+    // 这种方式更可靠，不会出现SSL证书问题
+    // Google Translate 会在iframe中显示翻译后的页面内容
+    const translateUrl = `https://translate.google.com/translate?sl=auto&tl=en&hl=en&u=${encodeURIComponent(originalUrl)}`;
+    
+    // 在当前窗口打开翻译页面（Google Translate会在iframe中显示翻译后的内容）
     window.location.href = translateUrl;
   }
 
