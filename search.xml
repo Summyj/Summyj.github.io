@@ -33,57 +33,33 @@
       </tags>
   </entry>
   <entry>
-    <title>网络无障碍</title>
-    <url>/Accessibility-test/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"><span class="image-caption">Accessibility</span></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<mark class="label info">网络无障碍测试</mark>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<mark class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></mark></p>
-<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
-<blockquote>
-<p>网络无障碍辅助功能（Accessibility，也被称为 <mark class="label danger">a11y</mark>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
-</blockquote>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
-<div class="note info"><p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
-</div>
+    <title>20岁光阴不再来</title>
+    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间啊，你慢点走。</p>
+<span id="more"></span>
 
-<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
+<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
+<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
+<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
+<p><strong>忠告</strong></p>
 <ul>
-<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
-<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
+<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
+<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
+<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
 </ul>
-<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<mark class="label info">前端童鞋</mark>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
-<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
-
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning"><p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
-</div>
-<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
-<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
-<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
-<img data-src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
-
-<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
-<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
-<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
-<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
-<div class="note info"><p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
-</div>
-<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
-<div class="note primary"><p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
-</div>
-<img data-src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
-不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
-
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
-<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
+<p><strong>建议</strong></p>
+<ul>
+<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
+<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
+<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
+        <category>心灵奇旅</category>
+        <category>时间过慢点</category>
       </categories>
       <tags>
-        <tag>网络无障碍</tag>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -154,33 +130,108 @@
       </tags>
   </entry>
   <entry>
-    <title>20岁光阴不再来</title>
-    <url>/20%E5%B2%81%E5%85%89%E9%98%B4%E4%B8%8D%E5%86%8D%E6%9D%A5/</url>
-    <content><![CDATA[<p>时间啊，你慢点走。</p>
-<span id="more"></span>
+    <title>端午色达四日游</title>
+    <url>/6-6-travel/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>端午节假期又和朋友一起报团去四川色达旅游，以下内容还是转载自 <a href="http://www.mafengwo.cn/i/13623502.html">朋友写的语文课代表式游记</a> ，加了一些自己拍的照片和感想，这次是三人行啦，由于来去匆忙，这次没有时间去成都街头走走。</p>
 
-<p>这个TED演讲是博主几年前看过的，留下了很深的印象。今天又重温了一遍，感触更深了。所以推荐给大家，TED名字叫做”<strong>20岁光阴不再来</strong>“，亲们也可以在网易公开课里看到。</p>
-<p><object width="640" height="360"><param name="movie" value="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><embed src="http://swf.ws.126.net/openplayer/v01/-0-2_M937IFCGB_M937IJLUA-vimg1_ws_126_net//image/snapshot_movie/2013/7/G/2/M937IJDG2-1423031805654.swf?isTEDPlay=1" type="application/x-shockwave-flash" width="640" height="360" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"></object></p>
-<h2 id="我的观后感"><a href="#我的观后感" class="headerlink" title="我的观后感"></a>我的观后感</h2><p>在这个TED中，演讲者给出了一些对20多岁年轻人的忠告和建议，可以概括为以下几点：</p>
-<p><strong>忠告</strong></p>
-<ul>
-<li>30岁不是新的20岁，所以不要挥霍你时间，而是应该用这些时间去做一些有意义的事。年长者总会对20岁的年轻人说“你们还年轻，未来会有的”，实际上这不是一种激励，而是麻痹了年轻人的奋斗激情，助长他们的拖延症。如果我们真的听从了这些年长者的话，30岁才开始建立事业、家庭，可那个时候你又凭什么做到这些呢？</li>
-<li>不要坐井观天，不要做无谓的探索，因为更多的时候你不是在探索未来，你只是想拖延。</li>
-<li>不要等到该结婚的年龄才随便找个人建立婚姻关系。就像演讲者说的：20岁时谈恋爱就像玩抢椅子，每个人都东奔西跑的玩乐，但是在30岁左右时音乐停止了。每个人都开始坐下，我不想只有我站着，所以我才想嫁给我的丈夫，因为他是我30岁时离我最近的椅子。</li>
-</ul>
-<p><strong>建议</strong></p>
-<ul>
-<li>对自己进行投资，投资的目标是成为你想成为的人。包括未来工作所需和生活精神需要。比如健身、读书、学习专业知识等等。</li>
-<li>学会利用身边的弱关系，扩大交际范围，而不是只跟与自己年岁、思维方式相差不多的人交往。比如演讲者提到了一个患者通过室友的表亲找到了心仪的工作。</li>
-<li>从现在开始选择自己的家人，你以后想跟谁生活在一起，想拥有什么样的婚姻。而不是等到30岁才思考这个问题。</li>
-</ul>
+</blockquote>
+
+<h2 id="日期加花费"><a href="#日期加花费" class="headerlink" title="日期加花费"></a>日期加花费</h2><div class="note info"><p>出行日期： 6.6-6.9<br>出行方式： 报团 899/人<br>个人花费：团费899+餐饮门票331+往返车票263*2 = 1756<br>出发地： 西安<br>集合地： 成都</p>
+</div>
+
+<h2 id="Day-1-桃坪羌寨"><a href="#Day-1-桃坪羌寨" class="headerlink" title="Day 1: 桃坪羌寨"></a>Day 1: 桃坪羌寨</h2><blockquote>
+<p>门票：60元</p>
+</blockquote>
+<p>到达的第一站是桃坪羌寨，据说是黄渤主演电影「杀生」的取景地，这里有新寨和旧寨之分，我们参观的重点是旧寨。旧寨依山而建，寨子看起来浑为一体。<br><img data-src="https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png" alt="羌寨"><span class="image-caption">羌寨</span></p>
+<p>走进之后，里面小路四通八达，通向家家户户，幸而寨子的面积不是很大，否则外来者很容易迷路。阴天又有下雨的趋势，倒给原本古朴的寨子增添了神秘的色彩。<br><img data-src="https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg" width="400" height="500" alt="从寨内小路向上望"><span class="image-caption">从寨内小路向上望</span></p>
+<p>寨中的房子以石头为主要的建筑材料。石头可以就地取材，可以保持室内温度，是最合适不过的。<br><img data-src="https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png" alt="寨内房屋"><span class="image-caption">寨内房屋</span></p>
+<p>我在寨子中爬上了最高的碉堡，碉堡下宽上窄，有七层，通过厚重的木质楼梯连接，到最顶层时，只能容下三四人站立，极目远眺可以将寨中的风景一览无余。<br><img data-src="https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg" alt="碉堡内的木质楼梯"><span class="image-caption">碉堡内的木质楼梯</span><br><img data-src="https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg" width="400" height="500" alt="在碉堡顶层眺望的游客们"><span class="image-caption">在碉堡顶层眺望的游客们</span></p>
+<p>走在寨中树荫遮蔽的石板路上，脚下水声潺潺而过，若是在盛夏，那酷暑之感都消了大半。这里地下水系交罗密织，可以为寨中人提供生活用水，消防用水，再者可以调节室温，更可以在紧急时作为逃生通道，真是充满智慧的设计。<br><img data-src="https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png" width="400" height="500" alt="寨中的石板路"><span class="image-caption">寨中的石板路</span><br><img data-src="https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png" alt="寨中小桥"><span class="image-caption">寨中小桥</span><br><img data-src="https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg" width="400" height="500" alt="桥边写生的人们"><span class="image-caption">桥边写生的人们</span></p>
+<p>新寨处有许多卖车厘子的人，一番游览之后，在这里会不由自主的被那颜色艳丽的车厘子夺去目光，自然慷慨解囊。在等候午餐的间隙，品尝着清甜的车厘子，美事一桩。<br><img data-src="https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg" width="400" height="500" alt="午餐时间"><span class="image-caption">午餐时间</span></p>
+<p>结束游览后，在大巴车上也随处可见树木葱郁的林山，白云浮在山顶亦如仙境。<br><img data-src="https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg" alt="林山"><span class="image-caption">林山</span></p>
+<h2 id="Day-2-天葬台与佛学院"><a href="#Day-2-天葬台与佛学院" class="headerlink" title="Day 2: 天葬台与佛学院"></a>Day 2: 天葬台与佛学院</h2><p>早上从观音桥出发，坐着大巴在路上，我们被几只猴子挡住了去路，只好停车。司机说我们得给这些猴子一点「过路费」他们才会走开，于是有游客给它们投喂了很多面包零食之类。这些猴子也不怕我们，甚至在大巴门口拍打窗户，还在游客窗边讨要食物，大家都感慨这些猴子也太聪明了。<br>过了一阵，到了一个休息区，在这里看到了更多猴子，喂食的人也很多，它们好似知道这是游客的休息区一样，成群结队的在这里讨要食物。天气很好，我捕捉到了山间彩虹。<br><img data-src="https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg" alt="彩虹和讨食的猴子"><span class="image-caption">彩虹和讨食的猴子</span></p>
+<p>中午一点，我们抵达了天葬台。<br>天葬是藏族的习俗，他们相信秃鹫食用了故去的人的骨肉后，会把他们的灵魂带到更接近天际的地方。天葬台位于1/3山高的地方，去往天葬台的路上会看到很多石堆、石刻的建筑，多用骷髅头作装饰，显得更加肃穆。<br><img data-src="https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg" width="400" height="500" alt="天葬台下的肃穆建筑"><span class="image-caption">天葬台下的肃穆建筑</span></p>
+<p>天葬台右侧是一层层的阶梯，供游客们坐下观看天葬仪式。举行天葬在下午一点到三点间，不到一点我们就在看台上等待了。一点多，有一只秃鹫从天空中慢慢低旋停在了看台侧的山地上，有了第一只，后续的就陆续而至，抬眼望去，湛蓝的天空中许多的秃鹫回旋，大大小小的约有两百多只，场面甚是震感，这也是我第一次近距离看到秃鹫。<br><img data-src="https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png" alt="空中回旋等待的秃鹫"><span class="image-caption">空中回旋等待的秃鹫</span></p>
+<p>天葬仪式在一点半开始，我看到陆续有僧人和工人抬着一袋袋麻袋放在天葬台上，有游客说这就是供秃鹫们食用的尸体。<br>之后他们先用帘子挡住麻袋，这样游客们就看不到秃鹫进食时血腥的场面，虽然看不到，但从天葬台上黑压压盘飞的秃鹫来看，也不难想象到他们已经从麻袋中取出了尸体。不一会，空气中就弥漫着浓重的血腥气味，大概10分钟左右，秃鹫散开，各自飞离，天葬台又恢复了平静。<br>整个过程庄严肃穆，让我想到了佛祖割肉喂鹰的故事，万物有灵。</p>
+<p>离开了天葬台，下一站就是我们此次的重点–佛学院。<br>我们在佛学院的入口处下了大巴，这里有去往山上佛学院的公交，然后乘坐公交车到达终点—坛城。<br><img data-src="https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg" width="300" height="400" alt="佛学院公交牌"><span class="image-caption">佛学院公交牌</span></p>
+<p>带着一份惊喜，我们一步步的走到了观景台，从最高处的观景台俯瞰佛国，最中心是大学模样的佛学院，四周是层层渐进的红房子，用来休息住宿。远处青山平缓，高处天际湛蓝，簇簇云彩之下，是红色的佛国，这样宁心舒缓的红，伴着声声梵音，圣洁高贵。<br><img data-src="https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg" alt="俯瞰色达"><span class="image-caption">俯瞰色达</span><br><img data-src="https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg" alt="换个角度俯瞰色达"><span class="image-caption">换个角度俯瞰色达</span></p>
+<p>原本打算顺着蜿蜒曲折的路迤逦而下，谁知刚刚没走几步，头顶的乌云就不辞辛劳的开始了工作。雨点簌簌而下，我们只好去屋下躲避，我本来想说有一句歌词很合景–“爱就是晴空万里突然暴风雨”，正当我为自己反应迅速而努力喝彩时，经旁人说起才发觉原来是在下冰雹，我已经好些年有没有看到过下冰雹了，小小的白色晶状体砸在手上还是有些痛感的。</p>
+<h2 id="Day-3-色达佛学院"><a href="#Day-3-色达佛学院" class="headerlink" title="Day 3: 色达佛学院"></a>Day 3: 色达佛学院</h2><p>今天早上的行程还是去色达佛学院，昨天因为天气的缘故匆匆一览，今天天气凉爽，适合缓行。<br>因为节假日的缘故，公交车只行至山腰处，剩下的路要步行。本着上下决不走同一条路的原则，我们挑了一处比较陡峭的台阶，打算沿台阶而上，到达山顶之后可以从公交车行驶的大道缓步而下。从下而上仰视色达，密集的红房子也是一种视觉震撼。<br><img data-src="https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg" width="400" height="500" alt="仰视角度的色达"><span class="image-caption">仰视角度的色达</span></p>
+<p>沿台阶而上比较费力，所幸每走一段就会有长椅可以休息。由于这里海拔比较高，我们还买了氧气瓶以备不虞，边吸氧边拾级而上也是一种奇妙的体验。<br><img data-src="https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg" width="300" height="400" alt="累了就吸会氧"><span class="image-caption">累了就吸会氧</span></p>
+<p>越往上走，视野越开阔，所见的风景越深邃悠远。我们看到了身侧有许多的佛学院的学生，身着红色的衣裳，虔诚的去往课堂，一时间我想起了大学时同舍友结伴去上课的场景，轻快愉悦。<br><img data-src="https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg" width="300" height="400" alt="山顶的佛堂"><span class="image-caption">山顶的佛堂</span></p>
+<p>我们到达山顶之后，略作休息就缓步下山。一路上挑着小路而下，光顾了佛学院里的水果摊、杂货铺、早餐店、纪念品商店，这时我发觉这是一座有着生活气息的佛学院，不是一座不食人间烟火的清冷殿堂，也不是一处只供游人赏玩的旅游胜地。<br>对于那些虔诚学习的学生而言，这里是佛学的殿堂。<br><img data-src="https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg" alt="山脚下的风光"><span class="image-caption">山脚下的风光</span></p>
+<p>旅途结束后回到住所，和同游的朋友们一起吃串串，打麻将也是一番趣味，卸去一天的疲惫。<br><img data-src="https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg" alt="串串吃起来"><span class="image-caption">串串吃起来</span><br><img data-src="https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg" alt="麻将搓起来"><span class="image-caption">麻将搓起来</span></p>
+<h2 id="Day-4-西索民居与卓克基官寨"><a href="#Day-4-西索民居与卓克基官寨" class="headerlink" title="Day 4: 西索民居与卓克基官寨"></a>Day 4: 西索民居与卓克基官寨</h2><p><img data-src="https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg" alt="西索民居"><span class="image-caption">西索民居</span><br>西索民居，清晨走在略带湿意的青石小路上，周边静谧安逸，我从村庄中部穿插而过，有一瞬间，觉得这条路，路两侧的石制小屋，屋前的各色盆植鲜花似乎只供我一人独赏，这是何等的惬意。<br><img data-src="https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png" alt="民居小路"><span class="image-caption">民居小路</span><br><img data-src="https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg" alt="远眺西索民居"><span class="image-caption">远眺西索民居</span></p>
+<blockquote>
+<p>卓克基官寨 门票 ： 60 元，部分图片来源于：<a href="http://blog.sina.com.cn/s/blog_8b4d9d180102yj09.html">卓克基土司官寨：毛主席曾经住过的嘉绒藏族城堡</a></p>
+</blockquote>
+<p>卓克基官寨前有一条青石台阶路，曲折而上直至寨前。石阶的里侧是片片山石垒起的石壁，石壁之上是木制的围栏，木栏外侧悬挂着各色花卉，颜色艳丽，不一而同。石壁之内乔木茂密，树荫于木栏之外为青石台阶遮蔽艳阳。走在这样诗意的石阶上，哪里还有什么忧愁。<br><img data-src="https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png" width="400" height="500" alt="石阶"><span class="image-caption">石阶</span></p>
+<p>卓克基官寨这样有特色的建筑我还是第一次见到。它是一个正方形的建筑，外侧是石砌的，里面大都是木制结构。由正门而入，东南 西北 四侧都建有房屋，彼此相连。<br><img data-src="https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png" alt="官寨大门"><span class="image-caption">官寨大门</span></p>
+<p>除了出入的正门侧有三层高外，其余的四侧都是五层高。一层是储物用的地方，二层是革命者的曾经的居所，三层是土司居住的地方，卧室，厨房，餐厅，管家的住所，议事的厅堂一应俱全。四层是供奉佛像金身的所在，五层有乞求长生的供奉处和僧众祷告的场所。一处官寨，涵盖万千。真的是匠心独运。<br><img data-src="https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png" alt="官寨内部"><span class="image-caption">官寨内部</span><br><img data-src="https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png" alt="四楼远望"><span class="image-caption">四楼远望</span></p>
+<p>当我在四层参观供奉佛像的大殿时，只觉得经幡高悬，佛像高大庄严，壁画精美，不由得怀揣一颗虔诚的心。走到五楼相同的位置时，想推门而入看一下这处的设置，却发觉这里没有门，只有窗。透过窗看到了与四楼同样的风景，这时才发觉四楼与五楼是打通了的，否则何以有那么高大的佛像，只是身处四楼的时候只沉浸在殿堂的威严肃穆中，忽略了其他，到了五楼才后知后觉。<br><img data-src="https://i.loli.net/2021/06/28/viK9INcxEVns3By.png" alt="官寨佛像"><span class="image-caption">官寨佛像</span></p>
+<p>官寨之外设有囚室三间。第一间有一扇正常大小的窗户，屋内还算明亮；第二间有一扇小窗户，屋内顿觉昏暗不少；第三间只有一个通气口，屋内暗黑压抑，不能视物。这三间分别关押罪行由轻至重的人，看这囚室的设计，单是被关押到第三间中，无错也会觉得自己有罪的。被剥夺光明真是一件很恐怖的事情。</p>
 ]]></content>
       <categories>
         <category>心灵奇旅</category>
-        <category>时间过慢点</category>
+        <category>世界那么大</category>
       </categories>
       <tags>
-        <tag>TED</tag>
+        <tag>色达</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络无障碍</title>
+    <url>/Accessibility-test/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/01/19/LBdwixRJcjbS7NK.png" alt="Accessibility"><span class="image-caption">Accessibility</span></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于工作原因，博主最近在做<mark class="label info">网络无障碍测试</mark>，之前也听说过，但是没有实践。深入了解之后才发现网络无障碍已经有很成熟的标准和实践了，研究了一天，所以想把自己的发现跟大家分享一下(所以说公司真是一个涨姿势的好地方)。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="温情版定义"><a href="#温情版定义" class="headerlink" title="温情版定义"></a>温情版定义</h3><p>这个世界上，有一些人听不见，有的人看不见，也有人肢体有障碍。<br>互联网时代，手机不离身。娱乐、交流、还有许多生活应用都可以通过网络进行。在网络给我们带来快乐和便利的同时，是否也会想到上述特殊人群也需要这些呢？所以，<mark class="label info">网络无障碍要求所有人都可以平等、无障碍的访问互联网应用和内容，让世界充满爱<span class="emoji" alias="blush" style="fallback-src=https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8">😊</span></mark></p>
+<h3 id="专业版定义"><a href="#专业版定义" class="headerlink" title="专业版定义"></a>专业版定义</h3><p>网络无障碍听起来是很温情，然而作为一名IT民工，温情之余，也还是要干(ban)活(zhuan)的。<br>所以要支持网络无障碍，在开发互联网应用时，就必须得加上这么一个功能<span class="emoji" alias="point_down" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f447.png?v8">👇</span></p>
+<blockquote>
+<p>网络无障碍辅助功能（Accessibility，也被称为 <mark class="label danger">a11y</mark>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母，这种命名方式可以说很想不到了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+</blockquote>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>上边提到了网络无障碍辅助功能，那么在做功能之前我们需要干什么呢？当然是了解需求。</p>
+<div class="note info"><p><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">WCAG标准(Web Content Accessibility Guidelines)</a> 是由权威组织 <strong>W3C(万维网联盟)</strong> 于1999年推出的网络无障碍指南。目前已经更新到了2.1版本，此版本最近的更新在2019/3/11。<br>里边提出了Web内容应当遵守的4大准则，并且根据网站对这些准则的实施情况分为<strong>A、AA、AAA</strong> 3种一致性水平。</p>
+</div>
+
+<p>WCAG标准相当于一个网络无障碍相关的需求集合，但在实际工作中，网络无障碍的需求要根据具体情况而定，一般会从这两个角度出发提出需求：</p>
+<ul>
+<li>需求1: 从WCAG标准的一致性水平角度出发，要求实现A/AA/AAA水平。</li>
+<li>需求2: 从人类本体对无障碍访问的需求角度出发，要求实现有看不见/听不见/色弱等身体缺陷人群，也能访问页面。</li>
+</ul>
+<p>有时候也会把这两种角度结合在一起提出需求，比如实现A水平，也要实现身体缺陷人群的访问，所以需求是可定制的。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>对于开发而言，网络无障碍的支持主要由<mark class="label info">前端童鞋</mark>们来实现。<br>在实际项目中，一般来说无障碍不会作为网站的原始需求，更多是作为一种改进，但无论是否原始需求，开发童鞋需要做的是：</p>
+<div class="tabs" id="step"><ul class="nav-tabs"><li class="tab active"><a href="#step-1">Step 1</a></li><li class="tab"><a href="#step-2">Step 2</a></li><li class="tab"><a href="#step-3">Step 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="step-1"><p>非原始需求跳到第二步。了解一些基础的WCAG编码实践，可以参考<a href="https://zh-hans.reactjs.org/docs/accessibility.html">React官方网站</a>给出的编码建议。</p></div><div class="tab-pane" id="step-2"><p>使用下文的开发辅助工具和浏览器检测工具改代码。</p></div><div class="tab-pane" id="step-3"><p>交给测试仙女姐姐之前，自己做做下文中的简易手工测试。</p></div></div></div>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><div class="note warning"><p>在测试之前，我们需要谨记：任何工具都不能告诉我们web内容是否真的做到了网络无障碍，只有<strong>人</strong>才能确定真正的无障碍性。但这些工具可以帮助我们<strong>评估</strong>网页内容的无障碍性。</p>
+</div>
+<h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><h4 id="可在IDE使用的开发辅助工具"><a href="#可在IDE使用的开发辅助工具" class="headerlink" title="可在IDE使用的开发辅助工具"></a>可在IDE使用的开发辅助工具</h4><p><span id="inline-toc">1.</span>IDE智能检测<br><span id="inline-toc">2.</span><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y 插件</a><br><span id="inline-toc">3.</span><a href="https://github.com/dequelabs/react-axe">react-axe组件</a>，可以直接把无障碍访问的发现显示在控制台中</p>
+<h4 id="浏览器检测工具"><a href="#浏览器检测工具" class="headerlink" title="浏览器检测工具"></a>浏览器检测工具</h4><p>凡是浏览器中检测网络无障碍的测试工具，都离不开<a href="https://github.com/dequelabs/axe-core">aXe-core</a>，它可以对应用进行自动及端至端无障碍性测试，还包含了对Selenium的集成。可以选择下列工具的一个或多个测试。</p>
+<p><span id="inline-toc">1.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">浏览器的无障碍辅助功能检测器Audits/LightHouse(基于aXe引擎)</a></p>
+<img data-src="https://i.loli.net/2020/04/22/FLf2MhVHe4lBR7S.png" width="300" height="400">
+
+<p><span id="inline-toc">2.</span>无障碍访问性检测器aXe(基于aXe-core组件)，可以添加<a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">浏览器插件</a>，也可以下载<a href="https://www.deque.com/axe/">安装包</a>。相比较Audits检测报告更详细。</p>
+<p><span id="inline-toc">3.</span>无障碍辅助的<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">浏览器插件WebAIM WAVE</a>(Web Accessibility Evaluation Tool)</p>
+<p><span id="inline-toc">4.</span>无障碍测试工具<a href="https://pa11y.org/">Pa11y</a>，可以自己配置测试基于的WCAG版本和一致性水平，也可以用来做持续集成。</p>
+<h4 id="简易手工测试"><a href="#简易手工测试" class="headerlink" title="简易手工测试"></a>简易手工测试</h4><p>已经有了上面的自动化检测工具，为什么还需要手工测试呢？如果你认为在LightHouse得到100分或者aXe/WAVE检测无error就意味着网站已经完全做到访问无障碍。那就Too Young Too Simple了。因为自动化工具只会返回那些最常见和最容易修复的可访问性问题的检测报告。正如axe引擎开发团队DequeLabs提到的那样：</p>
+<div class="note info"><p>The downside of the DevTools accessibility audit is that’s only half of the story. Your page may have scored a 94 in accessibility according to Lighthouse, but it’s only telling you the results of automated testing. You also have to perform manual accessibility testing to really know where you stand.</p>
+</div>
+<p>简易的无障碍手工测试，主要用到下面两种工具：<br><span id="inline-toc">1.</span>键盘<br>使用 Tab 和 Shift+Tab 来切换页面元素，用空格/enter键定位元素，比如下拉框等等。从而实现浏览整个页面。<br><span id="inline-toc">2.</span>屏幕阅读器</p>
+<div class="note primary"><p>在使用屏幕阅读器之前，先想想自己是否为屏幕阅读器正确标记了页面的元素？屏幕阅读器通过识别页面上的无障碍辅助对象来帮助用户浏览页面，这些对象均包含在无障碍辅助功能树中，它是DOM树的一个子集：</p>
+</div>
+<img data-src="https://i.loli.net/2020/04/22/dEF7fwu1TxXbtWg.jpg">
+不同设备，不同浏览器都有内置的屏幕阅读器设备，自己根据需求百度下<span class="emoji" alias="satisfied" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span>
+
+<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p><span id="inline-toc">1.</span>将像<a href="https://github.com/dequelabs/axe-core">axe-core</a>这样的库合并到自动化测试套件中，集成到pipeline。<br><span id="inline-toc">2.</span><a href="https://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/">将Pa11y集成到pipeline</a></p>
+<h3 id="专业测试机构"><a href="#专业测试机构" class="headerlink" title="专业测试机构"></a>专业测试机构</h3><p>除了开发团队，也有一些专业的网络无障碍测试机构，这些机构的员工大多都是有身体缺陷的人，他们会用自己的测试设备和个人体验帮助提升网站的可访问性。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span id="inline-toc">1.</span><a href="https://www.w3.org/Translations/WCAG21-zh-20190311/">W3C-Web Content Accessibility Guidelines</a><br><span id="inline-toc">2.</span><a href="https://zh-hans.reactjs.org/docs/accessibility.html">React-无障碍辅助功能</a><br><span id="inline-toc">3.</span><a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane">Accessibility Reference</a><br><span id="inline-toc">4.</span><a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review">How To Do an Accessibility Review</a><br><span id="inline-toc">5.</span><a href="https://pa11y.org/tutorials/">Pa11y tutorials</a><br><span id="inline-toc">6.</span><a href="https://bitsofco.de/pa11y/">Accessibility Testing with pa11y</a><br><span id="inline-toc">7.</span>同事在项目Space的文档&gt;.&lt;</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>网络无障碍</tag>
       </tags>
   </entry>
   <entry>
@@ -284,57 +335,6 @@
       <tags>
         <tag>Bitrise</tag>
         <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端午色达四日游</title>
-    <url>/6-6-travel/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>端午节假期又和朋友一起报团去四川色达旅游，以下内容还是转载自 <a href="http://www.mafengwo.cn/i/13623502.html">朋友写的语文课代表式游记</a> ，加了一些自己拍的照片和感想，这次是三人行啦，由于来去匆忙，这次没有时间去成都街头走走。</p>
-
-</blockquote>
-
-<h2 id="日期加花费"><a href="#日期加花费" class="headerlink" title="日期加花费"></a>日期加花费</h2><div class="note info"><p>出行日期： 6.6-6.9<br>出行方式： 报团 899/人<br>个人花费：团费899+餐饮门票331+往返车票263*2 = 1756<br>出发地： 西安<br>集合地： 成都</p>
-</div>
-
-<h2 id="Day-1-桃坪羌寨"><a href="#Day-1-桃坪羌寨" class="headerlink" title="Day 1: 桃坪羌寨"></a>Day 1: 桃坪羌寨</h2><blockquote>
-<p>门票：60元</p>
-</blockquote>
-<p>到达的第一站是桃坪羌寨，据说是黄渤主演电影「杀生」的取景地，这里有新寨和旧寨之分，我们参观的重点是旧寨。旧寨依山而建，寨子看起来浑为一体。<br><img data-src="https://i.loli.net/2021/06/28/xhYr2LFnjOdv4PA.png" alt="羌寨"><span class="image-caption">羌寨</span></p>
-<p>走进之后，里面小路四通八达，通向家家户户，幸而寨子的面积不是很大，否则外来者很容易迷路。阴天又有下雨的趋势，倒给原本古朴的寨子增添了神秘的色彩。<br><img data-src="https://i.loli.net/2021/06/28/6dn3CbMiZr7g5Qs.jpg" width="400" height="500" alt="从寨内小路向上望"><span class="image-caption">从寨内小路向上望</span></p>
-<p>寨中的房子以石头为主要的建筑材料。石头可以就地取材，可以保持室内温度，是最合适不过的。<br><img data-src="https://i.loli.net/2021/06/28/CqA9ZreQpR6z5mB.png" alt="寨内房屋"><span class="image-caption">寨内房屋</span></p>
-<p>我在寨子中爬上了最高的碉堡，碉堡下宽上窄，有七层，通过厚重的木质楼梯连接，到最顶层时，只能容下三四人站立，极目远眺可以将寨中的风景一览无余。<br><img data-src="https://i.loli.net/2021/06/28/swrIP1NJ3dczUK8.jpg" alt="碉堡内的木质楼梯"><span class="image-caption">碉堡内的木质楼梯</span><br><img data-src="https://i.loli.net/2021/06/28/ORw9ANsZreKcSyu.jpg" width="400" height="500" alt="在碉堡顶层眺望的游客们"><span class="image-caption">在碉堡顶层眺望的游客们</span></p>
-<p>走在寨中树荫遮蔽的石板路上，脚下水声潺潺而过，若是在盛夏，那酷暑之感都消了大半。这里地下水系交罗密织，可以为寨中人提供生活用水，消防用水，再者可以调节室温，更可以在紧急时作为逃生通道，真是充满智慧的设计。<br><img data-src="https://i.loli.net/2021/06/28/gJ3x2LTMvZkNrRp.png" width="400" height="500" alt="寨中的石板路"><span class="image-caption">寨中的石板路</span><br><img data-src="https://i.loli.net/2021/06/28/nuQF7JNT1qtCesO.png" alt="寨中小桥"><span class="image-caption">寨中小桥</span><br><img data-src="https://i.loli.net/2021/06/28/i7h4gUGkTFS1tN8.jpg" width="400" height="500" alt="桥边写生的人们"><span class="image-caption">桥边写生的人们</span></p>
-<p>新寨处有许多卖车厘子的人，一番游览之后，在这里会不由自主的被那颜色艳丽的车厘子夺去目光，自然慷慨解囊。在等候午餐的间隙，品尝着清甜的车厘子，美事一桩。<br><img data-src="https://i.loli.net/2021/06/28/r2dQpoM8FB7VOJP.jpg" width="400" height="500" alt="午餐时间"><span class="image-caption">午餐时间</span></p>
-<p>结束游览后，在大巴车上也随处可见树木葱郁的林山，白云浮在山顶亦如仙境。<br><img data-src="https://i.loli.net/2021/06/28/VZnLdPHioelI3Fy.jpg" alt="林山"><span class="image-caption">林山</span></p>
-<h2 id="Day-2-天葬台与佛学院"><a href="#Day-2-天葬台与佛学院" class="headerlink" title="Day 2: 天葬台与佛学院"></a>Day 2: 天葬台与佛学院</h2><p>早上从观音桥出发，坐着大巴在路上，我们被几只猴子挡住了去路，只好停车。司机说我们得给这些猴子一点「过路费」他们才会走开，于是有游客给它们投喂了很多面包零食之类。这些猴子也不怕我们，甚至在大巴门口拍打窗户，还在游客窗边讨要食物，大家都感慨这些猴子也太聪明了。<br>过了一阵，到了一个休息区，在这里看到了更多猴子，喂食的人也很多，它们好似知道这是游客的休息区一样，成群结队的在这里讨要食物。天气很好，我捕捉到了山间彩虹。<br><img data-src="https://i.loli.net/2021/06/28/I3g7qOXavZeK4dA.jpg" alt="彩虹和讨食的猴子"><span class="image-caption">彩虹和讨食的猴子</span></p>
-<p>中午一点，我们抵达了天葬台。<br>天葬是藏族的习俗，他们相信秃鹫食用了故去的人的骨肉后，会把他们的灵魂带到更接近天际的地方。天葬台位于1/3山高的地方，去往天葬台的路上会看到很多石堆、石刻的建筑，多用骷髅头作装饰，显得更加肃穆。<br><img data-src="https://i.loli.net/2021/06/28/wnHo2lPbVjN7XWv.jpg" width="400" height="500" alt="天葬台下的肃穆建筑"><span class="image-caption">天葬台下的肃穆建筑</span></p>
-<p>天葬台右侧是一层层的阶梯，供游客们坐下观看天葬仪式。举行天葬在下午一点到三点间，不到一点我们就在看台上等待了。一点多，有一只秃鹫从天空中慢慢低旋停在了看台侧的山地上，有了第一只，后续的就陆续而至，抬眼望去，湛蓝的天空中许多的秃鹫回旋，大大小小的约有两百多只，场面甚是震感，这也是我第一次近距离看到秃鹫。<br><img data-src="https://i.loli.net/2021/06/28/F3U6KElOn8oAr9h.png" alt="空中回旋等待的秃鹫"><span class="image-caption">空中回旋等待的秃鹫</span></p>
-<p>天葬仪式在一点半开始，我看到陆续有僧人和工人抬着一袋袋麻袋放在天葬台上，有游客说这就是供秃鹫们食用的尸体。<br>之后他们先用帘子挡住麻袋，这样游客们就看不到秃鹫进食时血腥的场面，虽然看不到，但从天葬台上黑压压盘飞的秃鹫来看，也不难想象到他们已经从麻袋中取出了尸体。不一会，空气中就弥漫着浓重的血腥气味，大概10分钟左右，秃鹫散开，各自飞离，天葬台又恢复了平静。<br>整个过程庄严肃穆，让我想到了佛祖割肉喂鹰的故事，万物有灵。</p>
-<p>离开了天葬台，下一站就是我们此次的重点–佛学院。<br>我们在佛学院的入口处下了大巴，这里有去往山上佛学院的公交，然后乘坐公交车到达终点—坛城。<br><img data-src="https://i.loli.net/2021/06/28/4cUBNm8jWvsGuVD.jpg" width="300" height="400" alt="佛学院公交牌"><span class="image-caption">佛学院公交牌</span></p>
-<p>带着一份惊喜，我们一步步的走到了观景台，从最高处的观景台俯瞰佛国，最中心是大学模样的佛学院，四周是层层渐进的红房子，用来休息住宿。远处青山平缓，高处天际湛蓝，簇簇云彩之下，是红色的佛国，这样宁心舒缓的红，伴着声声梵音，圣洁高贵。<br><img data-src="https://i.loli.net/2021/06/28/KXsCn92tJLjb7OR.jpg" alt="俯瞰色达"><span class="image-caption">俯瞰色达</span><br><img data-src="https://i.loli.net/2021/06/28/Jc2i4oEp8u75lyR.jpg" alt="换个角度俯瞰色达"><span class="image-caption">换个角度俯瞰色达</span></p>
-<p>原本打算顺着蜿蜒曲折的路迤逦而下，谁知刚刚没走几步，头顶的乌云就不辞辛劳的开始了工作。雨点簌簌而下，我们只好去屋下躲避，我本来想说有一句歌词很合景–“爱就是晴空万里突然暴风雨”，正当我为自己反应迅速而努力喝彩时，经旁人说起才发觉原来是在下冰雹，我已经好些年有没有看到过下冰雹了，小小的白色晶状体砸在手上还是有些痛感的。</p>
-<h2 id="Day-3-色达佛学院"><a href="#Day-3-色达佛学院" class="headerlink" title="Day 3: 色达佛学院"></a>Day 3: 色达佛学院</h2><p>今天早上的行程还是去色达佛学院，昨天因为天气的缘故匆匆一览，今天天气凉爽，适合缓行。<br>因为节假日的缘故，公交车只行至山腰处，剩下的路要步行。本着上下决不走同一条路的原则，我们挑了一处比较陡峭的台阶，打算沿台阶而上，到达山顶之后可以从公交车行驶的大道缓步而下。从下而上仰视色达，密集的红房子也是一种视觉震撼。<br><img data-src="https://i.loli.net/2021/06/28/XKHE5Pj1SIBaYmV.jpg" width="400" height="500" alt="仰视角度的色达"><span class="image-caption">仰视角度的色达</span></p>
-<p>沿台阶而上比较费力，所幸每走一段就会有长椅可以休息。由于这里海拔比较高，我们还买了氧气瓶以备不虞，边吸氧边拾级而上也是一种奇妙的体验。<br><img data-src="https://i.loli.net/2021/06/28/UVm4DB2IK3Qtivk.jpg" width="300" height="400" alt="累了就吸会氧"><span class="image-caption">累了就吸会氧</span></p>
-<p>越往上走，视野越开阔，所见的风景越深邃悠远。我们看到了身侧有许多的佛学院的学生，身着红色的衣裳，虔诚的去往课堂，一时间我想起了大学时同舍友结伴去上课的场景，轻快愉悦。<br><img data-src="https://i.loli.net/2021/06/28/yHXIYDBEUFrKxq4.jpg" width="300" height="400" alt="山顶的佛堂"><span class="image-caption">山顶的佛堂</span></p>
-<p>我们到达山顶之后，略作休息就缓步下山。一路上挑着小路而下，光顾了佛学院里的水果摊、杂货铺、早餐店、纪念品商店，这时我发觉这是一座有着生活气息的佛学院，不是一座不食人间烟火的清冷殿堂，也不是一处只供游人赏玩的旅游胜地。<br>对于那些虔诚学习的学生而言，这里是佛学的殿堂。<br><img data-src="https://i.loli.net/2021/06/28/jXkHOSP2h8iw3V1.jpg" alt="山脚下的风光"><span class="image-caption">山脚下的风光</span></p>
-<p>旅途结束后回到住所，和同游的朋友们一起吃串串，打麻将也是一番趣味，卸去一天的疲惫。<br><img data-src="https://i.loli.net/2021/06/28/hjxZqYviBHO9EXU.jpg" alt="串串吃起来"><span class="image-caption">串串吃起来</span><br><img data-src="https://i.loli.net/2021/06/28/3SeNyiBXpWIzC72.jpg" alt="麻将搓起来"><span class="image-caption">麻将搓起来</span></p>
-<h2 id="Day-4-西索民居与卓克基官寨"><a href="#Day-4-西索民居与卓克基官寨" class="headerlink" title="Day 4: 西索民居与卓克基官寨"></a>Day 4: 西索民居与卓克基官寨</h2><p><img data-src="https://i.loli.net/2021/06/28/1TXF9pyRxe3lsLK.jpg" alt="西索民居"><span class="image-caption">西索民居</span><br>西索民居，清晨走在略带湿意的青石小路上，周边静谧安逸，我从村庄中部穿插而过，有一瞬间，觉得这条路，路两侧的石制小屋，屋前的各色盆植鲜花似乎只供我一人独赏，这是何等的惬意。<br><img data-src="https://i.loli.net/2021/06/28/QNthEAfP1BWCU2J.png" alt="民居小路"><span class="image-caption">民居小路</span><br><img data-src="https://i.loli.net/2021/06/28/8EbLmRhvSOoidIA.jpg" alt="远眺西索民居"><span class="image-caption">远眺西索民居</span></p>
-<blockquote>
-<p>卓克基官寨 门票 ： 60 元，部分图片来源于：<a href="http://blog.sina.com.cn/s/blog_8b4d9d180102yj09.html">卓克基土司官寨：毛主席曾经住过的嘉绒藏族城堡</a></p>
-</blockquote>
-<p>卓克基官寨前有一条青石台阶路，曲折而上直至寨前。石阶的里侧是片片山石垒起的石壁，石壁之上是木制的围栏，木栏外侧悬挂着各色花卉，颜色艳丽，不一而同。石壁之内乔木茂密，树荫于木栏之外为青石台阶遮蔽艳阳。走在这样诗意的石阶上，哪里还有什么忧愁。<br><img data-src="https://i.loli.net/2021/06/28/5cYmSDCEjbdtN8W.png" width="400" height="500" alt="石阶"><span class="image-caption">石阶</span></p>
-<p>卓克基官寨这样有特色的建筑我还是第一次见到。它是一个正方形的建筑，外侧是石砌的，里面大都是木制结构。由正门而入，东南 西北 四侧都建有房屋，彼此相连。<br><img data-src="https://i.loli.net/2021/06/28/HFPgUS45fZDChpx.png" alt="官寨大门"><span class="image-caption">官寨大门</span></p>
-<p>除了出入的正门侧有三层高外，其余的四侧都是五层高。一层是储物用的地方，二层是革命者的曾经的居所，三层是土司居住的地方，卧室，厨房，餐厅，管家的住所，议事的厅堂一应俱全。四层是供奉佛像金身的所在，五层有乞求长生的供奉处和僧众祷告的场所。一处官寨，涵盖万千。真的是匠心独运。<br><img data-src="https://i.loli.net/2021/06/28/wCMR5gquNOi6zJT.png" alt="官寨内部"><span class="image-caption">官寨内部</span><br><img data-src="https://i.loli.net/2021/06/28/yg3Gw8nZIxSpTdK.png" alt="四楼远望"><span class="image-caption">四楼远望</span></p>
-<p>当我在四层参观供奉佛像的大殿时，只觉得经幡高悬，佛像高大庄严，壁画精美，不由得怀揣一颗虔诚的心。走到五楼相同的位置时，想推门而入看一下这处的设置，却发觉这里没有门，只有窗。透过窗看到了与四楼同样的风景，这时才发觉四楼与五楼是打通了的，否则何以有那么高大的佛像，只是身处四楼的时候只沉浸在殿堂的威严肃穆中，忽略了其他，到了五楼才后知后觉。<br><img data-src="https://i.loli.net/2021/06/28/viK9INcxEVns3By.png" alt="官寨佛像"><span class="image-caption">官寨佛像</span></p>
-<p>官寨之外设有囚室三间。第一间有一扇正常大小的窗户，屋内还算明亮；第二间有一扇小窗户，屋内顿觉昏暗不少；第三间只有一个通气口，屋内暗黑压抑，不能视物。这三间分别关押罪行由轻至重的人，看这囚室的设计，单是被关押到第三间中，无错也会觉得自己有罪的。被剥夺光明真是一件很恐怖的事情。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>世界那么大</category>
-      </categories>
-      <tags>
-        <tag>色达</tag>
       </tags>
   </entry>
   <entry>
@@ -651,47 +651,6 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
       </tags>
   </entry>
   <entry>
-    <title>BugBash知多少</title>
-    <url>/BugBash/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"><span class="image-caption">bugbash.jpeg</span></p>
-<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">时间：产品上线前一两周，测试结束之后。
-地点：最好找个会议室，线上也行
-人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员
-事件：大家一起找bug<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
-<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
-<li>确定好每次Bug Bash的Owner。</li>
-<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
-<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
-<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
-<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
-</ul>
-<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
-<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
-<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
-<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
-</ul>
-<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
-<li>Bug Bash的Owner应当跟踪所有Bug的状态<mark class="label default">TO DO</mark>/<mark class="label warning">IN PROGRESS</mark>/<mark class="label success">DONE</mark>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
-</ul>
-<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img data-src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
-<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img data-src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img data-src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img data-src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img data-src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"><span class="image-caption">image.png</span></p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>测试理论和实践</category>
-      </categories>
-      <tags>
-        <tag>BugBash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图"><span class="image-caption">题图</span>
@@ -887,6 +846,47 @@ header.post-header {
       </categories>
       <tags>
         <tag>theme-next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugBash知多少</title>
+    <url>/BugBash/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"><span class="image-caption">bugbash.jpeg</span></p>
+<h2 id="啥是BugBash"><a href="#啥是BugBash" class="headerlink" title="啥是BugBash"></a>啥是BugBash</h2><p>其实说白了，BugBash就是大家来找茬的过程，找谁的茬呢，当然是要上线的新功能。</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">时间：产品上线前一两周，测试结束之后。
+地点：最好找个会议室，线上也行
+人物：参与产品开发的所有人，主要包括开发，测试，产品经理，客户，相关Team人员
+事件：大家一起找bug<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>所有比较重要的功能或者改动比较大的功能都应该有Bug Bash(除了一些非常小的功能)。Bug Bash发现的不一定只是Bug，有时也可以提出对某些功能的改进建议。</p>
+<h2 id="如何做好一次BugBash"><a href="#如何做好一次BugBash" class="headerlink" title="如何做好一次BugBash"></a>如何做好一次BugBash</h2><h3 id="在BugBash之前"><a href="#在BugBash之前" class="headerlink" title="在BugBash之前"></a>在BugBash之前</h3><ul>
+<li>确定好每次Bug Bash的Owner。</li>
+<li>Owner需要了解这个功能的业务需求并将其整理到Bug Bash文档中 。</li>
+<li>BugBash文档的内容应当包含：被测功能简单介绍、主要测试场景及其checkpoints、测试数据、测试任务分配、结果讨论。</li>
+<li>Owner在书写完Bug Bash文档之后，可以将内容发送给团队成员一起查看是否有需要补充其他内容。</li>
+<li>Owner需要提前收集使用产品的用户设备信息，用使用率较高的设备/浏览器/终端来做BugBash。</li>
+</ul>
+<h3 id="在BugBash会议中"><a href="#在BugBash会议中" class="headerlink" title="在BugBash会议中"></a>在BugBash会议中</h3><ul>
+<li>Owner可以把Bug Bash会议时间控制在1-1.5h之内，用30-50min的时间进行探索性测试，剩余的时间讨论发现的问题。</li>
+<li>每个在BugBash中发现的Bug/Improvement，都应由发现问题的人来建卡记录Bug细节和修复这个Bug需要的时间。</li>
+<li>每个在BugBash中发现的Bug/Improvement，Owner都需要与客户/产品经理沟通确定哪些Bug需要修复，并确定好优先级。如果他们都未参加Bug Bash会议，也可以会议再沟通。</li>
+</ul>
+<h3 id="在BugBash之后"><a href="#在BugBash之后" class="headerlink" title="在BugBash之后"></a>在BugBash之后</h3><ul>
+<li>Bug Bash的Owner应当跟踪所有Bug的状态<mark class="label default">TO DO</mark>/<mark class="label warning">IN PROGRESS</mark>/<mark class="label success">DONE</mark>并及时更新在文档里，更新完成之后将修复结果分享给团队。</li>
+</ul>
+<h2 id="我的BugBash模版"><a href="#我的BugBash模版" class="headerlink" title="我的BugBash模版"></a>我的BugBash模版</h2><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p><img data-src="https://i.loli.net/2020/04/22/g8jDuA79mFJcU6b.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="被测功能简单介绍"><a href="#被测功能简单介绍" class="headerlink" title="被测功能简单介绍"></a>被测功能简单介绍</h3><p>简单介绍此次BugBash要测的Feature或者Function。必要的话还可以demo展示。</p>
+<h3 id="主要测试场景及其checkpoints"><a href="#主要测试场景及其checkpoints" class="headerlink" title="主要测试场景及其checkpoints"></a>主要测试场景及其checkpoints</h3><p>描述主要测试场景，和每个测试场景需要注意的测试点。<br><img data-src="https://i.loli.net/2020/04/22/ltR1Eo5hSfi6DrC.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><p>提前准备测试需要的各种数据和账号，确认每个参会的人有权限访问和进行测试。<br><img data-src="https://i.loli.net/2020/04/22/pZeGR83to2XPhmF.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="测试任务分配"><a href="#测试任务分配" class="headerlink" title="测试任务分配"></a>测试任务分配</h3><p>给每个参会小伙伴分配测试任务，包括测试设备、测试数据分配，有时也可以包括测试场景分配，按照具体情况而定。<br><img data-src="https://i.loli.net/2020/04/22/FGkZLP2TosCfBc3.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="结果讨论"><a href="#结果讨论" class="headerlink" title="结果讨论"></a>结果讨论</h3><p>测试完成后，将所发现的问题逐个进行讨论，补全表格中空缺内容随后可直观的根据表格查看该Bug的状态和优先级。<br><img data-src="https://i.loli.net/2020/04/22/hw3XUxQl9cEzZYK.png" alt="image.png"><span class="image-caption">image.png</span></p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
+      </categories>
+      <tags>
+        <tag>BugBash</tag>
       </tags>
   </entry>
   <entry>
@@ -1329,6 +1329,30 @@ danger
       </tags>
   </entry>
   <entry>
+    <title>一次被征服的爬山之旅</title>
+    <url>/HuaShanTravel/</url>
+    <content><![CDATA[<div class="note primary"><p>死党L君一直想去爬华山，大学的时候就多次提起，但周围的人都拒绝，因为好多人说爬华山挑战太大了。但L君听到劝说反而越挫越勇，非要去征服华山不可，于是拉着我一起去。我之前也爬过几次山，所以也颇有想征服华山的雄心，于是爬山小队就这样成立了<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">💪</span></p>
+</div>
+
+<h2 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h2><p>6.1日，周六，晴天，沐浴着傍晚的热气，L君和我踏上了征程。<br>网上攻略之后，我们决定夜爬华山，然后在山上看日出。西安离华山景区并不远，于是我们订了最近的一班高铁，20分钟后就到了华山站。<br>出了高铁站，就到了华阴市，在站外找了家小吃店先填填肚子，发现店里还坐着许多穿着统一服饰的外国友人，想必也是慕名而来爬华山的，因为我在外企工作，L君怂恿我去和他们搭讪，我白了一眼继续吃碗里的炒拉条<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span><br>高铁站出口不远处就有一个公交始发点，终点站恰好就是华山景区，所以和L君一起等待下班发车，陆续来了不少人，大部分都是来爬华山的。<br>公交车摇摇晃晃10多分钟后就来到了华山景区外部，不过离真正的景区入口还要走一段路。但这里已经有不少卖纪念品的小店，还有一些卖祈福飘带之类的小摊，我和L君向来是无宗教无神论者，所以什么都没买。路上有卖祈福带的大妈走在旁边劝我们买一个，图个吉祥，我微笑拒绝并言道「没关系，我们心中有吉祥」，身后的游客忍俊不禁，被我逗笑<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span><br><img data-src="https://i.loli.net/2021/06/29/7XOW3F9eE1HtwNC.jpg" alt="景区入口前的石板路"><span class="image-caption">景区入口前的石板路</span><br>跟着人流往前走，就来到了景区入口，看着里面望不到尽头的爬山之路，我们在门口买了几瓶水，做了一番心理建设才刷身份证从闸口进入。刷身份证的时候，我们发现机器有故障，就算没有用身份证买票也可以进入，L君和我对视并言道「所以我们买票的意义是什么」，我心想「可能是为了吉祥？」<br>傍晚7:30左右，此时天渐渐黑了下来，我们向景区深处走去。一开始，L君一马当先，还时不时回头催促着我，我说「你不懂，这是保存体力的爬山策略」，L君默然并继续往前走，爬山之旅正式开始了<span class="emoji" alias="two_women_holding_hands" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f46d.png?v8">👭</span><br><img data-src="https://i.loli.net/2021/06/29/YoWtdXJMHNFC1fA.jpg" width="400" height="500" alt="开始爬山和L君蹒跚的背影"><span class="image-caption">开始爬山和L君蹒跚的背影</span></p>
+<h2 id="上山"><a href="#上山" class="headerlink" title="上山"></a>上山</h2><h3 id="我的自闭式爬山"><a href="#我的自闭式爬山" class="headerlink" title="我的自闭式爬山"></a>我的自闭式爬山</h3><p>一开始，脚下的路都是上图的石板路，我的状态还是比较轻松的，一路上和L君欣赏景色，斗嘴扯皮倒也十分有趣。<br>天色渐渐黑了，我们边走边歇，路边也有不少小商铺卖水的，也有凳子供游人歇息。中间看到一个华山客栈，门脸装修竟然像个酒店，真是神奇。<br><img data-src="https://i.loli.net/2021/07/05/QhtJs38iRkSW7rd.jpg" alt="华山客栈"><span class="image-caption">华山客栈</span><br>渐渐的，就不那么有趣了。<br>走了不知多久，大概一个多小时，脚下的路变成了石阶，石阶两侧有锁链供游客扶着，开始了名副其实的「爬山」，又接着爬了一个多小时，我开始自闭了。<br>此时的L君状态依然不错，精神充沛，远远的走在前边，不时停下来等我，鼓励我向上爬。<br><img data-src="https://i.loli.net/2021/06/29/hHIt48elyTnCfYb.jpg" width="400" height="500" alt="居高临下的L君(摄于晚上9:30)"><span class="image-caption">居高临下的L君(摄于晚上9:30)</span><br><img data-src="https://i.loli.net/2021/06/29/CRhljMwQD4ISpLX.jpg" width="400" height="500" alt="L君眼中自闭的我"><span class="image-caption">L君眼中自闭的我</span><br>不久后，L君和我开始了一系列爬山对话。</p>
+<blockquote>
+<p><strong>爬山对话一</strong><br>我：「L君，我以后叫你牛L好不好，你真牛<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>」<br>L君：…<br><strong>爬山对话二</strong><br>L君：「你看人家小孩子都爬的比你快<span class="emoji" alias="unamused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span>」<br>我：「你要是也能背着我上山，我也叫你爸爸<span class="emoji" alias="triumph" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f624.png?v8">😤</span>」<br><strong>…</strong></p>
+</blockquote>
+<p>这样持续了一会，石阶的角度越来越趋于垂直，眼前出现了第一个「云梯」。天色太黑看不清楚全貌，但还是一层层的石阶，两侧都是铁链，还有彩灯照着阶梯，石梯几乎是90度往上的，仰着头依稀可见出口。<br><img data-src="https://i.loli.net/2021/07/05/3hp7ZLPBA2K8lDw.jpg" width="400" height="500" alt="网图"><span class="image-caption">网图</span><br>白天差不多是这样的：<br><img data-src="https://i.loli.net/2021/07/05/hmSR7Za98GPTv1x.jpg" width="400" height="500" alt="网图"><span class="image-caption">网图</span><br>于是我和L君就开始徒手往上爬，爬到中间回头往下看，黑压压全是人头。这时若有一人没有抓稳掉下去，下边的人就全完了，因为都是徒手爬，没有任何保护措施，非常危险。<br>忘了这段石梯叫啥名字了，但后来发现这并不是「云梯」，「云梯」人家长这样：<br><img data-src="https://i.loli.net/2021/07/05/ZSq4g8BXmDeKT3w.jpg" width="400" height="500" alt="大于90度的云梯"><span class="image-caption">大于90度的云梯</span><br>总之爬完这段，我和L君以为自己也是见过世面的人了，但事实证明我们还是太嫩了。因为后面我们还要爬很多个这样的石梯，而且一次比一次长，有这样的：<br><img data-src="https://i.loli.net/2021/07/05/L3BUgpu9aOCkeND.jpg" alt="石梯1-网图"><span class="image-caption">石梯1-网图</span><br>这样的：<br><img data-src="https://i.loli.net/2021/07/05/dW597zrGXJmqUjH.jpg" width="400" height="500" alt="石梯2-网图"><span class="image-caption">石梯2-网图</span><br>好吧，晚上拍的照片太少了。<br>到了中峰，有一个广场大小的平台，上边有很多卖小吃的。和L君稍事歇息，又开始向东峰进发，这时我们看到了一条超长的天梯，两边是光秃秃的山壁。走在其上，左右望去非常空旷，依稀可见城市点点星光，不敢想象白天在这爬是什么心情。<br><img data-src="https://i.loli.net/2021/07/05/z8sfYG4CD2iFw5H.png" alt="非常贴切的网图"><span class="image-caption">非常贴切的网图</span><br>后来，这样陡峭的石阶终于爬完了，之后的路就比较平坦了，我也已经完全自闭了，L君也是强撑着，我们完全凭着意志力，互相鼓励爬到了峰顶。</p>
+<h3 id="爬到山顶看日出"><a href="#爬到山顶看日出" class="headerlink" title="爬到山顶看日出"></a>爬到山顶看日出</h3><p>到了峰顶，拿出保暖的衣服穿上，坐在峰顶的石壁上等待日出。<br>此时是凌晨4点，从傍晚7点半开始，我和L君已经不停歇的爬了8个多小时了，比我一天搬砖的时间都长。从最开始的石板路，到后来的石阶，再到爬天梯，最后到峰顶，简直佩服自己。<br>周围有一些人搭起了帐篷，对比人家的专业，我和L君只能抱紧贫穷的自己。<br>离日出还有2个小时，我们实在撑不住，只能在石壁上蜷缩着闭眼眯一会，但也无法真正休息，只是趴着不动而已。<br>周围的人很多，峰顶上地方不大，坐在一块非常挤，后来根本躺不下，我和L君只能坐着靠在一起，此时我脑海里一直在想一个问题，我为什么要来这。。。<br>到了5点多，天色开始露出鱼肚白，日出也快要到来了。<br><img data-src="https://i.loli.net/2021/07/05/3c8aMCEYKNRLOZG.jpg" alt="天色渐明"><span class="image-caption">天色渐明</span><br><img data-src="https://i.loli.net/2021/07/05/pdWa1YqMhflI4Ls.jpg" alt="远方的鱼肚白"><span class="image-caption">远方的鱼肚白</span><br>5点30分，日出开始了，一轮红日慢慢从天边开始升起：<br><img data-src="https://i.loli.net/2021/07/05/Dce4ji9s5gmKYqF.jpg" width="450" height="600" alt="日出"><span class="image-caption">日出</span><br><img data-src="https://i.loli.net/2021/07/05/XVpYM32QfAhsULE.jpg" alt="日光渐盛"><span class="image-caption">日光渐盛</span><br>此刻，所有人都虔诚的看着太慢慢升起，也纷纷拿起手机和相机举到头顶，我和L君也一样。<br><img data-src="https://i.loli.net/2021/07/05/erHdb6kiYZEUWlx.jpg" width="450" height="600" alt="石壁上的人们"><span class="image-caption">石壁上的人们</span></p>
+<h2 id="下山"><a href="#下山" class="headerlink" title="下山"></a>下山</h2><p>日出看完了，我和L君抖着腿迫不及待的开始下山，一路上才看到昨晚都经历了什么，此刻的我们只想回家躺在床上睡一觉。<br>相比于上山的8小时，我们只想走到下边坐缆车下山，此刻我的状态还不错，毕竟最难的时候已经过去了，日出也看完了，边走边欣赏周围的景色。<br><img data-src="https://i.loli.net/2021/07/05/1xe9niOKuzDgaNZ.jpg" alt="华山群峰"><span class="image-caption">华山群峰</span><br><img data-src="https://i.loli.net/2021/07/05/qvS24sVkzbLQYfg.jpg" alt="险峻的山峰"><span class="image-caption">险峻的山峰</span><br>相比于我的闲适，L君显然非常自闭，话也不想多说，满脸疲惫。但离缆车售票处还有很长一段距离，只能咬牙往前走。终于在8点左右坐上了缆车，车外是险峻的山峰，缆车从山峰之间穿过时，也是刺激万分，此刻若是缆车故障，我和L君铁定是尸骨无存了。<br><img data-src="https://i.loli.net/2021/07/05/kixcb93LC2I8zlq.jpg" width="450" height="600" alt="梦想中的缆车"><span class="image-caption">梦想中的缆车</span></p>
+<h2 id="回家"><a href="#回家" class="headerlink" title="回家"></a>回家</h2><p>到了山下，恰好有去西安的大巴，和L君立马安排了票。一上车，我们就分躺两边，直接睡在座椅上，所幸此时回程车人并不多，我们就一路躺到了车站。<br>然而回家还要转一次地铁和公交，我和L君望着彼此疲惫的脸庞相视一笑，说这辈子再也不爬华山了。<br>地铁到站后，也没有力气转公交了，直接打车回了家，华山之旅就这样结束了。<br>所以爬华山，还是劝一个讨厌的人去吧。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>世界那么大</category>
+      </categories>
+      <tags>
+        <tag>华山</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给博客的Https证书续期</title>
     <url>/HttpsUpdate/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/08/01/R4f1SvM9Q6wNID3.png">
@@ -1364,30 +1388,6 @@ danger
       </categories>
       <tags>
         <tag>Https</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一次被征服的爬山之旅</title>
-    <url>/HuaShanTravel/</url>
-    <content><![CDATA[<div class="note primary"><p>死党L君一直想去爬华山，大学的时候就多次提起，但周围的人都拒绝，因为好多人说爬华山挑战太大了。但L君听到劝说反而越挫越勇，非要去征服华山不可，于是拉着我一起去。我之前也爬过几次山，所以也颇有想征服华山的雄心，于是爬山小队就这样成立了<span class="emoji" alias="muscle" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8">💪</span></p>
-</div>
-
-<h2 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h2><p>6.1日，周六，晴天，沐浴着傍晚的热气，L君和我踏上了征程。<br>网上攻略之后，我们决定夜爬华山，然后在山上看日出。西安离华山景区并不远，于是我们订了最近的一班高铁，20分钟后就到了华山站。<br>出了高铁站，就到了华阴市，在站外找了家小吃店先填填肚子，发现店里还坐着许多穿着统一服饰的外国友人，想必也是慕名而来爬华山的，因为我在外企工作，L君怂恿我去和他们搭讪，我白了一眼继续吃碗里的炒拉条<span class="emoji" alias="relieved" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60c.png?v8">😌</span><br>高铁站出口不远处就有一个公交始发点，终点站恰好就是华山景区，所以和L君一起等待下班发车，陆续来了不少人，大部分都是来爬华山的。<br>公交车摇摇晃晃10多分钟后就来到了华山景区外部，不过离真正的景区入口还要走一段路。但这里已经有不少卖纪念品的小店，还有一些卖祈福飘带之类的小摊，我和L君向来是无宗教无神论者，所以什么都没买。路上有卖祈福带的大妈走在旁边劝我们买一个，图个吉祥，我微笑拒绝并言道「没关系，我们心中有吉祥」，身后的游客忍俊不禁，被我逗笑<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span><br><img data-src="https://i.loli.net/2021/06/29/7XOW3F9eE1HtwNC.jpg" alt="景区入口前的石板路"><span class="image-caption">景区入口前的石板路</span><br>跟着人流往前走，就来到了景区入口，看着里面望不到尽头的爬山之路，我们在门口买了几瓶水，做了一番心理建设才刷身份证从闸口进入。刷身份证的时候，我们发现机器有故障，就算没有用身份证买票也可以进入，L君和我对视并言道「所以我们买票的意义是什么」，我心想「可能是为了吉祥？」<br>傍晚7:30左右，此时天渐渐黑了下来，我们向景区深处走去。一开始，L君一马当先，还时不时回头催促着我，我说「你不懂，这是保存体力的爬山策略」，L君默然并继续往前走，爬山之旅正式开始了<span class="emoji" alias="two_women_holding_hands" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f46d.png?v8">👭</span><br><img data-src="https://i.loli.net/2021/06/29/YoWtdXJMHNFC1fA.jpg" width="400" height="500" alt="开始爬山和L君蹒跚的背影"><span class="image-caption">开始爬山和L君蹒跚的背影</span></p>
-<h2 id="上山"><a href="#上山" class="headerlink" title="上山"></a>上山</h2><h3 id="我的自闭式爬山"><a href="#我的自闭式爬山" class="headerlink" title="我的自闭式爬山"></a>我的自闭式爬山</h3><p>一开始，脚下的路都是上图的石板路，我的状态还是比较轻松的，一路上和L君欣赏景色，斗嘴扯皮倒也十分有趣。<br>天色渐渐黑了，我们边走边歇，路边也有不少小商铺卖水的，也有凳子供游人歇息。中间看到一个华山客栈，门脸装修竟然像个酒店，真是神奇。<br><img data-src="https://i.loli.net/2021/07/05/QhtJs38iRkSW7rd.jpg" alt="华山客栈"><span class="image-caption">华山客栈</span><br>渐渐的，就不那么有趣了。<br>走了不知多久，大概一个多小时，脚下的路变成了石阶，石阶两侧有锁链供游客扶着，开始了名副其实的「爬山」，又接着爬了一个多小时，我开始自闭了。<br>此时的L君状态依然不错，精神充沛，远远的走在前边，不时停下来等我，鼓励我向上爬。<br><img data-src="https://i.loli.net/2021/06/29/hHIt48elyTnCfYb.jpg" width="400" height="500" alt="居高临下的L君(摄于晚上9:30)"><span class="image-caption">居高临下的L君(摄于晚上9:30)</span><br><img data-src="https://i.loli.net/2021/06/29/CRhljMwQD4ISpLX.jpg" width="400" height="500" alt="L君眼中自闭的我"><span class="image-caption">L君眼中自闭的我</span><br>不久后，L君和我开始了一系列爬山对话。</p>
-<blockquote>
-<p><strong>爬山对话一</strong><br>我：「L君，我以后叫你牛L好不好，你真牛<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>」<br>L君：…<br><strong>爬山对话二</strong><br>L君：「你看人家小孩子都爬的比你快<span class="emoji" alias="unamused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span>」<br>我：「你要是也能背着我上山，我也叫你爸爸<span class="emoji" alias="triumph" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f624.png?v8">😤</span>」<br><strong>…</strong></p>
-</blockquote>
-<p>这样持续了一会，石阶的角度越来越趋于垂直，眼前出现了第一个「云梯」。天色太黑看不清楚全貌，但还是一层层的石阶，两侧都是铁链，还有彩灯照着阶梯，石梯几乎是90度往上的，仰着头依稀可见出口。<br><img data-src="https://i.loli.net/2021/07/05/3hp7ZLPBA2K8lDw.jpg" width="400" height="500" alt="网图"><span class="image-caption">网图</span><br>白天差不多是这样的：<br><img data-src="https://i.loli.net/2021/07/05/hmSR7Za98GPTv1x.jpg" width="400" height="500" alt="网图"><span class="image-caption">网图</span><br>于是我和L君就开始徒手往上爬，爬到中间回头往下看，黑压压全是人头。这时若有一人没有抓稳掉下去，下边的人就全完了，因为都是徒手爬，没有任何保护措施，非常危险。<br>忘了这段石梯叫啥名字了，但后来发现这并不是「云梯」，「云梯」人家长这样：<br><img data-src="https://i.loli.net/2021/07/05/ZSq4g8BXmDeKT3w.jpg" width="400" height="500" alt="大于90度的云梯"><span class="image-caption">大于90度的云梯</span><br>总之爬完这段，我和L君以为自己也是见过世面的人了，但事实证明我们还是太嫩了。因为后面我们还要爬很多个这样的石梯，而且一次比一次长，有这样的：<br><img data-src="https://i.loli.net/2021/07/05/L3BUgpu9aOCkeND.jpg" alt="石梯1-网图"><span class="image-caption">石梯1-网图</span><br>这样的：<br><img data-src="https://i.loli.net/2021/07/05/dW597zrGXJmqUjH.jpg" width="400" height="500" alt="石梯2-网图"><span class="image-caption">石梯2-网图</span><br>好吧，晚上拍的照片太少了。<br>到了中峰，有一个广场大小的平台，上边有很多卖小吃的。和L君稍事歇息，又开始向东峰进发，这时我们看到了一条超长的天梯，两边是光秃秃的山壁。走在其上，左右望去非常空旷，依稀可见城市点点星光，不敢想象白天在这爬是什么心情。<br><img data-src="https://i.loli.net/2021/07/05/z8sfYG4CD2iFw5H.png" alt="非常贴切的网图"><span class="image-caption">非常贴切的网图</span><br>后来，这样陡峭的石阶终于爬完了，之后的路就比较平坦了，我也已经完全自闭了，L君也是强撑着，我们完全凭着意志力，互相鼓励爬到了峰顶。</p>
-<h3 id="爬到山顶看日出"><a href="#爬到山顶看日出" class="headerlink" title="爬到山顶看日出"></a>爬到山顶看日出</h3><p>到了峰顶，拿出保暖的衣服穿上，坐在峰顶的石壁上等待日出。<br>此时是凌晨4点，从傍晚7点半开始，我和L君已经不停歇的爬了8个多小时了，比我一天搬砖的时间都长。从最开始的石板路，到后来的石阶，再到爬天梯，最后到峰顶，简直佩服自己。<br>周围有一些人搭起了帐篷，对比人家的专业，我和L君只能抱紧贫穷的自己。<br>离日出还有2个小时，我们实在撑不住，只能在石壁上蜷缩着闭眼眯一会，但也无法真正休息，只是趴着不动而已。<br>周围的人很多，峰顶上地方不大，坐在一块非常挤，后来根本躺不下，我和L君只能坐着靠在一起，此时我脑海里一直在想一个问题，我为什么要来这。。。<br>到了5点多，天色开始露出鱼肚白，日出也快要到来了。<br><img data-src="https://i.loli.net/2021/07/05/3c8aMCEYKNRLOZG.jpg" alt="天色渐明"><span class="image-caption">天色渐明</span><br><img data-src="https://i.loli.net/2021/07/05/pdWa1YqMhflI4Ls.jpg" alt="远方的鱼肚白"><span class="image-caption">远方的鱼肚白</span><br>5点30分，日出开始了，一轮红日慢慢从天边开始升起：<br><img data-src="https://i.loli.net/2021/07/05/Dce4ji9s5gmKYqF.jpg" width="450" height="600" alt="日出"><span class="image-caption">日出</span><br><img data-src="https://i.loli.net/2021/07/05/XVpYM32QfAhsULE.jpg" alt="日光渐盛"><span class="image-caption">日光渐盛</span><br>此刻，所有人都虔诚的看着太慢慢升起，也纷纷拿起手机和相机举到头顶，我和L君也一样。<br><img data-src="https://i.loli.net/2021/07/05/erHdb6kiYZEUWlx.jpg" width="450" height="600" alt="石壁上的人们"><span class="image-caption">石壁上的人们</span></p>
-<h2 id="下山"><a href="#下山" class="headerlink" title="下山"></a>下山</h2><p>日出看完了，我和L君抖着腿迫不及待的开始下山，一路上才看到昨晚都经历了什么，此刻的我们只想回家躺在床上睡一觉。<br>相比于上山的8小时，我们只想走到下边坐缆车下山，此刻我的状态还不错，毕竟最难的时候已经过去了，日出也看完了，边走边欣赏周围的景色。<br><img data-src="https://i.loli.net/2021/07/05/1xe9niOKuzDgaNZ.jpg" alt="华山群峰"><span class="image-caption">华山群峰</span><br><img data-src="https://i.loli.net/2021/07/05/qvS24sVkzbLQYfg.jpg" alt="险峻的山峰"><span class="image-caption">险峻的山峰</span><br>相比于我的闲适，L君显然非常自闭，话也不想多说，满脸疲惫。但离缆车售票处还有很长一段距离，只能咬牙往前走。终于在8点左右坐上了缆车，车外是险峻的山峰，缆车从山峰之间穿过时，也是刺激万分，此刻若是缆车故障，我和L君铁定是尸骨无存了。<br><img data-src="https://i.loli.net/2021/07/05/kixcb93LC2I8zlq.jpg" width="450" height="600" alt="梦想中的缆车"><span class="image-caption">梦想中的缆车</span></p>
-<h2 id="回家"><a href="#回家" class="headerlink" title="回家"></a>回家</h2><p>到了山下，恰好有去西安的大巴，和L君立马安排了票。一上车，我们就分躺两边，直接睡在座椅上，所幸此时回程车人并不多，我们就一路躺到了车站。<br>然而回家还要转一次地铁和公交，我和L君望着彼此疲惫的脸庞相视一笑，说这辈子再也不爬华山了。<br>地铁到站后，也没有力气转公交了，直接打车回了家，华山之旅就这样结束了。<br>所以爬华山，还是劝一个讨厌的人去吧。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>世界那么大</category>
-      </categories>
-      <tags>
-        <tag>华山</tag>
       </tags>
   </entry>
   <entry>
@@ -1675,6 +1675,88 @@ danger
       </tags>
   </entry>
   <entry>
+    <title>渗透测试初识</title>
+    <url>/Penetration-Test/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
+
+<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
+<p><enter></enter></p>
+<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
+
+
+<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
+<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
+<mark class="label primary">没有它之前怎么做</mark>
+<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
+<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
+<ul>
+<li>测试方法(黑盒/白盒/灰盒)</li>
+<li>目标(服务器/数据库/Web网站…)</li>
+<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
+</ul>
+<p><span id="inline-toc">2.</span> 测试过程</p>
+<mark class="label success">信息收集</mark>
+
+<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
+<mark class="label success">技术测试</mark>
+
+<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
+<mark class="label success">人员测试</mark>
+
+<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
+<p><span id="inline-toc">3.</span> 测试之后</p>
+<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
+<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
+<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
+<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
+<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
+<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
+<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
+<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
+<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
+<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
+</div>
+
+<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
+<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
+</div>
+
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
+<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>渗透测试</tag>
+        <tag>OWASP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>沉默的抗争</title>
     <url>/Silent-protest/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
@@ -1777,88 +1859,6 @@ npm install --save<span aria-hidden="true" class="line-numbers-rows"><span></spa
       </categories>
       <tags>
         <tag>围城</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>渗透测试初识</title>
-    <url>/Penetration-Test/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
-
-<p>本文参考 <a href="https://github.com/judasn/hexo-blog/blob/master/2016/02/My-Learning-Way.md">怎么学习新东西</a> 书写。</p>
-<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><mark class="label info">百科定义：</mark> 为了证明网络防御按照预期计划正常运行而提供的一种机制。
-<p><enter></enter></p>
-<mark class="label info">通俗定义：</mark> 通过模拟黑客攻击的方式检查目标信息安全运行状况的方法。
-
-
-<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><mark class="label primary">解决啥问题</mark>
-<p>找到目标信息安全防护中存在的问题，汇总研究，加固不足之处，提升目标安全等级。</p>
-<mark class="label primary">没有它之前怎么做</mark>
-<p>只是按照规范要求定期更新安全策略和程序，时时给系统打补丁，用安全软件确保所有补丁都已打上，但并没有进行全面检测和评估。</p>
-<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><h3 id="百科示例流程"><a href="#百科示例流程" class="headerlink" title="百科示例流程"></a>百科示例流程</h3><p><span id="inline-toc">1.</span> 测试之前</p>
-<p>分析测试风险，制定测试方案初稿，通过后与被测机构签订测试协议，确定：</p>
-<ul>
-<li>测试方法(黑盒/白盒/灰盒)</li>
-<li>目标(服务器/数据库/Web网站…)</li>
-<li>测试细节(是否允许数据损坏/接内网还是外网/…)</li>
-</ul>
-<p><span id="inline-toc">2.</span> 测试过程</p>
-<mark class="label success">信息收集</mark>
-
-<p>测试者利用各种公开信息收集目标的网络资产(如域名、IP、服务器、人员组织架构等)，需要熟练使用各种网络信息工具。</p>
-<mark class="label success">技术测试</mark>
-
-<p>针对收集到的网络资产进行详细的漏洞测试，比如针对Web系统做SQL注入、命令执行、XSS攻击等。<br>需要熟悉各种测试工具，比如burpsuite等等。</p>
-<mark class="label success">人员测试</mark>
-
-<p>对人员的安全意识进行测试，如发送钓鱼邮件、欺骗人员获得某种口令等。(之前在公司就收到过内部测试故意发出来的钓鱼邮件，幸好我机智没有点开，否则可能要被谈话)</p>
-<p><span id="inline-toc">3.</span> 测试之后</p>
-<p>测试者对测试结果进行汇总，并产出报告，交付给目标的管理员。然后帮助目标修复漏洞，修复完成后进行复测，检查漏洞是否修复完毕。</p>
-<h3 id="视频-文档教程"><a href="#视频-文档教程" class="headerlink" title="视频/文档教程"></a>视频/文档教程</h3><p><a href="https://www.imooc.com/learn/1032">这里</a> 有一个渗透测试免费入门视频教程.</p>
-<h3 id="Demo实战"><a href="#Demo实战" class="headerlink" title="Demo实战"></a>Demo实战</h3><p>因为渗透测试是需要在征得被测机构同意后进行的测试活动，作为一个遵纪守法的好公民，我找到了一个知名的Web渗透测试练习应用程序，它就是 <a href="https://github.com/bkimminich/juice-shop#docker-container-----">juice shop</a>:<br><img data-src="https://i.loli.net/2020/05/06/qzf5HgmRUFyc6Kj.png"><br>它是由权威组织 <a href="https://owasp.org/">OWASP</a> 推出的一款web应用程序，里面包含了最常见也最重要的Web安全漏洞，而且会根据新技术不断更新，在 <a href="https://pwning.owasp-juice.shop/">这里</a> 你可以获得如何开始在juice shop玩耍的教程。下边是我自己实践过的几个例子：</p>
-<p><span id="inline-toc">1.</span> 利用前端漏洞提交零星反馈</p>
-<p>未评分时反馈页面提交按钮是不可点击的，然而浏览页面代码可以发现，<mark class="label primary">disable=true</mark> 用来控制提交按钮是否可点击，那我们就删掉它，达到提交零星评价的目的。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MTQyNjQxMg==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">2.</span> 通过暴露的ftp文件夹访问机密文件</p>
-<p>要访问机密文件，那我们就得找到机密文件的路径。首先我们浏览网站页面，看有没有什么特殊链接可以点击，然后在“关于我们”页面中发现了一个文案贱贱的链接，点开之后就可以发现有一个隐藏的ftp文件夹，可以浏览里面的机密文件。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgwODAwOA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">3.</span> 利用sql报错登录管理员账户</p>
-<p>首先打开登录页面，按照sql注入一般操作，输入特殊字符单引号，然后输入任意密码，点击登录之后，会发现页面有一个异常报错。就顺便解决了报错处理不当的挑战。<br>然后在login请求中找到具体SQL报错信息：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">SELECT * FROM Users WHERE email= 'xxx' AND password = 'xxx' ......<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>由此我们可以根据这个信息，构造万能密码 <mark class="label primary">' or 1--</mark>, 第一个单引号用来隔断email后边的单引号， 然后加上逻辑条件或 or，给出数字1让条件永远为真，再用 – 注释掉后边的语句。<br>输入任意密码，点击登录，就可以登录成功了，而且根据挑战成功提示，登录的还是管理员账号，可以算是意外之喜了。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjkxNzA4NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-
-<p><span id="inline-toc">4.</span> 浏览代码访问管理员页面</p>
-<p>上一条我们已经登录了管理员账号，但浏览网站后却发现和普通账号登录之后的显示并没有什么区别，这可不行，我们既然登录了管理员账号，一定是要找到一些管理员才有权限访问的东西的。但页面又找不到什么信息，所以先从网站源文件入手。<br>打开网站resource, 发现一个<mark class="label primary">main.js</mark>的代码文件，并尝试搜索admin, 结果找到了类似于路径的信息，根据其他路径的显示，我们可以直接加上后缀 <mark class="label primary">administration</mark> ，回车之后进入管理员页面，并解决挑战。</p>
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxNzQ4MA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<p><span id="inline-toc">5.</span> 编辑请求访问别人的购物车</p>
-<p>打开管理员页面，我们可以发现有很多已注册的用户。所以我们就来实现登录用户Jim看到管理员的购物车信息。<br>首先看一下管理员的购物车请求和里面都有啥，可以看到请求的url是 <mark class="label primary">rest/basket/1</mark>, 记住它。<br>然后登出管理员，同样利用SQL注入构造登录字符串 <mark class="label primary">email' and 1--</mark> 登录Jim的账号。此时也解决了登录jim的挑战。</p>
-<div class="note info"><p>其实还有别的方式可以登录jim, 比如利用burpsuite爆破直接破解密码，这个我还没学会，不过上边的免费课程会讲到burpsuite的使用。<br>还可以利用社会工程学的方式，通过回答jim账号的安全问题(你最年长的兄弟名字是啥)来登录账号，官网给出的解释是由jim可以想到一个知名的演员叫James, 通过百科可以查到他的兄弟名字，然后就解答了问题。这点我不能理解，也想不到，或许是文化不同吧，不过这个例子也一定程度上反映了社会工程学是怎么用的。</p>
-</div>
-
-<p>登录Jim之后我们就看他的购物车请求是<mark class="label primary">rest/basket/2</mark>， 然后通过charles工具给这个请求打个断点，刷新页面之后，将请求改为<mark class="label primary">rest/basket/1</mark>，发送之后就可以在登录jim账号的情况下，看到管理员的购物车了，挑战解决成功。</p>
-<div class="note warning"><p>需要注意的是，在用charles监听本地的时候，需要将本地 <a href="http://localhost:3000/">http://localhost:3000</a> 改为 <a href="http://localhost.charlesproxy.com:3000/">http://localhost.charlesproxy.com:3000</a><br>这里是<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/">charles官网</a>的说明。</p>
-</div>
-
-<iframe height="498" width="510" src="https://player.youku.com/embed/XNDY2MjgxMzE0NA==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/24a39068dbf9">结合OWASP Top 10 初识安全测试</a></li>
-<li><a href="http://shaobaobaoer.cn/archives/510/owasp-juice-shop#0x03_Information_Leakage">OWASP Juice Shop 实战报告与解析</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
-      </categories>
-      <tags>
-        <tag>渗透测试</tag>
-        <tag>OWASP</tag>
       </tags>
   </entry>
   <entry>
@@ -3643,6 +3643,114 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>我买房了</title>
+    <url>/i-bought-an-apartment/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/30/t8bgFdo9qx3EX4j.png">
+
+<h2 id="归属感和租住不同权"><a href="#归属感和租住不同权" class="headerlink" title="归属感和租住不同权"></a>归属感和租住不同权</h2><p>会有人不想买房吗？是因为不想吗，是因为没钱吧。</p>
+<p>2014年，17岁的我来到西安上大学，毕业后又在这里工作。选择西安，并不是刻意为之，大学是被调剂的，毕业后也投了不少外地的工作，但最终也只有西安的公司收留我。</p>
+<p>我又是一个安于现状没有梦想的咸鱼，所以不知不觉在西安生活也快10年了，自然有一种归属感。而且这里超好的，离家又近又很安全，没有什么地震海啸之类的自然灾害，很适合好好活着。</p>
+<p>在中国，租住不同权，所以想要在一个地方长久的活着，买房是很有必要的。西安的房价相较于一线城市来说也比较友好，攒一攒还是够的上首付，所以买房这件事，从我刚开始赚钱的时候就被列为头号目标。</p>
+<h2 id="一波三折的计划"><a href="#一波三折的计划" class="headerlink" title="一波三折的计划"></a>一波三折的计划</h2><p>买房这件事很复杂，预算多少，买哪里，买多大，怎么买，都是问题。但是买期房并不在我的考虑范围之内，因为爆雷太多了也不想等，所以我只买二手房。</p>
+<p>刚开始我计划，买一个离公司近点的一室小房子，用公积金贷款，每月的缴存额刚好够直冲房贷，再买一辆经济实惠的大众Polo，慢慢过自己的小日子。</p>
+<p>然后参考某壳某家上的房源信息，确定预算后开始了每月的攒钱计划，还在小本本上计算可以达成目标的时间，也一直关注房地产的政策和消息，斗志满满。</p>
+<p>那时我还不懂什么是 <a href="https://www.bilibili.com/read/cv8944043/">无常</a>，总以为万物恒定，一切都会按照自己计划的那样进行，那种突然出现什么变故需要用钱的事，全不在我的考虑范围之内。可真就什么也没发生，虽然中间有一些插曲，但也总归按计划攒够了钱，真是万幸。</p>
+<p>后来考虑到爸妈养老，住的近方便一点，又打算买一个小两室，爸妈住一间，我住一间。直到去年，我遇到了强哥，一起规划未来时讨论到这件事情，讨论之后还是决定买，但买房的性质从给自己买变成给爸妈买养老房。</p>
+<p>计划还是买小两室，爸妈一间，我住一间以后用作客房，老姐之后来西安探亲也有地方住。用纯公积金贷款，每月的缴存额要够直冲房贷，做到无痛还贷，这样也有余力再攒点钱和强哥一起买房。</p>
+<h2 id="不断接受现实的看房过程"><a href="#不断接受现实的看房过程" class="headerlink" title="不断接受现实的看房过程"></a>不断接受现实的看房过程</h2><p>刚开始，我对二手房的要求是：住宅、房龄5年以内、两梯四户、小区环境要干净整洁、交通要便利、周边配套要丰富。</p>
+<p>然后发现以我的预算根本找不到这样的房子，不断妥协之后留下了三个硬性要求：住宅、房龄10年以内、梯户比1:2，小区环境和周边配套过得去、交通相对便利就行。</p>
+<p>我都是在线上看好了感兴趣的房源，再联系中介线下看房。</p>
+<p>第一次看房，是在20年，那时候的计划还是买一室，看中了公司周边一个套内只有38平的开间房，户型还算方正，厨房卫生间相对，客厅和床连成一个大套间。</p>
+<p>这么一个小房子，价格还是有些超出我当时的预算，很不值得。后来还被中介拉去对面在建的商业公寓看房刷业绩，现在经常路过那里，对面的商场也开业了，还去转过几次。</p>
+<p>第二次看房，是在21年，计划改成买小两室，看中了一个在顶楼所以价格相对友好的房子，纠结几番还是决定听朋友劝没买，因为价格超出预算而且顶楼很不靠谱。</p>
+<p>每次看房，中介都会极尽所能劝我快买，约业主面谈，想让我头脑发热冲动签约，他们也好签单达成业绩。但是买房又不是买菜逛街，怎么可能这么草率做决定呢，还是要谨慎，不过多看是一方面，要真看中了定下来也蛮快的。所以我决定继续攒钱，到合适的时机再买。</p>
+<p>今年，市场方面，经济衰退楼市遇冷，政府出台了很多买房的利好政策。家庭方面，在外地工作的爸妈也要回来了，想让他们回来就直接能住上房子。个人方面，遇到了强哥想着早点把这个事办完，也能更好的规划我们的未来。</p>
+<p>所以从三月份开始，我每个周末都安排中介，奔走在城市各个角落看房。刚开始我自己坐公交地铁和中介碰头，后来发现其实可以要求接送。然后每次加中介之后先问能不能接送，不能的就pass，反正一套房源又不只有一个中介可以联系。</p>
+<p>跑了快两个月之后，终于找到了一个比较满意的小两室。楼龄新，两梯四户，小区环境也不错，旁边有待开的商业和地铁，周围有公园很适合遛弯，在大学城居住氛围也很浓厚，同样的户型看了好多套，然后把装修发给爸妈看。</p>
+<p>他们还是觉得有点小，也希望离我公司近点方便我上下班，可这已经是我预算内综合各种要求，能找到的最好的房子了。后来爸妈添了10万给我提高预算，就又接着找。</p>
+<h2 id="就这么草率的决定了"><a href="#就这么草率的决定了" class="headerlink" title="就这么草率的决定了"></a>就这么草率的决定了</h2><p>新的预算选择范围也很有限，不过一段时间以后，还是找到了不错的房子。满足我上边的硬性要求，虽然小区环境比之前那个差点，遛弯也不太方便，但离公司比较近可以打车上下班，周边配套和交通方面也还算过得去，还有一点，这里离强哥家只有三个红绿灯。</p>
+<p>爸妈也比较满意，所以决定就买在这个小区。这里小两室的户型有很多，看了一些都没有中意的，不过房源很多，过了几天中介又发了我几套，有一个我比较喜欢的，就又约上了。</p>
+<p>那天周六，是我喜欢的微雨天气。先去看了中意的那套房子，里面住着四口人，一对夫妻和孩子，以及带娃的奶奶，见我们来看房也没怎么理。</p>
+<p>小两室住四个人有点挤，里面的东西也很多，还有堆放在门口的杂物，跟我想象中的不太一样。看我神情有些失望，中介说还有一套，是新上的还没给我发，问我要不要看，我想着来都来了，必须看啊。</p>
+<p>这是一套次顶楼的房子，里面没人住，说是刚搬空，看情形本来住着一对夫妻和孩子。客厅很敞亮，装修是我喜欢的原木风，卧室朝东早上可以被太阳晒屁股，家具也比较全，让我眼前一亮。挂牌价有些超出预算，但肯定可以谈。</p>
+<p>拍了视频给爸妈看，他们也说不错，然后约了第二天和业主面谈。</p>
+<p>第二天，先去复看了房子，还是很喜欢，然后和中介去了签约中心。刚开始我有些紧张，不知道怎么跟业主面对面讨价还价，这时候中介就发挥了作用，只用告诉他自己的心理价位，他再去跟业主谈，省去了尴尬。</p>
+<p>业主跟我一样社恐，也是通过中介来谈价，所以全程，我们两方在不同的会议室里，中介穿梭其中，经过快一个小时的拉扯，最终以超出我心理价位一万的价格成交，家具全送(除了洗衣机和冰箱我想买新的)。</p>
+<p>成交之后和业主会合，是一位女士还带着孩子，看材料比我大十岁，房子在她名下也是单独所有，客套了一番之后交材料然后签约成功：</p>
+<img data-src="https://s2.loli.net/2023/11/14/1fLpntvYNUgRzm2.jpg" alt="签约中心&amp;在会议室的我&amp;签约成功"><span class="image-caption">签约中心&amp;在会议室的我&amp;签约成功</span>
+
+<p>签约之后正式开始交易，要办各种手续，整个阶段持续了两个月，总的来说比较顺利，但是真的好慢，可中介说这还算比较快的，我很震惊。</p>
+<img data-src="https://s2.loli.net/2023/11/14/NJtaAmj9zrgT3ok.jpg" width="300" height="600" alt="交易时间线"><span class="image-caption">交易时间线</span>
+
+<p>到这里，这个房子终于算是买完了，也实现了我用公积金对冲房贷的预设。在整个交易流程中，3%的中介费、1%的个税、契税都是不小的开支，虽然有中介，也得跟着跑去办各种手续。</p>
+<p>办贷款银行卡、打征信、面签、去二手房交易中心缴税过户等等，都是我工作日抽空摸鱼跑出去办的。之后自己去交易中心拿房产证，刚拿到又交给公积金管理中心做抵押登记，过段时间又去管理中心拿回了房产证，这才办完所有的手续。</p>
+<img data-src="https://s2.loli.net/2023/11/15/OdLPzR9vJkUsTyw.png" alt="二手房交易中心"><span class="image-caption">二手房交易中心</span>
+
+<p>回顾全程，我觉得自己像一只被宰的羔羊。各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹，还有业主，我可是以她当年三倍的价格买下了这个二手房！</p>
+<p>虽然用着利率3.1%的公积金贷款，可刚开始每个月只有53%是在还本金，本来公积金也是我和公司对半交，就当公司那半还利息，我这半还本金，相当于没有利息，这么一想确实很划算？(公积金住房担保部门：她还得谢谢咱呢) ，但是要还21年，这意味着我要保住这样的公积金水平，才能一直无痛还贷，在经济形势衰退的当下，还是蛮有压力的。</p>
+<h2 id="经济实惠的装修"><a href="#经济实惠的装修" class="headerlink" title="经济实惠的装修"></a>经济实惠的装修</h2><p>系统显示7.31交易完成，其实这个时间比较滞后，而且我和中介以及原房主沟通了想要早点入住的想法，所以7.18就收房了，当天交接了水电燃气物业费，也再仔细看了看房子的装修和电器。</p>
+<p>然后发现：入户和过道的灯具都坏了，墙面有裂纹和污渍需要重新粉刷，阳台升降晾衣架有部分损坏，瓷砖也有很多严重空鼓，厨房燃气长时间不用已经被锁，卫生间的浴霸面板也需要更换。。。</p>
+<p>但是，当我看到原房主拿来的家具单子：沙发2万？！电视柜1万？！其他的实木家具零零总总加起来也好几万，嗯，我突然觉得上面这些都是小问题。</p>
+<p>不过我一直很疑惑，买房这么多流程，为什么没有一个试住的环节呢？这么大的交易，看几次房子就决定，只能通过现状想象入住后的情况，真的很离谱。</p>
+<p>然后开始收拾房子，除了解决上面的「小问题」，还要买家电，有一些家具也想更换，以及很多生活必备品和居家小物件，我都整理了list：</p>
+<img data-src="https://s2.loli.net/2023/11/17/yPUe1Jg6upEb3oO.png" width="500" height="450" alt="装修list(部分)"><span class="image-caption">装修list(部分)</span>
+
+<p>收房第一周就开始动工，周末两天我都在现场从早待到晚，边看着各路师傅装东西，边量各种尺寸买东西，每天进门第一件事就是打开甄嬛传当背景音(师傅们可真有福气)，电视也是乐视的(缘，妙不可言)：</p>
+<img data-src="https://s2.loli.net/2023/11/17/v2A1F547hEtjNwQ.png" width="600" height="400" alt="甄嬛传"><span class="image-caption">甄嬛传</span>
+
+<p>两周以后(为什么是两周请看下文)，list上的大部分事情也都解决了：</p>
+<div class="tabs" id="list解决"><ul class="nav-tabs"><li class="tab active"><a href="#list解决-1">list解决 1</a></li><li class="tab"><a href="#list解决-2">list解决 2</a></li><li class="tab"><a href="#list解决-3">list解决 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list解决-1"><p><strong>生活必备</strong></p>
+<p>水电燃气物业这些收房当天就交接清楚了，水电都可以用，燃气我打了客服电话让师傅上门解锁之后也好了，也办了直饮水站的饮水卡。</p>
+<p>宽带最麻烦，我之前用的网速不够，就办了两张新卡用移动的家庭账户套餐拉了新的千兆宽带，然后想把旧卡套餐降到8元再办理退网，但是只能本人去移动营业厅办理。</p>
+<p>后来有天去办，连跑了5个营业厅，不是办不了就是说权限收回了，各种设置障碍，第5家终于可以办了，但是人超多等了一个多小时才办完：</p>
+<img data-src="https://s2.loli.net/2023/11/18/b8IqZyrtlKSPfNW.jpg" width="300" height="400" alt="移动营业厅"><span class="image-caption">移动营业厅</span></div><div class="tab-pane" id="list解决-2"><p><strong>墙面和瓷砖</strong></p>
+<p>刚开始我为了省事直接网上约师傅，在啄木鸟的小程序里(小区电梯里甚至还有广告)，结果来的师傅看起来流里流气，还破坏了一部分墙面说是取样回去配色(不是纯白的)，报价也很高，真的很离谱，看来这种连锁平台完全就是宰客：</p>
+<p><img data-src="https://s2.loli.net/2023/11/18/4u8U31FSikx6mHa.jpg" alt="啄木鸟"><span class="image-caption">啄木鸟</span></p>
+<p>后来打电话给一个以前认识的师傅，好像是个包工头，来了以后快速敲定了方案，价格合理人也很负责靠谱，墙刷的很完美瓷砖也贴好了：</p>
+<p><img data-src="https://s2.loli.net/2023/11/18/AiXrDq7n3vTZMeO.jpg" alt="刷墙"><span class="image-caption">刷墙</span></p></div><div class="tab-pane" id="list解决-3"><p><strong>电器家居</strong></p>
+<p>电器基本上都是小米的产品，经济实惠也可以联网控制，家居大都买的林氏比较喜欢简约风，还有花洒浴霸这些买了之后都有师傅上门安装，一般也都包拆旧很方便：</p>
+<img data-src="https://s2.loli.net/2023/11/18/uAtZg5kWTUb13s7.jpg" width="300" height="400" alt="一组师傅图"><span class="image-caption">一组师傅图</span>
+
+<p>我都是周内买好约到周末安装，所以会同时有多个师傅在家里工作，看他们聊天也很热闹，还有个小米的师傅加了林氏师傅的微信想跳槽，虽然不知道后续如何但祝他成功哈哈哈哈哈。</p>
+<p>房子里原本的家居我只换掉了一个榻榻米床和一个立柜，床太小立柜太丑，想着快点挪出去就挂在闲鱼上免费送，第二天就有人要，是一个同市的小哥，说家里也在装修离得不远，周末叫了货拉拉和师傅一起搬。</p>
+<p>大热天的也不容易，我还热心的给他们开了空调，然后去物业开放行条，本来看他拿着一袋子水果想着来都来了还带什么东西，后来他又拿走了(特意上来一趟说是自己忘拿了)，害。</p></div></div></div>
+
+<p>除了大件，还有很多居家小物件也很费心思，大多是入住后慢慢购置的。全程都是我一个人在弄，强哥也帮了不少忙，比如顶住上门来诘问的邻居，看着师傅装柜子，还带我去宜家买了床垫，所有东西弄好之后花费3万左右，主打一个经济实惠。</p>
+<h2 id="房子和生活都是自己的"><a href="#房子和生活都是自己的" class="headerlink" title="房子和生活都是自己的"></a>房子和生活都是自己的</h2><p>在我忙着收拾房子的时候，房东这边又出了幺蛾子。</p>
+<div class="tabs" id="幺蛾子"><ul class="nav-tabs"><li class="tab active"><a href="#幺蛾子-1">幺蛾子 1</a></li><li class="tab"><a href="#幺蛾子-2">幺蛾子 2</a></li><li class="tab"><a href="#幺蛾子-3">幺蛾子 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="幺蛾子-1"><p>本来租期是到9月初，我想着房子收拾完8月初就可以搬，所以7月份就给房东说让她早点找租客。</p>
+<p>一是为她好，想着毕业季比较好找，而且找到新租客一个月也能多收点钱，二是为我好，在这里住了四年半，陆续帮房东洗了油烟机、修了水管漏水和热水器、换了新门锁和中央空调老化零件。。。</p>
+<p>刚开始房东还掏点钱(我出大头)，后来问题越来越多，房东也多有不满，说东西虽然坏了，但是我在用就应该我掏钱来修!? 闹了很多不愉快，不久前又垫钱修洗衣机，实在不想再打两份工，还是快逃吧。</p>
+<p>因为房子被我改造的很温馨，也打理的非常干净，之前好多朋友来做客都说以后房东甚至可以加价租出去，中介来拍VR也说这个房子谁来看都能看得上。果不其然，很快有一个刚毕业来西安读研的女生和妈妈一起来看，也十分满意。</p></div><div class="tab-pane" id="幺蛾子-2"><p>然后房东就问我什么时候搬：</p>
+<img data-src="https://s2.loli.net/2023/11/19/6LZCpn23kE9fqM7.jpg" width="300" height="550" alt="好大一张脸"><span class="image-caption">好大一张脸</span>
+
+<p>本来想着好聚好散，结果她倒打一耙说是我违约提前退租，想吞了我一个月的租金和押金，还想着租出去，一个月收三份钱？真是好大一张脸。那好嘛我就不提前退了呗，爱咋咋地。</p></div><div class="tab-pane" id="幺蛾子-3"><p>但是我不急着搬，她着急租呀，然后缓和了态度说可以退我租金押金，到时候和水电物业一起交接。本来我打算按合同时间8.8搬，结果他们一通道德绑架，又想要我协调他们的时间，又说下个租客在酒店没地方住要我帮帮忙，最后我妥协决定8.1搬家，还得请个假：</p>
+<img data-src="https://s2.loli.net/2023/11/19/rFocWzywPx847GH.jpg" width="400" height="460" alt="我可太善良了"><span class="image-caption">我可太善良了</span></div></div></div>
+
+<p>于是8.1号，我和强哥、房东、新租客、中介四方一起交接，清算了水电燃气物业费，又检查房子的电器和家具，扯了好一会皮，主要是强哥在帮我交涉，我已经不想跟房东说话了。</p>
+<p>房间里有很多自己买的小家具，大多是上个租客走的时候我花了350买的，本来以为已经算是趁火打劫了，因为东西蛮多的也很实用，后来自己又添了很多小物件让房间看起来更温馨，就想把这些打包500块卖给新租客(其实光我后来买的原价加起来都有1k+)。</p>
+<p>结果他们更不要脸，可能知道我们着急走，卖不出去也只能留在这(因为尺寸都是按照这个房子买的拿走也用不了)，而且中介也很奇怪偏帮着新租客，说我们这些东西扔在楼下都没人要(我当时真的想扔)，最后他们明明可以直接抢，还要给我150，真的栓Q。</p>
+<p>然后叫了货拉拉开始搬家，我和强哥两个人按着电梯，上下不知多少次才搬完，后来小货车放不下，放了好多在强哥车上，我又跑去物业开各种单子和放行条，一前一后开去新家。</p>
+<p>到了新家又重复刚才的动作，足足搬了4个多小时，汗出了一层又一层。简单收拾歇了会，我们出发去超市买食材，途中还下起了瓢泼大雨，一路折腾回家，伴着满地杂乱的行李，终于在晚上10点吃上了火锅：</p>
+<p><img data-src="https://s2.loli.net/2023/11/19/LPs5SfbiOhJkdKM.jpg" alt="又见甄嬛传"><span class="image-caption">又见甄嬛传</span></p>
+<p>一整天实在太累，再加上来新家也很不适应，有些食不知味，吃完饭强哥12点才到家。因为房间还没收拾好，所以在新家的第一晚我是在沙发上睡的。</p>
+<p>第二天我请了假在家休息，顺便收拾了很多东西，后边几天也都在家办公，才慢慢恢复元气，说起来买房全程我只有搬家请了两天假，太高效了。</p>
+<p>接下来的日子里，我一边购置其它小物件，一边适应新家的生活。后来爸妈也来和我一起收拾房子做大扫除，才有了家的感觉，他们发现楼顶十分开阔可以晒被子之后，觉得很不错还开心的像个孩子，搬到新家的吉吉也一如既往的清澈愚蠢：</p>
+<img data-src="https://s2.loli.net/2023/11/19/w5IVuoX2gSPb3eT.jpg" width="400" height="500" alt="清澈愚蠢(和右下角的黑猫一模一样了)"><span class="image-caption">清澈愚蠢(和右下角的黑猫一模一样了)</span>
+
+<p>现在的我，已经完全适应了新家。工作日打车上下班，也偶尔在家办公，闲暇时和强哥一起在路边散步(毕竟只隔着三个红绿灯)，慢慢熟悉了周边的环境。</p>
+<p>爸妈也过来住了，老妈还很快找到了工作(离家也只有三个红绿灯)，每天步行上下班；老爸则经常展示厨艺，做好吃的给我们，生活平淡温馨。</p>
+<p>最近小区在组织成立业委会，监督物业不作为的现象，我很支持还上交了所需资料，但现在还没有下文。</p>
+<p>从买房入住到现在，我感觉物业就只是凑合，甚至业主群都还没加上。不过全国的物业都一样，凑合过呗，还能离咋的。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>买房</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我结婚了</title>
     <url>/i-got-married/</url>
     <content><![CDATA[<p><img data-src="https://s2.loli.net/2025/09/09/lGAz4dQ8nEZqIsy.jpg" alt="摄于西安市雁塔区民政局婚姻登记处内"><span class="image-caption">摄于西安市雁塔区民政局婚姻登记处内</span></p>
@@ -3753,114 +3861,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>结婚</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我买房了</title>
-    <url>/i-bought-an-apartment/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/30/t8bgFdo9qx3EX4j.png">
-
-<h2 id="归属感和租住不同权"><a href="#归属感和租住不同权" class="headerlink" title="归属感和租住不同权"></a>归属感和租住不同权</h2><p>会有人不想买房吗？是因为不想吗，是因为没钱吧。</p>
-<p>2014年，17岁的我来到西安上大学，毕业后又在这里工作。选择西安，并不是刻意为之，大学是被调剂的，毕业后也投了不少外地的工作，但最终也只有西安的公司收留我。</p>
-<p>我又是一个安于现状没有梦想的咸鱼，所以不知不觉在西安生活也快10年了，自然有一种归属感。而且这里超好的，离家又近又很安全，没有什么地震海啸之类的自然灾害，很适合好好活着。</p>
-<p>在中国，租住不同权，所以想要在一个地方长久的活着，买房是很有必要的。西安的房价相较于一线城市来说也比较友好，攒一攒还是够的上首付，所以买房这件事，从我刚开始赚钱的时候就被列为头号目标。</p>
-<h2 id="一波三折的计划"><a href="#一波三折的计划" class="headerlink" title="一波三折的计划"></a>一波三折的计划</h2><p>买房这件事很复杂，预算多少，买哪里，买多大，怎么买，都是问题。但是买期房并不在我的考虑范围之内，因为爆雷太多了也不想等，所以我只买二手房。</p>
-<p>刚开始我计划，买一个离公司近点的一室小房子，用公积金贷款，每月的缴存额刚好够直冲房贷，再买一辆经济实惠的大众Polo，慢慢过自己的小日子。</p>
-<p>然后参考某壳某家上的房源信息，确定预算后开始了每月的攒钱计划，还在小本本上计算可以达成目标的时间，也一直关注房地产的政策和消息，斗志满满。</p>
-<p>那时我还不懂什么是 <a href="https://www.bilibili.com/read/cv8944043/">无常</a>，总以为万物恒定，一切都会按照自己计划的那样进行，那种突然出现什么变故需要用钱的事，全不在我的考虑范围之内。可真就什么也没发生，虽然中间有一些插曲，但也总归按计划攒够了钱，真是万幸。</p>
-<p>后来考虑到爸妈养老，住的近方便一点，又打算买一个小两室，爸妈住一间，我住一间。直到去年，我遇到了强哥，一起规划未来时讨论到这件事情，讨论之后还是决定买，但买房的性质从给自己买变成给爸妈买养老房。</p>
-<p>计划还是买小两室，爸妈一间，我住一间以后用作客房，老姐之后来西安探亲也有地方住。用纯公积金贷款，每月的缴存额要够直冲房贷，做到无痛还贷，这样也有余力再攒点钱和强哥一起买房。</p>
-<h2 id="不断接受现实的看房过程"><a href="#不断接受现实的看房过程" class="headerlink" title="不断接受现实的看房过程"></a>不断接受现实的看房过程</h2><p>刚开始，我对二手房的要求是：住宅、房龄5年以内、两梯四户、小区环境要干净整洁、交通要便利、周边配套要丰富。</p>
-<p>然后发现以我的预算根本找不到这样的房子，不断妥协之后留下了三个硬性要求：住宅、房龄10年以内、梯户比1:2，小区环境和周边配套过得去、交通相对便利就行。</p>
-<p>我都是在线上看好了感兴趣的房源，再联系中介线下看房。</p>
-<p>第一次看房，是在20年，那时候的计划还是买一室，看中了公司周边一个套内只有38平的开间房，户型还算方正，厨房卫生间相对，客厅和床连成一个大套间。</p>
-<p>这么一个小房子，价格还是有些超出我当时的预算，很不值得。后来还被中介拉去对面在建的商业公寓看房刷业绩，现在经常路过那里，对面的商场也开业了，还去转过几次。</p>
-<p>第二次看房，是在21年，计划改成买小两室，看中了一个在顶楼所以价格相对友好的房子，纠结几番还是决定听朋友劝没买，因为价格超出预算而且顶楼很不靠谱。</p>
-<p>每次看房，中介都会极尽所能劝我快买，约业主面谈，想让我头脑发热冲动签约，他们也好签单达成业绩。但是买房又不是买菜逛街，怎么可能这么草率做决定呢，还是要谨慎，不过多看是一方面，要真看中了定下来也蛮快的。所以我决定继续攒钱，到合适的时机再买。</p>
-<p>今年，市场方面，经济衰退楼市遇冷，政府出台了很多买房的利好政策。家庭方面，在外地工作的爸妈也要回来了，想让他们回来就直接能住上房子。个人方面，遇到了强哥想着早点把这个事办完，也能更好的规划我们的未来。</p>
-<p>所以从三月份开始，我每个周末都安排中介，奔走在城市各个角落看房。刚开始我自己坐公交地铁和中介碰头，后来发现其实可以要求接送。然后每次加中介之后先问能不能接送，不能的就pass，反正一套房源又不只有一个中介可以联系。</p>
-<p>跑了快两个月之后，终于找到了一个比较满意的小两室。楼龄新，两梯四户，小区环境也不错，旁边有待开的商业和地铁，周围有公园很适合遛弯，在大学城居住氛围也很浓厚，同样的户型看了好多套，然后把装修发给爸妈看。</p>
-<p>他们还是觉得有点小，也希望离我公司近点方便我上下班，可这已经是我预算内综合各种要求，能找到的最好的房子了。后来爸妈添了10万给我提高预算，就又接着找。</p>
-<h2 id="就这么草率的决定了"><a href="#就这么草率的决定了" class="headerlink" title="就这么草率的决定了"></a>就这么草率的决定了</h2><p>新的预算选择范围也很有限，不过一段时间以后，还是找到了不错的房子。满足我上边的硬性要求，虽然小区环境比之前那个差点，遛弯也不太方便，但离公司比较近可以打车上下班，周边配套和交通方面也还算过得去，还有一点，这里离强哥家只有三个红绿灯。</p>
-<p>爸妈也比较满意，所以决定就买在这个小区。这里小两室的户型有很多，看了一些都没有中意的，不过房源很多，过了几天中介又发了我几套，有一个我比较喜欢的，就又约上了。</p>
-<p>那天周六，是我喜欢的微雨天气。先去看了中意的那套房子，里面住着四口人，一对夫妻和孩子，以及带娃的奶奶，见我们来看房也没怎么理。</p>
-<p>小两室住四个人有点挤，里面的东西也很多，还有堆放在门口的杂物，跟我想象中的不太一样。看我神情有些失望，中介说还有一套，是新上的还没给我发，问我要不要看，我想着来都来了，必须看啊。</p>
-<p>这是一套次顶楼的房子，里面没人住，说是刚搬空，看情形本来住着一对夫妻和孩子。客厅很敞亮，装修是我喜欢的原木风，卧室朝东早上可以被太阳晒屁股，家具也比较全，让我眼前一亮。挂牌价有些超出预算，但肯定可以谈。</p>
-<p>拍了视频给爸妈看，他们也说不错，然后约了第二天和业主面谈。</p>
-<p>第二天，先去复看了房子，还是很喜欢，然后和中介去了签约中心。刚开始我有些紧张，不知道怎么跟业主面对面讨价还价，这时候中介就发挥了作用，只用告诉他自己的心理价位，他再去跟业主谈，省去了尴尬。</p>
-<p>业主跟我一样社恐，也是通过中介来谈价，所以全程，我们两方在不同的会议室里，中介穿梭其中，经过快一个小时的拉扯，最终以超出我心理价位一万的价格成交，家具全送(除了洗衣机和冰箱我想买新的)。</p>
-<p>成交之后和业主会合，是一位女士还带着孩子，看材料比我大十岁，房子在她名下也是单独所有，客套了一番之后交材料然后签约成功：</p>
-<img data-src="https://s2.loli.net/2023/11/14/1fLpntvYNUgRzm2.jpg" alt="签约中心&amp;在会议室的我&amp;签约成功"><span class="image-caption">签约中心&amp;在会议室的我&amp;签约成功</span>
-
-<p>签约之后正式开始交易，要办各种手续，整个阶段持续了两个月，总的来说比较顺利，但是真的好慢，可中介说这还算比较快的，我很震惊。</p>
-<img data-src="https://s2.loli.net/2023/11/14/NJtaAmj9zrgT3ok.jpg" width="300" height="600" alt="交易时间线"><span class="image-caption">交易时间线</span>
-
-<p>到这里，这个房子终于算是买完了，也实现了我用公积金对冲房贷的预设。在整个交易流程中，3%的中介费、1%的个税、契税都是不小的开支，虽然有中介，也得跟着跑去办各种手续。</p>
-<p>办贷款银行卡、打征信、面签、去二手房交易中心缴税过户等等，都是我工作日抽空摸鱼跑出去办的。之后自己去交易中心拿房产证，刚拿到又交给公积金管理中心做抵押登记，过段时间又去管理中心拿回了房产证，这才办完所有的手续。</p>
-<img data-src="https://s2.loli.net/2023/11/15/OdLPzR9vJkUsTyw.png" alt="二手房交易中心"><span class="image-caption">二手房交易中心</span>
-
-<p>回顾全程，我觉得自己像一只被宰的羔羊。各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹，还有业主，我可是以她当年三倍的价格买下了这个二手房！</p>
-<p>虽然用着利率3.1%的公积金贷款，可刚开始每个月只有53%是在还本金，本来公积金也是我和公司对半交，就当公司那半还利息，我这半还本金，相当于没有利息，这么一想确实很划算？(公积金住房担保部门：她还得谢谢咱呢) ，但是要还21年，这意味着我要保住这样的公积金水平，才能一直无痛还贷，在经济形势衰退的当下，还是蛮有压力的。</p>
-<h2 id="经济实惠的装修"><a href="#经济实惠的装修" class="headerlink" title="经济实惠的装修"></a>经济实惠的装修</h2><p>系统显示7.31交易完成，其实这个时间比较滞后，而且我和中介以及原房主沟通了想要早点入住的想法，所以7.18就收房了，当天交接了水电燃气物业费，也再仔细看了看房子的装修和电器。</p>
-<p>然后发现：入户和过道的灯具都坏了，墙面有裂纹和污渍需要重新粉刷，阳台升降晾衣架有部分损坏，瓷砖也有很多严重空鼓，厨房燃气长时间不用已经被锁，卫生间的浴霸面板也需要更换。。。</p>
-<p>但是，当我看到原房主拿来的家具单子：沙发2万？！电视柜1万？！其他的实木家具零零总总加起来也好几万，嗯，我突然觉得上面这些都是小问题。</p>
-<p>不过我一直很疑惑，买房这么多流程，为什么没有一个试住的环节呢？这么大的交易，看几次房子就决定，只能通过现状想象入住后的情况，真的很离谱。</p>
-<p>然后开始收拾房子，除了解决上面的「小问题」，还要买家电，有一些家具也想更换，以及很多生活必备品和居家小物件，我都整理了list：</p>
-<img data-src="https://s2.loli.net/2023/11/17/yPUe1Jg6upEb3oO.png" width="500" height="450" alt="装修list(部分)"><span class="image-caption">装修list(部分)</span>
-
-<p>收房第一周就开始动工，周末两天我都在现场从早待到晚，边看着各路师傅装东西，边量各种尺寸买东西，每天进门第一件事就是打开甄嬛传当背景音(师傅们可真有福气)，电视也是乐视的(缘，妙不可言)：</p>
-<img data-src="https://s2.loli.net/2023/11/17/v2A1F547hEtjNwQ.png" width="600" height="400" alt="甄嬛传"><span class="image-caption">甄嬛传</span>
-
-<p>两周以后(为什么是两周请看下文)，list上的大部分事情也都解决了：</p>
-<div class="tabs" id="list解决"><ul class="nav-tabs"><li class="tab active"><a href="#list解决-1">list解决 1</a></li><li class="tab"><a href="#list解决-2">list解决 2</a></li><li class="tab"><a href="#list解决-3">list解决 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list解决-1"><p><strong>生活必备</strong></p>
-<p>水电燃气物业这些收房当天就交接清楚了，水电都可以用，燃气我打了客服电话让师傅上门解锁之后也好了，也办了直饮水站的饮水卡。</p>
-<p>宽带最麻烦，我之前用的网速不够，就办了两张新卡用移动的家庭账户套餐拉了新的千兆宽带，然后想把旧卡套餐降到8元再办理退网，但是只能本人去移动营业厅办理。</p>
-<p>后来有天去办，连跑了5个营业厅，不是办不了就是说权限收回了，各种设置障碍，第5家终于可以办了，但是人超多等了一个多小时才办完：</p>
-<img data-src="https://s2.loli.net/2023/11/18/b8IqZyrtlKSPfNW.jpg" width="300" height="400" alt="移动营业厅"><span class="image-caption">移动营业厅</span></div><div class="tab-pane" id="list解决-2"><p><strong>墙面和瓷砖</strong></p>
-<p>刚开始我为了省事直接网上约师傅，在啄木鸟的小程序里(小区电梯里甚至还有广告)，结果来的师傅看起来流里流气，还破坏了一部分墙面说是取样回去配色(不是纯白的)，报价也很高，真的很离谱，看来这种连锁平台完全就是宰客：</p>
-<p><img data-src="https://s2.loli.net/2023/11/18/4u8U31FSikx6mHa.jpg" alt="啄木鸟"><span class="image-caption">啄木鸟</span></p>
-<p>后来打电话给一个以前认识的师傅，好像是个包工头，来了以后快速敲定了方案，价格合理人也很负责靠谱，墙刷的很完美瓷砖也贴好了：</p>
-<p><img data-src="https://s2.loli.net/2023/11/18/AiXrDq7n3vTZMeO.jpg" alt="刷墙"><span class="image-caption">刷墙</span></p></div><div class="tab-pane" id="list解决-3"><p><strong>电器家居</strong></p>
-<p>电器基本上都是小米的产品，经济实惠也可以联网控制，家居大都买的林氏比较喜欢简约风，还有花洒浴霸这些买了之后都有师傅上门安装，一般也都包拆旧很方便：</p>
-<img data-src="https://s2.loli.net/2023/11/18/uAtZg5kWTUb13s7.jpg" width="300" height="400" alt="一组师傅图"><span class="image-caption">一组师傅图</span>
-
-<p>我都是周内买好约到周末安装，所以会同时有多个师傅在家里工作，看他们聊天也很热闹，还有个小米的师傅加了林氏师傅的微信想跳槽，虽然不知道后续如何但祝他成功哈哈哈哈哈。</p>
-<p>房子里原本的家居我只换掉了一个榻榻米床和一个立柜，床太小立柜太丑，想着快点挪出去就挂在闲鱼上免费送，第二天就有人要，是一个同市的小哥，说家里也在装修离得不远，周末叫了货拉拉和师傅一起搬。</p>
-<p>大热天的也不容易，我还热心的给他们开了空调，然后去物业开放行条，本来看他拿着一袋子水果想着来都来了还带什么东西，后来他又拿走了(特意上来一趟说是自己忘拿了)，害。</p></div></div></div>
-
-<p>除了大件，还有很多居家小物件也很费心思，大多是入住后慢慢购置的。全程都是我一个人在弄，强哥也帮了不少忙，比如顶住上门来诘问的邻居，看着师傅装柜子，还带我去宜家买了床垫，所有东西弄好之后花费3万左右，主打一个经济实惠。</p>
-<h2 id="房子和生活都是自己的"><a href="#房子和生活都是自己的" class="headerlink" title="房子和生活都是自己的"></a>房子和生活都是自己的</h2><p>在我忙着收拾房子的时候，房东这边又出了幺蛾子。</p>
-<div class="tabs" id="幺蛾子"><ul class="nav-tabs"><li class="tab active"><a href="#幺蛾子-1">幺蛾子 1</a></li><li class="tab"><a href="#幺蛾子-2">幺蛾子 2</a></li><li class="tab"><a href="#幺蛾子-3">幺蛾子 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="幺蛾子-1"><p>本来租期是到9月初，我想着房子收拾完8月初就可以搬，所以7月份就给房东说让她早点找租客。</p>
-<p>一是为她好，想着毕业季比较好找，而且找到新租客一个月也能多收点钱，二是为我好，在这里住了四年半，陆续帮房东洗了油烟机、修了水管漏水和热水器、换了新门锁和中央空调老化零件。。。</p>
-<p>刚开始房东还掏点钱(我出大头)，后来问题越来越多，房东也多有不满，说东西虽然坏了，但是我在用就应该我掏钱来修!? 闹了很多不愉快，不久前又垫钱修洗衣机，实在不想再打两份工，还是快逃吧。</p>
-<p>因为房子被我改造的很温馨，也打理的非常干净，之前好多朋友来做客都说以后房东甚至可以加价租出去，中介来拍VR也说这个房子谁来看都能看得上。果不其然，很快有一个刚毕业来西安读研的女生和妈妈一起来看，也十分满意。</p></div><div class="tab-pane" id="幺蛾子-2"><p>然后房东就问我什么时候搬：</p>
-<img data-src="https://s2.loli.net/2023/11/19/6LZCpn23kE9fqM7.jpg" width="300" height="550" alt="好大一张脸"><span class="image-caption">好大一张脸</span>
-
-<p>本来想着好聚好散，结果她倒打一耙说是我违约提前退租，想吞了我一个月的租金和押金，还想着租出去，一个月收三份钱？真是好大一张脸。那好嘛我就不提前退了呗，爱咋咋地。</p></div><div class="tab-pane" id="幺蛾子-3"><p>但是我不急着搬，她着急租呀，然后缓和了态度说可以退我租金押金，到时候和水电物业一起交接。本来我打算按合同时间8.8搬，结果他们一通道德绑架，又想要我协调他们的时间，又说下个租客在酒店没地方住要我帮帮忙，最后我妥协决定8.1搬家，还得请个假：</p>
-<img data-src="https://s2.loli.net/2023/11/19/rFocWzywPx847GH.jpg" width="400" height="460" alt="我可太善良了"><span class="image-caption">我可太善良了</span></div></div></div>
-
-<p>于是8.1号，我和强哥、房东、新租客、中介四方一起交接，清算了水电燃气物业费，又检查房子的电器和家具，扯了好一会皮，主要是强哥在帮我交涉，我已经不想跟房东说话了。</p>
-<p>房间里有很多自己买的小家具，大多是上个租客走的时候我花了350买的，本来以为已经算是趁火打劫了，因为东西蛮多的也很实用，后来自己又添了很多小物件让房间看起来更温馨，就想把这些打包500块卖给新租客(其实光我后来买的原价加起来都有1k+)。</p>
-<p>结果他们更不要脸，可能知道我们着急走，卖不出去也只能留在这(因为尺寸都是按照这个房子买的拿走也用不了)，而且中介也很奇怪偏帮着新租客，说我们这些东西扔在楼下都没人要(我当时真的想扔)，最后他们明明可以直接抢，还要给我150，真的栓Q。</p>
-<p>然后叫了货拉拉开始搬家，我和强哥两个人按着电梯，上下不知多少次才搬完，后来小货车放不下，放了好多在强哥车上，我又跑去物业开各种单子和放行条，一前一后开去新家。</p>
-<p>到了新家又重复刚才的动作，足足搬了4个多小时，汗出了一层又一层。简单收拾歇了会，我们出发去超市买食材，途中还下起了瓢泼大雨，一路折腾回家，伴着满地杂乱的行李，终于在晚上10点吃上了火锅：</p>
-<p><img data-src="https://s2.loli.net/2023/11/19/LPs5SfbiOhJkdKM.jpg" alt="又见甄嬛传"><span class="image-caption">又见甄嬛传</span></p>
-<p>一整天实在太累，再加上来新家也很不适应，有些食不知味，吃完饭强哥12点才到家。因为房间还没收拾好，所以在新家的第一晚我是在沙发上睡的。</p>
-<p>第二天我请了假在家休息，顺便收拾了很多东西，后边几天也都在家办公，才慢慢恢复元气，说起来买房全程我只有搬家请了两天假，太高效了。</p>
-<p>接下来的日子里，我一边购置其它小物件，一边适应新家的生活。后来爸妈也来和我一起收拾房子做大扫除，才有了家的感觉，他们发现楼顶十分开阔可以晒被子之后，觉得很不错还开心的像个孩子，搬到新家的吉吉也一如既往的清澈愚蠢：</p>
-<img data-src="https://s2.loli.net/2023/11/19/w5IVuoX2gSPb3eT.jpg" width="400" height="500" alt="清澈愚蠢(和右下角的黑猫一模一样了)"><span class="image-caption">清澈愚蠢(和右下角的黑猫一模一样了)</span>
-
-<p>现在的我，已经完全适应了新家。工作日打车上下班，也偶尔在家办公，闲暇时和强哥一起在路边散步(毕竟只隔着三个红绿灯)，慢慢熟悉了周边的环境。</p>
-<p>爸妈也过来住了，老妈还很快找到了工作(离家也只有三个红绿灯)，每天步行上下班；老爸则经常展示厨艺，做好吃的给我们，生活平淡温馨。</p>
-<p>最近小区在组织成立业委会，监督物业不作为的现象，我很支持还上交了所需资料，但现在还没有下文。</p>
-<p>从买房入住到现在，我感觉物业就只是凑合，甚至业主群都还没加上。不过全国的物业都一样，凑合过呗，还能离咋的。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>买房</tag>
       </tags>
   </entry>
   <entry>
@@ -4477,55 +4477,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>单身都是有原因的</title>
-    <url>/looking-for-the-one-6-10/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/al8tGVduY54c3Oi.jpg">
-
-<h2 id="No-6-人在美国"><a href="#No-6-人在美国" class="headerlink" title="No.6 人在美国"></a>No.6 人在美国</h2><p>二狗上加我的校友，在美国哥伦比亚读博。<br>后来我们还加了微信，因为时差，我睡觉的时候他刚醒，他睡觉的时候我在搬砖，我们之间的对话大概是这样的：</p>
-<img data-src="https://s2.loli.net/2022/05/28/PYILeEtGQSc9W1h.jpg" height="400" width="250" alt="别爱我没结果"><span class="image-caption">别爱我没结果</span>
-
-<p>现在是彼此朋友圈的点赞之交。</p>
-<h2 id="No-7-飞行员"><a href="#No-7-飞行员" class="headerlink" title="No.7 飞行员"></a>No.7 飞行员</h2><p>同事介绍的飞行员小哥哥，人不错！聊天也没有槽点，很主动，有来有回的聊了一段时间。</p>
-<p>但问题在于我们异地，而且他工作很忙，人家又在考虑飞国际，我们生活上的交点就更少了，我劝他在当地或者公司找个同事，可他认识的同事大多是飞行员(男生)，找空姐也不容易发展，因为每次飞遇到的人都不一样，无果，只能祝他幸福了。</p>
-<p>不过飞行员真的好酷！</p>
-<img data-src="https://s2.loli.net/2022/05/28/ldshUAJ4S6GWzQe.jpg" alt="夜幕(飞行员视角)"><span class="image-caption">夜幕(飞行员视角)</span>
-
-<h2 id="No-8-音乐小王子"><a href="#No-8-音乐小王子" class="headerlink" title="No.8 音乐小王子"></a>No.8 音乐小王子</h2><p>华为的程序员，每天加班回到家还得聊天找对象，我经常觉得他很心酸。</p>
-<p>在二狗的纸飞机认识的，背景是我有段时间在二狗上吃瓜太多狗粮不够了，所以发个纸飞机问下大家都是咋获得狗粮的，然后就解锁了交友新姿势，因为不用加好友就可以直接在纸飞机聊起来。</p>
-<p>聊了几句他说要加我微信，因为平台规则是不能在这里发联系方式什么的，我怕被抓就让他发:</p>
-<img data-src="https://s2.loli.net/2022/05/28/kOfXMHuWEFYgIRJ.jpg" height="500" width="250">
-
-<p>在微信上互相交流了下个人基本信息，开始了两个互联网人之间的对话：</p>
-<img data-src="https://s2.loli.net/2022/05/28/6U8bYIasKOH3Zme.jpg" height="500" width="250">
-
-<p>聊到爱好，他说自己喜欢音乐，在学乐理什么的，然后推荐了一首歌给我，因为我唱歌还不错就让我唱这首，我录了歌发给他，然后问他还有什么别的歌推荐，就没有然后了(被我的美妙歌声震慑住了？)。。。<br>一个月之后：</p>
-<img data-src="https://s2.loli.net/2022/05/28/B5iE947cS3RaYAj.jpg" height="500" width="250">
-
-<p>他又来给我推荐歌了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，真.一月一首，后来我劝他别找对象了，醉心于音乐吧，时间一长肯定大有所成[手动狗头]</p>
-<h2 id="No-9-阿汤哥"><a href="#No-9-阿汤哥" class="headerlink" title="No.9 阿汤哥"></a>No.9 阿汤哥</h2><p>在青藤认识的男嘉宾，后来加了微信。<br>他朋友圈的背景图是「努力只能及格，拼命才能优秀」，签名是「当你足够努力，幸运总会与你不期而遇」，聊天的时候他说：</p>
-<ul>
-<li>「优秀的人太多了，所以要和自己比，比昨天优秀就是最棒的」</li>
-<li>「因为疫情，也能从侧面提醒人们珍惜当下的幸福生活」</li>
-<li>……</li>
-</ul>
-<p>闻到鸡汤的味道了吗？所以是阿汤哥：</p>
-<img data-src="https://s2.loli.net/2022/05/28/Yx39RJXTQnaKowk.jpg" height="380" width="250">
-
-<p>接下来无奖问答，请问下图中他在排队做什么(切到第二个tab看答案)？</p>
-<div class="tabs" id="无奖问答"><ul class="nav-tabs"><li class="tab active"><a href="#无奖问答-1">无奖问答 1</a></li><li class="tab"><a href="#无奖问答-2">无奖问答 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="无奖问答-1"><img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/new.gif" height="520" width="250"></div><div class="tab-pane" id="无奖问答-2"><img data-src="https://s2.loli.net/2022/05/28/T9hdpSaYVJZv4yg.jpg" height="500" width="250" alt="我觉得没救了"><span class="image-caption">我觉得没救了</span></div></div></div>
-
-<p>别装了，我知道你们跟我一样，看完只会猜到一些「不可描述」的事情。。。<br>总之阿汤哥很励志，但我们真的不合适，所以只能让他去找别的女嘉宾，然后祝他成功！</p>
-<h2 id="No-10-得不到的男人"><a href="#No-10-得不到的男人" class="headerlink" title="No.10 得不到的男人"></a>No.10 得不到的男人</h2><p>刚开始看到他是在二狗，主页照片非常的小奶狗(虽然人家年纪比我大)，后来在青藤上查看日推男嘉宾的时候又碰见了，这可不是缘分吗？然后就互相关注聊起来了。<br>他说自己找对象已经自闭了，我就鼓励他不要放弃，说我俩星座很搭要不试试，就再也没有收到回复了。<br>我(wei)不(se)死(suo)心(mi)，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。<br>其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」(<del>可能</del> 是说我丑？)，要不我考虑去整个容吧。。。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>人类观察员</category>
-      </categories>
-      <tags>
-        <tag>阿汤哥</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二狗平台</title>
     <url>/looking-for-the-one-er-gou/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/ORMnk4yZsSmg5Vf.png">
@@ -4592,6 +4543,55 @@ public class Functions {
       </categories>
       <tags>
         <tag>二狗</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单身都是有原因的</title>
+    <url>/looking-for-the-one-6-10/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/al8tGVduY54c3Oi.jpg">
+
+<h2 id="No-6-人在美国"><a href="#No-6-人在美国" class="headerlink" title="No.6 人在美国"></a>No.6 人在美国</h2><p>二狗上加我的校友，在美国哥伦比亚读博。<br>后来我们还加了微信，因为时差，我睡觉的时候他刚醒，他睡觉的时候我在搬砖，我们之间的对话大概是这样的：</p>
+<img data-src="https://s2.loli.net/2022/05/28/PYILeEtGQSc9W1h.jpg" height="400" width="250" alt="别爱我没结果"><span class="image-caption">别爱我没结果</span>
+
+<p>现在是彼此朋友圈的点赞之交。</p>
+<h2 id="No-7-飞行员"><a href="#No-7-飞行员" class="headerlink" title="No.7 飞行员"></a>No.7 飞行员</h2><p>同事介绍的飞行员小哥哥，人不错！聊天也没有槽点，很主动，有来有回的聊了一段时间。</p>
+<p>但问题在于我们异地，而且他工作很忙，人家又在考虑飞国际，我们生活上的交点就更少了，我劝他在当地或者公司找个同事，可他认识的同事大多是飞行员(男生)，找空姐也不容易发展，因为每次飞遇到的人都不一样，无果，只能祝他幸福了。</p>
+<p>不过飞行员真的好酷！</p>
+<img data-src="https://s2.loli.net/2022/05/28/ldshUAJ4S6GWzQe.jpg" alt="夜幕(飞行员视角)"><span class="image-caption">夜幕(飞行员视角)</span>
+
+<h2 id="No-8-音乐小王子"><a href="#No-8-音乐小王子" class="headerlink" title="No.8 音乐小王子"></a>No.8 音乐小王子</h2><p>华为的程序员，每天加班回到家还得聊天找对象，我经常觉得他很心酸。</p>
+<p>在二狗的纸飞机认识的，背景是我有段时间在二狗上吃瓜太多狗粮不够了，所以发个纸飞机问下大家都是咋获得狗粮的，然后就解锁了交友新姿势，因为不用加好友就可以直接在纸飞机聊起来。</p>
+<p>聊了几句他说要加我微信，因为平台规则是不能在这里发联系方式什么的，我怕被抓就让他发:</p>
+<img data-src="https://s2.loli.net/2022/05/28/kOfXMHuWEFYgIRJ.jpg" height="500" width="250">
+
+<p>在微信上互相交流了下个人基本信息，开始了两个互联网人之间的对话：</p>
+<img data-src="https://s2.loli.net/2022/05/28/6U8bYIasKOH3Zme.jpg" height="500" width="250">
+
+<p>聊到爱好，他说自己喜欢音乐，在学乐理什么的，然后推荐了一首歌给我，因为我唱歌还不错就让我唱这首，我录了歌发给他，然后问他还有什么别的歌推荐，就没有然后了(被我的美妙歌声震慑住了？)。。。<br>一个月之后：</p>
+<img data-src="https://s2.loli.net/2022/05/28/B5iE947cS3RaYAj.jpg" height="500" width="250">
+
+<p>他又来给我推荐歌了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，真.一月一首，后来我劝他别找对象了，醉心于音乐吧，时间一长肯定大有所成[手动狗头]</p>
+<h2 id="No-9-阿汤哥"><a href="#No-9-阿汤哥" class="headerlink" title="No.9 阿汤哥"></a>No.9 阿汤哥</h2><p>在青藤认识的男嘉宾，后来加了微信。<br>他朋友圈的背景图是「努力只能及格，拼命才能优秀」，签名是「当你足够努力，幸运总会与你不期而遇」，聊天的时候他说：</p>
+<ul>
+<li>「优秀的人太多了，所以要和自己比，比昨天优秀就是最棒的」</li>
+<li>「因为疫情，也能从侧面提醒人们珍惜当下的幸福生活」</li>
+<li>……</li>
+</ul>
+<p>闻到鸡汤的味道了吗？所以是阿汤哥：</p>
+<img data-src="https://s2.loli.net/2022/05/28/Yx39RJXTQnaKowk.jpg" height="380" width="250">
+
+<p>接下来无奖问答，请问下图中他在排队做什么(切到第二个tab看答案)？</p>
+<div class="tabs" id="无奖问答"><ul class="nav-tabs"><li class="tab active"><a href="#无奖问答-1">无奖问答 1</a></li><li class="tab"><a href="#无奖问答-2">无奖问答 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="无奖问答-1"><img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/new.gif" height="520" width="250"></div><div class="tab-pane" id="无奖问答-2"><img data-src="https://s2.loli.net/2022/05/28/T9hdpSaYVJZv4yg.jpg" height="500" width="250" alt="我觉得没救了"><span class="image-caption">我觉得没救了</span></div></div></div>
+
+<p>别装了，我知道你们跟我一样，看完只会猜到一些「不可描述」的事情。。。<br>总之阿汤哥很励志，但我们真的不合适，所以只能让他去找别的女嘉宾，然后祝他成功！</p>
+<h2 id="No-10-得不到的男人"><a href="#No-10-得不到的男人" class="headerlink" title="No.10 得不到的男人"></a>No.10 得不到的男人</h2><p>刚开始看到他是在二狗，主页照片非常的小奶狗(虽然人家年纪比我大)，后来在青藤上查看日推男嘉宾的时候又碰见了，这可不是缘分吗？然后就互相关注聊起来了。<br>他说自己找对象已经自闭了，我就鼓励他不要放弃，说我俩星座很搭要不试试，就再也没有收到回复了。<br>我(wei)不(se)死(suo)心(mi)，后来在二狗上碰到又加人家好友尬聊，但聊了几天还是只有我在主动找话题，真的好累，所以说这位是我得不到的男人。<br>其实得不到的男人还有很多，比如5号，又比如很多男生直接拒绝我的好友申请，拒绝原因大多是「没有眼缘」(<del>可能</del> 是说我丑？)，要不我考虑去整个容吧。。。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>人类观察员</category>
+      </categories>
+      <tags>
+        <tag>阿汤哥</tag>
       </tags>
   </entry>
   <entry>
@@ -4942,71 +4942,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>增驾摩托车奇幻之旅(上)</title>
-    <url>/my-lovely-moto/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
-
-<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
-<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
-<p>Deal! </p>
-<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
-</code></pre>
-<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
-<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
-<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
-<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
-<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
-<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
-<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
-
-<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
-</code></pre>
-<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
-<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
-<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
-<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
-
-<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
-<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
-
-<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
-<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
-</code></pre>
-<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
-<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
-<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
-
-<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
-<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
-
-<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
-<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
-<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
-<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
-<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
-<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
-
-<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
-<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
-<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
-<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
-<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
-<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
-</code></pre>
-<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
-<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
-
-<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>骑上我心爱的小摩托</category>
-      </categories>
-      <tags>
-        <tag>增驾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>骑上我心爱的小摩托</title>
     <url>/my-lovely-moto-4/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/03/gkGWzpRAyOnMKBQ.png" width="800" height="600" alt="我的摩托车(SUNDIRO.HONDA_CBF190tr)"><span class="image-caption">我的摩托车(SUNDIRO.HONDA_CBF190tr)</span>
@@ -5074,6 +5009,71 @@ public class Functions {
       <tags>
         <tag>买车</tag>
         <tag>骑摩托</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>增驾摩托车奇幻之旅(上)</title>
+    <url>/my-lovely-moto/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
+
+<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
+<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
+<p>Deal! </p>
+<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
+</code></pre>
+<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
+<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
+<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
+<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
+<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
+<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
+<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
+
+<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
+</code></pre>
+<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
+<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
+<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
+<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
+
+<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
+<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
+
+<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
+<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
+</code></pre>
+<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
+<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
+<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
+
+<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
+<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
+
+<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
+<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
+<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
+<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
+<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
+<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
+
+<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
+<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
+<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
+<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
+<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
+<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
+</code></pre>
+<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
+<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
+
+<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
+      </categories>
+      <tags>
+        <tag>增驾</tag>
       </tags>
   </entry>
   <entry>
@@ -6144,6 +6144,35 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
+    <title>博客好久没更了</title>
+    <url>/why-am-not-writing-more-blogs/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
+
+<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
+<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
+<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
+<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
+<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
+<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
+<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
+<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
+<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
+<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
+</div>
+
+<blockquote>
+<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>瞎写写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于闰年，你不知道的那些事</title>
     <url>/%E5%85%B3%E4%BA%8E%E9%97%B0%E5%B9%B4%EF%BC%8C%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>“四年一闰，百年不闰，四百年再闰”。你知道为什么吗？</p>
@@ -6213,35 +6242,6 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </categories>
       <tags>
         <tag>闰年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客好久没更了</title>
-    <url>/why-am-not-writing-more-blogs/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/13/zoi9pTMLjJqhF6G.png">
-
-<div class="note info"><p>打开博客，上一篇还是2月末发表的碎碎念，已经快8个月没有更新了，博主是不是死了(啊呸)</p>
-<p>倒也不是没什么可写，这段时间看过几本书还没写书评，和强哥出去旅行过几次可以写写游记，嗯，还买了一套房也想写一下心路历程。</p>
-<p>所以为什么没有更新？因为想写的欲望在降低，时间也变少了。</p>
-<p>回想以前写的文章，都是记录自己的个人生活，一个人为了打发辰光，也很有一种想被人看到的愿望，就算再懒癌晚期，也有时间来写一写。</p>
-<p>现在有了对象，也有了家人的陪伴，平时遇到有趣的人和事都有人倾诉，不需要再通过写博客的方式来表达。而且一个人的时间变少了，只够治疗自己的懒癌，在家躺尸。</p>
-<p>生活逐渐归于平淡，日常小事也都记录在日记里，没有必要在博客里重复提起。有时候我在想，那些已婚人士还会写日记吗？这种事情好像不好当着第二个人的面来做吧，我想象不到，感觉也很奇怪。</p>
-<p>我和强哥讨论过这件事，关于两个人在一起不能只追求吃喝玩乐的低级趣味，需要做一些让彼此都有获得感的事情，比如一起健身做身材管理(不是你们想的那样！)，同看一本书分享观点，也要有个人空间做自己喜欢的事情或者自我提升(毕竟人只有独处的时候才会真正成为自己)，这样才算是共同成长。</p>
-<p>其实追求高级趣味本来也比较难，需要克服人类懒惰的天性，一个人的时候尤是，两个人就可以互相督促，但也很难，而且我感受到两个人一起沉溺在低级趣味时带来的罪恶感要比一个人更加强烈，让我觉得非常恐慌。</p>
-<p>对我来说，写博客就有一种消除恐慌感的作用。虽然日记也能记录，但只有自己看，博客多少是在大众视线(虽然现在的个人博客也大多是孤芳自赏)，就不能乱写了事，因此在写的时候也会多加一些思考，对自己更有裨益，有一种自己在输出内容的感觉，也会激励自己多学习输入新的东西。</p>
-<p>说白了，日记就是在提醒自己没有白活着(一个人的时候尤是)，博客是在给别人展示自己没有白活着(人生突然 <a href="https://jmyblog.top/books-thinking/">不智慧</a> 了)，所以断更是不可能断更的，最多瞎写写这样子。</p>
-</div>
-
-<blockquote>
-<p>11.19: 已经更新了几篇瞎写的博客，不过日期有点掩耳盗铃🙈</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>瞎写写</tag>
       </tags>
   </entry>
   <entry>
