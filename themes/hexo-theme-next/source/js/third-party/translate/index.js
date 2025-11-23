@@ -56,13 +56,21 @@ class GoogleTranslateService {
    */
   redirectToGoogleTranslate() {
     const currentUrl = window.location.href;
-    const googleTranslateUrl = `https://translate.google.com/translate?sl=zh-CN&tl=en&u=${encodeURIComponent(currentUrl)}`;
+    const urlObj = new URL(currentUrl);
     
-    // 在新窗口中打开谷歌翻译
-    window.open(googleTranslateUrl, '_blank');
+    // 如果已经在 translate.goog 域名下，先提取原始域名
+    let hostname = urlObj.hostname;
+    if (hostname.includes('.translate.goog')) {
+      // 移除 .translate.goog 后缀，恢复原始域名
+      hostname = hostname.replace('.translate.goog', '');
+    }
     
-    // 显示提示信息
-    this.showToast('正在跳转到谷歌翻译...', 'info');
+    // 使用 translate.goog 域名格式，直接在域名前插入 translate.goog
+    // 例如: https://jmyblog.top/ -> https://jmyblog.top.translate.goog/
+    const translateUrl = `${urlObj.protocol}//${hostname}.translate.goog${urlObj.pathname}${urlObj.search}?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp`;
+    
+    // 在当前窗口跳转到翻译页面
+    window.location.href = translateUrl;
   }
 
   /**
