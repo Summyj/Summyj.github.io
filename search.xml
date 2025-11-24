@@ -305,6 +305,31 @@
       </tags>
   </entry>
   <entry>
+    <title>AppUI自动化测试第三弹-Android篇</title>
+    <url>/AppUI-AutoTest-3/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
+<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
+<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><span class="image-caption">image.png</span><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><span class="image-caption">image.png</span><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
+<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><span class="image-caption">image.png</span><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><span class="image-caption">image.png</span><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><span class="image-caption">image.png</span><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"><span class="image-caption">image.png</span></p>
+<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Bitrise</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AppUI自动化测试第三弹-iOS篇</title>
     <url>/AppUI-AutoTest-2/</url>
     <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/24/C63wHlmUE5o4Nh8.png" alt="image.png"><span class="image-caption">image.png</span></p>
@@ -335,31 +360,6 @@
       <tags>
         <tag>Bitrise</tag>
         <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AppUI自动化测试第三弹-Android篇</title>
-    <url>/AppUI-AutoTest-3/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/05/25/f8GPuvCgVNoA61q.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>上篇博客我们完成了测试代码库在iOS平台的CI集成，这篇文章继续讲Android平台。没有看过前几篇的同学也不用担心，可以先fork <a href="https://github.com/Summyj/AppUI-AutoTest">我的代码库</a> 和 <a href="https://github.com/bitrise-io/sample-apps-android-sdk22">模拟的Android开发代码库</a> 到你的github账户，然后注册一个 <a href="https://www.bitrise.io/">Bitrise</a> 账号即可。</p>
-<h2 id="创建Android应用"><a href="#创建Android应用" class="headerlink" title="创建Android应用"></a>创建Android应用</h2><p>刚注册Bitrise的小伙伴可以选择standard plan -&gt; add first app：<br><img data-src="https://i.loli.net/2021/05/24/ivXJu7KHpICV6Ay.png" alt="image.png"><span class="image-caption">image.png</span><br>或者回到Dashboard页面，点击Add new app，选择第一项，就会出现创建App页面：<br><img data-src="https://i.loli.net/2021/05/24/daeLy83u7s15xvJ.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/7JP2ti1xsuGfvDE.png" alt="image.png"><span class="image-caption">image.png</span><br>选择Privare后继续，然后是连接代码库，按照提示 Connect Github，连接之后你会看到自己所有的代码库：<br><img data-src="https://i.loli.net/2021/05/24/ZjReaio4EVXcyYl.png" alt="image.png"><span class="image-caption">image.png</span><br><img data-src="https://i.loli.net/2021/05/24/RD9NF4ZMaQ2zwc6.png" alt="image.png"><span class="image-caption">image.png</span><br>我们选择之前fork的Android应用代码库 <strong>sample-apps-android-sdk22</strong>，然后继续：<br><img data-src="https://i.loli.net/2021/05/26/KHQy36Wuvdk9mqX.png" alt="image.png"><span class="image-caption">image.png</span><br>由于我们之后还需要Bitrise下载测试代码库，所以选择 I need to, 复制Bitrise提供给我们的SSH key添加到你的github setting里：<br><img data-src="https://i.loli.net/2021/05/26/X9xa5heLAZbzSrk.png" alt="image.png"><span class="image-caption">image.png</span><br>保存之后选择i’ve added the SSH key，下一步将部署应用的分支命名为master后继续,此时Bitrise会配置你的App(如果有报错就再次选择master分支再部署):<br><img data-src="https://i.loli.net/2021/05/26/HV53lg6SA8bmLpj.png" alt="image.png"><span class="image-caption">image.png</span><br>之后出现Android图标，说明它被识别为一个Android app，完成后我们直接点击Next&amp;Next&amp;Confirm走完这一步：<br><img data-src="https://i.loli.net/2021/05/26/v8qybjcYhpX5wFJ.png" alt="image.png"><span class="image-caption">image.png</span><br>跳过app icon和webhook步骤，点击页面右上角finish按钮完成设置：<br><img data-src="https://i.loli.net/2021/05/26/V4r95zG1pHQkDBP.png" alt="image.png"><span class="image-caption">image.png</span><br>之后页面跳转到Dashboard，Bitrise会跑第一次build，在页面右侧会看到你的App：<br><img data-src="https://i.loli.net/2021/05/26/2LIiTUCwEjbG1lu.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="添加e2e-workflow"><a href="#添加e2e-workflow" class="headerlink" title="添加e2e workflow"></a>添加e2e workflow</h2><p>依次点击页面右侧App -&gt; Workflow ，进入Workflow编辑页面，点击 “+ Workflow” 新增一个名为e2e的 workflow：<br><img data-src="https://i.loli.net/2021/05/26/UEAFWjvYlk1NMpg.png" alt="image.png"><span class="image-caption">image.png</span><br>然后自动进入该workflow的编辑页面，我们将在此workflow下载测试代码库并执行测试，页面左侧为该workflow的执行步骤和内容，Bitrise可能会默认预置一些步骤，点击左侧 + 号可以打开新增步骤页面，搜索你想要的步骤然后点击，它就会被添加到workflow里：<br><img data-src="https://i.loli.net/2021/05/24/N6P28sGVBMnU3T9.png" alt="image.png"><span class="image-caption">image.png</span><br>接下来请依次添加以下步骤。</p>
-<h3 id="添加Emulator并等待启动"><a href="#添加Emulator并等待启动" class="headerlink" title="添加Emulator并等待启动"></a>添加Emulator并等待启动</h3><p>第一步是启动模拟器，由于模拟器启动很慢，所以把它放在第一步。且与iOS不同，Bitrise给Android emulator提供了等待启动的步骤，这样就不用担心模拟器连不上了。可以利用上面的方法在ALL选项里搜索到这一步，然后修改API Level, 这个值对应测试代码库文件 android.conf.js 里的platformVersion(10就是29，11就是30)：<br><img data-src="https://i.loli.net/2021/05/26/Qt6iFbkRIJjZMVq.png" alt="image.png"><span class="image-caption">image.png</span><br>这一步不需要改动：<br><img data-src="https://i.loli.net/2021/05/26/nZP1lfE2az4DyCo.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="Activate-SSH-key-Git-Clone"><a href="#Activate-SSH-key-Git-Clone" class="headerlink" title="Activate SSH key&amp; Git Clone"></a>Activate SSH key&amp; Git Clone</h3><p>这两步不需要做任何改动，保持默认的配置就好，这两步通常为每个workflow最开始的两个步骤，是用SSH的方式下载主代码库，这里是指 <strong>sample-apps-android-sdk22</strong> 这个代码库：<br><img data-src="https://i.loli.net/2021/05/26/ZWX6gSilAVazqDu.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<p>我们先保留以上四步，点击右上角保存按钮，之后回到应用页面，选择开始build，选择e2e workflow，然后开始Build:<br><img data-src="https://i.loli.net/2021/05/26/Tb4AgVXcCSvloQs.png" alt="image.png"><span class="image-caption">image.png</span><br>请确保运行成功，一般不会有问题的哈，否则自行搜索解决哦：<br><img data-src="https://i.loli.net/2021/05/26/XtOwQhn29dKgubN.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="克隆测试代码库"><a href="#克隆测试代码库" class="headerlink" title="克隆测试代码库"></a>克隆测试代码库</h3><p>然后我们来下载测试代码库，搜索并添加一个Script步骤，内容如下，repo地址请换成自己的哦：<br><img data-src="https://i.loli.net/2021/05/26/2iJ5YMVmqOUFKsD.png" alt="image.png"><span class="image-caption">image.png</span><br>然后进入上个build成功的详情页，直接点击rebuild即可：<br><img data-src="https://i.loli.net/2021/05/26/twh71nYu2szfMGI.png" alt="image.png"><span class="image-caption">image.png</span><br>这里加上pwd的原因是要找到代码库在Bitrise服务器上的路径，这样就可以知道app的绝对路径了，同时也方便进行下边的步骤：<br><img data-src="https://i.loli.net/2021/05/26/qgQIob1tMZDPNjx.png" alt="image.png"><span class="image-caption">image.png</span><br>然后需要改一下代码库里android.conf.js的app路径，这里我的代码库也已经改好了：<br><img data-src="https://i.loli.net/2021/05/26/Jj6OA1CUcwlz5Zo.png" alt="image.png"><span class="image-caption">image.png</span><br>与iOS不同，在Bitrise配置时，这里deviceName的值不是某个具体设备名称，比如“iPhone 11”，而是固定的“emulator”。</p>
-<h3 id="下载代码库依赖"><a href="#下载代码库依赖" class="headerlink" title="下载代码库依赖"></a>下载代码库依赖</h3><p>同样搜索并添加一个Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/Va9m3KDYjM6RTv4.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><p>终于到了关键的一步了，执行测试，添加Script步骤，内容如下：<br><img data-src="https://i.loli.net/2021/05/26/NDQk2PqSUI3vceo.png" alt="image.png"><span class="image-caption">image.png</span><br>这次我们不直接运行rebuild，而是选择“Rebuild with remote access”，与iOS不同，Bitrise只给安卓提供了通过Terminal连接Bitrise的远程机器，在此机器上会运行我们的workflow：<br><img data-src="https://i.loli.net/2021/05/26/wfXjKMclDrLt1Jm.png" alt="image.png"><span class="image-caption">image.png</span><br>按照Bitrise提供的地址和密码连接即可(每次运行地址和密码都会变)，但只能通过命令行访问，不能直观的看到机器，可以看到我们的测试代码库：<br><img data-src="https://i.loli.net/2021/05/26/FfLzO8Amj7BdxoN.png" alt="image.png"><span class="image-caption">image.png</span><br>耐心等待，测试就会开始执行并且运行成功，虽然不能通过screen sharing连接服务器直观看到测试执行，但有了等待模拟器的步骤，只要测试代码没有问题，运行速度会很快且成功率高：<br><img data-src="https://i.loli.net/2021/05/26/Bk1JX5f4GgNlc38.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h3 id="导出测试报告-部署到Bitrise"><a href="#导出测试报告-部署到Bitrise" class="headerlink" title="导出测试报告&amp;部署到Bitrise"></a>导出测试报告&amp;部署到Bitrise</h3><p>之后搜索添加test report和deploy步骤，就可以在每次运行后看到测试报告了，这里要改路径为下图：<br><img data-src="https://i.loli.net/2021/05/26/qP6WtDV8L7OAIzl.png" alt="image.png"><span class="image-caption">image.png</span><br>这个就用系统默认的输入，不用改啥：<br><img data-src="https://i.loli.net/2021/05/26/u9ScPnVjtvyi57K.png" alt="image.png"><span class="image-caption">image.png</span><br>运行后查看：<br><img data-src="https://i.loli.net/2021/05/24/RuSqzrx4bZyPcN5.png" alt="image.png"><span class="image-caption">image.png</span><br>忽略这个iphone11的名字哈，不知道为啥会带上这个，本来应该是android-emulator之类的开头，不过不要在意这些细节哈哈哈，成功了就行：<br><img data-src="https://i.loli.net/2021/05/26/1scBq5ml7w4nAzO.png" alt="image.png"><span class="image-caption">image.png</span></p>
-<h2 id="结束之后"><a href="#结束之后" class="headerlink" title="结束之后"></a>结束之后</h2><p>AppUI自动化入门系列到这里就结束啦，不知不觉已经写了一万多字呢，虽然是机器写的，但是手也很酸呐哈哈哈。希望能给大家带来一些新知识和新启发，测试君冲鸭！！！</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Bitrise</tag>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -401,90 +401,6 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
       </categories>
       <tags>
         <tag>WebdriverIO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>请收下这波 BDD 安利</title>
-    <url>/BDD-Introduce/</url>
-    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
-<span id="more"></span>
-
-<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
-<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
-<hr>
-<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
-<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
-<ul>
-<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
-<li>Step2: 点击注册按钮进去注册页面。</li>
-<li>Step3: 填写所有字段并点击注册。</li>
-<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
-</ul>
-<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
-<hr>
-<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
-<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
-<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
-<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
-<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
-<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
-<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
-</ul>
-<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
-<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
-<hr>
-<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
-<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
-<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
-<ul>
-<li>把团队不同角色对功能的理解误差暴露出来</li>
-<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
-<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
-<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
-</ul>
-<p>要做好这个Workshops，有几点很重要：</p>
-<ol>
-<li>在功能开发前的一两个Sprint进行。</li>
-<li>从用户角度出发，关注具体、真实的业务场景。</li>
-<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
-</ol>
-<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
-<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
-<ul>
-<li>提供一种快速的方法，再次确认大家的理解一致。</li>
-<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
-</ul>
-<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
-<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
-<blockquote>
-<p>帮助团队跟踪功能完成度</p>
-</blockquote>
-<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
-<blockquote>
-<p>减少测试工作量</p>
-</blockquote>
-<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
-<blockquote>
-<p>系统功能维护和查询</p>
-</blockquote>
-<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
-<hr>
-<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
-<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
-<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="https://cucumber.io/docs/bdd/myths/" title="Myths about BDD">Myths about BDD</a></li>
-<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" title="BDD Tutorial">BDD Tutorial</a></li>
-<li><a href="https://cucumber.io/docs/bdd/" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
-<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/">说起BDD，你会想到什么？</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>测试理论和实践</category>
-      </categories>
-      <tags>
-        <tag>BDD</tag>
       </tags>
   </entry>
   <entry>
@@ -598,6 +514,90 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
       </categories>
       <tags>
         <tag>自动化测试框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>请收下这波 BDD 安利</title>
+    <url>/BDD-Introduce/</url>
+    <content><![CDATA[<p>首先，听我讲一个关于王铁锤的故事。</p>
+<span id="more"></span>
+
+<h1 id="版本一"><a href="#版本一" class="headerlink" title="版本一"></a>版本一</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会<span class="emoji" alias="speech_balloon" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span>。</p>
+<p><strong>[王铁锤]</strong>：这个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。现在我来给大家说一下UserStory和AC都有啥。(PS:不知道UserStory, AC(Acceptance Criteria)和Sprint是啥意思的，你需要看看<a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-2">敏捷术语</a>)<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，散会。<br>2天后。。。<br><strong>[测试刘翠花]</strong>：咦，李狗蛋，你做的登录页面密码输入框怎么没掩码？密码错了也没个提示？！还有你赵二毛，你做的注册功能还能注册两个一样的用户名？密码长度格式也没限制？！这不符合常理吧，这界面也太丑了点<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>!<br><strong>[程序员李狗蛋]</strong>：呀，我咋把掩码忘了，错误提示没说要做呀，别着急，我再看看UserStory是咋说的，咦，上边没写<span class="emoji" alias="sweat" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span>？！<br><strong>[程序员赵二毛]</strong>：唉，这种情况还真没想过，得处理一下，UserStory里也没说这种情况咋整啊，还有密码长度格式上边也没说规则。<br><strong>[刘翠花]</strong>：这问题也太多了，当时开会咋就没想到这些呢<span class="emoji" alias="confused" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png?v8">😕</span>，直接按老王给的UserStory做了。不行，我们得去找他问问。<br>3分钟后。。。<br><strong>[王铁锤]</strong>：呀，这些东西我创建UserStory的时候也没想到。嗯，我得去完善完善。界面显示问题我去找设计师看看。你们等一下。<br>两周过去了。。。<br><strong>[王铁锤]</strong>：怎么样，这个功能做好了吗？客户那边等着呢<br><strong>[众组员]</strong>：不行啊老大，我们还有一堆需求和问题没搞清楚，想跟你确认呢<br><strong>[王铁锤]</strong>：这咋行呢，原计划这周就得上线呀， 唉，都有啥问题，我再看看吧<br>一个月后，经过王铁锤和众组员的数次沟通确认，功能终于做好了，比原计划推迟两周上线。。。<br><strong>[刘翠花]</strong>：唉，上线后肯定又有一堆问题，到时候背锅的就只有我了</p>
+<hr>
+<h1 id="版本二"><a href="#版本二" class="headerlink" title="版本二"></a>版本二</h1><p>新的Sprint开始了，产品经理/BA 王铁锤召集全组开会。</p>
+<p><strong>[王铁锤]</strong>：下个Sprint咱们有个新需求，在网站上做一个用户注册登录功能。首先讲一下我和客户拟好的用户流程和场景。<br>5分钟过去了。。。<br><strong>[王铁锤]</strong>：相信大家对这个功能已经有了初步的了解，一定也有一些想法。所以在拆分具体的UserStory之前，我想先组织大家玩个小游戏。<br><strong>[李狗蛋]</strong>：玩游戏？这么嗨的吗<span class="emoji" alias="smirk" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>，我喜欢。怎么玩啊？<br><strong>[王铁锤]</strong>：假设你是用户，列出所有你能想象到的关于注册登录的用户行为场景。并写下这些场景中你希望的系统行为<span class="emoji" alias="sunglasses" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60e.png?v8">😎</span>。包括但不限于我刚才讲到的场景哦，大家开始吧～<br>10分钟后。。。<br><strong>[王铁锤]</strong>：我看大家都写好了，下面咱们一条一条过，拼凑出一个正常的用户操作流程，然后把相似的场景提取出来，讨论一下哪种方案更好。首先让赵二毛给大家讲下他的场景：</p>
+<ul>
+<li>Step1: 进入系统首页，跳出登录注册弹窗.</li>
+<li>Step2: 点击注册按钮进去注册页面。</li>
+<li>Step3: 填写所有字段并点击注册。</li>
+<li>Step4: 弹出注册成功页面，3秒后返回系统首页，用户状态为已登录。</li>
+</ul>
+<p><strong>[赵二毛]</strong>：对，这里我写的是一个注册成功的场景，当然里面还有很多小点需要确认。比如说Step1、Step2、Step4中登录注册页面,以及注册成功页面的前端显示，需要设计稿。还有Step3中的字段需要在设计稿中体现，还需要一些字段的长度格式以及必填规则。Step4中注册成功后有一个3秒的返回延迟，还有返回首页后的登录状态，都是细节问题。<br><strong>[刘翠花]</strong>：哇塞，二毛，平时看你写代码也没这么细心啊，想不到你还考虑的这么细多，真棒！<br><strong>[李狗蛋]</strong>：二毛写的确实好，基本上涵盖了整个注册流程，跟我写的有很多相似之处。下面我来说说我们的不同点，其他人也可以提出自己的看法。<br>30分钟后。。。<br><strong>[王铁锤]</strong>：好，大家已经讨论完了。对很多细节和功能已经达成了共识。当然还有一些问题我需要跟客户沟通，寻求他们的意见。很感谢大家提出的思路，很多场景我之前都没有考虑到。比如<strong>刘翠花</strong>提到的密码输入次数限制问题，狗蛋和二毛也从代码方面提供了自己的想法。我受益良多<span class="emoji" alias="clap" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8">👏</span>。对于我们在功能方面达成的共识，还有一些需要确认的问题，已经拍照留存，我之后会整理好给大家分享，散会～<br>2天后。。。<br><strong>[王铁锤]</strong>：前两天大家讨论了下注册登录模块的具体流程，其中包含要实现的功能和细节。设计图和一些遗留的问题我都确认过了，并且写好了UserStory还有AC。接下来大家对比上次会议结果一起看一下。确认大家的理解一致，没有遗漏的点。<br>20分钟后。。。<br><strong>[王铁锤]</strong>：大家有什么问题吗，我有没有漏掉什么点？<br><strong>[众组员]</strong>：没问题了<span class="emoji" alias="ok_hand" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png?v8">👌</span>。<br><strong>[王铁锤]</strong>：好，看来都清楚了，散会～<br>一个月后，由于大家对登录注册功能的实现细节已经达成了一致。不仅比原计划提前一周完成，还提出了更多可以改进的功能，得到了客户的赞赏和肯定。</p>
+<hr>
+<h1 id="啥是BDD"><a href="#啥是BDD" class="headerlink" title="啥是BDD"></a>啥是BDD</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>相信通过上边的例子，大家心里应该知道BDD是啥意思了。</p>
+<p>BDD行为驱动开发(Behaviour-Driven Development)<br>是一种软件开发流程，这里’行为’指用户行为。’开发’指整个开发团队。顾名思义，BDD要求开发团队严格按照具体的、符合现实情况的用户行为进行开发，不断减小项目组成员在业务与技术两方面的理解差异，使团队对软件应该有的行为达成一致。</p>
+<h2 id="BDD与敏捷"><a href="#BDD与敏捷" class="headerlink" title="BDD与敏捷"></a>BDD与敏捷</h2><p>我们知道，<a href="http://jmyblog.top/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95/">敏捷</a>是现在最流行的软件开发框架，可以快速、稳定的进行软件开发。而BDD相当于是这个框架一个强有力的插件，能够帮助我们更高效地实现敏捷开发的目标。</p>
+<p>就像上边故事的两个版本，都实行了敏捷实践。但版本二中的团队同时实行了BDD，因此产生了更好的结果。</p>
+<h2 id="类似定义对比"><a href="#类似定义对比" class="headerlink" title="类似定义对比"></a>类似定义对比</h2><ul>
+<li>TDD: 测试驱动开发，敏捷开发的特点之一，概念上与BDD同级。但在实行过程中，团队必须在保证TDD的基础上施行BDD，否则只能是捡了芝麻丢了西瓜。</li>
+<li>FDD: 功能驱动开发，是一种敏捷开发流程，概念上在BDD上级。</li>
+</ul>
+<h1 id="为什么要BDD"><a href="#为什么要BDD" class="headerlink" title="为什么要BDD"></a>为什么要BDD</h1><h2 id="没有BDD以前-版本一"><a href="#没有BDD以前-版本一" class="headerlink" title="没有BDD以前(版本一)"></a>没有BDD以前(版本一)</h2><p>技术人员(程序员/测试)对整个用户流程不熟悉，只分散开发具体的功能，没有产生业务价值的连通性，容易对需求理解产生歧义。<br>业务人员(产品经理/BA)对功能具体实现流程不熟悉，影响下一步需求的提出和产品交付。<br>两种角色对用户流程和业务需求的理解不一致，容易导致产品返工，而且需要浪费更多时间相互沟通。</p>
+<h2 id="有了BDD以后-版本二"><a href="#有了BDD以后-版本二" class="headerlink" title="有了BDD以后(版本二)"></a>有了BDD以后(版本二)</h2><p>项目组成员对用户流程、开发顺序以及实现细节有一致的理解，可以更快速高效的交付产品。</p>
+<hr>
+<h1 id="怎么做BDD"><a href="#怎么做BDD" class="headerlink" title="怎么做BDD"></a>怎么做BDD</h1><p>要做好BDD，需要三步实践。</p>
+<h2 id="探索：做什么"><a href="#探索：做什么" class="headerlink" title="探索：做什么"></a>探索：做什么</h2><p>第一步，开个会大家商量一下要做啥，执行者是整个团队。</p>
+<p>还记得上边王铁锤让大家玩的游戏吗？其实这个游戏有个洋气的名字，叫做：<strong>Discovery Workshops</strong>。不像之前王铁锤直接拆分好UserStory告诉大家，DiscoveryWorkshops的关键在于让大家聚焦真实、具体的用户场景，一起决定业务规则和验收标准。动员大家去发现、定义系统该怎么工作。这么做的好处有：</p>
+<ul>
+<li>把团队不同角色对功能的理解误差暴露出来</li>
+<li>BA/产品经理可以确认开发团队完全理解业务规则和细节</li>
+<li>帮助BA/产品经理更好的确定UserStory的粒度</li>
+<li>有了测试人员的介入，可以帮助预防一些bug的产生，而不是在产品开发完后再去找同样的bug。</li>
+</ul>
+<p>要做好这个Workshops，有几点很重要：</p>
+<ol>
+<li>在功能开发前的一两个Sprint进行。</li>
+<li>从用户角度出发，关注具体、真实的业务场景。</li>
+<li>总结大家对业务细节的不同看法和问题，暂时不能解答的要确认后再通知大家。</li>
+</ol>
+<h2 id="记录：怎么做"><a href="#记录：怎么做" class="headerlink" title="记录：怎么做"></a>记录：怎么做</h2><p>第二步，用程式化的文档把讨论结果记录下来，执行者一般为BA/产品经理。</p>
+<p>在敏捷里，其实就是把讨论结果拆分成UserStory，并把验收标准写在UserStory中。然后再组织大家开个会，确认一下有没有遗漏的问题。这样做的好处有：</p>
+<ul>
+<li>提供一种快速的方法，再次确认大家的理解一致。</li>
+<li>对UserStory的粒度和验收标准得到更多的反馈。</li>
+</ul>
+<h2 id="检验：做了啥"><a href="#检验：做了啥" class="headerlink" title="检验：做了啥"></a>检验：做了啥</h2><p>第三步，根据拆分好的UserStory和验收标准，把不同用户场景编写成自动化测试，执行者一般为测试人员。</p>
+<p>其实对于测试人员而言，这种是理想情况，因为在实际开发过程中，可能没有足够的时间来提前写好自动化测试。但最好还是在开发结束之前写好，这样做的好处有：</p>
+<blockquote>
+<p>帮助团队跟踪功能完成度</p>
+</blockquote>
+<p>好的自动化测试应该涵盖主要业务流程和场景。所以在开发工作完成前，失败的测试可以发现bug,也可以时刻提醒团队有哪些功能还没有开发完成。就像TDD，可以帮助开发在class,method层面发现问题。</p>
+<blockquote>
+<p>减少测试工作量</p>
+</blockquote>
+<p>像所有自动化测试的优点一样，它可以大大减少手工测试的工作量，后期还可以用来做回归测试。因此测试人员会有更多时间做更有价值的事情，比如关注一些不能自动化的功能、探索性测试、准备下一个功能用户场景的自动化等等。</p>
+<blockquote>
+<p>系统功能维护和查询</p>
+</blockquote>
+<p>好的自动化测试也应该像一份业务文档。有时候我们忘记了之前某些功能的业务规则是什么，就可以通过查询关于此功能的自动化测试找到答案。或者团队需要对某个功能进行维护或重构，也可以查看自动化测试，看看它现在是怎么工作的，与它相关的功能还有哪些，以确保不会影响别的功能。</p>
+<hr>
+<h1 id="对BDD的常见误解"><a href="#对BDD的常见误解" class="headerlink" title="对BDD的常见误解"></a>对BDD的常见误解</h1><h2 id="不需要做Discovery-Workshops"><a href="#不需要做Discovery-Workshops" class="headerlink" title="不需要做Discovery Workshops"></a>不需要做Discovery Workshops</h2><p>如果没有一个大家一起探索功能的过程， 那就不叫BDD了。就像故事的版本一，所有的User Story都由一个人(BA/产品经理)发现并编写，这就违背了BDD的灵魂：共享理解。</p>
+<h2 id="三步实践的顺序可以调换"><a href="#三步实践的顺序可以调换" class="headerlink" title="三步实践的顺序可以调换"></a>三步实践的顺序可以调换</h2><p>如果没做Discovery Workshops，那直接拆分UserStory就是在浪费时间。如果没有拆分好UserStory，确认好验收标准，也就不能编写自动化测试了。所以，这三部实践必须按顺序做，否则不会达到我们想要的结果。</p>
+<h2 id="代码写完后再写自动化测试"><a href="#代码写完后再写自动化测试" class="headerlink" title="代码写完后再写自动化测试"></a>代码写完后再写自动化测试</h2><p>其实现在大多数情况，都是等代码写完之后再进行自动化，这当然很合理。但这样也就不是BDD了。</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://cucumber.io/docs/bdd/myths/" title="Myths about BDD">Myths about BDD</a></li>
+<li><a href="https://cucumber.io/docs/guides/bdd-tutorial/" title="BDD Tutorial">BDD Tutorial</a></li>
+<li><a href="https://cucumber.io/docs/bdd/" title="Behaviour-Driven Development">Behaviour-Driven Development</a></li>
+<li><a href="https://www.bylinzi.com/2015/06/04/when-we-talk-about-bdd/">说起BDD，你会想到什么？</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>测试理论和实践</category>
+      </categories>
+      <tags>
+        <tag>BDD</tag>
       </tags>
   </entry>
   <entry>
@@ -1055,6 +1055,109 @@ header.post-header {
       </tags>
   </entry>
   <entry>
+    <title>Hexo的一些写作标签</title>
+    <url>/How-to-Write/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图"><span class="image-caption">题图</span>
+
+<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">这是一行代码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% codeblock lang:command %}
+这是一行代码
+{% endcodeblock %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
+<blockquote class="blockquote-center">
+<p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
+
+</blockquote>
+
+<p>代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% cq %}
+四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。
+{% endcq %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
+<div class="note default"><p>default</p>
+</div>
+<div class="note primary"><p>primary</p>
+</div>
+<div class="note success"><p>success</p>
+</div>
+<div class="note info"><p>info</p>
+</div>
+<div class="note warning"><p>warning</p>
+</div>
+<div class="note danger"><p>danger</p>
+</div>
+
+<p>_config 文件配置关键字：note, 我的配置如下：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">style: flat
+icons: true
+border_radius: 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% note default %}
+default
+{% endnote %}
+{% note primary %}
+primary
+{% endnote %}
+{% note success %}
+success
+{% endnote %}
+{% note info %}
+info
+{% endnote %}
+{% note warning %}
+warning
+{% endnote %}
+{% note danger %}
+danger
+{% endnote %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
+<mark class="label default">default</mark>
+<mark class="label primary">primary</mark>
+<mark class="label success">success</mark>
+<mark class="label info">info</mark>
+<mark class="label warning">warning</mark>
+<mark class="label danger">danger</mark>
+
+<p>代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% label default@default %}
+{% label primary@primary %}
+{% label success@success %}
+{% label info@info %}
+{% label warning@warning %}
+{% label danger@danger %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
+<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">☺</span></p></div></div></div>
+
+
+<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
+那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
+{% endblockquote %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>效果：</p>
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html">Next内置标签</a> 可以找到。</p>
+<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97">这个</a> 设置。</p>
+<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/">Hexo-Next搭建个人博客（主题优化）</a></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>写作标签</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建折腾记</title>
     <url>/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>搭建博客的正确姿势。</p>
@@ -1223,109 +1326,6 @@ header.post-header {
         <tag>Next</tag>
         <tag>GithubPages</tag>
         <tag>CodingPages</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的一些写作标签</title>
-    <url>/How-to-Write/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2019/12/20/KfeTtUqLu93cMpN.png" alt="题图"><span class="image-caption">题图</span>
-
-<h2 id="Hexo-Next-标签"><a href="#Hexo-Next-标签" class="headerlink" title="Hexo/Next 标签"></a>Hexo/Next 标签</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>效果：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">这是一行代码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>代码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% codeblock lang:command %}
-这是一行代码
-{% endcodeblock %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>效果：</p>
-<blockquote class="blockquote-center">
-<p>四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。</p>
-
-</blockquote>
-
-<p>代码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% cq %}
-四郎，那年杏花微雨，你说你是果郡王。也许从一开始，便都是错的。
-{% endcq %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>效果：</p>
-<div class="note default"><p>default</p>
-</div>
-<div class="note primary"><p>primary</p>
-</div>
-<div class="note success"><p>success</p>
-</div>
-<div class="note info"><p>info</p>
-</div>
-<div class="note warning"><p>warning</p>
-</div>
-<div class="note danger"><p>danger</p>
-</div>
-
-<p>_config 文件配置关键字：note, 我的配置如下：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">style: flat
-icons: true
-border_radius: 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>代码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% note default %}
-default
-{% endnote %}
-{% note primary %}
-primary
-{% endnote %}
-{% note success %}
-success
-{% endnote %}
-{% note info %}
-info
-{% endnote %}
-{% note warning %}
-warning
-{% endnote %}
-{% note danger %}
-danger
-{% endnote %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="label"><a href="#label" class="headerlink" title="label"></a>label</h3><p>_config 文件配置关键字：Label , 需要用的话把值设为true即可。<br>效果：</p>
-<mark class="label default">default</mark>
-<mark class="label primary">primary</mark>
-<mark class="label success">success</mark>
-<mark class="label info">info</mark>
-<mark class="label warning">warning</mark>
-<mark class="label danger">danger</mark>
-
-<p>代码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% label default@default %}
-{% label primary@primary %}
-{% label success@success %}
-{% label info@info %}
-{% label warning@warning %}
-{% label danger@danger %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>效果：</p>
-<div class="tabs" id="emoji"><ul class="nav-tabs"><li class="tab active"><a href="#emoji-1">emoji 1</a></li><li class="tab"><a href="#emoji-2">emoji 2</a></li><li class="tab"><a href="#emoji-3">emoji 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="emoji-1"><p><span class="emoji" alias="smile" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p></div><div class="tab-pane" id="emoji-2"><p><span class="emoji" alias="laughing" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8">😆</span></p></div><div class="tab-pane" id="emoji-3"><p><span class="emoji" alias="relaxed" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/263a.png?v8">☺</span></p></div></div></div>
-
-
-<h3 id="引用句子"><a href="#引用句子" class="headerlink" title="引用句子"></a>引用句子</h3><p>代码：</p>
-<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">{% blockquote 王小波 http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html 黄金时代 %}
-那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。
-{% endblockquote %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>效果：</p>
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
-
-<h3 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h3><p>在 <a href="https://hexo.io/docs/tag-plugins.html">Hexo标签</a> 和 <a href="https://theme-next.iissnan.com/tag-plugins.html">Next内置标签</a> 可以找到。</p>
-<h2 id="自定义标签"><a href="#自定义标签" class="headerlink" title="自定义标签"></a>自定义标签</h2><h3 id="数字块"><a href="#数字块" class="headerlink" title="数字块"></a>数字块</h3><p>参考 <a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization/#%E6%95%B0%E5%AD%97%E5%9D%97">这个</a> 设置。</p>
-<p>效果：<br><span id="inline-toc">1.</span><br><span id="inline-toc">2.</span><br><span id="inline-toc">3.</span></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><span id="inline-toc">1.</span><a href="https://blog.guanqr.com/study/blog/hexo-theme-next-customization">Hexo-NexT 主题个性优化</a><br><span id="inline-toc">2.</span><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%EF%BC%89/">Hexo-Next搭建个人博客（主题优化）</a></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>写作标签</tag>
       </tags>
   </entry>
   <entry>
@@ -1675,37 +1675,6 @@ danger
       </tags>
   </entry>
   <entry>
-    <title>沉默的抗争</title>
-    <url>/Silent-protest/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
-
-<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
-<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
-
-<hr>
-<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
-<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
-<p>但后来项目的走向，打破了他的期望。</p>
-<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
-<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
-<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
-<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
-<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
-<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
-<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
-<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
-<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
-<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
-</div>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>王铁锤的故事</category>
-      </categories>
-      <tags>
-        <tag>PUA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>渗透测试初识</title>
     <url>/Penetration-Test/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2020/05/06/e9Yd8ylbkxcJhOE.jpg">
@@ -1785,6 +1754,37 @@ danger
       <tags>
         <tag>渗透测试</tag>
         <tag>OWASP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>沉默的抗争</title>
+    <url>/Silent-protest/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/12/03/8Y5qidj3v1rwWLn.png">
+
+<blockquote><p>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云，后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<footer><strong>王小波</strong><cite><a href="http://www.bwsk.com/xd/w/wangxiaobo/hjsd/index.html">黄金时代</a></cite></footer></blockquote>
+
+<hr>
+<div class="note default"><p>王铁锤，一个在沉默中「灭亡」的人。</p>
+<p>王铁锤来到了一个新的项目组，作为QA，他刚开始就充分体会到了业务的复杂性和人力的严重不足，但他只想测卡挪卡，安安静静的搬砖。</p>
+<p>但后来项目的走向，打破了他的期望。</p>
+<p>他一直觉得，无论干什么，得先把事情做对，再把对的事情做好。然而项目的情况恰恰相反，首先作为一个敏捷开发的项目，基础设施像环境、流水线这些东西在项目开始一个月后，还没准备好。整个团队都在赶工，像一只只顾往前奔跑的斗牛，莽撞而没有方向。</p>
+<p>其次，各种各样的文档让他烦不胜烦，每天都在搞一些流于形式的东西，但这是客户爸爸要求的，他也无力改变。慢慢的他发现整个项目就是一个披着敏捷开发外衣的瀑布式开发项目。此外，测试环境极其不稳定，每天最多的时间都是在等修复，真正搬砖的时间很少，这些问题多次反馈还是得不到解决。</p>
+<p>然后就是工期的紧缩，团队大佬甚至召集大家开会说明情况，确定996的工作模式，一切都是为了让产品在客户要求的时间前上线。大鱼吃小鱼，小鱼吃虾米，这样一层层压下来，王铁锤觉得自己就是一个小虾米，是被剥削的底层搬砖工，第一次体会到「社畜」这个词的含义。</p>
+<p>尽管如此，他还是想安安静静的搬砖，只想搬完分配给自己的那坨砖，强制让自己不加班，让「社畜」的感觉不那么强烈。这样过了一些时日，王铁锤觉得自己找到了在项目里保持「love&amp;peace」的方式，有时候他觉得自己像一个隐士，但不是身怀绝技的隐士，而是无能为力的隐士。</p>
+<p>但好景不长，项目后期，客户开始了验收测试。一些对产品细节的扯皮和对业务的一遍遍确认搞得BA和PM也筋疲力尽，很多项目初期没有提出的问题到现在才通知，导致需求不断的变更和返工。王铁锤觉得疲倦，但客户却精气十足，他知道，这场沉默的抗争，是他输了。</p>
+<p>看着项目里的开发日日加班到深夜，周末也在公司度过，他觉得不忍，但更多的是感到害怕。也许这就是「成年人」的不易吧，有谁不是负重前行呢？王铁锤突然发现自己并不是一个合格的「成年人」，因为他还没有「重」要「负」，但同时又害怕自己变成一个「成年人」，因为他并不想这样做一个「社畜」，为了「负重」而做自己不想做的事。至少现在，不想做的事，他还可以不做。</p>
+<p>后来，他开始负责协助客户的验收测试，处理客户提出的问题。call center般的工作体验就好像压死骆驼的最后一根稻草，他完全失去了搬砖的积极性，他开始变得更沉默，频繁请假，拒绝加班，他知道这样做很不专业，但只想逃避。不难想到，由于他的「格格不入」，他从这样一个「成年人」的项目中淘汰了。</p>
+<p>在最后的谈话中，二十三岁的王铁锤第一次听到「老油条」这样的评价。他淡然一笑，也不做他想。项目依然是一地鸡毛，而他已经不想再面对了。他也想过何以至此，但他不懂怎么评价别人的工作，只是觉得在这个项目搬砖不开心，也提不起动力，只能悄然离开。</p>
+<p>王铁锤二十三岁，还在人生的黄金时代。他没有太多的奢望，也不觉得自己会永远生猛下去，但依然觉得什么也锤不了他。他还是他，也许生活是个缓慢受锤的过程，人一天天老下去，终有一天，他也会被锤成一个「成年人」，但他只想怀抱自己本就不多的奢望，安之若素。</p>
+<p>希望有一天，王铁锤能学会在沉默中「爆发」。</p>
+</div>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>王铁锤的故事</category>
+      </categories>
+      <tags>
+        <tag>PUA</tag>
       </tags>
   </entry>
   <entry>
@@ -3643,114 +3643,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>我买房了</title>
-    <url>/i-bought-an-apartment/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/30/t8bgFdo9qx3EX4j.png">
-
-<h2 id="归属感和租住不同权"><a href="#归属感和租住不同权" class="headerlink" title="归属感和租住不同权"></a>归属感和租住不同权</h2><p>会有人不想买房吗？是因为不想吗，是因为没钱吧。</p>
-<p>2014年，17岁的我来到西安上大学，毕业后又在这里工作。选择西安，并不是刻意为之，大学是被调剂的，毕业后也投了不少外地的工作，但最终也只有西安的公司收留我。</p>
-<p>我又是一个安于现状没有梦想的咸鱼，所以不知不觉在西安生活也快10年了，自然有一种归属感。而且这里超好的，离家又近又很安全，没有什么地震海啸之类的自然灾害，很适合好好活着。</p>
-<p>在中国，租住不同权，所以想要在一个地方长久的活着，买房是很有必要的。西安的房价相较于一线城市来说也比较友好，攒一攒还是够的上首付，所以买房这件事，从我刚开始赚钱的时候就被列为头号目标。</p>
-<h2 id="一波三折的计划"><a href="#一波三折的计划" class="headerlink" title="一波三折的计划"></a>一波三折的计划</h2><p>买房这件事很复杂，预算多少，买哪里，买多大，怎么买，都是问题。但是买期房并不在我的考虑范围之内，因为爆雷太多了也不想等，所以我只买二手房。</p>
-<p>刚开始我计划，买一个离公司近点的一室小房子，用公积金贷款，每月的缴存额刚好够直冲房贷，再买一辆经济实惠的大众Polo，慢慢过自己的小日子。</p>
-<p>然后参考某壳某家上的房源信息，确定预算后开始了每月的攒钱计划，还在小本本上计算可以达成目标的时间，也一直关注房地产的政策和消息，斗志满满。</p>
-<p>那时我还不懂什么是 <a href="https://www.bilibili.com/read/cv8944043/">无常</a>，总以为万物恒定，一切都会按照自己计划的那样进行，那种突然出现什么变故需要用钱的事，全不在我的考虑范围之内。可真就什么也没发生，虽然中间有一些插曲，但也总归按计划攒够了钱，真是万幸。</p>
-<p>后来考虑到爸妈养老，住的近方便一点，又打算买一个小两室，爸妈住一间，我住一间。直到去年，我遇到了强哥，一起规划未来时讨论到这件事情，讨论之后还是决定买，但买房的性质从给自己买变成给爸妈买养老房。</p>
-<p>计划还是买小两室，爸妈一间，我住一间以后用作客房，老姐之后来西安探亲也有地方住。用纯公积金贷款，每月的缴存额要够直冲房贷，做到无痛还贷，这样也有余力再攒点钱和强哥一起买房。</p>
-<h2 id="不断接受现实的看房过程"><a href="#不断接受现实的看房过程" class="headerlink" title="不断接受现实的看房过程"></a>不断接受现实的看房过程</h2><p>刚开始，我对二手房的要求是：住宅、房龄5年以内、两梯四户、小区环境要干净整洁、交通要便利、周边配套要丰富。</p>
-<p>然后发现以我的预算根本找不到这样的房子，不断妥协之后留下了三个硬性要求：住宅、房龄10年以内、梯户比1:2，小区环境和周边配套过得去、交通相对便利就行。</p>
-<p>我都是在线上看好了感兴趣的房源，再联系中介线下看房。</p>
-<p>第一次看房，是在20年，那时候的计划还是买一室，看中了公司周边一个套内只有38平的开间房，户型还算方正，厨房卫生间相对，客厅和床连成一个大套间。</p>
-<p>这么一个小房子，价格还是有些超出我当时的预算，很不值得。后来还被中介拉去对面在建的商业公寓看房刷业绩，现在经常路过那里，对面的商场也开业了，还去转过几次。</p>
-<p>第二次看房，是在21年，计划改成买小两室，看中了一个在顶楼所以价格相对友好的房子，纠结几番还是决定听朋友劝没买，因为价格超出预算而且顶楼很不靠谱。</p>
-<p>每次看房，中介都会极尽所能劝我快买，约业主面谈，想让我头脑发热冲动签约，他们也好签单达成业绩。但是买房又不是买菜逛街，怎么可能这么草率做决定呢，还是要谨慎，不过多看是一方面，要真看中了定下来也蛮快的。所以我决定继续攒钱，到合适的时机再买。</p>
-<p>今年，市场方面，经济衰退楼市遇冷，政府出台了很多买房的利好政策。家庭方面，在外地工作的爸妈也要回来了，想让他们回来就直接能住上房子。个人方面，遇到了强哥想着早点把这个事办完，也能更好的规划我们的未来。</p>
-<p>所以从三月份开始，我每个周末都安排中介，奔走在城市各个角落看房。刚开始我自己坐公交地铁和中介碰头，后来发现其实可以要求接送。然后每次加中介之后先问能不能接送，不能的就pass，反正一套房源又不只有一个中介可以联系。</p>
-<p>跑了快两个月之后，终于找到了一个比较满意的小两室。楼龄新，两梯四户，小区环境也不错，旁边有待开的商业和地铁，周围有公园很适合遛弯，在大学城居住氛围也很浓厚，同样的户型看了好多套，然后把装修发给爸妈看。</p>
-<p>他们还是觉得有点小，也希望离我公司近点方便我上下班，可这已经是我预算内综合各种要求，能找到的最好的房子了。后来爸妈添了10万给我提高预算，就又接着找。</p>
-<h2 id="就这么草率的决定了"><a href="#就这么草率的决定了" class="headerlink" title="就这么草率的决定了"></a>就这么草率的决定了</h2><p>新的预算选择范围也很有限，不过一段时间以后，还是找到了不错的房子。满足我上边的硬性要求，虽然小区环境比之前那个差点，遛弯也不太方便，但离公司比较近可以打车上下班，周边配套和交通方面也还算过得去，还有一点，这里离强哥家只有三个红绿灯。</p>
-<p>爸妈也比较满意，所以决定就买在这个小区。这里小两室的户型有很多，看了一些都没有中意的，不过房源很多，过了几天中介又发了我几套，有一个我比较喜欢的，就又约上了。</p>
-<p>那天周六，是我喜欢的微雨天气。先去看了中意的那套房子，里面住着四口人，一对夫妻和孩子，以及带娃的奶奶，见我们来看房也没怎么理。</p>
-<p>小两室住四个人有点挤，里面的东西也很多，还有堆放在门口的杂物，跟我想象中的不太一样。看我神情有些失望，中介说还有一套，是新上的还没给我发，问我要不要看，我想着来都来了，必须看啊。</p>
-<p>这是一套次顶楼的房子，里面没人住，说是刚搬空，看情形本来住着一对夫妻和孩子。客厅很敞亮，装修是我喜欢的原木风，卧室朝东早上可以被太阳晒屁股，家具也比较全，让我眼前一亮。挂牌价有些超出预算，但肯定可以谈。</p>
-<p>拍了视频给爸妈看，他们也说不错，然后约了第二天和业主面谈。</p>
-<p>第二天，先去复看了房子，还是很喜欢，然后和中介去了签约中心。刚开始我有些紧张，不知道怎么跟业主面对面讨价还价，这时候中介就发挥了作用，只用告诉他自己的心理价位，他再去跟业主谈，省去了尴尬。</p>
-<p>业主跟我一样社恐，也是通过中介来谈价，所以全程，我们两方在不同的会议室里，中介穿梭其中，经过快一个小时的拉扯，最终以超出我心理价位一万的价格成交，家具全送(除了洗衣机和冰箱我想买新的)。</p>
-<p>成交之后和业主会合，是一位女士还带着孩子，看材料比我大十岁，房子在她名下也是单独所有，客套了一番之后交材料然后签约成功：</p>
-<img data-src="https://s2.loli.net/2023/11/14/1fLpntvYNUgRzm2.jpg" alt="签约中心&amp;在会议室的我&amp;签约成功"><span class="image-caption">签约中心&amp;在会议室的我&amp;签约成功</span>
-
-<p>签约之后正式开始交易，要办各种手续，整个阶段持续了两个月，总的来说比较顺利，但是真的好慢，可中介说这还算比较快的，我很震惊。</p>
-<img data-src="https://s2.loli.net/2023/11/14/NJtaAmj9zrgT3ok.jpg" width="300" height="600" alt="交易时间线"><span class="image-caption">交易时间线</span>
-
-<p>到这里，这个房子终于算是买完了，也实现了我用公积金对冲房贷的预设。在整个交易流程中，3%的中介费、1%的个税、契税都是不小的开支，虽然有中介，也得跟着跑去办各种手续。</p>
-<p>办贷款银行卡、打征信、面签、去二手房交易中心缴税过户等等，都是我工作日抽空摸鱼跑出去办的。之后自己去交易中心拿房产证，刚拿到又交给公积金管理中心做抵押登记，过段时间又去管理中心拿回了房产证，这才办完所有的手续。</p>
-<img data-src="https://s2.loli.net/2023/11/15/OdLPzR9vJkUsTyw.png" alt="二手房交易中心"><span class="image-caption">二手房交易中心</span>
-
-<p>回顾全程，我觉得自己像一只被宰的羔羊。各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹，还有业主，我可是以她当年三倍的价格买下了这个二手房！</p>
-<p>虽然用着利率3.1%的公积金贷款，可刚开始每个月只有53%是在还本金，本来公积金也是我和公司对半交，就当公司那半还利息，我这半还本金，相当于没有利息，这么一想确实很划算？(公积金住房担保部门：她还得谢谢咱呢) ，但是要还21年，这意味着我要保住这样的公积金水平，才能一直无痛还贷，在经济形势衰退的当下，还是蛮有压力的。</p>
-<h2 id="经济实惠的装修"><a href="#经济实惠的装修" class="headerlink" title="经济实惠的装修"></a>经济实惠的装修</h2><p>系统显示7.31交易完成，其实这个时间比较滞后，而且我和中介以及原房主沟通了想要早点入住的想法，所以7.18就收房了，当天交接了水电燃气物业费，也再仔细看了看房子的装修和电器。</p>
-<p>然后发现：入户和过道的灯具都坏了，墙面有裂纹和污渍需要重新粉刷，阳台升降晾衣架有部分损坏，瓷砖也有很多严重空鼓，厨房燃气长时间不用已经被锁，卫生间的浴霸面板也需要更换。。。</p>
-<p>但是，当我看到原房主拿来的家具单子：沙发2万？！电视柜1万？！其他的实木家具零零总总加起来也好几万，嗯，我突然觉得上面这些都是小问题。</p>
-<p>不过我一直很疑惑，买房这么多流程，为什么没有一个试住的环节呢？这么大的交易，看几次房子就决定，只能通过现状想象入住后的情况，真的很离谱。</p>
-<p>然后开始收拾房子，除了解决上面的「小问题」，还要买家电，有一些家具也想更换，以及很多生活必备品和居家小物件，我都整理了list：</p>
-<img data-src="https://s2.loli.net/2023/11/17/yPUe1Jg6upEb3oO.png" width="500" height="450" alt="装修list(部分)"><span class="image-caption">装修list(部分)</span>
-
-<p>收房第一周就开始动工，周末两天我都在现场从早待到晚，边看着各路师傅装东西，边量各种尺寸买东西，每天进门第一件事就是打开甄嬛传当背景音(师傅们可真有福气)，电视也是乐视的(缘，妙不可言)：</p>
-<img data-src="https://s2.loli.net/2023/11/17/v2A1F547hEtjNwQ.png" width="600" height="400" alt="甄嬛传"><span class="image-caption">甄嬛传</span>
-
-<p>两周以后(为什么是两周请看下文)，list上的大部分事情也都解决了：</p>
-<div class="tabs" id="list解决"><ul class="nav-tabs"><li class="tab active"><a href="#list解决-1">list解决 1</a></li><li class="tab"><a href="#list解决-2">list解决 2</a></li><li class="tab"><a href="#list解决-3">list解决 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list解决-1"><p><strong>生活必备</strong></p>
-<p>水电燃气物业这些收房当天就交接清楚了，水电都可以用，燃气我打了客服电话让师傅上门解锁之后也好了，也办了直饮水站的饮水卡。</p>
-<p>宽带最麻烦，我之前用的网速不够，就办了两张新卡用移动的家庭账户套餐拉了新的千兆宽带，然后想把旧卡套餐降到8元再办理退网，但是只能本人去移动营业厅办理。</p>
-<p>后来有天去办，连跑了5个营业厅，不是办不了就是说权限收回了，各种设置障碍，第5家终于可以办了，但是人超多等了一个多小时才办完：</p>
-<img data-src="https://s2.loli.net/2023/11/18/b8IqZyrtlKSPfNW.jpg" width="300" height="400" alt="移动营业厅"><span class="image-caption">移动营业厅</span></div><div class="tab-pane" id="list解决-2"><p><strong>墙面和瓷砖</strong></p>
-<p>刚开始我为了省事直接网上约师傅，在啄木鸟的小程序里(小区电梯里甚至还有广告)，结果来的师傅看起来流里流气，还破坏了一部分墙面说是取样回去配色(不是纯白的)，报价也很高，真的很离谱，看来这种连锁平台完全就是宰客：</p>
-<p><img data-src="https://s2.loli.net/2023/11/18/4u8U31FSikx6mHa.jpg" alt="啄木鸟"><span class="image-caption">啄木鸟</span></p>
-<p>后来打电话给一个以前认识的师傅，好像是个包工头，来了以后快速敲定了方案，价格合理人也很负责靠谱，墙刷的很完美瓷砖也贴好了：</p>
-<p><img data-src="https://s2.loli.net/2023/11/18/AiXrDq7n3vTZMeO.jpg" alt="刷墙"><span class="image-caption">刷墙</span></p></div><div class="tab-pane" id="list解决-3"><p><strong>电器家居</strong></p>
-<p>电器基本上都是小米的产品，经济实惠也可以联网控制，家居大都买的林氏比较喜欢简约风，还有花洒浴霸这些买了之后都有师傅上门安装，一般也都包拆旧很方便：</p>
-<img data-src="https://s2.loli.net/2023/11/18/uAtZg5kWTUb13s7.jpg" width="300" height="400" alt="一组师傅图"><span class="image-caption">一组师傅图</span>
-
-<p>我都是周内买好约到周末安装，所以会同时有多个师傅在家里工作，看他们聊天也很热闹，还有个小米的师傅加了林氏师傅的微信想跳槽，虽然不知道后续如何但祝他成功哈哈哈哈哈。</p>
-<p>房子里原本的家居我只换掉了一个榻榻米床和一个立柜，床太小立柜太丑，想着快点挪出去就挂在闲鱼上免费送，第二天就有人要，是一个同市的小哥，说家里也在装修离得不远，周末叫了货拉拉和师傅一起搬。</p>
-<p>大热天的也不容易，我还热心的给他们开了空调，然后去物业开放行条，本来看他拿着一袋子水果想着来都来了还带什么东西，后来他又拿走了(特意上来一趟说是自己忘拿了)，害。</p></div></div></div>
-
-<p>除了大件，还有很多居家小物件也很费心思，大多是入住后慢慢购置的。全程都是我一个人在弄，强哥也帮了不少忙，比如顶住上门来诘问的邻居，看着师傅装柜子，还带我去宜家买了床垫，所有东西弄好之后花费3万左右，主打一个经济实惠。</p>
-<h2 id="房子和生活都是自己的"><a href="#房子和生活都是自己的" class="headerlink" title="房子和生活都是自己的"></a>房子和生活都是自己的</h2><p>在我忙着收拾房子的时候，房东这边又出了幺蛾子。</p>
-<div class="tabs" id="幺蛾子"><ul class="nav-tabs"><li class="tab active"><a href="#幺蛾子-1">幺蛾子 1</a></li><li class="tab"><a href="#幺蛾子-2">幺蛾子 2</a></li><li class="tab"><a href="#幺蛾子-3">幺蛾子 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="幺蛾子-1"><p>本来租期是到9月初，我想着房子收拾完8月初就可以搬，所以7月份就给房东说让她早点找租客。</p>
-<p>一是为她好，想着毕业季比较好找，而且找到新租客一个月也能多收点钱，二是为我好，在这里住了四年半，陆续帮房东洗了油烟机、修了水管漏水和热水器、换了新门锁和中央空调老化零件。。。</p>
-<p>刚开始房东还掏点钱(我出大头)，后来问题越来越多，房东也多有不满，说东西虽然坏了，但是我在用就应该我掏钱来修!? 闹了很多不愉快，不久前又垫钱修洗衣机，实在不想再打两份工，还是快逃吧。</p>
-<p>因为房子被我改造的很温馨，也打理的非常干净，之前好多朋友来做客都说以后房东甚至可以加价租出去，中介来拍VR也说这个房子谁来看都能看得上。果不其然，很快有一个刚毕业来西安读研的女生和妈妈一起来看，也十分满意。</p></div><div class="tab-pane" id="幺蛾子-2"><p>然后房东就问我什么时候搬：</p>
-<img data-src="https://s2.loli.net/2023/11/19/6LZCpn23kE9fqM7.jpg" width="300" height="550" alt="好大一张脸"><span class="image-caption">好大一张脸</span>
-
-<p>本来想着好聚好散，结果她倒打一耙说是我违约提前退租，想吞了我一个月的租金和押金，还想着租出去，一个月收三份钱？真是好大一张脸。那好嘛我就不提前退了呗，爱咋咋地。</p></div><div class="tab-pane" id="幺蛾子-3"><p>但是我不急着搬，她着急租呀，然后缓和了态度说可以退我租金押金，到时候和水电物业一起交接。本来我打算按合同时间8.8搬，结果他们一通道德绑架，又想要我协调他们的时间，又说下个租客在酒店没地方住要我帮帮忙，最后我妥协决定8.1搬家，还得请个假：</p>
-<img data-src="https://s2.loli.net/2023/11/19/rFocWzywPx847GH.jpg" width="400" height="460" alt="我可太善良了"><span class="image-caption">我可太善良了</span></div></div></div>
-
-<p>于是8.1号，我和强哥、房东、新租客、中介四方一起交接，清算了水电燃气物业费，又检查房子的电器和家具，扯了好一会皮，主要是强哥在帮我交涉，我已经不想跟房东说话了。</p>
-<p>房间里有很多自己买的小家具，大多是上个租客走的时候我花了350买的，本来以为已经算是趁火打劫了，因为东西蛮多的也很实用，后来自己又添了很多小物件让房间看起来更温馨，就想把这些打包500块卖给新租客(其实光我后来买的原价加起来都有1k+)。</p>
-<p>结果他们更不要脸，可能知道我们着急走，卖不出去也只能留在这(因为尺寸都是按照这个房子买的拿走也用不了)，而且中介也很奇怪偏帮着新租客，说我们这些东西扔在楼下都没人要(我当时真的想扔)，最后他们明明可以直接抢，还要给我150，真的栓Q。</p>
-<p>然后叫了货拉拉开始搬家，我和强哥两个人按着电梯，上下不知多少次才搬完，后来小货车放不下，放了好多在强哥车上，我又跑去物业开各种单子和放行条，一前一后开去新家。</p>
-<p>到了新家又重复刚才的动作，足足搬了4个多小时，汗出了一层又一层。简单收拾歇了会，我们出发去超市买食材，途中还下起了瓢泼大雨，一路折腾回家，伴着满地杂乱的行李，终于在晚上10点吃上了火锅：</p>
-<p><img data-src="https://s2.loli.net/2023/11/19/LPs5SfbiOhJkdKM.jpg" alt="又见甄嬛传"><span class="image-caption">又见甄嬛传</span></p>
-<p>一整天实在太累，再加上来新家也很不适应，有些食不知味，吃完饭强哥12点才到家。因为房间还没收拾好，所以在新家的第一晚我是在沙发上睡的。</p>
-<p>第二天我请了假在家休息，顺便收拾了很多东西，后边几天也都在家办公，才慢慢恢复元气，说起来买房全程我只有搬家请了两天假，太高效了。</p>
-<p>接下来的日子里，我一边购置其它小物件，一边适应新家的生活。后来爸妈也来和我一起收拾房子做大扫除，才有了家的感觉，他们发现楼顶十分开阔可以晒被子之后，觉得很不错还开心的像个孩子，搬到新家的吉吉也一如既往的清澈愚蠢：</p>
-<img data-src="https://s2.loli.net/2023/11/19/w5IVuoX2gSPb3eT.jpg" width="400" height="500" alt="清澈愚蠢(和右下角的黑猫一模一样了)"><span class="image-caption">清澈愚蠢(和右下角的黑猫一模一样了)</span>
-
-<p>现在的我，已经完全适应了新家。工作日打车上下班，也偶尔在家办公，闲暇时和强哥一起在路边散步(毕竟只隔着三个红绿灯)，慢慢熟悉了周边的环境。</p>
-<p>爸妈也过来住了，老妈还很快找到了工作(离家也只有三个红绿灯)，每天步行上下班；老爸则经常展示厨艺，做好吃的给我们，生活平淡温馨。</p>
-<p>最近小区在组织成立业委会，监督物业不作为的现象，我很支持还上交了所需资料，但现在还没有下文。</p>
-<p>从买房入住到现在，我感觉物业就只是凑合，甚至业主群都还没加上。不过全国的物业都一样，凑合过呗，还能离咋的。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>买房</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我结婚了</title>
     <url>/i-got-married/</url>
     <content><![CDATA[<p><img data-src="https://s2.loli.net/2025/09/09/lGAz4dQ8nEZqIsy.jpg" alt="摄于西安市雁塔区民政局婚姻登记处内"><span class="image-caption">摄于西安市雁塔区民政局婚姻登记处内</span></p>
@@ -3861,6 +3753,114 @@ public class Functions {
       </categories>
       <tags>
         <tag>结婚</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我买房了</title>
+    <url>/i-bought-an-apartment/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/10/30/t8bgFdo9qx3EX4j.png">
+
+<h2 id="归属感和租住不同权"><a href="#归属感和租住不同权" class="headerlink" title="归属感和租住不同权"></a>归属感和租住不同权</h2><p>会有人不想买房吗？是因为不想吗，是因为没钱吧。</p>
+<p>2014年，17岁的我来到西安上大学，毕业后又在这里工作。选择西安，并不是刻意为之，大学是被调剂的，毕业后也投了不少外地的工作，但最终也只有西安的公司收留我。</p>
+<p>我又是一个安于现状没有梦想的咸鱼，所以不知不觉在西安生活也快10年了，自然有一种归属感。而且这里超好的，离家又近又很安全，没有什么地震海啸之类的自然灾害，很适合好好活着。</p>
+<p>在中国，租住不同权，所以想要在一个地方长久的活着，买房是很有必要的。西安的房价相较于一线城市来说也比较友好，攒一攒还是够的上首付，所以买房这件事，从我刚开始赚钱的时候就被列为头号目标。</p>
+<h2 id="一波三折的计划"><a href="#一波三折的计划" class="headerlink" title="一波三折的计划"></a>一波三折的计划</h2><p>买房这件事很复杂，预算多少，买哪里，买多大，怎么买，都是问题。但是买期房并不在我的考虑范围之内，因为爆雷太多了也不想等，所以我只买二手房。</p>
+<p>刚开始我计划，买一个离公司近点的一室小房子，用公积金贷款，每月的缴存额刚好够直冲房贷，再买一辆经济实惠的大众Polo，慢慢过自己的小日子。</p>
+<p>然后参考某壳某家上的房源信息，确定预算后开始了每月的攒钱计划，还在小本本上计算可以达成目标的时间，也一直关注房地产的政策和消息，斗志满满。</p>
+<p>那时我还不懂什么是 <a href="https://www.bilibili.com/read/cv8944043/">无常</a>，总以为万物恒定，一切都会按照自己计划的那样进行，那种突然出现什么变故需要用钱的事，全不在我的考虑范围之内。可真就什么也没发生，虽然中间有一些插曲，但也总归按计划攒够了钱，真是万幸。</p>
+<p>后来考虑到爸妈养老，住的近方便一点，又打算买一个小两室，爸妈住一间，我住一间。直到去年，我遇到了强哥，一起规划未来时讨论到这件事情，讨论之后还是决定买，但买房的性质从给自己买变成给爸妈买养老房。</p>
+<p>计划还是买小两室，爸妈一间，我住一间以后用作客房，老姐之后来西安探亲也有地方住。用纯公积金贷款，每月的缴存额要够直冲房贷，做到无痛还贷，这样也有余力再攒点钱和强哥一起买房。</p>
+<h2 id="不断接受现实的看房过程"><a href="#不断接受现实的看房过程" class="headerlink" title="不断接受现实的看房过程"></a>不断接受现实的看房过程</h2><p>刚开始，我对二手房的要求是：住宅、房龄5年以内、两梯四户、小区环境要干净整洁、交通要便利、周边配套要丰富。</p>
+<p>然后发现以我的预算根本找不到这样的房子，不断妥协之后留下了三个硬性要求：住宅、房龄10年以内、梯户比1:2，小区环境和周边配套过得去、交通相对便利就行。</p>
+<p>我都是在线上看好了感兴趣的房源，再联系中介线下看房。</p>
+<p>第一次看房，是在20年，那时候的计划还是买一室，看中了公司周边一个套内只有38平的开间房，户型还算方正，厨房卫生间相对，客厅和床连成一个大套间。</p>
+<p>这么一个小房子，价格还是有些超出我当时的预算，很不值得。后来还被中介拉去对面在建的商业公寓看房刷业绩，现在经常路过那里，对面的商场也开业了，还去转过几次。</p>
+<p>第二次看房，是在21年，计划改成买小两室，看中了一个在顶楼所以价格相对友好的房子，纠结几番还是决定听朋友劝没买，因为价格超出预算而且顶楼很不靠谱。</p>
+<p>每次看房，中介都会极尽所能劝我快买，约业主面谈，想让我头脑发热冲动签约，他们也好签单达成业绩。但是买房又不是买菜逛街，怎么可能这么草率做决定呢，还是要谨慎，不过多看是一方面，要真看中了定下来也蛮快的。所以我决定继续攒钱，到合适的时机再买。</p>
+<p>今年，市场方面，经济衰退楼市遇冷，政府出台了很多买房的利好政策。家庭方面，在外地工作的爸妈也要回来了，想让他们回来就直接能住上房子。个人方面，遇到了强哥想着早点把这个事办完，也能更好的规划我们的未来。</p>
+<p>所以从三月份开始，我每个周末都安排中介，奔走在城市各个角落看房。刚开始我自己坐公交地铁和中介碰头，后来发现其实可以要求接送。然后每次加中介之后先问能不能接送，不能的就pass，反正一套房源又不只有一个中介可以联系。</p>
+<p>跑了快两个月之后，终于找到了一个比较满意的小两室。楼龄新，两梯四户，小区环境也不错，旁边有待开的商业和地铁，周围有公园很适合遛弯，在大学城居住氛围也很浓厚，同样的户型看了好多套，然后把装修发给爸妈看。</p>
+<p>他们还是觉得有点小，也希望离我公司近点方便我上下班，可这已经是我预算内综合各种要求，能找到的最好的房子了。后来爸妈添了10万给我提高预算，就又接着找。</p>
+<h2 id="就这么草率的决定了"><a href="#就这么草率的决定了" class="headerlink" title="就这么草率的决定了"></a>就这么草率的决定了</h2><p>新的预算选择范围也很有限，不过一段时间以后，还是找到了不错的房子。满足我上边的硬性要求，虽然小区环境比之前那个差点，遛弯也不太方便，但离公司比较近可以打车上下班，周边配套和交通方面也还算过得去，还有一点，这里离强哥家只有三个红绿灯。</p>
+<p>爸妈也比较满意，所以决定就买在这个小区。这里小两室的户型有很多，看了一些都没有中意的，不过房源很多，过了几天中介又发了我几套，有一个我比较喜欢的，就又约上了。</p>
+<p>那天周六，是我喜欢的微雨天气。先去看了中意的那套房子，里面住着四口人，一对夫妻和孩子，以及带娃的奶奶，见我们来看房也没怎么理。</p>
+<p>小两室住四个人有点挤，里面的东西也很多，还有堆放在门口的杂物，跟我想象中的不太一样。看我神情有些失望，中介说还有一套，是新上的还没给我发，问我要不要看，我想着来都来了，必须看啊。</p>
+<p>这是一套次顶楼的房子，里面没人住，说是刚搬空，看情形本来住着一对夫妻和孩子。客厅很敞亮，装修是我喜欢的原木风，卧室朝东早上可以被太阳晒屁股，家具也比较全，让我眼前一亮。挂牌价有些超出预算，但肯定可以谈。</p>
+<p>拍了视频给爸妈看，他们也说不错，然后约了第二天和业主面谈。</p>
+<p>第二天，先去复看了房子，还是很喜欢，然后和中介去了签约中心。刚开始我有些紧张，不知道怎么跟业主面对面讨价还价，这时候中介就发挥了作用，只用告诉他自己的心理价位，他再去跟业主谈，省去了尴尬。</p>
+<p>业主跟我一样社恐，也是通过中介来谈价，所以全程，我们两方在不同的会议室里，中介穿梭其中，经过快一个小时的拉扯，最终以超出我心理价位一万的价格成交，家具全送(除了洗衣机和冰箱我想买新的)。</p>
+<p>成交之后和业主会合，是一位女士还带着孩子，看材料比我大十岁，房子在她名下也是单独所有，客套了一番之后交材料然后签约成功：</p>
+<img data-src="https://s2.loli.net/2023/11/14/1fLpntvYNUgRzm2.jpg" alt="签约中心&amp;在会议室的我&amp;签约成功"><span class="image-caption">签约中心&amp;在会议室的我&amp;签约成功</span>
+
+<p>签约之后正式开始交易，要办各种手续，整个阶段持续了两个月，总的来说比较顺利，但是真的好慢，可中介说这还算比较快的，我很震惊。</p>
+<img data-src="https://s2.loli.net/2023/11/14/NJtaAmj9zrgT3ok.jpg" width="300" height="600" alt="交易时间线"><span class="image-caption">交易时间线</span>
+
+<p>到这里，这个房子终于算是买完了，也实现了我用公积金对冲房贷的预设。在整个交易流程中，3%的中介费、1%的个税、契税都是不小的开支，虽然有中介，也得跟着跑去办各种手续。</p>
+<p>办贷款银行卡、打征信、面签、去二手房交易中心缴税过户等等，都是我工作日抽空摸鱼跑出去办的。之后自己去交易中心拿房产证，刚拿到又交给公积金管理中心做抵押登记，过段时间又去管理中心拿回了房产证，这才办完所有的手续。</p>
+<img data-src="https://s2.loli.net/2023/11/15/OdLPzR9vJkUsTyw.png" alt="二手房交易中心"><span class="image-caption">二手房交易中心</span>
+
+<p>回顾全程，我觉得自己像一只被宰的羔羊。各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹，还有业主，我可是以她当年三倍的价格买下了这个二手房！</p>
+<p>虽然用着利率3.1%的公积金贷款，可刚开始每个月只有53%是在还本金，本来公积金也是我和公司对半交，就当公司那半还利息，我这半还本金，相当于没有利息，这么一想确实很划算？(公积金住房担保部门：她还得谢谢咱呢) ，但是要还21年，这意味着我要保住这样的公积金水平，才能一直无痛还贷，在经济形势衰退的当下，还是蛮有压力的。</p>
+<h2 id="经济实惠的装修"><a href="#经济实惠的装修" class="headerlink" title="经济实惠的装修"></a>经济实惠的装修</h2><p>系统显示7.31交易完成，其实这个时间比较滞后，而且我和中介以及原房主沟通了想要早点入住的想法，所以7.18就收房了，当天交接了水电燃气物业费，也再仔细看了看房子的装修和电器。</p>
+<p>然后发现：入户和过道的灯具都坏了，墙面有裂纹和污渍需要重新粉刷，阳台升降晾衣架有部分损坏，瓷砖也有很多严重空鼓，厨房燃气长时间不用已经被锁，卫生间的浴霸面板也需要更换。。。</p>
+<p>但是，当我看到原房主拿来的家具单子：沙发2万？！电视柜1万？！其他的实木家具零零总总加起来也好几万，嗯，我突然觉得上面这些都是小问题。</p>
+<p>不过我一直很疑惑，买房这么多流程，为什么没有一个试住的环节呢？这么大的交易，看几次房子就决定，只能通过现状想象入住后的情况，真的很离谱。</p>
+<p>然后开始收拾房子，除了解决上面的「小问题」，还要买家电，有一些家具也想更换，以及很多生活必备品和居家小物件，我都整理了list：</p>
+<img data-src="https://s2.loli.net/2023/11/17/yPUe1Jg6upEb3oO.png" width="500" height="450" alt="装修list(部分)"><span class="image-caption">装修list(部分)</span>
+
+<p>收房第一周就开始动工，周末两天我都在现场从早待到晚，边看着各路师傅装东西，边量各种尺寸买东西，每天进门第一件事就是打开甄嬛传当背景音(师傅们可真有福气)，电视也是乐视的(缘，妙不可言)：</p>
+<img data-src="https://s2.loli.net/2023/11/17/v2A1F547hEtjNwQ.png" width="600" height="400" alt="甄嬛传"><span class="image-caption">甄嬛传</span>
+
+<p>两周以后(为什么是两周请看下文)，list上的大部分事情也都解决了：</p>
+<div class="tabs" id="list解决"><ul class="nav-tabs"><li class="tab active"><a href="#list解决-1">list解决 1</a></li><li class="tab"><a href="#list解决-2">list解决 2</a></li><li class="tab"><a href="#list解决-3">list解决 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="list解决-1"><p><strong>生活必备</strong></p>
+<p>水电燃气物业这些收房当天就交接清楚了，水电都可以用，燃气我打了客服电话让师傅上门解锁之后也好了，也办了直饮水站的饮水卡。</p>
+<p>宽带最麻烦，我之前用的网速不够，就办了两张新卡用移动的家庭账户套餐拉了新的千兆宽带，然后想把旧卡套餐降到8元再办理退网，但是只能本人去移动营业厅办理。</p>
+<p>后来有天去办，连跑了5个营业厅，不是办不了就是说权限收回了，各种设置障碍，第5家终于可以办了，但是人超多等了一个多小时才办完：</p>
+<img data-src="https://s2.loli.net/2023/11/18/b8IqZyrtlKSPfNW.jpg" width="300" height="400" alt="移动营业厅"><span class="image-caption">移动营业厅</span></div><div class="tab-pane" id="list解决-2"><p><strong>墙面和瓷砖</strong></p>
+<p>刚开始我为了省事直接网上约师傅，在啄木鸟的小程序里(小区电梯里甚至还有广告)，结果来的师傅看起来流里流气，还破坏了一部分墙面说是取样回去配色(不是纯白的)，报价也很高，真的很离谱，看来这种连锁平台完全就是宰客：</p>
+<p><img data-src="https://s2.loli.net/2023/11/18/4u8U31FSikx6mHa.jpg" alt="啄木鸟"><span class="image-caption">啄木鸟</span></p>
+<p>后来打电话给一个以前认识的师傅，好像是个包工头，来了以后快速敲定了方案，价格合理人也很负责靠谱，墙刷的很完美瓷砖也贴好了：</p>
+<p><img data-src="https://s2.loli.net/2023/11/18/AiXrDq7n3vTZMeO.jpg" alt="刷墙"><span class="image-caption">刷墙</span></p></div><div class="tab-pane" id="list解决-3"><p><strong>电器家居</strong></p>
+<p>电器基本上都是小米的产品，经济实惠也可以联网控制，家居大都买的林氏比较喜欢简约风，还有花洒浴霸这些买了之后都有师傅上门安装，一般也都包拆旧很方便：</p>
+<img data-src="https://s2.loli.net/2023/11/18/uAtZg5kWTUb13s7.jpg" width="300" height="400" alt="一组师傅图"><span class="image-caption">一组师傅图</span>
+
+<p>我都是周内买好约到周末安装，所以会同时有多个师傅在家里工作，看他们聊天也很热闹，还有个小米的师傅加了林氏师傅的微信想跳槽，虽然不知道后续如何但祝他成功哈哈哈哈哈。</p>
+<p>房子里原本的家居我只换掉了一个榻榻米床和一个立柜，床太小立柜太丑，想着快点挪出去就挂在闲鱼上免费送，第二天就有人要，是一个同市的小哥，说家里也在装修离得不远，周末叫了货拉拉和师傅一起搬。</p>
+<p>大热天的也不容易，我还热心的给他们开了空调，然后去物业开放行条，本来看他拿着一袋子水果想着来都来了还带什么东西，后来他又拿走了(特意上来一趟说是自己忘拿了)，害。</p></div></div></div>
+
+<p>除了大件，还有很多居家小物件也很费心思，大多是入住后慢慢购置的。全程都是我一个人在弄，强哥也帮了不少忙，比如顶住上门来诘问的邻居，看着师傅装柜子，还带我去宜家买了床垫，所有东西弄好之后花费3万左右，主打一个经济实惠。</p>
+<h2 id="房子和生活都是自己的"><a href="#房子和生活都是自己的" class="headerlink" title="房子和生活都是自己的"></a>房子和生活都是自己的</h2><p>在我忙着收拾房子的时候，房东这边又出了幺蛾子。</p>
+<div class="tabs" id="幺蛾子"><ul class="nav-tabs"><li class="tab active"><a href="#幺蛾子-1">幺蛾子 1</a></li><li class="tab"><a href="#幺蛾子-2">幺蛾子 2</a></li><li class="tab"><a href="#幺蛾子-3">幺蛾子 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="幺蛾子-1"><p>本来租期是到9月初，我想着房子收拾完8月初就可以搬，所以7月份就给房东说让她早点找租客。</p>
+<p>一是为她好，想着毕业季比较好找，而且找到新租客一个月也能多收点钱，二是为我好，在这里住了四年半，陆续帮房东洗了油烟机、修了水管漏水和热水器、换了新门锁和中央空调老化零件。。。</p>
+<p>刚开始房东还掏点钱(我出大头)，后来问题越来越多，房东也多有不满，说东西虽然坏了，但是我在用就应该我掏钱来修!? 闹了很多不愉快，不久前又垫钱修洗衣机，实在不想再打两份工，还是快逃吧。</p>
+<p>因为房子被我改造的很温馨，也打理的非常干净，之前好多朋友来做客都说以后房东甚至可以加价租出去，中介来拍VR也说这个房子谁来看都能看得上。果不其然，很快有一个刚毕业来西安读研的女生和妈妈一起来看，也十分满意。</p></div><div class="tab-pane" id="幺蛾子-2"><p>然后房东就问我什么时候搬：</p>
+<img data-src="https://s2.loli.net/2023/11/19/6LZCpn23kE9fqM7.jpg" width="300" height="550" alt="好大一张脸"><span class="image-caption">好大一张脸</span>
+
+<p>本来想着好聚好散，结果她倒打一耙说是我违约提前退租，想吞了我一个月的租金和押金，还想着租出去，一个月收三份钱？真是好大一张脸。那好嘛我就不提前退了呗，爱咋咋地。</p></div><div class="tab-pane" id="幺蛾子-3"><p>但是我不急着搬，她着急租呀，然后缓和了态度说可以退我租金押金，到时候和水电物业一起交接。本来我打算按合同时间8.8搬，结果他们一通道德绑架，又想要我协调他们的时间，又说下个租客在酒店没地方住要我帮帮忙，最后我妥协决定8.1搬家，还得请个假：</p>
+<img data-src="https://s2.loli.net/2023/11/19/rFocWzywPx847GH.jpg" width="400" height="460" alt="我可太善良了"><span class="image-caption">我可太善良了</span></div></div></div>
+
+<p>于是8.1号，我和强哥、房东、新租客、中介四方一起交接，清算了水电燃气物业费，又检查房子的电器和家具，扯了好一会皮，主要是强哥在帮我交涉，我已经不想跟房东说话了。</p>
+<p>房间里有很多自己买的小家具，大多是上个租客走的时候我花了350买的，本来以为已经算是趁火打劫了，因为东西蛮多的也很实用，后来自己又添了很多小物件让房间看起来更温馨，就想把这些打包500块卖给新租客(其实光我后来买的原价加起来都有1k+)。</p>
+<p>结果他们更不要脸，可能知道我们着急走，卖不出去也只能留在这(因为尺寸都是按照这个房子买的拿走也用不了)，而且中介也很奇怪偏帮着新租客，说我们这些东西扔在楼下都没人要(我当时真的想扔)，最后他们明明可以直接抢，还要给我150，真的栓Q。</p>
+<p>然后叫了货拉拉开始搬家，我和强哥两个人按着电梯，上下不知多少次才搬完，后来小货车放不下，放了好多在强哥车上，我又跑去物业开各种单子和放行条，一前一后开去新家。</p>
+<p>到了新家又重复刚才的动作，足足搬了4个多小时，汗出了一层又一层。简单收拾歇了会，我们出发去超市买食材，途中还下起了瓢泼大雨，一路折腾回家，伴着满地杂乱的行李，终于在晚上10点吃上了火锅：</p>
+<p><img data-src="https://s2.loli.net/2023/11/19/LPs5SfbiOhJkdKM.jpg" alt="又见甄嬛传"><span class="image-caption">又见甄嬛传</span></p>
+<p>一整天实在太累，再加上来新家也很不适应，有些食不知味，吃完饭强哥12点才到家。因为房间还没收拾好，所以在新家的第一晚我是在沙发上睡的。</p>
+<p>第二天我请了假在家休息，顺便收拾了很多东西，后边几天也都在家办公，才慢慢恢复元气，说起来买房全程我只有搬家请了两天假，太高效了。</p>
+<p>接下来的日子里，我一边购置其它小物件，一边适应新家的生活。后来爸妈也来和我一起收拾房子做大扫除，才有了家的感觉，他们发现楼顶十分开阔可以晒被子之后，觉得很不错还开心的像个孩子，搬到新家的吉吉也一如既往的清澈愚蠢：</p>
+<img data-src="https://s2.loli.net/2023/11/19/w5IVuoX2gSPb3eT.jpg" width="400" height="500" alt="清澈愚蠢(和右下角的黑猫一模一样了)"><span class="image-caption">清澈愚蠢(和右下角的黑猫一模一样了)</span>
+
+<p>现在的我，已经完全适应了新家。工作日打车上下班，也偶尔在家办公，闲暇时和强哥一起在路边散步(毕竟只隔着三个红绿灯)，慢慢熟悉了周边的环境。</p>
+<p>爸妈也过来住了，老妈还很快找到了工作(离家也只有三个红绿灯)，每天步行上下班；老爸则经常展示厨艺，做好吃的给我们，生活平淡温馨。</p>
+<p>最近小区在组织成立业委会，监督物业不作为的现象，我很支持还上交了所需资料，但现在还没有下文。</p>
+<p>从买房入住到现在，我感觉物业就只是凑合，甚至业主群都还没加上。不过全国的物业都一样，凑合过呗，还能离咋的。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>买房</tag>
       </tags>
   </entry>
   <entry>
@@ -4021,6 +4021,55 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>这世界那么多人</title>
+    <url>/looking-for-the-one-1-10/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/KUCYHdEzs2gak1J.jpg">
+
+<h2 id="前景提要"><a href="#前景提要" class="headerlink" title="前景提要"></a>前景提要</h2><div class="note info"><p>去年年底博主注册了两个交友小程序，到现在为止也见识过不少男嘉宾了，所以是时候复盘一波了(不是为了找素材啊喂🙈)。<br>我的流程是先在小程序了解基本信息，聊一聊，觉得聊得还行就加个微信进一步了解，然后再安排见面，所以下面的男嘉宾排名，也是按照这个顺序。<br>由于我已经注销了青藤的账号，所以以下除特别说明外，男嘉宾均来自二狗平台。</p>
+</div>
+
+<h2 id="No-1-没有槽点"><a href="#No-1-没有槽点" class="headerlink" title="No.1 没有槽点"></a>No.1 没有槽点</h2><p>我设置了加好友问答，需要推荐一部书或电影然后给个推荐理由(其实就是因为我剧荒了)，他答的还不错，所以就通过申请聊了聊。</p>
+<p>聊了之前都去过的一个旅游景点，然后他推荐了一个本地的商业文化街说可以一起去，再随便聊了点啥，第一次对话就这样结束了，后面我也没有想要挑起话题的欲望，人家也再没找过我，整体没啥槽点，感觉挺无聊的，就算了。</p>
+<h2 id="No-2-明年结婚"><a href="#No-2-明年结婚" class="headerlink" title="No.2 明年结婚"></a>No.2 明年结婚</h2><p>程序员，说实话我对程序员有种特别的好感，可能因为置身其中比较了解行业的艰辛吧，所以很加分，互道你好后，他说：</p>
+<img data-src="https://s2.loli.net/2022/05/28/wDZhlFW4uaBsp57.jpg" width="200" height="400" alt="了不得了不得"><span class="image-caption">了不得了不得</span>
+
+<p>什么叫专业？这就是专业啊！！！看完之后我内心忍不住发出一声赞叹，人家问我觉得怎么样？我觉得自惭形秽，只能机械的重复「挺好的挺好的」。<br>这样的男嘉宾我配不上，当然要介绍给我一个跟他同乡的好闺蜜啊，所以马上安排了起来：</p>
+<img data-src="https://s2.loli.net/2022/05/28/cCAiZ938zudfbED.jpg" width="200" height="400" alt="芜湖"><span class="image-caption">芜湖</span>
+
+<p>第一次当红娘的我十分激动，比给自己找对象都开心，原来单身狗的快乐源泉之一是给别人介绍对象，所以马上问闺蜜聊的怎么样，进展如何，然后她给我甩了一张聊天截图：</p>
+<img data-src="https://s2.loli.net/2022/05/28/k52cyBdtSfKrsYL.jpg" width="200" height="200" alt="好家伙"><span class="image-caption">好家伙</span>
+
+<p>明年结婚？<br>时间有没有问题？<br>我看他这个人多少是有点问题，男嘉宾说等她一周后出差回来要约见面，闺蜜也答应了，说不定见面的感觉不一样呢？<br>接下来是闺蜜见面之后从前方带来的报道：</p>
+<img data-src="https://s2.loli.net/2022/05/28/CO3PKat6TJfxcqE.jpg" width="200" height="300" alt="哈哈哈哈哈"><span class="image-caption">哈哈哈哈哈</span>
+
+<p>细节就是，到了星巴克，男嘉宾一个人坐在那，什么喝的也没点，闺蜜到了跟他聊了几句，实在没忍住渴自己点了一杯喝的，问男嘉宾要点啥，男嘉宾说啥也不要，然后俩人在那尬聊了半小时。</p>
+<p>至于聊天的内容，男嘉宾从程序语言聊到框架设计，还问闺蜜工作上用的啥框架然后咋用的，宛如面试现场，闺蜜说自己如坐针毡，我怀疑这男嘉宾是猎头派来挖人的吧，救大命。</p>
+<p>啥也不说了，祝福这位男嘉宾能找到跟他「明年结婚」的对象吧，啊不，已经是今年了。</p>
+<h2 id="No-3-人类观察员"><a href="#No-3-人类观察员" class="headerlink" title="No.3 人类观察员"></a>No.3 人类观察员</h2><p>一开始加他我是很犹豫的，虽然他资料显示是男生，可主页照片是个漂亮女生，不过人家回答我的问题很真诚，简直可以当范文了，所以冒着被掰弯的风险同意了他的申请：</p>
+<img data-src="https://s2.loli.net/2022/05/28/BdmGiac5IYPKvVt.jpg" width="200" height="400" alt="范文"><span class="image-caption">范文</span>
+
+<p>颤抖着手主动发出第一条消息，然后发现了他人类观察员的身份，他还展示了自己好友申请列表里的一串男生：</p>
+<img data-src="https://s2.loli.net/2022/05/28/aB7ketPQbwJE5ul.jpg" width="400" height="400" alt="人类观察员"><span class="image-caption">人类观察员</span>
+
+<p>厉害了厉害了，后来他说自己是教师，怪不得！人类灵魂的工程师来做人类观察员，不能更适合了，他说自己工资太低，非常羡慕程序员的高工资，想转行什么的，是个有趣的人哈哈哈哈，不过找对象就算了，还是让他专心观察人类吧。</p>
+<h2 id="No-4-被动哥"><a href="#No-4-被动哥" class="headerlink" title="No.4 被动哥"></a>No.4 被动哥</h2><p>申请问题回答的真诚度仅次于3号男嘉宾，所以通过了他的交友申请，然后我就去忙了也没看聊天窗口，再次回来的时候他说：</p>
+<img data-src="https://s2.loli.net/2022/05/28/ryekYvNdpa4A6LS.jpg" width="200" height="400" alt="excuse me?"><span class="image-caption">excuse me?</span>
+
+<p>这种抱怨的语气是什么鬼？后来他说「我们都是被动的人」，又一起聊了会书和电影，就很干，之后他倒是找过我几次，但我已经没什么想聊的欲望了，然后就结束了。</p>
+<h2 id="No-5-孤独患者"><a href="#No-5-孤独患者" class="headerlink" title="No.5 孤独患者"></a>No.5 孤独患者</h2><p>青藤上认识的男嘉宾，180+，有房有车有猫，长相清秀，写字好看，声音好听，还兼职婚礼主持。嗯，他为什么单身来着？</p>
+<p>他先关注的我，我后来也关注了他，互关之后，我们就开始聊天了。<br>他说，自己一直比较享受孤独，最近刚做完一场手术，在恢复期，突然觉得有点凄凉，就来到了这个平台，真.孤独患者。</p>
+<p>算是这些男嘉宾里比较能聊得来的，星座也跟我很搭，但是，他从来不主动找我聊天，每次都是我找他，这样几次之后，我累了，过了几天，我想，要不再争(wei)取(se)一(suo)下(mi)？然后就发现，人家已经注销了账号。。。</p>
+<p>hummm…可能是外向的孤独患者，需要认可。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>人类观察员</category>
+      </categories>
+      <tags>
+        <tag>孤独患者</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我和黑猫吉吉</title>
     <url>/ji-ji-cat/</url>
     <content><![CDATA[<blockquote>
@@ -4074,55 +4123,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>吉吉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>这世界那么多人</title>
-    <url>/looking-for-the-one-1-10/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/KUCYHdEzs2gak1J.jpg">
-
-<h2 id="前景提要"><a href="#前景提要" class="headerlink" title="前景提要"></a>前景提要</h2><div class="note info"><p>去年年底博主注册了两个交友小程序，到现在为止也见识过不少男嘉宾了，所以是时候复盘一波了(不是为了找素材啊喂🙈)。<br>我的流程是先在小程序了解基本信息，聊一聊，觉得聊得还行就加个微信进一步了解，然后再安排见面，所以下面的男嘉宾排名，也是按照这个顺序。<br>由于我已经注销了青藤的账号，所以以下除特别说明外，男嘉宾均来自二狗平台。</p>
-</div>
-
-<h2 id="No-1-没有槽点"><a href="#No-1-没有槽点" class="headerlink" title="No.1 没有槽点"></a>No.1 没有槽点</h2><p>我设置了加好友问答，需要推荐一部书或电影然后给个推荐理由(其实就是因为我剧荒了)，他答的还不错，所以就通过申请聊了聊。</p>
-<p>聊了之前都去过的一个旅游景点，然后他推荐了一个本地的商业文化街说可以一起去，再随便聊了点啥，第一次对话就这样结束了，后面我也没有想要挑起话题的欲望，人家也再没找过我，整体没啥槽点，感觉挺无聊的，就算了。</p>
-<h2 id="No-2-明年结婚"><a href="#No-2-明年结婚" class="headerlink" title="No.2 明年结婚"></a>No.2 明年结婚</h2><p>程序员，说实话我对程序员有种特别的好感，可能因为置身其中比较了解行业的艰辛吧，所以很加分，互道你好后，他说：</p>
-<img data-src="https://s2.loli.net/2022/05/28/wDZhlFW4uaBsp57.jpg" width="200" height="400" alt="了不得了不得"><span class="image-caption">了不得了不得</span>
-
-<p>什么叫专业？这就是专业啊！！！看完之后我内心忍不住发出一声赞叹，人家问我觉得怎么样？我觉得自惭形秽，只能机械的重复「挺好的挺好的」。<br>这样的男嘉宾我配不上，当然要介绍给我一个跟他同乡的好闺蜜啊，所以马上安排了起来：</p>
-<img data-src="https://s2.loli.net/2022/05/28/cCAiZ938zudfbED.jpg" width="200" height="400" alt="芜湖"><span class="image-caption">芜湖</span>
-
-<p>第一次当红娘的我十分激动，比给自己找对象都开心，原来单身狗的快乐源泉之一是给别人介绍对象，所以马上问闺蜜聊的怎么样，进展如何，然后她给我甩了一张聊天截图：</p>
-<img data-src="https://s2.loli.net/2022/05/28/k52cyBdtSfKrsYL.jpg" width="200" height="200" alt="好家伙"><span class="image-caption">好家伙</span>
-
-<p>明年结婚？<br>时间有没有问题？<br>我看他这个人多少是有点问题，男嘉宾说等她一周后出差回来要约见面，闺蜜也答应了，说不定见面的感觉不一样呢？<br>接下来是闺蜜见面之后从前方带来的报道：</p>
-<img data-src="https://s2.loli.net/2022/05/28/CO3PKat6TJfxcqE.jpg" width="200" height="300" alt="哈哈哈哈哈"><span class="image-caption">哈哈哈哈哈</span>
-
-<p>细节就是，到了星巴克，男嘉宾一个人坐在那，什么喝的也没点，闺蜜到了跟他聊了几句，实在没忍住渴自己点了一杯喝的，问男嘉宾要点啥，男嘉宾说啥也不要，然后俩人在那尬聊了半小时。</p>
-<p>至于聊天的内容，男嘉宾从程序语言聊到框架设计，还问闺蜜工作上用的啥框架然后咋用的，宛如面试现场，闺蜜说自己如坐针毡，我怀疑这男嘉宾是猎头派来挖人的吧，救大命。</p>
-<p>啥也不说了，祝福这位男嘉宾能找到跟他「明年结婚」的对象吧，啊不，已经是今年了。</p>
-<h2 id="No-3-人类观察员"><a href="#No-3-人类观察员" class="headerlink" title="No.3 人类观察员"></a>No.3 人类观察员</h2><p>一开始加他我是很犹豫的，虽然他资料显示是男生，可主页照片是个漂亮女生，不过人家回答我的问题很真诚，简直可以当范文了，所以冒着被掰弯的风险同意了他的申请：</p>
-<img data-src="https://s2.loli.net/2022/05/28/BdmGiac5IYPKvVt.jpg" width="200" height="400" alt="范文"><span class="image-caption">范文</span>
-
-<p>颤抖着手主动发出第一条消息，然后发现了他人类观察员的身份，他还展示了自己好友申请列表里的一串男生：</p>
-<img data-src="https://s2.loli.net/2022/05/28/aB7ketPQbwJE5ul.jpg" width="400" height="400" alt="人类观察员"><span class="image-caption">人类观察员</span>
-
-<p>厉害了厉害了，后来他说自己是教师，怪不得！人类灵魂的工程师来做人类观察员，不能更适合了，他说自己工资太低，非常羡慕程序员的高工资，想转行什么的，是个有趣的人哈哈哈哈，不过找对象就算了，还是让他专心观察人类吧。</p>
-<h2 id="No-4-被动哥"><a href="#No-4-被动哥" class="headerlink" title="No.4 被动哥"></a>No.4 被动哥</h2><p>申请问题回答的真诚度仅次于3号男嘉宾，所以通过了他的交友申请，然后我就去忙了也没看聊天窗口，再次回来的时候他说：</p>
-<img data-src="https://s2.loli.net/2022/05/28/ryekYvNdpa4A6LS.jpg" width="200" height="400" alt="excuse me?"><span class="image-caption">excuse me?</span>
-
-<p>这种抱怨的语气是什么鬼？后来他说「我们都是被动的人」，又一起聊了会书和电影，就很干，之后他倒是找过我几次，但我已经没什么想聊的欲望了，然后就结束了。</p>
-<h2 id="No-5-孤独患者"><a href="#No-5-孤独患者" class="headerlink" title="No.5 孤独患者"></a>No.5 孤独患者</h2><p>青藤上认识的男嘉宾，180+，有房有车有猫，长相清秀，写字好看，声音好听，还兼职婚礼主持。嗯，他为什么单身来着？</p>
-<p>他先关注的我，我后来也关注了他，互关之后，我们就开始聊天了。<br>他说，自己一直比较享受孤独，最近刚做完一场手术，在恢复期，突然觉得有点凄凉，就来到了这个平台，真.孤独患者。</p>
-<p>算是这些男嘉宾里比较能聊得来的，星座也跟我很搭，但是，他从来不主动找我聊天，每次都是我找他，这样几次之后，我累了，过了几天，我想，要不再争(wei)取(se)一(suo)下(mi)？然后就发现，人家已经注销了账号。。。</p>
-<p>hummm…可能是外向的孤独患者，需要认可。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>人类观察员</category>
-      </categories>
-      <tags>
-        <tag>孤独患者</tag>
       </tags>
   </entry>
   <entry>
@@ -4196,6 +4196,39 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>人类大多都在寻找着什么吧</title>
+    <url>/looking-for-the-one-15/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/oHPWpsVKeXS6yCO.png">
+
+
+<h2 id="No-15-受伤的男人"><a href="#No-15-受伤的男人" class="headerlink" title="No.15 受伤的男人"></a>No.15 受伤的男人</h2><p>二狗上加我的男嘉宾，程序员，我们俩住的很近，还在同一个园区上班，生活轨迹高度重合，他说自己之前在不同城市辗转，混迹于各种互联网大厂，去年回西安还差点成为我的同事，但因为给的钱太少所以去了国内大厂内卷，不过比起他之前的工作已经不算很卷了。</p>
+<p>喜欢打王者(重度)，正好我也经常打，所以一开始我们经常聊游戏，我是又菜又爱玩，人家是野王，不过我们从来没开过黑，因为那段时间我很忙懒得打，接着加了微信。</p>
+<p>然后就发现我们竟然是老乡！蛮能聊得来，爱好也有很多相似，各种发言让人很有好感。后来我说想买个入门的游戏机，就入手了switch，结果他说也要买，现在我俩的switch都在吃灰(有点后悔分享给人家了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)。</p>
+<p>第一次见面，约了打羽毛球，在周边一个场馆，我其实觉得吃饭会比较好，感觉打球这种舒缓身心的活动，更适合跟熟悉的朋友一起吧，不过人家都约好了就去了。</p>
+<p>嗯，真人和照片还是有些差距，不过正常，正常。<br>打了两个多小时的羽毛球，刚开始不太习惯，后来打着球身体舒展开了倒也自在，中场休息的时候就坐在一起聊些有的没的。<br>然后我觉得打球也不错！既能锻炼身体，还能观察对方体能，同时彼此也能展示更真实的一面，我对这次的活动由衷发出了赞叹，思考和下个男嘉宾要不也约着打球？</p>
+<img data-src="https://s2.loli.net/2022/05/28/u9DxYqj6yGvSpmc.png" height="450" width="200" alt="瞧瞧瞧瞧"><span class="image-caption">瞧瞧瞧瞧</span>
+
+<p>到这里我真的非常赞叹这位男嘉宾，瞧瞧这关心的话语，顺便不经意的夸赞对方，同时发出下次邀约，答应我，都学着点好吗？</p>
+<p>这样又过了几天，打完球后的某个工作日，他说中午要约饭，因为是当天约的，我觉得有点突然，感觉事情不太简单，不过都在一个园区也挺好约，就走起来了，还想着这次我来掏钱，不过他说一会说，然后：</p>
+<img data-src="https://s2.loli.net/2022/05/28/7qTifKpWledHBFJ.png" height="400" width="200" alt="我真的信了"><span class="image-caption">我真的信了</span>
+
+<p>事情是这样的。<br>吃饭的时候一切正常，之后我们在园区里走了走，他突然说有件事要给我说，原来他和上个女朋友交往了好久，后来因为某个不可抗力(具体是啥不方便在博客里说了，不过和她父母有关)分开了。</p>
+<p>要是因为感情破裂分开还好，但又不是，可要不顾这个「不可抗力」在一起的话，以后要面对很多困难，所以万般纠结之下，无奈分手。</p>
+<p>他本人很讨厌这种被无法掌控的事操纵导致失败的感觉，觉得很挫败，不停在回想，所以一直以来状态都很糟糕，想着开始一段新感情或许会冲淡这种感觉。</p>
+<p>于是他来到了二狗，前后也约了好些女生，但都没有进展，至于我？据他所说，我是第一个让他想倾诉这件事的人，因为觉得我人很不错，不想因为自己的状态影响我，所以想坦白一下交个朋友，换做别的女嘉宾，他说就是别的「处理方式」(就直接不联系了)。他对我说这些的时候，其实我很诧异，本来我也没想太多，不过既然人家分享了，我也表示理解，并适当言语宽慰一下。</p>
+<p>之后他又给我发了上图的话，言语之真诚触动了我(我真的信了)，后来他又给我发过几次消息，我都礼貌回复，再之后他约我打球，我又礼貌拒绝，嗯，现在应该是要相忘于江湖了，祝他早日摆脱这种纠结吧。</p>
+<h2 id="人类大多都在寻找着什么吧"><a href="#人类大多都在寻找着什么吧" class="headerlink" title="人类大多都在寻找着什么吧"></a>人类大多都在寻找着什么吧</h2><p>人类观察员已经营业半年了，除了这15位男嘉宾，其实我还遇到了更多「有趣」的人，同一座城，不同的人，形形色色的灵魂，或许会擦肩而过，或许会驻足停留，都在寻找着什么吧。可是，每个人都知道自己在寻找什么吗？我也无法找到答案，所以总是时而寻找，时而遗忘。</p>
+<p>15号以后，我没有遇到更多的人了，感觉观察人类也是很大的精神内耗，而且这段时间一直厄运缠身，处理了很多杂事，还有很多的胡思乱想，没有精力去寻找了，暂且先停留一会吧。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>人类观察员</category>
+      </categories>
+      <tags>
+        <tag>程序员</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>世界的参差</title>
     <url>/looking-for-the-one-13-15/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/3ck8ZIgQKdAMj7S.jpg">
@@ -4266,39 +4299,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>月光男孩</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人类大多都在寻找着什么吧</title>
-    <url>/looking-for-the-one-15/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/oHPWpsVKeXS6yCO.png">
-
-
-<h2 id="No-15-受伤的男人"><a href="#No-15-受伤的男人" class="headerlink" title="No.15 受伤的男人"></a>No.15 受伤的男人</h2><p>二狗上加我的男嘉宾，程序员，我们俩住的很近，还在同一个园区上班，生活轨迹高度重合，他说自己之前在不同城市辗转，混迹于各种互联网大厂，去年回西安还差点成为我的同事，但因为给的钱太少所以去了国内大厂内卷，不过比起他之前的工作已经不算很卷了。</p>
-<p>喜欢打王者(重度)，正好我也经常打，所以一开始我们经常聊游戏，我是又菜又爱玩，人家是野王，不过我们从来没开过黑，因为那段时间我很忙懒得打，接着加了微信。</p>
-<p>然后就发现我们竟然是老乡！蛮能聊得来，爱好也有很多相似，各种发言让人很有好感。后来我说想买个入门的游戏机，就入手了switch，结果他说也要买，现在我俩的switch都在吃灰(有点后悔分享给人家了<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>)。</p>
-<p>第一次见面，约了打羽毛球，在周边一个场馆，我其实觉得吃饭会比较好，感觉打球这种舒缓身心的活动，更适合跟熟悉的朋友一起吧，不过人家都约好了就去了。</p>
-<p>嗯，真人和照片还是有些差距，不过正常，正常。<br>打了两个多小时的羽毛球，刚开始不太习惯，后来打着球身体舒展开了倒也自在，中场休息的时候就坐在一起聊些有的没的。<br>然后我觉得打球也不错！既能锻炼身体，还能观察对方体能，同时彼此也能展示更真实的一面，我对这次的活动由衷发出了赞叹，思考和下个男嘉宾要不也约着打球？</p>
-<img data-src="https://s2.loli.net/2022/05/28/u9DxYqj6yGvSpmc.png" height="450" width="200" alt="瞧瞧瞧瞧"><span class="image-caption">瞧瞧瞧瞧</span>
-
-<p>到这里我真的非常赞叹这位男嘉宾，瞧瞧这关心的话语，顺便不经意的夸赞对方，同时发出下次邀约，答应我，都学着点好吗？</p>
-<p>这样又过了几天，打完球后的某个工作日，他说中午要约饭，因为是当天约的，我觉得有点突然，感觉事情不太简单，不过都在一个园区也挺好约，就走起来了，还想着这次我来掏钱，不过他说一会说，然后：</p>
-<img data-src="https://s2.loli.net/2022/05/28/7qTifKpWledHBFJ.png" height="400" width="200" alt="我真的信了"><span class="image-caption">我真的信了</span>
-
-<p>事情是这样的。<br>吃饭的时候一切正常，之后我们在园区里走了走，他突然说有件事要给我说，原来他和上个女朋友交往了好久，后来因为某个不可抗力(具体是啥不方便在博客里说了，不过和她父母有关)分开了。</p>
-<p>要是因为感情破裂分开还好，但又不是，可要不顾这个「不可抗力」在一起的话，以后要面对很多困难，所以万般纠结之下，无奈分手。</p>
-<p>他本人很讨厌这种被无法掌控的事操纵导致失败的感觉，觉得很挫败，不停在回想，所以一直以来状态都很糟糕，想着开始一段新感情或许会冲淡这种感觉。</p>
-<p>于是他来到了二狗，前后也约了好些女生，但都没有进展，至于我？据他所说，我是第一个让他想倾诉这件事的人，因为觉得我人很不错，不想因为自己的状态影响我，所以想坦白一下交个朋友，换做别的女嘉宾，他说就是别的「处理方式」(就直接不联系了)。他对我说这些的时候，其实我很诧异，本来我也没想太多，不过既然人家分享了，我也表示理解，并适当言语宽慰一下。</p>
-<p>之后他又给我发了上图的话，言语之真诚触动了我(我真的信了)，后来他又给我发过几次消息，我都礼貌回复，再之后他约我打球，我又礼貌拒绝，嗯，现在应该是要相忘于江湖了，祝他早日摆脱这种纠结吧。</p>
-<h2 id="人类大多都在寻找着什么吧"><a href="#人类大多都在寻找着什么吧" class="headerlink" title="人类大多都在寻找着什么吧"></a>人类大多都在寻找着什么吧</h2><p>人类观察员已经营业半年了，除了这15位男嘉宾，其实我还遇到了更多「有趣」的人，同一座城，不同的人，形形色色的灵魂，或许会擦肩而过，或许会驻足停留，都在寻找着什么吧。可是，每个人都知道自己在寻找什么吗？我也无法找到答案，所以总是时而寻找，时而遗忘。</p>
-<p>15号以后，我没有遇到更多的人了，感觉观察人类也是很大的精神内耗，而且这段时间一直厄运缠身，处理了很多杂事，还有很多的胡思乱想，没有精力去寻找了，暂且先停留一会吧。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>人类观察员</category>
-      </categories>
-      <tags>
-        <tag>程序员</tag>
       </tags>
   </entry>
   <entry>
@@ -5487,40 +5487,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>世界就是草台班子</title>
-    <url>/the-fake-world/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2023/11/23/pTwjIJUboOYXeE3.jpg">
-
-<p>前段时间，我买完房，后来写了一篇博客来总结全程，做完这一切之后，突然觉得很难过。</p>
-<p>有多年目标达成之后的空虚，也有几十年负债的压力，还想到了一堆工作上的糟心事，整个人精神不振，有些消极。</p>
-<p>回想起买房过程中，那种被宰羔羊般的感觉：<strong>各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹</strong>，结果就只是得到了一个面积只有几十平(还有公摊)、七十年产权(现在只有60几年)的房子。</p>
-<p>还有自己当初买房的原因：「归属感和租住不同权」，现在看来也十分虚浮。「归属感」和「刚需」的概念，实际上只是资本为了获取利益，用来洗脑大众的手段，而「租住不同权」，本质上是社会问题，凭什么要我被迫买单？</p>
-<p>我突然有一种自己被操控的感觉，而且是心甘情愿的被操控。看着路上来往的人群，我开始觉得城市是假的，世界也是。每个人都被禁锢着，我们以为的人生和生活，实际上都被一双双无形的大手操纵，然后还让你觉得自己有选择。</p>
-<p>整个世界就像一个水晶球摆件，观赏者制定规则，比如什么事情有意义、什么东西有价值，他们则看着里面的人不停奔忙，以此为乐。</p>
-<p>这样的想法让我觉得世界很虚无可怕，一切都是徒劳。</p>
-<p>所以某次我对强哥说：我感觉城市是假的，他有些惊讶，说：之前有一个坐在我对面的人也这么说(就是他的来访)，我笑道：看来我现在很危险。</p>
-<p>然后他劝了我很多，只是我当时被这种想法吞噬，什么也听不进去，整个人像被抽走灵魂般黯然消极，然后第二天：</p>
-<img data-src="https://s2.loli.net/2023/11/26/FV4AcwKRtsl7MHX.png" width="200" height="500" alt="！？"><span class="image-caption">！？</span>
-
-<p>好嘛，现在不仅行为被操纵，思想都被监控了？有朋友在群聊里提到类似的观点，还说「世界就是草台班子」。</p>
-<p>友A的理解是世界就像一个游戏，游戏的内容会随玩家的主观意志而改变，不如把自己当作主角，别人都是NPC，也不会被影响。友B则是搬出了ChatGPT的解读，跟我上面的想法有相似之处。</p>
-<p>之后还聊到地球监狱说，其实我之前也有这种感觉。活着就像坐牢一样，周内去上学、上班，周末放风，甚至活在这个身体里本身就是一种禁锢，但是这样的想法比较危险。</p>
-<p>后来我又去问ChatGPT，它给出了很多种解读方式：</p>
-<p><img data-src="https://s2.loli.net/2023/11/24/B1TYQL6qZpotcvH.jpg" alt="chatgpt的解读"><span class="image-caption">chatgpt的解读</span></p>
-<p>所以世界到底是什么样的？没有确切的答案，每个人都有自己的处世方式，一个人在不同人生阶段的世界观也不同。有常或无常，真实或虚幻，一切都取决于我们自己的想法。</p>
-<blockquote>
-<p>后记：偶然看到许嵩从前写的关于 <a href="https://www.bilibili.com/read/cv8944043/">无常</a> 的文章，也有一些类似的思考，又想到日番《日常》里的经典台词 “我们一日日度过的所谓的日常，实际上是接连不断的奇迹。”<br>也许，无常便是有常。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>生活碎碎念</category>
-      </categories>
-      <tags>
-        <tag>草台班子</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>将故事写成我们</title>
     <url>/the-one/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/10/29/q9DiLxdVAkuG4QT.png">
@@ -5804,6 +5770,40 @@ public class Functions {
       </categories>
       <tags>
         <tag>QA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>世界就是草台班子</title>
+    <url>/the-fake-world/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2023/11/23/pTwjIJUboOYXeE3.jpg">
+
+<p>前段时间，我买完房，后来写了一篇博客来总结全程，做完这一切之后，突然觉得很难过。</p>
+<p>有多年目标达成之后的空虚，也有几十年负债的压力，还想到了一堆工作上的糟心事，整个人精神不振，有些消极。</p>
+<p>回想起买房过程中，那种被宰羔羊般的感觉：<strong>各种交钱、办手续、走流程，中介、银行、政府部门、甚至物业都可以从这件事中分一杯羹</strong>，结果就只是得到了一个面积只有几十平(还有公摊)、七十年产权(现在只有60几年)的房子。</p>
+<p>还有自己当初买房的原因：「归属感和租住不同权」，现在看来也十分虚浮。「归属感」和「刚需」的概念，实际上只是资本为了获取利益，用来洗脑大众的手段，而「租住不同权」，本质上是社会问题，凭什么要我被迫买单？</p>
+<p>我突然有一种自己被操控的感觉，而且是心甘情愿的被操控。看着路上来往的人群，我开始觉得城市是假的，世界也是。每个人都被禁锢着，我们以为的人生和生活，实际上都被一双双无形的大手操纵，然后还让你觉得自己有选择。</p>
+<p>整个世界就像一个水晶球摆件，观赏者制定规则，比如什么事情有意义、什么东西有价值，他们则看着里面的人不停奔忙，以此为乐。</p>
+<p>这样的想法让我觉得世界很虚无可怕，一切都是徒劳。</p>
+<p>所以某次我对强哥说：我感觉城市是假的，他有些惊讶，说：之前有一个坐在我对面的人也这么说(就是他的来访)，我笑道：看来我现在很危险。</p>
+<p>然后他劝了我很多，只是我当时被这种想法吞噬，什么也听不进去，整个人像被抽走灵魂般黯然消极，然后第二天：</p>
+<img data-src="https://s2.loli.net/2023/11/26/FV4AcwKRtsl7MHX.png" width="200" height="500" alt="！？"><span class="image-caption">！？</span>
+
+<p>好嘛，现在不仅行为被操纵，思想都被监控了？有朋友在群聊里提到类似的观点，还说「世界就是草台班子」。</p>
+<p>友A的理解是世界就像一个游戏，游戏的内容会随玩家的主观意志而改变，不如把自己当作主角，别人都是NPC，也不会被影响。友B则是搬出了ChatGPT的解读，跟我上面的想法有相似之处。</p>
+<p>之后还聊到地球监狱说，其实我之前也有这种感觉。活着就像坐牢一样，周内去上学、上班，周末放风，甚至活在这个身体里本身就是一种禁锢，但是这样的想法比较危险。</p>
+<p>后来我又去问ChatGPT，它给出了很多种解读方式：</p>
+<p><img data-src="https://s2.loli.net/2023/11/24/B1TYQL6qZpotcvH.jpg" alt="chatgpt的解读"><span class="image-caption">chatgpt的解读</span></p>
+<p>所以世界到底是什么样的？没有确切的答案，每个人都有自己的处世方式，一个人在不同人生阶段的世界观也不同。有常或无常，真实或虚幻，一切都取决于我们自己的想法。</p>
+<blockquote>
+<p>后记：偶然看到许嵩从前写的关于 <a href="https://www.bilibili.com/read/cv8944043/">无常</a> 的文章，也有一些类似的思考，又想到日番《日常》里的经典台词 “我们一日日度过的所谓的日常，实际上是接连不断的奇迹。”<br>也许，无常便是有常。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>生活碎碎念</category>
+      </categories>
+      <tags>
+        <tag>草台班子</tag>
       </tags>
   </entry>
   <entry>
@@ -6419,6 +6419,56 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
+    <title>未来是星辰大海</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
+<span id="more"></span>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>时间过慢点</category>
+      </categories>
+      <tags>
+        <tag>毕业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -6484,56 +6534,6 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </categories>
       <tags>
         <tag>测试矩阵</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<span id="more"></span>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>时间过慢点</category>
-      </categories>
-      <tags>
-        <tag>毕业</tag>
       </tags>
   </entry>
   <entry>
