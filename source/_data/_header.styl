@@ -1,11 +1,9 @@
-/* ==================== 现代化Header样式 ==================== */
-/* 基础header样式 */
 header.header {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 90px !important; /* 调整为3/4高度 */
+  height: 90px !important;
   background: url(https://s2.loli.net/2025/08/28/sN5MgV6jKiAoWlP.jpg) no-repeat center center !important;
   background-size: cover !important;
   opacity: 0.9 !important;
@@ -14,28 +12,23 @@ header.header {
   z-index: 1000 !important;
   transition: all 0.3s ease !important;
   display: flex !important;
-  align-items: center !important; /* 垂直居中内容 */
+  align-items: center !important;
 }
 
-// 添加隐藏类
 header.header.hidden {
   transform: translateY(-100%) !important;
   transition: transform 0.3s ease-in-out !important;
 }
 
-// 滚动时添加阴影
 header.header.scrolled {
   box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
 }
 
-// 确保header始终有过渡效果
 header.header {
   transition: all 0.3s ease-in-out !important;
 }
 
-/* 菜单项现代化样式已移至下方统一管理 */
-
-/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
 @media (prefers-color-scheme: dark) {
   header.header {
     background: url(https://s2.loli.net/2025/08/28/o6k3B7wWXeOx8tA.jpg) no-repeat center center !important;
@@ -52,7 +45,6 @@ header.header {
     box-shadow: none !important;
   }
   
-  /* 暗色模式下更白的文字和图标 */
   .site-nav .menu .menu-item a {
     color: #f5f5f5 !important;
   }
@@ -61,8 +53,6 @@ header.header {
     color: #f5f5f5 !important;
   }
 }
-
-/* 手动日间模式 */
 html.theme-light header.header,
 body.theme-light header.header {
   background: url(https://s2.loli.net/2025/08/28/sN5MgV6jKiAoWlP.jpg) no-repeat center center !important;
@@ -75,7 +65,6 @@ body.theme-light header.header.scrolled {
   box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
 }
 
-/* 手动日间模式下的文字和图标 */
 html.theme-light .site-nav .menu .menu-item a,
 body.theme-light .site-nav .menu .menu-item a {
   color: #111 !important;
@@ -85,8 +74,6 @@ html.theme-light .site-nav .menu .menu-item i,
 body.theme-light .site-nav .menu .menu-item i {
   color: #111 !important;
 }
-
-/* 手动暗色模式 */
 html.theme-dark header.header,
 body.theme-dark header.header {
   background: url(https://s2.loli.net/2025/08/28/o6k3B7wWXeOx8tA.jpg) no-repeat center center !important;
@@ -105,7 +92,6 @@ body.theme-dark .site-nav .menu .menu-item a:hover {
   box-shadow: none !important;
 }
 
-/* 手动暗色模式下更白的文字和图标 */
 html.theme-dark .site-nav .menu .menu-item a,
 body.theme-dark .site-nav .menu .menu-item a {
   color: #f5f5f5 !important;
@@ -116,55 +102,46 @@ body.theme-dark .site-nav .menu .menu-item i {
   color: #f5f5f5 !important;
 }
 
-/* Hide header when sidebar is active */
 body.sidebar-active header.header {
   transform: translateY(-100%) !important;
 }
 
-/* Move specific menu icons to right side */
 .site-nav .menu {
   display: flex !important;
-  justify-content: flex-end !important; /* Align to right */
-  align-items: center !important; /* 垂直居中菜单项 */
-  height: 100% !important; /* 占满header高度 */
+  justify-content: flex-end !important;
+  align-items: center !important;
+  height: 100% !important;
 }
 
 .site-nav .menu .menu-item {
-  margin-left: 10px !important; /* 减少菜单项间距 */
+  margin-left: 10px !important;
   display: flex !important;
-  align-items: center !important; /* 垂直居中菜单项内容 */
+  align-items: center !important;
 }
 
-/* 品牌区域样式调整 */
 .site-brand-container {
   display: flex !important;
-  align-items: center !important; /* 垂直居中品牌内容 */
-  height: 100% !important; /* 占满header高度 */
+  align-items: center !important;
+  height: 100% !important;
 }
 
-/* 菜单项样式统一（覆盖之前的定义） */
 .site-nav .menu .menu-item a {
-  font-size: 14px !important; /* Consistent icon size */
-  padding: 8px 12px !important; /* 减少padding以适应更小header */
+  font-size: 14px !important;
+  padding: 8px 12px !important;
   transition: all 0.2s ease !important;
   border-radius: 20px !important;
-  /* 移除固定的颜色设置，让主题特定的样式生效 */
 }
 
 .site-nav .menu .menu-item a:hover {
   background: rgba(0,0,0,0.05) !important;
 }
 
-/* 菜单图标颜色调整 - 移除固定颜色，让主题特定样式生效 */
-
-/* Specific for listed icons - ensure they are targeted if needed */
 .site-nav .menu .menu-item-home,
 .site-nav .menu .menu-item-about,
 .site-nav .menu .menu-item-search,
 .site-nav .menu .menu-item-darkmode
-  opacity: 1; /* 占位符, 可根据需要调整或删除 */
+  opacity: 1;
 
-/* Remove gray shadow on hover for all menu icons */
 .site-nav .menu .menu-item:hover,
 .site-nav .menu .menu-item a:hover {
   box-shadow: none !important;
@@ -172,9 +149,19 @@ body.sidebar-active header.header {
   text-shadow: none !important;
 }
 
-/* 移动端隐藏搜索图标 */
 @media screen and (max-width: 767px) {
   .site-nav .menu .menu-item-search {
     display: none !important;
+  }
+  
+  .site-nav {
+    position: relative !important;
+    z-index: 1001 !important;
+  }
+  
+  .site-nav .menu .menu-item a i,
+  .site-nav .menu .menu-item a {
+    position: relative !important;
+    z-index: 1002 !important;
   }
 } 
