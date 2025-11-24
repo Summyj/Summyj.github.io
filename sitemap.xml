@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jmyblog.top/about/index.html</loc>
+    
+    <lastmod>2025-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/i-got-married/</loc>
     
     <lastmod>2025-10-09</lastmod>
@@ -839,15 +848,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/about/index.html</loc>
-    
-    <lastmod>2025-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/baidu_verify_code-z0T5qSqoQf.html</loc>
     
     <lastmod>2025-06-27</lastmod>
@@ -884,14 +884,14 @@
 
   
   <url>
-    <loc>https://jmyblog.top/tags/2022/</loc>
+    <loc>https://jmyblog.top/tags/TED/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/TED/</loc>
+    <loc>https://jmyblog.top/tags/2022/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -933,14 +933,14 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/Android/</loc>
+    <loc>https://jmyblog.top/tags/iOS/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/iOS/</loc>
+    <loc>https://jmyblog.top/tags/Android/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1010,13 +1010,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E5%86%99%E4%BD%9C%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/Hexo/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1039,6 +1032,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/CodingPages/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E5%86%99%E4%BD%9C%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1136,20 +1136,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/Jenkins/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/GoCD/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/KPI/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1158,6 +1144,20 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%86%85%E5%8D%B7/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/Jenkins/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/GoCD/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1283,13 +1283,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%BB%93%E5%A9%9A/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/%E4%B9%B0%E6%88%BF/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1297,7 +1290,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E5%AD%A4%E7%8B%AC%E6%82%A3%E8%80%85/</loc>
+    <loc>https://jmyblog.top/tags/%E7%BB%93%E5%A9%9A/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1305,6 +1298,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E5%90%89%E5%90%89/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E5%AD%A4%E7%8B%AC%E6%82%A3%E8%80%85/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1325,13 +1325,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/%E6%9C%88%E5%85%89%E7%94%B7%E5%AD%A9/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1339,7 +1332,7 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E2%80%9C%E6%9C%88%E5%85%89%E7%94%B7%E5%AD%A9%E2%80%9D/</loc>
+    <loc>https://jmyblog.top/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1347,6 +1340,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E7%94%9F%E6%B4%BB%E6%94%AF%E7%BA%BF%E7%8E%A9%E5%AE%B6/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/%E2%80%9C%E6%9C%88%E5%85%89%E7%94%B7%E5%AD%A9%E2%80%9D/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1437,13 +1437,6 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/Cooking/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jmyblog.top/tags/2023/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1452,6 +1445,13 @@
   
   <url>
     <loc>https://jmyblog.top/tags/%E6%98%A5%E8%8A%82/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyblog.top/tags/Cooking/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1500,6 +1500,13 @@
   </url>
   
   <url>
+    <loc>https://jmyblog.top/tags/%E8%8D%89%E5%8F%B0%E7%8F%AD%E5%AD%90/</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jmyblog.top/tags/%E7%BE%8A%E9%A9%BC/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1515,13 +1522,6 @@
   
   <url>
     <loc>https://jmyblog.top/tags/QA/</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jmyblog.top/tags/%E8%8D%89%E5%8F%B0%E7%8F%AD%E5%AD%90/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1598,14 +1598,14 @@
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/UiAutomator/</loc>
+    <loc>https://jmyblog.top/tags/%E7%9E%8E%E5%86%99%E5%86%99/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jmyblog.top/tags/%E7%9E%8E%E5%86%99%E5%86%99/</loc>
+    <loc>https://jmyblog.top/tags/UiAutomator/</loc>
     <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
