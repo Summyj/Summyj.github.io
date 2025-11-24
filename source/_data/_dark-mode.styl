@@ -177,25 +177,6 @@ body.theme-light .menu .menu-item a:hover { color: #222 !important; }
 /* 深色模式适配 - 系统主题跟随 */
 @media (prefers-color-scheme: dark) {
     /* 只在没有自定义主题设置时跟随系统主题 */
-    :root:not(.theme-dark):not(.theme-light) .translate-dropdown {
-        background: #2d2d2d;
-        border-color: #444;
-    }
-    
-    :root:not(.theme-dark):not(.theme-light) .translate-option {
-        color: #ddd;
-        border-bottom-color: #444;
-    }
-    
-    :root:not(.theme-dark):not(.theme-light) .translate-option:hover {
-        background-color: #3a3a3a;
-    }
-    
-    :root:not(.theme-dark):not(.theme-light) .translate-option.active {
-        background-color: #1e3a5f;
-        color: #66b3ff;
-    }
-    
     /* 音乐播放器夜间模式适配 - 系统主题跟随 */
     :root:not(.theme-dark):not(.theme-light) .persistent-music-player {
         background: rgba(40, 40, 40, 0.95) !important; /* 深色背景 */
@@ -276,24 +257,6 @@ html.theme-dark {
     /* 手动暗色模式下的徽章样式 */
     .not-by-ai-sidebar img {
         filter: brightness(0.9) !important;
-    }
-    .translate-dropdown {
-        background: #2d2d2d;
-        border-color: #444;
-    }
-    
-    .translate-option {
-        color: #ddd;
-        border-bottom-color: #444;
-    }
-    
-    .translate-option:hover {
-        background-color: #3a3a3a;
-    }
-    
-    .translate-option.active {
-        background-color: #1e3a5f;
-        color: #66b3ff;
     }
     
     /* 音乐播放器夜间模式适配 */
