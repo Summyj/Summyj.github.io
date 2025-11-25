@@ -4,7 +4,7 @@ date: 2025-04-12 12:15:42
 tags: [真和假, 人生的意义, 对抗虚无]
 categories: [心灵奇旅, 生活碎碎念]
 copyright: true
-description: 由买绿植引发的一系列思考。
+description: 世界就是一个巨大的过家家。
 top:
 ---
 
