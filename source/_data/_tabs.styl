@@ -1,0 +1,80 @@
+/* ==================== Tabs 标签优化样式 ==================== */
+/* 优化Tabs组件的显示：取消黑点，修复边框显示 */
+
+.post-body .tabs,
+.tabs-comment {
+  ul.nav-tabs {
+    /* 确保完全移除列表样式，包括黑点 */
+    list-style: none !important;
+    list-style-type: none !important;
+    /* 移除列表的内边距和外边距，确保没有额外的空间 */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    
+    /* 移除所有可能的列表标记 */
+    -webkit-padding-start: 0 !important;
+    -moz-padding-start: 0 !important;
+    
+    li.tab {
+      /* 确保列表项没有默认样式 */
+      list-style: none !important;
+      list-style-type: none !important;
+      /* 移除列表项的内边距，防止黑点显示 */
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      
+      /* 移除所有可能的列表标记 */
+      -webkit-padding-start: 0 !important;
+      -moz-padding-start: 0 !important;
+      
+      /* 移除可能的伪元素生成的黑点或分隔符 */
+      &::before,
+      &::after {
+        display: none !important;
+        content: none !important;
+        visibility: hidden !important;
+      }
+      
+      /* 确保边框正常显示 - 非激活状态 */
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-top: 3px solid transparent;
+      border-bottom: 1px solid #ddd;
+      border-radius: 4px 4px 0 0;
+      
+      /* 激活状态的边框 - 确保边框完整显示 */
+      &.active {
+        border-bottom-color: transparent !important;
+        border-left-color: #ddd !important;
+        border-right-color: #ddd !important;
+        border-top-color: #fc6423 !important;
+        border-top-width: 3px !important;
+        border-left-width: 1px !important;
+        border-right-width: 1px !important;
+        border-bottom-width: 1px !important;
+      }
+      
+      /* 确保链接没有额外的样式或伪元素 */
+      a {
+        &::before,
+        &::after {
+          display: none !important;
+          content: none !important;
+          visibility: hidden !important;
+        }
+        
+        /* 确保链接文本正常显示 */
+        text-decoration: none;
+      }
+    }
+    
+    /* 确保列表项之间没有分隔符 */
+    li.tab + li.tab {
+      &::before {
+        display: none !important;
+        content: none !important;
+      }
+    }
+  }
+}
+
