@@ -1,7 +1,7 @@
 ---
 title: 蜜月旅行之意大利篇
 date: 2024-11-15 16:21:10
-tags: [意大利, 罗马, 梵蒂冈, 佛罗伦萨, 比萨, 威尼斯, 米兰] 
+tags: [意大利, 罗马, 丝绸之路, 梵蒂冈, 佛罗伦萨, 比萨, 威尼斯, 米兰]
 categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: 人文魅力和教堂审美疲劳。
@@ -28,7 +28,7 @@ top:
 
 ![](https://s2.loli.net/2025/12/11/EACJImuqa2cHs4X.jpg)
 
-换上出发前买的欧洲手机卡，下飞机后按照小红书上的 [保姆级入境攻略](https://www.xiaohongshu.com/explore/6527c5a9000000001e02a987?app_platform=ios&app_version=9.12.2&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBgO3gYGOTdTAxu1xY4nNsnKEb60lGQgceJc6cHuyn6GE=&author_share=1&xhsshare=WeixinSession&shareRedId=ODdDQzk4O0w2NzUyOTgwNjY1OThFNzw9&apptime=1765426141&share_id=921365a8460f48fcbde0ae775e714b7f&wechatWid=dba06a2dcb6f8421146aa6e48e19333a&wechatOrigin=menu)，一路看着指示牌跟着人流，和来自全世界的「苦命人」一起走 *ALL PASSPORTS* 通道排队过海关。走出机场出口，看着陌生的车流、建筑和人群，才有种到了罗马的实感。
+换上出发前买的欧洲手机卡，下飞机后按照小红书上的 [保姆级入境攻略](https://www.xiaohongshu.com/explore/6527c5a9000000001e02a987?app_platform=ios&app_version=9.12.2&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBgO3gYGOTdTAxu1xY4nNsnKEb60lGQgceJc6cHuyn6GE=&author_share=1&xhsshare=WeixinSession&shareRedId=ODdDQzk4O0w2NzUyOTgwNjY1OThFNzw9&apptime=1765426141&share_id=921365a8460f48fcbde0ae775e714b7f&wechatWid=dba06a2dcb6f8421146aa6e48e19333a&wechatOrigin=menu)，一路看着指示牌跟着人流，和来自全世界的「苦命人」一起走 *ALL PASSPORTS* 通道排队过海关。走出机场出口，看着陌生的车流、建筑和人群，才有种到了罗马的实感，从西安到罗马，也算走了一遍云上的丝绸之路了。
 
 按照其它攻略买了去火车站（Roma Termini）的机场大巴，一路上是看起来老旧的罗马街道，还经过了斗兽场。下车后跟着谷歌地图导航走了十几分钟，终于到了酒店。
 

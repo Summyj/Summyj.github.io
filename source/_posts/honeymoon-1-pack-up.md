@@ -146,14 +146,14 @@ DB 的好用程度和 SBB 差不多，都能一站式购买全程车票，换乘
 威尼斯 1 晚 €213 :left_right_arrow: ¥1610
 米兰 1 晚 €274 :left_right_arrow: ¥2192
 瑞士：
-布里恩茨 2 晚 CHF420 :left_right_arrow: ¥3437
-苏黎世 1 晚 CHF165 :left_right_arrow: ¥1452
+布里恩茨 2 晚 CHF420 :left_right_arrow: ¥3476
+苏黎世 1 晚 CHF165 :left_right_arrow: ¥1510
 德国：
 斯图加特 1 晚 €169 :left_right_arrow: ¥1302
 慕尼黑 1 晚 €208.94 :left_right_arrow: ¥1608
 讷德林根 1 晚 €104 :left_right_arrow: ¥800
 法国：
-巴黎 3 晚 €787.5 :left_right_arrow: ¥5940
+巴黎 3 晚 €787.5 :left_right_arrow: ¥6034
 
 ### Tips
 
@@ -264,11 +264,11 @@ DB 的好用程度和 SBB 差不多，都能一站式购买全程车票，换乘
 
 ---
 
-> Total Cost Of Trip Preparing(2 person): ¥57746
+> Total Cost Of Trip Preparing(2 person): ¥57937
 签证费用 ¥2572
 往返机票 ¥18230
 国外交通 ¥2117
-预定酒店 ¥29892
+预定酒店 ¥30083
 行李物品 ¥4935
 
 {% note primary %}

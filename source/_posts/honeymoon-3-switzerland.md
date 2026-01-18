@@ -1,7 +1,7 @@
 ---
 title: 蜜月旅行之瑞士篇
 date: 2024-11-20 16:21:10
-tags: [瑞士小镇, 苏黎世] 
+tags: [瑞士小镇, 种族歧视, 苏黎世]
 categories: [心灵奇旅, 世界那么大]
 copyright: true
 description: 在瑞士小镇享受绝美自然景观，在苏黎世老城漫步。
