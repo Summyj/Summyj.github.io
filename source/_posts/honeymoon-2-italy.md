@@ -10,11 +10,16 @@ top:
 
 ![意大利行程](https://s2.loli.net/2025/12/11/Ezu7TbtHg6LosB8.png)
 
+>大量原图预警，请准备好网速和流量。
+
 ## Day0 出发
+### 到达北京
 
 出发当天，先从咸阳机场飞到北京，在首都机场吃了顿贵且一般的午饭，转了一会等待登机，联程航班行李是直挂的。北京到罗马飞行时长 10h30m(实际起飞 14:15)，预计当地时间 18:55 到达罗马，时差 6 小时：
 
 ![登机信息](https://s2.loli.net/2025/12/09/dXQz7GacIDwt9sb.jpg)
+
+### 机上时光
 
 登机后发了耳塞、眼罩和毯子，紧急出口的位置也不负我所望，十分宽松舒适，我可以完全舒展双腿，脚尖刚好碰到底座，强哥更不用说了，宽松程度可以原地起飞。旁边是空姐的工作区，可以第一时间得到投喂：
 
@@ -28,7 +33,9 @@ top:
 
 ![](https://s2.loli.net/2025/12/11/EACJImuqa2cHs4X.jpg)
 
-换上出发前买的欧洲手机卡，下飞机后按照小红书上的 [保姆级入境攻略](https://www.xiaohongshu.com/explore/6527c5a9000000001e02a987?app_platform=ios&app_version=9.12.2&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBgO3gYGOTdTAxu1xY4nNsnKEb60lGQgceJc6cHuyn6GE=&author_share=1&xhsshare=WeixinSession&shareRedId=ODdDQzk4O0w2NzUyOTgwNjY1OThFNzw9&apptime=1765426141&share_id=921365a8460f48fcbde0ae775e714b7f&wechatWid=dba06a2dcb6f8421146aa6e48e19333a&wechatOrigin=menu)，一路看着指示牌跟着人流，和来自全世界的「苦命人」一起走 *ALL PASSPORTS* 通道排队过海关。走出机场出口，看着陌生的车流、建筑和人群，才有种到了罗马的实感，从西安到罗马，也算走了一遍云上的丝绸之路了。
+### 到达罗马
+
+落地后换上出发前买的欧洲手机卡，按照小红书上的 [保姆级入境攻略](https://www.xiaohongshu.com/explore/6527c5a9000000001e02a987?app_platform=ios&app_version=9.12.2&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBgO3gYGOTdTAxu1xY4nNsnKEb60lGQgceJc6cHuyn6GE=&author_share=1&xhsshare=WeixinSession&shareRedId=ODdDQzk4O0w2NzUyOTgwNjY1OThFNzw9&apptime=1765426141&share_id=921365a8460f48fcbde0ae775e714b7f&wechatWid=dba06a2dcb6f8421146aa6e48e19333a&wechatOrigin=menu)，一路看着指示牌跟着人流，和来自全世界的「苦命人」一起走 *ALL PASSPORTS* 通道排队过海关。走出机场出口，看着陌生的车流、建筑和人群，才有种到了罗马的实感，从西安到罗马，也算走了一遍云上的丝绸之路了。
 
 按照其它攻略买了去火车站（Roma Termini）的机场大巴，一路上是看起来老旧的罗马街道，还经过了斗兽场。下车后跟着谷歌地图导航走了十几分钟，终于到了酒店。
 
@@ -36,7 +43,7 @@ top:
 
 这个时候是晚上 9 点多，加上时差我们已经快 24 个小时没好好休息了(北京时间早上 5:30 起床，前一天收拾东西也睡得晚)，不是在天上飞，就是在地上奔波。两个人都面如土色，所以刚才前台看到的我们俩就是这样的状态，这一天也算是我活到现在度过的最漫长的一天了。
 
-房间比想象中小很多，但还有一个阳台，看到了酒店送的祝福卡片和红酒，疲惫的心灵得到了些许抚慰，但也没力气喝了。
+房间比想象中小很多，但还有一个阳台，看到了酒店送的祝福卡片和酒，疲惫的心灵得到了些许抚慰，但也没力气喝了。
 
 ---
 
