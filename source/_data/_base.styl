@@ -348,9 +348,73 @@ iframe[src*="trc.taboola.com"] {
     text-align: center !important;
 }
 
-/* 确保爱心动画正常工作，不覆盖主题设置 */
+/* Ensure love animation works correctly without overriding theme settings */
 .footer .copyright .with-love {
     display: inline-block !important;
     margin: 0 5px !important;
-    /* 不要覆盖animation属性，让主题的CSS生效 */
+    /* Do not override animation property, let theme CSS take effect */
+}
+
+/* ==================== Fancybox Image Display Fix ==================== */
+/* Fix small dot issue when images are enlarged, ensure images fill display area correctly */
+
+.fancybox__container {
+    /* Ensure container has correct dimensions */
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.fancybox__slide {
+    /* Ensure slide container fills entire viewport */
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.fancybox__content {
+    /* Ensure content container displays correctly */
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.fancybox__content > img {
+    /* Ensure images display correctly, filling available space */
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: auto !important;
+}
+
+.fancybox__image {
+    /* Ensure Fancybox image elements display correctly */
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* Ensure image container calculates dimensions correctly */
+.fancybox__content[data-type="image"] {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+.fancybox__content[data-type="image"] img {
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
 } 
