@@ -13,6 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.sidebar-toggle').addEventListener('click', this.clickHandler.bind(this));
       window.addEventListener('sidebar:show', this.showSidebar);
       window.addEventListener('sidebar:hide', this.hideSidebar);
+      // Listen for clicks on posts/categories/tags links and auto-hide sidebar
+      this.bindSiteStateLinks();
+    },
+    bindSiteStateLinks() {
+      // Use event delegation to listen for link clicks inside sidebar
+      // Since pjax config doesn't include .sidebar, sidebar element won't be replaced, event delegation remains effective
+      const sidebar = document.querySelector('.sidebar');
+      if (sidebar) {
+        sidebar.addEventListener('click', (event) => {
+          // Check if the clicked element is a posts/categories/tags link
+          const target = event.target.closest('.site-state-item a');
+          if (target) {
+            // Delay to ensure link navigation works properly
+            setTimeout(() => {
+              this.hideSidebar();
+            }, 100);
+          }
+        });
+      }
     },
     mousedownHandler(event) {
       this.mouse.X = event.pageX;

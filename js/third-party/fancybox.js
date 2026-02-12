@@ -1,17 +1,17 @@
 /* global Fancybox */
 
-// 保存 sidebar 状态
+// Save sidebar state
 let sidebarWasActive = false;
 
 document.addEventListener('page:loaded', () => {
-  // 清理之前的绑定，避免重复绑定
+  // Clean up previous bindings to avoid duplicate bindings
   Fancybox.destroy();
 
   /**
    * Wrap images with fancybox.
    */
   document.querySelectorAll('.post-body :not(a) > img, .post-body > img').forEach(image => {
-    // 检查是否已经被包装过
+    // Check if already wrapped
     if (image.parentNode.classList.contains('fancybox')) {
       return;
     }
@@ -38,35 +38,42 @@ document.addEventListener('page:loaded', () => {
       // Make sure img captions will show correctly in fancybox
       imageWrapLink.dataset.caption = imageTitle;
     }
+    
+    // Add image dimensions to help Fancybox display images correctly and avoid small dot issue
+    if (image.naturalWidth && image.naturalHeight) {
+      imageWrapLink.dataset.width = image.naturalWidth;
+      imageWrapLink.dataset.height = image.naturalHeight;
+    } else if (image.width && image.height) {
+      imageWrapLink.dataset.width = image.width;
+      imageWrapLink.dataset.height = image.height;
+    }
+    
     image.wrap(imageWrapLink);
   });
 
-  // 配置 Fancybox
+  // Configure Fancybox
   Fancybox.bind('[data-fancybox]', {
-    // 保持滚动位置 - 禁用URL哈希来避免跳转
+    // Preserve scroll position - disable URL hash to avoid page jump
     Hash: false,
     
-    // 不自动关注，避免页面跳转
+    // Disable auto focus to avoid page jump
     autoFocus: false,
     
-    // 图片显示配置
+    // Image display configuration - fix small dot display issue
     Images: {
       zoom: true,
       
-      // 确保图像正确缩放，解决小点问题
+      // Ensure images scale correctly to fix small dot issue
       fit: "contain",
       
-      // 解决小点问题的关键设置
-      initialSize: "fit",
+      // Reduce preload count to improve performance and avoid lag
+      preload: 0,
       
-      // 设置预加载
-      preload: 1,
-      
-      // 确保图片正确显示
+      // Ensure images display correctly
       protected: true
     },
     
-    // 导航配置
+    // Toolbar configuration
     Toolbar: {
       display: {
         left: ["infobar"],
@@ -75,49 +82,93 @@ document.addEventListener('page:loaded', () => {
       }
     },
     
-    // 滚动配置
+    // Scroll configuration
     dragToClose: false,
     wheel: "zoom",
     
-    // 关闭动画配置
+    // Animation configuration
     hideScrollbar: true,
     
-    // Carousel 配置 - 确保图片切换正常
+    // Carousel configuration - optimize image switching performance and display
     Carousel: {
       infinite: false,
       
-      // 确保图片切换时正确显示
-      preload: 1,
+      // Reduce preload to improve performance and avoid lag
+      preload: 0,
       
-      // 图片切换动画
-      transition: "slide"
+      // Use faster transition animation to reduce lag
+      transition: "fade",
+      
+      // Disable drag to reduce performance overhead
+      dragToClose: false
     },
     
-    // 事件回调
+    // Performance optimization: reduce animation duration
+    animationDuration: 300,
+    animationEffect: "fade",
+    
+    // Event callbacks
     on: {
       init: (fancybox) => {
-        // 记录当前 sidebar 状态和滚动位置
+        // Record current sidebar state and scroll position
         sidebarWasActive = document.body.classList.contains('sidebar-active');
         
-        // 记录当前滚动位置
+        // Record current scroll position
         window.fancyboxScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       },
       
-      // 确保图片加载完成后正确显示
+      // Ensure images display correctly after loading - fix small dot issue
       ready: (fancybox, slide) => {
-        // 确保图片完全加载和显示
         if (slide && slide.type === 'image') {
           const img = slide.$content && slide.$content.querySelector('img');
           if (img) {
-            img.style.maxWidth = '100%';
-            img.style.maxHeight = '100%';
-            img.style.objectFit = 'contain';
+            // Ensure image has correct dimensions
+            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+              // Image already loaded, update immediately
+              setTimeout(() => {
+                fancybox.update();
+              }, 50);
+            } else {
+              // Wait for image to load
+              img.onload = () => {
+                setTimeout(() => {
+                  fancybox.update();
+                }, 50);
+              };
+              // If image fails to load, try to update anyway
+              img.onerror = () => {
+                setTimeout(() => {
+                  fancybox.update();
+                }, 50);
+              };
+            }
+          }
+        }
+      },
+      
+      // Handle image switching
+      load: (fancybox, slide) => {
+        if (slide && slide.type === 'image') {
+          const img = slide.$content && slide.$content.querySelector('img');
+          if (img) {
+            // Ensure layout updates after image loads
+            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+              setTimeout(() => {
+                fancybox.update();
+              }, 50);
+            } else {
+              img.onload = () => {
+                setTimeout(() => {
+                  fancybox.update();
+                }, 50);
+              };
+            }
           }
         }
       },
       
       destroy: (fancybox) => {
-        // 恢复 sidebar 状态
+        // Restore sidebar state
         setTimeout(() => {
           if (sidebarWasActive) {
             document.body.classList.add('sidebar-active');
@@ -125,7 +176,7 @@ document.addEventListener('page:loaded', () => {
             document.body.classList.remove('sidebar-active');
           }
           
-          // 恢复滚动位置
+          // Restore scroll position
           if (typeof window.fancyboxScrollPosition !== 'undefined') {
             window.scrollTo(0, window.fancyboxScrollPosition);
             delete window.fancyboxScrollPosition;
