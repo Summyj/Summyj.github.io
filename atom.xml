@@ -6,7 +6,7 @@
   <link href="https://jmyblog.top/atom.xml" rel="self"/>
   
   <link href="https://jmyblog.top/"/>
-  <updated>2025-09-30T01:56:45.969Z</updated>
+  <updated>2026-02-12T11:57:07.134Z</updated>
   <id>https://jmyblog.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025 旅行记忆</title>
+    <link href="https://jmyblog.top/travel-2025/"/>
+    <id>https://jmyblog.top/travel-2025/</id>
+    <published>2025-12-31T03:26:15.000Z</published>
+    <updated>2026-02-12T11:57:07.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>年度最佳</p><h2 id="春节旅行"><a href="#春节旅行" class="headerlink" title="春节旅行"></a>春节旅行</h2><p>25 年春节计划了 <em>武汉-荆州-长沙</em> 的 6天5晚 旅行，出发前抢到了从西安去武汉，以及从长沙回西安的高铁票。</p><p>抢票过程比想象中顺利，开始用飞猪的第三方抢票服务，结果开售 30 秒后还是没什么动静，然后自己去 12306 App成功买到了票🤡，更加坚定了我以后用官方 App 买票的想法。</p><p>去返程的车号都很吉利：去程 G520(❤️)，返程 G518(💰)，为旅行的顺利奠定了基础，我很满意。</p><h3 id="武汉"><a href="#武汉" class="headerlink" title="武汉"></a>武汉</h3><p>西安到武汉将近4个小时</p><p>高铁自制手机支架</p><h3 id="荆州"><a href="#荆州" class="headerlink" title="荆州"></a>荆州</h3><h3 id="长沙"><a href="#长沙" class="headerlink" title="长沙"></a>长沙</h3><p>武汉到长沙 1h20m</p><p>观感：武汉 &gt; 荆州 &gt; 长沙</p><p>长沙回西安 5h</p><h2 id="岚皋"><a href="#岚皋" class="headerlink" title="岚皋"></a>岚皋</h2><h2 id="银川"><a href="#银川" class="headerlink" title="银川"></a>银川</h2><p>五湖穿越</p><h2 id="东北之行"><a href="#东北之行" class="headerlink" title="东北之行"></a>东北之行</h2><h3 id="哈尔滨"><a href="#哈尔滨" class="headerlink" title="哈尔滨"></a>哈尔滨</h3><h3 id="长春"><a href="#长春" class="headerlink" title="长春"></a>长春</h3><h3 id="沈阳"><a href="#沈阳" class="headerlink" title="沈阳"></a>沈阳</h3><h2 id="南京"><a href="#南京" class="headerlink" title="南京"></a>南京</h2><p>南京照相馆没看</p>]]></content>
+    
+    
+    <summary type="html">好山好水好风光。</summary>
+    
+    
+    
+    <category term="心灵奇旅" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/"/>
+    
+    <category term="世界那么大" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/%E4%B8%96%E7%95%8C%E9%82%A3%E4%B9%88%E5%A4%A7/"/>
+    
+    
+    <category term="哈尔滨" scheme="https://jmyblog.top/tags/%E5%93%88%E5%B0%94%E6%BB%A8/"/>
+    
+    <category term="南京" scheme="https://jmyblog.top/tags/%E5%8D%97%E4%BA%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>王者荣耀的故事</title>
@@ -61,6 +86,31 @@
     <category term="Cursor" scheme="https://jmyblog.top/tags/Cursor/"/>
     
     <category term="not by AI" scheme="https://jmyblog.top/tags/not-by-AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>缺陷分析指南</title>
+    <link href="https://jmyblog.top/bug-report/"/>
+    <id>https://jmyblog.top/bug-report/</id>
+    <published>2025-05-15T07:36:21.000Z</published>
+    <updated>2026-02-12T10:27:00.374Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><div class="note info"><p><strong>缺陷分析</strong> 是互联网产品开发中一个老生常谈的话题，也是敏捷开发团队非常重要的测试后移实践。旨在通过对开发周期内发现的产品缺陷做 <strong>记录(Bug Report)</strong> 和 <strong>分析(Bug Analysis)</strong>，清晰地了解产品质量现状，推动团队的质量和流程改进。</p></div><p>从前在工作中也做过缺陷分析，但是分析的维度比较简单，更多是为了展示 Bug Report，这就偏离了缺陷分析的目的，因为记录并生成 Bug Report 只是手段，通过 Bug Analysis 产出有效的改进 action 才是重点。</p><p>正好最近有一个契机，需要用 AI 来自动生成 Bug Report 做缺陷分析，所以深入研究了一下行业内认可的缺陷分析纬度都有哪些，以及实际项目中怎么记录和分析，形成了一套可以量化的标准。</p><h2 id="缺陷记录"><a href="#缺陷记录" class="headerlink" title="缺陷记录"></a>缺陷记录</h2><h3 id="相关字段"><a href="#相关字段" class="headerlink" title="相关字段"></a>相关字段</h3><p>以使用 Jira 做迭代管理的项目为例，除了卡片上的原生字段，还可以增加 <strong>Custom Fields</strong> 记录缺陷，以确保数据的可统计性和可追踪性。比如：</p><ul><li><p><strong>Bug Env</strong>（缺陷环境）：单选下拉框，用于 Bug 卡，取值：<em>PROD/QA</em>，明确缺陷出现的环境。</p></li><li><p><strong>Bug Sprint</strong>（缺陷迭代）：下拉框，用于 Bug 卡，记录缺陷是由哪个迭代引入的。</p></li><li><p><strong>Reflux Time</strong>（回流次数）：数字文本框，用于所有类型的卡，标记迭代内的回流卡(下文有解释)，统计回流次数。</p></li></ul><h3 id="记录范围"><a href="#记录范围" class="headerlink" title="记录范围"></a>记录范围</h3><p>以迭代为单位记录缺陷，记录范围包括：迭代内发现的 <em>非线上缺陷</em> 和 <em>线上缺陷</em>。</p><blockquote><p><strong>非线上缺陷（Bug Env = QA）</strong></p></blockquote><p>迭代内发现的非线上缺陷，有 2 种情况：</p><p><span id="inline-toc">1. 回流卡</span></p><p>日常测试时发现由当前卡引入，且可以直接在当前卡修复的问题，需要将卡片回流到 In Progress(挪不挪卡都行)，标记 Reflux Time = 1。如果回流一次后测试还有问题，Reflux Time +1，所以迭代内卡片的 Reflux Time 总数，就可以代表迭代内卡片的缺陷总数。</p><p><span id="inline-toc">2. 迭代内 bug 卡</span></p><p>日常测试时发现非线上缺陷，但因为不在当前卡的 scope / effort 过大，需要新建 Bug 卡，标记 <em>Bug Env = QA &amp;&amp; Bug Sprint = 当前迭代</em>，在迭代结束前和相关功能上线前修复。</p><blockquote><p><strong>线上缺陷（Bug Env = PROD）</strong></p></blockquote><p>迭代内发现的所有线上缺陷都要新建 Bug 卡，并记录相关字段，线上问题并不一定是当前迭代引入的，有 3 种情况：</p><p><span id="inline-toc">3. 当前迭代功能上线前发现的缺陷</span></p><p>日常测试时发现的缺陷，因为优先级低、影响范围小，不影响上线，所以先不修，上线后就会成为线上缺陷。新建 Bug 卡，标记 <em>Bug Env = PROD</em>，因为是主动放手的线上缺陷，如果不想算在缺陷逃逸率里，可以不标记 Bug Sprint。</p><p><span id="inline-toc">4. 当前迭代功能上线后发现的线上缺陷</span></p><p>新建 Bug 卡，标记 <em>Bug Env = PROD &amp;&amp; Bug Sprint = 当前迭代</em>。</p><p><span id="inline-toc">5. Regression 测试发现的历史问题/突发的线上问题</span></p><p>有可能是上个甚至上上个迭代引入的问题，新建 Bug 卡，标记 <em>Bug Env = PROD &amp;&amp; Bug Sprint</em>。Bug Sprint 应该是导致该 Bug 产生的 Jira 卡 QA Done 的那个 Sprint，如果不知道是哪个卡引入的也可以直接标记大概的 Sprint。</p><h2 id="缺陷分析"><a href="#缺陷分析" class="headerlink" title="缺陷分析"></a>缺陷分析</h2><h3 id="分析维度"><a href="#分析维度" class="headerlink" title="分析维度"></a>分析维度</h3><p>通过 AI 推荐再结合自己的经验，以及可视化和可量化的要求，我总结了 4 个缺陷分析维度。</p><mark class="label info">1. Reflux Card Rate By Sprint</mark><p>记录每个 Sprint 回流卡占比(迭代回流卡数/迭代总卡数)的趋势变化。</p><p>在 Jira 里，每个卡片的 Sprint 值可能有多个，按照项目实际情况，使用卡片被挪到 QA Done 时的 Sprint 值作为该卡的归属 Sprint 是比较合理的，如果有多个 QA Done Sprint 就取最新的值，即：<strong>latest_qa_done_sprint</strong>。</p><p>比如，Sprint1 的回流卡占比 = Sprint1 的回流卡数(latest_qa_done_sprint = Sprint1 &amp; Reflux Time!=0) / Sprint1 的总卡数(latest_qa_done_sprint = Sprint1)</p><p>量化标准：<em>取稳定几个迭代的平均值作为目标值，Reflux Rate 应该低于目标值。</em></p><mark class="label primary">2. Total Bugs By Sprint</mark><p>记录每个 Sprint 总 bug 数的趋势变化。</p><p>比如，Sprint1 Total Bugs =  Sprint1 产生的线上 bugs(Bug Sprint=1 &amp; Bug Env=PROD) + Sprint1 产生的非线上 bugs</p><p>Sprint1 产生的非线上 bugs = Sprint1 回流卡(latest_qa_done_sprint = Sprint1 &amp; Reflux Time!=0) 的 Reflux Time 总数 + Sprint1 产生的迭代内 bug 卡数(Bug Sprint=1 &amp; Bug Env=QA)</p><p>量化标准：<em>总缺陷数应该随着迭代时间趋于收敛，但因为每个迭代的工作量和功能复杂度不同，可能会有一些浮动，不过浮动应该在合理范围内。</em></p><mark class="label danger">3. Prod Bug Escape Rate By Sprint</mark><p>记录每个 Sprint 线上缺陷逃逸率(迭代产生的线上 bugs / 迭代产生的总 bugs)的趋势变化。</p><p>量化标准：<em>取稳定几个迭代的平均值作为目标值，Escape Rate 应该低于目标值。</em></p><mark class="label success">4. Prod Bug Card AVG Fix Days</mark><p>分优先级记录线上 bug 卡的平均修复时间。</p><p>量化标准：<em>为每种优先级设置修复时间目标值，比如 Highest 的线上 bug 应该 1-2 天内修复，Medium 的线上 bug 应该 3-5 天内修复等等，每种优先级的 Average Fix Days 应该低于目标值。</em></p><h3 id="Bug-Report"><a href="#Bug-Report" class="headerlink" title="Bug Report"></a>Bug Report</h3><p>知道了怎么记录缺陷和每个缺陷分析维度的计算逻辑，就可以轻松的利用 AI 自动生成 Bug Report。目前我用过的工具有 <a href="https://getdx.com/">DX</a> 和 Jira Dashboard:</p><ul><li><strong>DX</strong> : 一种 BI(Business Intelligence) 工具，导入 Jira 数据后就可以利用它内置的 AI Tools，把每个缺陷分析维度的计算逻辑喂给它，自动生成查询语句和图表。</li><li><strong>Jira Dashboard</strong> : 利用 Jira 内置的 Dashboard 功能和 JQL 也可以实现自动生成图表。</li></ul><h3 id="缺陷分析-1"><a href="#缺陷分析-1" class="headerlink" title="缺陷分析"></a>缺陷分析</h3><p>生成 Bug Report 之后，就可以按照以下 3 个步骤做缺陷分析，逐步开展质量改进计划：</p><blockquote><p>1.指标回顾</p></blockquote><p>每个迭代结束后，观察 Total Bugs By Sprint 趋势，对照预设的目标值查看迭代的 Escape Rate / Prod bug Average Fix Time / Reflux Rate 维度数据，Total Bugs 趋势浮动异常或纬度数据不满足目标值时需要分析原因。</p><blockquote><p>2.原因分析</p></blockquote><p>识别问题发生的根因，比如需求不清晰、开发遗漏、测试覆盖不足等，可以利用 5 Whys 分析法，​通过连续提问「为什么？」来寻找问题根源。</p><blockquote><p>3.Bug Report 分享讨论</p></blockquote><p>在团队内定期分享讨论 Bug Report，推荐的会议场景：</p><ul><li><p>IPM(Iteration Planning Meeting)：Bug Report 的各项数据作为项目指标的一部分，和其他项目数据一起分享讨论。</p></li><li><p>Retro(Sprint Retrospective)：Retro 时分享 Bug Report，和团队一起讨论。</p></li><li><p>Bug Report Review Meeting：如果迭代的各个维度均严重偏离预期，可以举办一个专门的会议分享讨论。</p></li></ul><blockquote><p>4.改进计划</p></blockquote><p>和团队讨论后制定改进 Action，明确 Owner 持续跟进，必要时纳入团队工作流程，并在下次分享时回顾执行效果。如果一段时间内各个缺陷分析维度持续满足预期，就可以考虑适当调整目标值，提高预期，以持续改进。</p>]]></content>
+    
+    
+    <summary type="html">终于能把缺陷分析这事说清楚了。</summary>
+    
+    
+    
+    <category term="搬砖那些事儿" scheme="https://jmyblog.top/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+    
+    <category term="测试理论和实践" scheme="https://jmyblog.top/categories/%E6%90%AC%E7%A0%96%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/%E6%B5%8B%E8%AF%95%E7%90%86%E8%AE%BA%E5%92%8C%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="Bug Report" scheme="https://jmyblog.top/tags/Bug-Report/"/>
+    
+    <category term="缺陷分析" scheme="https://jmyblog.top/tags/%E7%BC%BA%E9%99%B7%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -475,52 +525,6 @@
     
     
     <category term="社畜" scheme="https://jmyblog.top/tags/%E7%A4%BE%E7%95%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>两个人的春节</title>
-    <link href="https://jmyblog.top/sf-of-2p/"/>
-    <id>https://jmyblog.top/sf-of-2p/</id>
-    <published>2023-01-27T08:49:51.000Z</published>
-    <updated>2025-12-09T07:08:38.328Z</updated>
-    
-    <content type="html"><![CDATA[<img data-src="https://s2.loli.net/2023/01/27/IQBPHCJ4XREOgeF.png"><div class="note info"><p>种种原因，今年我没能和家人一起过年。</p><p>大年三十，给自己做了两菜一汤，一个人的年夜饭有些凄凉，正在我看着春晚准备早点睡的时候，小甜甜突然出现，带着一堆花炮，说要陪我一起跨年，心里立刻被惊喜填满。</p><p>之后春节假期，每一天都有他的陪伴。</p><ul><li>一起看电影，春节档《满江红》，剧情丰富，转场也很多。</li><li>一起逛公园，被放河灯的噱头吸引，结果被欺骗，就当遛个弯。</li><li>一起转书城，印象最深的是一本《蛤蟆先生去看心理医生》的畅销书。</li><li>一起逛商场，吃饭坚决避开需要排队的店家，还被大玩家里的抓娃娃机虐的体无完肤。</li><li>一起夜游，走在寒冷空荡的路边，突然出现几个扛枪的大叔，免费看了一场加特林烟花秀，之后被一个阴森的公园吓到跑路。</li><li>一起去寺庙，青砖红墙，头上的经幡随风摆动，免费赠送金刚结和经书，放弃了好多人排队领的《无量寿经》，挑了一本《人生最大的一件事》，看了几页才知道信佛是人生最大的一件事。</li></ul><p>两个人过年，也很温馨快乐。</p><p>疫情放开以来，我一直没被感染。</p><p>虽然我一个人住，可也没少往外跑，后来朋友说我肯定是无症状，有些信了，因为这些日子我老觉得神思倦怠，还嗜睡，很像新冠的后遗症。</p><p>最后一天假期，明天要去办公室上班，还真有些不适应，毕竟之前因为疫情放开，已经在家办公两个多月了，整个人有些懒散，脑子也木木的，所以今天一天都在家调整自己的状态，嗯，我觉得还没调整过来，慢慢来吧。</p><p>这才不是一篇水文呢喂！</p></div>]]></content>
-    
-    
-    <summary type="html">和小甜甜的快乐时光~</summary>
-    
-    
-    
-    <category term="心灵奇旅" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/"/>
-    
-    <category term="时间过慢点" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/%E6%97%B6%E9%97%B4%E8%BF%87%E6%85%A2%E7%82%B9/"/>
-    
-    
-    <category term="春节" scheme="https://jmyblog.top/tags/%E6%98%A5%E8%8A%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的2022</title>
-    <link href="https://jmyblog.top/2022-review/"/>
-    <id>https://jmyblog.top/2022-review/</id>
-    <published>2022-12-31T07:30:20.000Z</published>
-    <updated>2025-12-09T07:07:17.400Z</updated>
-    
-    <content type="html"><![CDATA[<img data-src="https://s2.loli.net/2022/12/31/enty7zF1Hx9aqlJ.png"><div class="note primary"><p>2022，我25岁。</p><p>常听人说，25岁是人生的一道坎。过了这个年纪，身体机能开始走下坡路，也总得在事业或者生活方面有所成就。</p><p>咦，好像这些说的是30岁那道坎，没关系，反正文案都一样。</p><p>我以为，每个人的人生都不该被一道道「坎」定义，就像电影《心灵奇旅》讲述的那样，活着本身就是人生的意义，要学会感受生活中每一刻的美好，去经历，去体验。</p><p>这一年，我体验了很多事，学会了骑摩托(虽然技术很烂)，养了猫(逆子)，也有了甜甜的恋爱(小甜甜)。上半年，我琐事缠身，厄运连连，下半年倒挺顺利，有种欲扬先抑，先苦后甜的意思。</p><p>工作四年半，今年是在一个全年965的项目上，认识了很多有趣的同事，非常开心。没有升职，可能是我还没学会如何从一个worker变成一个talker，加薪更是没有指望，按照明年经济衰退的趋势，裁员也不无可能。</p><p>事实上，各种大厂在下半年已经裁过几波了，公司的社招早就停掉了，校招的简历也都是国外名校留学生和国内985研究生的内卷，果然是行业寒冬，当务之急还是要保住自己的饭碗。</p><p>然后是疫情，3年的管控终于结束了，又一次见证了历史。</p><p>我是乐见其成的，毕竟不能一直这样封下去，放开是早晚的事。只是放开的太突然，大家又开始抢占各种资源，最近爆出的很多重症和老年人的死亡案例，也让人心惊，只能尽力保护好自己和家人，不要成为政策的牺牲品。</p><p>从10月份开始，我就断断续续的在家办公了，最初是因为管控公司不时被封，后来放开了，同事也陆续被感染，更加不敢去，上一次去办公室已经是一个月前了。</p><p>也许是得益于此，又或是身体免疫力强，到现在我都还没被感染过，今天最后一天，可以说是安稳度过了2022。</p><p>2023，我的开局还是不错的，也没有什么目标，只想继续保持对生活的热爱走下去，也希望在保住饭碗的同时，还能找到在工作中「自得其乐」的方式。</p><p>下面我要骄傲的往前走了！</p></div>]]></content>
-    
-    
-    <summary type="html">25岁是一个坎？</summary>
-    
-    
-    
-    <category term="心灵奇旅" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/"/>
-    
-    <category term="时间过慢点" scheme="https://jmyblog.top/categories/%E5%BF%83%E7%81%B5%E5%A5%87%E6%97%85/%E6%97%B6%E9%97%B4%E8%BF%87%E6%85%A2%E7%82%B9/"/>
-    
-    
-    <category term="25岁" scheme="https://jmyblog.top/tags/25%E5%B2%81/"/>
     
   </entry>
   
