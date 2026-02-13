@@ -8,6 +8,8 @@ description: 终于能把缺陷分析这事说清楚了。
 top:
 ---
 
+![](https://files.seeusercontent.com/2026/02/13/y0iO/55e56e7.png)
+
 ## 背景
 
 {% note info %}
