@@ -355,66 +355,20 @@ iframe[src*="trc.taboola.com"] {
     /* Do not override animation property, let theme CSS take effect */
 }
 
-/* ==================== Fancybox Image Display Fix ==================== */
-/* Fix small dot issue when images are enlarged, ensure images fill display area correctly */
-
-.fancybox__container {
-    /* Ensure container has correct dimensions */
-    width: 100vw !important;
-    height: 100vh !important;
-}
-
-.fancybox__slide {
-    /* Ensure slide container fills entire viewport */
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
+/* ==================== Fancybox image display fix ==================== */
+/* Fancybox v5 does not scale up images smaller than the viewport by default.
+   Use min-width/min-height to ensure the content area fills the viewport.
+   The image inside (with object-fit: contain) will scale up accordingly.
+   This is safe from infinite resize loops because min-* only sets a floor
+   and doesn't conflict with Fancybox's inline style calculations. */
 .fancybox__content {
-    /* Ensure content container displays correctly */
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    min-width: 80vw;
+    min-height: calc(100vh - 200px);
 }
 
-.fancybox__content > img {
-    /* Ensure images display correctly, filling available space */
-    max-width: 100% !important;
-    max-height: 100vh !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: auto !important;
+/* Override NexT global img styles (display:block, margin:auto, max-width:100%)
+   that may interfere with Fancybox's internal image layout */
+.fancybox__container img {
+    margin: 0;
+    max-width: none;
 }
-
-.fancybox__image {
-    /* Ensure Fancybox image elements display correctly */
-    max-width: 100% !important;
-    max-height: 100vh !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-}
-
-/* Ensure image container calculates dimensions correctly */
-.fancybox__content[data-type="image"] {
-    width: 100% !important;
-    height: 100% !important;
-    padding: 0 !important;
-}
-
-.fancybox__content[data-type="image"] img {
-    max-width: 100% !important;
-    max-height: 100vh !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-} 
