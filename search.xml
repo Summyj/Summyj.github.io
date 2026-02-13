@@ -601,6 +601,56 @@ npm install --save-dev @wdio/cli //下载帮助我们初始化项目的wdio工�
       </tags>
   </entry>
   <entry>
+    <title>站点的SEO优化</title>
+    <url>/BlogSEO/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
+
+<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
+<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
+<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
+</div>
+<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
+<blockquote>
+<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
+</blockquote>
+<p>安装百度站点地图生成插件：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidusitemap:
+  path: baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-baidu-url-submit --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装结束后在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidu_url_submit:
+  count: 5 				     ## 提交最新的五个链接
+  host: www.93bok.com 	     ## 百度站长平台中注册的域名
+  token: xxx	             ## 准入秘钥
+  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">-  type: baidu_url_submitter	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><span class="image-caption">image.png</span><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
+<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
+</div>
+
+<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
+<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
+<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在博客根目录config文件添加配置：</p>
+<pre class="line-numbers language-command" data-language="command"><code class="language-command">sitemap:
+  path: sitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
+<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
+]]></content>
+      <categories>
+        <category>维护小破站</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>升级博客，我太难了</title>
     <url>/BlogUpdateNote/</url>
     <content><![CDATA[<img data-src="https://i.loli.net/2019/12/20/ONr3WMz74Rq5mBQ.png" alt="题图"><span class="image-caption">题图</span>
@@ -799,56 +849,6 @@ header.post-header {
       </tags>
   </entry>
   <entry>
-    <title>站点的SEO优化</title>
-    <url>/BlogSEO/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2020/04/23/MgrbW6S4h9tI1yf.png" width="600" height="400">
-
-<p>虽然博客一直都有做SEO优化，但经常忘记细节，所以需要写篇博客记录一下，以后可以温故知新。</p>
-<h2 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h2><h3 id="站点管理平台"><a href="#站点管理平台" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>登录<a href="https://ziyuan.baidu.com/linksubmit/index">百度站点管理平台</a>添加站点域名，然后验证站点。<br>验证站点有几种方式，包括下载文件验证，CNAME验证等，我做了CNAME验证：<br><img data-src="https://i.loli.net/2020/04/23/CPt9byQOAZ8fDBV.png">验证之后，就可以通过百度站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/krGdctXzCf7hjxM.png"></p>
-<h3 id="博客内容推送"><a href="#博客内容推送" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><div class="note warning"><p>由于Github对百度爬虫进行了屏蔽，因此百度是爬取不到Github上的页面的，如果你把网站也部署到了Coding上，那百度就可以抓取到。所以看下面的内容之前，需要确保网站部署到了coding。</p>
-</div>
-<p>在站点管理平台可以选择博客内容推送方式，自动和手动。自动推送有三种，我同时做了sitemap和主动推送(实时)两种方式。<br><span id="inline-toc">1.</span> Sitemap推送方式</p>
-<blockquote>
-<p>站点地图即sitemap，是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-</blockquote>
-<p>安装百度站点地图生成插件：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidusitemap:
-  path: baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成baidusitemap.xml文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这个文件来抓取网站页面。同时检查线上是否能打开，这里是我的<a href="https://jmyblog.top/baidusitemap.xml">baidusitemap.xml文件</a>。<br>然后提交线上链接到站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/DwL9Xf8JmRWVoF6.png">显示正常状态之后，Sitemap推送方式就安排上了。<br><span id="inline-toc">2.</span> 主动推送(实时)方式<br>主动推送最为快速的提交方式，是被百度收录最快的推送方式。通过安装插件实现：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-baidu-url-submit --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>安装结束后在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">baidu_url_submit:
-  count: 5 				     ## 提交最新的五个链接
-  host: www.93bok.com 	     ## 百度站长平台中注册的域名
-  token: xxx	             ## 准入秘钥
-  path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>一定要确保_config.yml文件中url的值和百度站长平台注册的域名相同，我的全都是<a href="https://jmyblog.top/">https://jmyblog.top</a><br>然后在config文件远程部署配置部分，加上：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">-  type: baidu_url_submitter	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img data-src="https://i.loli.net/2021/06/03/iftVTs69SjhUZlc.png" alt="image.png"><span class="image-caption">image.png</span><br>然后执行<mark class="label info">hexo g -d</mark>，就可以实现每次部署自动推送文章啦：<br><img data-src="https://i.loli.net/2020/04/23/Z2LcdRlzXjutg4h.png" width="400" height="200"></p>
-<div class="note info"><p>推送原理：<br>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
-</div>
-
-<h3 id="收录验证"><a href="#收录验证" class="headerlink" title="收录验证"></a>收录验证</h3><p>输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明百度收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/kpSBwdDFtXmcbNJ.png"></p>
-<h2 id="Google-SEO"><a href="#Google-SEO" class="headerlink" title="Google SEO"></a>Google SEO</h2><h3 id="站点管理平台-1"><a href="#站点管理平台-1" class="headerlink" title="站点管理平台"></a>站点管理平台</h3><p>和百度一样，谷歌也有 <a href="https://search.google.com/search-console/sitemaps">站点管理平台</a> (没有梯子请自备)，登录google账号之后同样添加站点域名，然后验证站点。<br>站点验证也有几种方式，下载文件验证，CNAME认证等等。由于我的CNAME认证失败，所以选择了下载文件验证，放在主题source文件夹即可，放在根目录应该也是可以的：<br><img data-src="https://i.loli.net/2020/04/23/lVcSnUo2JhNYXgI.png" width="420" height="500"><br>然后执行然后执行<mark class="label info">hexo g -d</mark>将新添加的文件推送到线上，点击验证，就可以通过谷歌站点管理平台管理自己的网站了：<br><img data-src="https://i.loli.net/2020/04/23/bOoYU7w5SvIzZj9.png"></p>
-<h3 id="博客内容推送-1"><a href="#博客内容推送-1" class="headerlink" title="博客内容推送"></a>博客内容推送</h3><p>目前只做了sitemap推送方式，网上也大多是这种方式，不知道有没有其它方法。<br>安装谷歌站点地图生成插件：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">npm install hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在博客根目录config文件添加配置：</p>
-<pre class="line-numbers language-command" data-language="command"><code class="language-command">sitemap:
-  path: sitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后执行<mark class="label info">hexo g -d</mark>，public目录里就会生成sitemap.xml文件，这里是我的<a href="https://jmyblog.top/sitemap.xml">sitemap.xml文件</a>。<br>然后提交线上链接到谷歌站点管理平台：<br><img data-src="https://i.loli.net/2020/04/23/W4Ud5el38Y7pXt2.png">显示Success之后，Sitemap推送方式就安排上了.</p>
-<h3 id="收录验证-1"><a href="#收录验证-1" class="headerlink" title="收录验证"></a>收录验证</h3><p>同样输入<mark class="label success">site: 域名</mark>，如果能在搜索结果中看到你的网站内容，就说明谷歌收录成功啦：<br><img data-src="https://i.loli.net/2020/04/23/4GxXKmyO1bAc7PN.png"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.93bok.com/Hexo%E6%8F%90%E4%BA%A4%E7%99%BE%E5%BA%A6%E5%92%8CGoogle%E6%94%B6%E5%BD%95%E7%AB%99%E7%82%B9/">Hexo提交百度和Google收录站点</a></p>
-]]></content>
-      <categories>
-        <category>维护小破站</category>
-      </categories>
-      <tags>
-        <tag>SEO</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BugBash知多少</title>
     <url>/BugBash/</url>
     <content><![CDATA[<p><img data-src="https://i.loli.net/2020/04/22/yAYns8QTWjpUgi7.jpg" alt="bugbash.jpeg"><span class="image-caption">bugbash.jpeg</span></p>
@@ -955,6 +955,103 @@ header.post-header {
       </categories>
       <tags>
         <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git学习笔记</title>
+    <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
+<span id="more"></span>
+
+<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
+<hr>
+<h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
+<ul>
+<li>成为了Linus Benedict Torvalds的一枚小迷妹（以前也是，现在妥妥的）。</li>
+<li>世上没有后悔药？不存在的，git的版本回退完美的实现了这一点。</li>
+<li>搞清楚了git和github的关系，后者只是拥有一个git远程仓库，可以通过git连接并实现相应操作。</li>
+<li>Git服务器可以轻松搭建，除了github，还有coding/gitee等网站提供git服务。</li>
+<li>工作效率真的提升很快。。。</li>
+</ul>
+<hr>
+<h1 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h1><p>下面对学习中涉及到的git命令做分类总结，都是最常用的。</p>
+<h2 id="git本地管理"><a href="#git本地管理" class="headerlink" title="git本地管理"></a>git本地管理</h2><blockquote>
+<p>git最基本的一些操作</p>
+</blockquote>
+<p>git init：将某目录变成git可以管理的仓库（添加.git目录）</p>
+<p>git commit -m “…”:一次性提交多个文件（add进来的文件）</p>
+<p>git add xxx.md:可以多次添加多个不同文件</p>
+<p>git status:可以时刻掌握仓库当前的状态</p>
+<p>git diff:显示具体修改的内容（与提交进去的文件相比）</p>
+<p>git log：显示从最近到最远的提交日志，加上–pretty=oneline参数可以将每次提交信息压缩成一行,最前边的数字加字母是指每次commit的commit-id,是16进制的表示形式</p>
+<p>.gitignore文件：包括git需要忽略提交的文件名，此文件也需要提交到git</p>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><blockquote>
+<p>世界上是有后悔药的</p>
+</blockquote>
+<p>git reset –hard HEAD^:回退到上个版本（上上个版本HEAD^^,上100个版本是HEAD~100。HEAD是指向当前版本的指针，因此可以通过调整HEAD来在历史版本间穿梭）</p>
+<p>git reset –hard commmitid：在没有关闭上次回退时的命令窗口时，可以取消回退。commitid没必要写全，git可以自己去找</p>
+<p>git reflog:可以显示每一次commit和回退的id号，如果命令窗口关闭，可以用此命令先找到commitid，然后用上个命令取消回退</p>
+<p>git checkout – file：撤销在工作区对file做的修改，包括撤销对file文件的删除</p>
+<p>git reset HEAD file &amp; git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
+<p>git reset –hard HEAD^ :已经将想撤销的修改添加到了版本库，但还未提交到远程库。用版本回退撤销修改</p>
+<p>git rm file&amp;git commit -m “delete file”：删除已添加到版本库的文件</p>
+<p>git checkout:用版本库里的文件版本替换工作区的文件版本（一键还原）</p>
+<h2 id="远程库连接"><a href="#远程库连接" class="headerlink" title="远程库连接"></a>远程库连接</h2><blockquote>
+<p>连接远程库，进一步实现团队协作。</p>
+</blockquote>
+<p>git remote:查看远程库信息，详细信息加上-v选项</p>
+<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
+<p>git push -u origin xxx:把本地仓库指定分支·内容推送到远程，下次推送可以不用-u参数<br>因为第一次推送master分支时如果加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，所以在以后的推送或者拉取时就可以简化命令。</p>
+<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
+<p>git remotr rm origin:删除本地库关联的origin远程库</p>
+<h2 id="分支创建管理"><a href="#分支创建管理" class="headerlink" title="分支创建管理"></a>分支创建管理</h2><blockquote>
+<p>实现更安全便捷的版本控制。</p>
+</blockquote>
+<p>git checkout -b xxx:git check命令加上-b参数表示创建并切换到xxx分支，此命令相当于两条命令：</p>
+<ul>
+<li>git branch xxx</li>
+<li>git checkout xxx</li>
+</ul>
+<p>git branch:查看当前分支（列出所有分支，当前分支前边会标有*号）</p>
+<p>git merge xxx:将指定分支xxx合并到当前分支,首先要切换到当前分支（不一定是master分支）</p>
+<p>git branch -d xxx:删除某分支（合并后再删除）</p>
+<p>git branch -D xxx:强行删除某个没有被合并的分支</p>
+<p>git log –graph –pretty=oneline –abbrev-commit：用分支图展示各分支合并情况（或者直接git log –graph，但这将会显示所有历史合并图）</p>
+<p>git merge –no-ff -m “…” xxx:禁用git合并时默认的fast-forward模式，生成新的commit加入分支信息。-m后的内容就是合并信息</p>
+<h2 id="工作现场存储"><a href="#工作现场存储" class="headerlink" title="工作现场存储"></a>工作现场存储</h2><blockquote>
+<p>版本控制的freestyle.</p>
+</blockquote>
+<p>git stash:将当前工作现场储藏起来，等以后恢复现场后继续工作</p>
+<p>git stash list:查看储藏的工作现场</p>
+<p>git stash apply:回复储藏的工作现场</p>
+<p>git stash apply stash@{x}有多个stash时恢复指定的stash</p>
+<p>git stash drop:恢复现场并删除stash list的内容，如果有多个stash,默认恢复的是最新的stash.</p>
+<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><blockquote>
+<p>小伙伴们的友情</p>
+</blockquote>
+<p>git checkout -b xxx origin/xxx:刚从远程库克隆到本地时只有master分支，用此命令创建和远程分支对应的分支</p>
+<p>git pull:多人协作时，远程分支比本地分支更新导致推送失败，用此命令从远程库抓取该分支最新的提交并和本地分支进行合并，合并有冲突需要手动解决</p>
+<p>git branch –set-upstream xxx origin/xxx:git pull失败时需要创建本地分支和远程分支的关联</p>
+<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><blockquote>
+<p>更方便进行版本控制，与commit id相比更好记。相当于版本库的一个快照。</p>
+</blockquote>
+<p>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针。与HEAD指针相比，后者可以移动，但标签不能移动），所以，创建和删除标签都是瞬间完成的。</p>
+<p>git tag xxx:打标签</p>
+<p>git tag v0.3 646123:将commit id为646123的提交打上v0.3标签。这样可以解决忘记打标签的问题</p>
+<p>git tag:查看所有标签（按字母排序，而并非时间）</p>
+<p>git show tagname:查看标签信息（包括说明文字）</p>
+<p>git tag -a v0.x -m “…” 615465:创建带有说明的标签，用-a指定标签名，-m指定说明文字</p>
+<p>git tag -d xxx:删除指定标签（因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。）</p>
+<p>git push origin tagname:推送标签到远程</p>
+<p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
+<p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -1126,103 +1223,6 @@ header.post-header {
         <tag>Next</tag>
         <tag>GithubPages</tag>
         <tag>CodingPages</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git学习笔记</title>
-    <url>/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>对近几天的Git学习做一个小结。</p>
-<span id="more"></span>
-
-<p>学完了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的git教程</a>，对git的概念和基本操作有了更深的理解。对“版本控制”的概念也理解的更加深刻。</p>
-<hr>
-<h1 id="几点感受"><a href="#几点感受" class="headerlink" title="几点感受"></a>几点感受</h1><p>以下是我学习了git之后的一些感受：</p>
-<ul>
-<li>成为了Linus Benedict Torvalds的一枚小迷妹（以前也是，现在妥妥的）。</li>
-<li>世上没有后悔药？不存在的，git的版本回退完美的实现了这一点。</li>
-<li>搞清楚了git和github的关系，后者只是拥有一个git远程仓库，可以通过git连接并实现相应操作。</li>
-<li>Git服务器可以轻松搭建，除了github，还有coding/gitee等网站提供git服务。</li>
-<li>工作效率真的提升很快。。。</li>
-</ul>
-<hr>
-<h1 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h1><p>下面对学习中涉及到的git命令做分类总结，都是最常用的。</p>
-<h2 id="git本地管理"><a href="#git本地管理" class="headerlink" title="git本地管理"></a>git本地管理</h2><blockquote>
-<p>git最基本的一些操作</p>
-</blockquote>
-<p>git init：将某目录变成git可以管理的仓库（添加.git目录）</p>
-<p>git commit -m “…”:一次性提交多个文件（add进来的文件）</p>
-<p>git add xxx.md:可以多次添加多个不同文件</p>
-<p>git status:可以时刻掌握仓库当前的状态</p>
-<p>git diff:显示具体修改的内容（与提交进去的文件相比）</p>
-<p>git log：显示从最近到最远的提交日志，加上–pretty=oneline参数可以将每次提交信息压缩成一行,最前边的数字加字母是指每次commit的commit-id,是16进制的表示形式</p>
-<p>.gitignore文件：包括git需要忽略提交的文件名，此文件也需要提交到git</p>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><blockquote>
-<p>世界上是有后悔药的</p>
-</blockquote>
-<p>git reset –hard HEAD^:回退到上个版本（上上个版本HEAD^^,上100个版本是HEAD~100。HEAD是指向当前版本的指针，因此可以通过调整HEAD来在历史版本间穿梭）</p>
-<p>git reset –hard commmitid：在没有关闭上次回退时的命令窗口时，可以取消回退。commitid没必要写全，git可以自己去找</p>
-<p>git reflog:可以显示每一次commit和回退的id号，如果命令窗口关闭，可以用此命令先找到commitid，然后用上个命令取消回退</p>
-<p>git checkout – file：撤销在工作区对file做的修改，包括撤销对file文件的删除</p>
-<p>git reset HEAD file &amp; git checkout – file：对file的修改已被add到stage，用前者删除add到stage的修改，再用后者撤销工作区的修改</p>
-<p>git reset –hard HEAD^ :已经将想撤销的修改添加到了版本库，但还未提交到远程库。用版本回退撤销修改</p>
-<p>git rm file&amp;git commit -m “delete file”：删除已添加到版本库的文件</p>
-<p>git checkout:用版本库里的文件版本替换工作区的文件版本（一键还原）</p>
-<h2 id="远程库连接"><a href="#远程库连接" class="headerlink" title="远程库连接"></a>远程库连接</h2><blockquote>
-<p>连接远程库，进一步实现团队协作。</p>
-</blockquote>
-<p>git remote:查看远程库信息，详细信息加上-v选项</p>
-<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:Summyj/xxx.git：将本地git仓库与github远程库想关联,也可以是其它库，远程库默认名字是origin，也可以设为其它，比如github</p>
-<p>git push -u origin xxx:把本地仓库指定分支·内容推送到远程，下次推送可以不用-u参数<br>因为第一次推送master分支时如果加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，所以在以后的推送或者拉取时就可以简化命令。</p>
-<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxx/xxx.git:从远程仓库克隆到本地，后边是地址</p>
-<p>git remotr rm origin:删除本地库关联的origin远程库</p>
-<h2 id="分支创建管理"><a href="#分支创建管理" class="headerlink" title="分支创建管理"></a>分支创建管理</h2><blockquote>
-<p>实现更安全便捷的版本控制。</p>
-</blockquote>
-<p>git checkout -b xxx:git check命令加上-b参数表示创建并切换到xxx分支，此命令相当于两条命令：</p>
-<ul>
-<li>git branch xxx</li>
-<li>git checkout xxx</li>
-</ul>
-<p>git branch:查看当前分支（列出所有分支，当前分支前边会标有*号）</p>
-<p>git merge xxx:将指定分支xxx合并到当前分支,首先要切换到当前分支（不一定是master分支）</p>
-<p>git branch -d xxx:删除某分支（合并后再删除）</p>
-<p>git branch -D xxx:强行删除某个没有被合并的分支</p>
-<p>git log –graph –pretty=oneline –abbrev-commit：用分支图展示各分支合并情况（或者直接git log –graph，但这将会显示所有历史合并图）</p>
-<p>git merge –no-ff -m “…” xxx:禁用git合并时默认的fast-forward模式，生成新的commit加入分支信息。-m后的内容就是合并信息</p>
-<h2 id="工作现场存储"><a href="#工作现场存储" class="headerlink" title="工作现场存储"></a>工作现场存储</h2><blockquote>
-<p>版本控制的freestyle.</p>
-</blockquote>
-<p>git stash:将当前工作现场储藏起来，等以后恢复现场后继续工作</p>
-<p>git stash list:查看储藏的工作现场</p>
-<p>git stash apply:回复储藏的工作现场</p>
-<p>git stash apply stash@{x}有多个stash时恢复指定的stash</p>
-<p>git stash drop:恢复现场并删除stash list的内容，如果有多个stash,默认恢复的是最新的stash.</p>
-<h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><blockquote>
-<p>小伙伴们的友情</p>
-</blockquote>
-<p>git checkout -b xxx origin/xxx:刚从远程库克隆到本地时只有master分支，用此命令创建和远程分支对应的分支</p>
-<p>git pull:多人协作时，远程分支比本地分支更新导致推送失败，用此命令从远程库抓取该分支最新的提交并和本地分支进行合并，合并有冲突需要手动解决</p>
-<p>git branch –set-upstream xxx origin/xxx:git pull失败时需要创建本地分支和远程分支的关联</p>
-<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><blockquote>
-<p>更方便进行版本控制，与commit id相比更好记。相当于版本库的一个快照。</p>
-</blockquote>
-<p>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针。与HEAD指针相比，后者可以移动，但标签不能移动），所以，创建和删除标签都是瞬间完成的。</p>
-<p>git tag xxx:打标签</p>
-<p>git tag v0.3 646123:将commit id为646123的提交打上v0.3标签。这样可以解决忘记打标签的问题</p>
-<p>git tag:查看所有标签（按字母排序，而并非时间）</p>
-<p>git show tagname:查看标签信息（包括说明文字）</p>
-<p>git tag -a v0.x -m “…” 615465:创建带有说明的标签，用-a指定标签名，-m指定说明文字</p>
-<p>git tag -d xxx:删除指定标签（因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。）</p>
-<p>git push origin tagname:推送标签到远程</p>
-<p>git push origin –tags:一次性推送全部尚未推送到远程的本地标签</p>
-<p>git tag -d tagname &amp; git push origin :refs/tags/tagname:删除已推送到远程库的标签，先从本地删除，再从远程删除</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -4978,6 +4978,21 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>Java判断素数</title>
+    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
+<span id="more"></span>
+
+<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>我学习我快乐</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我结婚了</title>
     <url>/i-got-married/</url>
     <content><![CDATA[<p><img data-src="https://s2.loli.net/2025/09/09/lGAz4dQ8nEZqIsy.jpg" alt="摄于西安市雁塔区民政局婚姻登记处内"><span class="image-caption">摄于西安市雁塔区民政局婚姻登记处内</span></p>
@@ -5088,21 +5103,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>结婚</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java判断素数</title>
-    <url>/java%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<p>嗯，就是来秀插件的。</p>
-<span id="more"></span>
-
-<iframe height="498" width="666" src="http://player.youku.com/embed/XMzU1ODc3NDU2NA==" frameborder="0" 'allowfullscreen'=""></iframe>]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>我学习我快乐</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -5753,71 +5753,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>青藤之恋</title>
-    <url>/looking-for-the-one-qing-teng/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/kbpjsQcq6HR1Tg9.jpg">
-
-<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。由于我们一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。在我的追问下，她交代了自己在用的一个相亲小程序:</p>
-<img data-src="https://s2.loli.net/2022/05/28/xpczLX3MH2Wuedq.jpg" width="200" height="400" alt="寻缘"><span class="image-caption">寻缘</span>
-
-<p>看到这充满土味的「寻缘」页面，又想起之前她让我加的「好心人」推荐给她的相亲群：</p>
-<div class="tabs" id="好心人的故事"><ul class="nav-tabs"><li class="tab active"><a href="#好心人的故事-1">好心人的故事 1</a></li><li class="tab"><a href="#好心人的故事-2">好心人的故事 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="好心人的故事-1"><img data-src="https://s2.loli.net/2022/05/28/AGKRwuWy7nVszTx.jpg" height="460" width="250"></div><div class="tab-pane" id="好心人的故事-2"><img data-src="https://s2.loli.net/2022/05/28/y4VzgqwoHAfpKFa.jpg" height="480" width="250"></div></div></div>
-
-<p>我突然觉得把找对象这件事交给老母亲，有点过于草率了，不过不就是对象么，找就找呗，我要开始认真了。</p>
-<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
-<img data-src="https://s2.loli.net/2022/05/28/W2tRaCbhQ56m7fS.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网"><span class="image-caption">世纪佳缘&amp;珍爱网</span>
-
-<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
-<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
-<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
-<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
-<img data-src="https://s2.loli.net/2022/05/28/FoKz3DTdLpmu6Cr.jpg" width="200" height="440" alt="默认95年"><span class="image-caption">默认95年</span>
-
-<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
-<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
-<img data-src="https://s2.loli.net/2022/05/28/gfBhFaqEmQJWYTj.jpg" alt="青藤菜单栏"><span class="image-caption">青藤菜单栏</span>
-
-<p>小程序有四个菜单栏：</p>
-<ul>
-<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
-<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
-<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
-<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
-</ul>
-<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息"><span class="image-caption">青藤个人信息</span>
-
-<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
-<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
-<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
-<img data-src="https://s2.loli.net/2022/05/28/jfiryIgUKdOutqY.jpg" width="200" height="440" alt="7日优先推荐"><span class="image-caption">7日优先推荐</span>
-
-<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
-<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
-<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员"><span class="image-caption">青藤币和青藤会员</span>
-
-<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
-<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
-<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
-<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
-<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
-<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
-<img data-src="https://s2.loli.net/2022/05/28/EvHFVYPgex3TWMd.jpg" width="200" height="440" alt="第一个相互喜欢"><span class="image-caption">第一个相互喜欢</span>
-
-<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
-<img data-src="https://s2.loli.net/2022/05/28/Ksir5vLV4XPgNOM.jpg" width="200" height="440" alt="啊哈哈哈哈嗝"><span class="image-caption">啊哈哈哈哈嗝</span>
-
-<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>人类观察员</category>
-      </categories>
-      <tags>
-        <tag>青藤之恋</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二狗平台</title>
     <url>/looking-for-the-one-er-gou/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/ORMnk4yZsSmg5Vf.png">
@@ -5884,6 +5819,71 @@ public class Functions {
       </categories>
       <tags>
         <tag>二狗</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>青藤之恋</title>
+    <url>/looking-for-the-one-qing-teng/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/05/28/kbpjsQcq6HR1Tg9.jpg">
+
+<h2 id="一些缘起"><a href="#一些缘起" class="headerlink" title="一些缘起"></a>一些缘起</h2><h3 id="来自老母亲的担忧"><a href="#来自老母亲的担忧" class="headerlink" title="来自老母亲的担忧"></a>来自老母亲的担忧</h3><p>前段时间，老母亲又给我发了一个她中意的男嘉宾让我去认识认识。由于我们一直都互相嫌弃彼此的品味，所以每次她推荐的男嘉宾看起来总有一些跟我不太搭调，这次也不例外。在我的追问下，她交代了自己在用的一个相亲小程序:</p>
+<img data-src="https://s2.loli.net/2022/05/28/xpczLX3MH2Wuedq.jpg" width="200" height="400" alt="寻缘"><span class="image-caption">寻缘</span>
+
+<p>看到这充满土味的「寻缘」页面，又想起之前她让我加的「好心人」推荐给她的相亲群：</p>
+<div class="tabs" id="好心人的故事"><ul class="nav-tabs"><li class="tab active"><a href="#好心人的故事-1">好心人的故事 1</a></li><li class="tab"><a href="#好心人的故事-2">好心人的故事 2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="好心人的故事-1"><img data-src="https://s2.loli.net/2022/05/28/AGKRwuWy7nVszTx.jpg" height="460" width="250"></div><div class="tab-pane" id="好心人的故事-2"><img data-src="https://s2.loli.net/2022/05/28/y4VzgqwoHAfpKFa.jpg" height="480" width="250"></div></div></div>
+
+<p>我突然觉得把找对象这件事交给老母亲，有点过于草率了，不过不就是对象么，找就找呗，我要开始认真了。</p>
+<h3 id="朋友的推荐"><a href="#朋友的推荐" class="headerlink" title="朋友的推荐"></a>朋友的推荐</h3><p>但是找对象这事，我总不能出门随便抓一个小哥哥问人家需不需要女朋友吧，所以还是首选线上平台，于是我打开了两个鼎鼎大名的小程序：</p>
+<img data-src="https://s2.loli.net/2022/05/28/W2tRaCbhQ56m7fS.jpg" width="400" height="440" alt="世纪佳缘&amp;珍爱网"><span class="image-caption">世纪佳缘&amp;珍爱网</span>
+
+<p>果然没有最土味，只有更土味，甚至世纪佳缘还给我报了一个亲切的后端错误QAQ。<br>连最有名的两个交友平台都这样，让我有些emo，正在我一筹莫展的时候，一个非常靠谱的朋友推荐给我两个交友小程序，「青藤之恋」和「二狗」平台，她说已经面基了几个小哥哥，感觉还不错，于是正在搬砖的我连忙摸鱼注册好了这俩小程序，故事就这样开始了。</p>
+<h3 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h3><p>我在找对象的时候，朋友分享了一个小红书的视频，里面的博主(173的林铁柱)复盘了自己相亲多年，和二十几号男嘉宾的故事，视频中博主真情流露，字字珠玑，多少让我有一些共鸣。<br>所以我也想把自己寻找男嘉宾的过程复盘一下，但我没勇气录视频，还是用文字描述吧，然后就有了这个系列。</p>
+<h2 id="青藤之恋"><a href="#青藤之恋" class="headerlink" title="青藤之恋"></a>青藤之恋</h2><p>啊，这个字体怎么有bug，人家叫「青藤之恋」。。。<br>ok anyway，对青藤之恋的第一印象，来自它在知乎投放的广告，上边说「老实忠厚的程序员」，我一整个大离谱，都2021年了，还在宣传程序员老实忠厚吗<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，但是朋友推荐的，我还是去看看，所以搜索添加了小程序。</p>
+<h3 id="初印象"><a href="#初印象" class="headerlink" title="初印象"></a>初印象</h3><p>首先，青藤之恋的页面设计非常简约，小清新的感觉，终于没有土气了，再然后，我开始注册，选择性别，年龄什么的，让我印象深刻的是注册的时候，它默认选中的出生年份是95年，而且是12.1：</p>
+<img data-src="https://s2.loli.net/2022/05/28/FoKz3DTdLpmu6Cr.jpg" width="200" height="440" alt="默认95年"><span class="image-caption">默认95年</span>
+
+<p>我大受震撼，现在找对象年龄已经这么卷了吗？直接默认95后可还行，害，老了老了。</p>
+<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>所有信息填好之后，就进入了小程序：</p>
+<img data-src="https://s2.loli.net/2022/05/28/gfBhFaqEmQJWYTj.jpg" alt="青藤菜单栏"><span class="image-caption">青藤菜单栏</span>
+
+<p>小程序有四个菜单栏：</p>
+<ul>
+<li>「寻觅」：系统每天中午12点会推荐10个男嘉宾，都分页展示在这，点 X 表示无感然后会切换到下一个男嘉宾，💗表示喜欢，左上角可以回看推荐过的男嘉宾</li>
+<li>「消息」：互相喜欢的嘉宾会配对成功，然后可以在这里聊天发消息(注意这里是一个伏笔)</li>
+<li>「村口」：展示嘉宾们发的唠唠(跟朋友圈差不多)，还有一些情感话题可以讨论</li>
+<li>「我的」：个人信息和系统设置页，点击头像可以查看个人资料，也可以编辑自己的信息，还能看到最近来访和喜欢自己的嘉宾。</li>
+</ul>
+<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>青藤之恋需要添加的个人信息如下图：</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtInfo.jpg" alt="青藤个人信息"><span class="image-caption">青藤个人信息</span>
+
+<p>主要是一些照骗，学历和身份认证(认证之后会在「我的」页面加上已认证标签)，还有个人基本信息(昵称/年龄/星座/身高/职业/收入等等)，以及一些自我介绍、兴趣爱好、感情观、理想型之类的描述。</p>
+<p>系统会对这些信息进行审核，然后对其真实和充足性打分，之后在「我的」页面点击个人头像，就可以预览自己的信息页(上图最右图)。</p>
+<p>因为我是真诚找对象，所以很积极的做了双重认证，也边抄作业边完善了这些描述信息，最后系统给我打出了95的高分，还给我提供了7日优先推荐：</p>
+<img data-src="https://s2.loli.net/2022/05/28/jfiryIgUKdOutqY.jpg" width="200" height="440" alt="7日优先推荐"><span class="image-caption">7日优先推荐</span>
+
+<p>hummm…大概这样，一切都是这么的顺利，所以开始的时候我是比较喜欢这个平台的，因为大道至简的功能展示和简约的界面设计比较合我的心意，刚开始推送的男嘉宾也还好。</p>
+<h3 id="青藤币和青藤会员"><a href="#青藤币和青藤会员" class="headerlink" title="青藤币和青藤会员"></a>青藤币和青藤会员</h3><p>一段时间之后，事情开始微妙了起来。<br>比如我想解锁喜欢我的男嘉宾/来访者，或者查看更多男嘉宾，我都需要一个东西：<strong>青藤币</strong>。<br>再后来，系统给我推荐的男嘉宾越来越「优质」，甚至看这个成了我每天的快乐源泉，所以我想筛选一下推送偏好，这个时候，我又需要一个东西：<strong>青藤会员</strong>。</p>
+<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/looking-for-the-one/qtMoney.jpg" alt="青藤币和青藤会员"><span class="image-caption">青藤币和青藤会员</span>
+
+<p>作为一个穷逼，青藤会员我就不想了，重点关注青藤币。</p>
+<p>可盘算了半天，上图免费获得青藤币的方式，我只能做到「签到」，但是每日签到只有3个青藤币，可光解锁一个男嘉宾就需要100个青藤币，差距如此悬殊，后来我又抖着手点了超级喜欢想赚点儿币，结果就连超级喜欢别人这个操作，本身也要60个青藤币。。。</p>
+<p>所以系统贴心的提供了购买青藤币的入口，又把我这样的穷逼排除在外。我终于明白了，青藤之恋想表达的意思就7个字：<strong>没钱就别找对象</strong>。</p>
+<p>在这里非常感谢目前为止「喜欢」我的100多个男嘉宾，不是我不「喜欢」你们，而是我没钱。</p>
+<h3 id="终于聊起来的消息页面"><a href="#终于聊起来的消息页面" class="headerlink" title="终于聊起来的消息页面"></a>终于聊起来的消息页面</h3><p>情况一度十分尴尬，就这样过了几天，最后我想着注销账号吧，找不到对象也不能被别人当作赚钱的工具啊，那也太惨了。</p>
+<p>所以我又打开了青藤之恋小程序，寻找注销账号的入口，顺便最后看看系统推给我的「优质」男嘉宾，没想到这次竟然有几个不错的，我寻思着自己反正要走了，最后点几个喜欢吧，然后：</p>
+<img data-src="https://s2.loli.net/2022/05/28/EvHFVYPgex3TWMd.jpg" width="200" height="440" alt="第一个相互喜欢"><span class="image-caption">第一个相互喜欢</span>
+
+<p>原来这个男嘉宾之前也「喜欢」过我，相互「喜欢」，所以我们就能聊天了！！！这是啥？这就是缘分呐！爱情这不就来了吗？于是怀着十分激动的心情，我主动给男嘉宾发了一条消息，1分钟之后：</p>
+<img data-src="https://s2.loli.net/2022/05/28/Ksir5vLV4XPgNOM.jpg" width="200" height="440" alt="啊哈哈哈哈嗝"><span class="image-caption">啊哈哈哈哈嗝</span>
+
+<p>男嘉宾取消了喜欢。<br>他取消了喜欢。<br>喜欢。<br>欢<span class="emoji" alias="broken_heart" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f494.png?v8">💔</span><br>我也有今天<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，所以男嘉宾是觉得自己之前瞎了眼吗？到今天我都还在思考这个问题，但是无解。<br>后来我又通过这种方式成功添加了几个男嘉宾，而且没有被取消喜欢，他们的故事我会在后续的博客中讲到。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>人类观察员</category>
+      </categories>
+      <tags>
+        <tag>青藤之恋</tag>
       </tags>
   </entry>
   <entry>
@@ -6168,71 +6168,6 @@ public class Functions {
       </tags>
   </entry>
   <entry>
-    <title>增驾摩托车奇幻之旅(上)</title>
-    <url>/my-lovely-moto/</url>
-    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
-
-<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
-<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
-<p>Deal! </p>
-<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
-</code></pre>
-<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
-<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
-<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
-<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
-<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
-<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
-<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
-
-<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
-</code></pre>
-<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
-<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
-<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
-<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
-
-<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
-<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
-
-<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
-<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
-</code></pre>
-<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
-<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
-<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
-
-<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
-<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
-
-<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
-<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
-<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
-<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
-<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
-<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
-
-<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
-<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
-<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
-<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
-<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
-<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
-</code></pre>
-<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
-<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
-
-<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>骑上我心爱的小摩托</category>
-      </categories>
-      <tags>
-        <tag>增驾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>骑上我心爱的小摩托</title>
     <url>/my-lovely-moto-4/</url>
     <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/03/gkGWzpRAyOnMKBQ.png" width="800" height="600" alt="我的摩托车(SUNDIRO.HONDA_CBF190tr)"><span class="image-caption">我的摩托车(SUNDIRO.HONDA_CBF190tr)</span>
@@ -6300,6 +6235,71 @@ public class Functions {
       <tags>
         <tag>买车</tag>
         <tag>骑摩托</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>增驾摩托车奇幻之旅(上)</title>
+    <url>/my-lovely-moto/</url>
+    <content><![CDATA[<img data-src="https://s2.loli.net/2022/06/13/PBm2d5KVRx4NZCY.png">
+
+<h2 id="万恶之源"><a href="#万恶之源" class="headerlink" title="万恶之源"></a>万恶之源</h2><p>时间回到2月下旬的某天晚上，死党L君(就是之前让我跟她一起 <a href="https://jmyblog.top/HuaShanTravel/">爬华山</a> 的冤种姐妹)和我一起吃完海底捞，在去往公交站的路上，开始了如下对话：</p>
+<p>L: 我想考摩托车照，听说挺好考的，你陪我一起？<br>me(想到某个女同事朋友圈骑摩托的帅照): 我觉得🉑️，你报名的时候叫上我，舍命陪君子！</p>
+<p>Deal! </p>
+<h2 id="驾校：欢迎入坑"><a href="#驾校：欢迎入坑" class="headerlink" title="驾校：欢迎入坑"></a>驾校：欢迎入坑</h2><pre><code>事件发生时间：2月20日
+</code></pre>
+<p>L君是个行动派，第二天晚上，她就说已经咨询好要报名了，于是晚上7点半，我骑着自己的小滑板，连夜过去找她一起报名，故事就这样开始了。</p>
+<p>因为我们本来就有C1驾照，这次算是考增照(C1D)，驾校老板熟门熟路的告诉我们，虽然这个也要考四科(科一科四理论+科二科三实操)，但考这个比C1简单多了，并向我们保证只要去考场两次(一次考科一加练车，一次考科二科三科四)就能拿照，让我们把科一科四考过，科二科三包过(一个敢说，两个敢信)。</p>
+<p>接着我们提出了边界值问题：要是去了两次以上还没拿照或者补考的话怎么办？老板又「熟门熟路」的承诺那样的话就给我们报销前两次的来回路费和之后的补考费(一个敢说，两个敢信)。</p>
+<p>考场在郊区，离我们所在的位置距离40公里，公共交通的话，地铁需要转三个线路(我还要转一次公交)，最后还要转出租。老板说都是去那考的，我将信将疑的和L君说，要不明天上班我咨询下同事然后再决定？可L君非常笃定且坚定的就要马上报名，无法，说好舍命陪君子的，陪！</p>
+<p>在老板的各种承诺和所谓「包过」Buff的加持之下，报名费是1250，毕竟我们是两个人一起报名，所以在L君的软磨硬泡之下(我真的不擅长砍价)，价格降到了惊人的1200。。。</p>
+<p>当夜，另一位姐妹H君在听说之后也报名了，后来老板把我们拉到一个考试群里，我们自己的群聊也创建成功：</p>
+<img data-src="https://s2.loli.net/2022/06/04/gDdRV3ZIHxhqOMC.png" width="240" height="500" alt="骑上我心爱的小摩托"><span class="image-caption">骑上我心爱的小摩托</span>
+
+<h2 id="考前：跨区换证"><a href="#考前：跨区换证" class="headerlink" title="考前：跨区换证"></a>考前：跨区换证</h2><pre><code>事件发生时间：2月21日
+</code></pre>
+<p>考试之前要做驾驶员体检，增驾也要做，老板说我们周边就有一个体检站，L君闻言第二天就去做了。</p>
+<p>因为我驾驶证上的发证机关在老家，所以还要去把驾照换到本地，才能做体检再约考试。所以请了半天假，公交+地铁辗转到了另一个城区去办，因为老板说只有那个点当天换完证就能归档，可以尽快约考试，好吧勉强接受这个理由。</p>
+<p>换证过程也十分周折。<br>门口查码的大妈让我先去前面500米处的驾驶员体检站照个相，就是换证后的驾驶证照片。</p>
+<img data-src="https://s2.loli.net/2022/06/05/ecPYqDTvWR8QapO.png" width="350" height="500" alt="驾驶员体检站"><span class="image-caption">驾驶员体检站</span>
+
+<p>接着又回来排队办换证业务，办好之后说是会现场制证，让我在外边等着拿，等了半天突然说制证的打印机坏了在修，幸好在他们下班前修好了，拿到了新证。</p>
+<img data-src="https://s2.loli.net/2022/06/05/H3LpIOzThCE5w7V.png" width="350" height="500" alt="警务大厅"><span class="image-caption">警务大厅</span>
+
+<p>沟通的时候驾校老板又说考场那就可以现场自助体检，所以和H君决定到时候在那做，然后三个人预约了两天后考科一，下载了驾考宝典开始刷题。</p>
+<h2 id="科一：考场初见"><a href="#科一：考场初见" class="headerlink" title="科一：考场初见"></a>科一：考场初见</h2><pre><code>事件发生时间：2月23日
+</code></pre>
+<p>早上6点起床，按计划准备出行，H君说她对象Z君昨天晚上也报名了，所以又变成了4人行，租了辆小Polo开车去考场(本来3个人以上一起报名的话驾校是可以接送的，但我们这样一个个的报就错失机会了)。</p>
+<p>9点整我们就到了考场，在候考室的自助体检机里做了体检，也是一次新奇的体验：</p>
+<img data-src="https://s2.loli.net/2022/06/05/YemdNorGvn4VlcU.png" width="500" height="400" alt="自助体检机"><span class="image-caption">自助体检机</span>
+
+<p>在办公室登记以后，戴上练车牌，我们就去场地里练车了，这里的考场其实是科二科三实操科目的考场，考试一般在周一，周二到周日都是来这里练车的人，进去之后，我们就看到了。。。三轮车(因为考的是增照D，考试就是用的三轮车，不过可以向下兼容二轮摩托车)：</p>
+<img data-src="https://s2.loli.net/2022/06/05/BYgyQauZCqj6zLl.png" alt="科目二考试场地"><span class="image-caption">科目二考试场地</span>
+
+<p>场地左右两边分别是「新手场」和「考试场」。新手场只有单边桥和无杆的地桩，考试场就是正式考试的时候用的场地，有两个坡道、三个带杆的地桩(每个都是5条杆)、三对单边桥。</p>
+<p>一开始我们都在新手场熟悉车辆和基本操作，比如起步和停车，后来试着过单边桥和绕地桩，考场的师傅也教给我们各种技巧。练了一会，单边桥从上去就掉下来，有时还导致车熄火到后边可以顺利通过，绕桩也勉强做到不踩桩了。</p>
+<p>但是，做到这些的只有我一个，他们三个还是各有各的问题，所以表面看起来，我的技术是四人中的Top1，后来我去了考试场练车，在师傅的指导下成功操作了定点起步，还练了一圈带杆的地桩和单边桥，都很顺利。</p>
+<p>这个时候练车的人已经很多了，由于考场在郊区，比较偏远，环境也很差，尤其是厕所简直不堪入目，所以一早上都没喝水，而且排队的时候，老有人抽烟，在排队半小时(甚至更久)，开车5分钟的练车场景下，我一直被迫吸着二手烟。</p>
+<p>当我在考试场排队准备练第二圈的时候，他们还在新手场，而且时不时和新加入的选手一起交流心得，于是我说：</p>
+<img data-src="https://s2.loli.net/2022/06/05/ysAfVMwxYcH5uzl.png" width="300" height="440" alt="快要变成教练的三个人"><span class="image-caption">快要变成教练的三个人</span>
+
+<p>后来，除了L君，其他两个人也过来考试场练了一圈，到了饭点L君说感觉自己没练好要继续在新手场练一会，于是三个人去吃饭。驱车在周围找到一家冒菜店吃了午饭，又回考场接了L君出发去考科一。</p>
+<p>科一的考场离练车的科二科三考场3公里左右，两点开考，不过门口早就排了长队，在队尾等了几波才轮到我们，结果只有没怎么刷题的H君对象考了满分<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，不过不重要，过了就行，不到4点，时间尚早，我们就又回之前的地方练车了。</p>
+<p>人还是很多，不过这次练车是模拟真实的考试场景，开系统刷身份证，练了两次科二项目，虽然没听到考试合格的声音，但自我感觉还不错。天色渐晚，我们都还没练过科三，于是赶紧去科三的场地看看，发现下班前是轮不到我们练车了，只能让师傅带着我们熟悉下场地，讲解要点。</p>
+<p>其实科三也就是该刹车刹车，该打转向灯打转向灯，然后注意不要压线之类的，不像科二各种整活，而且场地被师傅们做了很多「手脚」，旁边有很多提示的布条之类告诉你什么时候点刹车和开转向灯，只要练过科二能控制住车，就问题不大。</p>
+<p>所以师傅讲过之后，虽然没实际练过，但对科三也稍稍放心了些，就约了下周一考科二科三，打算周末再来练一次车，然后就回家了。</p>
+<h2 id="沙哑低音炮"><a href="#沙哑低音炮" class="headerlink" title="沙哑低音炮"></a>沙哑低音炮</h2><pre><code>事件发生时间：2月27日
+</code></pre>
+<p>上次回来以后，本来打算周日再去练一次车，可到了周末：</p>
+<img data-src="https://s2.loli.net/2022/06/05/5CmtwAbxHnV3hiI.jpg" width="300" height="610" alt="吸二手烟的后果"><span class="image-caption">吸二手烟的后果</span>
+
+<p>因为之前练车吸了太多二手烟，导致我嗓子哑了，话都不能好好说，实在不舒服，再加上考场卫生条件太差也不能多喝水，所以最终我没去成，只有L君和H君(她对象也没去)去了。<br>她们说人很多，早上8点多到那，排了一天队结果就一人练了两圈科二科三，而且风很大，空中尘土飞扬，幸好我没去否则现在应该已经哑了。</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>骑上我心爱的小摩托</category>
+      </categories>
+      <tags>
+        <tag>增驾</tag>
       </tags>
   </entry>
   <entry>
@@ -7068,6 +7068,36 @@ public class Functions {
       </tags>
   </entry>
   <entry>
+    <title>公司上市了</title>
+    <url>/tw-nasdaq-listed/</url>
+    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
+
+<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
+<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
+<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
+<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
+<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
+<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"><span class="image-caption">logo(左旧右新)</span></p>
+<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
+<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
+<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
+</div>
+
+<hr>
+<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
+<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
+<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
+]]></content>
+      <categories>
+        <category>搬砖那些事儿</category>
+        <category>搬砖碎碎念</category>
+      </categories>
+      <tags>
+        <tag>nasdaq</tag>
+        <tag>上市</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>转载：我在ThoughtWorks的头三年</title>
     <url>/threes-years-in-tw/</url>
     <content><![CDATA[<img data-src="https://cdn.jsdelivr.net/gh/Summyj/blogImageCDN/images/threes-years-in-tw/1.png">
@@ -7172,36 +7202,6 @@ public class Functions {
       </categories>
       <tags>
         <tag>QA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>公司上市了</title>
-    <url>/tw-nasdaq-listed/</url>
-    <content><![CDATA[<img data-src="https://i.loli.net/2021/09/18/KhCfumNJxLsgXH8.jpg">
-
-<div class="note primary"><p>美国时间9月15日上午，thoughtworks在纽约纳斯达克股票交易所上市了。</p>
-<p>今天早上，朋友圈也是一派锣鼓喧天、鞭炮齐鸣。除了作为公司员工，感觉与有荣焉之外，当然也为自己可以拿到一些「股权激励」而开心。</p>
-<p>因此上市之后，我立马把公司的股票加成自选，每天看着股价起伏，计算着自己的「身价」，虽说还有两年才可以完全拿到所有的股票，但大家都期盼着股价暴涨，毕竟这是我们这些「新生代农民工」离「财富自由」最近的一次了。</p>
-<p>按照惯例，今天开始还有几周的「静默期」，不能过度谈论这件事，也不能对公司的股票估值和未来发展业绩作评论，所以目前我只能默默欣慰于这笔「意外之财」。</p>
-<p>为了上市，公司近年来做了不少的努力，比如换了logo：</p>
-<p><img data-src="https://i.loli.net/2021/09/22/jnJpbLr57h8eVM4.png" alt="logo(左旧右新)"><span class="image-caption">logo(左旧右新)</span></p>
-<p>又比如疯狂的招聘和扩招(至少中国区是这样)，重新装修办公室，增加工位，也完善了绩效考核的方式，至于上市之后还会有啥别的「花样」，拭目以待吧，但愿这些改变真的能让公司变得更好。</p>
-<p>从现在起，我也是上市公司的员工了，不过心情并没有太大的起伏，只希望公司不要在股票套现之前炒掉我就好<span class="emoji" alias="joy" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8">😂</span>，也希望能在上市以后的公司待的开心。</p>
-<p>啊，怎么感觉写成了朋友圈文案的样子，害，Whatever，谨以此博文来记录发生在我平淡人生中的，这一件大事。</p>
-</div>
-
-<hr>
-<p>更新，上市之后的公司果然开始作妖了，具体就不说了，总之就是要让大家卷起来，而且是强制性的卷。</p>
-<p>作为信奉「躺平」主义的新青年，不知道还能否撑到股票套现的时候，而且据说即使套现还要扣45%的税，所以对这笔意外之财的期待值也大大降低了，「财富自由」果然是个假命题，新一代农民工还是逃不过被剥削的命运。</p>
-<p>且行且珍惜吧，发现了一个Github开源项目： <a href="https://github.com/phodal/tangping">躺平</a> ，深以为然，推荐给大家，共勉。</p>
-]]></content>
-      <categories>
-        <category>搬砖那些事儿</category>
-        <category>搬砖碎碎念</category>
-      </categories>
-      <tags>
-        <tag>nasdaq</tag>
-        <tag>上市</tag>
       </tags>
   </entry>
   <entry>
@@ -7640,6 +7640,56 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
+    <title>未来是星辰大海</title>
+    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
+    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
+<span id="more"></span>
+<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
+<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
+<ul>
+<li>大佬：一个offer接一个offer，择优录取</li>
+<li>我：找了一个offer，得，还不错，签了吧</li>
+</ul>
+<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
+<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
+<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
+<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
+<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
+<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
+<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
+<p>嗯，我想了一想，说的还真对。</p>
+<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
+<p>说实话，还真没啥。</p>
+</blockquote>
+<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
+<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
+<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
+<p>其实吧，哪有那么多后悔的事情。</p>
+<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
+<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
+<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
+<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
+<li>健身（身体最重要）</li>
+<li>读书（腹有诗书气自华（老脸一红））</li>
+<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
+<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
+</ul>
+<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
+<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
+<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
+<blockquote>
+<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>时间过慢点</category>
+      </categories>
+      <tags>
+        <tag>毕业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试矩阵</title>
     <url>/%E6%B5%8B%E8%AF%95%E7%9F%A9%E9%98%B5/</url>
     <content><![CDATA[<p>谈谈对各种测试方法做二维定位后形成的测试矩阵.</p>
@@ -7705,87 +7755,6 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </categories>
       <tags>
         <tag>测试矩阵</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来是星辰大海</title>
-    <url>/%E6%9C%AA%E6%9D%A5%E6%98%AF%E6%98%9F%E8%BE%B0%E5%A4%A7%E6%B5%B7/</url>
-    <content><![CDATA[<p>今天去签了三方，所以，我的大学生活也许真的要结束了。</p>
-<span id="more"></span>
-<h1 id="大学三年"><a href="#大学三年" class="headerlink" title="大学三年"></a>大学三年</h1><p>以前常听别人说，大学其实只有短短三年。开始我是不信的，现在却不得不信了。</p>
-<h2 id="大四安排"><a href="#大四安排" class="headerlink" title="大四安排"></a>大四安排</h2><p>大四刚开始，金九银十。秋招开始了：</p>
-<ul>
-<li>大佬：一个offer接一个offer，择优录取</li>
-<li>我：找了一个offer，得，还不错，签了吧</li>
-</ul>
-<p>没错，作为第一次面试就拿到了offer，还签了三方的我。确实是一个很容易满足的人，当然，这跟实力也有关系，我等渣滓不敢跟大佬比。。。</p>
-<p>其实offer拿到有段时间了，到今天才去签。（中间那段时间把段位从黄金升到了铂金，再也没人说我是黄金狗了），当然，还干了点别的事情。</p>
-<p>唉，本来想深沉一下，咋越写越欢脱。。。</p>
-<p>后边的安排可能就是先把照学到手，不过最近改革了，估计很难成为老司机的一员了。然后去实习，春节前刚好结束（说不定还能参加下公司年会）。</p>
-<p>学期末确定下毕设题目，然后开整。解决完了去旅个游，毕竟大学生优惠什么的不能浪费。。。</p>
-<p>然后毕业照走一波，之后再去公司报到，咱也是社会人了。</p>
-<h2 id="三年回首"><a href="#三年回首" class="headerlink" title="三年回首"></a>三年回首</h2><p>这个只能在心里默默吐槽了，不过怎么说呢，有句话是成长的过程就是越来越觉得以前的自己是个xx的过程。</p>
-<p>嗯，我想了一想，说的还真对。</p>
-<h2 id="那些让我后悔的事"><a href="#那些让我后悔的事" class="headerlink" title="那些让我后悔的事"></a>那些让我后悔的事</h2><blockquote>
-<p>说实话，还真没啥。</p>
-</blockquote>
-<p>说自己没好好学习吧，那是我懒我认了。不过咱好歹还拿过奖学金不是~</p>
-<p>说自己没挂过科把，谁说的，挂过一门。。。（说起来既拿过奖学金，又挂过科的，估计我也是独一份）</p>
-<p>说没谈过恋爱吧，有那个时间我还不如去睡觉，省事省心还自由不是~</p>
-<p>其实吧，哪有那么多后悔的事情。</p>
-<p>人嘛，该干嘛的时候就得干嘛，每个时间段都有自己该做的事情。做完了你才有资格搞其它有的没的。结果是你自己没做，后来又说后悔，你说这不是耍流氓这是啥？</p>
-<p>或许你觉得当时没有做好，但人的身心发展都是分阶段的，几年之后再回想之前做的事情，肯定觉得不对味呀。人要是一直钻这个牛角尖，那就没啥意思了。</p>
-<h1 id="对未来的一点小小畅想"><a href="#对未来的一点小小畅想" class="headerlink" title="对未来的一点小小畅想"></a>对未来的一点小小畅想</h1><p>梦想还是要有的，万一实现了呢。</p>
-<h2 id="想要坚持的"><a href="#想要坚持的" class="headerlink" title="想要坚持的"></a>想要坚持的</h2><ul>
-<li>健身（身体最重要）</li>
-<li>读书（腹有诗书气自华（老脸一红））</li>
-<li>学习（行业特殊，为了不被淘汰掉，坚持学习真的很重要）</li>
-<li>坚持给父母的全民K歌账号打call（真的超爱唱歌）</li>
-</ul>
-<p>除了最后一条，我还真不敢保证每天都做，毕竟谁都不是圣人。但是要尽量坚持下去。</p>
-<h2 id="想要实现的"><a href="#想要实现的" class="headerlink" title="想要实现的"></a>想要实现的</h2><p>等我有钱了，要啥啥没有？┑(￣Д ￣)┍</p>
-<h2 id="其它有的没的"><a href="#其它有的没的" class="headerlink" title="其它有的没的"></a>其它有的没的</h2><p>都在心里。</p>
-<blockquote>
-<p>好了，也该收收心了。看这个日子，上次发文都在一月前了。之后得给自己博客上点干货了。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>时间过慢点</category>
-      </categories>
-      <tags>
-        <tag>毕业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爱你就像爱生命</title>
-    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
-    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
-<span id="more"></span>
-
-<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
-<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
-<hr>
-<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
-<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
-<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
-<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
-<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
-<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
-<p>我爱你，这是我的命运。</p>
-<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
-<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
-<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
-<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
-<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
-<p>说吧，和我好吗？</p>
-]]></content>
-      <categories>
-        <category>心灵奇旅</category>
-        <category>我读书我进步</category>
-      </categories>
-      <tags>
-        <tag>王小波</tag>
       </tags>
   </entry>
   <entry>
@@ -7886,19 +7855,40 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
       </tags>
   </entry>
   <entry>
+    <title>爱你就像爱生命</title>
+    <url>/%E7%88%B1%E4%BD%A0%E5%B0%B1%E5%83%8F%E7%88%B1%E7%94%9F%E5%91%BD/</url>
+    <content><![CDATA[<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+<span id="more"></span>
+
+<p>王小波一直是我喜欢的作家之一，更令人惊讶的是，他竟然还是个程序员。</p>
+<p>他的作品部部经典，引人深思。《爱你就像爱生命》是王小波写给妻子李银河的情书合集，非常动人，每看一遍都回味无穷。</p>
+<hr>
+<p>你要是喜欢了别人我会哭，但是还是喜欢你。</p>
+<p>你是非常可爱的人，真应该遇到最好的人，我也真希望我就是。</p>
+<p>我是爱你的，看见就爱上了，我爱你爱到不自私的地步，就像一个人手里一只鸽子飞走了，他从心里祝福那只鸽子的飞翔。你也飞吧，我会难过，也会高兴，到底会怎么样我也不知道。</p>
+<p>不管我本人多么平庸，我总觉得我对你的爱很美。</p>
+<p>我现在已经养成了一种习惯，就是每天要对你说几句不想对别人说的话。</p>
+<p>有时候你难过了，这个时候我更爱你，只要你不拒绝我我就拥抱你，我会告诉你这是因为什么，就是我不知道是为了什么。</p>
+<p>我爱你，这是我的命运。</p>
+<p>我决不为了仪式爱你，我是正经爱你呢。我一正经起来，就觉得自己不坏，生活也真不坏。真的，也许不坏？我觉得信心就在这里。</p>
+<p><strong>但愿我和你，是一支唱不完的歌。</strong></p>
+<p>我真的是个好人，我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你，我真想把我做出的一切好事全献给你了。</p>
+<p>我们是两个在宇宙里游荡的灵魂，我们不愿孤独，走到一起来，别人与我们无关。我把我的整个灵魂给你，连同它的怪癖耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。</p>
+<p>只希望你和我好，互不猜忌，也互不称誉，安如平日，你和我说话像对自己说话一样，我和你说话也像对自己说话一样。</p>
+<p>说吧，和我好吗？</p>
+]]></content>
+      <categories>
+        <category>心灵奇旅</category>
+        <category>我读书我进步</category>
+      </categories>
+      <tags>
+        <tag>王小波</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/baidu_verify_code-z0T5qSqoQf.html</url>
     <content><![CDATA[b3836d9f660efb9032a1db917b3972ae]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于</title>
@@ -7916,5 +7906,15 @@ export PATH=$PATH:$AAPT_HOME<span aria-hidden="true" class="line-numbers-rows"><
 <div class="note info"><p>本站用 <a href="https://hexo.io/">Hexo</a> 框架搭建，并部署在 <a href="https://pages.github.com/">GithubPages</a> 和 <del><a href="https://jmyblog-top-1306110219.cos-website.ap-beijing.myqcloud.com/">腾讯云Serverless</a>(已弃用)</del> 上，以前写过 <a href="http://jmyblog.top/Hexo-GithubPages-CodingPages%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">一篇文章</a> 来介绍搭建过程，但现在已经不适用了，不过可以看个热闹。<br>博客搭建之前的文章记录在 <a href="https://blog.csdn.net/summy_j">CSDN</a> 中，都是一些技术博客，但是里面的内容我现在已经看不懂了，因为工作中大多都没有用到。<br>这里会更新我的一些工(ban)作(zhuan)总结和生活感悟，家人们也可以用博客右下角的匿名聊天弹窗和我联系。</p>
 </div>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
