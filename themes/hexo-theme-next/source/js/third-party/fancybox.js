@@ -3,53 +3,108 @@
 // Save sidebar state
 let sidebarWasActive = false;
 
+// Debounce function to prevent excessive update calls
+let updateTimer = null;
+function debouncedUpdate(fancybox, delay = 100) {
+  if (updateTimer) {
+    clearTimeout(updateTimer);
+  }
+  updateTimer = setTimeout(() => {
+    try {
+      fancybox.update();
+    } catch (e) {
+      // Silently handle errors to prevent blocking
+      console.warn('Fancybox update error:', e);
+    }
+    updateTimer = null;
+  }, delay);
+}
+
 document.addEventListener('page:loaded', () => {
   // Clean up previous bindings to avoid duplicate bindings
   Fancybox.destroy();
 
   /**
-   * Wrap images with fancybox.
+   * Wrap images with fancybox - optimized for performance
+   * Use requestIdleCallback or setTimeout to avoid blocking main thread
    */
-  document.querySelectorAll('.post-body :not(a) > img, .post-body > img').forEach(image => {
-    // Check if already wrapped
-    if (image.parentNode.classList.contains('fancybox')) {
-      return;
-    }
+  const images = document.querySelectorAll('.post-body :not(a) > img, .post-body > img');
+  
+  // Process images asynchronously to avoid blocking
+  const processImages = (startIndex = 0, batchSize = 10) => {
+    const endIndex = Math.min(startIndex + batchSize, images.length);
     
-    const imageLink = image.dataset.src || image.src;
-    const imageWrapLink = document.createElement('a');
-    imageWrapLink.classList.add('fancybox');
-    imageWrapLink.href = imageLink;
-    imageWrapLink.setAttribute('itemscope', '');
-    imageWrapLink.setAttribute('itemtype', 'http://schema.org/ImageObject');
-    imageWrapLink.setAttribute('itemprop', 'url');
+    for (let i = startIndex; i < endIndex; i++) {
+      const image = images[i];
+      
+      // Check if already wrapped
+      if (image.parentNode.classList.contains('fancybox')) {
+        continue;
+      }
+      
+      const imageLink = image.dataset.src || image.src;
+      const imageWrapLink = document.createElement('a');
+      imageWrapLink.classList.add('fancybox');
+      imageWrapLink.href = imageLink;
+      imageWrapLink.setAttribute('itemscope', '');
+      imageWrapLink.setAttribute('itemtype', 'http://schema.org/ImageObject');
+      imageWrapLink.setAttribute('itemprop', 'url');
 
-    let dataFancybox = 'default';
-    if (image.closest('.post-gallery') !== null) {
-      dataFancybox = 'gallery';
-    } else if (image.closest('.group-picture') !== null) {
-      dataFancybox = 'group';
-    }
-    imageWrapLink.dataset.fancybox = dataFancybox;
+      let dataFancybox = 'default';
+      if (image.closest('.post-gallery') !== null) {
+        dataFancybox = 'gallery';
+      } else if (image.closest('.group-picture') !== null) {
+        dataFancybox = 'group';
+      }
+      imageWrapLink.dataset.fancybox = dataFancybox;
 
-    const imageTitle = image.title || image.alt;
-    if (imageTitle) {
-      imageWrapLink.title = imageTitle;
-      // Make sure img captions will show correctly in fancybox
-      imageWrapLink.dataset.caption = imageTitle;
+      const imageTitle = image.title || image.alt;
+      if (imageTitle) {
+        imageWrapLink.title = imageTitle;
+        // Make sure img captions will show correctly in fancybox
+        imageWrapLink.dataset.caption = imageTitle;
+      }
+      
+      // Add image dimensions to help Fancybox display images correctly and avoid small dot issue
+      // Use try-catch to prevent blocking if image properties are not accessible
+      try {
+        if (image.naturalWidth && image.naturalHeight) {
+          imageWrapLink.dataset.width = image.naturalWidth;
+          imageWrapLink.dataset.height = image.naturalHeight;
+        } else if (image.width && image.height) {
+          imageWrapLink.dataset.width = image.width;
+          imageWrapLink.dataset.height = image.height;
+        }
+      } catch (e) {
+        // Silently continue if dimensions cannot be read
+      }
+      
+      try {
+        image.wrap(imageWrapLink);
+      } catch (e) {
+        // Silently continue if wrap fails
+        console.warn('Failed to wrap image:', e);
+      }
     }
     
-    // Add image dimensions to help Fancybox display images correctly and avoid small dot issue
-    if (image.naturalWidth && image.naturalHeight) {
-      imageWrapLink.dataset.width = image.naturalWidth;
-      imageWrapLink.dataset.height = image.naturalHeight;
-    } else if (image.width && image.height) {
-      imageWrapLink.dataset.width = image.width;
-      imageWrapLink.dataset.height = image.height;
+    // Continue processing remaining images asynchronously
+    if (endIndex < images.length) {
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(() => processImages(endIndex, batchSize), { timeout: 1000 });
+      } else {
+        setTimeout(() => processImages(endIndex, batchSize), 0);
+      }
     }
-    
-    image.wrap(imageWrapLink);
-  });
+  };
+  
+  // Start processing images
+  if (images.length > 0) {
+    if (typeof requestIdleCallback !== 'undefined') {
+      requestIdleCallback(() => processImages(0, 10), { timeout: 1000 });
+    } else {
+      setTimeout(() => processImages(0, 10), 0);
+    }
+  }
 
   // Configure Fancybox
   Fancybox.bind('[data-fancybox]', {
@@ -118,52 +173,54 @@ document.addEventListener('page:loaded', () => {
       },
       
       // Ensure images display correctly after loading - fix small dot issue
+      // Use debounced update to prevent blocking
       ready: (fancybox, slide) => {
         if (slide && slide.type === 'image') {
-          const img = slide.$content && slide.$content.querySelector('img');
-          if (img) {
-            // Ensure image has correct dimensions
-            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
-              // Image already loaded, update immediately
-              setTimeout(() => {
-                fancybox.update();
-              }, 50);
-            } else {
-              // Wait for image to load
-              img.onload = () => {
-                setTimeout(() => {
-                  fancybox.update();
-                }, 50);
-              };
-              // If image fails to load, try to update anyway
-              img.onerror = () => {
-                setTimeout(() => {
-                  fancybox.update();
-                }, 50);
-              };
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            const img = slide.$content && slide.$content.querySelector('img');
+            if (img) {
+              // Ensure image has correct dimensions
+              if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                // Image already loaded, update with debounce
+                debouncedUpdate(fancybox, 100);
+              } else {
+                // Wait for image to load
+                const onLoad = () => {
+                  debouncedUpdate(fancybox, 100);
+                  img.removeEventListener('load', onLoad);
+                };
+                const onError = () => {
+                  debouncedUpdate(fancybox, 100);
+                  img.removeEventListener('error', onError);
+                };
+                img.addEventListener('load', onLoad, { once: true });
+                img.addEventListener('error', onError, { once: true });
+              }
             }
-          }
+          });
         }
       },
       
-      // Handle image switching
+      // Handle image switching - optimized to prevent blocking
       load: (fancybox, slide) => {
         if (slide && slide.type === 'image') {
-          const img = slide.$content && slide.$content.querySelector('img');
-          if (img) {
-            // Ensure layout updates after image loads
-            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
-              setTimeout(() => {
-                fancybox.update();
-              }, 50);
-            } else {
-              img.onload = () => {
-                setTimeout(() => {
-                  fancybox.update();
-                }, 50);
-              };
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            const img = slide.$content && slide.$content.querySelector('img');
+            if (img) {
+              // Ensure layout updates after image loads
+              if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                debouncedUpdate(fancybox, 100);
+              } else {
+                const onLoad = () => {
+                  debouncedUpdate(fancybox, 100);
+                  img.removeEventListener('load', onLoad);
+                };
+                img.addEventListener('load', onLoad, { once: true });
+              }
             }
-          }
+          });
         }
       },
       
