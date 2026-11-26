@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const input = document.querySelector('.search-input');
   const container = document.querySelector('.search-result-container');
+  const clearButton = document.querySelector('.search-btn-clear');
 
   const inputEventFunction = () => {
+    clearButton.hidden = !input.value;
     if (!localSearch.isfetched) return;
     const searchText = input.value.trim().toLowerCase();
     const keywords = searchText.split(/[-\s]+/);
@@ -52,6 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   input.addEventListener('input', inputEventFunction);
+  clearButton.addEventListener('click', () => {
+    input.value = '';
+    inputEventFunction();
+    input.focus();
+  });
   window.addEventListener('search:loaded', inputEventFunction);
 
   // Handle and trigger popup window

@@ -10,9 +10,14 @@
                 placeholder="{{ __('search.placeholder') }}" spellcheck="false"
                 type="search" class="search-input">
         </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
+        {%- if theme.local_search.enable and not theme.algolia_search.enable %}
+          <button type="button" class="search-btn-clear" aria-label="清空搜索" title="清空搜索" hidden>
+            <i class="fa fa-backspace" aria-hidden="true"></i>
+          </button>
+        {%- endif %}
+        <button type="button" class="popup-btn-close" aria-label="关闭搜索" title="关闭搜索">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="search-result-container">
         <div class="search-result-icon">
