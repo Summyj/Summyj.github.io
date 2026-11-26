@@ -5,7 +5,7 @@ document.addEventListener('page:loaded', () => {
 
   NexT.utils.loadComments('#lv-container').then(() => {
     window.livereOptions = {
-      refer: 'jmyblog.top' + location.pathname
+      refer: CONFIG.page.path.replace(/index\.html$/, '')
     };
 
     if (typeof LivereTower === 'function') return;

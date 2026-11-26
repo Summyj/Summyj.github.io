@@ -8,3 +8,4 @@ public/
 _config.yml
 themes/hexo-theme-next/_config.yml
 .idea/
+.playwright-mcp/
